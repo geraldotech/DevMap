@@ -1,6 +1,6 @@
 # Arrays methods
 
-#####  [Resp in](https://github.com/geraldotech/Javascript/blob/main/Arrays_methods.js)
+#####  [Resp in](https://github.com/geraldotech/DevMap/blob/main/JavaScript/Arrays/Arrays_methods.js)
 
 1. lenght Mostre o tamanho de um Array:
 2. array `[index]lenght` Mostre o tamanho de letras de uma string do Array:
