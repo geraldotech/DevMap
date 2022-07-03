@@ -34,7 +34,8 @@ node -v && npm -v
 ```
 
 
-<a name="hello-word"></a>Hello Word  
+## Hello Word 
+<a name="hello-word"></a>
 Fazendo um simples Hello Word, fazer um arquivo vou chamar o meu de `primeiro.ts` e add:
 ```ts
 const a:string = 'Hello World!';
@@ -50,7 +51,8 @@ node primeiro.js
 
 <hr>
 
-<a name="config-file"></a>Arquivo de Conf:  
+## tsconfig.json 
+<a name="config-file"></a>
 
 O compilador do **TypeScript** é altamente configurável. Ele nos permite definir o local onde estão os arquivos  .ts  dentro do nosso projeto, o diretório de destino dos arquivos transpilados, a versão ECMAScript que será utilizada, o nível de restrição do verificador de tipos e até se o compilador deve permitir arquivos JavaScript. Cada uma das opções de configuração pode ser passada para um arquivo chamado `tsconfig.json` . Para quem não conhece, esse é o principal arquivo de configuração do *TypeScript*.
 
