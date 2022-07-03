@@ -181,7 +181,7 @@ Nesse exemplo, nós estamos declarando a variável mensagem depois de atribuir u
 
 No exemplo anterior, a variável  mensagemDentroDoIf  está dentro de uma  function , então sua declaração é elevada para o topo do seu contexto, ou seja, para o topo da  function . É por esse motivo que é possível acessá-la antes de ela ter sido declarada. 
 
-## <mark>Let</mark> 
+## Let 
 
 A palavra reservada  let  é usada para declarar variáveis com escopo de bloco. Seu comportamento é idêntico ao  var  quando declarada fora de uma  function , isto é, ela fica acessível no escopo global. Mas, quando declarada dentro de qualquer bloco, seja ele uma  function , um  if  ou um  loop , ela fica acessível apenas dentro do bloco (e sub-blocos) em que foi declarada. Para ficar mais claro, vamos atualizar o exemplo anterior com  let .
 ```js
@@ -199,7 +199,7 @@ console.log(mensagemDentroDoIf);
 ```
 
 
-## <mark style="background:dodgerblue">Const</mark>
+## Const 
 
 A palavra reservada  `const`  é usada para declarar variáveis read-only, isto é, a variável não pode ter o seu valor alterado, seu estado é imutável. Assim como as variáveis declaradas como  let  e  const  também ficam limitadas a um escopo.
 
