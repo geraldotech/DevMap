@@ -303,6 +303,8 @@ const arr: Array<number> = [100,5,23,5];
 
 REPL stands for **Read Evaluate Print Loop** 
 
-### Type Annotation = é quando definimos o tipo de dados manualmente.
+- Type Annotation:
+é quando definimos o tipo de dados manualmente.
 
-### Type Inference = é quando o TS identifica e define o tipo de dados para nós.
+- Type Inference:
+é quando o TS identifica e define o tipo de dados para nós.
