@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login with input value</title>
+  <style>
+    body {
+    background-color: rgb(46, 63, 117);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+   main.container {
+    background: white;
+    max-width: 350px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+    border-radius: 8px;
+}
+   button {
+    height: auto;
+   }
+    divx {
+      display: none;
+      background-color: mediumseagreen;
+    }
+    div2 {
+      display: none;
+      background-color: red;
+    }
+    #sucess {
+      display: none;
+      background-color: mediumseagreen;
+    }
+    .input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.7);
+}
+
+.input-field input::placeholder {
+    color: rgba(0,0,0,0.5);
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.7);
+}
+
+.input-field input::placeholder {
+    color: rgba(0,0,0,0.5);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer span {
+    color: rgba(0,0,0,0.7);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer .social-field {
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.footer .social-field a i {
+    margin: 0 0.5rem;
+    width: 15px;
+}
+
+.footer .social-field a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .social-field.twitter {
+    background: linear-gradient(to right, #56a7f2, #468aca);
+
+}
+
+.footer .social-field.facebook {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+  </style>
+</head>
+<body>
+  <main class="container">
+  <h2>Fazer Login:</h2>
+  <div class="input-field">
+    <br><input id="user" type="text" placeholder="usuario"/><br>
+  </div>
+  <div class="input-field">
+  <br><input id="num" type="password" placeholder="senha" /><br>
+</div>
+  <button onclick="psw()">Log in</button>
+  <p><i>geraldo@80</i></p>
+  <divx id="sucess">Bem vindo LOGADO COM SUCESSO</divx>
+<div2 id="error">TENTE NOVAMENTE!</div2>
+</div>
+<div class="footer">
+  <span>Or Connect With Social Media</span>
+  <div class="social-fields">
+<div class="social-field twitter">
+   <a href="#">
+       <i class="fab fa-twitter"></i>
+       Sign in with Twitter
+   </a>
+</div>
+<div class="social-fields">
+  <div class="social-field facebook">
+     <a href="#">
+         <i class="fab fa-facebook-f"></i>
+         Sign in with Facebook
+     </a>
+  </div>
+</div>
+</div>
+</main>
+
+  <script>
+    function psw() {
+      var div = document.getElementById("sucess");
+      var div2 = document.getElementById("error");
+      var user = document.getElementById("user").value;
+      var num = parseInt(document.getElementById("num").value);
+      
+      if (user == 'geraldo' && num == '80') {
+        div2.style.display = 'none';
+        div.style.display = 'block';
+      } else {
+        div2.style.display = 'block';
+        div.style.display = 'none';
+        /* div.style.display = 'block';
+        div2.style.display = 'none'; */
+      }     
+    }
+
+
+  </script>
+</body>
+
+</html>

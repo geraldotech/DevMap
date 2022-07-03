@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	  <!-- Bootstrap CSS -->
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<!-- Custom styles for this template -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		img {
+  max-width: 60%;
+}
+#res {
+	width: 300px;
+	height: 300px;
+}
+	</style>
+</head>
+<body>
+	<h2>CONSULTA CARTÕES</h2>
+	<button onclick="changebk()">Alterar cor Fundo</button>
+	<div class="container">
+	<input id="num" />
+	<button onclick="getn()">consultar</button>
+	<div id="res"></div>
+</div>
+</body>
+<script>
+		function getn() {
+var num = document.getElementById("num").value;
+var res = document.getElementById("res");
+switch (num){
+
+	case 'sx':
+	case 'SX':
+	case 'Sx':
+	case 'santander':
+	res.innerHTML = '<img src="https://www.santander.com.br/sites/WPC_CMS/imagem/21-09-08_194432_santander-logo.png" />';
+	break;
+
+	case 'c6':
+	case 'C6':
+	res.innerHTML = '<img src="http://s3.amazonaws.com/gt7sp-prod/decal/48/20/72/6927116837774722048_1.png" />';
+	break;
+
+	case 'trigg':
+	case 'Trigg':
+	res.innerHTML = '<img src="https://www.foregon.com/blog/wp-content/uploads/2019/10/trigg-cartoes-super-herois.jpg" />';
+	break;
+
+	default:
+	res.innerHTML = "Not Found!";
+}
+}
+//change bk
+const body = document.querySelector('body');
+const colors = ['DodgerBlue', 'black', 'gray']
+function changebk() {
+	const colorIndex= parseInt(Math.random()*colors.length)
+body.style.backgroundColor = colors[colorIndex]
+}
+</script>
+</html>

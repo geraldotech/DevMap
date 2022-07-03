@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #myiframe {
+            display: none;
+        }
+        #myiframe2 {
+            display: none;
+        }
+        /*resposive iframe*/
+        #iframe { width:50%; left:100%; height:100%; border:none; background:#ffffff; }
+      
+    </style>
+</head>
+<body>    
+<h2>Insira suas credenciais abaixo:</h2>
+    User:<input id="user" /><br>
+    Psw:<input id="psw" type="password" /><br>
+    <button onclick="logar()">FAZER LOGIN</button>
+    <button id="reload" onClick="document.location.reload(true)">RESETAR</button>
+ 
+    <iframe id="myiframe" src="users\geraldo92.html" title="Iframe Example"></iframe>
+    <iframe id="myiframe2" src="users\isabella90123.html"></iframe>    
+    
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

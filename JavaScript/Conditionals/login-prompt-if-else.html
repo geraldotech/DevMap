@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        divs {
+            display: none;
+            background-color: mediumseagreen;
+        }
+
+        dive {
+            display: none;
+            background-color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>LOGIN PROMPT</h2>
+
+    <divs id="divs">
+        <p>
+            LOGADO COM SUCESSO
+        </p>
+    </divs>
+
+    <dive id="dive">
+        <p>
+            TENTE NOVAMENTE! </p>
+    </dive>
+
+    <script>
+        const n = prompt("Digite a senha: 80");
+sucess = document.getElementById("divs");
+erro = document.getElementById("dive");
+if (n == 80){
+sucess.style.display = 'block';
+} else {
+erro.style.display = 'block';
+}
+    </script>
+</body>
+
+</html>
