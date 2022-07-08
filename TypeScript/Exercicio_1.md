@@ -6,6 +6,9 @@
 1.Fazer uma `div#app` e adicionar um elemento com um Hello Word!
 <details>
 <summary>code</summary>
+
+&lt;div id="app"&gt; &lt;/div &gt; 
+
 <pre>
 const app = document.getElementById('app');
 const p = document.createElement("p");
