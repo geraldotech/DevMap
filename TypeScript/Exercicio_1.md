@@ -17,11 +17,9 @@ app?.appendChild(p);
 </pre>
 
 </details>
-
-
-
-
-
-2.
-
-## ola
+2. O que é o Type Annotation e Type Inference?
+<details>
+<summary>res</summary>  
+- Type Annotation: é quando definimos o tipo de dados manualmente.   
+- Type Inference: é quando o TS identifica e define o tipo de dados para nós.  
+</details>   
