@@ -1,4 +1,11 @@
-//1,2,3
+//JavaScript String and Array Methods
+
+/*
+Table of JavaScript String and Array Methods => 
+https://medium.com/jsunderthescope/table-of-javascript-string-and-array-methods-fdba7c5289f1
+*/
+
+// 1 - 2
 const x = ['BMW','GOL','LATAM','AMERICAN','BRAZIL','RAPPI'];
 
 //display length of Array direct
@@ -8,17 +15,17 @@ console.log(x.length);
 let tamanho = x.length;
 console.log(tamanho);
 
-//display all content
-for(i = 0; i < x.length; i++){
-    console.log(x[i]);
-}
 //size if a array string
 size = x[0].length;
 console.log('Array 0 tem '+size);
 
+// 3 - display all content using for
+for(i = 0; i < x.length; i++){
+    console.log(x[i]);
+}
 
 
-//4
+// 4
  //sort
  const myarr = ['Penha',' Gramacho',' Caxias',' Central',' Bonsucesso'];
  console.log(myarr);
@@ -26,13 +33,13 @@ console.log('Array 0 tem '+size);
  //console.log(myarr.sort());
  console.log(ord);
 
-//5
+// 5
  //The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
 const x = ['A', ' B', ' C',' D',' E'];
 const first = x.shift();
 console.log(x); //output (4) [' B', ' C', ' D', ' E']
 
-//6
+// 6
 //The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 const cell = ['Nokia',' Apple',' Microsoft',' Samsung'];
@@ -40,7 +47,7 @@ const cell = ['Nokia',' Apple',' Microsoft',' Samsung'];
 console.log(cell.unshift('Xiaomi','Lenovo'));
 console.log(cell);
 
-//7
+// 7
 //The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
 const mercado = ['carnes',' bebidas', 'frios', 'frutas'];
 //get only ultimo
@@ -48,19 +55,19 @@ console.log(mercado.pop());
 //show array modificado
 console.log(mercado);
 
-//8
+// 8
 //The push() method adds one or more elements to the end of an array and returns the new length of the array.
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 const n = [1,2,3,4,5];
 const push = n.push(6,7,8,9,10);
 console.log(n);
 
-//9
+// 9
 //inverter array
  fruits.reverse();
 
 
- //10
+ // 10
 //includes e.g:1 returning true or false as appropriate
 const cars = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
 
@@ -116,8 +123,7 @@ arr.push('Suco light');
 console.log(arr); 
 
 
-//12
-//splice  index ? + delete ? + add elements?
+// 12 splice  index ? + delete ? + add elements?
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 
 
@@ -199,8 +205,8 @@ console.log(busca)
 words = arr.filter((word) => word.startsWith('F'));
 words == '' ? console.log('nao') : console.log(words);
 
-//14
- //find obj array
+// 14
+//find obj array
 //e.g: 1
 person = [{name:"Geraldo",city:"Maceio",age:"29"}, {name:"Felipe",city:"Palmeira",age:"28"}];
 
@@ -227,9 +233,7 @@ var buscar = persons.find(function (el){
 console.log(buscar)
 
 
-//15
-
-//join - method create e returns concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string
+// 15 join - method create e returns concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string
 arr = ['fire', 'water', 'airplane', 'car']
 
 console.log(arr.join()) // fire,water,airplane,car
@@ -239,8 +243,7 @@ console.log(arr.join('.')) // fire.water.airplane.car
 console.log(arr.join('')) // firewaterairplanecar
 
 
-//16
-//concat - merge arrays
+// 16 concat - merge arrays
 arr = [1,2,3,4,5]
 arr2 = [6,7,8,9,10]
 
@@ -249,9 +252,7 @@ arr_all = arr.concat(arr2);
 console.log(arr_all)
 
 
-//17
-
-//percorrer um vetor e obter um novo vetor cujo itens são resultados de uma função de callback
+//17 - map - percorrer um vetor e obter um novo vetor cujo itens são resultados de uma função de callback
 //way 1
 const arr = [1,2,3,4,5];
 
@@ -290,6 +291,44 @@ x = pessoa.map((value) => {
 
 // Map.set https://stackoverflow.com/questions/63595841/find-element-in-map-by-its-property-value
 
-//18
+//18 - findIndex return first element that passes a test
+
+const person = [
+  {nome:"Geraldo",idade:29},{nome:"Felipe",idade: 28},{nome:"Isabella",idade: 5,},{nome:"Isab",idade:10},
+];
+const menor = person.findIndex((value)=> value.idade < 18);
+console.log(menor) //2
+
+person[menor].idade += 2;
+console.log(person) //index number 2 +2 anos = 2: {nome: 'Isabella', idade: 7
+
+//19 - 
+//split - gera string de substrings
+
+let a = "Rio de Janeiro";
+const myarr = a.split(" ");
+console.log(myarr) //3) ['Rio', 'de', 'Janeiro']
+
+//get arrays
+console.log(myarr[2]) //Janeiro
+
+//limitando output and no spance ""
+const myarr2 = a.split("",2);
+console.log(myarr2)  //['R', 'i']
 
 
+//20 - some - The Array.some() method checks if any of the elements in an array pass a test (provided as a function).
+const ages = [3,10,18,20]
+
+console.log(ages.some(check));
+function check(age){
+  return age > 18;
+}
+
+//21 - every
+const numbers = [4, 12, 16, 20];
+
+function maior(value){
+  return value > 10;
+}
+console.log(numbers.some(maior))
