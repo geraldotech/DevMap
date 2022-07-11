@@ -80,4 +80,4 @@ https://gpnotes.droppages.com/img/
 | :---:       |   :---:         |
 |   =       |   atribuição  |
 |   ==      | compara valor |
-|   ==      | compara valor e tipo |
+|   ===      | compara valor e tipo |

@@ -258,16 +258,16 @@ let sentence: string = `Olá, meu nome é ${ nome }, eu tenho ${idade} anos.
 adicionar ao final de um string para obter o tamanho dela.
 ```ts
 var nome:string = "Geraldo";
-let sentense: string = `Olá, meu nome ${nome}`;
-console.log(sentense.length);
+let sentence: string = `Olá, meu nome ${nome}`;
+console.log(sentence.length);
 ```
 run tsd file.ts para gerar o .js e depois node file.js
 ```ts
 var nome:string = "Geraldo";
 var idade:number = 29;
-let sentense: string = `Olá, meu nome ${nome} eu tenhjo ${idade} anos`;
-console.log(sentense);
-console.log(sentense.length);
+let sentence: string = `Olá, meu nome ${nome} eu tenhjo ${idade} anos`;
+console.log(sentence);
+console.log(sentence.length);
 ```
 
 ### IndexOf: 
@@ -281,11 +281,11 @@ console.log(sentence.indexOf('nome')); //posição 9
 ```
 .
 ```ts
-let sentense: string = `Olá, meu nome ${nome} eu ${ surname } tenho ${idade} anos`;
-console.log(sentense);
-console.log(sentense.length); //44
-console.log(sentense.indexOf('nome'));  //9
-console.log(sentense.indexOf('idade')); //-1
+let sentence: string = `Olá, meu nome ${nome} eu ${ surname } tenho ${idade} anos`;
+console.log(sentence);
+console.log(sentence.length); //44
+console.log(sentence.indexOf('nome'));  //9
+console.log(sentence.indexOf('idade')); //-1
 ```
 Note que ele retornou  -1  para  idade . Isso aconteceu porque essa palavra é uma variável e não um valor dentro da string.
 

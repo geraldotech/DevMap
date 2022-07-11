@@ -238,6 +238,7 @@ class Car implements Iveiculo {
 
 const fusca = new Car("WV", 4);
 console.log(fusca)
+fusca.showBrand();
 
 
 //herança
