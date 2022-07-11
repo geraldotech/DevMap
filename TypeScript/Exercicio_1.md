@@ -47,10 +47,8 @@ somar(2,2)
 <details>
 <summary>res</summary>  
 <pre>
-function somar(a:number, b:number){
-    return console.log(a + b);
-}
-somar(2,2)
+console.log(Math.PI.toFixed(2)); //depois da virgula
+console.log(Math.PI.toPrecision(2)) //todos os numbers
 </pre>
 </details>    
 6. Fazer Array de numbers e string, use as 2 sintaxe:

@@ -332,3 +332,37 @@ function maior(value){
   return value > 10;
 }
 console.log(numbers.some(maior))
+
+
+//22 - slice 
+
+arr2 = [0,1,2,3,4,5];
+let b = arr2.slice(1,3); //get itens between
+console.log(b)
+
+
+
+//23 - split - create array of substrings
+//only for strings
+arr3 = ("Geraldo");
+let c = arr3.split("")
+console.log(c) // ['G', 'e', 'r', 'a', 'l', 'd', 'o']
+
+
+//split("") espaço = cada word , no space = every letter
+
+
+let a = "Rio de Janeiro";
+const myarr = a.split(" ");
+
+
+console.log(myarr)
+//get second word
+console.log(myarr[2]) //Janeiro
+
+document.getElementById("res").innerHTML = myarr;
+
+//limiter
+
+const myarr2 = a.split("", 2)
+console.log(myarr2)
