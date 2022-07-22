@@ -13,7 +13,7 @@
 #### 6.Calcular a variável de 2 números e usar o `Grave Accent - backtick` (Template Literal na saída):
 
 #### 7.Faça um Array de 5 itens, solicite ao usuário quantos itens deve ser exibido:  
-<a href="https://geradev.netlify.app/js_exercises/js_exercicio_4_response_7.html" target="_blank">Live demo</a>
+<a href="https://geradev.netlify.app/js_exercises/js_exercicio_4_question_7" target="_blank">Live demo</a>
 
 #### 8.Declare um array vazio preencha 2 numeros para soma:  
 
