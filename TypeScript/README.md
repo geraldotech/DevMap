@@ -215,6 +215,71 @@ mensagem = 'MSG 2'; // TypeError: Assignment to constant variable. Resultado:
 // TypeError: Assignment to constant variable.
 ```
 
+## Mais exemplos:
+Quando declaramos um variável ou função em JS, sua declaração é "elevada" para o topo do escopo, isso permite que você chame uma função/varirável antes mesmo dela ter sido declarada.
+
+- var escopo global vaza, não se usa mais!
+- let escopo de bloco, não vaza!
+- const espoco de bloco, only read, não muda!
+
+```js
+// var vs let
+const person = {
+  name:"Geraldo",
+  age: 29,
+  children: true
+}
+
+if(person.age == 29){
+  var msn = "var dentro do if"; 
+}
+console.log(msn); // => var dentro do if
+
+
+//let && const = o que acontece aqui fica aqui!
+
+if(person.children === true){
+  let add = "dependentes"; 
+}
+
+console.log(ads); // => Uncaught ReferenceError:
+
+if(person.name != "Geraldo"){
+  const ads = "try again!"; 
+}
+
+console.log(add); // => Uncaught ReferenceError: add is not defined
+```
+
+### içamento:
+```js
+
+//içamento
+console.log(city); //undefined
+city = "Maceió";
+var city;
+
+//console.log(opt); //Cannot access 'opt' before initialization
+//opt = "crédito";
+let opt; 
+
+
+
+//const  é somente leitura, não pode ser reatribuida!
+var x = 9;
+let y = 10;
+const z = 11;
+console.log(x); // 9
+console.log(y); // 10
+console.log(z); /// 11
+x = 8;
+y = 7;
+z = 5;
+console.log(x); // 8
+console.log(y); // 7
+console.log(z); /// Uncaught TypeError: 
+```
+
 
 ## Types: 
 <a name="types"></a>

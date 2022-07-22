@@ -53,7 +53,7 @@ div.textContent = "asas"; //direct
 5. For of show Array index 
 6. Box click contains
 7. Exemplo com function constructor (retirada do Livro)
-8. Emprestimo de método (obj)
+8. Empréstimo de método (obj) [resp](https://github.com/kelvinbiffi/javascript-book/blob/master/18.Empr%C3%A9stimo%20de%20m%C3%A9todo/script.js)
 9. Make a clock
 
 
