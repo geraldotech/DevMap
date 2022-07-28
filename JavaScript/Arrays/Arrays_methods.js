@@ -335,7 +335,10 @@ console.log(numbers.some(maior))
 
 
 //22 - slice 
-
+//retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é necessário) de um array original. O Array original não é modificado.
+/*
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+*/
 arr2 = [0,1,2,3,4,5];
 let b = arr2.slice(1,3); //get itens between
 console.log(b)
