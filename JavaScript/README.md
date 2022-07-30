@@ -68,16 +68,18 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 //define o tamanho minimo, e adiciona um complemento caso não tenha o mínimo
 padStart() 
 
+//
 ("Ola") apenas no console.log show infos
-
-insertAdjacenteHTML
-
+//
+//
+insertAdjacentHTML(position, text) 
+//
 function exp(number){
 	console.log(2** number);
 }
 exp(5,2);
 
-length
+//length
     function check(){
         let a = 10;
          if(a.length > 8) {
