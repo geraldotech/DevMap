@@ -1,14 +1,17 @@
 # Javascript
+
 console.log('Focus in Javascript');
 
 ### write:
+
 ```js
-console.log('aspas single');
+console.log("aspas single");
 console.log("aspas dupla");
 console.log(`grace accent`);
 ```
 
 ### call var:
+
 <details>
 <summary>see code</summary>
 
@@ -22,21 +25,24 @@ console.log('Eu sou ' +name);]
 
 </details>
 
-
 ### syntax / sintaxe
+
 ```js
 semicolon ;
-comma , 
+comma ,
 parentheses()
 braces {} - chaves
 square brackets [] - colchetes
 ```
+
 ### Estrutura de dados
+
 - [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
 
 var não é usa mais! pq tem problema de scopo, use let ou const
 
 ### Extras fast code cheats
+
 <details>
 <summary>Extras. Math. padStart...</summary>
 
@@ -58,7 +64,7 @@ Math.random()
 Math.PI
 
 Math.max() //returns the number with the highest value:
-const a = [1,2,3,4];    
+const a = [1,2,3,4];
 console.log(Math.max(...a));
 
 Math.max(1,2,3,4,5)
@@ -66,13 +72,13 @@ Math.max(1,2,3,4,5)
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
 //define o tamanho minimo, e adiciona um complemento caso não tenha o mínimo
-padStart() 
+padStart()
 
 //
 ("Ola") apenas no console.log show infos
 //
 //
-insertAdjacentHTML(position, text) 
+insertAdjacentHTML(position, text)
 //
 function exp(number){
 	console.log(2** number);
@@ -95,29 +101,55 @@ exp(5,2);
 window.setTimeout( function() {
   window.location.reload();
 }, 5000);
-```
+
+
+//show-loop-img-button-click
+//html
+ <button onclick=
+  "show_image('https://www.w3schools.com/jsref/klematis.jpg',
+               500, 
+               500, 
+               'Google Logo');">Add Google Logo</button> 
+
+
+//js
+    function show_image(src, width, height, alt) {
+      var img = document.createElement("img");
+      img.src = src;
+      img.width = width;
+      img.height = height;
+      img.alt = alt;
+  
+      // This next line will just add it to the <body> tag
+      document.body.appendChild(img);
+  }
+  ```
+
 </details>
 
-
 <details>
-<summary>Extras 2</summary>
+<summary>Extras 2 - CSS and shorhand</summary>
 
 ```js
 // Shorhand for getElementById
 
 //function
-const get = function(id){ return document.getElementById(id) };
-get("root").textContent = 'Hello World!';
+const get = function (id) {
+  return document.getElementById(id);
+};
+get("root").textContent = "Hello World!";
 
 //arrow function
-const get2 = (a) => {return document.getElementById(a)};
+const get2 = (a) => {
+  return document.getElementById(a);
+};
 get2("root");
 
 // Write css inside JavaScript
 
 //1
 
-    document.head.innerHTML += `
+document.head.innerHTML += `
     <style>
       img{ 
         width: 20%;
@@ -130,16 +162,43 @@ get2("root");
        flex-direction: column;
       }
     </style>
-    `
-
+    `;
 
 //2
-  const style = document.createElement("style")
-style.textContent = "h1 { background-color: red; }"
-document.head.appendChild(style)
+const style = document.createElement("style");
+style.textContent = "h1 { background-color: red; }";
+document.head.appendChild(style);
 
 //3 - external
-  document.head.insertAdjacentHTML( 'beforeend', '<link rel=stylesheet href=/foo.css>' );
+document.head.insertAdjacentHTML(
+  "beforeend",
+  "<link rel=stylesheet href=/foo.css>"
+);
 ```
+
 </details>
 
+<details>
+<summary>document.forms</summary>
+
+```js
+/*     
+<form name="login">
+<input type="text" name="username">
+<input name="email" type="email">
+<input type="button" value="Enviar" id="checkingUserName" />
+</form> 
+*/
+//https://developer.mozilla.org/en-US/docs/Web/API/Document/forms
+const forms = document.forms["login"];
+forms.elements.email.placeholder = "test@example.com";
+forms.elements.username.placeholder = "your login";
+
+//getting data
+document.getElementById("checkingUserName").onclick = function (event) {
+event.preventDefault();
+var name = document.forms["login"].username.value;
+alert(name);
+};
+```
+</details>
