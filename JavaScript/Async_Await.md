@@ -151,7 +151,7 @@ getgit()
 ```
 </details>
 
-# Promises
+### Promises
 
 <details>
 <summary>code</summary>
@@ -172,5 +172,94 @@ const promise = new Promise((resolve, reject) => {
 promise.then(response => {
   console.log(response);
   });
+```
+</details>
+
+### Git API example [live demo](https://gmapdev.netlify.app/demo/git_api)
+<details>
+<summary>code</summary>
+
+```css
+ body{
+       zoom:120%;
+    }
+    img{
+      width: 100%;
+      max-width: 50%;
+      margin-left: 25%;
+      border-radius: 50%;
+    }
+    .container {
+      display: flex;
+      flex-direction:column;
+      height: 70vh;
+      justify-content: flex-start;
+      align-items: center;
+      background: rgb(36, 43, 30);
+    }
+
+    .box {
+      display: flex;
+      flex-direction:column;
+      align-items: left;
+      justify-content: center;
+      width: 350px;
+      height: 120px;
+      margin-top: 60px;
+      
+    }
+
+```
+
+
+```html
+
+<div class="container">
+<div class="box">
+  <span id="img"></span>
+  <div>Name: <span id="root"></span></div>
+  <div>Bio: <span id="bio"></span></div>
+  <div>Blog: <span id="blog"></span></div>
+  <div>Location: <span id="location"></span></div>
+</div>
+</div><!--container-->
+
+```
+
+
+```js
+// api url
+const api_url =
+	"https://api.github.com/users/geraldotech";
+
+// Defining async function
+async function getapi(url) {
+	
+	// Storing response
+	const response = await fetch(url);
+	
+	// Storing data in form of JSON
+	var data = await response.json();
+	console.log(data);
+	if (response) {
+	}
+  show(data);
+}
+// Calling that async function
+getapi(api_url);
+
+
+function show(data){
+  console.log(data.login)
+  document.getElementById("root").innerHTML = data.name;
+  document.getElementById("img").innerHTML = `<img src="${data.avatar_url}" />`;
+  document.getElementById("bio").innerHTML = `${data.bio}`;
+  document.getElementById("blog").innerHTML = `${data.blog}`;
+  document.getElementById("location").innerHTML = `${data.location}`;
+  console.log(data.blog)
+  
+}
+
+
 ```
 </details>

@@ -289,6 +289,18 @@ x = pessoa.map((value) => {
   }
 })
 
+///replace  
+let txt = "Visit Microsoft";
+let newtxt = txt.replace("Microsoft", "Google");
+console.log(newtxt)
+  
+//map and replace and transformar string em number
+  const n = ["a 199","a 200","a 300"];
+  const num = n.map(function(int){
+      return +int.replace("a ",""); // ou  return Number(int.replace("a ",""));
+  });
+  console.log(num);
+
 // Map.set https://stackoverflow.com/questions/63595841/find-element-in-map-by-its-property-value
 
 //18 - findIndex return first element that passes a test
@@ -366,6 +378,5 @@ console.log(myarr[2]) //Janeiro
 document.getElementById("res").innerHTML = myarr;
 
 //limiter
-
 const myarr2 = a.split("", 2)
 console.log(myarr2)

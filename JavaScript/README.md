@@ -41,10 +41,10 @@ square brackets [] - colchetes
 
 var não é usa mais! pq tem problema de scopo, use let ou const
 
-### Extras fast code cheats
+### Extra Fast Code Cheats
 
 <details>
-<summary>Extras. Math. padStart...</summary>
+<summary>Extras. Math. padStart, setTimeout, replace...</summary>
 
 ```js
 Math.round = arredonda para cima ou para baixo
@@ -67,9 +67,9 @@ Math.max() //returns the number with the highest value:
 const a = [1,2,3,4];
 console.log(Math.max(...a));
 
-Math.max(1,2,3,4,5)
+Math.max(1,2,3,4,5);
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
 //define o tamanho minimo, e adiciona um complemento caso não tenha o mínimo
 padStart()
@@ -102,6 +102,8 @@ window.setTimeout( function() {
   window.location.reload();
 }, 5000);
 
+//set zoom
+document.body.style.zoom = "100%";
 
 //show-loop-img-button-click
 //html
@@ -123,6 +125,9 @@ window.setTimeout( function() {
       // This next line will just add it to the <body> tag
       document.body.appendChild(img);
   }
+
+
+
   ```
 
 </details>
@@ -201,4 +206,92 @@ var name = document.forms["login"].username.value;
 alert(name);
 };
 ```
+</details>
+<details>
+<summary>Pointer Events, target, documentElement</summary>
+
+```js
+#simple
+
+   <p id="foo">JavaScript</p>
+const p = document.getElementById("foo");
+console.log(p)
+
+#PointerEvent
+ <p id="bar">TypeScript</p>
+
+const t = document.getElementById("bar").addEventListener("click", function(event){
+    console.log(event);
+})
+
+#target
+
+const t = document.getElementById("bar").addEventListener("click", function(event){
+    console.log(event.target); //  <p id="bar">TypeScript</p>
+})
+
+#documentElement
+document.documentElement.addEventListener("mousemove", function(e){
+    console.log(e);
+})
+```
+</details>
+
+<details>
+<summary>createElement</summary>
+
+```js
+# Basic texts
+
+//createElements
+div = document.createElement("div");
+h1 = document.createElement("h1");
+p = document.createElement("p");
+
+
+h1.textContent = 'Hello ';
+txt = document.createTextNode("JavaScript");
+
+//append
+p.appendChild(txt)
+div.appendChild(h1);
+
+//append body
+document.body.appendChild(div);
+
+
+# Images
+
+//createElements
+div = document.createElement("div");
+img = document.createElement("img");
+img.setAttribute("src", "http://smartdicastutorial.appspot.com/images/6d88733c461.jpg");
+img.setAttribute("alt", "img test");
+
+//append
+div.appendChild(img);
+
+//append body
+document.body.appendChild(div);
+
+# Images2
+
+//createElements
+div = document.createElement("div");
+img = document.createElement("img");
+img.setAttribute("src", "http://smartdicastutorial.appspot.com/images/6d88733c461.jpg");
+img.setAttribute("alt", "img test");
+
+//append
+div.appendChild(img);
+
+//append body
+document.body.appendChild(div);
+
+//onclick classList
+document.addEventListener('click', function(){
+img.classList.add('meuimg');
+});
+```
+
 </details>
