@@ -263,3 +263,62 @@ function show(data){
 
 ```
 </details>
+
+
+### Git Repos pinned [live demo](https://gmapdev.netlify.app/demo/git-repo-pinned)
+<details>
+<summary>code</summary>
+
+```js
+
+/* html
+  <p id="loading">Loading...</p>
+  <div id="container"></div>
+*/
+
+const api = "https://gh-pinned-repos.egoist.sh/?username=geraldotech";
+
+loadE = document.querySelector("#loading");
+container = document.querySelector("#container");
+
+async function get(url){
+  response = await fetch(url)
+  console.log(response)
+  data = await response.json();
+  console.log(data)
+  
+
+  loadE.classList.add("hide");
+
+   data.map((post)=>{
+    const div = document.createElement("div");
+    const title = document.createElement("h2");
+    const body = document.createElement("p");
+    const link = document.createElement("a");
+    const img = document.createElement("img");
+    img.setAttribute("src", post.image);
+
+    
+
+    title.innerText = post.repo;
+    //body.innerText =  post.url;
+    //link.setAttribute("href", `${post.link}`);
+  link.innerHTML = `<a href="${post.link}">${post.link}</a>`;
+  img.innerHTML = `<img src="${post.image}" /> <br>`;
+    
+    div.appendChild(title)
+    div.appendChild(body)
+    div.appendChild(link)
+    div.append(img);
+    container.appendChild(div)
+
+  })
+}
+
+get(api);
+
+
+```
+
+
+</details>
