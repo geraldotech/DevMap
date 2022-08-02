@@ -296,15 +296,15 @@ async function get(url){
     const body = document.createElement("p");
     const link = document.createElement("a");
     const img = document.createElement("img");
-    img.setAttribute("src", post.image);
-
-    
+    img.setAttribute("src", post.image);    
+    img.setAttribute("alt", "img post");
+   
 
     title.innerText = post.repo;
-    //body.innerText =  post.url;
-    //link.setAttribute("href", `${post.link}`);
+    body.innerText =  post.owner;
+  //link.setAttribute("href", `${post.link}`);
   link.innerHTML = `<a href="${post.link}">${post.link}</a>`;
-  img.innerHTML = `<img src="${post.image}" /> <br>`;
+  img.innerHTML = `<img src="${post.image}" />`;
     
     div.appendChild(title)
     div.appendChild(body)
@@ -316,7 +316,6 @@ async function get(url){
 }
 
 get(api);
-
 
 ```
 
