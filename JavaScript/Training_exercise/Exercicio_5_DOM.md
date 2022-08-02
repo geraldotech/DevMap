@@ -42,7 +42,7 @@ txt = document.createTextNode("asas"); //no direct
 div.textContent = "asas"; //direct 
 ```
 
-# Special
+# Special [res](https://gist.github.com/geraldotech/017b5431d853b37af18e0c7fbab97246)
 ##### Start with => first class function  
 >Respostas nos Exemplos
 
