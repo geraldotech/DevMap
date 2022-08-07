@@ -9,6 +9,7 @@
 - [Defer](#defer)
 - [Hoisting](#hoisting)
 - [Types](#types)
+- [Terminais](#terminais)
 
 <hr>
 <a name="what-is-ts">O que é o TS?:</a>  
@@ -373,3 +374,9 @@ REPL stands for **Read Evaluate Print Loop**
 
 - Type Inference:
 é quando o TS identifica e define o tipo de dados para nós.
+
+### Terminais
+<a name="terminais"></a>
+
+<img src="./assets/cmder.png" style="width:50%">
+<img src="./assets/git-bash.png" style="width:50%">
