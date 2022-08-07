@@ -150,6 +150,8 @@ const get2 = (a) => {
 };
 get2("root");
 
+const log = (x)=> {console.log(x)};
+
 // Write css inside JavaScript
 
 //1
