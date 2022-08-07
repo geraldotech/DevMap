@@ -134,6 +134,20 @@ console.log(lista); //8
 letras = ['a','b','c','d'].reduce((x,y) => x+y);
 console.log(letras); //abcd
 
+//saldo
+
+let clients = [
+    { person:"Gel", saldo:200},
+    { person:"Fel", saldo:400},
+    { person:"Is", saldo:40},
+  ];
+  
+  let soma = clients.reduce((total,value)=>{
+    return total + value.saldo;
+  }, 0);
+  
+  console.log(soma)
+
 
 //refs
 //https://blog.betrybe.com/javascript/javascript-reduce/
