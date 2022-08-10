@@ -1,5 +1,9 @@
 # Javascript
 
+
+Projects and Demos
+ - [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
+
 console.log('Focus in Javascript');
 
 ### write:
@@ -10,6 +14,17 @@ console.log("aspas dupla");
 console.log(`grace accent`);
 ```
 
+
+
+### syntax / sintaxe
+
+```js
+semicolon ;
+comma ,
+parentheses()
+braces {} - chaves
+square brackets [] - colchetes
+```
 ### call var:
 
 <details>
@@ -25,23 +40,34 @@ console.log('Eu sou ' +name);]
 
 </details>
 
-### syntax / sintaxe
-
-```js
-semicolon ;
-comma ,
-parentheses()
-braces {} - chaves
-square brackets [] - colchetes
-```
-
 ### Estrutura de dados
 
 - [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
 
 var não é usa mais! pq tem problema de scopo, use let ou const
 
-### Extra Fast Code Cheats
+## Extra Fast Code Cheats and Examples
+
+
+<details>
+<summary>onclick update variable</summary>
+
+```js
+//html
+  <button onclick="add()">Add</button>
+  <span id="num"></span>
+
+//js
+
+let sum = 0;
+let num = document.getElementById("num");
+function add(){
+  sum = sum +1;
+  num.innerHTML = sum; //update variable
+}
+```
+</details>
+
 
 <details>
 <summary>Extras. Math. padStart, setTimeout, replace...</summary>

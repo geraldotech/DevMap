@@ -91,6 +91,16 @@ if(x === true){
   console.log('nao existe')
 }
 
+//filter with includes
+const petshop = [
+  "cao: 10",
+  "gato: 20",
+  "cao: 20"
+]
+
+dog = petshop.filter(el => el.includes("cao"));
+console.log(`results ${dog}`)
+
 //11
 //indexOf e.g: 1
 function getx(){
@@ -139,7 +149,7 @@ console.log(cars2)
 
 
 //13
-  //filter
+//filter
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 arr = ['Al', 'Bra', 'Char', 'Delta', 'Echoss', 'Foxtrot']

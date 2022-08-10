@@ -1,4 +1,4 @@
-    <title>CALCULADORA JS</title>
+/*    <title>CALCULADORA JS</title>
     <style>
 .flexcontainer {
     background-color: cadetblue;
@@ -37,7 +37,8 @@ N2:<input id="n2" type="number" /> <br>
 <div id="res"></div>
 </div>
 </div>
-<script>
+*/
+//script
 function getcal(){
     var res = document.getElementById('res');
     var n1 = parseFloat(document.getElementById('n1').value);
@@ -73,4 +74,3 @@ function div(x,y)
 {
     return(x/y);
 }
-</script>
