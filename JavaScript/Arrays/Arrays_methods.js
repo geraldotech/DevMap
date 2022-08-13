@@ -346,6 +346,11 @@ console.log(ages.some(check));
 function check(age){
   return age > 18;
 }
+//some in Object Array "com every também return boolean results"
+const person = [
+  { nome: "ISA", idade: 28, Estado: "SP" },
+];
+console.log(person.some(el => el.nome === "ISA")); //true
 
 //21 - every
 const numbers = [4, 12, 16, 20];
