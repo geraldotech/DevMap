@@ -262,6 +262,10 @@ const t = document.getElementById("bar").addEventListener("click", function(even
 document.documentElement.addEventListener("mousemove", function(e){
     console.log(e);
 })
+
+#documentElement
+const rootElement = document.documentElement;
+console.log(rootElement);
 ```
 </details>
 
