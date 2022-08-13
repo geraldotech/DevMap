@@ -1,6 +1,6 @@
-//JavaScript String and Array Methods
-
 /*
+JavaScript String and Array Methods
+
 Table of JavaScript String and Array Methods => 
 https://medium.com/jsunderthescope/table-of-javascript-string-and-array-methods-fdba7c5289f1
 */
@@ -215,7 +215,8 @@ console.log(busca)
 words = arr.filter((word) => word.startsWith('F'));
 words == '' ? console.log('nao') : console.log(words);
 
-// 14
+// 14 find
+
 //find obj array
 //e.g: 1
 person = [{name:"Geraldo",city:"Maceio",age:"29"}, {name:"Felipe",city:"Palmeira",age:"28"}];
@@ -226,8 +227,7 @@ document.write(Object.values(x));
 
 //find ternario response
 f = arr.find((value) => value === 'Zulu');
-f = f ? console.log(f) : console.log('nao encontrado')
-
+f = f ? console.log(f) : console.log('nao encontrado');
 
 //e.g: 2
  persons = [{name:"Geraldo",city:"Maceio",age:"29"}, {name:"Felipe",city:"Palmeira",age:"28"}];
@@ -240,13 +240,23 @@ persons = [{name:"Geraldo",city:"Maceio",age:"29"}, {name:"Felipe",city:"Palmeir
 var buscar = persons.find(function (el){
   return el.age == 28;
 })
-console.log(buscar)
+console.log(buscar);
+
+//e.g: 4
+const persons = [
+  { nome: "GERALDO", idade: 29, Estado: "RJ" },
+  { nome: "FELIPE", idade: 25, Estado: "AL" },
+];
+
+find = persons.find(el => el.nome === "GERALDO");
+find != undefined ? console.log(find) : console.log('not found');
+
 
 
 // 15 join - method create e returns concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string
 arr = ['fire', 'water', 'airplane', 'car']
 
-console.log(arr.join()) // fire,water,airplane,car
+console.log(arr.join()); // fire,water,airplane,car
 
 console.log(arr.join('.')) // fire.water.airplane.car
 
@@ -256,25 +266,22 @@ console.log(arr.join('')) // firewaterairplanecar
 // 16 concat - merge arrays
 arr = [1,2,3,4,5]
 arr2 = [6,7,8,9,10]
-
 arr_all = arr.concat(arr2);
-
-console.log(arr_all)
-
+console.log(arr_all);
 
 //17 - map - percorrer um vetor e obter um novo vetor cujo itens são resultados de uma função de callback
 //way 1
 const arr = [1,2,3,4,5];
 
 arrn = arr.map(x => 2** x);
-console.log(arrn) //(5) [2, 4, 8, 16, 32]
+console.log(arrn); //(5) [2, 4, 8, 16, 32]
 //way 2
 
 const arr2 = [1,2,3,4,5];
 arr2n = arr2.map((item) => {
   return item ** 2;
 })
-console.log(arr2n) //(5) [1, 4, 9, 16, 25]
+console.log(arr2n); //(5) [1, 4, 9, 16, 25]
 
 //way 3 filter
 var mercado = new Map();
@@ -353,12 +360,35 @@ const person = [
 console.log(person.some(el => el.nome === "ISA")); //true
 
 //21 - every
+/*
+
+* true if the function returns true for all elements.
+* false if the function returns false for one element.
+Parameters:
+
+currentValue	Required, 
+index	Optional
+arr	Optional.
+*/
 const numbers = [4, 12, 16, 20];
 
 function maior(value){
   return value > 10;
 }
-console.log(numbers.some(maior))
+console.log(numbers.some(maior));
+
+//example
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_every3
+
+
+//Some vs Every
+const numbers = [4, 12, 16, 20];
+function maior(value){  
+  return value > 10;
+}
+
+console.log(numbers.every(maior)); // false pq nem todos são >10
+console.log(numbers.some(maior)); //true pq existe valores > 10
 
 
 //22 - slice 
@@ -368,11 +398,12 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects
 */
 arr2 = [0,1,2,3,4,5];
 let b = arr2.slice(1,3); //get itens between
-console.log(b)
+console.log(b);
 
 
 
 //23 - split - create array of substrings
+
 //only for strings
 arr3 = ("Geraldo");
 let c = arr3.split("")
@@ -381,17 +412,49 @@ console.log(c) // ['G', 'e', 'r', 'a', 'l', 'd', 'o']
 
 //split("") espaço = cada word , no space = every letter
 
-
 let a = "Rio de Janeiro";
 const myarr = a.split(" ");
+console.log(myarr); // (3) ['Rio', 'de', 'Janeiro']
 
 
-console.log(myarr)
 //get second word
 console.log(myarr[2]) //Janeiro
-
 document.getElementById("res").innerHTML = myarr;
 
 //limiter
+const a = "DEVMAP.code";
 const myarr2 = a.split("", 2)
-console.log(myarr2)
+console.log(myarr2); // (2) ['D', 'E']
+
+//filter, includes, some, every, indexOf, find, forEach
+
+const person = [
+  { nome: "GERALDO", idade: 29, Estado: "RJ" },
+  { nome: "FELIPE", idade: 25, Estado: "AL" },
+  { nome: "ISABELLA", idade: 5, Estado: "RJ" },
+  { nome: "CAMILLY", idade: 10, Estado: "SP" },
+  { nome: "ISA", idade: 28, Estado: "RS" },
+];
+
+const arr = [
+  "CREDITO",
+  "R$ 100",
+  "DEBITO",
+  "R$ 200"
+]
+//filter with includes in object array do not work!
+console.log('filter,includes',arr.filter(value => value.includes("R$"))); //(2) ['R$ 100', 'R$ 200']
+
+console.log('some',person.some(el => el.Estado === "SP")); //true
+
+console.log('some arr',arr.some(el => el === "CREDITO")); //true
+
+console.log('includes', arr.includes("DEBITO")); //true
+
+console.log('filter',person.filter(el => el.Estado === "RJ")); //(2) [{…}, {…}]
+
+console.log('find', person.find(value => value.Estado === "RJ")); // get only 1 results even tiver mais
+
+console.log('every',person.every(el => el.Estado === "SP")); // false
+
+person.forEach((el, ind) => console.log(ind)); // 1,2,3,4
