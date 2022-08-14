@@ -101,8 +101,10 @@ const petshop = [
 dog = petshop.filter(el => el.includes("cao"));
 console.log(`results ${dog}`)
 
-//11
-//indexOf e.g: 1
+//11 - indexOf e.g: 1
+
+//demo => https://gmapdev.netlify.app/demo/indexof-preventdefault
+
 function getx(){
   let n = document.getElementById("n").value
   const cars = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
@@ -135,6 +137,8 @@ console.log(arr);
 
 // 12 splice  index ? + delete ? + add elements?
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+
+//https://gmapdev.netlify.app/demo/indexof_and_splice
 
 
 //e.g 1
@@ -359,6 +363,11 @@ const person = [
 ];
 console.log(person.some(el => el.nome === "ISA")); //true
 
+
+//tem alguém menor de idade na lista?
+console.log(ages.some(el => el < 18)); // true 
+
+
 //21 - every
 /*
 
@@ -426,6 +435,30 @@ const a = "DEVMAP.code";
 const myarr2 = a.split("", 2)
 console.log(myarr2); // (2) ['D', 'E']
 
+
+// 24 - findIndex - method returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. 
+// retorna o primeiro elemento encontrado que sadisfazer o teste
+
+
+const num = [1,30,40,5,10,15];
+const Maior = (ele) => ele > 5; //who is large > 5 ?
+console.log(num.findIndex(Maior)); // 1
+
+/*
+indexOf and FindIndex
+*/
+
+const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+
+console.log(fruits.indexOf("blueberries")); //3
+
+const pegaIndex = (val) => val === "blueberries";
+console.log(fruits.findIndex(pegaIndex)); //3
+
+
+
+
+/*________________________________________________________________*/
 //filter, includes, some, every, indexOf, find, forEach
 
 const person = [
@@ -442,10 +475,13 @@ const arr = [
   "DEBITO",
   "R$ 200"
 ]
+
+
+
 //filter with includes in object array do not work!
 console.log('filter,includes',arr.filter(value => value.includes("R$"))); //(2) ['R$ 100', 'R$ 200']
 
-console.log('some',person.some(el => el.Estado === "SP")); //true
+console.log('some',person.some(el => el.Estado === "SP")); // existe/alguém de SP? true
 
 console.log('some arr',arr.some(el => el === "CREDITO")); //true
 
@@ -455,6 +491,6 @@ console.log('filter',person.filter(el => el.Estado === "RJ")); //(2) [{…}, {�
 
 console.log('find', person.find(value => value.Estado === "RJ")); // get only 1 results even tiver mais
 
-console.log('every',person.every(el => el.Estado === "SP")); // false
+console.log('every',person.every(el => el.Estado === "SP")); // todo são? false
 
 person.forEach((el, ind) => console.log(ind)); // 1,2,3,4
