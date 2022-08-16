@@ -4,7 +4,8 @@
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 var age = 30;
 var ano = 2022;
 var res = ano - age;
@@ -14,66 +15,71 @@ document.getElementById("idade").innerHTML = res;
 let [y,idade] = [2022,29];
 console.log(y - idade);
 //
-</pre>
+```
 </details>
 
 2. Faça que ao clicar no botão seja exibida uma mensagem de alert:
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 function bnt() {
     alert("boa noite");
 }
-</pre>
+```
 </details>
 
 3. Faça um button com <mark>.getElementById</mark> o clicar seja exibida uma mensagem de alert customizando a cor e font-size
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 document.getElementById("bntx").onclick = function () {
     alert("boa noite");
 }
-</pre>
+```
 </details>
 
 4. Contar de 1 até 10: 
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 var cont = "";
 for(i=1;i<=10;i++) {
     cont += i;
 }
 document.getElementById("contador").innerHTML = cont;
-</pre>
+```
 </details>
 
 5. Faça uma tabuada de um número: 
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 var c = "";
 var opt = 7;
 for(a=1; a<=10; a++) {
     c += opt +' x '+a + '='+opt*a+'<br>';
 }
 document.getElementById("tabua").innerHTML = c;
-</pre>
+```
 </details>
 
 6. Mostrar a data e hora atual: 
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 const d = new Date();
 document.getElementById("hora").innerHTML = d;
-</pre>
+```
 </details>
 
 7. Como call JavasSript external file?
@@ -86,8 +92,8 @@ e.g: pode usar para add uma imagem
 
 <details>
 <summary>res</summary>
-<pre>
-//8
+
+```js
 function txt2() {
     document.getElementById("txt").innerHTML = "Boa noite";
 }
@@ -96,16 +102,28 @@ function txt2() {
 function img2() {
     document.getElementById("img").innerHTML = '<img src="xxhttps://img.freepik.com/fotos-gratis/imagem-aproximada-em-tons-de-cinza-de-uma-aguia-careca-americana-em-um-fundo-escuro_181624-31795.jpg" />';
 }
-</pre>
+```
 </details>
 
 
 9. Usando HTML + CSS + JavaScript faça um menu dropdown, quando selecionar a opção o conteúdo seja mostrado: *(create a new .js file script)* 
 
-
 <details>
-<summary>res</summary>
-<pre>
+<summary>res </summary>
+
+```html
+<select name="options" id="options">
+<option value="1">Selecionar: </option>
+<option value="2">SX</option>
+<option value="3">Trigg</option>
+</select>
+
+<g id="1" style="display:block"></g>
+<g id="2">5000</g>
+<g id="3">6000</g>
+```
+
+```js
 document.getElementById("options").onchange = function () {
     var i = 1;
     var myDiv = document.getElementById(i);
@@ -115,7 +133,8 @@ document.getElementById("options").onchange = function () {
     }
     document.getElementById(this.value).style.display = 'block';
 }
-</pre>
+```
+
 </details>
 
 
@@ -124,7 +143,8 @@ document.getElementById("options").onchange = function () {
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 function texto2 () {
     var x = document.getElementById("texto");
     if (x.innerHTML == "Hello") {
@@ -133,24 +153,26 @@ function texto2 () {
         x.innerHTML = "Hello";
     }
 }
-</pre>
+```
 </details>
 
 11. Faça um exemplo de Arrays com 3 valores: 
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 network = ['NETFLEX ','<p style="background:DodgerBlue;display:inline">Live TIM</p>','<p style="background:red;display:inline"> CLARO</p>'];
 document.getElementById("array").innerHTML = network;
-</pre>
+```
 </details>
 
 12. Faça uma tabuada de multiplicar com valor de entrada <input:  
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 function multiplica() {
     var num = (document.getElementById("num").value);
     var saida = document.getElementById("saida");
@@ -159,7 +181,7 @@ function multiplica() {
     mu += num+' x '+i+' = '+num*i+'<br>';
     saida.innerHTML = mu;
 }
-</pre>
+```
 </details>
 
 13. Usando o toggle swap faça uma imagem aparecer e ou desaparecer ao clicar no botão. dica use: html, css, e JS!
@@ -167,7 +189,8 @@ function multiplica() {
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 function imgbnt() {
     var ximg = document.getElementById("imgx");
         if (ximg.style.display === "none") {
@@ -176,14 +199,15 @@ function imgbnt() {
             ximg.style.display = 'none';
     }
 }
-</pre>
+```
 </details>
 
 14. Solicite um número e mostre se é par ou impar, faça usando if else e depois o operador ternário, resultado deve ser exibido com console.log  
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 //14 console.log
 //const n = prompt("Digite um valor:");
 if (n %2 === 0) {
@@ -195,7 +219,7 @@ if (n %2 === 0) {
 //14.2 operador ternário:
 //const nn = prompt("Inserir numero:");
 //*nn %2 == 0 ? console.log(+nn+" PAR") : console.log(+nn+" IMPAR");
-</pre>
+```
 </details>
 
 15. Em uma div defina um id e class, caso a class da id seja =="geraldo" o nome que deve aparecer será Petronilo  
@@ -203,14 +227,15 @@ if (n %2 === 0) {
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 let xj = document.getElementById('filho');
 if(xj.className === "geraldo"){
     xj.textContent = "Petronilo";
 } else {
     xj.className = "NaN Geraldo";
 }
-</pre>
+```
 </details>
 
 16. Tabuada com form com required no valor m´áximo: 
@@ -219,7 +244,8 @@ if(xj.className === "geraldo"){
 
 <details>
 <summary>res</summary>
-<pre>
+
+```js
 function btn(){
     //e.preventDefault()
     n1 = document.getElementById("n1").value;
@@ -235,19 +261,20 @@ function btn(){
   }
   myres.innerHTML = res;
   }
-</pre>
+```
 </details>
 
 17. Ao clicar no botão seja atribuindo +1 sum onclick!
 
 <details>
 <summary>code</summary>
-<pre>
+
+```js
 let sum = 0;
 function add(){
     let sumel = document.getElementById("x");
     sum = sum +1;
     sumel.innerHTML = sum;
 }
-</pre>
+```
 </details>
