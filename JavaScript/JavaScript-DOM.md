@@ -9,10 +9,11 @@
 
 </details>
 
+## windows and document
+
+<img src="./assets/img/BkAjU.jpg" alt="example" style="width:50%">
 
 ## window [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window)
-
-
 
 - window - é a primeira coisa que é carregada no browser, object global, não é atoa que `alert()` originalmente pode ser declarado como `window.alert("dev");` aqui também obtemos o Height e Width da janela, e.g:
 
@@ -20,7 +21,7 @@
 console.log("height",window.innerHeight, "Width",window.innerWidth);
 
 ```
-
+Também temos como examplo o Windows.localStorage, console, print, prompt entre outros visitar a MDN.
 
 - Mostrar tudo:
 `console.log(window)`
@@ -88,11 +89,19 @@ console.log(val); //TypeScript
 document.credito.onclick = function(event){
     console.log(event);
   }
+
+//onclick Event and target 
+  document.click.onclick = function(event){
+      console.log(event.target);
+    }
 ```
 
-### Agora para falar com algum elemento com id:
+### GetElementById:
 
 `document.getElementById("test")`
 
-### onclick Event and target 
+
+# Refes
+####  [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
+
 
