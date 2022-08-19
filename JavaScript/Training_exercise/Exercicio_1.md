@@ -1,6 +1,6 @@
 # JS Exercício 1
 
-1. Usando variáveis calcule o ano de nascimento com base no ano atual e idade: Também faça uso do shorthand [] = []
+1. Usando variáveis calcule o ano de nascimento com base no ano atual e idade, também faça uso do shorthand [] = []
 
 <details>
 <summary>res</summary>
@@ -190,6 +190,14 @@ function multiplica() {
 <details>
 <summary>res</summary>
 
+```html
+<button onclick="imgbnt()">show img</button>
+<imgx id="imgx" style="display: none;">
+    <img src="https://img.freepik.com/fotos-gratis/imagem-aproximada-em-tons-de-cinza-de-uma-aguia-careca-americana-em-um-fundo-escuro_181624-31795.jpg" width="250px" height="250px" />
+</imgx>
+
+```
+
 ```js
 function imgbnt() {
     var ximg = document.getElementById("imgx");
@@ -208,8 +216,7 @@ function imgbnt() {
 <summary>res</summary>
 
 ```js
-//14 console.log
-//const n = prompt("Digite um valor:");
+const n = prompt("Digite um valor:");
 if (n %2 === 0) {
     console.log('EVEN - PAR');
 } else {
@@ -217,13 +224,12 @@ if (n %2 === 0) {
 }
 
 //14.2 operador ternário:
-//const nn = prompt("Inserir numero:");
-//*nn %2 == 0 ? console.log(+nn+" PAR") : console.log(+nn+" IMPAR");
+const nn = prompt("Inserir numero:");
+nn %2 == 0 ? console.log(+nn+" PAR") : console.log(+nn+" IMPAR");
 ```
 </details>
 
 15. Em uma div defina um id e class, caso a class da id seja =="geraldo" o nome que deve aparecer será Petronilo  
-
 
 <details>
 <summary>res</summary>

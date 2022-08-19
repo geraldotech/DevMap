@@ -198,8 +198,7 @@ alert("Digitou "+valor);
 }
 
 13)
-https://github.com/geraldotech/JavaScript/blob/main/Functions/Calculadora-RadioButton.js
-
+https://github.com/geraldotech/DevMap/blob/main/JavaScript/Functions/Calculadora-RadioButton.js
 
 14)
 
@@ -276,6 +275,7 @@ url.href = 'https://gpnotes.droppages.com/img/'+name+'.jpg';
 
 20)
 https://github.com/geraldotech/JavaScript/blob/main/Functions/functions.js
+
 
 21)
 <body onload="loaded()">    

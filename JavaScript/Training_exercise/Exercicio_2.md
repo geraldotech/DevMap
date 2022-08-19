@@ -1,12 +1,16 @@
 # JavaScript Exercicios 2
 
 1. Como mostrar a data com `document.write` e uma imagem?
+
 ```
-http://cdn-content.geraldo.tech/super.jpg
+https://gpnotes.droppages.com/img/garden.jpg
 ```
 2.Abrir uma página blank com **any content**:
+
 3.Faça um conteúdo ser mostrado deletando o conteúdo existente ao clicar no botão, o conteúdo deve ser exibido usando a propriedade <code>document.write</code>
+
 4.Faça um exemplo de <code>swicth case </code> com prompt, parseINT a informação pode ser exibida com a propriedade: <code>document.write, alert ou console.log</code>. parseInt também pode ser definido apenas com <code>+ e.g const n = +prompt(...</code>
+
 ```js
 1 = SX
 2 = C6
@@ -28,7 +32,7 @@ person['name'];
 console.log(person['age']);
 ```
 
-8.Faça um Array, e usando `forEach`  mostre os index dos valores armazenados e os nomes:
+8.Faça um Array, e usando `forEach`  mostre os index e os nomes dos valores armazenados:
 
 ```js
 0:ORANGE
@@ -39,7 +43,7 @@ console.log(person['age']);
 
 9.Faça um menu e usando `getElementByClassName` altere o nome, background e o link:  
 
-10.Declare lets para conseguir a data do dia atual:  
+10.Declare let para conseguir a data do dia atual:  
 
 11.Faça um menu com `querySelector e if else` 
 [MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals
