@@ -32,9 +32,8 @@ console.log("height",window.innerHeight, "Width",window.innerWidth);
 `console.log(window.live);`
 
 
-## document
+## document | [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document) => [MDN - DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
 
-[Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) => [DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
 
 - document - contains the DOM represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
 
@@ -61,7 +60,7 @@ console.log(document); //#document
 
 ```
 
-- Selecionando por nomes:
+- Select by names:
 
 ```js
 <form  name="test">teste</form> 
@@ -70,7 +69,7 @@ console.log(document.test.innerHTML);
 
 ```
 
-- Selecionado by two names input
+- Select by two names input
 
 ```js
 <form name="JS">
@@ -96,3 +95,4 @@ document.credito.onclick = function(event){
 `document.getElementById("test")`
 
 ### onclick Event and target 
+
