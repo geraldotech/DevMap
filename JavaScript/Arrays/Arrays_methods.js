@@ -469,6 +469,18 @@ const person = [
   { nome: "ISA", idade: 28, Estado: "RS" },
 ];
 
+console.log('includes',person.some(el => el.nome == "GERALDO")); // existe alguém chamado GERALDO? true
+
+console.log('some',person.some(el => el.Estado === "SP")); // existe/alguém de SP? true
+
+console.log('filter',person.filter(el => el.Estado === "RJ")); //(2) [{…}, {…}]
+
+console.log('find', person.find(value => value.Estado === "RJ")); // get only 1 results even tiver mais
+
+console.log('every',person.every(el => el.Estado === "SP")); // todos são de SP? false
+
+person.forEach((el, ind) => console.log(ind)); // 1,2,3,4
+
 const arr = [
   "CREDITO",
   "R$ 100",
@@ -477,20 +489,10 @@ const arr = [
 ]
 
 
-
-//filter with includes in object array do not work!
-console.log('filter,includes',arr.filter(value => value.includes("R$"))); //(2) ['R$ 100', 'R$ 200']
-
-console.log('some',person.some(el => el.Estado === "SP")); // existe/alguém de SP? true
-
 console.log('some arr',arr.some(el => el === "CREDITO")); //true
 
 console.log('includes', arr.includes("DEBITO")); //true
 
-console.log('filter',person.filter(el => el.Estado === "RJ")); //(2) [{…}, {…}]
+//filter with includes in object array do not work, use only includes!;
+console.log('filter,includes',arr.filter(value => value.includes("R$"))); //(2) ['R$ 100', 'R$ 200']
 
-console.log('find', person.find(value => value.Estado === "RJ")); // get only 1 results even tiver mais
-
-console.log('every',person.every(el => el.Estado === "SP")); // todo são? false
-
-person.forEach((el, ind) => console.log(ind)); // 1,2,3,4

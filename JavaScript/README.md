@@ -167,8 +167,10 @@ console.log(rpl)
 let a = '[[{"nome":"ISA"}]]';
 console.log(a.replace(/["}{}[]|(])/g,"")); //nome:ISA
 
+/*
 https://www.w3schools.com/jsref/jsref_replace.asp
 https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
+*/
 
 //CPF formatado
 //https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-number-in-chrome
@@ -351,5 +353,41 @@ document.addEventListener('click', function(){
 img.classList.add('meuimg');
 });
 ```
+
+</details>
+
+<details>
+<summary>contains event target</summary>
+<a href="https://codepen.io/geraldopcf/pen/yLKZROJ" target="_blank">CodePen</a>
+
+```html and css
+<div id="mydiv" style="width: 100px;height: 100px;background-color: blue;"></div>
+
+
+  div {
+  margin: auto;
+  padding: 1em;
+  max-width: 6em;
+  background: rgba(0, 0, 0, .2);
+  text-align: center;
+}
+
+```
+
+```js
+
+var mydiv = document.getElementById("mydiv");
+
+document.addEventListener("click", function(e){
+    var inside = mydiv.contains(e.target);
+    if(inside){
+        alert("click inside")
+    } else {
+        alert("click outsite")
+    }
+});
+```
+
+
 
 </details>
