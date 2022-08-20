@@ -1,6 +1,6 @@
-#### live demo => [Live Demo](https://codepen.io/geraldopcf/pen/LYdrVmz)
+#### [Live Demo](https://codepen.io/geraldopcf/pen/LYdrVmz)
 
-//html
+html
 ```html
 <input type="radio" name="calc" value="html" id="one">
 <label for="one">HTML</label>
@@ -16,12 +16,8 @@
 </div>
 ```
 
-//css
-```css
 
-```
-
-//js
+js
 
 ```js
 function check(){  

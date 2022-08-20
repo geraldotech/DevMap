@@ -1,6 +1,6 @@
-#### live demo => [Live Demo](https://codepen.io/geraldopcf/pen/mdxvBWg)
+#### [Live Demo](https://codepen.io/geraldopcf/pen/mdxvBWg)
 
-//html
+html
 ```html
 
 
@@ -35,7 +35,7 @@
 
 ```
 
-//css
+css
 ```css
     :root{
       color-scheme: dark;
@@ -45,7 +45,7 @@
 
 
 
-//js
+js
 
 ```js
 function getCheckedValues() {

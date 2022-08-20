@@ -1,6 +1,6 @@
-#### live demo => [https://codepen.io/geraldopcf/pen/qBoKdYX](https://codepen.io/geraldopcf/pen/qBoKdYX)
+#### [Live Demo](https://codepen.io/geraldopcf/pen/qBoKdYX)
 
-//html
+html
 ```html
 <input type="radio" name="calc" value="html" id="one">
 <label for="one">HTML</label>
@@ -18,7 +18,7 @@
   <p id="output"></p>
 ```
 
-//css
+css
 ```css
 *{
   background: black;
@@ -33,7 +33,7 @@ button{
 
 
 
-//js
+js
 
 ```js
 function check(){

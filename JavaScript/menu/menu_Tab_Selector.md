@@ -1,6 +1,6 @@
-#### live demo => [https://codepen.io/geraldopcf/pen/ZExLmbX](https://codepen.io/geraldopcf/pen/ZExLmbX)
+#### [CodePen](https://codepen.io/geraldopcf/pen/ZExLmbX)
 
-//html
+html
 ```html
 <ul>
   <li class="item active" data="service">Serviços</li>
@@ -20,7 +20,7 @@
 </div>me=show_subcategory">link</a>
 ```
 
-//css
+css
 ```css
 ul { 
     list-style: none;
@@ -51,7 +51,7 @@ ul li {
 
 
 
-//js
+js
 
 ```js
 const serviceText = document.getElementById("serviceText");

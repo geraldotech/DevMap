@@ -1,6 +1,6 @@
-#### live demo => [CodePen](https://codepen.io/geraldopcf/pen/WNzyQMG)
+#### [CodePen](https://codepen.io/geraldopcf/pen/WNzyQMG)
 
-//html
+html
 ```html
 <h2>o name do form é mais importande do que o id</h2>    
 
@@ -36,14 +36,8 @@
 
 ```
 
-//css
-```css
 
-```
-
-
-
-//js
+js
 
 ```js
     document.mainForm.onclick = function(){

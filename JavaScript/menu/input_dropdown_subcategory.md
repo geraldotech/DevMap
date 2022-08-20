@@ -1,6 +1,6 @@
-#### live demo => [https://codepen.io/geraldopcf/pen/dymKYXq](https://codepen.io/geraldopcf/pen/dymKYXq)
+#### [Live Demo](https://codepen.io/geraldopcf/pen/dymKYXq)
 
-//html
+html
 ```html
 <table>
 <thead>
@@ -36,7 +36,7 @@
 <a href="https://www.studentstutorial.com/code-editor/?topic=js&file_name=show_subcategory">link</a>
 ```
 
-//css
+css
 ```css
 *{
     background: black;
@@ -46,7 +46,7 @@
 
 
 
-//js
+js
 
 ```js
 function displaySelected() {
