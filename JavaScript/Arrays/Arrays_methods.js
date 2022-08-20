@@ -455,9 +455,6 @@ console.log(fruits.indexOf("blueberries")); //3
 const pegaIndex = (val) => val === "blueberries";
 console.log(fruits.findIndex(pegaIndex)); //3
 
-
-
-
 /*________________________________________________________________*/
 //filter, includes, some, every, indexOf, find, forEach
 
@@ -496,3 +493,18 @@ console.log('includes', arr.includes("DEBITO")); //true
 //filter with includes in object array do not work, use only includes!;
 console.log('filter,includes',arr.filter(value => value.includes("R$"))); //(2) ['R$ 100', 'R$ 200']
 
+/* check number even or odd */
+
+const array = [1,2,3,4,5];
+
+const even = (el) => el %2 == 0;
+const odd = (val) => val %2 !== 0;
+
+console.log(array.some(even)); // existe par true
+console.log(array.filter(even)); // existe par e display todos [2,4]
+console.log(array.find(even)); // mostra o primeiro even 2
+console.log(array.every(even)); // todos são par? false
+console.log(array.every(odd)); // todos são impar? false
+console.log(array.includes(6)) // includes 6? false
+console.log(array.join('.|.')) // join formata a saída 
+console.log(array.fill(0,2)) // (value, start, end)

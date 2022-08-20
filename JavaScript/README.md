@@ -387,7 +387,121 @@ document.addEventListener("click", function(e){
     }
 });
 ```
+</details>
+
+<details>
+<summary>toString_ArrayFrom</summary>
+<a href="https://codepen.io/geraldopcf/pen/PoRVXQB" target="_blank">CodePen</a>
+
+```html
+<h2>toString converter</h2>
+   <form>
+     <label for="number">Number:</label>
+        <input type="number">
+    </form>
+    <div>Binary: <span id="res"></span></div>
+    <div>Hex: <span id="hex"></span></div>
+
+<h2>Array From</h2>
+  <ul>
+    <li class="item" itemtype="arroz">Arroz</li>
+    <li class="item" itemtype="feijao">Feijão</li>
+    <li class="item" itemtype="batata">Batata</li>
+  </ul>
+```
 
 
+```js
 
+ //shorhand
+   const get = function (id) { return document.getElementById(id) };
+  const query = function (id) { return document.querySelector(id) };
+  const log = function (id) { return console.log(id) };
+
+const itens = Array.from(document.getElementsByClassName("item"));
+log(itens);
+
+itens.forEach(item=>{
+  item.addEventListener("click", onItemClick)
+});
+
+function onItemClick(event){
+  log('clickk', event.target.attributes.itemtype.value);
+  const value = event.target.attributes.itemtype.value;
+  if(value == 'feijao') log('tropeiro?');
+  if(value == 'arroz') log('arroz');
+  
+}
+
+input = query("input");
+  input.addEventListener("input", function () {
+    const str = +this.value;
+    console.log(str.toString(16));
+    get("res").innerText = str.toString(2);
+    get("hex").innerText = str.toString(16);
+  });
+```
+</details>
+
+
+<details>
+<summary>event.preventDefault</summary>
+<a href="https://codepen.io/geraldopcf/pen/VwXgqgQ" target="_blank">CodePen</a>
+
+```html
+<h2>action="#" vs preventDefault()</h2>
+<p>action="#" - require a first click to get #get in browser</p>
+<hr>
+<p>preventDefault() - "boa pratica" prevenir o comportamento padrão, exemplificando no form requer detalhes e.g:</p>
+<p>case html button.onclick="mybtn()" add <u>event</u> in <b>"mybtn(event)"</b> to call in <b>function(event)</b>
+<p>case html <b>button id="btn"</b> and ...<b>getElementById("btn").onclick = function(event)</b></p>
+
+<pre>
+<code>
+ function btn(event){
+       event.preventDefault()
+</code>
+</pre>
+
+<br>
+<form>
+    <fieldset>
+    <legend>Calculadora</legend>
+      <label for="n1">Digite número: </label>
+      <input type="number" id="n1" required />
+    <label for="max">Max: </label>
+      <input type="number" id="max" required>
+      <button onclick="btn(event)">Calcular</button>  
+      <button onclick="reseta()">Reload and reset</button>
+      </fieldset>
+    
+    </form>
+
+  <fieldset>
+        <legend>Resultado:</legend>
+        <p id="myres"></p>
+      </fieldset>
+
+```
+
+```js
+
+ console.log('test')
+      function btn(event){
+       event.preventDefault()
+    n1 = document.getElementById("n1").value;
+    max = document.getElementById("max").value;
+    myres = document.getElementById("myres");
+    res = '';
+  for(i = 1; i<=max; i++){
+    res += n1+' x '+i+'='+i*n1+'<br>';
+  }
+  myres.innerHTML = res;
+  }
+  function reseta(){
+    document.querySelector("form").reset();
+    location.reload();
+  }
+
+```
 </details>
