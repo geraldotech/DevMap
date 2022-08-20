@@ -1,16 +1,15 @@
 # Javascript
 
+console.log('Focus in Javascript');
 
 ### O que é JavaScript? by Geraldo Filho
 
 [onclick.open"JavaScript-DOM.md"](./JavaScript-DOM.md)
 
 
-
 Projects and Demos
  - [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 
-console.log('Focus in Javascript');
 
 ### write:
 
@@ -30,10 +29,17 @@ parentheses()
 braces {} - chaves
 square brackets [] - colchetes
 ```
-### call var:
+
+### Estrutura de dados
+
+- [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
+
+var não é usa mais! pq tem problema de scopo, use let ou const
+
+## Extra Fast Code Cheats and Examples
 
 <details>
-<summary>see code</summary>
+<summary>how call string</summary>
 
 ```js
 let name = "Geraldo";
@@ -44,15 +50,6 @@ console.log('Eu sou ' +name);]
 ```
 
 </details>
-
-### Estrutura de dados
-
-- [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
-
-var não é usa mais! pq tem problema de scopo, use let ou const
-
-## Extra Fast Code Cheats and Examples
-
 
 <details>
 <summary>onclick update variable</summary>
@@ -157,7 +154,31 @@ document.body.style.zoom = "100%";
       document.body.appendChild(img);
   }
 
+//replace
 
+let name = "gg";
+
+let rpl = name.replace("ggg","Felipe");
+console.log(rpl)
+
+
+
+//JSON.stringify change output
+let a = '[[{"nome":"ISA"}]]';
+console.log(a.replace(/["}{}[]|(])/g,"")); //nome:ISA
+
+https://www.w3schools.com/jsref/jsref_replace.asp
+https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
+
+//CPF formatado
+//https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-number-in-chrome
+  <input type="number" id="test" onInput="this.value = this.value.slice(0, 11)"/>  
+
+     document.querySelector("#cpf").addEventListener("input", show);
+    function show (e){   
+      const str = this.value.replace(/(\d{3})?(\d{3})?(\d{3})?(\d{2})/, "$1.$2.$3-$4")
+      console.log(str);
+    }
 
   ```
 
