@@ -31,8 +31,6 @@ html
 </form>
 </div>
 
-
-
 <a href="https://www.studentstutorial.com/code-editor/?topic=js&file_name=show_subcategory">link</a>
 ```
 
@@ -43,8 +41,6 @@ css
     color: white;
   }
 ```
-
-
 
 js
 

@@ -18,7 +18,6 @@ html
     </form>
     <span id="result"></span>
 
-
 <hr>
 
 <form name="users">
@@ -32,10 +31,7 @@ html
 <div id="res"></div>
 <div id="res2"></div>
 
-
-
 ```
-
 
 js
 

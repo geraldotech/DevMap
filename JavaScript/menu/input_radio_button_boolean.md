@@ -16,7 +16,6 @@ html
 </div>
 ```
 
-
 js
 
 ```js
@@ -33,9 +32,7 @@ for(var i = 0; i < n.length; i++){
 arr.push(get)
 }
 arr.forEach((ele,index)=> console.log(index+':'+ele))
-console.log(arr); 
-  
+console.log(arr);  
 }
-
 
 ```
