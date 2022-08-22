@@ -29,9 +29,9 @@ Como exemplo também temos o Windows.localStorage, console, print, prompt entre 
 - A seguir podemos chamar o document:
 `console.log(window.document)`
 
-- Get a Element by ID: 
-`<div id="fibra">Speed</div>`
-`console.log(window.live);`
+- Get a Element by ID:  
+`<div id="fibra">Speed</div>` 
+`console.log(window.fibra);`
 
 
 ## document | [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document) => [MDN - DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
