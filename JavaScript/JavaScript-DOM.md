@@ -21,15 +21,16 @@
 console.log("height",window.innerHeight, "Width",window.innerWidth);
 
 ```
-Também temos como examplo o Windows.localStorage, console, print, prompt entre outros visitar a MDN.
+Como exemplo também temos o Windows.localStorage, console, print, prompt entre outros visitar a MDN.
 
 - Mostrar tudo:
 `console.log(window)`
 
-- A seguir podemos chamar o document
+- A seguir podemos chamar o document:
 `console.log(window.document)`
 
-- Get a Element by ID `<div id="fibra">Speed</div>`
+- Get a Element by ID: 
+`<div id="fibra">Speed</div>`
 `console.log(window.live);`
 
 
@@ -48,7 +49,8 @@ console.log(document); //#document
 
 `window.document.<something>` ou apenas `document.<something here>` ou 
 
-- Para começo de tudo vamos falar com object global ROOT do DOM **rootElement**:
+- Para começo de tudo vamos falar com object global ROOT do DOM: 
+**rootElement**:
 `document.documentElement` 
 
 ```js

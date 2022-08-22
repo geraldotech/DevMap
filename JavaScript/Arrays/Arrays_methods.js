@@ -494,7 +494,6 @@ console.log('includes', arr.includes("DEBITO")); //true
 console.log('filter,includes',arr.filter(value => value.includes("R$"))); //(2) ['R$ 100', 'R$ 200']
 
 /* check number even or odd */
-
 const array = [1,2,3,4,5];
 
 const even = (el) => el %2 == 0;
@@ -506,5 +505,5 @@ console.log(array.find(even)); // mostra o primeiro even 2
 console.log(array.every(even)); // todos são par? false
 console.log(array.every(odd)); // todos são impar? false
 console.log(array.includes(6)) // includes 6? false
-console.log(array.join('.|.')) // join formata a saída 
-console.log(array.fill(0,2)) // (value, start, end)
+console.log(array.join('.|.')) // join formata a saída 1.|2.|.3.|.4.|.5.
+console.log(array.fill(0,2)) // (value, start, end) [1 ,2 , 0, 0, 0]

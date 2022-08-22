@@ -158,7 +158,7 @@ document.body.style.zoom = "100%";
 
 let name = "gg";
 
-let rpl = name.replace("ggg","Felipe");
+let rpl = name.replace("gg","Felipe");
 console.log(rpl)
 
 
@@ -362,7 +362,6 @@ img.classList.add('meuimg');
 
 ```html and css
 <div id="mydiv" style="width: 100px;height: 100px;background-color: blue;"></div>
-
 
   div {
   margin: auto;
