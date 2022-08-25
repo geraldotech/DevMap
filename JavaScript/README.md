@@ -4,7 +4,7 @@ console.log('Focus in Javascript');
 
 ### O que é JavaScript? by Geraldo Filho
 
-[onclick.open"JavaScript-DOM.md"](./JavaScript-DOM.md)
+[onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
 
 
 Projects and Demos
@@ -187,7 +187,7 @@ https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-
 </details>
 
 <details>
-<summary>Extras 2 - CSS and shorhand</summary>
+<summary>CSS,shorhand, insertAdjacentHTML and appendChild</summary>
 
 ```js
 // Shorhand for getElementById
@@ -503,4 +503,14 @@ input = query("input");
   }
 
 ```
+</details>
+
+<details>
+<summary>create,set,get,has,remove...Attributes_classList.add</summary>
+
+- [1 - create_get_remove_Attribute](./assets/create_get_remove_Attribute.md) 
+- [2 - hasAttribute_setAttribute](./assets/hasAttribute_setAttribute.md) 
+- [3 - setAttribute_vs_classList](./assets/setAttribute_vs_classList.md) 
+
+
 </details>
