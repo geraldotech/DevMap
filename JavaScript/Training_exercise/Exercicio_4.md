@@ -19,8 +19,6 @@
 
 #### 9.Faça um exemplo simples de um dado salvo em LocalStorage e save, get and del:  
 
-#### 10.Como definir um zoom com JavaScript?
-
 #### 11.Create a object and function with this 
 
 #### 12.Create a interval with messagem || after set a break to it

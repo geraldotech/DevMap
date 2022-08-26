@@ -45,8 +45,8 @@ var não é usa mais! pq tem problema de scopo, use let ou const
 let name = "Geraldo";
 console.log("Eu sou", name);
 console.log("Eu sou " +name);
-console.log(`Eu sou ${name}`)
-console.log('Eu sou ' +name);]
+console.log(`Eu sou ${name}`);
+console.log('Eu sou ' +name);
 ```
 
 </details>
@@ -512,5 +512,38 @@ input = query("input");
 - [2 - hasAttribute_setAttribute](./assets/hasAttribute_setAttribute.md) 
 - [3 - setAttribute_vs_classList](./assets/setAttribute_vs_classList.md) 
 
+</details>
 
+<details>
+<summary>JS/CSS zoom</summary>
+
+```js
+document.body.style.zoom="150%";
+
+//css
+  body{    
+      zoom:150%;
+    }
+```
+</details>
+
+<details>
+<summary>eventListener_mouseMove</summary>
+
+```js
+//html
+<div id="OutDataX"></div>
+<div id="OutDataY"></div>
+
+//js
+const get = (el) => {return document.getElementById(el)};
+
+document.addEventListener("mousemove", function(event){
+    console.log(event);
+    get("OutDataX").innerHTML = `X: ${event.clientX}`;
+    if(event.clientX === 50) alert('50!');
+    get("OutDataY").innerHTML = `Y: ${event.clientY}`;
+});
+
+```
 </details>

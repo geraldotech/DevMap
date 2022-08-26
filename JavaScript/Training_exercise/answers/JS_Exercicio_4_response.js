@@ -85,10 +85,6 @@ arr[1] = y;
 console.log(arr[0] + arr[1]);
 
 
-//10
-document.body.style.zoom="150%";
-
-
 //11
 person = {
   nome:"Geraldo",
