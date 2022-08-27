@@ -3,8 +3,7 @@
 html
 ```html
 
-
-  <input type="checkbox" id="one" name="type" value="1" />
+<input type="checkbox" id="one" name="type" value="1" />
   <label for="one">ONE</label>
   <input type="checkbox" id="two" name="type" value="2" />
   <label for="two">TWO</label>
@@ -13,11 +12,9 @@ html
   <input type="checkbox" id="four" name="type" value="4" />
   <label for="four">Four</label>
   <input type="checkbox" id="five" name="type" value="5" />
-  <label for="five">Five</label>
-
-  
+  <label for="five">Five</label>  
   <br><br>
-  <button id="showResult">Show checked values and sum</button>
+  <button id="showResult">Sum checked values and sum</button>
   <br><br>
   <div id="result"></div>
   <br><br>
@@ -32,7 +29,6 @@ html
   <input type="checkbox" name="opt" id="opt">
   <label for="opt">true or false</label>
 
-
 ```
 
 css
@@ -46,8 +42,7 @@ css
 js
 
 ```js
-function getCheckedValues() {
-  
+function getCheckedValues() {  
   return Array.from(document.querySelectorAll('input[type="checkbox"]'))
   .filter((checkbox) => checkbox.checked)
   .map((checkbox) => +checkbox.value)
@@ -59,8 +54,6 @@ const resultEl = document.getElementById('result');
  document.getElementById('showResult').addEventListener('click', () => {
  resultEl.innerHTML = getCheckedValues();
 }); 
-
-
 
 //addEventListener https://stackoverflow.com/questions/14544104/checkbox-check-event-listener
 const res2 = document.getElementById('result2');
@@ -76,8 +69,8 @@ checkboxes.forEach(function(checkboxx){
     })
 });
 
-
  //Checkbox is not checked ... Checkbox is checked..
+
  //via https://thewebdev.info/2022/05/08/how-to-add-a-checkbox-check-event-listener-with-javascript/
 const checkbox = document.querySelector("input[name=checkbox]");
 
@@ -90,7 +83,8 @@ checkbox.addEventListener("change", (e) => {
 });
 
 
-const inputBtn = document.querySelector("input[name=opt]")
+/* true or false */
+const inputBtn = document.querySelector("input[name=opt]");
 
 
 inputBtn.addEventListener("change", (e) => {
@@ -98,6 +92,7 @@ inputBtn.addEventListener("change", (e) => {
   console.log(inputBtn.checked); // true or false
 })
 console.log(inputBtn); //display all values
+
 
 
 ```

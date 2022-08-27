@@ -13,3 +13,20 @@ function check(x){
     }
     return console.log('register now!');
 }
+
+
+//if return 
+
+function idade(a){
+    if(a === 30) {
+      console.log('trinta')
+      return;
+    }
+    if(a > 30) {
+      console.log('maior trinta')
+      return;
+    }
+    console.log('not condicional')
+  }
+  
+  idade(31);

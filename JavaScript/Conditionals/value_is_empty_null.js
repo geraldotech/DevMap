@@ -1,8 +1,9 @@
 
-
+/*
 <input id="n" />
 <button onclick="getn()">confirmar</button>
-<script>
+*/
+
     function getn() {
         var n = document.getElementById('n').value;        
         if(n !== null && n !== '') {
@@ -12,7 +13,7 @@
         }
 
     }
-</script>
+
 
 
 //type 2
