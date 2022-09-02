@@ -11,11 +11,11 @@
 
 ## windows and document
 
-<img src="./assets/img/BkAjU.jpg" alt="example" style="width:50%">
+<img src="./img/BkAjU.jpg" alt="example" style="width:50%">
 
 ## window [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 
-- window - é a primeira coisa que é carregada no browser, object global, não é atoa que `alert()` originalmente pode ser declarado como `window.alert("dev");` aqui também obtemos o Height e Width da janela, e.g:
+- window - manila o BOM, é a primeira coisa que é carregada no browser, object global, não é atoa que `alert()` originalmente pode ser declarado como `window.alert("dev");` aqui também obtemos o Height e Width da janela, e.g:
 
 ```js
 console.log("height",window.innerHeight, "Width",window.innerWidth);

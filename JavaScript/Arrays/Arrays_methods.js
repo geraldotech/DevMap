@@ -218,6 +218,9 @@ console.log(busca)
 //filtrando letras de um array com ternario response
 words = arr.filter((word) => word.startsWith('F'));
 words == '' ? console.log('nao') : console.log(words);
+//ou alternative
+filtra != '' ? console.log(filtra) : console.log('not');
+filtra.length != 0 ? console.log(filtra) : console.log('not');
 
 // 14 find
 
