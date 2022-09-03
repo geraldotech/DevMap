@@ -1,3 +1,7 @@
+/* DEMO
+https://gmapdev.netlify.app/demo/select-radio-onclick_button
+*/
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +49,9 @@ button {
   user-select: none;
 }
 img {
- width: 250px;
+ max-width: 250px;
+ max-height: 200px;
+ width: 100%;
 }
     </style>
 </head>
@@ -55,10 +61,14 @@ img {
     <div class="flexitem">
 <!--N1:<input id="n1" type="number" /> <br>
 N2:<input id="n2" type="number" /> <br> -->
-<input type="radio" name="calc" id="sx"/>SX <br>
-<input type="radio" name="calc" id="trigg" />Trigg<br>
-<input type="radio" name="calc" id="bb" />BB<br>
-<input type="radio" name="calc" id="nubank" />Nubank<br>
+<input type="radio" name="calc" id="sx"/>
+<label for="sx">SX</label>
+<input type="radio" name="calc" id="porto" />
+<label for="porto">PortoSeguro</label>
+<input type="radio" name="calc" id="bb" />
+<label for="bb">BB</label>
+<input type="radio" name="calc" id="nubank" />
+<label for="nubank">Nubank</label>
 <button onclick="getcal()">Confirmar</button><br>
 
 </div>
@@ -71,8 +81,8 @@ function getcal(){
 
     if(document.getElementById('sx').checked)
     txt = sx('');
-    if(document.getElementById('trigg').checked)
-    txt = trigg();
+    if(document.getElementById('porto').checked)
+    txt = porto();
     if(document.getElementById('bb').checked)
     txt = bb();
     if(document.getElementById('nubank').checked)
@@ -84,9 +94,9 @@ function sx()
 {
     return('<img src="https://www.santander.com.br/sites/WPC_CMS/imagem/21-09-08_194432_santander-logo.png" /> ');
 }
-function trigg()
+function porto()
 {
-    return ('<img src="http://cdn-content.geraldo.tech/img/cartao-de-credito-trigg-coringa.png"  />');
+    return ('<img src="https://www.foregon.com/x/foregon-front/products/cartao-de-credito-porto-seguro-visa-international.png"  />');
 }
 function bb()
 {
