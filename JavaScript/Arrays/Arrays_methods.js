@@ -510,3 +510,10 @@ console.log(array.every(odd)); // todos são impar? false
 console.log(array.includes(6)) // includes 6? false
 console.log(array.join('.|.')) // join formata a saída 1.|2.|.3.|.4.|.5.
 console.log(array.fill(0,2)) // (value, start, end) [1 ,2 , 0, 0, 0]
+
+
+
+const filVal = ["5","10"];
+const keys = ["5","10",5];  
+console.log('every',keys.every(el => filVal.includes(el))); //false
+console.log('some',keys.some(el => filVal.includes(el))); //true
