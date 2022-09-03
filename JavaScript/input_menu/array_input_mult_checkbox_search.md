@@ -2,7 +2,7 @@
 
 ## [CodePen Full code](https://codepen.io/geraldopcf/pen/wvjvNpg)
 também disponível em:
-## [gmapdev_netlify](https://gmapdev.netlify.app/demo/input_checkbox_search.html)
+## [gmapdev_netlify](https://gmapdev.netlify.app/demo/array_input_mult_checkbox_search.html)
 
 ```js
 
