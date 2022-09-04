@@ -13,6 +13,8 @@ title get a variavel message
   <span v-bind:title="message">v-bind</span>
 ::short hand
    <span :title="message">v-bind</span>
+:: links
+ <a :href="face">{{face}}</a> in date link: 'http...'
 ```
 
 ## Vue 2 CDN
