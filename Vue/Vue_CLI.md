@@ -1,4 +1,3 @@
-
 ## create app
 `vue create 2_projeto_vue`
 
@@ -7,7 +6,7 @@
 run server:  
 `npm run server`
 
-# Componentes
+## Components:
 
 - instalar a extensão Vetur para sugestões, formatar code, identificar erros
 Dividir nosso layout em partes, cada um pode ser seu CSS 
@@ -29,7 +28,8 @@ export default {
 </script>
 ```
 
-## criando um componente, ir na pasta de Componentes > MeuPrimeiro.vue
+## criando um componente:
+- ir na pasta de Componentes > MeuPrimeiro.vue
 
 ```js
 <template>
@@ -64,7 +64,7 @@ Depois alterar o h1 do App.vue para
 </template>
 ```
 
-# Dados em componentes (data)
+## Dados em components (data)
 
 Envolver os itens em uma div para resolver o erro de root base
 ```js
@@ -89,13 +89,13 @@ export default {
 </script>
 ```
 
-# Lifecycle hooks
+## Lifecycle hooks
 
 - Criar um novo components `LifeCycle.vue`  
 
 ```js
 <template>
-  <h1>Meu nome é: {{ nome }}</h1>
+<h1>Meu nome é: {{ nome }}</h1>
 </template>
 
 <script>
@@ -123,7 +123,70 @@ components: {
 - declarar no template:
     `<LifeCycle />`
 
+## Fazer um console no hooks
 
-# Diretivas são muitas
+```js
+ created() {
+    this.lifeCycle()
+  },
+ methods:{
+    lifeCycle(){
+      console.log('executou!');
+    }
+  }
+
+```
+## Diretivas são muitas
 >Aprendar ou masterizar as diretivas
 - e.g: v-if
+
+## Methods [yt](https://www.youtube.com/watch?v=745aPtV_W60&list=WL&index=2&t=94s)
+- são como funções, podemos executá-los baseados em eventos ou por alguma lógica do app
+- exemplo show email button
+
+```js
+ <div>
+  <button @click="showEmail">Mostrar e-mail</button>
+</div>
+
+data =>  show_email: false,
+
+methods:{
+    showEmail(){
+      this.show_email = !this.show_email;
+    }
+```
+- checkbox version v-show and v-if
+
+```js
+<input type="checkbox" id="checkbox" v-model="checkbox">
+<label for="checkbox">{{checkbox ? 'hide' : 'show' }}</label> 
+<p v-show="checkbox">Envia uma mensagem para: {{email}}</p>
+<p v-if="checkbox">Envia uma mensagem para: {{email}}</p>
+data =>  checkbox: false,
+```
+- change button name @click
+
+```js
+<button @click="showEmail">{{txtbtn}}</button>
+data =>  txtbtn: 'show'
+
+ methods:{
+    showEmail(){
+      this.show_email = !this.show_email; //case this.show_email for ao ao contrário
+      if(!this.show_email){
+        this.txtbtn = "show"
+      } else {
+        this.txtbtn = "hide"
+      }
+    }
+
+```
+- change button name @click v2
+```js
+<button @click="showEmail">{{show_email ? 'hide' : 'show'}}</button>
+
+data =>   show_email: false,
+```
+
+## CSS Global and scoped 
