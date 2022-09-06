@@ -189,4 +189,4 @@ data =>  txtbtn: 'show'
 data =>   show_email: false,
 ```
 
-## CSS Global and scoped 
+## CSS Global and scoped
