@@ -264,27 +264,29 @@ alert(name);
 ```
 </details>
 <details>
-<summary>Pointer Events, target, documentElement</summary>
+<summary>addEventListener and Pointer Events, target, documentElement</summary>
 
 ```js
-#simple
 
-   <p id="foo">JavaScript</p>
+#simple
+<p id="foo">JavaScript</p>
 const p = document.getElementById("foo");
-console.log(p)
+console.log(p); //check output on console
 
 #PointerEvent
- <p id="bar">TypeScript</p>
-
-const t = document.getElementById("bar").addEventListener("click", function(event){
-    console.log(event);
+<p id="bar">TypeScript</p>
+document.getElementById("bar").addEventListener("click", function(event){
+    console.log(event); //check output on console
 })
 
 #target
-
 const t = document.getElementById("bar").addEventListener("click", function(event){
     console.log(event.target); //  <p id="bar">TypeScript</p>
 })
+
+console.log(event.target.id);
+console.log(event.target.getAttribute("data"));
+console.log(event.target.value); //only for input radio/checkbox
 
 #documentElement
 document.documentElement.addEventListener("mousemove", function(e){

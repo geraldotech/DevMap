@@ -5,6 +5,7 @@
 
 ### 
 
+
 title get a variavel message
 ```html
 ::before
@@ -23,14 +24,17 @@ title get a variavel message
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 ```
 
+example html CDN put <head>
+
 
 ## Vue 3 CDN
 
-production: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
+Error: production build (*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
 
 - **add in header**
 ```js
 <script src="https://unpkg.com/vue@3"></script>
+  <script src="app.js" defer></script>
 ```
 - **body**
 ```html
@@ -189,3 +193,6 @@ exemplo
 - [Vue refs (change element name @click)](https://www.nicesnippets.com/blog/vue-js-get-element-by-id-example)
 
 > abrir o console e chamar o app."var". "adicionar ou true/false"
+
+
+Input e Data Bind

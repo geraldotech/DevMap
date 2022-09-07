@@ -1,10 +1,29 @@
+
+```js
+npm init vue@latest
+
+//install Global
+npm install -g @vue/cli
+
+//check version
+vue -V
+
+Digite o comando `vue` para verificar às opções:
+```
+
 ## create app
 `vue create 2_projeto_vue`
 
 - Manually select features > select Babel > choose version Vue 3.x > dedicated files > Save this preset ? N
 
 run server:  
-`npm run server`
+
+```js
+cd <project>
+npm run serve
+npm run server
+```
+
 
 ## Components:
 
