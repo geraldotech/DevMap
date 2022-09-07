@@ -280,7 +280,7 @@ document.getElementById("bar").addEventListener("click", function(event){
 })
 
 #target
-const t = document.getElementById("bar").addEventListener("click", function(event){
+document.getElementById("bar").addEventListener("click", function(event){
     console.log(event.target); //  <p id="bar">TypeScript</p>
 })
 
