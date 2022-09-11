@@ -208,4 +208,83 @@ data =>  txtbtn: 'show'
 data =>   show_email: false,
 ```
 
+- Criar methods no LifeCyle console.log;
+```js
+created() {
+
+this.life2(); //chamar o method
+}
+
+
+  methods:{
+life2(){
+      console.log('ress')
+    }
+  }
+```
 ## CSS Global and scoped
+
+- Global - basta adicionar no sim do script, geralmente se adiciona no App.vue o main, contudo em qualquer componente será global.
+```css
+<style>
+body{
+  background-color: #333;
+  color: dodgerblue;
+}
+a{
+  color: red;
+}
+</style>
+```
+
+- scoped
+
+```css
+
+<style scoped>
+    ul{
+        list-style: none;
+        display: flex;
+        background-color: #CCC;
+        padding: 10px;
+    }
+    li{
+        margin-right: 10px;
+    }
+    a{
+        color: #DDD;
+        text-decoration: none;
+        transform: 1s;
+    }
+    a:hover{
+        color: turquoise;
+    }
+</style>
+
+```
+
+##  Renderização de listas (v-for)
+
+```js
+<ul>
+<li v-for="(technology, index) in backend_tech" v-bind:key="index">{{technology}}</li>
+</ul>
+
+in data put:
+backend_tech: ["JavaScript", "PHP", "Python"]
+```
+
+Array object:
+```js
+<ul>
+<li v-for="technology in frontend_tech" :key="technology.id">{{technology.lang}}</li>
+</ul>
+
+data:
+
+frontend_tech:[
+{id: 1, lang: 'HTML'},
+{id: 2, lang: 'CSS'},
+{id: 3, lang: 'Vue'},
+]
+```
