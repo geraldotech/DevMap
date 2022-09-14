@@ -1,15 +1,12 @@
 # Javascript
 
-console.log('Focus in Javascript');
-
-### O que é JavaScript? by Geraldo Filho
-
-[onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
-
-
 Projects and Demos
  - [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 
+### O que é JavaScript?  **From Scratch by _Geraldo Filho_**
+
+
+[onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
 
 ### write:
 
@@ -18,7 +15,6 @@ console.log("aspas single");
 console.log("aspas dupla");
 console.log(`grace accent`);
 ```
-
 
 ### syntax / sintaxe
 
@@ -36,7 +32,7 @@ square brackets [] - colchetes
 
 var não é usa mais! pq tem problema de scopo, use let ou const
 
-## Extra Fast Code Cheats and Examples
+## Extra Fast Code Cheats and examples
 
 <details>
 <summary>how call string</summary>
@@ -391,7 +387,7 @@ document.addEventListener("click", function(e){
 </details>
 
 <details>
-<summary>toString_ArrayFrom</summary>
+<summary>toString, toFixed, toUpperCase, toLowerCase</summary>
 <a href="https://codepen.io/geraldopcf/pen/PoRVXQB" target="_blank">CodePen</a>
 
 ```html
@@ -402,37 +398,13 @@ document.addEventListener("click", function(e){
     </form>
     <div>Binary: <span id="res"></span></div>
     <div>Hex: <span id="hex"></span></div>
-
-<h2>Array From</h2>
-  <ul>
-    <li class="item" itemtype="arroz">Arroz</li>
-    <li class="item" itemtype="feijao">Feijão</li>
-    <li class="item" itemtype="batata">Batata</li>
-  </ul>
 ```
 
-
 ```js
-
  //shorhand
-   const get = function (id) { return document.getElementById(id) };
+  const get = function (id) { return document.getElementById(id) };
   const query = function (id) { return document.querySelector(id) };
   const log = function (id) { return console.log(id) };
-
-const itens = Array.from(document.getElementsByClassName("item"));
-log(itens);
-
-itens.forEach(item=>{
-  item.addEventListener("click", onItemClick)
-});
-
-function onItemClick(event){
-  log('clickk', event.target.attributes.itemtype.value);
-  const value = event.target.attributes.itemtype.value;
-  if(value == 'feijao') log('tropeiro?');
-  if(value == 'arroz') log('arroz');
-  
-}
 
 input = query("input");
   input.addEventListener("input", function () {
@@ -441,6 +413,48 @@ input = query("input");
     get("res").innerText = str.toString(2);
     get("hex").innerText = str.toString(16);
   });
+
+//only JS
+
+//toFixed depois da virgula
+console.log(Math.PI.toFixed(2)); // 3.14
+
+//toPrecision
+console.log(Math.PI.toPrecision(2)); //3.1
+
+
+//toUpperCase and toLowerCase
+let firtName = "Geraldo";
+console.log(firtName.toUpperCase()); //GERALDO
+
+console.log(firtName.toLowerCase()); //geraldo
+
+//toString
+//https://linuxhint.com/javascript-tostring-method/
+let age = 29;
+console.log(typeof age) //number
+
+let aget = age.toString();
+console.log(typeof aget) //now is a string
+
+//convert to base(2) binary
+const ipnumber = [192,168,100,200];
+let binary = ipnumber.map((value)=> value.toString(2));
+console.log(binary) //[ '11000000', '10101000', '1100100', '11001000' ]
+
+//Also support base(8) octal , base(16) hexadecimal
+
+
+//Moedas
+//https://franciscochaves.com.br/blog/formatacao-de-moedas-em-javascript
+var atual = 600.00;
+var saldo = 2000;
+
+var f = atual.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+var g = saldo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+console.log(f); //R$ 600,00
+console.log(g); //R$ 2.000,00
+
 ```
 </details>
 

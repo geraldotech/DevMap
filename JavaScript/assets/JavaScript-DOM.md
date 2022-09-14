@@ -21,7 +21,7 @@
 console.log("height",window.innerHeight, "Width",window.innerWidth);
 
 ```
-Como exemplo também temos o Windows.localStorage, console, print, prompt entre outros visitar a MDN.
+Como exemplo também temos o window.localStorage, console, window.print, prompt entre outros visitar a MDN.
 
 - Mostrar tudo:
 `console.log(window)`
