@@ -1,6 +1,6 @@
 # Javascript
 
-:rocket: :zap: Let's Code :rocket:
+:rocket: :zap: Let's Code :zap: :rocket:
 
 Projects and Demos
  - [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
