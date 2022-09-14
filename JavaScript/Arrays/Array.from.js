@@ -38,3 +38,12 @@ function onItemClick(event){
 
 //Mais info deixar apenas, event e dar um click no element
 console.log('clickk', event);
+
+//function 2 alternative
+
+function onItemClick(event){
+  log('clickk', event.target.attributes.itemtype.value);
+  const value = event.target.attributes.itemtype.value;
+  if(value == 'feijao') log('tropeiro?');
+  if(value == 'arroz') log('arroz');  
+}
