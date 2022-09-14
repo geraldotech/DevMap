@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="assets/style.css">
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Pacifico&family=Raleway&family=Ubuntu:wght@500&display=swap');
+</style>
+<title>CCS - Cheat Sheet</title>
+</head>
+<body> 
+  <header>
+    <section class="title">CSS - Cheat Sheet</section>   
+  </header>  
+  <div class="header"></div>
+  <main>  
+    <div class="flex"></div>  
+          <article> 
+            <details>
+              <summary>Declarações no CSS</summary>           
+              <h5>Tipos de declarações:</h5>
+              <br>
+              <p class="lead"><code>.custom</code> => classe da tag e.g: <code>.flexbox-container</code></p>
+              <p class="lead"><code>#classe</code> => ID</p>
+              <br>
+              <p class="lead"><code>p.test</code> => classe <mark>personalizada</mark> para tag p <br> &lt;p class=test"&gt;
+                <pre>
+
+                  p.test {
+                  text-align: center;
+                  color: white;
+                  font-size: 20px;
+                  }
+                  </pre>                
+                  <div class="output">                 
+                    <p class="test">TEST</p>
+                  </div>                  
+                  <h5>Também funciona com tag personalizada g </h5>
+              <p class="lead">&lt;g> do it now &lt;/g&gt;</p>
+              <pre>
+                g{
+                  color: blue;
+                }
+              </pre>
+              <br>
+              <h5>Multi class:</h5>              
+              <br>
+              <p class="lead">Usando apenas a tag p</p>
+              <pre>
+                &lt;style>
+                  p.center {
+                    text-align: center;
+                    color: red;
+                  }                  
+                  p.large {
+                    font-size: 300%;
+                  }
+                  </style>
+              </pre>   
+              <p class="lead">A classe center foi definida em conjunto com a tag <code>p</code> então outras tags não serão afetadas declando a classe em questão <samp>&lt;h1></samp>não foi definida</p>        
+                <pre>
+                  &lt;h1 class="center">This heading will not be affected&lt;/h1>
+                  &lt;p class="center">This paragraph will be red and center-aligned.&lt;/p>
+                  &lt;p class="center large">This paragraph will be red, center-aligned, and in a large font-size.
+                  &lt;/p&gt;
+                </pre>                     
+         <div class="output">
+          <h1 class="center">This heading will not be affected</h1>
+          <p class="center">This paragraph will be red and center-aligned.</p>
+          <p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p> 
+         </div>
+            </details>
+            <details>
+              <summary>Metaview Port</summary>           
+                <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </pre>
+                <a href="https://www.w3schools.com/css/css_rwd_viewport.asp
+                ">About this</a>
+            </details>
+            <details>
+              <summary>CSS External</summary>
+            <pre> &lt;link rel="stylesheet" href="css/style.css"></pre>       
+            </details>
+            <details>
+              <summary>Properties</summary>
+           
+              <img class="img" src="./assets/img/css-main.jpg" alt="">
+           
+              <pre class="coral">
+body, background-color: gray or background-image, 
+background-position, background-repeat
+color: yellow;
+text-align: center;
+font-size: 40px;
+color: red;
+font-size: 30px;
+font-weight: bold;
+visibility: hidden; (For disable itens)
+padding: 50px;
+float: left;
+height: 50vh;
+width: 50vw;
+line-height;
+box-shadow -webkit-box-shadow:
+line-height: 1.2rem ; - aumentar espaços entre os textos
+width: fit-content;
+box-shadow: 0 0 15px;
+              </pre>
+            </details>  
+            <details>
+              <summary>Colors</summary>
+              <p class="coral">CORAL</p>
+              <a href="./assets/Tabela-Cores-Web.htm">Tabela-Cores-Web</a>
+            </details>                  
+            <details>
+              <summary>Margin and Padding</summary>
+              <br>
+              <a href="./assets/exemplo-margin-padding-css+element.html">exemplo-margin-padding-css+element.html</a>
+              <ul>
+                <pre>
+                  margin-top
+                  margin-right
+                  margin-bottom
+                  margin-left
+                </pre>
+              </ul>
+             
+<p class="lead">Shorthand property sets the margin area for all four sides</p>
+<pre>margin: 20px 5px 10px 4px</pre>
+<img class="img" src="./assets/img/margin.gif" />
+
+<p class="lead">Exemplo top: 20px, right-left: auto e bottom:10px</p>
+<pre>margin: 20px auto 10px;</pre>
+<p class="lead">O mesmo se aplica para padding</p>
+<img class="img" src="./assets/img/padding-margni-sides.jpg" />
+<hr><br>
+<p class="lead">Praticar em <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">https://developer.mozilla.org</a> ou <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_intro">W3 schools</a></p>              
+            </details>
+            <details>
+              <summary>:root (variables)</summary>
+             
+                <h5>e.g use :root</h5>
+                <p class="lead">--minhavar: propriedade;</p>                
+                <pre>
+                  :root {
+                    --text-color: black;
+                    --bg: rgb(144, 144, 144);
+                    --z: 150%;
+                  }
+                </pre>
+            <p class="lead">call variables</p>
+            <pre class="coral">
+              body {               
+                zoom:var(--z); 
+                background: var(--bg);
+                color: var(--txt-color);
+              }          
+            </pre>
+            </details>
+          <details>
+            <summary>Hack center sem display flex</summary>
+            <pre class="coral">
+              position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%)
+            </pre>
+          </details>
+          <details>
+            <summary>Center a Div display:grid</summary>
+            <pre class="coral">
+
+              div {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+             </pre>
+             <a href="https://codepen.io/felippe-moraes_pismo/pen/qBoOrBJ">demo</a>
+          </details>
+          
+          <details> <!--start-->
+            <summary>Dark Mode</summary>
+            <pre>
+              #181818
+              #121212
+            </pre>
+            <p class="lead">Best option so far:</p>
+            <pre>
+              :root{
+                color-scheme: dark;
+            }
+            </pre>
+          </details> <!--end-->
+          <details> <!--start-->
+            <summary>Image 100% inside div</summary>
+            <p class="lead">Adicionar a imagem dentro de uma div</p>
+            <pre>
+              &lt;div> &lt;img src=" <%- noticia.imagem %>" alt="" style="max-width: 100%;">&lt;/div>
+            </pre>
+          </details> <!--end-->
+          <details> <!--start-->
+            <summary>Button disabled</summary>
+            <p class="lead">Adicionar a imagem dentro de uma div</p>
+            
+            <button disabled  id="play">Play Now</button>
+            <pre>            
+              &lt;button&gt; disabled  id="play">Play Now&lt;/button&gt;
+            </pre>             
+          </details> <!--end-->
+          <details> <!--start-->
+            <summary>Animation</summary>
+           <a href="./assets/Animations.md">Animation</a>          
+          </details> <!--end-->
+          <details> <!--start-->
+            <summary>Tabela-Cores-Web</summary>
+           <a href="./assets/Tabela-Cores-Web.htm">Animation</a>          
+          </details> <!--end-->
+          <details> <!--start-->
+            <summary>CSS__BEM</summary>
+           <a href="./assets/BEM.md">BEM.md</a>          
+          </details> <!--end-->
+
+          </article>
+          <!-- sidebar -->
+          <aside>          
+            <h5>Tips!</h5>
+            <pre><samp>pre</samp>
+              <p class="tip_color"><samp>pre => .coral</samp></p> 
+            </pre>     
+            <section class="tips">
+              <ul>
+                <li>padding é uma margin interna e o margin é uma margin externa</li>
+                <li>Entender o que você está fazendo e a onde você quer chegar</li>
+                <li>Abrir o box model</li>
+              </ul>
+            </section>            
+     </aside> 
+    </div><!--container-->
+  </main>
+</body>
+    <footer>
+      <p>Feito orgulhamento com CSS puro</p>     
+    </footer>
+</html>
