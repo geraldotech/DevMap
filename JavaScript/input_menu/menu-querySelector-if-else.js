@@ -1,3 +1,5 @@
+//based in https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals
+
 <label for="opera">Selecionar a item from list:</label>
 <select id="bank">
     <option value="">-choice-</option>
@@ -7,7 +9,7 @@
 </select>
 <p></p>
 
-    <script>
+
 var select = document.querySelector('select');
 var para = document.querySelector('p');
 select.addEventListener('change', bank);
@@ -26,4 +28,4 @@ function bank() {
         para.innerHTML = '';
     }
 }
-    </script>
+    
