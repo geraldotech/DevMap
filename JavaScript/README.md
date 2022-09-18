@@ -271,11 +271,25 @@ alert(name);
 const p = document.getElementById("foo");
 console.log(p); //check output on console
 
-#PointerEvent
+#PointerEvent direct
 <p id="bar">TypeScript</p>
 document.getElementById("bar").addEventListener("click", function(event){
     console.log(event); //check output on console
 })
+
+#PointerEvent const direct não precisa do event(e).target pode chamar a const direto
+
+ <p id="bar">TypeScript</p>
+const p = document.getElementById("bar");
+p.addEventListener("click", function(e){
+     console.log(p.id);  //bar
+})
+
+caso o target tenha um custom Attr like "data";
+ <p id="bar" data="eu">TypeScript</p>
+ console.log(p.getAttribute("data")); //eu
+console.log(e.target.getAttribute("data")); //eu
+
 
 #target
 document.getElementById("bar").addEventListener("click", function(event){
