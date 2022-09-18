@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>relative vs absolute</title>
+    <style>
+      * {
+        color-scheme: dark;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+      }
+
+      .rel {
+        position: relative;
+      }
+
+      .wall {
+        top: 0;
+        background-color: royalblue;
+        width: 400px;
+        height: 400px;
+        margin-top: 10vh;
+      }
+
+      .box {
+        position: absolute;
+        top: 0;
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        opacity: 0.8;
+      }
+
+      .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <input type="checkbox" id="rel" value="rel" />
+      <label id="txt" for="rel">Wall Relative</label>
+    </div>
+    <p>box é absoluto, então deve ser relativo a algum element</p>
+
+    <div class="container">
+      <div class="wall" id="wall">
+        <h1>wall</h1>
+        <div class="box">
+          <h3>box</h3>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tem = document.getElementById("txt");
+      const inputVal = document.getElementById("rel");
+      const wall = document.getElementById("wall");
+
+      inputVal.addEventListener("click", function () {
+        localStorage.setItem("checkbox1", inputVal.checked);
+        const str = inputVal.checked;
+        console.log(str);
+        str ? Active() : Desativa();
+      });
+
+      function load2() {
+        const checked = JSON.parse(localStorage.getItem("checkbox1"));
+        const ativo = (inputVal.checked = checked);
+        if (ativo) Active();
+      }
+      load2();
+
+      function Active() {
+        wall.classList.add("rel");
+        tem.innerHTML = "Wall Relative ativado";
+      }
+
+      function Desativa() {
+        wall.classList.remove("rel");
+        tem.innerHTML = "Wall Relative";
+      }
+    </script>
+  </body>
+</html>

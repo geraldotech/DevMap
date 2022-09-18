@@ -1,0 +1,26 @@
+*{
+    color-scheme:dark;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 150vh;
+}
+
+.container{
+    position: static;
+    margin-top: 30vh;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(8, 43, 149);
+}
+
+.box{   
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(59, 240, 27);
+}
