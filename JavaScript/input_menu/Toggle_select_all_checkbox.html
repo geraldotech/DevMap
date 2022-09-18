@@ -1,3 +1,8 @@
+  <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/input_menu/Toggle_select_all_checkbox.html
+  -->
+
 <input type="checkbox" id="one">
 <label for="one">One</label>
 <input type="checkbox" id="two">
@@ -9,7 +14,8 @@
     
     <button id="btn">Toggle</button>
     
-let check = document.querySelectorAll("input[type='checkbox']");
+<script>
+    let check = document.querySelectorAll("input[type='checkbox']");
 let btn = document.querySelector("#btn");
 
 btn.addEventListener("click", () => {
@@ -18,5 +24,6 @@ btn.addEventListener("click", () => {
     }
 })
 
+</script>
 
 
