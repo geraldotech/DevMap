@@ -499,8 +499,27 @@ console.log('filter,includes',arr.filter(value => value.includes("R$"))); //(2)�
 /* check number even or odd */
 const array = [1,2,3,4,5];
 
+//keys para ser passadas como busca
+const keys = [1,2,3,4,5];
+
+
+//keys
+console.log(keys.every(el => array.includes(el))); // existe todas as keys? //true
+console.log(keys.filter(el => array.includes(el))); //filtra todos ele que includes na key
+
+//keys
+const filVal = ["5","10"];
+const keys = ["5","10",5];
+
+console.log('every',keys.every(el => filVal.includes(el))); //false
+console.log('some',keys.some(el => filVal.includes(el))); //true
+console.log([1,2,3].some(el => array.includes(el))); // tem algum elemento assim no array? true
+
+console.log([].filter(el => array.includes(el))); // se true filtra e display ou vazio se for false
+
+//functions
 const even = (el) => el %2 == 0;
-const odd = (val) => val %2 !== 0;
+const odd = (val) => val %2 != 0;
 
 console.log(array.some(even)); // existe par true
 console.log(array.filter(even)); // existe par e display todos [2,4]
@@ -509,11 +528,4 @@ console.log(array.every(even)); // todos são par? false
 console.log(array.every(odd)); // todos são impar? false
 console.log(array.includes(6)) // includes 6? false
 console.log(array.join('.|.')) // join formata a saída 1.|2.|.3.|.4.|.5.
-console.log(array.fill(0,2)) // (value, start, end) [1 ,2 , 0, 0, 0]
-
-
-
-const filVal = ["5","10"];
-const keys = ["5","10",5];  
-console.log('every',keys.every(el => filVal.includes(el))); //false
-console.log('some',keys.some(el => filVal.includes(el))); //true
+console.log(array.fill(0,2)) // (value, start, end) [1 ,2 , 0, 0, 0] 
