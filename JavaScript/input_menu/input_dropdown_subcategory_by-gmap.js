@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sub menu by gmapdev22</title>
+    <style>
+      * {
+        color-scheme: dark;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <label for="bancos">Selecionar banco</label>
+      <select id="bancos">
+        <option value="">Make chooice</option>
+
+        <option value="1">Santander</option>
+        <option value="2">Banco do Brasil</option>
+      </select>
+     
+
+      <div id="sx" class="sx">
+        <p>Santander</p>
+        <ul>
+          <label for="plans">Plans:</label>
+          <select name="plans" id="santander">
+            <option value="">Select S</option>
+            <option value="1">Free</option>
+            <option value="2">Gold</option>
+            <option value="3">Platinum</option>
+          </select>
+          <div id="resplan"></div>
+        </ul>
+      </div>
+
+      <div class="bb" id="bb">
+        <p>Banco do Brasil</p>
+        <ul>
+          <label for="bbs">Plans:</label>
+          <select name="bb" id="bb">
+            <option value="">Select B</option>
+            <option value="1">Ourocard</option>
+            <option value="2">Petrobras</option>
+            <option value="3">Private Label</option>
+          </select>
+          <div id="res_bb"></div>
+        </ul>
+      </div>
+    </main>
+
+    <script>
+      const sx = document.getElementById("sx");
+      const meubb = document.getElementById("bb");
+
+      const select = document.querySelector("select");
+      console.log(select);
+      //const para = document.querySelector("p");
+
+      ShowOrHide();
+     
+      select.addEventListener("change", getop);
+
+      function getop(e){
+        const selected = select.value;
+        console.log(selected)
+        ShowOrHide(selected);
+      }
+
+      //mostra ou hide
+      function ShowOrHide(select){
+        HideAll(); //sempre esconde tudo
+        if(select == 1){
+          sx.style.display = "block";
+        }
+        if(select == 2){
+          meubb.style.display = "block"
+        }
+      }
+      //esconde all
+      function HideAll() {
+        sx.style.display = "none";
+        meubb.style.display = "none";
+      }
+
+
+      //sx plans
+      const resplan = document.getElementById("resplan");
+      const select2 = document.querySelector("select[name='plans']");
+      console.log(select2);
+
+      select2.addEventListener("change", function () {
+        const plano = +this.value;
+        console.log(plano);
+        if (plano == 1) resplan.textContent = "Free Temos SX";
+        if (plano == 2) resplan.textContent = "Ouro Temos card2";
+        if (plano == 3) resplan.textContent = "Platinum Temos Visa";
+      });
+
+      //bb plans
+      const res_bb = document.getElementById("res_bb");
+      const select3 = document.querySelector("select[name='bb']");
+
+      select3.addEventListener("change", function () {
+        const plano_bb = +this.value;
+        if (plano_bb == 1) {
+          res_bb.textContent = "Fazer Ourocard";
+        }
+        if (plano_bb == 2) {
+          res_bb.textContent = "Fazer Petrobras";
+        }
+        if (plano_bb == 3) {
+          res_bb.textContent = "Private Label";
+        }
+      });
+    </script>
+  </body>
+</html>
