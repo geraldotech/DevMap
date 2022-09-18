@@ -285,9 +285,9 @@ p.addEventListener("click", function(e){
      console.log(p.id);  //bar
 })
 
-caso o target tenha um custom Attr like "data";
+#caso o target tenha um custom Attr like "data";
  <p id="bar" data="eu">TypeScript</p>
- console.log(p.getAttribute("data")); //eu
+console.log(p.getAttribute("data")); //eu
 console.log(e.target.getAttribute("data")); //eu
 
 
@@ -296,8 +296,8 @@ document.getElementById("bar").addEventListener("click", function(event){
     console.log(event.target); //  <p id="bar">TypeScript</p>
 })
 
-console.log(event.target.id);
-console.log(event.target.getAttribute("data"));
+console.log(event.target.id); //bar
+console.log(event.target.getAttribute("data")); //eu
 console.log(event.target.value); //only for input radio/checkbox
 
 #documentElement
