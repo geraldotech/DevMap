@@ -289,7 +289,7 @@ p.addEventListener("click", function(e){
  <p id="bar" data="eu">TypeScript</p>
 console.log(p.getAttribute("data")); //eu
 console.log(e.target.getAttribute("data")); //eu
-
+console.log(e.target.attributes.data.value); //get value of Attr data
 
 #target
 document.getElementById("bar").addEventListener("click", function(event){
@@ -299,6 +299,7 @@ document.getElementById("bar").addEventListener("click", function(event){
 console.log(event.target.id); //bar
 console.log(event.target.getAttribute("data")); //eu
 console.log(event.target.value); //only for input radio/checkbox
+ 
 
 #documentElement
 document.documentElement.addEventListener("mousemove", function(e){
