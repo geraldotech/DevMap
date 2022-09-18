@@ -1,1 +1,1 @@
-# DevMapping Cheat Sheet
+# Dev Mapping Cheat Sheet
