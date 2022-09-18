@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/input_menu/Filter_checkbox_sum_mult_gmap.html
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter_checkbox_sum_mult_gmap</title>
+  <style>
+    *{
+      color-scheme: dark;    
+      font-size: 1.2rem;
+    }  
+    #res3{
+      color: rgb(0, 141, 0);
+      font-weight: bold;
+    }
+    #res4 {
+      color: dodgerblue;
+      font-weight: bold;
+    }
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h3>sum reduce</h3>
+<ol>
+  <li>some</li>
+  <li>every</li>
+  <li>filter</li>
+  <li>map</li>
+  <li>reduce</li>
+  <li>forEach</li>
+  <li>findIndex</li>
+  <li>toString</li>
+</ol>
+
+  <form name="optx" id="rg">
+    
+    <input type="radio" name="opt" value="sum" id="sum" checked>
+    <label for="sum" >SUM</label>
+    <input type="radio" name="opt" value="mul" id="mul">
+    <label for="mul">MUL</label>
+    <button onclick="reverse(event)">Recalcular</button>
+    <hr>
+
+    <input type="checkbox" name="rads" id="10" value="10" />
+    <label for="10">10</label>
+    <input type="checkbox" name="rads" id="5" value="5" />
+    <label for="5">5</label>
+    <input type="checkbox" name="rads" id="8" value="8" />
+    <label for="8">8</label>
+    <input type="checkbox" name="rads" id="2" value="2" />
+    <label for="2">2</label>
+  </form>  
+
+
+  
+  <div>Selected: <span id="res2"></span></div>
+  <div>Output: <span id="res"></span></div>
+  <br><br>
+  <div><span id="res4"></span></div>
+</div>
+ <script>
+const res = document.querySelector("#res");
+const res2 = document.querySelector("#res2");
+const res4 = document.querySelector("#res4");
+var txt = "";
+const essearr = document.querySelectorAll("input[name='rads']");
+essearr.forEach(el => el.addEventListener("change", verificar));
+
+
+
+
+function verificar (e){
+  const ativo = Array.from(essearr);
+  console.log(ativo);
+  let filVal2 = ativo.filter(el => el.checked).map(i => i.value);
+  //let filVal = ativo.filter(el => el.checked).map(i => +i.value).reduce((total, val) => total+= val,0);
+
+    if(document.querySelector("#sum").checked){
+  txt = filVal();
+}
+  if(document.querySelector("#mul").checked){
+  txt = filVal_Mult();
+}
+  res.textContent = txt;
+  //res2.textContent = ativo.filter(el => el.checked).map(i => +i.value).join(" + ");
+  console.log(filVal2);  
+  
+  function filVal_Mult(){
+    return ativo.filter(el => el.checked).map(i => +i.value).reduce((a, b) => a * b,);     
+  }
+  
+  function filVal(){
+    return ativo.filter(el => el.checked).map(i => +i.value).reduce((total, val) => total+= val,0);
+  }  
+
+  res2.textContent = ativo.filter(el => el.checked).map(i => +i.value).join(' ,');
+
+  const keys = ["5","10","8","2"];  
+  const ev = keys.every(el => filVal2.includes(el));
+
+  const som = keys.some(el => filVal2.includes(el));
+/*   console.log('some',som)
+  som ? res4.textContent = "Alguns checkboxs marcados" : res4.innerHTML = "";
+  ev ? res4.textContent = "Todas as opções marcadas" : res4.textContent = "";
+ */
+
+ if(ev){
+    res4.textContent = "Todas as opções marcadas" ;
+    return;
+  }
+  if(som){
+    res4.textContent = "Alguns checkboxs marcados";
+    return;
+  }
+
+  res4.textContent = "";
+ 
+
+//get o index of value.checked in array list and convert array to string format
+let ind = ativo.findIndex((val) => val.value === filVal2.toString());
+console.log('toString',ind);
+//Ou como temos o index com o findIndex:
+//ind == 0 ? res2.textContent = 10 : res2.textContent = "";
+}
+
+function reverse(event){
+  event.preventDefault();
+  verificar()
+}
+
+
+
+  </script>
+</body>
+</html> 

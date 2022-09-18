@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color-scheme:dark;
+        }
+        body{
+            font-size: 30px;            
+        }
+
+        .res {
+            margin-top: 40px;
+            font-size: 2.8rem;
+            color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="one" name="type" value="1" />
+    <label for="one">ONE</label>
+    <input type="checkbox" id="two" name="type" value="2" />
+    <label for="two">TWO</label>
+    <input type="checkbox" id="three" name="type" value="3" />
+    <label for="three">Three</label>
+    <input type="checkbox" id="four" name="type" value="4" />
+    <label for="four">Four</label>
+    <input type="checkbox" id="five" name="type" value="5" />
+    <label for="five">Five</label>  
+    <br><br>
+   
+
+    
+    <div id="result"></div>
+    <div id="result2"></div>
+    <button id="btn">Toggle</button>
+    <button id="btnClean">Toggle Clear</button>
+    
+    <script>
+// get selected values
+const res = document.querySelector("#result");
+const res2 = document.querySelector("#result2");
+
+let check = document.querySelectorAll("input[type='checkbox']");
+
+check.forEach(el => {
+    el.addEventListener("change", SomaShow)
+});
+
+function SomaShow(){
+    let Sum = Array.from(check).filter(i => i.checked).map(i => +i.value).reduce((total, val) => total+= val, 0);
+        let Num = Array.from(check).filter(i => i.checked).map(i => +i.value);
+        res.innerHTML = Sum;
+        res2.innerHTML = `selected: ${Num}`;
+
+}
+
+let btn = document.querySelector("#btn");
+let btnClean = document.querySelector("#btnClean");
+
+btn.addEventListener("click", (e)=> {
+  
+    for(let current of check){
+        current.checked = !current.checked
+    };
+    SomaShow();
+})
+
+
+btnClean.addEventListener("click", (e)=> {
+  
+  for(let current of check){
+      current.checked = false;
+  };
+  SomaShow();
+})
+
+    </script>
+</body>
+</html>
