@@ -8,19 +8,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sub menu by gmapdev</title>
+  <title>input_dropdown-SelectorAll_gmap_section</title>
   <style>
      *{
       color-scheme: dark;    
       box-sizing: border-box;
     }  
-
-
   </style>
 </head>
-<body>
-
- 
+<body> 
   <label for="opt">Selecionar:</label>
   <select id="opt">
     <option value="">Make chooice</option>    
@@ -53,8 +49,6 @@ select.forEach(el => {
   el.addEventListener("change", getIsso)
 });
 
-
-
 function getIsso(e){
   const val = e.target.value;
    /* if(val == 1) p.innerHTML = ("adoro cinema");
@@ -62,15 +56,14 @@ function getIsso(e){
    showHide(val);
 }
 
-//function showIrHide
-
+//function showOr_Hide
 function showHide(html){
   HideAll(); // certifica de esconder quando showHide for chamada
   if(html == 1){
     s.style.display = "block";
   }
   if(html == 2){
-    f.style.display = "block"
+    f.style.display = "block";
   }
 }
 
@@ -79,7 +72,6 @@ function HideAll(){
   s.style.display = "none";
   f.style.display = "none";
   }
-
 
 </script>  
 </body>
