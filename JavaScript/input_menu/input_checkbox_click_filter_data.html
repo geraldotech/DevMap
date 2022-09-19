@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/input_menu/input_checkbox_click_filter_data.html
+  -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HELLO</title>
+  <style>
+    *{
+      color-scheme: dark;    
+    }  
+
+  </style>
+</head>
+<body> 
+
+
+ <form>
+   <fieldset>
+     <legend>click show data...</legend>
+    <input type="checkbox" id="name" value="name" name="type">
+    <label for="name">name</label>
+    <input type="checkbox" id="age" value="age" name="type">
+    <label for="age">Age</label>
+    
+   </fieldset>
+ </form>
+
+ 
+ <div id="ress"></div>
+
+ <script>
+
+
+const res = document.getElementById('ress');
+const inputCheck = document.querySelectorAll("input[type='checkbox'][name=type]");
+
+inputCheck.forEach(function(checkbox){
+  checkbox.addEventListener("change", function(){
+    let opt = Array.from(inputCheck)
+    .filter((checkbox) => checkbox.checked)
+        .map((checkbox) => checkbox.value)
+        if(opt){
+          res.innerHTML = opt;        
+        }     
+        ShowIf(opt);
+        console.log(opt);       
+  })
+});
+
+//function check if includes
+function ShowIf(val){
+  if(val.includes("name")) console.log("nomes");
+  if(val.includes("age")) console.log("idades");
+  //every check if has all this keyworks
+  if(["name","age"].every(el => val.includes(el))) console.log("inclui todos");
+}
+
+  </script>
+</body>
+</html>

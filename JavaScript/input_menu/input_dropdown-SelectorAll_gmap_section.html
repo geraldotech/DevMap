@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+     <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/input_menu/input_dropdown-SelectorAll_gmap_section.html
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sub menu by gmapdev</title>
+  <style>
+     *{
+      color-scheme: dark;    
+      box-sizing: border-box;
+    }  
+
+
+  </style>
+</head>
+<body>
+
+ 
+  <label for="opt">Selecionar:</label>
+  <select id="opt">
+    <option value="">Make chooice</option>    
+    <option value="1">Filmes</option>
+    <option value="2">Seriados</option>
+    </select>
+  <p></p>
+
+  <section id="filmes">
+    <p>Filmes</p>
+  </section>
+  <section id="series">
+    <p>series</p>
+  </section>
+
+<script>   
+
+const select = document.querySelectorAll("select");
+const p = document.querySelector("p");
+
+//select sections
+const f = document.querySelector("#filmes");
+const s = document.querySelector("#series");
+/*
+ sempre vai esconder, por estar usando querySelectorAll e for Each, faz-se necessário chamar o HideAll 2x, exemplo diferente do arquivo input_dropdown_subcategory_by-gmap.html que chama o ShowOrHide() 2x, pois dentro desse outro e.g includes o HideAll();
+*/
+HideAll(); 
+
+select.forEach(el => {
+  el.addEventListener("change", getIsso)
+});
+
+
+
+function getIsso(e){
+  const val = e.target.value;
+   /* if(val == 1) p.innerHTML = ("adoro cinema");
+   if(val == 2) p.innerHTML = ("adoro seriados"); */
+   showHide(val);
+}
+
+//function showIrHide
+
+function showHide(html){
+  HideAll(); // certifica de esconder quando showHide for chamada
+  if(html == 1){
+    s.style.display = "block";
+  }
+  if(html == 2){
+    f.style.display = "block"
+  }
+}
+
+//function hide All
+function HideAll(){
+  s.style.display = "none";
+  f.style.display = "none";
+  }
+
+
+</script>  
+</body>
+</html>
