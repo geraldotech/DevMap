@@ -55,15 +55,20 @@ console.log(document); //#document
 
 ```js
  const root = document.documentElement; 
- console.log(root); // a saida será todas as propriedades do doccument
+ console.log(root); // a saida será todas as propriedades do document
 
- //Podemos ainda falar com:
- document.title
- document.head
+ //Podemos ainda "falar" diretamente com:
+
+console.log(window);
+console.log(document);
+console.log(document.head);
+console.log(document.title);
+console.log(document.html);
+console.log(document.body);
 
 ```
 
-- Select by names:
+- A tag form com names:
 
 ```js
 <form  name="test">teste</form> 
@@ -71,21 +76,21 @@ console.log(document.test);
 console.log(document.test.innerHTML);
 
 ```
-
-- Select by two names input
+- Two names:
 
 ```js
 <form name="JS">
-  <input type="text" name="vall" value="TypeScript">
+<input type="text" name="vall" value="TypeScript">
 </form>
 
 document.JS.onclick = function(){
 let val = document.JS.vall.value;
 console.log(val); //TypeScript
-    }
+}
+```
+- get PointerEvent e.g simples, outros consultar a page README
 
-//get PointerEvent
-
+```js
 <form name="credito">credito</form>
 
 document.credito.onclick = function(event){
@@ -94,7 +99,7 @@ document.credito.onclick = function(event){
 
 //onclick Event and target 
   document.click.onclick = function(event){
-      console.log(event.target);
+      console.log(event.target); // <form name="credito">credito</form>
     }
 ```
 

@@ -1,4 +1,4 @@
-# Javascript
+# JavaScript
 :rocket: :zap: Let's Code :zap: :rocket:
 
 Projects and Demos:
@@ -6,16 +6,25 @@ Projects and Demos:
 
 ### O que é JavaScript?  **From Scratch by _Geraldo Filho_**
 - [onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
+### Estrutura de dados
 
-### write:
+- [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
+
+## Extra Fast Code Cheats and examples
+
+<details>
+<summary>Display vars, strings and syntax</summary>
 
 ```js
-console.log("aspas single");
-console.log("aspas dupla");
-console.log(`grace accent`);
-("Ola") apenas no console.log show infos
-```
+let name = "Geraldo";
+console.log("Eu sou", name);
+console.log("Eu sou " +name);
+console.log(`grace accent ${name}`);
+console.log('Eu sou ' +name);
 
+("Ola") apenas no console.log show infos F12
+
+```
 ### syntax / sintaxe
 
 ```js
@@ -25,24 +34,6 @@ parentheses()
 braces {} - chaves
 square brackets [] - colchetes
 ```
-
-### Estrutura de dados
-
-- [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
-
-## Extra Fast Code Cheats and examples
-
-<details>
-<summary>how call vars</summary>
-
-```js
-let name = "Geraldo";
-console.log("Eu sou", name);
-console.log("Eu sou " +name);
-console.log(`Eu sou ${name}`);
-console.log('Eu sou ' +name);
-```
-
 </details>
 
 <details>
@@ -113,9 +104,6 @@ window.setTimeout( function() {
   window.location.reload();
 }, 5000);
 
-//set zoom
-document.body.style.zoom = "100%";
-
 //show-loop-img-button-click
 //html
  <button onclick=
@@ -164,7 +152,7 @@ https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-nu
 </details>
 
 <details>
-<summary>CSS,shorhand, insertAdjacentHTML and appendChild</summary>
+<summary>insertAdjacentHTML CSS,shorhand and appendChild</summary>
 
 ```js
 // Shorhand for getElementById
@@ -238,7 +226,7 @@ alert(name);
 ```
 </details>
 <details>
-<summary>addEventListener and Pointer Events, target, documentElement</summary>
+<summary>addEventListener and Pointer Events, e.target.Attr, documentElement</summary>
 
 ```js
 #simple
@@ -266,6 +254,10 @@ console.log(p.getAttribute("data")); //eu
 console.log(e.target.getAttribute("data")); //eu
 console.log(e.target.attributes.data.value); //get value of Attr data
 
+#caso o target tenha um custom Attr like "itemtype";
+ <li class="menu" itemtype="tip">Steak</li>
+ console.log(e.target.attributes.itemtype.value); //tip
+
 #target
 document.getElementById("bar").addEventListener("click", function(event){
     console.log(event.target); //  <p id="bar">TypeScript</p>
@@ -284,11 +276,27 @@ document.documentElement.addEventListener("mousemove", function(e){
 #documentElement
 const rootElement = document.documentElement;
 console.log(rootElement);
+
+#eventListener_mouseMove
+//html
+<div id="OutDataX"></div>
+<div id="OutDataY"></div>
+
+//js
+const get = (el) => {return document.getElementById(el)};
+
+document.addEventListener("mousemove", function(event){
+    console.log(event);
+    get("OutDataX").innerHTML = `X: ${event.clientX}`;
+    if(event.clientX === 50) alert('50!');
+    get("OutDataY").innerHTML = `Y: ${event.clientY}`;
+});
+
 ```
 </details>
 
 <details>
-<summary>createElement</summary>
+<summary>createElement, createTextNode, appendChild</summary>
 
 ```js
 # Basic texts
@@ -347,7 +355,7 @@ img.classList.add('meuimg');
 </details>
 
 <details>
-<summary>contains event target</summary>
+<summary>Contains target</summary>
 <a href="https://codepen.io/geraldopcf/pen/yLKZROJ" target="_blank">CodePen</a>
 
 ```html and css
@@ -436,7 +444,6 @@ console.log(binary) //[ '11000000', '10101000', '1100100', '11001000' ]
 
 //Also support base(8) octal , base(16) hexadecimal
 
-
 //Moedas
 //https://franciscochaves.com.br/blog/formatacao-de-moedas-em-javascript
 var atual = 600.00;
@@ -476,7 +483,7 @@ console.log(g); //R$ 2.000,00
       <label for="n1">Digite número: </label>
       <input type="number" id="n1" required />
     <label for="max">Max: </label>
-      <input type="number" id="max" required>
+      <input type="number" id="max" required />
       <button onclick="btn(event)">Calcular</button>  
       <button onclick="reseta()">Reload and reset</button>
       </fieldset>
@@ -491,8 +498,6 @@ console.log(g); //R$ 2.000,00
 ```
 
 ```js
-
- console.log('test')
       function btn(event){
        event.preventDefault()
     n1 = document.getElementById("n1").value;
@@ -513,7 +518,7 @@ console.log(g); //R$ 2.000,00
 </details>
 
 <details>
-<summary>create,set,get,has,remove...Attributes_classList.add</summary>
+<summary>getAttributes,create,set,has,remove...classList.add</summary>
 
 - [1 - create_get_remove_Attribute](./assets/create_get_remove_Attribute.md) 
 - [2 - hasAttribute_setAttribute](./assets/hasAttribute_setAttribute.md) 
@@ -531,27 +536,6 @@ document.body.style.zoom="150%";
   body{    
       zoom:150%;
     }
-```
-</details>
-
-<details>
-<summary>eventListener_mouseMove</summary>
-
-```js
-//html
-<div id="OutDataX"></div>
-<div id="OutDataY"></div>
-
-//js
-const get = (el) => {return document.getElementById(el)};
-
-document.addEventListener("mousemove", function(event){
-    console.log(event);
-    get("OutDataX").innerHTML = `X: ${event.clientX}`;
-    if(event.clientX === 50) alert('50!');
-    get("OutDataY").innerHTML = `Y: ${event.clientY}`;
-});
-
 ```
 </details>
 
@@ -582,7 +566,7 @@ var myvar = "Geraldo"; //work
 </details>
 
 <details>
-<summary>inserAdjacent...</summary>
+<summary>insertAdjacent...</summary>
 
 
 ```html
@@ -626,9 +610,7 @@ function moveel(){
 const vue = document.getElementById("vue");
 document.getElementById("el").insertAdjacentElement("afterbegin", vue);
 }
-
 ```
-
 </details>
 
 
