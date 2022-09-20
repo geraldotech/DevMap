@@ -103,9 +103,7 @@ document.credito.onclick = function(event){
     }
 ```
 
-### GetElementById:
 
-`document.getElementById("test")`
 
 
 # Refes

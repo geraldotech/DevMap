@@ -613,4 +613,64 @@ document.getElementById("el").insertAdjacentElement("afterbegin", vue);
 ```
 </details>
 
+<details>
+<summary>getElements and querySelector</summary>
+
+
+```js
+    <a href="#">link 1</a>
+    <a href="#">link 2</a>
+    <a href="#">link 3</a>
+    <a href="#">link 4</a>
+
+
+    <ul>
+        <li class="menu">A</li>
+        <li class="menu">B</li>
+        <li class="menu" id="c">C</li>
+        <span class="oi"></span>
+        <span id="hello">New York</span>
+    </ul>
+
+
+/* Array.from(document.getElementsByTagName("a")).forEach((el,ind) =>{
+    console.log(ind,el.textContent)
+}) */
+
+
+//GetElementById:
+document.getElementById("test"); //return only the id
+
+//getElementsByTagName - 
+console.log(document.getElementsByTagName("a")); //returns a HTML Collection[x]
+
+//getElementsByClassName
+const menu = document.getElementsByClassName("menu"); 
+console.log(menu); //return a HTML Collection[x]  e.g menu[0].innerHTML = "Hello World!";
+
+/*
+Array.from convert HTML Collection to Array
+*/
+
+//querySelector
+console.log(document.querySelector(".oi")); //return class
+console.log(document.querySelector("#hello").innerHTML); //return id
+
+//querySelectorAll - support forEach
+console.log(document.querySelectorAll(".menu")); //return a NodeList()
+
+const link = document.querySelectorAll("a"); //return all tags
+console.log(link); //return a NodeList()
+
+link.forEach(el => {
+    el.classList.add("linkr");
+  el.href = "http://technotesbr.blogspot.com";  
+  el.setAttribute("target","_blank");
+  el.setAttribute("title","open new tab");
+})
+
+```
+
+</details>
+
 
