@@ -1,14 +1,11 @@
 # Javascript
-
 :rocket: :zap: Let's Code :zap: :rocket:
 
-Projects and Demos
+Projects and Demos:
  - [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 
 ### O que é JavaScript?  **From Scratch by _Geraldo Filho_**
-
-
-[onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
+- [onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
 
 ### write:
 
@@ -16,6 +13,7 @@ Projects and Demos
 console.log("aspas single");
 console.log("aspas dupla");
 console.log(`grace accent`);
+("Ola") apenas no console.log show infos
 ```
 
 ### syntax / sintaxe
@@ -32,12 +30,10 @@ square brackets [] - colchetes
 
 - [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
 
-var não é usa mais! pq tem problema de scopo, use let ou const
-
 ## Extra Fast Code Cheats and examples
 
 <details>
-<summary>how call string</summary>
+<summary>how call vars</summary>
 
 ```js
 let name = "Geraldo";
@@ -58,7 +54,6 @@ console.log('Eu sou ' +name);
   <span id="num"></span>
 
 //js
-
 let sum = 0;
 let num = document.getElementById("num");
 function add(){
@@ -70,23 +65,19 @@ function add(){
 
 
 <details>
-<summary>Extras. Math. padStart, setTimeout, replace...</summary>
+<summary>Math. padStart, setTimeout, replace...</summary>
 
 ```js
+Math //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 Math.round = arredonda para cima ou para baixo
-
 Math.ceil = arredonda sempre para cima
-
 Math.floor = para baixo
-
 Math.pow(2,16)
-
  function po(a,b){
          return console.log(Math.pow(a,b));
      }
 
-Math.random()
-
+Math.random();
 Math.PI
 
 Math.max() //returns the number with the highest value:
@@ -95,17 +86,9 @@ console.log(Math.max(...a));
 
 Math.max(1,2,3,4,5);
 
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
-
 //define o tamanho minimo, e adiciona um complemento caso não tenha o mínimo
 padStart()
 
-//
-("Ola") apenas no console.log show infos
-//
-//
-insertAdjacentHTML(position, text)
-//
 function exp(number){
 	console.log(2** number);
 }
@@ -122,8 +105,10 @@ exp(5,2);
      }
 
 
-//auto refresh
-//5000 = milesegundos = 5seconds
+/*
+auto refresh
+5000 = milesegundos = 5seconds
+*/
 window.setTimeout( function() {
   window.location.reload();
 }, 5000);
@@ -139,7 +124,6 @@ document.body.style.zoom = "100%";
                500, 
                'Google Logo');">Add Google Logo</button> 
 
-
 //js
     function show_image(src, width, height, alt) {
       var img = document.createElement("img");
@@ -153,13 +137,9 @@ document.body.style.zoom = "100%";
   }
 
 //replace
-
 let name = "gg";
-
 let rpl = name.replace("gg","Felipe");
-console.log(rpl)
-
-
+console.log(rpl);
 
 //JSON.stringify change output
 let a = '[[{"nome":"ISA"}]]';
@@ -168,10 +148,10 @@ console.log(a.replace(/["}{}[]|(])/g,"")); //nome:ISA
 /*
 https://www.w3schools.com/jsref/jsref_replace.asp
 https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
-*/
 
-//CPF formatado
-//https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-number-in-chrome
+CPF formatado
+https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-number-in-chrome
+*/
   <input type="number" id="test" onInput="this.value = this.value.slice(0, 11)"/>  
 
      document.querySelector("#cpf").addEventListener("input", show);
@@ -181,7 +161,6 @@ https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-
     }
 
   ```
-
 </details>
 
 <details>
@@ -204,10 +183,7 @@ get2("root");
 
 const log = (x)=> {console.log(x)};
 
-// Write css inside JavaScript
-
-//1
-
+// Write css inside JavaScript 1.0
 document.head.innerHTML += `
     <style>
       img{ 
@@ -223,12 +199,12 @@ document.head.innerHTML += `
     </style>
     `;
 
-//2
+//2.0
 const style = document.createElement("style");
 style.textContent = "h1 { background-color: red; }";
 document.head.appendChild(style);
 
-//3 - external
+//3.0 - external
 document.head.insertAdjacentHTML(
   "beforeend",
   "<link rel=stylesheet href=/foo.css>"
@@ -265,7 +241,6 @@ alert(name);
 <summary>addEventListener and Pointer Events, target, documentElement</summary>
 
 ```js
-
 #simple
 <p id="foo">JavaScript</p>
 const p = document.getElementById("foo");
@@ -275,7 +250,7 @@ console.log(p); //check output on console
 <p id="bar">TypeScript</p>
 document.getElementById("bar").addEventListener("click", function(event){
     console.log(event); //check output on console
-})
+});
 
 #PointerEvent const direct não precisa do event(e).target pode chamar a const direto
 
@@ -283,7 +258,7 @@ document.getElementById("bar").addEventListener("click", function(event){
 const p = document.getElementById("bar");
 p.addEventListener("click", function(e){
      console.log(p.id);  //bar
-})
+});
 
 #caso o target tenha um custom Attr like "data";
  <p id="bar" data="eu">TypeScript</p>
@@ -294,7 +269,7 @@ console.log(e.target.attributes.data.value); //get value of Attr data
 #target
 document.getElementById("bar").addEventListener("click", function(event){
     console.log(event.target); //  <p id="bar">TypeScript</p>
-})
+});
 
 console.log(event.target.id); //bar
 console.log(event.target.getAttribute("data")); //eu
@@ -304,7 +279,7 @@ console.log(event.target.value); //only for input radio/checkbox
 #documentElement
 document.documentElement.addEventListener("mousemove", function(e){
     console.log(e);
-})
+});
 
 #documentElement
 const rootElement = document.documentElement;
@@ -328,7 +303,7 @@ h1.textContent = 'Hello ';
 txt = document.createTextNode("JavaScript");
 
 //append
-p.appendChild(txt)
+p.appendChild(txt);
 div.appendChild(h1);
 
 //append body
@@ -395,9 +370,9 @@ var mydiv = document.getElementById("mydiv");
 document.addEventListener("click", function(e){
     var inside = mydiv.contains(e.target);
     if(inside){
-        alert("click inside")
+        alert("click inside");
     } else {
-        alert("click outsite")
+        alert("click outsite");
     }
 });
 ```
@@ -449,10 +424,10 @@ console.log(firtName.toLowerCase()); //geraldo
 //toString
 //https://linuxhint.com/javascript-tostring-method/
 let age = 29;
-console.log(typeof age) //number
+console.log(typeof age); //number
 
 let aget = age.toString();
-console.log(typeof aget) //now is a string
+console.log(typeof aget); //now is a string
 
 //convert to base(2) binary
 const ipnumber = [192,168,100,200];
@@ -474,7 +449,6 @@ console.log(g); //R$ 2.000,00
 
 ```
 </details>
-
 
 <details>
 <summary>event.preventDefault</summary>
@@ -582,7 +556,8 @@ document.addEventListener("mousemove", function(event){
 </details>
 
 <details>
-<summary>hoisting</summary>
+<summary>Hoisting</summary>
+var não é usa mais! pq tem problema de scopo, use let ou const
 
 ```js
 //function Hoisting 
@@ -593,12 +568,10 @@ function host(){
 }
 
 //Variables Hoisting
-
 console.log(n)
 n = 6;
 console.log(n)
 var n;
-
 
 //console.log(mylet);
 let mylet = "Geraldo";
@@ -607,3 +580,55 @@ console.log(myvar);
 var myvar = "Geraldo"; //work
 ```
 </details>
+
+<details>
+<summary>inserAdjacent...</summary>
+
+
+```html
+ <h1 id="foo">hello</h1>
+    <hr>
+    <h1 id="el">Element</h1>
+    <hr>
+    <footer id="vue" style="color:red">
+        <p>footer</p>
+    </footer>
+    <button onclick="document.getElementById('el').insertAdjacentElement('afterbegin', document.getElementById('vue'))">Move</button>
+    <!--inline hardcore-->
+    
+```
+
+```js
+/*
+insertAdjacentHtml() is used to insert html code.
+https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
+dependendo da posição pode herdar os attributes!
+
+<!-- beforebegin -->
+<p>
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
+</p>
+<!-- afterend -->
+*/
+
+const foo = document.getElementById("foo");
+foo.insertAdjacentHTML("beforebegin","<b>Hiii</b>");
+foo.insertAdjacentHTML("beforeend","<b>Hiii</b>");
+
+/*
+insertAdjacentElement() is used to insert an element which is already in the DOM. You can get this element with getElementById() for example.
+*/
+//move footer to
+
+function moveel(){
+const vue = document.getElementById("vue");
+document.getElementById("el").insertAdjacentElement("afterbegin", vue);
+}
+
+```
+
+</details>
+
+
