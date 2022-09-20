@@ -8,33 +8,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HELLO</title>
+  <title>input_checkbox_click_filter_data</title>
   <style>
     *{
       color-scheme: dark;    
     }  
-
   </style>
 </head>
-<body> 
-
-
+<body>
  <form>
    <fieldset>
      <legend>click show data...</legend>
     <input type="checkbox" id="name" value="name" name="type">
     <label for="name">name</label>
     <input type="checkbox" id="age" value="age" name="type">
-    <label for="age">Age</label>
-    
+    <label for="age">Age</label>    
    </fieldset>
  </form>
 
- 
  <div id="ress"></div>
 
  <script>
-
 
 const res = document.getElementById('ress');
 const inputCheck = document.querySelectorAll("input[type='checkbox'][name=type]");
