@@ -648,6 +648,7 @@ console.log(document.getElementsByTagName("a")); //returns a HTML Collection[x]
 const menu = document.getElementsByClassName("menu"); 
 console.log(menu); //return a HTML Collection[x]  e.g menu[0].innerHTML = "Hello World!";
 
+//Ainda temos o byName() https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
 /*
 Array.from convert HTML Collection to Array
 */

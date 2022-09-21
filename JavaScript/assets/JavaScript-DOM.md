@@ -63,8 +63,11 @@ console.log(window);
 console.log(document);
 console.log(document.head);
 console.log(document.title);
-console.log(document.html);
 console.log(document.body);
+console.log(document.URL);
+console.log(document.lastModified);
+
+Mais possibilidades em: https://www.w3schools.com/jsref/dom_obj_document.asp ou checkout a saide com console.log(document)
 
 ```
 
