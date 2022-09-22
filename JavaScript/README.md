@@ -674,4 +674,10 @@ link.forEach(el => {
 
 </details>
 
+## Videos
+
+>Memorize is a bad ideia, instead focus on concepts
+- [Stop Trying To Memorize Code - Do This Instead](https://www.youtube.com/watch?v=vP2MNhC_Igw&list=PL_VP_qub8HfIva3X7o4FbRqoqg9K-s8z4&index=1)
+- [Learning Functional Programming with JavaScript](https://www.youtube.com/watch?v=e-5obm1G_FY)
+
 
