@@ -5,7 +5,7 @@
 
 É uma linguagem de programação de alto nível que manipula o DOM - Document Object Model do HTML.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png" style="max-width: 70%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png" style="max-width: 50%">
 
 </details>
 
@@ -101,15 +101,12 @@ document.credito.onclick = function(event){
   }
 
 //onclick Event and target 
-  document.click.onclick = function(event){
+  document.credito.onclick = function(event){
       console.log(event.target); // <form name="credito">credito</form>
     }
 ```
 
-
-
-
-# Refes
+# Refs:
 ####  [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
 
 
