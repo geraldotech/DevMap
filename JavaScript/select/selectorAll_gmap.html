@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/input_menu/input_dropdown-SelectorAll_gmap.html
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>by gmapdev</title>
+  <style>
+     *{
+      color-scheme: dark;    
+      box-sizing: border-box;
+    }  
+  </style>
+</head>
+<body>
+
+ 
+  <label for="opt">Selecionar:</label>
+  <select id="opt">
+    <option value="">Make chooice</option>    
+    <option value="1">Filmes</option>
+    <option value="2">Seriados</option>
+    </select>
+  <p></p>
+
+<script>   
+
+const select = document.querySelectorAll("select");
+const p = document.querySelector("p");
+
+
+select.forEach(el => {
+  el.addEventListener("change", function(e){
+   const val = e.target.value;
+   if(val == 1) p.innerHTML = ("adoro cinema");
+   if(val == 2) p.innerHTML = ("adoro seriados");
+  });
+});
+
+
+</script>  
+</body>
+</html>

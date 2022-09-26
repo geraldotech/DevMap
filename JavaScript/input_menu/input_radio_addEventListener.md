@@ -4,15 +4,3 @@
 #### [radio_button_addEventListener_3_attr](https://codepen.io/geraldopcf/pen/oNdvpWP)
 #### [radio_button_addEventListener_4](https://codepen.io/geraldopcf/pen/rNvNgjd)
 
-html
-```html
-
-```
-
-
-js
-
-```js
-
-
-```
