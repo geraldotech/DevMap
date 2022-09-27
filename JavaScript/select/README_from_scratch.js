@@ -63,7 +63,7 @@ console.log(x); // verm. ilha, smart
 </select> 
 
 /*
-O querySelectorAll vai pegar o select com name = 'planos' com isso ele cria uma hirarquia de Nodelist, por exemplo de tiverssimos outro select com mesmo nome o seu index seria select[1]
+O querySelectorAll vai pegar o select com name = 'planos' com isso ele cria uma hirarquia de Nodelist, por exemplo de tivessimos outro select com mesmo nome o seu index seria select[1]
 */
 
 const opt = document.querySelectorAll("select[name='planos']");
@@ -86,10 +86,10 @@ opt.forEach(el => {
         console.log(this.selectedOptions[0].value); // 1,2,3 display values
         console.log(this.selectedIndex); // display Index 
         console.log(this.selectedOptions[0].getAttribute("data")); // display data Attributes
-    })
-})
+    });
+});
 
-// Também funciona com Array.from contudo não vejo necessidade, estamos tratando apenas 1 informação simples como ids e values e não multiplas no caso de checkboxs;
+// Também funciona com Array.from contudo não vejo necessidade, estamos tratando apenas 1 informação simples como id/value e não multiplos no caso de checkboxs;
 
 const opt = document.querySelectorAll("select[name='planos']");
 
@@ -103,6 +103,3 @@ opt.forEach(el => {
 /*
 https://www.w3schools.com/jsref/prop_select_value.asp
 */
-
-
-

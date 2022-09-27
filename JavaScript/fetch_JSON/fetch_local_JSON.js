@@ -1,14 +1,9 @@
 # Fetch JSON
-
-
 ### JSON example:
 
-<details>
-<summary>See code</summary>
-
-```js
+// dados.json
 {
-  "login": "mygeraldotechaaa",
+  "login": "gmapdev",
   "id": 92253544,
   "age": 29,
   "node_id": "U_kgDOBX-taA",
@@ -17,15 +12,9 @@
   "url": "https://api.github.com/users/geraldotech"
 } 
 
-```
-</details>
 
-### Fech this JSON - [Demo](https://gmapdev.netlify.app/demo/fetch.html)
 
-<details>
-<summary>See code</summary>
-
-```js
+// JS
 const api = './dados.json';
 
 async function essaurl(url){  
@@ -33,7 +22,7 @@ async function essaurl(url){
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);    
-    console.log(data.login);   
+    console.log(data.login); // gmapdev
 
     if(response){
         show(data)
@@ -44,7 +33,6 @@ function show(data){
     document.getElementById("res").innerHTML = data.login;
 }
 
-///html add =>   <div id="res"></div>
+// html
+<div id="res"></div>
 
-```
-</details>
