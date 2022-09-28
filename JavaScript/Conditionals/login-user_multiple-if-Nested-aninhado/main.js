@@ -12,9 +12,8 @@ if (user == 'geraldo' && psw == '9912') {
     iframe.style.display = 'none';
 } else {
     document.write('TRY AGAIN! <br> <button id="reload" onClick="document.location.reload(true)">Atualizar</button>');   
-}
-}
-
+};
+};
 
 //logout
 function logout(){
