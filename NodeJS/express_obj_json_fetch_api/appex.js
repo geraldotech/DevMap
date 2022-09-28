@@ -3,8 +3,7 @@ const { randomUUID } = require ("crypto");
 const { response } = require('express');
 const fs = require("fs");
 const path = require('path');
-var bodyParser = require('body-parser')
-
+var bodyParser = require('body-parser');
 
 const port = 3001;
 
@@ -12,16 +11,8 @@ const app = express();
 app.use(express.json());
 
 
-
-
 let products = [];
-
-
 //render html
-
-
-
-
 fs.readFile("products.json", "utf-8", (err,data)=>{
     if(err){
         console.log(err);
@@ -53,26 +44,19 @@ app.get("/products",(req,res)=>{
 
 app.get("/products/:id", (req,res)=>{
     const {id } = req.params;
-
-    const product = products.find(product => product.id === id);
-
-    return res.json(product);
+    const product = products.find(product => product.id === id);    return res.json(product);
 
 });
-
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, '/views'));
 
-
-
 app.get('/',(req,res)=>{
     //res.send("home page!");
     res.render('fet');
 })
-
 
 
 app.put("/products/:id", (req,res)=>{
