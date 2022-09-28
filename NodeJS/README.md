@@ -41,18 +41,20 @@ server.listen(port,hostname,()=>{
 })
 ```
 
-Now call in cmd => `node index.js`  
+Now call in cmd: `node index.js`  
 
-Open browser `localhost:3000` 
+Open browser: `http://localhost:3000` 
 
 ### open cdm in folder of project:
 
     node index.js
 
-# Write and read html files
-###### add const fs = require('fs');
-1. Create index.html and add a sample html code  
-2. Add code below: 
+### Write and read html files
+
+
+1. add `const fs = require('fs');`
+2. Create `index.html` and add a sample html code  
+3. Add code: 
 
 ```js
   fs.readFile('index.html',function(err,data){
@@ -63,7 +65,7 @@ Open browser `localhost:3000`
 })
 ```
 
-Arquivo final
+Arquivo final:
 ```js
 const http = require('http');
 const fs = require('fs'); //new permite manipular arquivos usando node
@@ -85,13 +87,13 @@ server.listen(port,hostname,()=>{
 ```
 
 ## About req
->>>adicionar dentro da const server = 
+> adicionar dentro da const server = 
 
-1.display várias informações da requisição  
-```console.log(req)``` <br> 
+1. Display várias informações da requisição:
+`console.log(req)`
 
-2.headers refer (sabe a página que o user esta acessando mesmo que não existe)  
-```console.log(req.headers)```
+2.headers refer (sabe a página que o user esta acessando mesmo que não existe):  
+`console.log(req.headers)`
 
 ### Fazer rotas fazendo validações baseado no req.url em página:  
 Apenas localhost/smart vai funcionar o mesmo vai ficar carregando infinitamente.
@@ -101,26 +103,26 @@ Apenas localhost/smart vai funcionar o mesmo vai ficar carregando infinitamente.
  }
 ```
 
-### adicionar else para parar o carregamento infitinto, vai retornar uma página em branca
+adicionar else para parar o carregamento infitinto, vai retornar uma página em branca
 ```js
-}else {
+} else {
     return res.end();
 }
 ```
 
-## Let apenas '/' vai servidor apenas http://localhost
+### Deixe only '/' para root http://localhost: 
 ```js
   if(req.url == '/'){
 ```
 
 ### else para pagina 404.html
-1.Criar 404.html  
-2.Apenas copiar o conteudo de if e jogar para else:
+1. Criar `404.html` 
+2. Apenas copiar o conteudo de if e jogar para else:
 
 ### código completo
 
 <details>
-<summary>Display code</summary>
+<summary>code</summary>
 
 ```js
 const http = require('http');
@@ -145,8 +147,7 @@ const server = http.createServer((req,res)=>{
         return res.end();
     })
 }
-
-})
+});
 
 server.listen(port,hostname,()=>{
     console.log('server running in port :4000');
@@ -159,7 +160,7 @@ server.listen(port,hostname,()=>{
 ### example render a txt file
 
 <details>
-<summary>Display code</summary>
+<summary>code</summary>
 
 ```js
 const http = require('http');
@@ -214,7 +215,7 @@ server.listen(port,hostname,()=>{
 ### code if else res 
 
 <details>
-<summary>Display code</summary>
+<summary>code</summary>
 
 ```js
 const http = require('http');
@@ -316,12 +317,15 @@ setInterval(function(){
 automatically restarting the node application when file changes in the directory are detected.
 
 1. run command line:
-```
-npm install -g nodemon
+
+```js
+
+$ npm install -g nodemon
+
 ```
 
-#### run live watch:
-```
+run live watch:
+```js
 nodemon .\index.js
 ```
 

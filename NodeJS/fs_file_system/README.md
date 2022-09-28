@@ -3,7 +3,7 @@
 ```js
 const fs = require('fs');
 
-fs.writeFile('danki.txt','teste',function(err){
+fs.writeFile('gmap.txt','teste',function(err){
     if(err) throw err;
     console.log('arquivo criado com sucesso!');
 })
@@ -12,7 +12,7 @@ fs.writeFile('danki.txt','teste',function(err){
 #### cria novo arquivo ou adiciona conteudo prox linha 
 >>Mesmo codigo para write em um arquivo txt cada vez que receber um acesso na url
 ```js
-fs.appendFile('danki.txt','\n outro conteudo',(err)=>{
+fs.appendFile('gmap.txt','\n outro conteudo',(err)=>{
     if(err) throw err;
     console.log('salvo novamente com sucesso! ');
 })
