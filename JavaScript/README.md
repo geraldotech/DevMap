@@ -1,13 +1,12 @@
 # JavaScript
 :rocket: :zap: Let's Code :zap: :rocket:
 
-Projects and Demos:
- - [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 
-### O que é JavaScript?  **From Scratch by _Geraldo Filho_**
-- [onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
-### Estrutura de dados
+Projects and Demos: [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 
+### O que é JavaScript?    
+- **From Scratch by _Geraldo Filho_** [onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)  
+### Estrutura de dados  
 - [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
 
 ## Extra Fast Code Cheats and examples
@@ -422,7 +421,6 @@ console.log(Math.PI.toFixed(2)); // 3.14
 //toPrecision
 console.log(Math.PI.toPrecision(2)); //3.1
 
-
 //toUpperCase and toLowerCase
 let firtName = "Geraldo";
 console.log(firtName.toUpperCase()); //GERALDO
@@ -436,6 +434,14 @@ console.log(typeof age); //number
 
 let aget = age.toString();
 console.log(typeof aget); //now is a string
+
+
+// decimal to binary
+(2022).toString(2); // '11111100110'
+
+
+//parseInt binary to decimal
+parseInt(1111, 2); // 15
 
 //convert to base(2) binary
 const ipnumber = [192,168,100,200];
@@ -568,7 +574,6 @@ var myvar = "Geraldo"; //work
 <details>
 <summary>insertAdjacent...</summary>
 
-
 ```html
  <h1 id="foo">hello</h1>
     <hr>
@@ -679,5 +684,6 @@ link.forEach(el => {
 >Memorize is a bad ideia, instead focus on concepts
 - [Stop Trying To Memorize Code - Do This Instead](https://www.youtube.com/watch?v=vP2MNhC_Igw&list=PL_VP_qub8HfIva3X7o4FbRqoqg9K-s8z4&index=1)
 - [Learning Functional Programming with JavaScript](https://www.youtube.com/watch?v=e-5obm1G_FY)
+
 
 

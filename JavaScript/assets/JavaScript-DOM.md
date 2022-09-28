@@ -29,9 +29,9 @@ Como exemplo também temos o window.localStorage, console, window.print, prompt 
 - A seguir podemos chamar o document:
 `console.log(window.document)`
 
-- Get a Element by ID:  
+- Get a Element by ID direct way:
 `<div id="fibra">Speed</div>` 
-`console.log(window.fibra);`
+`console.log(window.fibra);` ou simplesmente `fibra.textContent = "novo";`; e apesar de funcionar visite a forma mais ideal na page README em <ins>getElements and querySelector</ins> 
 
 
 ## document | [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document) => [MDN - DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
