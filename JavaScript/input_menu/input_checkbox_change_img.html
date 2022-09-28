@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/input_menu/input_checkbox_change_img.html
+  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change image</title>
+    <style>
+*{
+    box-sizing: border-box;
+}
+div img{
+    width: 100%;
+    max-width: 50%;
+}
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="i">
+    <label for="i">Change IMG</label>
+   <div>
+    <img src="" alt="">
+   </div>
+
+   <script>
+       const img = document.querySelector("img");
+       img.src = changeimg('garden');
+       const opt = document.querySelector("input[type='checkbox']");
+       opt.addEventListener("change", function(){
+           opt.checked ? changeimg('garden2') : changeimg('garden');
+       });
+
+       function changeimg(name){
+           return  img.src = `https://gpnotes.droppages.com/img/${name}.jpg`;
+       }
+
+       
+   </script>
+</body>
+</html>

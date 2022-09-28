@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+   <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/select/select_section.html
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Select section</title>
+  <style>
+    body, select {
+      font-size: 1.2rem;
+    }
+  select{
+    padding: 8px 25px;
+    background: dodgerblue;  
+    }
+  option{
+      background: lightblue;
+      font-style: bold;
+    }
+    
+    section {
+      width: 350px;
+      height: 200px;
+      margin-top: 10px;
+    }   
+    
+    #p11{
+      background: lightblue;
+    }
+    #p22{
+      background: seagreen;
+    }
+  </style>
+</head>
+
+<body>
+  <label for="cesta">Selecionar:</label>
+<select id="cesta" name="cesta">
+  <option>Selecionar</option>
+  <option id="p1">Padrao 1</option>
+  <option id="p2">Padrao 2</option>
+</select>
+
+<section id="p11">
+  <p>padrao 1</p>
+</section>
+
+<section id="p22">
+ <p> padrao 2</p>
+</section>
+
+ 
+<script>
+x = document.querySelectorAll("select[name='cesta']");
+HideAll(); // esconde todos by deafult no onload DOM
+
+x.forEach(el => {
+  el.addEventListener('change', function(){
+      const id  = this.selectedIndex; //pega o index do selecionado
+      console.log(id);
+       ShowOpt(id); 
+  });
+});
+
+
+function ShowOpt(el){
+  HideAll(); // certifica-se de voltar a esconder tudo from scratch antes de verificar as condições 
+  if(el == 1){
+    p11.style.display = 'block';
+  }
+  if(el == 2){
+    p22.style.display = 'block';
+  };
+};
+
+function HideAll(){
+  p11.style.display = "none";
+  p22.style.display = "none";
+};
+
+</script>
+</body>
+
+</html>

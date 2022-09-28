@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/fetch_JSON/fetch_search_json_local2
+  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic fetch json search</title>
+    <style>        
+      #resfinal {
+        margin-top: 15px;
+      }
+      #photo{
+       
+      }
+      .img_profile img{
+        width: 100%;
+        max-width: 300px;
+        max-height: 400px;
+      }
+      .container{
+          font-size: 20px;
+          padding-top: 100px;
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          max-width: 992px;
+          margin: auto;
+          
+      }
+      section.response {
+          display: flex;
+          max-width: 200px;
+          justify-content: center;
+          margin: auto;
+          width: 100%;
+          font-size: 18px;
+          margin-top: 20px;
+          height: 100px;
+          flex-direction: column;
+          align-items: center;  
+          background-color: blueviolet;        
+          border-radius: 10px;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+    <fieldset>
+        <legend>Local JSON</legend>
+        <label for="res">Enter a name:</label>
+        <input type="text" id="res" value="geraldo" />
+        <button onclick="search()">Find</button>     
+        
+      </fieldset>
+    </div>
+    <section class="response">
+      <div class="main">
+        <div> <span id="nome"></span></div>
+        <div> <span id="surname"></span></div>
+         <div><span id="age"></span></div>
+         <div class="img_profile">
+           <span id="photo"></span>
+         </div>
+      </div>
+    </section>
+    <script>
+const json = "persons.json";
+
+async function person(url){
+    const data = await fetch(url);
+    const response = await data.json();
+   if(response){
+    showdata(response);
+   }         
+};
+const arr = []; 
+ function showdata(response){
+    for(value of response){
+        arr.push(value); // coloca todas as informações no novo array
+        console.log(arr);
+    };
+;}
+
+function search(){
+    let name = document.getElementById("res").value; // get name of search
+    let find = arr.find((el) => el.nome.toUpperCase() == name.toUpperCase());
+    console.log(find); // mostra o resultado
+
+    if(!find){ 
+       cleanHtml("Not found!");
+        return;
+    }
+    dataHtml(find);
+    return;
+}
+person(json);
+
+function dataHtml(el){
+        document.getElementById("nome").innerHTML = `Nome: ${el.nome}`;
+        document.getElementById("surname").innerHTML = `Surname: ${el.surname}`;
+        document.getElementById("age").innerHTML = `Age: ${el.age}`;
+    }
+
+          //limpa os campo do HTML
+          function cleanHtml(el){
+        document.getElementById("nome").innerHTML = el;
+        document.getElementById("surname").innerHTML = "";
+        document.getElementById("age").innerHTML = "";
+        document.getElementById("photo").innerHTML = "";
+    }
+
+    </script>
+    
+</body>
+</html>
