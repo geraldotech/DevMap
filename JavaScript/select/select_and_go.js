@@ -17,7 +17,7 @@
 
 
 /*
-a principio só podemos usar o this com o addEventListener, caso contrario use event
+Só podemos usar o this com o addEventListener, caso contrario use event
 */
 document.querySelector("select[name='menu']").onchange = (e) => {
     const val = e.target.value;    
@@ -43,4 +43,5 @@ function website(el){
         window.open().location.href = "http://microsoft.com";
         return;
     };
+    alert("selecionar uma opção");
 };
