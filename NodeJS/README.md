@@ -3,11 +3,11 @@
 
 Instalar o NodeJS na sua máquina [https://nodejs.org/pt-br/download/](https://nodejs.org/pt-br/download/)
 
-## create package.json do project:  
-    npm init
+### create package.json do project:  
+    $ npm init
 
 ### create sample server server v1:
->>can chooice your port
+>chooice your port!
 ```js
 const http = require('http');
 const hostname = "127.0.0.1";
@@ -15,7 +15,6 @@ const port = 3000;
 const server = http.createServer((req,res)=>{
     res.statusCode = 200;
     res.setHeader('Content-Type','text/plain');
-
     res.end("Hello Dev"); //simples texto
 });
 
@@ -47,7 +46,7 @@ Open browser: `http://localhost:3000`
 
 ### open cdm in folder of project:
 
-    node index.js
+    $ node index.js
 
 ### Write and read html files
 
@@ -92,11 +91,11 @@ server.listen(port,hostname,()=>{
 1. Display várias informações da requisição:
 `console.log(req)`
 
-2.headers refer (sabe a página que o user esta acessando mesmo que não existe):  
+2. headers refer (sabe a página que o user esta acessando mesmo que não existe):  
 `console.log(req.headers)`
 
 ### Fazer rotas fazendo validações baseado no req.url em página:  
-Apenas localhost/smart vai funcionar o mesmo vai ficar carregando infinitamente.
+Apenas `localhost/smart` vai funcionar o mesmo vai ficar carregando infinitamente.
 ```js
  if(req.url == '/smart'){
     ...fs.read.file....
@@ -110,12 +109,12 @@ adicionar else para parar o carregamento infitinto, vai retornar uma página em 
 }
 ```
 
-### Deixe only '/' para root http://localhost: 
+### Deixe only '/' para root http://localhost
 ```js
   if(req.url == '/'){
 ```
 
-### else para pagina 404.html
+### if/else para pagina 404.html
 1. Criar `404.html` 
 2. Apenas copiar o conteudo de if e jogar para else:
 
@@ -312,20 +311,19 @@ setInterval(function(){
 },2000)
 ```
 
-### Nodemon
+# Nodemon
 [nodemon](https://www.npmjs.com/package/nodemon)
 automatically restarting the node application when file changes in the directory are detected.
 
 1. run command line:
 
 ```js
-
 $ npm install -g nodemon
 
 ```
 
 run live watch:
 ```js
-nodemon .\index.js
+$ nodemon .\index.js
 ```
 
