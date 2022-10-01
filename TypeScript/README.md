@@ -375,7 +375,7 @@ REPL stands for **Read Evaluate Print Loop**
 
 Comandos úteis para produtividade:
 ```
-mkdir create folderss
+mkdir create folders
 touch create files
 rm -rd delete folders
 rm delete files
