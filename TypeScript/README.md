@@ -60,7 +60,7 @@ O compilador do **TypeScript** é altamente configurável. Ele nos permite defin
 Cada uma das opções de configuração pode ser passada para um arquivo chamado  *tsconfig.json* . Para quem não conhece, esse é o principal arquivo de configuração do *TypeScript*.
 
 - Começando pelo arquivo de configuração:  
-Criar as pasta> `src` e `dist` (arquivos de deploy). 
+Criar a pasta `src` do TS a pasta `dist` arquivos de deploy será criada automaticamente ao gerar o .js file, só fazer manual se quiser criar o html from start
 
 
 - Criar arquivo `tsconfig.json` fora das pasta src e dis executar:  
@@ -73,7 +73,7 @@ Abra o arquivo tsconfig.json e na linha 29 “// "rootDir": "./",” aponte on
 "rootDir": "./src"
 ```
 
-Na linha "outDir": "./dist/js", aponte os arquivos que serão emitidos ao client, "arquivos de deploy"
+Na linha "outDir": "./dist/js", na linha 59 aponte os arquivos que serão emitidos ao client, "arquivos de deploy"
 ```js 
 "outDir": "./dist/js/"
 ```
@@ -86,10 +86,9 @@ Pasta dist create a index.html and define script
 
 Pasta src crie o arquivo `index.ts` e escreve algum codigo como: 
 ```ts
-var name:string = "Geraldo";
-console.log(name)
+var myname:string = "gmapdev";
+console.log(myname);
 ``` 
-
 
 para compilar digite: 
 ```js
@@ -101,18 +100,11 @@ tsc -w index.ts
 ```
 
 
-
-
 ### Mais sobre tsconfig.json  
 Removendo comentários do arquivo compilado: 
 ```ts
 "removeComments": true,
 ```
-Definindo onde o arquivo final será gerado:
-```ts
-"outDir": "./dist/js",
-```
-
 <hr>
 
 ## noEmitOnError  
