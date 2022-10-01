@@ -9,17 +9,17 @@
 - [Defer](#defer)
 - [Hoisting](#hoisting)
 - [Types](#types)
-- [Terminais](#terminais)
+- [Terminais e comandos](#terminais)
 
 <hr>
 <a name="what-is-ts">O que é o TS?:</a>  
+
 **É um superset para a linguagem JavaScript, Ou seja, adiciona funções ao JavaScript, como a declaração de tipos de .variável.**
 - Pode ser utilizado com frameworks/libs, como: Express e React;
 - Precisa ser compilado em JavaScript, ou seja, não executamos TS;
 - Desenvolvido e mantido pela Microsoft
-
-
 ## Installing:
+
 <a name="installing"></a>  
 Vamos instalar o TypeScript em modo Global, basta adicionar o -g  
 ```js
@@ -48,7 +48,7 @@ Note que será criado um novo file chamado `primeiro.js` na raiz da pasta, para 
 ```
 node primeiro.js
 ```
->>If if all okay will be printed Hello Word!
+>>If all okay will be printed Hello Word!
 
 <hr>
 
@@ -63,45 +63,45 @@ Cada uma das opções de configuração pode ser passada para um arquivo chamado
 Criar a pasta `src` do TS a pasta `dist` arquivos de deploy será criada automaticamente ao gerar o .js file, só fazer manual se quiser criar o html from start
 
 
-- Criar arquivo `tsconfig.json` fora das pasta src e dis executar:  
+- Para criar arquivo `tsconfig.json` executar:  
 ```js
 tsc --init
 ```
 
-Abra o arquivo tsconfig.json e na linha 29 “// "rootDir": "./",” aponte onde vai ficar o arquivo de Typescript:  
+- Abra o arquivo tsconfig.json e na linha 29 “// "rootDir": "./",” aponte onde vai ficar o arquivo de Typescript:  
 ```js 
 "rootDir": "./src"
 ```
 
-Na linha "outDir": "./dist/js", na linha 59 aponte os arquivos que serão emitidos ao client, "arquivos de deploy"
+- Na linha "outDir": "./dist/js", na linha 59 aponte os arquivos que serão emitidos ao client, "arquivos de deploy"
 ```js 
 "outDir": "./dist/js/"
 ```
 
-Pasta dist create a index.html and define script 
+- Pasta dist create a index.html and define script 
 ```js
 <script src="js/index.js defer"></script>
 ```
 (prevendo que o TS vai fazer uma pasta "js") 
 
-Pasta src crie o arquivo `index.ts` e escreve algum codigo como: 
+- Pasta src crie o arquivo `index.ts` e code algum como: 
 ```ts
 var myname:string = "gmapdev";
 console.log(myname);
 ``` 
 
-para compilar digite: 
+- para compilar: 
 ```js
 tsc
 ```
-watch mode: 
+- watch mode: 
 ```
 tsc -w index.ts
 ```
 
 
 ### Mais sobre tsconfig.json  
-Removendo comentários do arquivo compilado: 
+- Removendo comentários do arquivo compilado: 
 ```ts
 "removeComments": true,
 ```
@@ -110,7 +110,7 @@ Removendo comentários do arquivo compilado:
 ## noEmitOnError  
 <a name="noEmitOnError"></a>
 
-Create novo arquivo like index.ts respeitar a converção que os Dev JS utilizam hoje, a utilização do camelCase. e.g? myControls.ts 
+- Create novo arquivo like index.ts respeitar a converção que os Dev JS utilizam hoje, a utilização do camelCase. e.g? myControls.ts 
 ```js
 var languages : Array<string> = []; 
 languages.push("TypeScript"); 
@@ -372,3 +372,11 @@ REPL stands for **Read Evaluate Print Loop**
 
 <img src="./assets/cmder.png" style="width:50%">
 <img src="./assets/git-bash.png" style="width:50%">
+
+Comandos úteis para produtividade:
+```
+mkdir create folderss
+touch create files
+rm -rd delete folders
+rm delete files
+```
