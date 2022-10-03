@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    color-scheme: dark;
+}
+
+
+header{
+    background: coral;
+    height: 100px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: dodgerblue;
+}
