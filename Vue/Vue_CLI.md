@@ -27,11 +27,10 @@ npm run server
 
 ## Components:
 
-- instalar a extensão Vetur para sugestões, formatar code, identificar erros
-Dividir nosso layout em partes, cada um pode ser seu CSS 
+- instalar a extensão Vetur para sugestões, formatar code, identificar erros, dividir nosso layout em partes, cada um pode ter seu CSS 
 - deletar o conteudo de App.vue e deletar o HelloWord.vue
 
-Em App.vue criar: 
+`App.vue` criar: 
 ```html
 <template>
   <h1>My life!</h1>

@@ -40,7 +40,8 @@ Usando Arrays, open server_array_mode
 [ref](https://www.treinaweb.com.br/blog/utilizando-template-engine-ejs-com-node-js)
 
 # EJS Partials - includes
-<%- include('footer'); %>
+`<%- include('footer'); %>`
+`<%- include('footer.html'); %>`
 
 ### Passando objects no render:
 
