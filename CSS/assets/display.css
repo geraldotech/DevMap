@@ -1,0 +1,44 @@
+*{color-scheme:dark;}
+
+div, p, h2 {
+  display: block; /* default para this elements */
+  background: red;
+}
+
+div.menu a {
+  display: block;
+}
+
+div.menu {
+  width: fit-content;
+}
+
+span{
+  margin-top: 5px;
+}
+
+span.a{
+  display: inline; /* default para span */
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+span.b{
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+span.c{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+input{
+  width: 300px;
+  height: 50px;
+}
