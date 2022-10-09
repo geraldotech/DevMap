@@ -373,10 +373,13 @@ REPL stands for **Read Evaluate Print Loop**
 <img src="./assets/cmder.png" style="width:50%">
 <img src="./assets/git-bash.png" style="width:50%">
 
+
 Comandos úteis para produtividade:
 ```
-mkdir create folders
-touch create files
-rm -rd delete folders
-rm delete files
+mkdir | create folders
+touch | create files
+rm -rd | delete folders
+rm | delete files
+echo "# oi" >> style.css | create file and write
+cat | read file content
 ```
