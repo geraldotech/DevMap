@@ -152,9 +152,11 @@ cars2.splice(0,1,'new') // add 'new' to index 0 e remove index 1
 console.log(cars2)
 
 
-//13
-//filter
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+/*
+13 - Filter
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+Como o nome já diz é um filtro e assim se faz, filtrando todos os elementos.
+*/
 
 arr = ['Al', 'Bra', 'Char', 'Delta', 'Echoss', 'Foxtrot']
 x = arr.filter(word => word.length > 5 ) // works
@@ -212,15 +214,51 @@ var obj = {
 busca = obj.students.find(function (el){
   return el.Age >= 29;
 });
-console.log(busca)
+console.log(busca);
 
 
 //filtrando letras de um array com ternario response
+
 words = arr.filter((word) => word.startsWith('F'));
 words == '' ? console.log('nao') : console.log(words);
 //ou alternative
 filtra != '' ? console.log(filtra) : console.log('not');
 filtra.length != 0 ? console.log(filtra) : console.log('not');
+
+// filter, some, includes
+
+const array = ["12","zuz","dev","Element","cam"];
+
+// o que o filtro deve encontrar
+const keys = ["1","e"];
+
+let filbusca = array.filter(a => keys.some(e => a.includes(e)));
+console.log(filbusca); // ['12', 'dev', 'Element'];
+
+
+// Neste exemplo como não tem o "some" então precisamos informar o entire name
+let filv4 = ["1","dev"].filter(val => array.includes(val));
+console.log(filv4); // ['dev']
+console.log(array.filter((val) => val.length > 5)); // ['Element']
+
+
+// examplo com includes
+let busca =  ["20","12","zuz","dev","Element","cam", "56","Deltra","Delly"].filter(a => a.includes("D")); 
+console.log(busca); // (2) ['Deltra', 'Delly']
+
+// Como não usamos o filter, requer entire name:
+let getfil3 = ["E"].some(a => array.includes(a));
+console.log(getfil3); // false
+
+const 
+get = ["o"], 
+files = ['Geraldo', 'Algo', 'Felipe'],
+res = files.filter(al => get.some(b => al.endsWith(b)));
+console.log(res); // (2) ['Geraldo', 'Algo']
+
+
+
+
 
 // 14 find
 
@@ -354,21 +392,48 @@ console.log(myarr2)  //['R', 'i']
 
 
 //20 - some - The Array.some() method checks if any of the elements in an array pass a test (provided as a function).
-const ages = [3,10,18,20]
+const ages = [3,10,18,20];
 
-console.log(ages.some(check));
+// function alone check maiores de 18
 function check(age){
   return age > 18;
 }
+console.log(ages.some(check)); //maior de 18? true
+
+//arrow function direct inline 
+console.log(ages.some(el => el < 18)); //tem alguém menor de idade na lista? true 
+
 //some in Object Array "com every também return boolean results"
 const person = [
   { nome: "ISA", idade: 28, Estado: "SP" },
+  { nome: "gmap", idade: 25, Estado: "AL" },
 ];
-console.log(person.some(el => el.nome === "ISA")); //true
+console.log(person.some(el => el.nome === "ISA")); // true
+console.log(person.some(el => el.Estado === "RJ")); // false
 
 
-//tem alguém menor de idade na lista?
-console.log(ages.some(el => el < 18)); // true 
+
+// maiores que 7 arrow function alone
+const ages = [3,10,18,20];
+const check = (el) => (el > 7);
+console.log(array.some(check)); //true
+
+/*
+e.g: some com includes
+*/
+
+//passando valores para vê se existe na lista
+const array = ["12","zuz","dev"];
+const check2 = ["dev","12"].some(el => array.includes(el));
+console.log(check2); //true
+
+
+// usando some com includes, talvez não seja a melhor opção, poderiamos usar apenas some ou includes
+let search3 = ["zuz"].some(a => array.includes(a));
+console.log(search3); // true
+
+console.log(array.some(el => el == "dev")); // true
+console.log(array.includes("dev")); // true
 
 
 //21 - every
@@ -529,3 +594,4 @@ console.log(array.every(odd)); // todos são impar? false
 console.log(array.includes(6)) // includes 6? false
 console.log(array.join('.|.')) // join formata a saída 1.|2.|.3.|.4.|.5.
 console.log(array.fill(0,2)) // (value, start, end) [1 ,2 , 0, 0, 0] 
+console.log(["A","B","C"].some(val => val == "B")); // existe B ? // true
