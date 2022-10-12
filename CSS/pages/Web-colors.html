@@ -14,22 +14,16 @@
 <section>
     <h1>Web-colors</h1>
     
-  <span style="background:#a81fff">#a81fff</span>
-  
-  <span style="background:#f9265e">#f9265e</span>
-  
+  <span style="background:#a81fff">#a81fff</span>  
+  <span style="background:#f9265e">#f9265e</span>  
   <span style="background:#66d9eb">#66d9eb</span>
-  
-  
-  <span style="background:#a4a4a4">#a4a4a4</span>
-  
-  <span style="background:#7c7c7c">#7c7c7c</span>
-  
-  <span style="background:#2c70ff">#2c70ff</span>
-  
+ <span style="background:#a4a4a4">#a4a4a4</span>  
+  <span style="background:#7c7c7c">#7c7c7c</span>  
+  <span style="background:#2c70ff">#2c70ff</span>  
   <span style="background:#122ab2" class="w">#122ab2</span>
   
   <span style="background:#222" class="w">#222</span>
+  <span style="background:#f7f7f7">#f7f7f7</span>
   </section>
   <footer>
     <div>
@@ -42,7 +36,7 @@
 span.forEach((el) => {
   el.addEventListener("click", function(e) { 
           const copytxt = e.target.innerHTML;
-            console.log("aaaa");
+            console.log("click test");
      navigator.clipboard.writeText(copytxt).then(()=> {
                  alert("copiado!");
              });
