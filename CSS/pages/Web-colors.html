@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebColors</title>
-<link rel="stylesheet" href="../assets/web_colors.css">
-</head>
-<body>
-   
-   
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebColors - bygmap</title>
+    <link rel="stylesheet" href="../assets/web_colors.css" />
+  </head>
+  <body>
+    <section>
+      <h1>Web-colors</h1>
 
-<section>
-    <h1>Web-colors</h1>
-    
-  <span style="background:#a81fff">#a81fff</span>  
-  <span style="background:#f9265e">#f9265e</span>  
-  <span style="background:#66d9eb">#66d9eb</span>
- <span style="background:#a4a4a4">#a4a4a4</span>  
-  <span style="background:#7c7c7c">#7c7c7c</span>  
-  <span style="background:#2c70ff">#2c70ff</span>  
-  <span style="background:#122ab2" class="w">#122ab2</span>
-  
-  <span style="background:#222" class="w">#222</span>
-  <span style="background:#f7f7f7">#f7f7f7</span>
-  </section>
-  <footer>
-    <div>
-      <p>By <a href="">gmapdev - 2022</a></p>
-    </div>
-  </footer>
-   <script>
- const span = document.querySelectorAll("span");
-
-span.forEach((el) => {
-  el.addEventListener("click", function(e) { 
-          const copytxt = e.target.innerHTML;
-            console.log("click test");
-     navigator.clipboard.writeText(copytxt).then(()=> {
-                 alert("copiado!");
-             });
-})
-  })
-
-   </script>
-</body>
+      <span style="background: #a81fff">#a81fff</span>
+      <span style="background: #f9265e">#f9265e</span>
+      <span style="background: #66d9eb">#66d9eb</span>
+      <span style="background: #a4a4a4">#a4a4a4</span>
+      <span style="background: #7c7c7c">#7c7c7c</span>
+      <span style="background: #2c70ff">#2c70ff</span>
+      <span style="background: #122ab2" class="w">#122ab2</span>
+      <span style="background: #222" class="w">#222</span>
+      <span style="background: #f7f7f7">#f7f7f7</span>
+    </section>
+    <footer>
+      <div>
+        <p>By <a href="">gmapdev - 2022</a></p>
+      </div>
+    </footer>
+    <script>
+      const span = document.querySelectorAll("span");
+      span.forEach((el) => {
+        el.addEventListener("click", function (e) {
+          const copytxt = e.target.innerHTML; //copy currently element click HTML Text
+          console.log("click test");
+          navigator.clipboard.writeText(copytxt).then(() => {
+            alert("copiado!");
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
