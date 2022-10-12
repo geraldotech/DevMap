@@ -3,12 +3,12 @@
 div, p, h2 {
   display: block; /* default para this elements */
   background: red;
+  margin-top: 10px;
 }
 
-div.menu a {
+nav.menu_block a {
   display: block;
 }
-
 div.menu {
   width: fit-content;
 }
@@ -17,28 +17,33 @@ span{
   margin-top: 5px;
 }
 
-span.a{
-  display: inline; /* default para span */
+span.box {
   width: 100px;
   height: 100px;
+}
+
+span.a{
+  display: inline; /* default para span */
   background: red;
 }
 
 span.b{
   display: block;
-  width: 100px;
-  height: 100px;
   background: red;
 }
 
 span.c{
   display: inline-block;
-  width: 100px;
-  height: 100px;
   background: red;
 }
 
 input{
   width: 300px;
   height: 50px;
+}
+
+b{
+  background-color: coral;
+  padding: 5px;
+  font-size: 16px;
 }

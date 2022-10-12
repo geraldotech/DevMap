@@ -9,36 +9,51 @@
 </head>
 <body>
     <!-- display block -->
-<h1>Elements Display: block</h1>
+<h1>Display: block <b>height, width</b></h1>
+<mark>Sempre ocupam toda a largura possível de tela e começam em uma nova linha</mark>
+
 <div>div</div>
 <p>p</p>
 <h2>h1, h2...</h2>
 
 <hr>
-<h1>Elements Display:inline</h1>
+<h1>Display: inline <b>não define weight/width</b> </h1>
+<mark>Usam somente o espaço necessário e não precisam começar em uma nova linha</mark>
+<p></p>
+<code>span, img, a </code>
 <span>span</span>
 <img src="" alt="img" />
 <a href="">a</a>
 
-<div class="menu">
-  <a href="#">one</a>
-<a href="#">one</a>
-<a href="#">one</a>
+<div class="menus">
+  <p>menu a display: default: inline</p>
+<nav class="menu">
+  <a href="#">links</a>
+<a href="#">links</a>
+<a href="#">links</a>
+</nav>
+<p>block sendo aplicado</p>
+<nav class="menu_block">
+  <a href="#">links</a>
+  <a href="#">links</a>
+  <a href="#">links</a>
+</nav>
 </div>
+<hr>
 
-
-<h1>inline-block</h1>
-<b>height, width</b>
-  
- <input type="text" placeholder="input inline-block by default" />
+<h1>Display: inline-block vs block vs <b>height, width</b></h1>
+<mark>Muito usado para criar menus, </mark>
+  <p></p>
+<input type="text" placeholder="input inline-block by default" />
 <input type="text" placeholder="input inline-block by default" />
 
  <hr>
 
-<span class="a">inline - </span>
-<span class="b">block</span>
+<span class="box c">inline-block</span>
+<span class="box c">inline-block</span>
+<span class="box a">inline</span>
+<span class="box b">block</span>
 
-<span class="c">inline-block</span>
-<span class="c">inline-block</span>
+
 </body>
 </html>
