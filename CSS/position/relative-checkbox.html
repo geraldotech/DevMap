@@ -14,6 +14,7 @@
       }
       body {
         height: 100vh;
+        font-size: 1.2rem;
       }
 
       .rel {
@@ -41,21 +42,31 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 60px 0;
       }
       h1 {
         text-align: center;
+      }
+      input{
+        width: 18px;
+        height: 18px;
+      }
+      .container{
+        max-width: 800px;
+        margin: auto;
       }
     </style>
   </head>
   <body>
     <div class="flex">
       <input type="checkbox" id="rel" value="rel" />
-      <label id="txt" for="rel">Wall Relative</label>
+      <label id="txt" for="rel">Wall Relative</label>   
     </div>
-    <p>box é absoluto, então deve ser relativo a algum element</p>
-
+  
     <div class="container">
+      <p>box é absoluto, então deve ser relativo a algum element</p>
       <div class="wall" id="wall">
+     
         <h1>wall</h1>
         <div class="box">
           <h3>box</h3>
