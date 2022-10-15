@@ -7,11 +7,11 @@
 <style type="text/css">
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Pacifico&family=Raleway&family=Ubuntu:wght@500&display=swap');
 </style>
-<title>CCS - Cheat Sheet</title>
+<title>CCS - Cheats Sheet</title>
 </head>
 <body> 
   <header>
-    <section class="title">CSS - Cheat Sheet</section>   
+    <section class="title">CSS is awesome and !important</section>   
   </header>  
   <div class="header"></div>
   <main>  
@@ -105,7 +105,9 @@
             <details>
               <summary>Properties</summary>
            
-              <img class="img" src="./assets/img/css-main.jpg" alt="">
+              <div class="img">
+                <img  src="./assets/img/css-main.jpg" alt="">
+              </div>
            <pre class="coral">
 body, background-color: gray or background-image, 
 background-position, background-repeat
@@ -139,7 +141,18 @@ letter-spacing;
 </details>                  
 <details>
 <summary>Margin and Padding</summary>
-<br>
+
+<p class="lead">Use sempre o DevTools, este será a melhor ferramenta, margin é laranja e padding é verde</p>
+<pre class="coral">
+  padding: 60px 10px;
+  max-width: 960px;
+  margin: auto;
+</pre>
+
+
+<div class="img">
+  <img class="img" src="./assets/img/padding_margin.jpg" alt="">
+</div>
 <section class="lead links">
 <a href="./pages/margin-padding-elements.html">margin-padding-css+element.html</a>
 </section>
@@ -154,12 +167,16 @@ margin-left
              
 <p class="lead">Shorthand property sets the margin area for all four sides</p>
 <pre>margin: 20px 5px 10px 4px</pre>
-<img class="img" src="./assets/img/margin.gif" />
+<div class="img">
+  <img src="./assets/img/margin.gif" />
+</div>
 
 <p class="lead">Exemplo top: 20px, right-left: auto e bottom:10px</p>
 <pre>margin: 20px auto 10px;</pre>
-<p class="lead">O mesmo se aplica para padding</p>
-<img class="img" src="./assets/img/padding-margni-sides.jpg" />
+<p class="lead">O mesmo se aplica para padding:</p>
+<div class="img">
+  <img src="./assets/img/padding-margni-sides.jpg" />
+</div>
 <hr><br>
 <p class="lead">Praticar em <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin" class="links">https://developer.mozilla.org</a> ou <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_intro">W3 schools</a></p>              
             </details>
@@ -246,7 +263,7 @@ transform: translate(-50%,-50%)
          <section class="links lead">  <a href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/BEM.md" target="_blank">BEM.md</a>     </section>     
           </details> <!--end-->       
           <details> <!--start-->
-            <summary>Flexbox</summary>
+            <summary>FlexBox</summary>
          <section class="links lead">  <a href="./pages/flex_gsb_gmap.html" target="_blank">Grow, Shrink, Basis</a>     
         </section>     
           </details> <!--end-->
@@ -275,6 +292,7 @@ transform: translate(-50%,-50%)
   </main>
 </body>
     <footer>
-      <p>Feito orgulhosamente com CSS puro by gmapdev - 2022</p>     
+      <p>Feito orgulhosamente com CSS puro by <a href="https://github.com/geraldotech/">gmapdev</a> - 2022</p>   
+      <p>Mobile First</p>
     </footer>
 </html>

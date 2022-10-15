@@ -22,7 +22,7 @@
   .links a {
     display: block;
     text-decoration: none;
-    margin-top: 10px;
+    line-height: 2;
     color: wheat;
   }
   .links a::before{
@@ -59,14 +59,16 @@
   aside {
     border: 3px solid #ffffff;
     background: #21232E;
-    margin: 5px 5px 5px 0;
+    margin: 10px;
     padding: 0px 20px 0px 20px;
     font-size: 14px;
     text-align: center;
   }
+  ul li {
+    margin: 10px 0px 10px 10px;
+  }
   .tips li{
    text-align: justify;
-   padding: 10px 10px;
    color: var(--fw);
   }
 
@@ -80,18 +82,37 @@
     background: #21232E;
   }
 
-  .img{
+  div img {
     width: 100%;
-    max-width: 90%;
+    filter: drop-shadow(0 0 5px #2c70ff);
+    border-radius: 10px;
+  }
+  div.img {
+    border-radius: 10px;
+    margin: 20px;
+    border-radius: 2%;
+    padding: 0px 10px;   
   }
 
+  a{
+    color: #f2f2f2;
+    text-decoration: none;
+  }
+  a:hover{
+    color: green;
+  }
+
+/*FOR DESKTOP */
   @media screen and (min-width:650px){
-     main {
-        display: flex;     
+
+      main {
+        display: flex;  
+         
            }
            aside {
-          flex: 0 0 250px;
+          flex: 1 0 250px;
           font-size: 14px;
+         
            }
     article {
     flex-basis: 50em;
@@ -119,6 +140,7 @@
   .lead {
     font-size: 1.2rem;
     color: white;
+    margin-top: 10px;
   }
   a {
     color: rgb(125, 78, 212);
@@ -130,15 +152,14 @@
   pre, .output {
       display: flex;
       flex-direction: column;
-      margin-top: 10px;
+      margin: 10px;
       border: 3px solid green;
       font-family: monospace;
   }
   pre.coral{
-    color: var(--cod_color);
-    
-    
+    color: var(--cod_color);    
   }
+
   p.tip_color{
     color: var(--cod_color);
   }
@@ -152,6 +173,7 @@
     font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
   }
+
   /* only for this document learning */
   p.test {
   text-align: center;
@@ -171,7 +193,6 @@
   }p.large {
     font-size: 300%;
   }
-  img {
-    width: 100%;
-    margin: 20px auto 10px;
-  }
+
+
+ 
