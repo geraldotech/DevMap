@@ -1,11 +1,34 @@
+## Vue 3 CDN
+
+Error: production build (*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
+
+- **add in header**
+```js
+<script src="https://unpkg.com/vue@3"></script>
+  <script src="app.js" defer></script>
+```
+- **body**
+```html
+<div id="app">{{ greeting }}</div>
+```
+
+- **basic script**
+```js
+  Vue.createApp({
+    data() {
+      return {
+        greeting: 'Hello, World!'
+      }
+    }
+  }).mount('#app')
+```
+
 - v-model
 - v-on:click="getx"
 - v-if
 - v-bind
 
 ### 
-
-
 title get a variavel message
 ```html
 ::before
@@ -18,42 +41,7 @@ title get a variavel message
  <a :href="face">{{face}}</a> in date link: 'http...'
 ```
 
-## Vue 2 CDN
-
-```js
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-```
-
-example html CDN put <head>
-
-
-## Vue 3 CDN
-
-Error: production build (*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
-
-- **add in header**
-```js
-<script src="https://unpkg.com/vue@3"></script>
-  <script src="app.js" defer></script>
-```
-- **body**
-```html
-<!--html-->
-<div id="app">{{ greeting }}</div>
-```
-
-- **script**
-```js
-  Vue.createApp({
-    data() {
-      return {
-        greeting: 'Hello, World!'
-      }
-    }
-  }).mount('#app')
-```
-
-## Vue router
+## Vue router CDN
 [`https://unpkg.com/browse/vue-router@3.0.2/dist/`](https://unpkg.com/browse/vue-router@3.0.2/dist/)
 
 
@@ -74,10 +62,10 @@ Vue.createApp({
 
 ```
 
-# Do a form app
+## Do a form app
 
 Fazer uma div que engloba tudo `<div id="app"> </div>` 
-Agora fazer o form com v-model e um output
+depois fazer o form com v-model e um output
 ```js
 <form id="form_app">
 <input type="text" v-model="input_name" placeholder="your name">
@@ -87,9 +75,10 @@ Agora fazer o form com v-model e um output
  <p>Data bind: {{input_name}}</p>
 ```
 
-Nos testes você pode ou não declarar uma const, o resultado foi o mesmo, não esquecer também de fazer um arquivo apenas para o vue.js.
+Você pode ou não declarar uma const, o resultado foi o mesmo, não esquecer também de fazer um arquivo apenas para o vueJS.
 
-## versão sem const
+- versão sem const
+
 ```js
 Vue.createApp({
   data(){
@@ -105,10 +94,10 @@ Vue.createApp({
     }
 }
   }).mount('#app')
-
 ```
 
-## versão com const
+- versão com const
+
 ```js
 const MyNameApp = {
   data(){
