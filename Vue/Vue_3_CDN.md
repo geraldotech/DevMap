@@ -21,6 +21,7 @@ Error: production build (*.prod.js) when deploying for production?: `https://unp
       }
     }
   }).mount('#app')
+  //.mount(app); //works too
 ```
 
 - v-model
@@ -47,74 +48,69 @@ title get a variavel message
 
 ## simples minimum to input return
 ```js
- <div id="app">
-  <input type="text" v-model="input_num">
-  <p>{{input_num}}</p>
+  <div id="app">
+    <input type="text" v-model="input_num">
+    <p>{{input_num}}{{email}}</p>
+    <span></span>
   </div>
 
 Vue.createApp({
   data(){
     return{
-      nome:""
+      input_num: '',
+      email: "@hotmail.com"
     }
   }
 }).mount(app);
 
 ```
 
-## Do a form app
+### Do a form app
 
 Fazer uma div que engloba tudo `<div id="app"> </div>` 
 depois fazer o form com v-model e um output
-```js
-<form id="form_app">
+```html
+<form id="app">
 <input type="text" v-model="input_name" placeholder="your name">
+<p>Meu nome é {{name}}</p>
+<p>Data bind: {{input_name}}</p>
 </form>
-
- <p>Meu nome é {{name}}</p>
- <p>Data bind: {{input_name}}</p>
 ```
 
-Você pode ou não declarar uma const, o resultado foi o mesmo, não esquecer também de fazer um arquivo apenas para o vueJS.
+Você pode ou não declarar uma const, o resultado foi o mesmo:
 
-- versão sem const
-
-```js
-Vue.createApp({
-  data(){
-    return {
-      name: "Geraldo",
-      input_name: "",
-    }
-  },
-  methods: {
-    submitForm(e){
-      e.preventDefault();
-      this.name = this.input_name;
-    }
-}
-  }).mount('#app')
-```
-
-- versão com const
+- const e Vue.createApp
 
 ```js
-const MyNameApp = {
-  data(){
-    return {
-      name: "Geraldo",
-      input_name: "",
-    }
-  },
-  methods: {
-    submitForm(e){
-      e.preventDefault();
-      //console.log('here')
-      this.name = this.input_name;
+  const meuApp = {
+    data(){
+      return {
+        name: "gmapdev",
+        input_name: ""
+      }
+    },
+    methods:{
+      meuFormulario(){
+        this.name = this.input_name;
+      }
     }
   }
+  Vue.createApp(meuApp).mount(app);
+
+  /* Vue.createApp({
+  data(){
+    return {
+      name: "Geraldo",
+      input_name: "",
+    }
+  },
+  methods: {
+    meuForm(){
+      this.name = this.input_name;     
+    }
 }
-Vue.createApp(MyNameApp).mount("#app");
+  }).mount('#app');
+ */
 
 ```
 
@@ -172,7 +168,6 @@ exemplo
 
     data(){
     return {
-      esta_trabalhando: true,
       checked: false,
       tech:[]
     }
