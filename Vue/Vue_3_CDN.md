@@ -22,15 +22,9 @@
   //.mount(app); //works too
 ```
 
-- v-model
-- v-on:click="getx"
-- v-if
-- v-bind
-
-
 Error: production build (*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
 
-### 
+## v-bind
 title get a variavel message
 ```html
 ::before
@@ -42,6 +36,20 @@ title get a variavel message
 :: links
  <a :href="face">{{face}}</a> in date link: 'http...'
 ```
+## v-on:click="func()" or @click="fun()"
+`<button @click="msn()">btn</button>` now just create a method
+
+```js
+ methods: {
+      msn(){
+        alert('yes');
+      }
+    }
+```
+
+## coming soon
+- v-model
+- v-if
 
 ## Vue router CDN
 [`https://unpkg.com/browse/vue-router@3.0.2/dist/`](https://unpkg.com/browse/vue-router@3.0.2/dist/)
@@ -134,19 +142,6 @@ exemplo
     </template>
 
 ```
-
-## button click
-`<button @click="msn()">btn</button>` now just create a method
-
-```js
- methods: {
-      msn(){
-        alert('yes');
-      }
-    }
-```
-
-
 ## radio box value and checkbox true/false with change name
 
 ```js
