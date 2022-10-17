@@ -1,7 +1,5 @@
 ## Vue 3 CDN
 
-Error: production build (*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
-
 - **add in header**
 ```js
 <script src="https://unpkg.com/vue@3"></script>
@@ -28,6 +26,9 @@ Error: production build (*.prod.js) when deploying for production?: `https://unp
 - v-on:click="getx"
 - v-if
 - v-bind
+
+
+Error: production build (*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
 
 ### 
 title get a variavel message
