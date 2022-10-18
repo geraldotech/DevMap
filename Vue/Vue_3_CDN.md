@@ -2,15 +2,20 @@
 
 - **add in header**
 ```js
-<script src="https://unpkg.com/vue@3"></script>
-  <script src="app.js" defer></script>
+<script src="https://unpkg.com/vue@3"></script>  
+//attribute "defer" the defer attribute tells the browser not to wait for the script
+<script src="app.js" defer></script>
 ```
+
 - **body**
+
 ```html
 <div id="app">{{ greeting }}</div>
+
 ```
 
 - **basic script**
+
 ```js
   Vue.createApp({
     data() {
