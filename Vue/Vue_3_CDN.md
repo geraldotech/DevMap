@@ -24,6 +24,11 @@
 
 Error: production build (*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
 
+## Directives 
+has -v prefix [REF](https://vuejs.org/guide/essentials/template-syntax.html#directives)
+- v-model
+- v-if
+
 ## v-bind
 title get a variavel message
 ```html
@@ -46,10 +51,6 @@ title get a variavel message
       }
     }
 ```
-
-## coming soon
-- v-model
-- v-if
 
 ## Vue router CDN
 [`https://unpkg.com/browse/vue-router@3.0.2/dist/`](https://unpkg.com/browse/vue-router@3.0.2/dist/)
