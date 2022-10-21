@@ -26,8 +26,9 @@
     color: wheat;
   }
   .links a::before{
-    content: '✔';
+    content: '>';
     color: green;
+    margin-right: 5px;
   }
   .links a:hover{
     text-decoration: underline;
@@ -163,7 +164,7 @@
   pre, .output {
       display: flex;
       flex-direction: column;
-      margin-right: 10px;
+      margin: 10px 0;
       border: 3px solid green;
       font-family: monospace;
   }
