@@ -7,8 +7,9 @@ sks.forEach(el => {
   el.addEventListener("change", showop)});
 
 (sks)[0].checked = true; // check opção 0 como true
-Hide();  // DOM é carregando escondendo todos
+Hide();  // DOM é carregado escondendo todos as section
 one.style.display = 'block'; // mostra a opção block como default
+ Active([1]); // default active 
 
 function showop(){
   let gOpt = Array.from(sks).filter(i => i.checked).map(i => +i.id);
@@ -16,6 +17,7 @@ function showop(){
   //console.log([1,2].some(val => sum.includes(val)));
      Verifica(gOpt); // includes mostrar todos os checks marcados
     getopt(gOpt); // mostra apenas 1 condição por vez mesmo se marcar todos os checks
+    Active(gOpt);
 };
 
 function Hide(){
@@ -41,4 +43,28 @@ function getopt(a){
   if(a == 2) res.innerHTML = "marcou tim";
   if([1,2].every(el => a.includes(el))) res.innerHTML = "check every condition";   
   if(a.length == 0) res.innerHTML = ""; // if array vazio = limpar o campo html
+}
+//adiciona uma classe ativa ao item selecionado
+
+function Active(sel){
+  sks.forEach((item)=> {
+    if([1,2].every(a => sel.includes(a))){
+      tim.classList.add("active");
+      vivo.classList.add("active");
+      return;
+    } 
+    if(sel.includes(1)){
+      vivo.classList.add("active");  
+      tim.classList.remove("active");     
+      return;
+    }
+    if(sel.includes(2)){
+      tim.classList.add("active");
+      vivo.classList.remove("active");
+      return;
+    }
+     
+   vivo.classList.remove("active");
+    tim.classList.remove("active"); 
+  })
 }

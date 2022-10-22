@@ -249,6 +249,8 @@ function reload(){
 function reload(){
     location.reload();
 }
+//inline
+<button onclick="window.location.reload()">Reload</button>
 ```
 
 <button onclick="location.reload()">RELOAD</button>
