@@ -19,12 +19,14 @@
 
 <hr>
 <h1>Display: inline <b>não define weight/width</b> </h1>
-<mark>Usam somente o espaço necessário e não precisam começar em uma nova linha</mark>
+<mark>Usam somente o espaço necessário e não precisam começar em uma nova linha, desconsideram margin/padding: <strong>top/bottom</strong></mark>
 <p></p>
 <code class="inline">code</code>
 <span class="inline">span</span>
 <img class="inline" src="" alt="img" />
 <a href="" class="inline">a</a>
+<code class="inline">code</mark> <!-- evitar conflito com mark, usei code -->
+
 <div class="menus">
   <p>menu a display: default: inline</p>
 <nav class="menu">
