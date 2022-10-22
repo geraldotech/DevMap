@@ -532,6 +532,7 @@ const person = [
   { nome: "ISABELLA", idade: 5, Estado: "RJ" },
   { nome: "CAMILLY", idade: 10, Estado: "SP" },
   { nome: "ISA", idade: 28, Estado: "RS" },
+  { nome: "Philips", idade: 28, Estado: "RS" },
 ];
 
 console.log('includes',person.some(el => el.nome == "GERALDO")); // existe alguém chamado GERALDO? true
