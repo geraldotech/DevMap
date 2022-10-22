@@ -1,102 +1,106 @@
-*{
-    color-scheme: dark;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+* {
+  color-scheme: dark;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-header{
-    text-align: center;
-}
-
-.container{
-    background: #d5d6fa;
-    padding: 20px;
-    display: flex;
+header {
+  text-align: center;
+  margin: 20px;
 }
 
-.box{    
-    width: 200px;
-    height: 200px;
-    border: 3px solid #7400b8;
-    background: #8ab9f3;
-    margin: 0 5px;
-    font-size: 20px;
-    color: black;
+.container {
+  background: #d5d6fa;
+  padding: 20px;
+  display: flex;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #7400b8;
+  background: #8ab9f3;
+  margin: 0 5px;
+  font-size: 20px;
+  color: black;
 }
 
 .box p {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
 }
 
-button{
-    width: 100px;
-    height: 30px;
-    border-radius: 10px 10px;
-    border:none;
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px 10px;
+  border: none;
 }
 
-button:active{
-    background: seagreen;
+button:active {
+  background: seagreen;
 }
 
-.container2{
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    
+.container2 {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
 }
-.menu{
-    border: 2px solid white;
-}
-
-.container2 .menu{
-    margin: 0 5px;
-    background: darkblue;
-    border-radius: 10px;
-    padding: 5px 10px;
-    width: 200px;
-    text-align: center;
+.menu {
+  border: 2px solid white;
 }
 
-.menu button{
-    display: flex;
-    margin: 0 auto;
-    margin-top: 5px; 
-    margin-bottom: 5px;
+.container2 .menu {
+  /* margin: 0 5px; substituido pelo gap no parent */
+  background: darkblue;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 200px;
+  text-align: center;
 }
 
-.menu > button{
-    display: block;
-    text-align: center;
+.menu button {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.menu span{
-    font-weight: bold;
-    color: coral;
+.menu > button {
+  display: block;
+  text-align: center;
+}
+
+.menu span {
+  font-weight: bold;
+  color: coral;
 }
 
 .menu p {
-   margin-top: 10px;
+  margin-top: 10px;
 }
 
-footer{
-    display: flex;
-    justify-content: center;
-    margin-top: 10vh;
-  
-}
-footer p{
-      background: gray;
-    width: fit-content;
+footer {
+ /*  display: flex;
+  justify-content: center;
+  margin-top: 10vh; */
+  background: gray;
+  position: absolute;
+    width: 100%;
+    bottom: 0;
     padding: 10px;
-    border-radius: 10px;
 }
+footer .txt {
+    text-align: center;
+}
+
 /*
 @aamedia screen and (max-width: 650px){
     .container2{
