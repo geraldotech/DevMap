@@ -80,7 +80,7 @@ Vue.createApp({
 
 ```
 
-### Do a form app
+### Form app
 
 Fazer uma div que engloba tudo `<div id="app"> </div>` 
 depois fazer o form com v-model e um output
@@ -130,8 +130,17 @@ Você pode ou não declarar uma const, o resultado foi o mesmo:
 ```
 
 submitForm é referente ao v-on:click
-` <input type="submit" value="Enviar" v-on:click="submitForm">`
+` <input type="submit" value="Enviar" v-on:click="submitForm">`  
 
+## How preventDefault:
+```js
+methods: {
+    submitForm(e){
+      e.preventDefault();
+      //console.log('here')
+      this.name = this.input_name;
+    }
+```
 [CodePen LiveDemo](https://codepen.io/geraldopcf/pen/ExEMjob)
 
 ## Templates para englobar vários elementos
@@ -166,8 +175,6 @@ exemplo
     <p v-if="tech == 'java'"><span>Java mobile back-end</span></p>
 
     //in data return
-
-
     data(){
     return {
       checked: false,
@@ -176,9 +183,14 @@ exemplo
 
 ```
 
+## created()
+
+```js
+  created(){
+   console.log("Hello!");
+  },
+```
+
 - [Vue refs (change element name @click)](https://www.nicesnippets.com/blog/vue-js-get-element-by-id-example)
 
 > abrir o console e chamar o app."var". "adicionar ou true/false"
-
-
-Input e Data Bind

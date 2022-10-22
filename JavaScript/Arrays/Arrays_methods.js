@@ -546,6 +546,9 @@ console.log('every',person.every(el => el.Estado === "SP")); // todos são de SP
 
 person.forEach((el, ind) => console.log(ind)); // 1,2,3,4
 
+let busca = person.filter(val => val.idade == 28);
+console.log(busca); // ISA , Philips
+
 const arr = [
   "CREDITO",
   "R$ 100",
