@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - break</title>
+    <style>
+  *{
+      color-scheme:dark;
+      }
+      body{
+        text-align: center;
+}
+input, button{
+    display: block;
+    margin: 10px 0px;
+    max-width: 150px;
+    margin: 5px auto;
+}
+#res{
+    font-size:1.25rem;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Limitador break</h1>
+<input type="number" placeholder="quant">
+<input type="number" placeholder="default max: 10" id="max">
+<button onclick="getx()">Send</button>
+<span id="res"></span>
+
+    <script>
+//break
+function getx(){
+const val = +document.querySelector("input").value;
+let valMax = +document.querySelector("#max").value;
+if(valMax == "") {valMax = 10}; //se valMax ficar vazio o default será 10;
+let txt = ""; //será preenchida com o loop
+
+for(let i = 1; i<= val; i++){
+    if(i > valMax) {
+        break;
+    } //se i for maior que o valMax break
+    txt+= `${i}<br>`;
+}
+document.getElementById("res").innerHTML = txt;
+}
+    </script>
+</body>
+</html>

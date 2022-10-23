@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      * {
+        color-scheme: like;
+      }
+      input {
+        display: block;
+      }
+
+      dialog::backdrop {
+        background-color: rgb(0 0 0 / 0.3);
+      }
+      dialog {
+        width: 80%;
+        outline: none;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Modal</h1>
+    <button>Open</button>
+    <dialog>
+      <section>
+        <p>
+          Tip: This event is similar to the onchange event. The difference is
+          that the oninput event occurs immediately after the value of an
+          element has changed, while onchange occurs when the element loses
+          focus, after the content has been changed. The other difference is
+          that the onchange event also works on elements.
+        </p>
+        <button>Ok</button>
+      </section>
+    </dialog>
+
+    <script>
+      const dialog = document.querySelector("dialog");
+      const btn = document.querySelector("button");
+      const btnok = document.querySelector("section button");
+      //dialog.setAttribute("open", "");
+      //dialog.show();
+
+      btn.onclick = function () {
+        dialog.showModal();
+      };
+
+      btnok.onclick = () => {
+        dialog.close();
+      };
+    </script>
+  </body>
+</html>
