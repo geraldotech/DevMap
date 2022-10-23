@@ -1,9 +1,3 @@
-<style>
-body {
-        background: red;
-    }
-</style>
-
 <h1 align="center">Um resumo sobre forms from scratch</h1>
 
 # forms
