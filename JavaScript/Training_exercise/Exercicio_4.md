@@ -25,4 +25,4 @@
 
 #### 13. Maker a timer 10 a 0 (pay for attetion arrow function => with const) 
 
-#### 13.1 Make a contunter when cont == 0 show a div content
+#### 13.1 Make a counter when == 0 show a div content

@@ -1,0 +1,1 @@
+Type module works only in web servers
