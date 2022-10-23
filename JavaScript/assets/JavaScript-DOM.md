@@ -92,6 +92,10 @@ console.log(val); //TypeScript
 }
 ```
 ## DOM - Events
+- on + event_name
+- addEventListener("name", function(e){}) - consultar README
+
+
 - get PointerEvent e.g simples, outros consultar a page README
 
 ```js
@@ -107,16 +111,16 @@ document.credito.onclick = function(event){
     }
 ```
 
-- formas de onclick
+- formas de chamar uma function com `onclick`
 
 ```js
-    <button onclick="btn()">btn1</button>
-    <button id="btn2">btn2</button>
-    <button name="btn3">btn3</button>
+<button onclick="btn()">btn1</button>
+<button id="btn2">btn2</button>
+<button name="btn3">btn3</button>
 
 //onclick in html
 function btn(){
-  alert("hello")
+  alert("hello");
 }
 
 //direct

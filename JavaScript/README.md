@@ -201,28 +201,9 @@ document.head.insertAdjacentHTML(
 </details>
 
 <details>
-<summary>document.forms</summary>
+<summary>document.forms - preventDefault</summary>
+<a href="./assets/forms.md">forms.md</a>
 
-```js
-/*     
-<form name="login">
-<input type="text" name="username">
-<input name="email" type="email">
-<input type="button" value="Enviar" id="checkingUserName" />
-</form> 
-*/
-//https://developer.mozilla.org/en-US/docs/Web/API/Document/forms
-const forms = document.forms["login"];
-forms.elements.email.placeholder = "test@example.com";
-forms.elements.username.placeholder = "your login";
-
-//getting data
-document.getElementById("checkingUserName").onclick = function (event) {
-event.preventDefault();
-var name = document.forms["login"].username.value;
-alert(name);
-};
-```
 </details>
 <details>
 <summary>addEventListener and Pointer Events, e.target.Attr, documentElement</summary>
@@ -459,66 +440,6 @@ var f = atual.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
 var g = saldo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
 console.log(f); //R$ 600,00
 console.log(g); //R$ 2.000,00
-
-```
-</details>
-
-<details>
-<summary>event.preventDefault</summary>
-<a href="https://codepen.io/geraldopcf/pen/VwXgqgQ" target="_blank">CodePen</a>
-
-```html
-<h2>action="#" vs preventDefault()</h2>
-<p>action="#" - require a first click to get #get in browser</p>
-<hr>
-<p>preventDefault() - "boa pratica" prevenir o comportamento padrão, exemplificando no form requer detalhes e.g:</p>
-<p>case html button.onclick="mybtn()" add <u>event</u> in <b>"mybtn(event)"</b> to call in <b>function(event)</b>
-<p>case html <b>button id="btn"</b> and ...<b>getElementById("btn").onclick = function(event)</b></p>
-
-<pre>
-<code>
- function btn(event){
-       event.preventDefault()
-</code>
-</pre>
-
-<br>
-<form>
-    <fieldset>
-    <legend>Calculadora</legend>
-      <label for="n1">Digite número: </label>
-      <input type="number" id="n1" required />
-    <label for="max">Max: </label>
-      <input type="number" id="max" required />
-      <button onclick="btn(event)">Calcular</button>  
-      <button onclick="reseta()">Reload and reset</button>
-      </fieldset>
-    
-    </form>
-
-  <fieldset>
-        <legend>Resultado:</legend>
-        <p id="myres"></p>
-      </fieldset>
-
-```
-
-```js
-      function btn(event){
-       event.preventDefault()
-    n1 = document.getElementById("n1").value;
-    max = document.getElementById("max").value;
-    myres = document.getElementById("myres");
-    res = '';
-  for(i = 1; i<=max; i++){
-    res += n1+' x '+i+'='+i*n1+'<br>';
-  }
-  myres.innerHTML = res;
-  }
-  function reseta(){
-    document.querySelector("form").reset();
-    location.reload();
-  }
 
 ```
 </details>
