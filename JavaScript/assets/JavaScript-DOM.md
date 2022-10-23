@@ -91,6 +91,7 @@ let val = document.JS.vall.value;
 console.log(val); //TypeScript
 }
 ```
+## DOM - Events
 - get PointerEvent e.g simples, outros consultar a page README
 
 ```js
@@ -106,7 +107,34 @@ document.credito.onclick = function(event){
     }
 ```
 
+- formas de onclick
+
+```js
+    <button onclick="btn()">btn1</button>
+    <button id="btn2">btn2</button>
+    <button name="btn3">btn3</button>
+
+//onclick in html
+function btn(){
+  alert("hello")
+}
+
+//direct
+const btn2 = document.getElementById("btn2").onclick = function (){
+  alert("hello");
+}
+
+//
+const btn3 = document.querySelector("button[name='btn3']");
+btn3.onclick = function (){
+  alert("hello");
+}
+
+
+```
+
 # Refs:
+#### [DOM - Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
 ####  [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
 
 

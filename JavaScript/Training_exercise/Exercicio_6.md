@@ -1,6 +1,6 @@
 # Exercicio 6
 
-[RESP](https://gist.github.com/geraldotech/7adf5e0184bc6ee1332f741986c19beb)
+[RESP](./answers/JS_Exercicio_6_response.js)
 
 1. Faça um Array de números e realize a soma usando o for
 
