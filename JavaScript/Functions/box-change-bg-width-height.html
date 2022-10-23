@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+       <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/Functions/box-change-bg-width-height.html
+  -->
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      .header {
+        color: blue;
+      }
+
+      .header2 {
+        color: rgb(0, 212, 177);
+      }
+    </style>
+  </head>
+  <body>
+    <h3>manipulando estilos</h3>
+
+    <button onclick="getstyle('#FF0000','200px','100px')">Red</button>
+    <button onclick="getstyle('#00FF00','150px','20px')">Green</button>
+    <button onclick="getstyle('#0000FF','4  50px','200px')">Blue</button>
+    <hr />
+
+    <div
+      style="border: 1px solid #000; width: 100px; height: 100px"
+      id="quadrado"
+    ></div>
+    <script>
+      function getstyle(cor, lar, alt) {
+        document.getElementById("quadrado").style.backgroundColor = cor;
+        document.getElementById("quadrado").style.width = lar;
+        document.getElementById("quadrado").style.backgroundColor = alt;
+      }
+    </script>
+  </body>
+</html>
