@@ -1,9 +1,7 @@
 <h1 align="center">Um resumo sobre forms from scratch</h1>
-
-# forms
 <a href="https://codepen.io/geraldopcf/pen/OJzqRKJ" target="_blank">form completo Estacio</a>
 
-Com forms como o nome já sugere é usado para formulários de diversos tipos, dentro do form temos os inputs que são as entradas de texto.
+Com forms como o nome já sugere é usado para formulários e inputs de diversos tipos, dentro do forms temos os inputs que são as entradas de texto.
 
 - e.g:
 
@@ -69,7 +67,11 @@ Alguns:
 - `maxlenght` 
 - `minlenght` 
 
-### Define input attribute placeholder with JavaScript
+## input size
+é possível ajustar o input para um determinado size, contúdo prefira usar CSS
+  `<input type="text" size="1">`
+
+### input attribute placeholder with JavaScript and preventDefault()
 
 ```js
 <form name="login"/>
@@ -93,6 +95,15 @@ document.getElementById("checkingUserName").onclick = function(e){
   let email = document.forms["login"].email.value;
   console.log(name, email);
 }
+```
+
+preventDefault inline
+
+```html
+ <form onsubmit="event.preventDefault(); return myfunction()">
+      <input type="text" id="num" />
+      <button type="submit">submit</button>
+</form>
 ```
 
 event.preventDefault <a href="https://codepen.io/geraldopcf/pen/VwXgqgQ" target="_blank">CodePen</a>
