@@ -55,26 +55,32 @@ function add(){
 
 
 <details>
-<summary>Math. padStart, setTimeout, replace...</summary>
+<summary>Math. padStart, replace, lenght...</summary>
 
 ```js
 Math //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+//recomendo ler http://devfuria.com.br/javascript/numeros-aleatorios/
 Math.round = arredonda para cima ou para baixo
 Math.ceil = arredonda sempre para cima
-Math.floor = para baixo
+Math.floor = arredonda para baixo
 Math.pow(2,16)
  function po(a,b){
          return console.log(Math.pow(a,b));
      }
 
+//gerar números randômicos
 Math.random();
+Math.floor(Math.random() * 10); // 0 - 10
+Math.floor(Math.random() * 5 +1); // 0 - 5
+
 Math.PI
 
-Math.max() //returns the number with the highest value:
+// Math.max() returns the number with the highest value:
 const a = [1,2,3,4];
 console.log(Math.max(...a));
 
 Math.max(1,2,3,4,5);
+
 
 //define o tamanho minimo, e adiciona um complemento caso não tenha o mínimo
 padStart()
@@ -84,7 +90,7 @@ function exp(number){
 }
 exp(5,2);
 
-//length
+//lenght
     function check(){
         let a = 10;
          if(a.length > 8) {
@@ -92,16 +98,7 @@ exp(5,2);
             return
          }
          console.log("menor que 8")
-     }
-
-
-/*
-auto refresh
-5000 = milesegundos = 5seconds
-*/
-window.setTimeout( function() {
-  window.location.reload();
-}, 5000);
+     };
 
 //show-loop-img-button-click
 //html

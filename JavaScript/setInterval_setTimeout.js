@@ -47,13 +47,19 @@ const wel = setInterval(function(){
 
 
 /*
-The setTimeout() is executed only once.
+The setTimeout() ou window.setTimeout() is executed only once.
 If you need repeated executions, use setInterval() instead.
 Use the clearTimeout() method to prevent the function from starting.
 To clear a timeout, use the id returned from setTimeout():
 */
 setTimeout(msn, 4000); //milliseconds
-
 function msn(){
   document.getElementById("res").innerHTML = "Hello";
 }
+
+/*auto refresh
+5000 = milliseconds = 5seconds
+*/
+window.setTimeout( function() {
+  window.location.reload(); //apesar de só executar 1x nesse caso vai vai reload forever
+}, 5000);
