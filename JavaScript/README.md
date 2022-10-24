@@ -5,7 +5,8 @@
 Projects and Demos: [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 
 ### O que é JavaScript?    
-- **From Scratch by _Geraldo Filho_** [onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)  
+- **From Scratch by _Geraldo Filho_** 
+[onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)  
 ### Estrutura de dados  
 - [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
 
@@ -148,9 +149,24 @@ https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-nu
 </details>
 
 <details>
-<summary>insertAdjacentHTML CSS,shorhand and appendChild</summary>
+<summary>JS Shorhand</summary>
 
 ```js
+
+ //shorhand
+  const get = function (id) { return document.getElementById(id) };
+  const query = function (id) { return document.querySelector(id) };
+  const log = function (id) { return console.log(id) };
+
+input = query("input");
+  input.addEventListener("input", function () {
+    const str = +this.value;
+    console.log(str.toString(16));
+    get("res").innerText = str.toString(2);
+    get("hex").innerText = str.toString(16);
+  });
+
+
 // Shorhand for getElementById
 
 //function
@@ -167,33 +183,6 @@ get2("root");
 
 const log = (x)=> {console.log(x)};
 
-// Write css inside JavaScript 1.0
-document.head.innerHTML += `
-    <style>
-      img{ 
-        width: 20%;
-      }
-      div{
-       display: flex;
-       height: 100vh;
-       justify-content: center;
-       align-items: center;
-       flex-direction: column;
-      }
-    </style>
-    `;
-
-//2.0
-const style = document.createElement("style");
-style.textContent = "h1 { background-color: red; }";
-document.head.appendChild(style);
-
-//3.0 - external
-document.head.insertAdjacentHTML(
-  "beforeend",
-  "<link rel=stylesheet href=/foo.css>"
-);
-```
 
 </details>
 
@@ -310,7 +299,6 @@ div.appendChild(img);
 document.body.appendChild(div);
 
 # Images2
-
 //createElements
 div = document.createElement("div");
 img = document.createElement("img");
@@ -378,21 +366,6 @@ document.addEventListener("click", function(e){
 ```
 
 ```js
- //shorhand
-  const get = function (id) { return document.getElementById(id) };
-  const query = function (id) { return document.querySelector(id) };
-  const log = function (id) { return console.log(id) };
-
-input = query("input");
-  input.addEventListener("input", function () {
-    const str = +this.value;
-    console.log(str.toString(16));
-    get("res").innerText = str.toString(2);
-    get("hex").innerText = str.toString(16);
-  });
-
-//only JS
-
 //toFixed depois da virgula
 console.log(Math.PI.toFixed(2)); // 3.14
 
@@ -413,10 +386,8 @@ console.log(typeof age); //number
 let aget = age.toString();
 console.log(typeof aget); //now is a string
 
-
 // decimal to binary
 (2022).toString(2); // '11111100110'
-
 
 //parseInt binary to decimal
 parseInt(1111, 2); // 15
@@ -490,7 +461,7 @@ var myvar = "Geraldo"; //work
 </details>
 
 <details>
-<summary>insertAdjacent...</summary>
+<summary>insertAdjacent, insertCSS</summary>
 
 ```html
  <h1 id="foo">hello</h1>
@@ -534,6 +505,39 @@ const vue = document.getElementById("vue");
 document.getElementById("el").insertAdjacentElement("afterbegin", vue);
 }
 ```
+
+```js
+
+// Write css inside JavaScript 1.0
+document.head.innerHTML += `
+    <style>
+      img{ 
+        width: 20%;
+      }
+      div{
+       display: flex;
+       height: 100vh;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+      }
+    </style>
+    `;
+
+//2.0
+const style = document.createElement("style");
+style.textContent = "h1 { background-color: red; }";
+document.head.appendChild(style);
+
+//3.0 - external
+document.head.insertAdjacentHTML(
+  "beforeend",
+  "<link rel=stylesheet href=/foo.css>"
+);
+
+
+```
+
 </details>
 
 <details>
@@ -541,19 +545,18 @@ document.getElementById("el").insertAdjacentElement("afterbegin", vue);
 
 
 ```js
-    <a href="#">link 1</a>
-    <a href="#">link 2</a>
-    <a href="#">link 3</a>
-    <a href="#">link 4</a>
+<a href="#">link 1</a>
+<a href="#">link 2</a>
+<a href="#">link 3</a>
+<a href="#">link 4</a>
 
-
-    <ul>
-        <li class="menu">A</li>
-        <li class="menu">B</li>
-        <li class="menu" id="c">C</li>
-        <span class="oi"></span>
-        <span id="hello">New York</span>
-    </ul>
+<ul>
+    <li class="menu">A</li>
+    <li class="menu">B</li>
+    <li class="menu" id="c">C</li>
+    <span class="oi"></span>
+    <span id="hello">New York</span>
+</ul>
 
 
 /* Array.from(document.getElementsByTagName("a")).forEach((el,ind) =>{
