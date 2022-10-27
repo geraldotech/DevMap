@@ -83,8 +83,25 @@ console.log(Math.max(...a));
 Math.max(1,2,3,4,5);
 
 
-//define o tamanho minimo, e adiciona um complemento caso não tenha o mínimo
-padStart()
+/*
+padStart - define o tamanho minimo, e adiciona um complemento caso não tenha o mínimo
+padStart or end se baseia em dois parâmetros:
+
+- padLength 
+- padString - opcional , suporta string/number
+*/
+
+let str = "1234".padStart(10,"*");
+console.log(str);
+
+let cpf = "083".padStart(11,0);
+console.log(cpf);
+
+
+
+//e.g string truncada
+let str2 = "1234567".padEnd(10,"Hello");
+console.log(str2);
 
 function exp(number){
 	console.log(2** number);

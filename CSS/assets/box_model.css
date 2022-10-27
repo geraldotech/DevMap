@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0
+}
+
+body, ul{
+  padding: 15px;
+}
+ul li {
+  padding:5px;
+}
+
+div {
+  box-sizing: content-box;
+  width:100px;
+  height: 100px;
+  background: red;
+  padding:10px;
+  margin: 20px 0;
+}
+div p {
+  border: 2px solid;
+}
+
+div:nth-child(2) {
+  /*
+  tamanho da caixa: ate a borda da caixa
+  */
+  box-sizing: border-box;
+ background: green;
+
+}
+
+section {
+  border: 2px solid blue;
+  width: 100px;
+  height: auto;
+  margin-top: 15px;
+}
+
+p{
+  margin: 10px 0;
+}
+ 
+h1, footer{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+span {
+  font-weight: bold;
+}
