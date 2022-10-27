@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/fetch_JSON/Git_API.html
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git API</title>
+  <style>
+    body{
+       zoom:120%;
+    }
+    img{
+      width: 100%;
+      max-width: 50%;
+      margin-left: 25%;
+      border-radius: 50%;
+	  margin-top: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction:column;
+      height: 70vh;
+      justify-content: flex-start;
+      align-items: center;
+      background: rgb(36, 43, 30);
+    }
+
+    .box {
+      display: flex;
+      flex-direction:column;
+      align-items: left;
+      justify-content: center;
+      width: 350px;
+      height: 120px;
+      margin-top: 60px;
+      
+    }
+
+  </style>
+</head>
+
+
+<div class="container">
+<div class="box">
+  <span id="img"></span>
+  <div>Name: <span id="root"></span></div>
+  <div>Bio: <span id="bio"></span></div>
+  <div>Blog: <span id="blog"></span></div>
+  <div>Location: <span id="location"></span></div>
+</div>
+</div><!--container-->
+
+
+
+</body>
+
+
+<script>
+// api url
+const api_url =
+	"https://api.github.com/users/geraldotech";
+
+// Defining async function
+async function getapi(url) {
+	
+	// Storing response
+	const response = await fetch(url);
+	
+	// Storing data in form of JSON
+	var data = await response.json();
+	console.log(data);
+	if (response) {
+	}
+  show(data);
+}
+// Calling that async function
+getapi(api_url);
+
+
+function show(data){
+  console.log(data.login)
+  document.getElementById("root").innerHTML = data.name;
+  document.getElementById("img").innerHTML = `<img src="${data.avatar_url}" />`;
+  document.getElementById("bio").innerHTML = `${data.bio}`;
+  document.getElementById("blog").innerHTML = `${data.blog}`;
+  document.getElementById("location").innerHTML = `${data.location}`;
+  console.log(data.blog)
+  
+}
+//document.body.style.zoom="120%";
+</script>
+</html>
