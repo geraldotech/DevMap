@@ -13,7 +13,7 @@ https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements
 
 https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
 
-- :hover 
+- :hover [hover.html](./hover.html)
 - :active
 - :first-child [first-child.md](./first-child.md)
 - :last-child:

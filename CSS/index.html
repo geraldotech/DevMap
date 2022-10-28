@@ -18,55 +18,50 @@
     <div class="flex"></div>  
           <article> 
             <details> <!--start-->
-              <summary>Position</summary>           
-            <section class="links lead">
-              <a href="https://geraldodev.notion.site/Position-661b3b67d16d42148e28913f3309e5aa" target="_blank">Positions in Notion</a>
-              <a href="./position/relative-checkbox.html">relative-checkbox</a>
-              <a href="./position/relative.html">relative</a>
-              <a href="./position/absolute.html">absolute</a>
-              <a href="./position/absolute-fixed.html">absolute-fixed</a>
-              <a href="./position/sticky.html">sticky</a>
-            </section>
+              <summary>Position</summary>          
+            
+              <a class="links" href="https://geraldodev.notion.site/Position-661b3b67d16d42148e28913f3309e5aa" target="_blank">Positions in Notion</a>
+              <a class="links" href="./position/relative-checkbox.html">relative-checkbox</a>
+              <a class="links" href="./position/relative.html">relative</a>
+              <a class="links" href="./position/absolute.html">absolute</a>
+              <a class="links" href="./position/absolute-fixed.html">absolute-fixed</a>
+              <a class="links" href="./position/sticky.html">sticky</a>
+            
             </details> <!--end-->
             <details> <!--start-->
               <summary>Display</summary>
-           <section class="links lead">  
-            <a href="https://www.notion.so/geraldodev/Display-391e80ae2ec44a6fb92e8b3d9afe9aee" target="_blank">Display Notion</a>
-             <a href="./pages/display.html" target="_blank">Display by gmap</a>
-            <a href="./pages/flex_gsb.html" target="_blank">Grow, Shrink, Basis by gmapv</a>   
-          </section>     
+           
+            <a class="links" href="https://www.notion.so/geraldodev/Display-391e80ae2ec44a6fb92e8b3d9afe9aee" target="_blank">Display Notion</a>
+            <a class="links" href="./pages/display.html" target="_blank">Display by gmap</a>
+            <a class="links" href="./pages/flex_gsb.html" target="_blank">Grow, Shrink, Basis by gmapv</a>   
+          
             </details> <!--end-->
             <details>              
-              <summary>Seletores class, #id</summary>           
-              <h5>Tipos de declarações:</h5>
-              <br>
-              <p class="lead"><code>.custom</code> => classe da tag e.g: <code>.flexbox-container</code></p>
-              <p class="lead"><code>#classe</code> => ID</p>
-              <br>
-              <p class="lead"><code>p.test</code> => classe <mark>personalizada</mark> para tag p <br> &lt;p class=test"&gt;
-                <pre>
-                  p.test {
-                  text-align: center;
-                  color: white;
-                  font-size: 20px;
-                  }
-                  </pre>                
-                  <div class="output">                 
-                    <p class="test">TEST</p>
-                  </div>                  
-                  <h5>Também funciona com tag personalizada g </h5>
-              <p class="lead">&lt;g> do it now &lt;/g&gt;</p>
+              <summary>Seletores class, #id</summary>              
+              <h5>Todos os seletores</h5>
+              <a href="https://www.w3schools.com/cssref/css_selectors.php" class="links" target="_blank">css_selectors</a>
+              <a href="./pages/seletores.html" class="links">seletores.html</a>
+              
+              <h5>Exemplo de alguns seletores</h5>
+           
+              <p class="lead"><code>.class</code></p>
+              <p class="lead"><code>#id</code></p>
+              <p class="lead"><code>p.demo</code> - seleciona a tag com a classe .demo </p>
+              <p class="lead"><code>span</code> - seleciona todas as tags correpondentes</p>
+              <p class="lead"><code>div + span</code> - prox span depois de uma div</p>
+              <p class="lead"><code>div > span</code> - span dentro de uma div ou elemento pai seja uma div</p>
+              <p class="lead"><code>p ~ ul</code> - sel3ciona todas as  ul preceded by p </p>
+              <p class="lead"><code>.demo | div.demo</code> - mesma classe com diferentes tags</p>
+              <p class="lead"><code>p.center | p.large</code> - multiclass only for p</p>      
+              <h5 class="lead">Também funciona com tags personalizada</h5>
+              <p class="lead"><code>&lt;g> do it now &lt;/g&gt;</code></p>
               <pre>
                 g{
                   color: blue;
                 }
               </pre>
-              <br>
-              <h5>Multi class:</h5>              
-              <br>
-              <p class="lead">Usando apenas a tag p</p>
+              <h5 class="lead">Multi class: apenas a tag p</h5>              
               <pre>
-                &lt;style>
                   p.center {
                     text-align: center;
                     color: red;
@@ -74,9 +69,8 @@
                   p.large {
                     font-size: 300%;
                   }
-                  </style>
               </pre>   
-              <p class="lead">A classe center foi definida em conjunto com a tag <code>p</code> então outras tags não serão afetadas declarando a classe em questão <samp>&lt;h1></samp>não foi definida</p>        
+              <p class="lead">A classe center & large foi especifica para a tag <code>p</code> e não global, então outras tags não serão afetadas mesmo declarando a classe em questão <samp>&lt;h1></samp> não será afetado.</p>        
                 <pre>
                   &lt;h1 class="center">This heading will not be affected&lt;/h1>
                   &lt;p class="center">This paragraph will be red and center-aligned.&lt;/p>
@@ -88,27 +82,24 @@
           <p class="center">This paragraph will be red and center-aligned.</p>
           <p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p> 
          </div>
-
+         <p class="lead">Exemplo de hierarquia de seleção</p>
          <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FioYxvv7PILAvKxNeBIXLn2%2FHTML-CSS-Seletores%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
             </details>
             <details>
               <summary>Box Model</summary>
-              <section class="links lead">
-                <a href="https://www.alura.com.br/artigos/entendendo-como-funciona-box-model-e-o-box-sizing" target="_blank">entendendo-como-funciona-box-model-e-o-box-sizing</a>
-                <a href="./pages/box-sizing.html">Box Sizing by Gmap</a>
-                <a href="https://codepen.io/geraldopcf/pen/zYjEMVL" target="_blank">CodePen</a>
-              </section>
+              
+                <a class="links" href="https://www.alura.com.br/artigos/entendendo-como-funciona-box-model-e-o-box-sizing" target="_blank">entendendo-como-funciona-box-model-e-o-box-sizing</a>
+                <a class="links" href="./pages/box-sizing.html">Box Sizing by Gmap</a>
+                <a class="links" href="https://codepen.io/geraldopcf/pen/zYjEMVL" target="_blank">CodePen</a>
+              
             </details>
 
             <details>
               <summary>Metaview Port</summary>           
                 <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
                 </pre>
-                <section class="links lead"> 
-                  <a  href="https://www.w3schools.com/css/css_rwd_viewport.asp
+                  <a class="links" href="https://www.w3schools.com/css/css_rwd_viewport.asp
                   " target="_blank">About this</a>
-                </section>
-               
             </details>
             <details>
               <summary>CSS External</summary>
@@ -142,18 +133,16 @@ border-top;
 border-bottom;
 letter-spacing;
 </pre>
-<section class="links lead">
-  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter" target="_blank">backdrop-filter</a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow" target="_blank">drop-shadow</a>
-</section>
+  <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter" target="_blank">backdrop-filter</a>
+  <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow" target="_blank">drop-shadow</a>
 </details>  
 <details>
 <summary>Colors - Tabela Cores</summary>
 <p class="coral">CORAL</p>
-<section class="links lead">
-  <a href="./pages/Tabela-Cores-Web.htm">Tabela-Cores-Web</a>
-  <a href="./pages/Web-colors.html">Web-Colors</a>
-</section>
+
+  <a class="links" href="./pages/Tabela-Cores-Web.htm">Tabela-Cores-Web</a>
+  <a class="links" href="./pages/Web-colors.html">Web-Colors</a>
+
 </details>                  
 <details>
 <summary>Margin and Padding</summary>
@@ -169,10 +158,9 @@ letter-spacing;
 <div class="img">
   <img class="img" src="./assets/img/padding_margin.jpg" alt="">
 </div>
-<section class="lead links">
-<a href="./pages/margin-padding-elements.html">margin-padding-css+element.html</a>
-<a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_intro" target="_blank">W3 margin intro</a>
-</section>
+<a class="links" href="./pages/margin-padding-elements.html">margin-padding-css+element.html</a>
+<a class="links" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_intro" target="_blank">W3 margin intro</a>
+
 <ul>
 <pre>
 margin-top
@@ -237,9 +225,7 @@ transform: translate(-50%,-50%)
   place-items: center;
 }
              </pre>
-            <section class="links lead">
-              <a href="https://codepen.io/felippe-moraes_pismo/pen/qBoOrBJ">demo</a>
-            </section>
+              <a class="links" href="https://codepen.io/felippe-moraes_pismo/pen/qBoOrBJ">demo</a>
           </details>
           
           <details> <!--start-->
@@ -289,9 +275,10 @@ transform: translate(-50%,-50%)
           <details> <!--start-->
             <summary>clear - float</summary>
             <p class="lead">Entendendo float e clear</p>
-         <section class="links lead">  <a href="https://www.figma.com/file/cHGgKC32AUyVWiOoAwmuNG/float_clear" target="_blank" class="links">Figma here</a>  
-          <a href="https://www.w3schools.com/cssref/pr_class_clear.asp">https://www.w3schools.com/cssref/pr_class_clear.asp</a>   
-        </section>     
+         
+             <a href="https://www.figma.com/file/cHGgKC32AUyVWiOoAwmuNG/float_clear" target="_blank" class="links">Figma here</a>  
+          <a class="links" href="https://www.w3schools.com/cssref/pr_class_clear.asp">https://www.w3schools.com/cssref/pr_class_clear.asp</a>   
+        
           </details> <!--end-->
 
           </article>

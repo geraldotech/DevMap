@@ -20,11 +20,12 @@
     background: rgb(228, 136, 16);
   }
   
-  .links a {
+  .links {
     display: block;
     text-decoration: none;
     line-height: 2;
-    color: wheat;
+    color: rgb(139, 37, 223);
+    font-size: 1.3rem;
   }
   .links a::before {
     content: '>';
@@ -35,11 +36,11 @@
   a::before{
     content: '>';
     color: green;
-    margin-right: 5px;
   }
 
-  .links a:hover{
+  a, .links:hover{
     text-decoration: underline;
+    color: wheat;
   }
   header{
     background: black;
@@ -162,12 +163,14 @@
     color: white;
     margin-top: 10px;
   }
+
   a {
     color: rgb(125, 78, 212);
   }
   h5 {
     font-size: 1.2rem;
     color: orange;
+    margin: 10px 0;
   }
   pre, .output {
       display: flex;
@@ -195,11 +198,7 @@
   }
 
   /* only for this document learning */
-  p.test {
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  }
+
   p.coral {
     width: 100px;
     height: 25px;
@@ -210,7 +209,8 @@
   p.center {
     text-align: center;
     color: red;
-  }p.large {
+  }
+  p.large {
     font-size: 300%;
   }
 
