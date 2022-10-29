@@ -44,6 +44,7 @@ window.innerHeight
 window.open(); // abre nova janela
 window.prompt() // get prompt text
 window.print();
+window.confirm();
 console.log(window) - display all objects in window
 window.document - display document objects
 window.location - vai retornar uma lista de objetos, algums são:
@@ -87,6 +88,7 @@ console.log(document); //#document
 - document.write("gmap"); // write text in dom
 - document.domain
 - document.URL
+- document.all 
 
 ```
 Mais propriedades e a versão do DOM em que foram adicionadas: 
