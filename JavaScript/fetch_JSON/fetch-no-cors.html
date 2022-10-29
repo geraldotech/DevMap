@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <style>
+    img {
+      max-width: 50%;
+    }
+  </style>
+</head>
+<body>
+<h2>Get JSON OBJ onclick</h2>
+
+<input type="text" id="name" value="">
+<button onclick="getx()">Get OBJ</button>
+  <div id="res"></div>
+
+
+	<script>
+      
+
+ 
+ //var request = new Request('https://s3.amazonaws.com/cdn-content.geraldo.tech/fetch.json');
+ 
+/* api = 'https://s3.amazonaws.com/cdn-content.geraldo.tech/fetch.json';
+
+async function getdados(url){
+
+  const response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+
+  const data = await response.json();
+
+  console.log(data)
+
+}
+
+getdados(api) */
+
+
+
+fetch('http://127.0.0.1:3001/products', {mode: 'cors'}).then(function(response) {
+  response.json().then(function(data) {
+    console.log(data);
+  });
+}).catch(function(err) {
+  console.error('Failed retrieving information', err);
+});
+
+	</script>
+</body>
+</html>
