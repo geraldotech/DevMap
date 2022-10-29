@@ -13,6 +13,8 @@
 
 <img src="./img/BkAjU.jpg" alt="example" style="width:50%">
 
+<a href="https://codepen.io/geraldopcf/pen/jOKNwyM" target="_blank">_representação que fiz no CodePen</a>
+
 ## window [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 
 - window - manipula o BOM "Browser Object Model", é a primeira coisa que é carregada no browser, object global, não é atoa que `alert()` originalmente pode ser declarado como `window.alert("dev");` aqui também obtemos o Height e Width da janela, e.g:
@@ -65,11 +67,14 @@ console.log(document.head);
 console.log(document.title);
 console.log(document.body);
 console.log(document.URL);
-console.log(document.lastModified);
+console.log(document.lastModified); 
 
-Mais possibilidades em: https://www.w3schools.com/jsref/dom_obj_document.asp ou checkout a saide com console.log(document)
-
+console.log(document); // Mais possibilidades e eventos 
 ```
+
+Mais em:
+
+- [properties and JS events methods | js_htmldom_document.asp](https://www.w3schools.com/js/js_htmldom_document.asp)
 
 - A tag form com names:
 
@@ -92,6 +97,7 @@ console.log(val); //TypeScript
 }
 ```
 ## DOM - Events
+
 - on + event_name
 - addEventListener("name", function(e){}) - consultar README
 
@@ -136,9 +142,10 @@ btn3.onclick = function (){
 
 
 ```
-
-# Refs:
+# More in:
 #### [DOM - Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
+- [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)
+
 ####  [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
 
 
