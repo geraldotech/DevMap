@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      input {
+        display: block;
+      }
+      .delete {
+        display: flex;
+        align-items: center;
+      }
+      ul li {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+      }
+      section {
+        max-width: 250px;
+        margin: auto;
+      }
+
+      button {
+        background: red;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>createElements - add e delete</h1>
+    <section>
+      <input type="text" />
+      <button onclick="add()">Adicionar</button>
+      <ul id="demo">
+        <li><span>Apple</span><button class="delete">x</button></li>
+        <li><span>Orange</span><button class="delete">x</button></li>
+        <li><span>Mango</span><button class="delete">x</button></li>
+        <li><span>Mango 2</span><button class="delete">x</button></li>
+      </ul>
+    </section>
+
+    <script>
+      function add() {
+        const item = document.querySelector("input").value;
+        if(item.length == 0){ //se o valor da input estiver zerado retorne false
+          return false;
+        }
+        txt = document.createTextNode(item);
+        li = document.createElement("li");
+        span = document.createElement("span");
+        button = document.createElement("button");
+        button.setAttribute("class", "delete");
+        button.textContent = "x";
+        span.appendChild(txt);
+        li.appendChild(span);
+        li.appendChild(button);
+        document.getElementById("demo").appendChild(li);
+        document.querySelector("input").value = "";
+      }
+      demo.onclick = function (e) { //pegando o ID demo direto no DOM
+        console.log(e.target); // pode variar li span
+        console.log(e.currentTarget); // ref ao ul
+        if (e.target.classList.contains("delete")) {
+          // A classe "delete" contem na lista de classes?
+          if (confirm("deseja deletar")) { //confirma a ação           
+            e.target.parentElement.remove(); //remove o elemento pai
+          };
+        };
+      };
+    </script>
+  </body>
+</html>

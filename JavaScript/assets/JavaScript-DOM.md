@@ -49,7 +49,7 @@ console.log(window) - display all objects in window
 window.document - display document objects
 window.location - vai retornar uma lista de objetos, algums são:
 - .pathname
-- .href
+- .href = "new url to redirect"
 - .reload()
 
 //tudo que acompanhar nome + parênteses() são funções nativas, você também pode criar as suas.

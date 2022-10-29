@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>currentTarget_change_backgrround_SVG</title>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      .card {
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        background-image: url(./img/a.svg);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" onclick="change(event)">     
+    </div>
+
+    <script>
+      let isA = true;
+      function change(event) {
+        console.log(event.currentTarget);
+        const card = event.currentTarget;
+        const bg = isA ? "b" : "a";
+        isA = !isA;
+        card.style.backgroundImage = `url(./img/${bg}.svg)`;
+      }
+    </script>
+  </body>
+</html>

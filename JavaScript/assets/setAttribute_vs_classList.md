@@ -36,6 +36,13 @@
       text-decoration: none;
       display: block;
     }
+        .beta{
+        color: red;
+      }
+
+      .demo{
+        color: blue;
+      }
 ```
 </details>
 
@@ -67,6 +74,9 @@
     <p id="pp">para</p>
 <p id="pp">para</p>
 <p id="pp">para</p>
+
+<hr>
+<div class="beta" onclick="change(this)">geraldo class.toggle()</div>
 
 ```
 </details>
@@ -122,5 +132,11 @@ let pp = document.querySelectorAll("p");
 } 
 }
 changelinks("links");
+
+
+//toggle
+ function change(x){        
+       x.classList.toggle("demo");
+      }
 
 ```

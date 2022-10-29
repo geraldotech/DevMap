@@ -1,6 +1,6 @@
 # JavaScript
 :rocket: :zap: Let's Code :zap: :rocket:
-
+>> Memorize is a bad ideia, instead focus on concepts
 
 Projects and Demos: [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 
@@ -431,9 +431,11 @@ console.log(g); //R$ 2.000,00
 <details>
 <summary>getAttributes,create,set,has,remove...classList.add</summary>
 
-- [1 - create_get_remove_Attribute](./assets/create_get_remove_Attribute.md) 
-- [2 - hasAttribute_setAttribute](./assets/hasAttribute_setAttribute.md) 
-- [3 - setAttribute_vs_classList](./assets/setAttribute_vs_classList.md) 
+- 1 [create_get_remove_Attribute](./assets/create_get_remove_Attribute.md) 
+- 2 [hasAttribute_setAttribute](./assets/hasAttribute_setAttribute.md) 
+- 3 [setAttribute_vs_classList_classToggle](./assets/setAttribute_vs_classList.md) 
+- 4 [createElements_add_delete.html](./assets/createElements_add_delete.html)
+- 5 [createElements_add_delete+template_literal_add_assigment](./assets/createElements_add_delete+template_literal_add_assigment)
 
 </details>
 
@@ -444,9 +446,9 @@ console.log(g); //R$ 2.000,00
 document.body.style.zoom="150%";
 
 //css
-  body{    
-      zoom:150%;
-    }
+body{    
+  zoom:150%;
+  }
 ```
 </details>
 
@@ -456,7 +458,7 @@ var não é usa mais! pq tem problema de scopo, use let ou const
 
 ```js
 //function Hoisting 
-host() //function chamada antes de ser declarada
+host(); //function chamada antes de ser declarada
 
 function host(){
   console.log('my function')
@@ -636,12 +638,12 @@ link.forEach(el => {
 })
 
 ```
-
 </details>
+
+- [Addition_assignment.html](./assets/Addition_assignment.html) 
 
 ## Videos
 
->Memorize is a bad ideia, instead focus on concepts
 - [Stop Trying To Memorize Code - Do This Instead](https://www.youtube.com/watch?v=vP2MNhC_Igw&list=PL_VP_qub8HfIva3X7o4FbRqoqg9K-s8z4&index=1)
 - [Learning Functional Programming with JavaScript](https://www.youtube.com/watch?v=e-5obm1G_FY)
 

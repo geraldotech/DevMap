@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      input {
+        display: block;
+      }
+      .delete {
+        display: flex;
+        align-items: center;
+      }
+      ul li {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+      }
+      section {
+        max-width: 250px;
+        margin: auto;
+      }
+
+      button {
+        background: red;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>template literals - add e delete</h1>
+    <section>
+      <input type="text" />
+      <button onclick="add()">Adicionar</button>
+      <ul id="demo">
+        <li><span>Apple</span><button class="delete">x</button></li>
+        <li><span>Orange</span><button class="delete">x</button></li>
+      </ul>
+    </section>
+    <script>
+
+     function add() {
+        const item = document.querySelector("input"); 
+        const ul = document.querySelector("#demo");
+        const value = item.value;
+        //ul.innerHTML = ul.innerHTML + `<li>${value}</li>`;
+        ul.innerHTML += `<li><span>${value}</span><button class="delete">x</button></li>`;             
+        item.value = ""; // zera o input apos adicionar
+      }
+
+      demo.onclick = function(e){
+        if(e.target.classList.contains("delete")){
+            e.target.parentElement.remove();
+        };
+      };
+      
+    </script>
+  </body>
+</html>
