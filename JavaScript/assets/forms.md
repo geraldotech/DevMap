@@ -123,3 +123,25 @@ tag to group related elements in a form - pode usar para agrupar inputs relacion
   </fieldset>
 </form>
 ```
+
+
+# form names
+
+```js
+<form  name="test">teste</form> 
+console.log(document.test);
+console.log(document.test.innerHTML);
+
+```
+- Two names:
+
+```js
+<form name="JS">
+<input type="text" name="vall" value="TypeScript">
+</form>
+
+document.JS.onclick = function(){
+let val = document.JS.vall.value;
+console.log(val); //TypeScript
+}
+```

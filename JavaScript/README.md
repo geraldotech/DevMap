@@ -558,7 +558,8 @@ document.head.insertAdjacentHTML(
 
 <details>
 <summary>getElement and querySelector</summary>
-
+<br>
+<a href="https://www.w3schools.com/js/js_htmldom_nodelist.asp" target="_blank">HTML Collection vs NodeList</a>
 
 ```js
 <a href="#">link 1</a>
@@ -584,7 +585,7 @@ document.head.insertAdjacentHTML(
 document.getElementById("test"); //return only the id
 
 //getElementsByTagName - 
-console.log(document.getElementsByTagName("a")); //returns a HTML Collection[x]
+console.log(document.getElementsByTagName("a")); //returns a HTML Collection[x] required a Array.from
 
 //getElementsByClassName
 const menu = document.getElementsByClassName("menu"); 
@@ -592,22 +593,22 @@ console.log(menu); //return a HTML Collection[x]  e.g menu[0].innerHTML = "Hello
 
 //Ainda temos o byName() https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
 /*
-Dica: Array.from convert HTML Collection to Array
+Dica: Array.from convert HTML Collection to Array, manupulando todos os itens com forEach
 */
 
-//QuerySelector
+// querySelector
 console.log(document.querySelector(".oi")); //return class
 console.log(document.querySelector("#hello").innerHTML); //return id
 
 
-// QuerySelector - selecionando input by name
+// querySelector - selecionando input by name
 <input type="text" name="one" placeholder="ola"/>
 <input type="text" name="two" placeholder="hello"/>
 
 const input = document.querySelector("input[name='one']");
 console.log(input.placeholder); // ola
 
-// QuerySelector selecionando button inside tags
+// querySelector selecionando button inside tags
 <section>
   <button>btn inside section</button>
   <button data="btn2">btn number 2 inside section</button>
@@ -616,12 +617,12 @@ console.log(input.placeholder); // ola
 const btnSection = document.querySelector("section button");
 console.log(btnSection.innerHTML); //"btn inside section"
 
-// QuerySelector selecionando um segundo button inside tags, adicionar um "name" ou "data"
+// querySelector selecionando um segundo button inside tags, adicionar um "name" ou "data"
 const sbtn = document.querySelector("section button[data='btn2']");
 console.log(sbtn);
 
 
-// QuerySelectorAll - support forEach
+// querySelectorAll - support forEach
 console.log(document.querySelectorAll(".menu")); //return a NodeList()
 
 const link = document.querySelectorAll("a"); //return all tags

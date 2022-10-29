@@ -9,32 +9,51 @@
 
 </details>
 
+## console.log
+Permite executar `snippets of code` no navegador, muito usado para testar a saída de códigos, o mais usado é o .log porém existem outros.
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/console" target="_blank">Todos os tipos de consoles</a>
+
 ## window and document
 
+<div align="center">
 <img src="./img/BkAjU.jpg" alt="example" style="width:50%">
+<img src="http://www.cs.ucc.ie/~gavin/javascript/05_img01.gif" alt="" style="width:70%"/> 
 
-<a href="https://codepen.io/geraldopcf/pen/jOKNwyM" target="_blank">_representação que fiz no CodePen</a>
+[fonte img](http://www.cs.ucc.ie/~gavin/javascript/05_JS4.html)
+</div>
+
+
+<hr>
+- <a href="https://codepen.io/geraldopcf/pen/jOKNwyM" target="_blank">_representação que fiz no CodePen</a>
 
 ## window [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 
-- window - manipula o BOM "Browser Object Model", é a primeira coisa que é carregada no browser, object global, não é atoa que `alert()` originalmente pode ser declarado como `window.alert("dev");` aqui também obtemos o Height e Width da janela, e.g:
+- window - é um object fundamental no navegador, represeta o que apareçe no document, manipula o BOM "Browser Object Model", é a primeira coisa que é carregada no browser, object global, não é atoa que a função `alert()` originalmente pode ser chamada por como `window.alert("dev");`
+
+- É incomum chamar o window, basta chamar o nome do object ou função, exemplos são apenas para contextualizar o conceito do window e suas propriedades.
 
 ```js
 console.log("height",window.innerHeight, "Width",window.innerWidth);
 
+window;
+window.localStorage;
+window.console.log same | console.log
+window.screen.height
+window.innerHeight
+window.open(); // abre nova janela
+window.prompt() // get prompt text
+window.print();
+console.log(window) - display all objects in window
+window.document - display document objects
+window.location - vai retornar uma lista de objetos, algums são:
+- .pathname
+- .href
+- .reload()
+
+//tudo que acompanhar nome + parênteses() são funções nativas, você também pode criar as suas.
 ```
-Como exemplo também temos o window.localStorage, console, window.print, prompt entre outros visitar a MDN.
-
-- Mostrar tudo:
-`console.log(window)`
-
-- A seguir podemos chamar o document:
-`console.log(window.document)`
-
-- Get a Element by ID direct way:
-`<div id="fibra">Speed</div>` 
-`console.log(window.fibra);` ou simplesmente `fibra.textContent = "novo";`; e apesar de funcionar visite a forma mais ideal na page README em <ins>getElements and querySelector</ins> 
-
+<hr>
 
 ## document | [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document) => [MDN - DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
 
@@ -47,55 +66,56 @@ console.log(document); //#document
 ```
 
 
-- Para manipular o DOM, precisamos "falar" com os elementos, começamos por:
+- Para manipular o DOM, precisamos "falar" com os elementos, pegando o valor atual ou definindo um novo valor começamos por:
 
 `window.document.<something>` ou apenas `document.<something here>` ou 
 
 - Para começo de tudo vamos falar com object global ROOT do DOM: 
 **rootElement**:
-`document.documentElement` 
+
 
 ```js
- const root = document.documentElement; 
- console.log(root); // a saida será todas as propriedades do document
-
- //Podemos ainda "falar" diretamente com:
-
-console.log(window);
-console.log(document);
-console.log(document.head);
-console.log(document.title);
-console.log(document.body);
-console.log(document.URL);
-console.log(document.lastModified); 
-
-console.log(document); // Mais possibilidades e eventos 
-```
-
-Mais em:
-
-- [properties and JS events methods | js_htmldom_document.asp](https://www.w3schools.com/js/js_htmldom_document.asp)
-
-- A tag form com names:
-
-```js
-<form  name="test">teste</form> 
-console.log(document.test);
-console.log(document.test.innerHTML);
+ //  HTML objects
+- document.documentElement // #rootElement #html
+- document; // #document
+- document.head);
+- document.body);
+- document.URL);
+- document.lastModified); 
+- document.title; // currently value
+- document.title = "new title"; // set new value for title
+- document.write("gmap"); // write text in dom
+- document.domain
+- document.URL
 
 ```
-- Two names:
+Mais propriedades e a versão do DOM em que foram adicionadas: 
+- [properties and JS events methods | js_htmldom_document.asp](https://www.w3schools.com/js/js_htmldom_document.asp) 
+
+Aqui o uso de da palavra document é obrigatorio, exemplo usando uma função do window com document, vai abrir nova janela e escrever o texto.
 
 ```js
-<form name="JS">
-<input type="text" name="vall" value="TypeScript">
-</form>
-
-document.JS.onclick = function(){
-let val = document.JS.vall.value;
-console.log(val); //TypeScript
+function abrenovaJanela(){
+  open().document.write("oi");  
 }
 ```
+
+<hr>
+
+## Get a Element by ID direct way:  
+
+Todo ID declarado no document é elevado ao scopo global, então é possível chamar diretamente: 
+```js
+<div id="fibra">Speed</div> 
+
+console.log(window.fibra); // div#fibra
+console.log(fibra); // div#fibra - todos os outros objetos acessíveis pelo espaço global
+
+```
+apesar de funcionar prefira a boa pratica na page README em <ins>getElements and querySelector</ins> 
+
+<hr>
+
 ## DOM - Events
 
 - on + event_name
@@ -116,6 +136,8 @@ document.credito.onclick = function(event){
       console.log(event.target); // <form name="credito">credito</form>
     }
 ```
+
+- [DOM - Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
 - formas de chamar uma function com `onclick`
 
@@ -142,10 +164,10 @@ btn3.onclick = function (){
 
 
 ```
-# More in:
-#### [DOM - Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
-- [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)
+### more in:
 
-####  [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
+- [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)  
+- [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
+- [Evitando populir o objeto-global](http://devfuria.com.br/javascript/objeto-global/)
 
 
