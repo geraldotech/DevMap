@@ -9,7 +9,7 @@
 
 </details>
 
-## console.log
+## <span style="color:coral">console.log</span>
 Permite executar `snippets of code` no navegador, muito usado para testar a saída de códigos, o mais usado é o .log porém existem outros.
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/console" target="_blank">Todos os tipos de consoles</a>
@@ -70,7 +70,7 @@ console.log(document); //#document
 
 `window.document.<something>` ou apenas `document.<something here>` ou 
 
-- Para começo de tudo vamos falar com object global ROOT do DOM: 
+- From scratch  vamos falar com object global ROOT do DOM: 
 **rootElement**:
 
 
@@ -92,7 +92,7 @@ console.log(document); //#document
 Mais propriedades e a versão do DOM em que foram adicionadas: 
 - [properties and JS events methods | js_htmldom_document.asp](https://www.w3schools.com/js/js_htmldom_document.asp) 
 
-Aqui o uso de da palavra document é obrigatorio, exemplo usando uma função do window com document, vai abrir nova janela e escrever o texto.
+Aqui o uso de da palavra <span style="color:red">document é required</span>, exemplo usando uma função do  `window` com `document`, vai abrir nova janela e escrever o texto.
 
 ```js
 function abrenovaJanela(){
