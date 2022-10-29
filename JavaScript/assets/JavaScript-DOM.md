@@ -9,7 +9,8 @@
 
 </details>
 
-## <span style="color:coral">console.log</span>
+ <span style="color:coral;font-size:1.5rem">console.log</span>
+<span style="color:coral">console.log</span>
 Permite executar `snippets of code` no navegador, muito usado para testar a saída de códigos, o mais usado é o .log porém existem outros.
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/console" target="_blank">Todos os tipos de consoles</a>
