@@ -108,7 +108,7 @@ preventDefault inline
 
 event.preventDefault <a href="https://codepen.io/geraldopcf/pen/VwXgqgQ" target="_blank">CodePen</a>
 
-### Fieldset [https://www.w3schools.com/tags/tag_fieldset.asp](tag_fieldset)
+### Fieldset [tag_fieldset.asp](https://www.w3schools.com/tags/tag_fieldset.asp)
 
 tag to group related elements in a form - pode usar para agrupar inputs relacionados em um form
 

@@ -199,8 +199,7 @@ const get2 = (a) => {
 get2("root");
 
 const log = (x)=> {console.log(x)};
-
-
+```
 </details>
 
 <details>
