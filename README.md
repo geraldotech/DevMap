@@ -1,23 +1,20 @@
 #  <span style="color:SeaGreen">Dev Mapping Cheat Sheet</span>
 
-:rocket: :tada:
+:rocket: :tada: 💻
 [https://geraldotech.github.io/DevMap/](https://geraldotech.github.io/DevMap/)
 
 :rocket: :tada:
-<a href="https://gmapdev.netlify.app/html/" target="_blank">https://gmapdev.netlify.app/html/</a>
+
 
 # <span style="color: coral">Front - End ROADMAP - Rooting MAP</span>
+## How to start 
 
-[https://roadmap.sh/frontend](https://roadmap.sh/frontend)
-
-How to start 
-
-- HTML
+- HTML <a href="https://gmapdev.netlify.app/html/" target="_blank">https://gmapdev.netlify.app/html/</a>
     - tags
     - HTML sematic tags
     - How to structure the DOM properly
 
-- CSS
+- CSS <a href="https://geraldotech.github.io/DevMap/CSS/" target="_blank">https://gmapdev.netlify.app/html/</a>
     - seletores, class, id
     - DevTools
     - Box Model: box-sizing
@@ -37,5 +34,9 @@ How to start
     - margin / padding
     - @media queries
 
-- JavaScript
-    
+- JavaScript <a href="https://github.com/geraldotech/DevMap/tree/main/JavaScript" target="_blank">JavaScript</a>
+
+## Useful RoadMaps
+
+[https://roadmap.sh/frontend](https://roadmap.sh/frontend)  
+[https://trilha.info/](https://trilha.info/)  
