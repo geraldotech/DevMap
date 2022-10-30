@@ -1,61 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Display</title>
-<link rel="stylesheet" href="../assets/display.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../assets/display.css" />
+  </head>
+  <body>
     <!-- display block -->
-<h1>Display: block <b>height, width</b></h1>
-<mark>Sempre ocupam toda a largura possível de tela e começam em uma nova linha</mark>
+    <h1>Display: block <b>width / height</b></h1>
+    <mark
+      >Sempre ocupam toda a largura possível de tela e começam em uma nova
+      linha, mesmo definindo w/h</mark
+    >
 
-<div class="block">div</div>
-<p class="block">p</p>
-<h2 class="block">h1, h2...</h2>
+    <div class="block">div</div>
+    <p class="block">p</p>
+    <h2 class="block">h1, h2...</h2>
 
+    <hr />
+    <h1>Display: inline <b>não define weight/width</b></h1>
+    <mark
+      >Usam somente o espaço necessário e não precisam começar em uma nova
+      linha, desconsideram margin/padding: <strong>top/bottom</strong></mark
+    >
+    <p></p>
+    <code class="inline">code</code>
+    <span class="inline">span</span>
+    <img class="inline" src="" alt="img" />
+    <a href="#" class="inline">a</a>
+    <code class="inline">mark</code>
+    <!-- evitar conflito com mark, usei code -->
 
-<hr>
-<h1>Display: inline <b>não define weight/width</b> </h1>
-<mark>Usam somente o espaço necessário e não precisam começar em uma nova linha, desconsideram margin/padding: <strong>top/bottom</strong></mark>
-<p></p>
-<code class="inline">code</code>
-<span class="inline">span</span>
-<img class="inline" src="" alt="img" />
-<a href="" class="inline">a</a>
-<code class="inline">code</mark> <!-- evitar conflito com mark, usei code -->
+    <div class="menus">
+      <p>menu a display: default: inline</p>
+      <nav class="menu">
+        <a href="#">links</a>
+        <a href="#">links</a>
+        <a href="#">links</a>
+      </nav>
+      <p>block sendo aplicado</p>
+      <nav class="menu_block">
+        <a href="#">links</a>
+        <a href="#">links</a>
+        <a href="#">links</a>
+      </nav>
+    </div>
+    <hr />
 
-<div class="menus">
-  <p>menu a display: default: inline</p>
-<nav class="menu">
-  <a href="#">links</a>
-<a href="#">links</a>
-<a href="#">links</a>
-</nav>
-<p>block sendo aplicado</p>
-<nav class="menu_block">
-  <a href="#">links</a>
-  <a href="#">links</a>
-  <a href="#">links</a>
-</nav>
-</div>
-<hr>
+    <h1>Display: inline-block vs block <b>width / height</b></h1>
+    <mark
+      >Muito usado para criar menus, elemento fica inline e block ao mesmo
+      tempo</mark
+    >
+    <input type="text" placeholder="input inline-block by default" />
+    <input type="text" placeholder="input inline-block by default" />
 
-<h1>Display: inline-block vs block vs <b>height, width</b></h1>
-<mark>Muito usado para criar menus, </mark>
-  <p></p>
-<input type="text" placeholder="input inline-block by default" />
-<input type="text" placeholder="input inline-block by default" />
-
- <hr>
-
-<span class="box c">inline-block</span>
-<span class="box c">inline-block</span>
-<span class="box a">inline</span>
-<span class="box b">block</span>
-
-
-</body>
+    <span class="break">span</span>
+    <br>
+    <span class="box c">inline-block</span>
+    <span class="box c">inline-block</span>    
+    <p class="footer">by gmapdev - 2022</p>
+  </body>
 </html>

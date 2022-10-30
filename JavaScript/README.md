@@ -314,18 +314,12 @@ div.appendChild(img);
 //append body
 document.body.appendChild(div);
 
-# Images2
-//createElements
-div = document.createElement("div");
-img = document.createElement("img");
-img.setAttribute("src", "http://smartdicastutorial.appspot.com/images/6d88733c461.jpg");
-img.setAttribute("alt", "img test");
+# Images2 Template Alternative
 
-//append
-div.appendChild(img);
-
-//append body
-document.body.appendChild(div);
+   const btn = document.querySelector("button");
+   btn.onclick = function(){
+    re.innerHTML += `<img src="http://smartdicastutorial.appspot.com/images/6d88733c461.jpg"/>`
+   }
 
 //onclick classList
 document.addEventListener('click', function(){
@@ -641,6 +635,7 @@ link.forEach(el => {
 </details>
 
 - [Addition_assignment.html](./assets/Addition_assignment.html) 
+- <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">_cloneNode(true)</a>
 
 ## Videos
 

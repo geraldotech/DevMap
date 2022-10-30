@@ -11,23 +11,10 @@ div.menu {
   width: fit-content;
 }
 
-span{
-  margin-top: 5px;
-}
-
 span.box {
   width: 100px;
   height: 100px;
-}
-
-span.a{
-  display: inline; /* default para span */
-  background: red;
-}
-
-span.b{
-  display: block;
-  background: red;
+  margin: 5px 0;
 }
 
 span.c{
@@ -42,6 +29,7 @@ input{
 
 b{
   background-color: coral;
+  color: black;
   padding: 5px;
   font-size: 16px;
 }
@@ -54,8 +42,17 @@ b{
 }
 
 mark{
-  display: inline-block;
+  display: block;
   padding: 10px;
   margin-bottom: 5px;
-  line-height: 2;
+  line-height: 2;  
+}
+
+.footer{
+  padding-top: 60px;
+  text-align: center;
+}
+
+.break{
+  display: inline;
 }
