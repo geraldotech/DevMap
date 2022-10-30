@@ -11,11 +11,13 @@
     - HTML sematic tags
     - How to structure the DOM properly
 
-- ✔ CSS <a href="https://geraldotech.github.io/DevMap/CSS/" target="_blank">https://gmapdev.netlify.app/html/</a>
+- ✔ CSS <a href="https://geraldotech.github.io/DevMap/CSS/" target="_blank">https://geraldotech.github.io/DevMap/CSS/</a>
     - seletores, class, id
     - DevTools
     - Box Model
-        - box-sizing
+        - Box-sizing
+            -   border-box
+            -   content-box
     - medidas 
         - absolutas: px
         - relativas: rem, em, % de viewport, vw, vh
