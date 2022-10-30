@@ -29,7 +29,6 @@
 
 
 
-
 //e.g 3 by gmap
 
 <button onclick="getx(this)">show</button>

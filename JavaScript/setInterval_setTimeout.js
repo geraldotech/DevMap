@@ -1,4 +1,8 @@
-//1 html show content after timer
+/*
+=============== set Interval =====================
+*/
+
+// html show content after timer
 /*
 <p>Aguarde: <span>10</span></p>
     <div id="content" style="display: none;background: red;width: 300px;">my content here</div>
@@ -25,12 +29,18 @@ const contador = () =>{
     }       
 contador();
 
-//infinity 
- const wel = setInterval(function(){
+//infinity - arrow function
+ const wel = () => setInterval(function(){
+  alert("bom dia");
+},2000); 
+wel(); // ativa a funcao
+
+// modo direto
+setInterval(function(){
   alert("bom dia");
 },2000); 
 
-//talvez sempre adicionar o setInterval dentro de uma function e depois chamar
+// adicionar o setInterval dentro de uma function e depois chamar
 function conta(){
     setInterval(function(){
       console.log("oiiii");
@@ -39,7 +49,7 @@ function conta(){
 conta();
 
 
-// clearInterval stops
+// clearInterval stop é necessário chamar a var da função
 const wel = setInterval(function(){
     alert("bom dia");
     clearInterval(wel);
