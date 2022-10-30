@@ -35,19 +35,22 @@ node -v && npm -v
 ```
 
 
-## Hello Word 
+## simples Hello Word 
 <a name="hello-word"></a>
-Fazendo um simples Hello Word, fazer um arquivo vou chamar o meu de `primeiro.ts` e add:
+Fazendo um simples Hello Word, fazer um arquivo vou chamar o meu de `primeiro.ts`: 
 ```ts
 const a:string = 'Hello World!';
 console.log(a)
 ```
-agora transpilar: `tsc primeiro.ts`;
+
+Transpilar: `tsc primeiro.ts`
 
 Note que será criado um novo file chamado `primeiro.js` na raiz da pasta, para ler você pode usar o próprio Node:
-```
+
+```ts
 node primeiro.js
 ```
+
 >>If all okay will be printed Hello Word!
 
 <hr>
@@ -59,42 +62,35 @@ O compilador do **TypeScript** é altamente configurável. Ele nos permite defin
 
 Cada uma das opções de configuração pode ser passada para um arquivo chamado  *tsconfig.json* . Para quem não conhece, esse é o principal arquivo de configuração do *TypeScript*.
 
-- Começando pelo arquivo de configuração:  
+-   
 Criar a pasta `src` do TS a pasta `dist` arquivos de deploy será criada automaticamente ao gerar o .js file, só fazer manual se quiser criar o html from start
 
 
-- Para criar arquivo `tsconfig.json` executar:  
+1 - Começando pelo arquivo de configuração `tsconfig.json`:
 ```js
 tsc --init
 ```
-
-- Abra o arquivo tsconfig.json e na linha 29 “// "rootDir": "./",” aponte onde vai ficar o arquivo de Typescript:  
+  - Na linha "outDir": "./dist/js", na linha 59 aponte os arquivos que serão emitidos ao client, "arquivos de deploy"  
+```js 
+"outDir": "./dist/js/"
+```
+  - Abra o arquivo tsconfig.json e na linha 29 “// "rootDir": "./",” aponte onde vai ficar o arquivo de Typescript:  
 ```js 
 "rootDir": "./src"
 ```
 
-- Na linha "outDir": "./dist/js", na linha 59 aponte os arquivos que serão emitidos ao client, "arquivos de deploy"
-```js 
-"outDir": "./dist/js/"
-```
-
-- Pasta dist create a index.html and define script 
-```js
-<script src="js/index.js defer"></script>
-```
-(prevendo que o TS vai fazer uma pasta "js") 
-
-- Pasta src crie o arquivo `index.ts` e code algum como: 
+2 - criar pasta src e `index.ts` file:
 ```ts
 var myname:string = "gmapdev";
 console.log(myname);
 ``` 
 
-- para compilar: 
-```js
-tsc
-```
-- watch mode: 
+3 - pasta dist será criada o comando `tsc`
+
+4 - criar o `index.html` e adicionar script.js
+
+
+### watch mode: 
 ```
 tsc -w index.ts
 ```
@@ -107,7 +103,7 @@ tsc -w index.ts
 ```
 <hr>
 
-## noEmitOnError  
+### noEmitOnError  
 <a name="noEmitOnError"></a>
 
 - Create novo arquivo like index.ts respeitar a converção que os Dev JS utilizam hoje, a utilização do camelCase. e.g? myControls.ts 
