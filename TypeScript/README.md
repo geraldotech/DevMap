@@ -34,7 +34,6 @@ check node and npm version:
 node -v && npm -v
 ```
 
-
 ## simples Hello Word 
 <a name="hello-word"></a>
 Fazendo um simples Hello Word, fazer um arquivo vou chamar o meu de `primeiro.ts`: 
@@ -62,19 +61,15 @@ O compilador do **TypeScript** é altamente configurável. Ele nos permite defin
 
 Cada uma das opções de configuração pode ser passada para um arquivo chamado  *tsconfig.json* . Para quem não conhece, esse é o principal arquivo de configuração do *TypeScript*.
 
--   
-Criar a pasta `src` do TS a pasta `dist` arquivos de deploy será criada automaticamente ao gerar o .js file, só fazer manual se quiser criar o html from start
-
-
 1 - Começando pelo arquivo de configuração `tsconfig.json`:
 ```js
 tsc --init
 ```
-  - Na linha "outDir": "./dist/js", na linha 59 aponte os arquivos que serão emitidos ao client, "arquivos de deploy"  
+  - Na linha `"outDir": "./dist/js"`, na linha 59 aponte os arquivos que serão emitidos ao client, "arquivos de deploy"  
 ```js 
 "outDir": "./dist/js/"
 ```
-  - Abra o arquivo tsconfig.json e na linha 29 “// "rootDir": "./",” aponte onde vai ficar o arquivo de Typescript:  
+  - Abra o arquivo `tsconfig.json` e na `linha 29 “// "rootDir": "./",”` aponte onde vai ficar o arquivo de TypeScript:  
 ```js 
 "rootDir": "./src"
 ```
