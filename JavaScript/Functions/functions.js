@@ -1,3 +1,5 @@
+// https://www.w3schools.com/js/js_functions.asp
+
 //call funcao diretamente custom name value
 function minhafuncao(valorfuncao) {
   console.log("Welcome " + valorfuncao);

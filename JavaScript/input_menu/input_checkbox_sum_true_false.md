@@ -4,30 +4,32 @@ html
 ```html
 
 <input type="checkbox" id="one" name="type" value="1" />
-  <label for="one">ONE</label>
-  <input type="checkbox" id="two" name="type" value="2" />
-  <label for="two">TWO</label>
-  <input type="checkbox" id="three" name="type" value="3" />
-  <label for="three">Three</label>
-  <input type="checkbox" id="four" name="type" value="4" />
-  <label for="four">Four</label>
-  <input type="checkbox" id="five" name="type" value="5" />
-  <label for="five">Five</label>  
-  <br><br>
-  <button id="showResult">Sum checked values and sum</button>
-  <br><br>
-  <div id="result"></div>
-  <br><br>
-  <div id="result2"></div>
+<label for="one">ONE</label>
+<input type="checkbox" id="two" name="type" value="2" />
+<label for="two">TWO</label>
+<input type="checkbox" id="three" name="type" value="3" />
+<label for="three">Three</label>
+<input type="checkbox" id="four" name="type" value="4" />
+<label for="four">Four</label>
+<input type="checkbox" id="five" name="type" value="5" />
+<label for="five">Five</label>  
+<hr>
+<button id="showResult">Sum checked values and sum</button>
+<br><br>
+<div id="result"></div>
+<br><br>
+<div id="result2"></div>
 
 
-  <input type="checkbox" name="checkbox" id="checkbox" />
-  <label for="checkbox">Check</label>
+<input type="checkbox" name="checkbox" id="checkbox" />
+<label for="checkbox">Check</label>
 
 
-  <br><br>
-  <input type="checkbox" name="opt" id="opt">
-  <label for="opt">true or false</label>
+<br><br>
+<hr>
+<input type="checkbox" name="opt" id="opt">
+<label for="opt" id="txt">check</label>
+
 
 ```
 
@@ -36,13 +38,17 @@ css
     :root{
       color-scheme: dark;
     }
+    .green {
+            color: green;
+        }
+    
 
 ```
 
 js
 
 ```js
-function getCheckedValues() {  
+   function getCheckedValues() {  
   return Array.from(document.querySelectorAll('input[type="checkbox"]'))
   .filter((checkbox) => checkbox.checked)
   .map((checkbox) => +checkbox.value)
@@ -74,8 +80,8 @@ checkboxes.forEach(function(checkboxx){
  //via https://thewebdev.info/2022/05/08/how-to-add-a-checkbox-check-event-listener-with-javascript/
 const checkbox = document.querySelector("input[name=checkbox]");
 
-checkbox.addEventListener("change", (e) => {
-  if (e.target.checked) {
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
     console.log("Checkbox is checked..");
   } else {
     console.log("Checkbox is not checked..");
@@ -85,14 +91,24 @@ checkbox.addEventListener("change", (e) => {
 
 /* true or false */
 const inputBtn = document.querySelector("input[name=opt]");
+const txt = document.getElementById("txt");
 
+inputBtn.addEventListener("change", () => {
+    console.log(inputBtn); // true or false
+    const opt = inputBtn.checked;
+    console.log(opt);
+    opt ? ativado() : desativa();
+});
 
-inputBtn.addEventListener("change", (e) => {
-  e.target.checked ? console.log('sim') : console.log('not');
-  console.log(inputBtn.checked); // true or false
-})
-console.log(inputBtn); //display all values
+function ativado(){
+    txt.innerHTML = "checked";
+    txt.classList.add("green");
+}
 
+function desativa(){
+    txt.innerHTML = "check";
+    txt.classList.remove("green");
+}
 
 
 ```

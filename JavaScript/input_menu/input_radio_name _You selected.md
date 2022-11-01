@@ -2,7 +2,7 @@
 
 html
 ```html
-<h2>o name do form é mais importande do que o id</h2>    
+<h2>o name do form é mais importante do que o #id</h2>    
 
 <form id="mainForm" name="mainForm">
         <input type="radio" name="rads" id="one" value="50MB" />
