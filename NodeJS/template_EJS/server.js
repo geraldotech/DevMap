@@ -13,7 +13,7 @@ var pessoas = [
         'idade': 12
     },
     {
-        'nome': 'Jõao',
+        'nome': 'Geraldo',
         'idade': 15,
     },
     {
