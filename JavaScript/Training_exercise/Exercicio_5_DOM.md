@@ -21,7 +21,7 @@ link: https://www.w3schools.com/jsref/dom_obj_document.asp
     7.1. Limitar a saída com if return para 3x:
 
 8. Fazer a saída da calculadora com createTextNode e limitar com if return false (abrir arquivo html inside this folder) 4 lines, depois aplicar o preventDefault()
-<a href="https://geradev.netlify.app/js_exercises/js_exercicio_5_question_8.html">geradev.netlify</a>
+<a href="https://geradev.netlify.app/js_exercises/js_exercicio_5_question_8.html" target="_blank">geradev.netlify</a>
 
 9. Fazer um button click onde start no html
 
@@ -35,16 +35,16 @@ link: https://www.w3schools.com/jsref/dom_obj_document.asp
 
 14. Fazer uma div#app display a text em h1, uma classe e ao clicar no document seja atribuido a classe alterando sua cor original `classList.add();` teste também o `classList.remove("")`
 
-15.Fazer uma div#app e mostrar a imagem usando DOM: `http://smartdicastutorial.appspot.com/images/6d88733c461.jpg` também atribuir uma class que deve diminuir o tamanho da imagem:
-16. Dois modos de escrever:
+15.Fazer uma div#app e mostrar a imagem usando DOM: `http://smartdicastutorial.appspot.com/images/6d88733c461.jpg` também atribuir uma class que deve diminuir o tamanho da imagem: 
+
+16. Dois modos de escrever: 
 ```js
 txt = document.createTextNode("asas"); //no direct
 div.textContent = "asas"; //direct 
 ```
 
-# Special [res](https://gist.github.com/geraldotech/017b5431d853b37af18e0c7fbab97246)
+# Special 
 ##### Start with => first class function  
->Respostas nos Exemplos
 
 1. List ul com map: 
 2. List ul com for of 1
@@ -54,11 +54,7 @@ div.textContent = "asas"; //direct
 6. Box click contains
 7. Exemplo com function constructor (retirada do Livro)
 8. Empréstimo de método (obj) [resp](https://github.com/kelvinbiffi/javascript-book/blob/master/18.Empr%C3%A9stimo%20de%20m%C3%A9todo/script.js)
-9. Make a clock
+9. Make a clock  
+[respostas](https://gist.github.com/geraldotech/017b5431d853b37af18e0c7fbab97246)
 
 
-
-Next
-https://www.w3schools.com/jsref/met_document_createelement.asp
-
-https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_createtextnode
