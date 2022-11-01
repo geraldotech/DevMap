@@ -256,7 +256,12 @@ files = ['Geraldo', 'Algo', 'Felipe'],
 res = files.filter(al => get.some(b => al.endsWith(b)));
 console.log(res); // (2) ['Geraldo', 'Algo']
 
-
+// filter odd with loop
+const arr = [];
+  for(let i = 0; i <= 10; i++){
+    arr.push(i);
+  }
+console.log(arr.filter((num) => num %2 == 1)); // [1,3,5,7,9]
 
 
 
