@@ -5,6 +5,10 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
 
+ :root{
+   color-scheme: dark;
+ }
+
 li {
   padding: 50px;
   
@@ -37,7 +41,7 @@ main {
 
 section{
   border: 3px solid rgb(255, 255, 255);
-  margin: 5px 15px;
+  margin: 25px 15px;
   text-align: center;
 }
 
@@ -65,4 +69,8 @@ section a{
 
 .active{
   color: green;
+}
+
+label{
+  cursor: pointer;
 }
