@@ -208,7 +208,7 @@ const log = (x)=> {console.log(x)};
 
 </details>
 <details>
-<summary>addEventListener and Pointer Events, e.target.Attr, documentElement</summary>
+<summary>addEventListener, Pointer Events, e.target, documentElement</summary>
 
 ```js
 #simple
@@ -273,6 +273,22 @@ document.addEventListener("mousemove", function(event){
     if(event.clientX === 50) alert('50!');
     get("OutDataY").innerHTML = `Y: ${event.clientY}`;
 });
+
+#target vs currentTarget
+
+<ul>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>Z</li>
+</ul>
+
+const el = document.querySelector("ul");
+    el.addEventListener("click", function(e){
+      console.log(e.currentTarget);  // <ul> 
+      console.log(e.target); // <li>
+    });
+
 
 ```
 </details>

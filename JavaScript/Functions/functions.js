@@ -58,7 +58,7 @@ console.log(x);
 
 // Arrow function
 const surname = (el) => {
-  return console.log(el);
+  console.log(el); // não precisa usar `return` quando se tem um console.
 };
 surname("Filho");
 
