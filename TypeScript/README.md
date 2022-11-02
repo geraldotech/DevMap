@@ -1,7 +1,5 @@
 # TypeScript
 
-# Get Start
-
 - [O que é?](#what-is-ts)
 - [Install Global Mode](#installing)
 - [Sample Hello](#hello-word)
@@ -22,7 +20,6 @@
 - Desenvolvido e mantido pela Microsoft
 
 ## Installing:
-
 <a name="installing"></a>  
 Vamos instalar o TypeScript em modo Global, basta adicionar o -g
 
@@ -160,7 +157,7 @@ Defer deixa carregar primeiro HTML:
 
 <a name="hoisting"></a>
 
-Hoisting traduzindo: elevação, içar é o içamento de funções e variáveis para o topo do scope e inicializada com `undefined`, antes da execução do code isso declara as variáveis e funções em memória e permite que você use uma função/variável antes mesmo de declara-la.
+Hoisting traduzindo: elevação, içar é o içamento de funções e variáveis para o topo do scope que são inicializadas com `undefined`, antes da execução do code isso declara as variáveis e funções em memória e permite que você use uma função/variável antes mesmo de declara-la.
 
 ## Scope
 

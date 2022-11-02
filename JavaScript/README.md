@@ -464,28 +464,8 @@ body{
 
 <details>
 <summary>Hoisting</summary>
-var não é usa mais! pq tem problema de scopo, use let ou const
+<a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">checkout this thread</a>
 
-```js
-//function Hoisting 
-host(); //function chamada antes de ser declarada
-
-function host(){
-  console.log('my function')
-}
-
-//Variables Hoisting
-console.log(n)
-n = 6;
-console.log(n)
-var n;
-
-//console.log(mylet);
-let mylet = "Geraldo";
-
-console.log(myvar);
-var myvar = "Geraldo"; //work
-```
 </details>
 
 <details>
