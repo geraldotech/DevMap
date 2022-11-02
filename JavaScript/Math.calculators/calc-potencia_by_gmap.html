@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS1 </title>
+  <style>
+    .container{
+      display: flex;
+      justify-content: center;
+      height: 100vh;     
+      flex-direction: row;
+      margin: 0px 0px 0px 60px;
+
+    }
+    .item{
+      width: 150px;
+      height: 20px;  
+      margin: 20px 0 0 0;
+      border-radius: 8px;
+    }
+    .txt {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: coral;
+      margin-top: 30px;
+      font-size: 1.2rem;
+    }
+    #btn, button{
+      height: 30px;
+      width: 80px;
+      border-radius: 5px;
+      cursor:pointer;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+    button:active{
+      background: rgb(56, 109, 3);
+    }
+   
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- <button onclick="getx()">Random</button> -->
+  <div class="item" id="item">
+  <form action="#">
+  Base:<input type="number" id="base" required>
+  Expoente:<input type="number" id="num" required>
+  <input type="submit" id="btn" value="Confirmar" />
+  <br>
+  <span class="txt" id="demo"></span>
+</form>
+</div>
+</div> 
+
+</body>
+<script>
+
+document.getElementById("btn").onclick = function(e){
+  e.preventDefault(e);
+num = document.getElementById("num").value;
+base = document.getElementById("base").value;
+document.getElementById("demo").innerHTML = Math.pow(base,num);
+  
+}
+
+</script>
+</html>

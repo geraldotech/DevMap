@@ -58,14 +58,5 @@ console.log(mult(5, 5));
 let x = mult(5);
 console.log(x);
 
-// Arrow function
-const surname = (el) => {
-  console.log(el); // não precisa usar `return` quando se tem um console.
-};
-surname("Filho");
 
-// function expression https://pbs.twimg.com/media/FN6bFDRX0AsshRB?format=jpg
-const costa = function peganomes(a) {
-  console.log(a);
-};
-costa("Boeing");
+

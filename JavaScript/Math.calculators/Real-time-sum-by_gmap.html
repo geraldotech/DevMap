@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+.container{
+    display: flex;
+    font-size: 20px;
+    height: 60vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    width: 130px;
+    height: 20px;
+    text-align: center;
+}
+ 
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>sum real time</h1>
+<label for="res">Number:</label>
+<input type="number" id="res">
+<input type="number" id="res2">
+<p id="re"></p>
+</div>
+
+</body>
+<script>
+const input = document.querySelector("#res");
+const input2 = document.querySelector("#res2");
+
+
+input.addEventListener("input", function(){
+    const str = +this.value;
+    console.log(str)
+    
+input2.addEventListener("input", function(){
+    const str2 = +this.value;
+    document.getElementById("re").innerHTML = str + str2 ;
+})
+})
+
+
+
+</script>
+</html>

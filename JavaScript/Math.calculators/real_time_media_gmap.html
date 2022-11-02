@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+  .container div form{
+    display: flex;    
+    height: 40vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type=reset]{
+    width: 50px;
+    margin-top: 10px;
+    
+}
+ </style>
+</head>
+<body>
+    <!-- <input type="text" id="inputField">
+    <div>https://gpnotes.droppages.com/img/<span id="res_txt"></span>.jpg</div>
+    <div><span id="res"></span></div> -->
+     <div class="container">
+      <div class="content">
+          <div>
+        <form>
+            <label for="n1">Nota 1:</label>
+            <input type="number" id="n1">
+            <label for="n2">Nota 2:</label>
+            <input type="number" id="n2">
+            <input type="reset" value="Limpar">
+          </form>
+        </div>
+       <div>Soma:   <span id="res"></span></div>
+       <div>Média:   <span id="res2"></span></div>
+       <div>Situação:   <span id="res3"></span></div>
+      </div>
+     </div>
+</body>
+<script>
+var res = document.getElementById("res");
+var res2 = document.getElementById("res2");
+var res3 = document.getElementById("res3");
+let n1 = document.querySelector("#n1");
+let n2 = document.querySelector("#n2");
+let nota_1 = 0;
+let nota_2 = 0;
+let [soma,media] = [0,0];
+
+
+
+n1.addEventListener("input", function(){
+    nota_1 = +this.value;
+    //console.log(nota_1);
+
+n2.addEventListener("input", function(){
+    nota_2 = +this.value;
+   // console.log(nota_2);
+
+soma = nota_1 + nota_2;
+media = soma /2;
+res.innerHTML = soma;
+res2.innerHTML = media.toFixed(2);
+if(media >=6){
+    res3.innerHTML = '<p style="background:green;display:inline;color:#f2f2f2">APROVADO!</p>';
+} else {
+    res3.innerHTML = '<p style="background:red;display:inline;color:#f2f2f2">REPROVADO!</p>';
+}
+})
+ 
+})
+
+
+
+
+
+// 2 notas com looping, somar e mostrar a média;
+
+/* let [sum,cont] = [0,1];
+while(cont <= 2){
+   // let notas = +prompt(`Digite a nota ${cont}`);
+    sum+= notas;
+    document.write(`Nota ${cont}: ${notas}`)
+    document.write('<br>')
+  
+cont++
+}
+let media = `${sum /2}`;
+document.write(`A soma é: ${sum}`);
+document.write('<br>');
+document.write(`A média é: ${media} <br>`);
+media >=6 ? document.write("APROVADO") : document.write("REPROVADO");
+ */
+
+
+
+
+
+/* const inputField = document.querySelector("#inputField");
+
+inputField.addEventListener("input", function(){
+    const str = this.value; */
+  
+/* const written = {
+    0:'zero',
+    1:'one',
+    '02':'parafuso',
+    'rio':"<img src='https://gpnotes.droppages.com/img/rio.jpg' />"
+}
+
+const get = callvalue => {
+    return written[callvalue] || 'other'
+} */
+
+/* document.getElementById("res").innerHTML = `<img src="https://gpnotes.droppages.com/img/${str}.jpg"/>`;
+document.getElementById("res_txt").innerHTML = `${str}`;
+}) */
+
+document.body.style.zoom = "120%";
+</script>
+</html>
