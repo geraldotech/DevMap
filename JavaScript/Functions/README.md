@@ -60,32 +60,67 @@ console.log(window.eu); // undefined
 [https://ilovecoding.org/lessons/self-invoking-anonymous-function](https://ilovecoding.org/lessons/self-invoking-anonymous-function-what-is-it-why-and-how-to-use-it)
 
 # Closures
+é a forma de fazer com que as variáveis dentro de uma função sejam privadas e persistentes
+
+- Antes de entender o que são Closures observe o code: 
+
+```js
+let cont = 0; //inicio
+function soma(){
+  cont+= 1; //incrementa
+  return console.log(cont); //retorno
+}
+
+soma();
+soma();
+// There is a problem with the solution above: Any code on the page can change the counter, without calling add().
+
+cont = 5; // << alterando a var global facilmente
+soma(); // então o retorno será 5 + 1 = 6
+
+/*
+blz e se remover o cont global e adicionar apenas na function ?
+Vai quebrar o código pq a var sempre vai ser resetada toda vez que a funcao for chamada:
+*/
+
+function somaa(){
+  let contt = 0; //inicio
+  contt+= 1; //incrementa
+  return console.log(contt); //retorno sempre 1, 1
+}
+
+console.log(window.contt); // undefined como let não vaza do scopo
+somaa();
+somaa();
+
+
+```
+
+## soluções 
 
 ```js
 function calc(){
   let x = 1;
   function add(){
-    console.log(x +1);
+    console.log(x +1); // 2
   }
   function mul(){
-    console.log(x * 2);
+    console.log(x * 5); // 5
   }
   return {
     add: add,
     mul: mul
   };
 };
- 
+
 console.log(window.x); // undefined
+calc().add(); 
 calc().mul();
-calc().add();
 
-// ou podemos atribuir a parent fun to var
-const test = calc();
-test.mul();
-test.add();
-
-// outro exemplo Self-Invoking Functions
+/* 
+===================================================
+outro exemplo Self-Invoking Functions
+*/
 const idade = (function (){
   let a = 2000;
   return function(){
