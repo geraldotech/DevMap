@@ -51,6 +51,8 @@ function show(){
   alert("Hello " +eu);
 })();
 
+console.log(window.eu); // undefined
+
 ```
 
 
@@ -87,7 +89,6 @@ function somaa(){
   return console.log(contt); //retorno sempre 1, 1
 }
 
-console.log(window.contt); // undefined
 somaa();
 somaa();
 
