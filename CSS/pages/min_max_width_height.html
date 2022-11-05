@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>min max width / height</title>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      body {
+        background: #1f242a;
+        color: #adb5bd;
+        text-align: justify;
+      }
+      main {
+        max-width: 800px;
+        min-width: 300px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      img {
+        width: 100%;
+        max-width: 50%;
+      }
+      picture{
+        text-align: center;
+        display: block;
+      }
+      h1 {
+        color: #74c0fc;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>My super website</h1>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+         
+             
+      
+      <picture>
+        <!--
+          ao atingir menos de 600px troca a img
+        -->
+        <source media="(max-width: 600px)" srcset="http://smartdicastutorial.appspot.com/images/6d88733c461.jpg" alt="img_2"> 
+        <img
+        src="http://smartdicastutorial.appspot.com/images/27afa5684f6911e383.jpg"
+        alt=""
+      />    
+      </picture>
+      <footer>
+        <p>
+          and more recently with desktop publishing software like Aldus
+          PageMaker including versions of Lorem Ipsum.
+        </p>
+      </footer>
+    </main>
+
+    <script>
+      // Object.values()
+
+      //console.log(1 % 100)
+      //Entendendo a raiz do DOM
+      ///console.log(window.console.log("oi"));
+
+      //window.console.log("oi");
+
+      // Premissas
+      // ao chamar function são passados argumentos
+      // tudo que for passado um nome seguido de argumento hello("geraldo") são funções JS, CSS, PHP
+      // Não memorizar, aprender os conceitos
+      // create a fuc são parâmetros
+      // Prefira uma linguagem real do que perder tempo com Portugol
+    </script>
+  </body>
+</html>
