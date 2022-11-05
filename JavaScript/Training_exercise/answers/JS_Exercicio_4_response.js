@@ -68,13 +68,16 @@ function getx(){
 
 x = document.getElementById("x").value
 arr.length = x;
-
 document.getElementById("res").innerText = arr;
-
 }
 
+// 8
+const str = [];
+str[0] = 5;
+str[1] = 2;
+console.log(str.reduce((total, val) => total+= val));
 
-//9
+// 8 v2
 x = 5;
 y = 6;
  
