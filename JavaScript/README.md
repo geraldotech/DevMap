@@ -656,8 +656,7 @@ link.forEach(el => {
 |   ==      | compara valor |
 |   ===      | compara valor e tipo |
 
-<a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">[read_more] artigos/operadores-matematicos-em-javascript</a>
-
+- <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">[read_more] artigos/operadores-matematicos-em-javascript</a>
 - [Addition_assignment.html](./assets/Addition_assignment.html) 
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">_cloneNode(true)</a>
 
