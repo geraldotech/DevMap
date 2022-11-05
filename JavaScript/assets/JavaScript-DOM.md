@@ -4,8 +4,9 @@
 <summary>open content</summary>
 
 É uma linguagem de programação de alto nível que manipula o DOM - Document Object Model do HTML.
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png" style="max-width: 50%">
+<div align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png" style="max-width: 40%">
+</div>
 
 </details>
 
