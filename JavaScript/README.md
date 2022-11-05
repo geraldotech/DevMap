@@ -34,6 +34,20 @@ parentheses()
 braces {} - chaves
 square brackets [] - colchetes
 ```
+
+
+### multiple var/let/const
+
+```js
+var eu = "Ge"
+, filho = "a"
+, agr = "now"
+console.log(eu, filho, agr);
+
+
+let [cont,start] = [0, 10];
+```
+
 </details>
 
 <details>
