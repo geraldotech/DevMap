@@ -12,3 +12,19 @@ document.getElementById("objeto").innerHTML = Object.values(person);
 document.write(person.name+" mora na cidade de "+person.city);
 //concatenar
 document.getElementById("objeto2").innerHTML = person.name +" idade atual: "+person.age;
+
+
+//multiple variables in one line
+const persons = {
+    nome:"Geraldo",
+    surname:"Filho"
+}
+
+console.log(persons.nome);
+console.log(persons.surname);
+
+
+//forma resumida atribuir a uma const
+const {nome, surname} = persons;
+console.log(nome);
+console.log(surname);

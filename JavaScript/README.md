@@ -42,14 +42,21 @@ square brackets [] - colchetes
 //ES6
 let [cont,start] = [0, 10];
 
+let a,b;
+a = 4;
+b = 3;
+console.log(a + b)
+
+const 
+rua = "a",
+cidade = "b",
+sim = "sd"
 
 // old
 var eu = "Ge"
 , filho = "a"
 , agr = "now"
 console.log(eu, filho, agr);
-
-
 
 ```
 
@@ -659,6 +666,7 @@ link.forEach(el => {
 - <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">[read_more] artigos/operadores-matematicos-em-javascript</a>
 - [Addition_assignment.html](./assets/Addition_assignment.html) 
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">_cloneNode(true)</a>
+- <a href="https://devhints.io/es6" target="_blank">_devhints.io/es6</a>
 
 ## Videos
 
