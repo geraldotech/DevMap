@@ -649,6 +649,7 @@ link.forEach(el => {
 ```
 </details>
 
+### Operadores Lógicos (Logical Operators 
 | SINAL     | TIPO          |
 | :---:       |   :---:         |
 |   =       |   atribuição  |
