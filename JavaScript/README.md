@@ -655,6 +655,7 @@ link.forEach(el => {
 |   =       |   atribuição  |
 |   ==      | compara valor |
 |   ===      | compara valor e tipo |
+
 <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">[read_more] artigos/operadores-matematicos-em-javascript</a>
 
 - [Addition_assignment.html](./assets/Addition_assignment.html) 
