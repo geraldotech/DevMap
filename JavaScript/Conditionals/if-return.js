@@ -30,3 +30,10 @@ function idade(a){
   }
   
   idade(31);
+
+// single
+  if(5 > 1){
+    console.log("maior");
+      return;
+  }
+    console.log("menor");

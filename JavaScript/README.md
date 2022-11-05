@@ -39,13 +39,18 @@ square brackets [] - colchetes
 ### multiple var/let/const
 
 ```js
+//ES6
+let [cont,start] = [0, 10];
+
+
+// old
 var eu = "Ge"
 , filho = "a"
 , agr = "now"
 console.log(eu, filho, agr);
 
 
-let [cont,start] = [0, 10];
+
 ```
 
 </details>
@@ -643,6 +648,12 @@ link.forEach(el => {
 
 ```
 </details>
+
+| SINAL     | TIPO          |
+| :---:       |   :---:         |
+|   =       |   atribuição  |
+|   ==      | compara valor |
+|   ===      | compara valor e tipo |
 
 - [Addition_assignment.html](./assets/Addition_assignment.html) 
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">_cloneNode(true)</a>
