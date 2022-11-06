@@ -60,8 +60,7 @@ console.log(n);
 // 9 - #reverse
 //inverter array
  fruits.reverse();
-
-
+ 
  // 10 - #includes - boolean returning true or false as appropriate - require entire "name"
 const cars = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
 
@@ -119,11 +118,9 @@ arr.push('Suco light');
   }
 console.log(arr); 
 
-/*
-[=============================================================================]
+/* [=============================================================================]
 12 - #findIndex method returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. 
 */
-
 
 const person = [
   {nome:"Geraldo",idade:29},{nome:"Felipe",idade: 28},{nome:"Isabella",idade: 5,},{nome:"Isab",idade:10},
@@ -145,7 +142,6 @@ indexOf and FindIndex
 */
 
 const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
-
 console.log(fruits.indexOf("blueberries"));// 3
 
 // first ele startWith: b
@@ -157,10 +153,7 @@ function bb(val){
     return val.includes("pe");
 }
 
-
-
-/*
-[=============================================================================]
+/*[=============================================================================]
 13 - #filter
 Doesn’t change the original array. Faz uma shallow copy do que é encontrado
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -191,7 +184,6 @@ console.log(busca5);
 // call function
 const fil = obj.students.filter(filhos);
 console.log(fil);
-
 
 function filhos(tem){
   return tem.child; // return false add !tem.child
@@ -290,8 +282,7 @@ const keys = ["1","e"];
 const busca = array.filter(a => keys.some(e => a.includes(e)))
 console.log(busca);  // ['12', 'dev', 'Element'];
 
-/*
-[=============================================================================]
+/* [=============================================================================]
 como buscar varios termos com piece de informações adicionando o some o
 */
 
@@ -331,8 +322,7 @@ for(let i = 0; i <= 10; i++){
 
 console.log(num.filter((num) => num %2 == 1));
 
-/* 
-[=============================================================================]
+/* [=============================================================================]
 14 - #find - requer função
 */
 
@@ -400,8 +390,7 @@ console.log(lista.filter(per => per.age > 18));
 // o primeiro > 18
 console.log(lista.find(per => per.age > 18));
 
-/* 
-[=============================================================================]
+/* [=============================================================================]
 15 - #some - The Array.some() method checks if any of the elements in an array pass a test (provided as a function).
 */
 const ages = [3,10,18,20];
@@ -437,7 +426,6 @@ const array = ["12","zuz","dev"];
 const check2 = ["dev","12"].some(el => array.includes(el));
 console.log(check2); //true
 
-
 //caso passe apenas uma string talvez não seja a melhor opção, poderiamos usar apenas o some ou includes
 let search3 = ["zuz"].some(a => array.includes(a));
 console.log(search3); // true
@@ -446,8 +434,7 @@ console.log(array.some(el => el == "dev")); // true
 console.log(array.includes("dev")); // true
 
 
-/* 
-[=============================================================================] 
+/* [=============================================================================] 
 16 - #every
  true if the function returns true for all elements.
  false if the function returns false for one element.
@@ -485,8 +472,7 @@ console.log(numbers.every(maior)); // false pq nem todos são >10
 console.log(numbers.some(maior)); //true pq existe valores > 10
 
 
-/*
-[=============================================================================]
+/* [=============================================================================]
 17 - #map - percorrer um array e obter um novo vetor cujo itens são resultados de uma função de callback
 */
 //way 1
@@ -539,9 +525,8 @@ console.log(newtxt)
 
 // Map.set https://stackoverflow.com/questions/63595841/find-element-in-map-by-its-property-value
 
-/*
-[=============================================================================]
-18 #splice  index ? + delete ? + add elements?
+/* [=============================================================================]
+18 - #splice  index ? + delete ? + add elements?
 - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 - https://gmapdev.netlify.app/demo/indexof_and_splice
 */
@@ -556,9 +541,9 @@ const cars2 = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
 cars2.splice(0,1,'new') // add 'new' to index 0 e remove index 1
 console.log(cars2);
 
-
-//19 - 
-//split - gera string de substrings
+/* [=============================================================================]
+19 - #split - gera string de substrings
+*/
 
 let a = "Rio de Janeiro";
 const myarr = a.split(" ");
@@ -573,7 +558,7 @@ console.log(myarr2)  //['R', 'i']
 
 
 /* [=============================================================================]
-20 #join - method create e returns concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string */
+20 - #join - method create e returns concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string */
 arr = ['fire', 'water', 'airplane', 'car']
 
 console.log(arr.join()); // fire,water,airplane,car
@@ -581,15 +566,16 @@ console.log(arr.join('.')) // fire.water.airplane.car
 console.log(arr.join('')) // firewaterairplanecar
 
 
-// 21 concat - merge arrays
+// 21 - #concat - merge arrays
 arr = [1,2,3,4,5]
 arr2 = [6,7,8,9,10]
 arr_all = arr.concat(arr2);
 console.log(arr_all);
 
-//22 - slice 
-//retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é necessário) de um array original. O Array original não é modificado.
-/*
+/* 22 - #slice 
+retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é necessário) de um array original. 
+O Array original não é modificado.
+
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 */
 arr2 = [0,1,2,3,4,5];
@@ -597,9 +583,9 @@ let b = arr2.slice(1,3); //get itens between
 console.log(b);
 
 
-
-//23 - split - create array of substrings
-//only for strings
+/* [=============================================================================]
+23 - #split - create array of substrings - only for strings
+*/
 arr3 = ("Geraldo");
 let c = arr3.split("")
 console.log(c) // ['G', 'e', 'r', 'a', 'l', 'd', 'o']
@@ -620,7 +606,9 @@ const a = "DEVMAP.code";
 const myarr2 = a.split("", 2)
 console.log(myarr2); // (2) ['D', 'E']
 
-//24
+/* [=============================================================================]
+24 - #repeat
+*/ 
 const lt = "Geraldo";
 console.log("hello", lt.repeat(10));
 
@@ -734,7 +722,7 @@ console.log(name.filter(val => ["m"].some(a => val.includes(a))));
 // 8 - filter quem inclui "al"
 console.log(name.filter(val => ["al"].some(e => val.includes(e))))
 
-// 9 - inclu "Aomeo"
+// 9 - inclui "Aomeo"
 console.log(name.includes("Aomeo"));
 
 // 10 - encontrar alguem com a letra "G"
