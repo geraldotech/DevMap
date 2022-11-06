@@ -1,3 +1,4 @@
+Modo mais basico de pegar o value usando o `name`.value
 #### [CodePen](https://codepen.io/geraldopcf/pen/WNzyQMG)
 
 html

@@ -682,7 +682,11 @@ console.log(notas.every(el => keyz.includes(el))); //false
 console.log(notas.some(el => keyz.includes(el))); // true
 /*
 Devo chamar primeiro o array ou keys?
-o resultado foi o mesmo, porém chamar o array original primeiro é o mais indicado depois chamar os keys no includes. Contudo no caso de every/some quando vai verificar se aquela lista de keys existe no Array, então chamar primeiro as keys
+Depende do objetivo! no caso de every/some quando vai verificar se aquela lista de keys existe no Array, então chamar primeiro as keys.
+
+* caso que whatever
+console.log(["Geraldo"].filter(el => api.includes(el))); // Geraldo
+console.log(api.filter(val => val.includes("Geraldo"))); // Geraldo
 */
 console.log(notas.some(a => keyz.includes(a))); // true
 
@@ -716,7 +720,7 @@ console.log(api.every(el => el.includes("o")));
 // 6 - filter maior ou igual a 7
 console.log(api.filter(el => el.length >= 7));
 
-// 7 - filter a letra m
+// 7 - filter a letra "m"
 console.log(api.filter(val => ["m"].some(a => val.includes(a))));
 // poderia usar apenas includes!! api.filter(el => el.includes("m"))
 
@@ -737,14 +741,31 @@ console.log(api.filter(function(val, index){
     }
 }));
 
-// 12 - Todos esses existe na lista? "Geraldo", "CostAo"
-console.log(["Geraldo", "CostAo"].every(val => api.includes(val)));
+// 12 - Todos esses itens existe na array ? ["Geraldo", "CostAo"]
+console.log(["Geraldo", "CostAo"].every(val => api.includes(val))); // true
 
-// 13 - Alguns desses tem na lista ? "Geraldo", "CostAo"
-console.log(api.some(al => ["Geraldo","CostAo"].includes(al)));
+// 13 - Alguns desses itens tem no array ? ["Geraldo","Costa"]
+console.log(api.some(al => ["Geraldo","CostAoo"].includes(al)));
 
 // 14 - fil todos que termimam com a e z
 console.warn("novo",api.filter(val => ["a","z"].some(al => val.endsWith(al))));
 
-// 15 - filter a letra maisculas: A // only includes
+// 15 - filter a letra maisculas: A
 console.log(api.filter(val => val.includes("A")));
+
+// 16 - // get all names.length
+api.forEach((el, ind)=> {
+  console.log(el.length)
+});
+
+// 17 - // find primeiro ele == 6
+console.log(api.find(el => el.length == 6));
+
+
+// 18 - encontra element == 6 - pulando o primeiro que foi encontrado
+console.log(api.find((el, ind) => { // em ves de: "CostAo", pega: "Barrao"
+  if(ind > 1){
+    return el.length = 6
+  }
+}))
+

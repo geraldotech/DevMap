@@ -401,6 +401,25 @@ document.addEventListener("click", function(e){
     }
 });
 ```
+
+```js
+<section id="a">
+   <div data="one">one</div>
+      <br>
+      <div data="two">two</div>
+</section>
+
+    <script>
+   const section = document.getElementById("a");
+   section.onclick = function(e){
+     const getAttr = e.target.getAttribute("data");
+     console.log(getAttr);  
+    if(section.contains(e.target)) alert("Sou a section");
+    //todo click dentrro da section vai ser alertado
+   }
+ </script>
+```
+
 </details>
 
 <details>

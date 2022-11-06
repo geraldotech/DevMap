@@ -1,0 +1,54 @@
+header {
+  background: gray;
+  height: 200px;
+  width: 400px;
+  border: 3px solid black;
+}
+
+header p {
+  color: purple;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+header h1 {
+  color: mediumseagreen;
+  text-align: center;
+}
+
+p.main {
+  color: dodgerblue;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.test {
+  color: dodgerblue;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1 {
+  color: #7a1cb1;
+}
+
+.mat {
+  width: 50%;
+  background: crimson;
+}
+/*# sourceMappingURL=style.css.map */
