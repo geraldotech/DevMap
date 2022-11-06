@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        color-scheme:dark;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+      body{
+        max-width: 800px;
+        min-width: 220px;
+        margin: auto;
+        padding: 0 30px;    
+      }
+      p{
+          padding: 30px 0;
+      }
+      img{
+          width: 100%;
+      }
+  
+    </style>
+</head>
+<body>
+    <main>
+        <h3>width</h3>
+        <p>quando definir uma largura, esta nunca vai mudar, independente das condições</p>
+        <h1>Especificidade</h1>
+        <p>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+        </p>
+        <picture>
+            <source media="(max-width: 400px)" srcset="https://via.placeholder.com/250x250">
+                <img src="https://via.placeholder.com/650x250" alt="">
+            </picture>
+      
+           <p>
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+           </p>
+    </main>
+   <script>
+       const name = ["Geraldo", "CostAo", "Barrao", "Georgeo", "Aomeo","asoa","oplz"];
+
+
+//filter retona uma copia do arr, shallow copy/ vai retonrar os nome, pay to attetion no que está sendo solicitado;
+
+console.log(name.every(val => val.endsWith("o")));
+
+console.log(name.filter(val => val.endsWith("o")));
+// new: fil todos que termimam com a e z
+console.warn("novo",name.filter(val => ["a","z"].some(al => val.endsWith(al))));
+
+console.log(name.filter(val => ["G","B"].some(al => val.startsWith(al))));
+
+console.log("inclui o",name.every(el => el.includes("o")));
+
+console.log(name.filter(el => el.length >= 7));
+
+console.log(name.filter(el => el.includes("m")));
+
+console.log(name.filter(el => el.includes("al")));
+
+console.log(name.filter(el => el.includes("G")));
+
+console.log(name.filter(function(val, ind){
+  if(ind > 0){
+    return val.endsWith("o");
+  }
+}));
+
+
+console.log(["Geraldo","Georgeo"].every(al => name.includes(al)));
+
+
+
+   </script>
+</body>
+</html>

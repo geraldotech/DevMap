@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        color-scheme: dark;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      pre {
+        color: cornflowerblue;
+        line-height: 1.2rem;
+        font-size: 14px;
+      }
+      pre:hover{
+          color: darkcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fazer uma página header e footer from scratch com FlexBox</h1>
+
+    <h2>Definir o seguite html:</h2>
+    <pre>
+&lt;header contentEditable&gt;Header&lt;/header&gt;
+&lt;article contentEditable&gt;Content&lt;/article&gt;
+&lt;footer contentEditable&gt;Footer&lt;/footer&gt;
+    </pre>
+<h2>CSS</h2>
+    <pre>
+body{ min-height: 100vh; margin:0; }
+header{ min-height:50px; background:lightcyan; }
+footer{ min-height:50px; background:PapayaWhip; }
+/* The article fills all the space between header & footer */
+body{ display:flex; flex-direction:column; }
+article{ flex:1; }
+    </pre>
+    <a href="https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b">https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b</a>
+  </body>
+</html>

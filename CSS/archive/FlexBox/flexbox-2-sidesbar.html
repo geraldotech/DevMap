@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main,
+        header,
+        section,
+        footer,
+        article {
+        padding: 1rem;
+        }
+
+        body {
+            width: 100%;
+            max-width: 80rem;
+            margin: auto;
+            background: #1f242A;
+            color: #000000;
+        }
+        header,
+        footer {
+            background: #8ab9f3;
+        }
+
+        article,
+        aside {
+            background: rgb(255, 200, 200);
+            padding: 1rem;
+            text-align: justify;
+        }
+
+        section,
+        article,
+        footer,
+        aside {
+            margin-top: 2px;
+        }
+
+        section {
+            background: indigo;
+            color: #f2f2f2;
+        }
+
+        /*for desktops */
+        @media screen and (min-width: 650px) {
+            .container {
+                display: flex;
+            }
+
+            article {
+                max-width: 70%;
+            }
+
+            .sidebar2 {
+                margin-left: 2px;
+                width: 15%;
+                min-width: 150px;
+                flex-basis: 280px;
+            }
+
+            .sidebar {
+                margin-right: 2px;
+                width: 10%;
+                flex-grow: 1;
+                /*flex-grow esticar width 10% + 5% = 15% completando 100% */
+                /*flex: 0 1 300px;*/
+                flex-basis: 280px;
+                min-width: 150px;
+            }
+        }
+
+        /*for mobile orders for me */
+        @media screen and (max-width: 650px) {
+            .mobile {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .content {
+                order: 1;
+                background: rgb(255, 200, 200);
+
+            }
+
+            .sidebar {
+                background: cyan;
+                order: 2;
+
+            }
+
+            .sidebar2 {
+                order: 3;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>GERAS'blogs</h1>
+        </header>
+        <section class="head">section</section>
+
+        <div class="container mobile">
+            <aside class="sidebar">
+                <h1>sidebar</h1>
+                <p>this sidebar Stoicorum more nos vexat. Duo Reges: Stoicorum more nos vexat. Duo Reges: </p>
+            </aside>
+            <article class="content">
+                <h1>Mobile first</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus
+                    est exemplis hoc facere longius. At Zeno eum non beatum modo, sed etiam divitem dicere ausus est.
+                    Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Itaque quantum adiit
+                    periculum! ad honestatem enim illum omnem conatum suum referebat, non ad voluptatem. Ergo id est
+                    convenienter naturae vivere, a natura discedere. Esse enim quam vellet iniquus iustus poterat
+                    inpune. Tu enim ista lenius, hic Stoicorum more nos vexat. Duo Reges: constructio interrete.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius. At Zeno eum non beatum modo, sed etiam divitem dicere ausus est. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Itaque quantum adiit periculum! ad honestatem enim illum omnem conatum suum referebat, non ad voluptatem. Ergo id est convenienter naturae vivere, a natura discedere. Esse enim quam vellet iniquus iustus poterat inpune. Tu enim ista lenius, hic Stoicorum more nos vexat. Duo Reges: constructio interrete.
+                </p>
+            </article>
+            <aside class="sidebar2">
+                <h1>sidebar 2</h1>
+                <p>this sidebar Stoicorum more nos vexat. Duo Reges: Stoicorum more nos vexat. Duo Reges: </p>
+            </aside>
+        </div>
+        <footer>
+            <p>my footer</p>
+        </footer>
+    </main>
+</body>
+
+</html>

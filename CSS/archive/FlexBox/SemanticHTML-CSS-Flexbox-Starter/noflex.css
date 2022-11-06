@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+      
+}
+html {
+font-size: 100%;
+}
+
+aside,footer,header,main,section,article{
+    display:block;
+    margin:0;
+    padding:1.25rem;
+    border:1px solid #000;
+    color:#fff
+}
+main {
+    background: #000000;
+
+}
+
+header {
+    background: #03a9f4;
+}
+
+.welcome {
+    background: #d22b1f;
+}
+article {
+    background: #129a22;
+}
+aside{
+    border: 1px solid #000000;
+    background: #673ab7;
+}
+footer {
+    border: 1px solid #000000;
+    background: #616161;
+}

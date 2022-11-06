@@ -12,7 +12,15 @@
     - How to structure the DOM properly
 
 - ✔ CSS <a href="https://geraldotech.github.io/DevMap/CSS/" target="_blank">https://geraldotech.github.io/DevMap/CSS/</a>
-    - seletores, class, id
+
+    - Seletores / Especificidade, 
+        - style:inline
+        - id
+        - class
+        - tags
+    - Width / Height
+        -  max-width / min-width
+        -  max-height / min-height
     - DevTools
     - Box Model
         - Box-sizing
@@ -34,10 +42,7 @@
         - relative
         - absolute
         - fixed
-        - sticky
-    - Width / Height
-        -  max-width / min-width
-        -  max-height / min-height
+        - sticky   
     - margin / padding
     - @media queries
 

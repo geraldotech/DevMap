@@ -695,45 +695,56 @@ console.log(letter); // Geraldo, George
 /*
 _______________________EXERCICIOS_____________________________
 */
-const name = ["Geraldo", "CostAo", "Barrao", "Georgeo", "Aomeo"];
+const api = ["Geraldo", "CostAo", "Barrao", "Georgeo", "Aomeo","asoa","oplz"];
 
 // 1 - quero saber se todos terminam com a vogal "o":
-const o = name.every(el => el.endsWith("o"));
-console.log(o); // todos terminam com o // true
+const o = api.every(el => el.endsWith("o"));
+console.log(o); 
 
 // 2 - filter todos terminam com a vogal "o";
-console.log(name.filter(val => val.endsWith("o")));;
+console.log(api.filter(val => val.endsWith("o")));;
 
 // 3 - filter todos que começam com a letra G e B
-console.log(name.filter(val => ["G","B"].some(sum => val.startsWith(sum))));
+console.log(api.filter(val => ["G","B"].some(sum => val.startsWith(sum))));
 
-// 4 - filtrar a letra maiuscula A
-console.log(name.filter(val => ["A"].some(b => val.includes(b))));
+// 4 - filtrar a letra maiuscula A e l
+console.log(api.filter(val => ["A","l"].some(b => val.includes(b))));
+
+// filter a letra maisculas: A // only includes
+console.log(api.filter(val => val.includes("A")));
 
 // 5 - todos inclui "o"?
-console.log(name.every(el => el.includes("o")));
+console.log(api.every(el => el.includes("o")));
 
 // 6 - filter maior ou igual a 7
-console.log(name.filter(el => el.length >= 7));
+console.log(api.filter(el => el.length >= 7));
 
 // 7 - filter a letra m
-console.log(name.filter(val => ["m"].some(a => val.includes(a))));
+console.log(api.filter(val => ["m"].some(a => val.includes(a))));
+// poderia usar apenas includes!! api.filter(el => el.includes("m"))
 
 // 8 - filter quem inclui "al"
-console.log(name.filter(val => ["al"].some(e => val.includes(e))))
+console.log(api.filter(val => ["al"].some(e => val.includes(e))));
+//poderia usar apenas includes!
 
 // 9 - inclui "Aomeo"
-console.log(name.includes("Aomeo"));
+console.log(api.includes("Aomeo"));
 
 // 10 - encontrar alguem com a letra "G"
-console.log(name.find(val => val.startsWith("G")));
+console.log(api.find(val => val.startsWith("G")));
 
 // 11 - filtrar todos que terminam com "o", não incluir o primeiro item;
-console.log(name.filter(function(val, index){
+console.log(api.filter(function(val, index){
     if(index > 0){
       return val.endsWith("o")
     }
 }));
 
-// 12 - "Geraldo", "CostAo" existe na lista?
-console.log(["Geraldo", "CostAo"].every(val => name.includes(val)));
+// 12 - Todos esses existe na lista? "Geraldo", "CostAo"
+console.log(["Geraldo", "CostAo"].every(val => api.includes(val)));
+
+// 13 - Alguns desses tem na lista ? "Geraldo", "CostAo"
+console.log(api.some(al => ["Geraldo","CostAo"].includes(al)));
+
+// 14 - fil todos que termimam com a e z
+console.warn("novo",api.filter(val => ["a","z"].some(al => val.endsWith(al))));

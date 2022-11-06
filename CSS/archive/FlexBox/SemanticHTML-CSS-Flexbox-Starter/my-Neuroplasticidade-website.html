@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my website semantic</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0px;
+            padding: 0px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+        header, nav, main, article, footer, aside {
+            padding: 1.5rem;
+            display: block;
+        }
+     
+.box {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+      .img-flex{
+          width: 100%;
+          max-width: 50%;
+          margin: 0 5px;
+          border: 6px solid black;
+      }
+      .hero > p   {
+          margin-top: 8px;
+      }
+        .hero {
+            background: rgb(101, 111, 121);
+            padding: 1rem;
+           margin-bottom: 10px;
+        }
+        .hero >h1 {
+            font-size: 1.8rem;
+            color: #ffffff;
+        }
+     
+        .home {
+            background: dodgerblue;
+            padding: 1rem;
+        }
+        .content {
+            background: rgb(101, 111, 121);
+            font-size: 1.2rem;
+            padding: 12px;
+            margin: 20px 0px 20px 0;
+            color: #f2f2f2;
+            font-weight: bold;
+            
+        }
+        .content::before{
+            content:'✔';
+        }
+        header{
+            background: rgb(101, 111, 121);
+            padding: 20px;
+            font-size: 2rem;
+            text-align: center;
+        }
+        article{
+            background: gray;
+            text-align: justify;
+            line-height: 1.5rem;
+            margin-right: 1%;;
+        }
+        
+        aside {
+            background:  rgb(101, 111, 121);
+            
+        }
+        footer{
+            background: lightslategrey;
+        }
+       
+.wrapper {
+    max-width: 90rem;
+    margin: auto;
+}
+
+        .active{
+            background: rgb(41, 90, 97);
+        }
+       .topnav {
+            overflow: hidden;
+            background: #333;      
+        }
+       .topnav .icon{
+            display: none;
+        }
+        .topnav a {
+            display: block;
+            float: left;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            color: white;
+        }
+       .dropdown {
+           float: left;
+           overflow: hidden;
+       }
+       .dropdown .dropbtn{
+           outline: none;
+           border: none;
+           padding: 14px 15px;
+           background: inherit;
+           font-size: 16px;
+           font-family: ineherit;
+           color: white;
+       }
+       .dropdown .dropdown-content {
+           display: none;
+           position: absolute;
+           background:#333;
+           border-radius: 0px 5px;
+           min-width: 126px;
+           opacity: 0.9;
+           z-index: 1;
+       }
+       .dropdown-content a {
+           float: none;
+           text-align: left;
+           display: block;
+       }
+
+       .dropdown:hover .dropdown-content{
+           display: block;
+       }
+       .topnav a:hover , .dropdown:hover{
+           background: rgb(41, 90, 97);
+       }
+
+       .hero span a {
+          text-decoration: none;
+          color: white;
+          margin-top: 5px;
+       }
+     
+@media screen and (min-width:650px){
+        .container { 
+            display: flex;
+            
+        }
+        article {
+            flex:1;
+            text-align: justify;
+        }
+        aside {
+            flex: 0 1 250px;
+            background: rgb(101, 111, 121);          
+        }
+}
+    
+@media screen and (max-width:650px){
+    .topnav a:not(:first-child), .dropdown .dropbtn{
+        display: none;
+    }
+    .topnav a.icon{
+        display: block;
+        float: right;
+    }  
+
+}
+@media screen and (max-width:650px){
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        display: block;
+        float: none;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown{float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn{
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+<header>
+    <h1>JS</h1>
+</header>
+<nav>
+   <div class="topnav" id="mytopnav">
+       <a href="" class="active">HOME</a>      
+       <a href="">CSS</a>
+       <div class="dropdown">
+        <button class="dropbtn">DROPDOWN</button>
+        <div class="dropdown-content">
+            <a href="">A</a>
+            <a href="">B</a>
+            <a href="">C</a>
+        </div>
+               </div>
+       <a href="">ABOUT</a>
+       <a href="javascript:void(0);" style="font-size:15px" class="icon" onclick="callmenu()">&#9776;</a>
+   </div>
+</nav>
+<section class="home">
+    <h1>Masterpiece</h1>
+</section>
+<main>
+    <div class="container wrapper">
+    <article>
+        <div class="hero">
+            <h1>Neuroplasticidade</h1>
+            <span>Por:<a href="#">Wikipedia</a></span>
+        </div>
+        <p>
+            Neuroplasticidade, também conhecida como plasticidade neuronal ou plasticidade cerebral, refere-se à capacidade do sistema nervoso de mudar, adaptar-se e moldar-se a nível estrutural e funcional ao longo do desenvolvimento neuronal e quando sujeito é exposto a novas experiências.[1] Esta característica única faz com que os circuitos neuronais sejam maleáveis, sendo a base da formação da memória e da aprendizagem, bem como na adaptação à lesões e eventos traumáticos ao longo da vida.[2]
+        </p>
+        <section class="content">Tipos</section>
+    
+        <p>A neuroplasticidade é um processo coordenado, dinâmico e contínuo que promove a remodelação dos mapas neurosinápticos imediatamente e a médio e longo parzo, deforma a otimizar e/ou adaptar a função dos circuitos neuronais.[3] Esta remodelação envolve o estado basal da atividade neuronal e promove uma ruptura no balanço da atividade típica do cérebro, ao nível da libertação de neurotransmissores, morfogénese neural da e glial e, também, em mudanças na formação das redes neuronais.[4]
+
+            Assim, a plasticidade ocorre em variados níveis e inclui numerosos eventos, desde a abertura de certos canais íonicos que promovem despolarização das membranas dos neurônios, formação de potenciais de ação e a remodelação das estruturas sinápticas (nível celular/molecular). Além disso, a plasticidade leva à reorganização dos circuitos neuronais e mapas sinápticos a eles associados (nível de circuitos), criando conexões neuronais mais duradouras.</p>
+            <div class="box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Axo-axonic_synapse.svg/767px-Axo-axonic_synapse.svg.png" class="img-flex" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Axo-axonic_synapse.svg/767px-Axo-axonic_synapse.svg.png" class="img-flex" />
+            <br>
+        </div>
+    </article>
+    <aside>
+        <h2>Sidebar</h2>
+        encontrar muitos websites ainda na sua infância. Várias versões têm evoluído ao longo dos anos, por vezes por acidente, por vezes propositadamente (como no caso do humor).
+    </aside>
+</div>
+</main>
+
+<footer>
+    footer
+</footer>
+</body>
+<script>
+    function callmenu(){
+        var x = document.getElementById('mytopnav');
+        if(x.className === 'topnav'){
+            x.className += ' responsive';
+        } else {
+            x.className = 'topnav';
+        }
+    }
+</script>
+</html>
