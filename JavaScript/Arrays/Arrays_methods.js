@@ -710,9 +710,6 @@ console.log(api.filter(val => ["G","B"].some(sum => val.startsWith(sum))));
 // 4 - filtrar a letra maiuscula A e l
 console.log(api.filter(val => ["A","l"].some(b => val.includes(b))));
 
-// filter a letra maisculas: A // only includes
-console.log(api.filter(val => val.includes("A")));
-
 // 5 - todos inclui "o"?
 console.log(api.every(el => el.includes("o")));
 
@@ -748,3 +745,6 @@ console.log(api.some(al => ["Geraldo","CostAo"].includes(al)));
 
 // 14 - fil todos que termimam com a e z
 console.warn("novo",api.filter(val => ["a","z"].some(al => val.endsWith(al))));
+
+// 15 - filter a letra maisculas: A // only includes
+console.log(api.filter(val => val.includes("A")));
