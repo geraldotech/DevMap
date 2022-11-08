@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox - Flex</title>
+    <title>FlexBox - GSB</title>
     <link rel="stylesheet" href="../assets/style_flex.css">
 </head>
 <body>
    <header>
-        <h1>Entendendo o Flex Grow/Shrink/Basis</h1>
+        <h1>Entendendo o Flex Grow, Shrink e Basis</h1>
    </header>
     <div class="container">
-        <div class="box item-1" id="one"><p>1 - I am flex grow</p></div>
-        <div class="box item-2" id="two"><p>2 - I am flex grow</p></div>
-        <div class="box item-3" id="thre"><p>3 - I am flex shrink</p></div>
-        <div class="box item-4" id="four"><p>4 - I am flex basis</p></div>
+        <div class="box item-1" id="one">
+            <span>1</span>
+            <p>I am Flex Grow</p>
+        </div>
+        <div class="box item-2" id="two">
+            <span>2</span>
+            <p>I am Flex Grow</p>
+        </div>
+        <div class="box item-3" id="three">
+            <span>3</span>
+            <p>I am Flex Shrink</p>
+        </div>
+        <div class="box item-4" id="four">
+            <span>4</span>
+            <p>I am Flex Basis</p>
+        </div>
     </div>   
-<div class="container2">
-
-   
+<section class="cards">   
    <div class="menu">
     <h3>Flex Grow</h3>
     <p>valor inicial: 0</p>
@@ -29,7 +39,6 @@
     <p>1 - aumenta</p>
     <p>2 - aumenta++</p>    
    </div>
-
 
 <div class="menu">
     <h3>Flex Shrink</h3>
@@ -52,11 +61,11 @@
     <p>Define uma largura, mesmo já tendo uma largura definida anteriormente</p>
 </div>
 
-</div> <!--container 2-->
+</section> <!--container 2-->
       
    <footer>
       <div class="txt">
-        <p>Made with ❤ By <a href="https://github.com/geraldotech" target="_blank">GmapDev</a> - 2022</p>
+        <p>Made with ❤ By <a href="https://github.com/geraldotech" target="_blank">gmapDev</a> - 2022</p>
       </div>
    </footer>
 
@@ -76,7 +85,7 @@
             document.getElementById("two").style.flexGrow = val;
         }
         function getz(val){
-            document.getElementById("thre").style.flexShrink = val;
+            document.getElementById("three").style.flexShrink = val;
         }
         function gety(val){
             document.getElementById("four").style.flexBasis = val;
