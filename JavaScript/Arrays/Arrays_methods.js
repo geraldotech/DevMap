@@ -720,7 +720,7 @@ console.log(api.every(el => el.includes("o")));
 // 6 - filter maior ou igual a 7
 console.log(api.filter(el => el.length >= 7));
 
-// 7 - filter a letra "m"
+// 7 - filter quem inclui "m"
 console.log(api.filter(val => ["m"].some(a => val.includes(a))));
 // poderia usar apenas includes!! api.filter(el => el.includes("m"))
 
@@ -731,7 +731,7 @@ console.log(api.filter(val => ["al"].some(e => val.includes(e))));
 // 9 - inclui "Aomeo"
 console.log(api.includes("Aomeo"));
 
-// 10 - encontrar alguem com a letra "G"
+// 10 - encontrar o primeiro com a letra "G"
 console.log(api.find(val => val.startsWith("G")));
 
 // 11 - filtrar todos que terminam com "o", não incluir o primeiro item;
