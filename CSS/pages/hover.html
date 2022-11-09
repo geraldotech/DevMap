@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hover</title>
     <script src="https://unpkg.com/vue@3"></script>
-
     <style>
       div > p {
         display: none;
@@ -32,10 +31,8 @@
       .show:hover {
         color: red;
       }
-
-      /*add space na prox div*/
-      div + div{
-        padding: 50px 0;
+      hr{
+        margin: 30px 0;
       }
     </style>
   </head>
@@ -46,12 +43,11 @@
       <p>text here</p>
     </div>
 
-    
+    <hr>
 
     <div class="show">
       HOVER ME
       <div class="content">content goes here</div>
     </div>
-    <script src="main.js"></script>
   </body>
 </html>
