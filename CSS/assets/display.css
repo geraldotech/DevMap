@@ -1,7 +1,8 @@
 *{color-scheme:dark;}
 
 body{
-  margin: 0 100px;
+  margin: 0 20px;
+  min-height: 300px;
 }
 
 nav.menu_block a {
@@ -45,7 +46,10 @@ mark{
   display: block;
   padding: 10px;
   margin-bottom: 5px;
-  line-height: 2;  
+  line-height: 1.5;  
+  background: rgb(43, 34, 51);
+  color: aliceblue;
+  text-align: justify;
 }
 
 .footer{

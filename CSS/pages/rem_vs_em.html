@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sizing</title>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+
+      p:nth-child(1) {
+        font-size: 32px;
+      }
+
+      p:nth-child(2) {
+        font-size: 2rem;
+      }
+      div {
+        font-size: 10px;
+        border: 1px solid;
+      }
+      div > p:first-child {
+        font-size: 2em;
+        color: coral;
+      }
+    </style>
+  </head>
+  <body>
+
+    <section>
+        <ul>
+          <li>px - absolute</li>
+          <li>
+            rem - root-em relativo ao font-size do elemento html, default is 16px
+          </li>
+          <li>em - relativo ao body - geralmente 16px = 1em</li>
+          <li>W3C recomenda usar apenas px e em</li>
+        </ul>
+      </section>
+
+    <p>32px</p>
+    <p>2rem</p>
+
+    <div>
+      <p>2em - relative parent</p>
+    </div>
+
+  
+  </body>
+</html>
