@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      img {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+
+<div id="app">
+      <input type="text" v-model="name" />
+      <p>{{img_link}}</p>
+      <img :src="img_link" alt="">
+     
+        
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {         
+            name: "",
+            img_link: "",
+          };
+        },
+        methods: {
+          fillCompleteName() {
+            this.img_link = `https://gpnotes.droppages.com/img/${this.name}.jpg`;
+          },
+        },
+          watch:{
+            name() {
+              this.fillCompleteName();
+            }
+          }
+      }).mount(app);
+    </script>
+  </body>
+</html>

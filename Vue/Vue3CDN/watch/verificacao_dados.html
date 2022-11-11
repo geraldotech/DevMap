@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      div {
+        text-align: center;
+      }
+      input{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Verificação de dados</h1>
+    <div id="app">
+      <input type="text" v-model="login">
+            
+      <p>{{saida}}</p>
+      
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            login: "",
+            saida: ""
+          };
+        },
+        methods: {
+          opt1(){
+            this.saida = "one";            
+          },
+          opt2(){
+            this.saida = "two";
+          },
+        },
+        watch:{
+        login(){
+          if(this.login === '1') this.opt1();
+          if(this.login === '2') this.opt2();
+          //tbm é possivel sem methods
+          if(this.login === '5') this.saida = "Five";
+          if(!this.login) this.saida = ""; //if !direfence cleanHTML
+        }
+        }
+      }).mount(app);
+    </script>
+  </body>
+</html>

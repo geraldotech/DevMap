@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://technotesbr.blogspot.com/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      input {
+        position: absolute;
+        height: 20px;
+      }
+      label {
+        display: block;
+        padding-left: 25px;
+        line-height: 1.5;
+      }
+      div img {
+        width: 100%;
+        max-width: 60%;
+      }
+      #app {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="app">
+   
+      
+        <ul>
+          <li v-for="(item, index) in list" :key="item.id">
+           {{item.name}} - {{index}}
+          </li>
+        </ul>
+        
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {         
+            list:[
+            {id:1, name: 'Geraldo'},
+            {id:2, name: 'Felipe'},
+            {id:3, name: 'Milly'},
+            {id:4, name: 'Isa'},
+        ]}
+        },       
+      }).mount(app);
+    </script>
+  </body>
+</html>

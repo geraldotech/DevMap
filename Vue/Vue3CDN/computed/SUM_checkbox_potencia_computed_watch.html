@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://technotesbr.blogspot.com/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      input {
+        position: absolute;
+        height: 20px;
+      }
+      label {
+        display: block;
+        padding-left: 25px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Soma de checkbox</h1>
+    <div id="app">
+      <input type="checkbox" id="1" value="15" v-model="checked" />
+      <label for="1">15</label>
+      <input type="checkbox" id="2" value="25" v-model="checked" />
+      <label for="2">25</label>
+      <input type="checkbox" id="5" value="5" v-model="checked" />
+      <label for="5">5</label>
+
+      <p>{{checked}}</p>
+      <p>Sum: {{sum}}</p>
+      <p>2^{{checked}} = {{numero}}</p>
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            checked: [],
+            numero: ""
+          };
+        },
+        methods: {
+
+        },
+        watch: {
+          /*  login(){
+          if(this.login === '1') this.opt1();
+          if(this.login === '2') this.opt2();
+          //tbm é possivel sem methods
+          if(this.login === '5') this.saida = "Five";
+
+        }  */
+        checked(){
+          this.numero = this.checked.map((el) => 2** el); //converte para inteiro
+        }
+        },
+        computed: {
+          sum() {
+            return this.checked.reduce(
+              (total, value) => total + parseInt(value), //soma o value of checkbox
+              0
+            );
+            console.log(num);
+          },
+        },
+      }).mount(app);
+    </script>
+  </body>
+</html>

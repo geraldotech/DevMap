@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="https://unpkg.com/vue@3"></script> 
+<!-- <script src="dhttps://ddcdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <style>
+    :root{
+      color-scheme: dark;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div id="app">
+    <h1></h1>
+  <input type="text" v-model="name">
+    <p>{{full_name}}</p>
+  </div>
+
+<script>
+Vue.createApp({
+  data(){
+    return{
+      name:'',
+      full_name:'',
+    }
+  },
+    methods:{
+      NomeCompleto(){
+        this.full_name = this.name + "@hotmail.com";
+      }      
+    },
+    watch:{
+       name() {
+        this.NomeCompleto();
+       }
+     
+  }
+}).mount("#app");
+</script>
+</body>
+</html>

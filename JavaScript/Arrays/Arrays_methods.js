@@ -61,7 +61,7 @@ console.log(n);
 //inverter array
  fruits.reverse();
  
- // 10 - #includes - boolean returning true or false as appropriate - require entire "name"
+ // 10 - #includes - boolean returning true or false as appropriate - require entire "name" for Arrays - certain value among its entries
 const cars = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
 
 var x = cars.includes('BMW'); //true because exists
@@ -71,7 +71,7 @@ console.log(y);
 
 //includes e.g:2
 const cars = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
-let item = 'FIAT'; //item a ser procura
+let item = 'FIAT'; //item a ser procurado
 
 
 //includes e.g:3
@@ -83,7 +83,11 @@ if(x === true){
 } else{ //if false
   console.log('nao existe')
 }
-
+//for Strings shortnames works
+console.log("Geraldo".includes("Geraldo")); //true
+console.log("Geraldo".includes("Ge")); //true
+console.log("Geraldo".includes("ldo")); //true
+console.log("Geraldo".includes("Geldo")); // false - precisa ser exato
 
 //11 - #indexOf e.g: 1
 
@@ -612,7 +616,17 @@ console.log(myarr2); // (2) ['D', 'E']
 const lt = "Geraldo";
 console.log("hello", lt.repeat(10));
 
-
+/* [=============================================================================]
+25 - #startsWith() #endsWith() - for Strings
+*/ 
+console.log("Geraldo".startsWith("G")); //true
+console.log("Geraldo".endsWith("G")); //false
+//não apenas 1 letra
+console.log("Geraldo".startsWith("Ger")); //true
+console.log("Geraldo".endsWith("aldo")); //true
+//todas as letras
+console.log("Geraldo".startsWith("Geraldo")); //true
+console.log("Geraldo".endsWith("Geraldo")); //true
 
 /*______________________________["RESUMO"]__________________________________*/
 // #filter, #includes, #some, #every, #indexOf, #find, #forEach
@@ -733,6 +747,8 @@ console.log(api.includes("Aomeo"));
 
 // 10 - encontrar o primeiro com a letra "G"
 console.log(api.find(val => val.startsWith("G")));
+//alternative
+console.log(api.find(el => el.includes("G")));
 
 // 11 - filtrar todos que terminam com "o", não incluir o primeiro item;
 console.log(api.filter(function(val, index){
@@ -740,29 +756,38 @@ console.log(api.filter(function(val, index){
       return val.endsWith("o")
     }
 }));
+// alternative arrow
+console.log(api.filter((el, ind) => {
+  if(ind > 0 ) return el.endsWith("o");  
+}));
 
 // 12 - Todos esses itens existe na array ? ["Geraldo", "CostAo"]
 console.log(["Geraldo", "CostAo"].every(val => api.includes(val))); // true
 
-// 13 - Alguns desses itens tem no array ? ["Geraldo","Costa"]
+// 13 - Alguns desses itens tem no array ? ["Geraldo","CostAoo"]
 console.log(api.some(al => ["Geraldo","CostAoo"].includes(al)));
 
 // 14 - fil todos que termimam com a e z
 console.warn("novo",api.filter(val => ["a","z"].some(al => val.endsWith(al))));
+//alternative
+function vogais(el){
+  return ["a","z"].some(val => el.endsWith(val))
+ }
 
-// 15 - filter a letra maisculas: A
+
+
+// 15 - filter a letra "A"
 console.log(api.filter(val => val.includes("A")));
 
-// 16 - // get all names.length
+// 16 - get all names.length
 api.forEach((el, ind)=> {
   console.log(el.length)
 });
 
-// 17 - // find primeiro ele == 6
+// 17 - find primeiro ele == 6
 console.log(api.find(el => el.length == 6));
 
-
-// 18 - encontra element == 6 - pulando o primeiro que foi encontrado
+// 18 - encontrar o element == 6 - pulando o primeiro que foi encontrado
 console.log(api.find((el, ind) => { // em ves de: "CostAo", pega: "Barrao"
   if(ind > 1){
     return el.length = 6

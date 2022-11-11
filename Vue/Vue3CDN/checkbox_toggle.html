@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://technotesbr.blogspot.com/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+    <input type="checkbox" id="btn" v-model="btn">
+    <label for="btn">{{btn ? 'checked' : 'check'}}</label>
+      <p v-if="btn">VueJS</p>
+      <hr>
+      <button @click="btn2()">{{showMail ? 'Hide' : 'Show'}}</button>
+      <p v-show="showMail">geraldo.filho92@hotmail.com</p>
+
+      <input type="checkbox" v-model="btn" id="button">
+      <label for="button">Button same v-model</label>
+    </div>
+    <script>
+          Vue.createApp({
+        data() {
+          return {
+            btn: false,
+            showMail: false, 
+          };
+        },
+        methods:{
+          btn2(){
+            this.showMail = !this.showMail;
+          }
+        }
+      }).mount(app);
+    </script>
+  </body>
+</html>

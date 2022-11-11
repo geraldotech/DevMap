@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+
+      <p>{{2** 10}}</p>
+
+      <span>{{10 > 5}}</span>
+
+      <p>{{ 10 > 5 ? 'sim' : 'nao'}}</p>
+
+      <p>{{'VueJS'.split('').reverse().join('')}}</p>
+
+      <p>{{message.split('').reverse().join('')}}</p>
+      <input type="password" v-model="senha" placeholder="senha" 
+      v-on:focus="oioi()">
+      <!-- isso não funciona
+<p>{{if(senha) {return algo } }}</p> -->
+
+      <!-- use ternary expressions-->
+      <p>{{senha == '123' ? 'certo' : ''}}</p>
+      <p>{{senha == '12345' ? 'certo de novo' : ''}}</p>
+      <p>{{senha == '12' ? link : ''}}</p>
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            message: "gmapdev",
+            senha: '',
+            link: "https://github.com/geraldotech/DevMap"
+          }        
+        },methods:{
+          oioi(){
+            console.log("input click detected");
+          }
+        }
+      }).mount(app);
+    </script>
+  </body>
+</html>

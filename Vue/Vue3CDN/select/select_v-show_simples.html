@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://technotesbr.blogspot.com/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      input {
+        position: absolute;
+        height: 20px;
+      }
+      label {
+        display: block;
+        padding-left: 25px;
+        line-height: 1.5;
+      }
+      div img {
+        width: 100%;
+        max-width: 60%;
+      }
+      #app {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>VueJS - v-show</h1>
+    <code>v-show doens't support the <mark><u>template</u></mark></code>
+<p>In comparison, v-show is much simpler - the element is always rendered regardless of initial condition, with <mark>CSS-based toggling</mark>, read more in <a href="https://vuejs.org/guide/essentials/conditional.html#v-show">vuejs.org</a></p>
+    
+<div id="app">        
+      <select name="" id="" v-model="selected">
+        <option value="">Selecionar</option>
+        <option value="1">NetFlix</option>
+        <option value="2">Amazon Prime</option>
+      </select>
+      
+      <h1 v-show="selected == '1'">NetFlix</h1>
+      <h1 v-show="selected == '2'">Amazon Prime</h1>
+        
+    </div>
+    <script>
+Vue.createApp({
+    data(){
+        return {
+            selected: "",          
+        }
+    },
+}).mount(app);
+ </script>
+</body>
+</html>

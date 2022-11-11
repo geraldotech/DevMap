@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://technotesbr.blogspot.com/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      input {
+        position: absolute;
+        height: 20px;
+      }
+      label {
+        display: block;
+        padding-left: 25px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>VueJS</h1>
+    <div id="app">
+   
+        <select name="" id="select" v-model="selected">
+          <option value="">Selecionar</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+        </select>
+        <p>{{selected}} {{output}}</p>
+        
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            selected: "",
+            output: ""
+          };
+        },
+        methods: {
+
+        },
+        watch: {
+          selected(){
+            console.log(this.selected)
+            if(this.selected == "1"){
+             return this.output = "Um";
+            }
+            if(this.selected == "2"){
+             return this.output = "Dois";
+            }           
+          }      
+        },
+        computed: {
+       
+        },
+      }).mount(app);
+    </script>
+  </body>
+</html>

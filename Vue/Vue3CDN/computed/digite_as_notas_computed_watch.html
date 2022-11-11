@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      img {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Digite as notas</h1>
+    <div id="app">
+      <input type="number" v-model="n1" placeholder="your num" />
+      <input type="number" v-model="n2" placeholder="your num" />
+
+      <p>Nota 1: {{n1}}</p>
+      <p>Nota 2: {{n2}}</p>
+
+      <!-- <p v-show='soma'>{{sum}}</p> -->
+
+      <p>Soma: {{soma}}</p>
+      <p>Media: {{media}}</p>
+
+      <p v-show="errado">reprovado</p>
+   <p v-show="sucesso">APROVADO</p>
+
+<!--watch and call method -->
+            <p>{{ress}}</p>
+
+      <input type="text" v-model="name" />
+      <p>{{fullname}}</p>
+      <img :src="fullname" alt="">        
+
+      <button @click="changemsn()">change</button>
+      
+      
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            n1: "",
+            n2: "",           
+            name: "",
+            fullname: "",
+            message:"Welcome",
+            sucesso:false,
+            errado: false,
+            ress: ''
+          }
+        },
+        created(){
+        
+        },
+        methods: {
+          pegamedia(){
+            this.media >= 6 ? this.ress = 'aprovado' : this.ress = 'reprovado';
+          },
+          fillCompleteName() {
+            this.fullname = `https://gpnotes.droppages.com/img/` + this.name ;
+          },
+         changemsn(){
+            this.media = '';
+           if(this.media >= 6){
+            this.sucesso = true;            
+           } else {
+            this.errado = true;
+            this.sucesso = false;
+            
+           }
+          },           
+        },
+        computed: {
+
+          soma() {
+            return this.n1 + this.n2;
+          },
+          media() {
+            return (this.n1 + this.n2) / 2;
+          },
+          aprovado() {
+            return this.media >= 6;            
+          },
+          reprovado() {
+            return this.media < 6;
+          },
+          },
+         watch:{
+            media() {
+            console.log('mudou');
+            this.pegamedia();
+            },
+
+          }
+      }).mount(app);
+    </script>
+  </body>
+</html>

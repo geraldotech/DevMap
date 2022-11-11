@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+  <div id="app">
+    <form id="form_app">
+      <label for="code">Code:</label>
+      <input type="text" v-model="input_name" id="code" placeholder="your name">   
+  </form>
+      
+       <p>Welcome: {{name}}</p>
+       <p>Data bind: {{input_name}}</p>
+       <p v-show="input_name ==='123'">{{res}}</p>
+       <p v-if="input_name === '789'">v-if</p>
+   
+    
+                </div>
+<script>
+Vue.createApp({
+  data(){
+    return {
+      name: "Geraldo",
+      input_name: "",    
+      res: 'v-show - acertou input value',
+    }
+  },
+  methods: {
+    submitForm(e){      
+      this.name = this.input_name;
+    },
+}
+  }).mount('#app');
+  
+</script>
+</body>
+</html>

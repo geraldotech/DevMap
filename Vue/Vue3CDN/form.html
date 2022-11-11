@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Vue 3.1.1 CDN</title>
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <h1>Vue 3.1.1 CDN</h1>
+<div id="app">
+    <form>
+        <input type="text" v-model="input_name" placeholder="your name">
+        <input type="submit" value="Enviar" v-on:click="submitForm">
+    </form>
+    <p>Meu nome é {{name}}</p>
+    <p>Data bind: {{input_name}}</p>
+</div>
+<script>
+    const meuapp = {
+  data(){
+    return {
+      name: "Geraldo",
+      input_name: "",
+    }
+  },
+  methods: {
+    submitForm(e){
+      e.preventDefault();
+      //console.log('here')
+      this.name = this.input_name;
+    }
+  }
+}
+Vue.createApp(meuapp).mount(app);
+</script>
+</body>
+</html>

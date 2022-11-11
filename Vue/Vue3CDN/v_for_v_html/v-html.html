@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://technotesbr.blogspot.com/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <textarea id="area" type="text" placeholder="your html code" v-model="code" rows="5" cols="50" contenteditable="true">
+      </textarea>      
+      <p v-html="code"></p>
+      <p>{{code}}</p>
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            code: "<p>oi</p>",
+            padrao: "22",
+           
+          };
+        },
+        watch:{
+          code(){
+            console.log("mudou");
+          }
+        }
+      }).mount(app);
+    </script>
+
+    <script>
+      area.onclick = function () {
+        inject();
+      };
+      function inject() {
+        document.querySelector("textarea").value = `<h1 class="red">geraldo</h1>
+        <a href="#">link </a>
+<h2 style="color: coral"> gmapdev</h2>`;
+      }
+    </script>
+  </body>
+</html>
