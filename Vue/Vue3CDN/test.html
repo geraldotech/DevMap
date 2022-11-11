@@ -15,31 +15,43 @@
       :root {
         color-scheme: dark;
       }
-      div img {
-        width: 100%;
-        max-width: 30%;
-      }
+
     </style>
   </head>
   <body>
+    <section id="app">
 
-    <div id="app">
-     <input type="checkbox" v-model="mostrar" id="1">
-     <label for="1">{{mostrar ? 'check' : 'uncheck'}}</label>
-        <p v-show="mostrar">hello</p>
-    </div>
-  
+        
+      <input type="text" @change="handleChange" />
+
+
+      <select name="" id="" @change="handleChange">
+        <option value="1">one</option>
+        <option value="2">two</option>
+      </select>
+      <p v-if="opt.bar">foo</p>
+      <p v-if="opt.lago">lado</p>
+      
+    </section>  
     <script>
-  Vue.createApp({
-    data(){
-      return{
-        mostrar: '',
-
-      }
-    },methods:{
+Vue.createApp({
+  data(){
+    return{
+      nome:"",
+      opt: { bar: false, lago: false}
+    }
+  },methods:{
+    handleChange(event){         
+          
+    this.opt.forEach(val => this.val = false);
+    const selel = event.target.value;   
+       console.log(selel);
+       if(selel == 1) this.opt.bar = true;
+       if(selel == 2) this.opt.lago = true;
      
-    },
-  }).mount(app);
+       }
+  }
+}).mount(app);
     </script>
   </body>
 </html>

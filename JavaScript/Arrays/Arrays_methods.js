@@ -774,8 +774,6 @@ function vogais(el){
   return ["a","z"].some(val => el.endsWith(val))
  }
 
-
-
 // 15 - filter a letra "A"
 console.log(api.filter(val => val.includes("A")));
 
@@ -788,7 +786,7 @@ api.forEach((el, ind)=> {
 console.log(api.find(el => el.length == 6));
 
 // 18 - encontrar o element == 6 - pulando o primeiro que foi encontrado
-console.log(api.find((el, ind) => { // em ves de: "CostAo", pega: "Barrao"
+console.log(api.find((el, ind) => { // em vez de: "CostAo", pega: "Barrao"
   if(ind > 1){
     return el.length = 6
   }
