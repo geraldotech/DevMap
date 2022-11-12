@@ -20,36 +20,30 @@
   </head>
   <body>
     <section id="app">
-
-        
-      <input type="text" @change="handleChange" />
-
-
-      <select name="" id="" @change="handleChange">
-        <option value="1">one</option>
-        <option value="2">two</option>
-      </select>
-      <p v-if="opt.bar">foo</p>
-      <p v-if="opt.lago">lado</p>
-      
+      <select name="" id="" v-model="opt">
+        <option value="">selecionar</option>
+        <option value="checkbox/carriers/index.html">carries checkbox</option>
+        <option value="Filter_checkbox_sum_mult_gmap.html">Filter_checkbox_sum_mult_gmap</option>
+      </select>      
+      <div>
+        <a :href="link" target="_blank">{{link}}</a>
+      </div>
     </section>  
     <script>
 Vue.createApp({
   data(){
     return{
-      nome:"",
-      opt: { bar: false, lago: false}
+        opt:'',
+        link:''
     }
   },methods:{
-    handleChange(event){         
-          
-    this.opt.forEach(val => this.val = false);
-    const selel = event.target.value;   
-       console.log(selel);
-       if(selel == 1) this.opt.bar = true;
-       if(selel == 2) this.opt.lago = true;
-     
-       }
+      completePage(){
+        this.link = `https://geraldotech.github.io/DevMap/JavaScript/input/${this.opt}`
+      }
+  },watch:{
+    opt(){
+      this.completePage();
+    }
   }
 }).mount(app);
     </script>
