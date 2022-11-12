@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test sha</title>
+    <style>
+:root{
+  color-scheme: dark;
+}
+a{
+  display: block;
+}
+  </style>
+  </head>
+  <body>
+
+  <div id="res"></div>
+
+
+    <script>
+// novo way 2 de pegar o ultimo sha
+const api = "https://api.github.com/repos/geraldotech/DevMap/git/trees/main"; //url arvore main
+
+async function get(url){
+const response = await fetch(url);
+
+const data = await response.json();
+if(data){
+  console.log(data.tree);
+  const javas = data.tree.filter(val => val.path == "JavaScript"); // filter javascript.path
+  console.log('filter', javas[0].sha); // get last sha do path filtered
+  
+  
+pastaInput(javas[0].sha); //chama fun e envia ultimo asha
+//pasta(ultimosha);
+}
+}
+
+get(api);
+
+async function pastaInput(sha){
+  const js = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sha}`; //ulr para acesse a pasta do ultimo sha filtrado
+  const resposta = await fetch(js);
+  const dados = await resposta.json();
+  const filInput = dados.tree.filter(val => val.path == "input");
+  console.log(filInput);
+  console.log(filInput[0].sha); // get input sha
+  checkbox(filInput[0].sha);
+}
+
+
+async function checkbox(sha){
+  const sks = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sha}`;
+  const resposta3 = await fetch(sks);
+  const dados3 = await resposta3.json();
+ const filtraBox = dados3.tree.filter(val => val.path == "checkbox").map(a => a.sha).join(''); //filtra o path checkbox, pega o sha e transforma em inteiro com o join
+  console.log(filtraBox);
+  
+  
+  input(filtraBox);
+}
+
+
+async function input(sh){
+  const jsin = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sh}`
+  const dados3 = await fetch(jsin);
+  const dadosR = await dados3.json();
+  console.log(dadosR);
+  const temhtml = dadosR.tree.filter(val => val.path.includes("html"));
+  console.log('saida', temhtml);
+
+  document.getElementById("res").innerHTML = temhtml.map((val) => {
+    const full_link = `https://geraldotech.github.io/DevMap/JavaScript/input/checkbox/`;
+    return `<a href="${full_link}${val.path}" target="_blank">${full_link}${val.path}`
+  }).join("")
+};
+
+</script>
+  </body>
+</html>
