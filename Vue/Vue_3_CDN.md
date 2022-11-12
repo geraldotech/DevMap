@@ -65,7 +65,7 @@ title get a variavel message
 >> (parenteses são dispensáveis)
 - `<button v-on:click="hello()">hello</button>` 
 - `<button @click="msn">btn</button>`   
-  - @[event]
+  - @[event] [REF](https://vuejsbr-docs-next.netlify.app/guide/template-syntax.html#abreviacao-de-v-bind)
     -  <input type="text" @change="handleChange" />
     -  <input type="text" @click="handleChange" />
     -  <input type="text" @mouseover="handleChange" />

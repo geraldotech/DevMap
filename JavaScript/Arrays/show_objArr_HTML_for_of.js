@@ -21,3 +21,16 @@ lista.map((el) => {
   rooting.innerHTML = lista.map((a) => {
     return `<code>${a.name} : ${a.age} </code>`
   }).join("");
+
+
+/* [============================[for of in Arrays]============================] */
+
+//pegando os index de um array
+for(let index of arr.keys()){
+  console.log(index);
+}
+
+//apenas os valores
+for(let value of lista){
+  console.log(value);
+}
