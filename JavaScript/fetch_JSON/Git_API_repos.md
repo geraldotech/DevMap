@@ -13,11 +13,12 @@ A resposta será um array de todos os repos, para pegar um repo especifico só c
 getting repos: url
 
 ```js
+
+//sha provalmente sempre mudam a cada novo commit
 // API do repo `DevMap` 
 https://api.github.com/repos/geraldotech/DevMap/
 
-
-//pegar o sha subpasta direct
+//pegar o sha subpastas direct
 https://api.github.com/repos/geraldotech/DevMap/git/trees/main
 
 //completar o sha aqui
@@ -25,15 +26,24 @@ https://api.github.com/repos/geraldotech/DevMap/git/trees/{sha}
 //.then fetch (https://api.github.com/repos/geraldotech/DevMap/git/trees/661cc2358c0741d654f6afb1620f65cc9b4b003b)
 
 
-//pegar o sha repo > pasta por pasta
+//pegar o sha repo pasta por pasta
 https://api.github.com/repos/geraldotech/visa/git/refs
 
 // adicionar o sha
-https://api.github.com/repos/geraldotech/DevMap/git/trees/sha
+https://api.github.com/repos/geraldotech/DevMap/git/trees/{sha}
 
 //na response chamar 
 console.log(data.tree);
 //o retorno será um array com todas as subpastas, basta chamar por data.tree[0]
+
+//pegar o provavel ultmo sha - a testar
+cosole.log(data.tree[0].sha);
+
+
+//pegar sempre o ultimo sha
+1 - https://api.github.com/repos/geraldotech/DevMap/git/trees/main
+2 - console.log(data.tree[0]);
+3 - console.log(data.tree[0].sha);
 
 ```
 
