@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox</title>
+    <style>
+        :root{
+  color-scheme: dark;
+}
+label, input{
+  cursor: pointer;
+}
+input{
+  margin: 10px 10px;
+}
+ul li{
+  list-style: none;
+}
+.ok {
+  color: dodgerblue;
+  font-size: 1.2rem;
+}
+
+    </style>
+  </head>
+  <body>
+    <button>Toggle</button>
+    <button id="clean">Clear</button>
+   
+<ul>
+  <li><input type="checkbox" name="" id="1">   
+    <label for="1">One</label>
+  </li>
+       
+   <li>
+    <input type="checkbox" name="" id="2">   
+    <label for="2">Two</label>
+    
+   </li>
+  <li>
+    <input type="checkbox" name="" id="3">   
+    <label for="3">Three</label>
+  </li>
+</ul>
+
+<div>
+  <p id="all">nenhum checkbox marcado</p>
+</div>
+
+    <script>
+const btn = document.querySelector("button");
+const inputs = document.querySelectorAll("input[type='checkbox']");
+const btnClean = document.querySelector("#clean");
+
+inputs.forEach((el) => {
+  el.addEventListener("click", pegaopt)
+});
+
+
+btn.addEventListener("click", () => {
+  for(let current of inputs){
+    current.checked = !current.checked;
+  }
+  pegaopt(); // chama a principal funcao
+})
+
+function pegaopt(){
+  const opt = Array.from(inputs).filter(val => val.checked).map(a => +a.id);
+  console.log(opt);
+  todos(opt);
+  clean(opt);
+}
+
+function todos(al){
+  const to = [1,2,3].every(el => al.includes(el));
+  console.log(to);
+  if(to){
+    all.textContent = "Todos os checkboxs foram marcados!";   
+    all.classList.add("ok");
+    
+  }  else{
+    all.textContent = "Marcando checkbox!";  
+    all.classList.remove("ok");    
+  }
+}
+function clean(al){
+    if(al.length == 0){   
+      all.textContent = "nenhum checkbox marcado";   
+    } 
+}
+//clean checkbox
+btnClean.onclick = function(){
+  for(let current of inputs){
+    current.checked = false;
+  }
+  pegaopt();
+}
+
+
+
+
+
+    </script>
+  </body>
+</html>

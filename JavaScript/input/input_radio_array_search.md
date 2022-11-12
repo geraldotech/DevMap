@@ -61,7 +61,7 @@
 </details>
 
 <details>
-<summary>HTML</summary>
+<summary>CSS</summary>
 
 ```css
 body{
