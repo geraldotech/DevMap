@@ -56,8 +56,7 @@ async function checkbox(sha){
   const resposta3 = await fetch(sks);
   const dados3 = await resposta3.json();
  const filtraBox = dados3.tree.filter(val => val.path == "checkbox").map(a => a.sha).join(''); //filtra o path checkbox, pega o sha e transforma em inteiro com o join
-  console.log(filtraBox);
-  
+  console.log(filtraBox); 
   
   input(filtraBox);
 }
