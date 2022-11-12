@@ -15,19 +15,22 @@
       :root {
         color-scheme: dark;
       }
-
+      
     </style>
   </head>
   <body>
+    <h1>VueJS Loader GitHub examples</h1>
     <section id="app">
       <select name="" id="" v-model="opt">
         <option value="">selecionar</option>
         <option value="checkbox/carriers/index.html">carries checkbox</option>
-        <option value="Filter_checkbox_sum_mult_gmap.html">Filter_checkbox_sum_mult_gmap</option>
+        <option value="checkbox/Filter_checkbox_sum_mult_gmap.html">Filter_checkbox_sum_mult_gmap</option>
+        <option value="checkbox/checkbox_toggle.html">checkbox_toggle.html</option>
       </select>      
       <div>
         <a :href="link" target="_blank">{{link}}</a>
       </div>
+      <iframe :src="link" width="100%" height="800px" frameborder="0"></iframe>
     </section>  
     <script>
 Vue.createApp({
