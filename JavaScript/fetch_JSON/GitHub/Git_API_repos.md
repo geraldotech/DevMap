@@ -36,7 +36,7 @@ https://api.github.com/repos/geraldotech/DevMap/git/trees/{sha}
 console.log(data.tree);
 //o retorno será um array com todas as subpastas, basta chamar por data.tree[0]
 
-//pegar o provavel ultmo sha - a testar
+//pegar o provavel ultimo sha - a testar
 cosole.log(data.tree[0].sha);
 
 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+:root{
+  color-scheme: dark;
+}
+
+  </style>
+  </head>
+  <body>
+
+<div id="res"></div>
+
+
+    <script>
+/* const rad = document.querySelectorAll("input[type='radio']");
+console.log(rad);
+
+console.log(form.opt[0].value);
+
+form.opt.onclick = function(){
+  console.log(form.opt.value);
+}; */
+
+//git api
+
+// 1const api = "https://api.github.com/users/geraldotech/repos";
+//const api = "https://api.github.com/repos/geraldotech/DevMap";
+const api = "https://api.github.com/repos/geraldotech/DevMap/git/trees/main";
+
+async function get(url){
+const response = await fetch(url);
+
+const data = await response.json();
+if(data){
+  console.log(data.tree);
+  console.log(data.tree[1]); // get last sha
+  const ultimosha = data.tree[1].sha; // get last sha of JavaScript folder
+  console.log('sha Js folder', ultimosha); 
+  console.log(data.tree[1]);
+show(data);
+pasta(ultimosha);
+}
+}
+
+
+function show(data){
+  //const arr = [];
+  //arr.push(data.tree);
+  //console.log(arr[0]);
+  //console.log(arr[0].filter(val => val.path === "Less"));
+  //console.log(data.tree[25].filter(val => val.path === "Less"));
+ // console.log(data.tree[25].filter(val => val.path.includes("html")));
+  }
+
+get(api);
+
+async function pasta(sha){
+  const js = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sha}`
+  const resposta = await fetch(js);
+  const dados = await resposta.json();
+  const inputF = dados.tree[25].sha;
+  console.log('sha input', inputF); //ultimo sha dessa pasta input
+  input(inputF);
+}
+
+async function input(sh){
+  const jsin = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sh}`
+  const dados3 = await fetch(jsin);
+  const dadosR = await dados3.json();
+  console.log(dadosR);
+  const temhtml = dadosR.tree.filter(val => val.path.includes("html"));
+  console.log('saida', temhtml);
+  console.log('saida', temhtml[0].path);
+  console.log('saida', temhtml[1].path);
+  //document.getElementById("res").innerHTML += `<a href="${temhtml.path}">${temhtml[1].path}</a>`;
+  document.getElementById("res").innerHTML = temhtml.map((val) => {
+    const full_link = `https://geraldotech.github.io/DevMap/JavaScript/input/`;
+    return `<a href="${full_link}${val.path}" target="_blank">${full_link}${val.path}</a>`
+  })
+};
+
+</script>
+  </body>
+</html>
