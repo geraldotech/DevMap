@@ -24,3 +24,8 @@ num.forEach(multiplicar); //2,4,8,10,12,14,16,20
 
 //4 display ind and ele
 num.forEach((ele, ind) => console.log(ind + ":" + ele));
+
+//get arr index, values
+const api = ["Geraldo", "CostAo", "Barrao"];
+api.forEach((val,ind) => console.log(ind, val)); // index, value, 
+api.forEach((val,ind) => console.log(ind, val.length)); //  index, value.length

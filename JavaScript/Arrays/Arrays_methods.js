@@ -628,6 +628,11 @@ console.log("Geraldo".endsWith("aldo")); //true
 console.log("Geraldo".startsWith("Geraldo")); //true
 console.log("Geraldo".endsWith("Geraldo")); //true
 
+/* [=============================================================================]
+25 - #forEach
+*/ 
+//checkout in https://github.com/geraldotech/DevMap/blob/main/JavaScript/forEach.js
+
 /*______________________________["RESUMO"]__________________________________*/
 // #filter, #includes, #some, #every, #indexOf, #find, #forEach
 

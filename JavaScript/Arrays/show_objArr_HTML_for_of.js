@@ -32,5 +32,5 @@ for(let index of arr.keys()){
 
 //apenas os valores
 for(let value of lista){
-  console.log(value);
+  console.log(value); // works with length: console.log(ind.length); 
 }
