@@ -67,7 +67,7 @@ sudo service nginx status
 
 ```
 
-<img src="./assets/img00001.PNG" style="width:50%">
+<img src="./assets/img00001.PNG" style="width:0%">
 
 # FileZila setup
 
@@ -91,18 +91,18 @@ set permission: `sudo chmod -R 777 nodeapp` e fazer o upload de todo o conteúdo
 
 Abrir portas 3000 e 5000 ir em:
 
-<img src="./assets/img00005.PNG" style="zoom:50%"> 
+<img src="./assets/img00005.PNG" style="width:50%"> 
 
 add
 
-<img src="./assets/img00006.PNG" style="zoom:50%"> 
+<img src="./assets/img00006.PNG" style="width:50%"> 
 
 run app  
 
-<img src="./assets/img00007.PNG" style="zoom:65%"> 
+<img src="./assets/img00007.PNG" style="width:65%"> 
 
 . 
-<img src="./assets/img00008.PNG" style="zoom:50%"> 
+<img src="./assets/img00008.PNG" style="width:50%"> 
 
 PM2
 
@@ -112,7 +112,7 @@ gerenciador de processos
 
 Checkout digite: `pm2`
 <div style="text-align:center">
-<img src="./assets/img00009.PNG" style="zoom:60%;"> 
+<img src="./assets/img00009.PNG" style="width:60%;"> 
 </div>
 
 
@@ -120,7 +120,7 @@ How pm2: `cd /var/nodeapp`
 
 pm start: `pm2 start index.js`
 
-<img src="./assets/img00010.PNG" style="zoom:60%;"> 
+<img src="./assets/img00010.PNG" style="width:60%;"> 
 
 Display window currently process: 
  `pm2 status`
@@ -128,7 +128,7 @@ Display window currently process:
  Display real time process:
  `pm2 log` 
 
- <img src="./assets/img00011.PNG" style="zoom:60%;"> 
+ <img src="./assets/img00011.PNG" style="width:60%;"> 
 
  Stop `pm2 stop index.js`
 
@@ -152,11 +152,11 @@ Display window currently process:
 
 ```
 
- <img src="./assets/img00012.PNG" style="zoom:60%;"> 
+ <img src="./assets/img00012.PNG" style="width:60%;"> 
 
  original
 
-  <img src="./assets/img00013.PNG" style="zoom:60%;"> 
+  <img src="./assets/img00013.PNG" style="width:60%;"> 
 
   restart 
   `sudo service nginx restart`
