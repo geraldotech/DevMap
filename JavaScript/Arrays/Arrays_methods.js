@@ -157,7 +157,8 @@ console.log(ranks.findIndex((val, ind) => {
     // > ou != if(ind != 2) return val === 7
 }));
 
-
+// shorthand 
+console.log(ranks.findIndex((val, ind) => ind > 2 && val === 7)); //5
 
 
 /*
@@ -424,7 +425,7 @@ function check(age){
 }
 console.log(ages.some(check)); //maior de 18? true
 
-//arrow function direct inline 
+//arrow function direct shorthand 
 console.log(ages.some(el => el < 18)); //tem alguém menor de idade na lista? true 
 
 //e.g
@@ -783,7 +784,7 @@ console.log(api.find(val => val.startsWith("G")));
 //alternative
 console.log(api.find(el => el.includes("G")));
 
-// 11 - filtrar todos que terminam com "o", não incluir o primeiro item;
+// 11 - filtrar todos que terminam com "o", não incluir o primeiro item, neste caso o index[0]:
 console.log(api.filter(function(val, index){
     if(index > 0){
       return val.endsWith("o")
@@ -794,14 +795,18 @@ console.log(api.filter(function(val, index){
 console.log(api.filter((el, ind) => {
   if(ind > 0 ) return el.endsWith("o");  
 }));
-
-// curiosidade: alternative indicando o proprio value
+/*-*[=============================================================================]*-*/
+// SUPER DICA: alternative indicando o proprio value
 console.log(api.filter(val => {
   if(val != "Geraldo") return val.endsWith("o");
 }));
 
+//shorthand filter exceto sem index usando value
+console.log(api.filter(val => val != "Geraldo" && val.endsWith("o")));
 
-/*get auto index 
+
+/*-*[=============================================================================]*-*/
+/* getting auto index 
 
 **duas alternativas** neste caso onde é passado uma condição 
 */
@@ -813,17 +818,17 @@ console.log(api.filter((val, ind) => {
   if(ind != pegain) return val.endsWith("o");
 }));
 
-//mesmo resultado inline
+//mesmo resultado shorthand
 console.log(api.filter((val, ind) => val.endsWith("o") && ind != pegain));
 
 
-// 12 - Todos esses itens existe na array ? ["Geraldo", "CostAo"]
+// 12 - Todos esses itens existe no array ? ["Geraldo", "CostAo"]
 console.log(["Geraldo", "CostAo"].every(val => api.includes(val))); // true
 
 // 13 - Alguns desses itens tem no array ? ["Geraldo","CostAoo"]
 console.log(api.some(al => ["Geraldo","CostAoo"].includes(al)));
 
-// 14 - fil todos que termimam com a e z
+// 14 - filter todos que termimam com a e z
 console.warn("novo",api.filter(val => ["a","z"].some(al => val.endsWith(al))));
 //alternative
 function vogais(el){
@@ -833,7 +838,7 @@ function vogais(el){
 // 15 - filter a letra "A"
 console.log(api.filter(val => val.includes("A")));
 
-// 16 - get all names.length
+// 16 - Get all names.length
 api.forEach((el, ind)=> {
   console.log(el.length)
 });
@@ -858,7 +863,7 @@ console.log(api.find((val, ind) => { //Barrao
  if(ind > primeiro()) return val.length == 6
 }));
 
-//alternative inline
+//alternative shorthand
 console.log(api.find((val, ind) => val.length == 6 && ind != primeiro()));
 
 
@@ -887,6 +892,10 @@ const indItem = itens.findIndex(achaInd);
 console.log(indItem); // 2
 
 
+// retorna todos que inclui html exceto o index do indItem
 console.log(itens.filter((val, ind) => {
-  if(ind != indItem) return val.includes("html"); // retorna todos que inclui html exceto o index do indItem
-}));
+  if(ind != indItem) return val.includes("html")
+}));  
+  
+// retorna todos que inclui html exceto o index do indItem - shorthand
+  console.log(itens.filter((val, ind) => val.includes("html") && ind != indItem));
