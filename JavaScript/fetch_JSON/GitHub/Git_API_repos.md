@@ -1,6 +1,5 @@
 ## GitAPI
 
-
 Fetch all repos
 
 ```js

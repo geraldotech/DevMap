@@ -657,6 +657,9 @@ console.log(btnSection.innerHTML); //"btn inside section"
 // querySelector selecionando um segundo button inside tags, adicionar um "name" ou "data"
 const sbtn = document.querySelector("section button[data='btn2']");
 console.log(sbtn);
+// querySelector selecionando class e tag dentro dessa classe
+const el = document.querySelector(".secao span"); 
+el.textContent = "novo";
 
 
 // querySelectorAll - support forEach
@@ -670,7 +673,18 @@ link.forEach(el => {
   el.href = "http://technotesbr.blogspot.com";  
   el.setAttribute("target","_blank");
   el.setAttribute("title","open new tab");
-})
+});
+
+// querySelectorAll - selecionando by index
+<section>
+  <span>[0]</span>
+</section>
+
+<section>
+  <span>[1]</span>
+</section>
+
+document.querySelectorAll("section span")[1];
 
 ```
 </details>

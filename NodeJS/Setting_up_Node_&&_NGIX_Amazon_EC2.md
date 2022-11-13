@@ -67,23 +67,23 @@ sudo service nginx status
 
 ```
 
-<img src="./assets/img00001.PNG" style="zoom:80%">
+<img src="./assets/img00001.PNG" style="width:50%">
 
 # FileZila setup
 
 SFTP, host, user, password: `<empty>`
 
-<img src="./assets/img00002.PNG" style="zoom:50%">
+<img src="./assets/img00002.PNG" style="width:50%">
 
 Add key.pem
 
-<img src="./assets/img00003.PNG" style="zoom:50%">
+<img src="./assets/img00003.PNG" style="width:50%">
 
 done! just connect.
 
 Login via SSH directory => /var  sudo mkdir nodeapp 
 
-<img src="./assets/img00004.PNG" style="zoom:50%">
+<img src="./assets/img00004.PNG" style="width:50%">
 
 set permission: `sudo chmod -R 777 nodeapp` e fazer o upload de todo o conteúdo
 

@@ -53,6 +53,9 @@ fetch('https://api.github.com/users/geraldotech')
 .then((retornoAPI)=>{
   console.log('Retorno', retornoAPI);
 })
+
+//pega status
+console.log('Retorno', retornoAPI.status);
 ```
 
 Modo console e IDE 2.json
@@ -61,14 +64,7 @@ fetch('https://api.github.com/users/geraldotech')
 .then(res => res.json())
 .then(resFinal => console.log(resFinal))
 ```
-pega.status
 
-```js
-fetch('https://api.github.com/users/geraldotech')
-.then((retornoAPI)=>{
-  console.log('Retorno', retornoAPI.status);
-})
-```
 
 O retorno é importante demais, jogue na IDE
 
@@ -143,7 +139,7 @@ Display infos from pinned Git
 
 ```js
 async function getgit(info){
-const repos = await fetch('https://gh-pinned-repos.egoist.sh/?username=geraldotech')
+const repos = await fetch('https://gh-pinned-repos.egoist.dev/?username=geraldotech')
 .then(res => res.json())
 .then(resff => console.log(resff))
 }

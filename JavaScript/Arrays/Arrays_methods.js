@@ -141,6 +141,25 @@ const num = [1,30,40,5,10,15];
 const Maior = (ele) => ele > 5; 
 console.log(num.findIndex(Maior)); // 1
 
+
+/*
+exemplos mesmo resultado, primeiro compara value ou index ou index e value
+*/
+let ranks = [1, 5, 7, 8, 10, 7];
+let index = ranks.findIndex(
+    (rank, index) => rank === 7 && index > 2
+);
+
+console.log(index);
+
+console.log(ranks.findIndex((val, ind) => {
+    if(ind > 2) return val === 7
+    // > ou != if(ind != 2) return val === 7
+}));
+
+
+
+
 /*
 indexOf and FindIndex
 */
@@ -704,8 +723,16 @@ Devo chamar primeiro o array ou keys?
 Depende do objetivo! no caso de every/some quando vai verificar se aquela lista de keys existe no Array, então chamar primeiro as keys.
 
 * caso que whatever
-console.log(["Geraldo"].filter(el => api.includes(el))); // Geraldo
-console.log(api.filter(val => val.includes("Geraldo"))); // Geraldo
+console.log(["Geraldo", "Barra"].filter(el => api.includes(el))); // Geraldo
+console.log(api.filter(val => ["Geraldo","Georgeo"].includes(val))); // Geraldo, Georgeo
+
+* outro e.g
+//todos da key tem no arr ? // true
+console.log(["Geraldo", "CostAo"].every(val => api.includes(val)));
+
+//todos do arr tem na key ? // false
+console.log(api.every(val => ["Geraldo", "CostAo"].includes(val)));
+
 */
 console.log(notas.some(a => keyz.includes(a))); // true
 
@@ -717,6 +744,7 @@ console.log(letter); // Geraldo, George
 
 /*
 _______________________EXERCICIOS_____________________________
+https://www.notion.so/geraldodev/Exercicios-1-2a427cfc7d5b4e989ac1da54a3f7e21a
 */
 const api = ["Geraldo", "CostAo", "Barrao", "Georgeo", "Aomeo","asoa","oplz"];
 
@@ -761,10 +789,33 @@ console.log(api.filter(function(val, index){
       return val.endsWith("o")
     }
 }));
+
 // alternative arrow
 console.log(api.filter((el, ind) => {
   if(ind > 0 ) return el.endsWith("o");  
 }));
+
+// curiosidade: alternative indicando o proprio value
+console.log(api.filter(val => {
+  if(val != "Geraldo") return val.endsWith("o");
+}));
+
+
+/*get auto index 
+
+**duas alternativas** neste caso onde é passado uma condição 
+*/
+const pegain = api.findIndex(val => val.endsWith("o"));
+// e o quando sabemos o nome exato
+//const pegain = api.indexOf("Geraldo");
+console.log(pegain);
+console.log(api.filter((val, ind) => {
+  if(ind != pegain) return val.endsWith("o");
+}));
+
+//mesmo resultado inline
+console.log(api.filter((val, ind) => val.endsWith("o") && ind != pegain));
+
 
 // 12 - Todos esses itens existe na array ? ["Geraldo", "CostAo"]
 console.log(["Geraldo", "CostAo"].every(val => api.includes(val))); // true
@@ -795,5 +846,47 @@ console.log(api.find((el, ind) => { // em vez de: "CostAo", pega: "Barrao"
   if(ind > 1){
     return el.length = 6
   }
-}))
+}));
 
+//encontra o index do primeiro.length automaticamente
+function primeiro(el){
+  return api.findIndex(val => val.length == 6);
+}
+
+console.log(primeiro()); // 1
+console.log(api.find((val, ind) => { //Barrao
+ if(ind > primeiro()) return val.length == 6
+}));
+
+//alternative inline
+console.log(api.find((val, ind) => val.length == 6 && ind != primeiro()));
+
+
+/*
+_______________________EXERCICIOS 2_____________________________
+*/
+
+const itens = ["home.html","downloads.html","index.html","main.js","index.js"];
+
+console.log(itens.filter(val => val.includes("html")));
+
+//filtre todos com .html exceto o index.html, quando você sabe o determinado index
+console.log(itens.filter((val, ind) => { //home e downloads
+  if(ind != 2) return val.includes("html"); // qual index não deve filtrar, no caso o index.html
+}));
+
+/*
+Mais e se não soubermos o deternimado index e quando o mesmo pode mudar a qualquer momento?
+- usar o findIndex
+*/
+
+function achaInd(val){
+  return val == "index.html";
+}
+const indItem = itens.findIndex(achaInd);
+console.log(indItem); // 2
+
+
+console.log(itens.filter((val, ind) => {
+  if(ind != indItem) return val.includes("html"); // retorna todos que inclui html exceto o index do indItem
+}));

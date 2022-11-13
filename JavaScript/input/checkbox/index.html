@@ -61,7 +61,11 @@ async function input(sh){
   const dados3 = await fetch(jsin);
   const dadosR = await dados3.json();
   console.log(dadosR);
-  const temhtml = dadosR.tree.filter(val => val.path.includes("html"));
+
+  //encontrar o index do index.html para ser fintrado
+  const getInd = dadosR.tree.findIndex((val) => val.path == "index.html");
+
+  const temhtml = dadosR.tree.filter((val, ind) => val.path.includes("html") && ind != getInd);
   console.log('saida', temhtml);
   document.getElementById("res").innerHTML = temhtml.map((val) => {
     const full_link = `https://geraldotech.github.io/DevMap/JavaScript/input/checkbox/`;
