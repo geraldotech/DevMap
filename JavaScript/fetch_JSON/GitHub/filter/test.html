@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Filter html - Home Page</title>
+    <style>
+:root{
+  color-scheme: dark;
+}
+a{
+  display: block;
+}
+  </style>
+  </head>
+  <body>
+
+  <div id="res"></div>
+
+
+    <script>
+// novo way 2 de pegar o ultimo sha
+const api = "https://api.github.com/repos/geraldotech/DevMap/git/trees/main"; //url arvore main
+
+
+async function get(url, js){
+const response = await fetch(url);
+const data = await response.json();
+if(data){
+  console.log(data.tree);
+  const javas = data.tree.filter(val => val.path == "JavaScript").map(a => a.sha).join('');  
+  // filter javascript.path
+  console.log('filter', javas); // get last sha do path filtered  
+  //pastaInput(javas); //chama fun e envia ultimo asha
+  const pegar2 = await fetch(`https://api.github.com/repos/geraldotech/DevMap/git/trees/${javas}`);
+  const data2 = await pegar2.json();
+  const filSelect = data2.tree.filter(val => val.path == "select").map(a => a.sha).join('');
+  console.log(filSelect);
+
+  const pegar3 = await fetch(`https://api.github.com/repos/geraldotech/DevMap/git/trees/${filSelect}`);
+  const data3 = await pegar3.json();
+  console.log(data3);
+  show(data3.tree);
+  
+};
+}
+get(api);
+function show(ele){
+  document.getElementById("res").innerHTML = ele.map((val) => {
+    return `<p>${val.path}</p>`
+  }).join('');
+}
+
+
+
+
+</script>
+  </body>
+</html>

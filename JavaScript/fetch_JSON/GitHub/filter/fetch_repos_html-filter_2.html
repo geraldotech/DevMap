@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test sha</title>
+    <title>Api Filter html - Home Page</title>
     <style>
 :root{
   color-scheme: dark;
@@ -25,18 +25,14 @@ const api = "https://api.github.com/repos/geraldotech/DevMap/git/trees/main"; //
 
 async function get(url){
 const response = await fetch(url);
-
 const data = await response.json();
 if(data){
   console.log(data.tree);
   const javas = data.tree.filter(val => val.path == "JavaScript"); // filter javascript.path
-  console.log('filter', javas[0].sha); // get last sha do path filtered
-  
-  
-pastaInput(javas[0].sha); //chama fun e envia ultimo asha
-//pasta(ultimosha);
+  console.log('filter', javas[0].sha); // get last sha do path filtered  
+  pastaInput(javas[0].sha); //chama fun e envia ultimo asha
 }
-}
+};
 
 get(api);
 
@@ -50,16 +46,14 @@ async function pastaInput(sha){
   checkbox(filInput[0].sha);
 }
 
-
 async function checkbox(sha){
   const sks = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sha}`;
   const resposta3 = await fetch(sks);
   const dados3 = await resposta3.json();
  const filtraBox = dados3.tree.filter(val => val.path == "checkbox").map(a => a.sha).join(''); //filtra o path checkbox, pega o sha e transforma em inteiro com o join
   console.log(filtraBox); 
-  
   input(filtraBox);
-}
+};
 
 
 async function input(sh){
@@ -69,7 +63,6 @@ async function input(sh){
   console.log(dadosR);
   const temhtml = dadosR.tree.filter(val => val.path.includes("html"));
   console.log('saida', temhtml);
-
   document.getElementById("res").innerHTML = temhtml.map((val) => {
     const full_link = `https://geraldotech.github.io/DevMap/JavaScript/input/checkbox/`;
     return `<a href="${full_link}${val.path}" target="_blank">${full_link}${val.path}`
