@@ -4,12 +4,18 @@ Both objects and arrays are considered “special” in JavaScript. Objects repr
 ## When to Use Objects
 Objects are used to represent a “thing” in your code. That could be a person, a car, a building, a book, a character in a game — basically anything that is made up or can be defined by a set of characteristics. In objects, these characteristics are called properties that consist of a key and a value.
 
+- [Access](#access)
 - [add](#add)
 - [change](#change)
 - [Newproperty](#property)
 - [remove](#remove)
 
 
+### access
+```js
+console.log(geraldo.age);
+console.log(geraldo['age']);
+```
 ### add
 
 ```js
@@ -53,20 +59,43 @@ delete geraldo.name;
 
 
 
-/* [============================[for in]==========================================] */
+/* [============================[for in]================================] */
 
 ```js
 //for in is a method for iterating over "enumerable" properties of an object.
-for(let value in geraldo){
-  console.log(value);
+// keys
+for(let key in geraldo){
+  console.log(key);
 }
-
-
-for(let key in website){
-  console.log( website[key]);
+// value
+for(let values in geraldo){
+  console.log(geraldo[values]);
+}
 }
 ```
+/* [=====================[iterate object with forEach / of of]====================] */
+```js
+const pessoas = {
+  01: "Geraldo",
+  02: "Felipe",
+  03: "Bella",
+  04: "Milly",
+}
 
+Object.keys(pessoas).forEach(item => {
+  console.log(item + " - " + pessoas[item]);
+});
+
+//para HTML não esquecer do +=
+  Object.keys(geraldo).forEach((val) => {
+   res.innerHTML += (val + ":" + geraldo[val]);
+  });
+
+for(const p of Object.keys(pessoas)){
+  console.log(p, pessoas[p]);
+}
+
+```
 
 ### e.g 2: 
 
@@ -79,7 +108,7 @@ city: 'Maceio',
 console.log(person);
 
 //concatenar
-document.write(person.name+" mora na cidade de "+person.city);
+document.write(person.name+ " mora na cidade de " +person.city);
 //concatenar
 document.getElementById("objeto2").innerHTML = person.name +" idade atual: "+person.age;
 

@@ -660,10 +660,10 @@ document.querySelectorAll("section span")[1];
 |   ==      | compara valor |
 |   ===      | compara valor e tipo |
 
-- <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">[read_more] artigos/operadores-matematicos-em-javascript</a>
-- [Addition_assignment.html](./assets/Addition_assignment.html) 
+- <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">[read_more]_artigos/operadores-matematicos-em-javascript</a>
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">_cloneNode(true)</a>
 - <a href="https://devhints.io/es6" target="_blank">_devhints.io/es6</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment" target="_blank">_ Addition assignment (+=)</a>
 
 ## Videos
 
