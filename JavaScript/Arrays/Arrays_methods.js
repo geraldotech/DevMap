@@ -5,7 +5,7 @@ Table of JavaScript String and Array Methods =>
 https://www.notion.so/geraldodev/Arrays-Strings-Methods-21cd45a06d6a4b1e83478c01d590ad26
 */
 
-// 1 - #Strings/#Arrays #Length 
+//🟢 1 - #Strings/#Arrays #Length 
 const x = ['BMW','GOL','LATAM','AMERICAN','BRAZIL','RAPPI'];
 
 //display #length of Array direct
@@ -29,7 +29,7 @@ console.log(str[2]); // s
 console.log(str[3]); // ,
 console.log(str[10]); // a
 
-//2 process-each-letter-of-text
+//🟢 - 2 process-each-letter-of-text
 
 var text = 'uololooo';
 
@@ -50,7 +50,7 @@ for (var x = 0, c=''; c = text.charAt(x); x++) {
 
 
 
-// 3 - display all content using for
+//🟢 3 -  display all content using for
 for(i = 0; i < x.length; i++){
     console.log(x[i]);
 }
@@ -64,20 +64,20 @@ for(i = 0; i < x.length; i++){
  console.log(ord);
 
 
-// 5 - The #shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+//🟢 5 - The #shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
 const x = ['A', ' B', ' C',' D',' E'];
 const first = x.shift();
 console.log(x); //output (4) [' B', ' C', ' D', ' E']
 
 
-// 6 - The #unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+//🟢 6 - The #unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 const cell = ['Nokia',' Apple',' Microsoft',' Samsung'];
 //unshift alone mostra somente N itens do array
 console.log(cell.unshift('Xiaomi','Lenovo'));
 console.log(cell);
 
-// 7 - The #pop() method removes the last element from an array and returns that element. This method changes the length of the array.
+//🟢 7 - The #pop() method removes the last element from an array and returns that element. This method changes the length of the array.
 const mercado = ['carnes',' bebidas', 'frios', 'frutas'];
 //get only ultimo
 console.log(mercado.pop());
@@ -85,18 +85,18 @@ console.log(mercado.pop());
 console.log(mercado);
 
 
-// 8 The #push() method adds one or more elements to the end of an array and returns the new length of the array.
+//🟢 8 The #push() method adds one or more elements to the end of an array and returns the new length of the array.
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 const n = [1,2,3,4,5];
 const push = n.push(6,7,8,9,10);
 console.log(n);
 
-// 9 - #reverse
+//🟢 9 - #reverse
 //inverter array
  fruits.reverse();
  
 /* [=============================================================================]
- 10 - #includes - boolean returning true or false as appropriate - Case-sensitivity
+ 10🟢 - #includes - boolean returning true or false as appropriate - Case-sensitivity
 
  - funciona com arrays syntax: includes(searchElement, fromIndex)
 
@@ -159,7 +159,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 */
 
-//11 - #indexOf e.g: 1
+//🟢 11 - #indexOf e.g: 1
 
 //demo => https://gmapdev.netlify.app/demo/indexof-preventdefault
 
@@ -193,7 +193,7 @@ arr.push('Suco light');
 console.log(arr); 
 
 /* [=============================================================================]
-12 - #findIndex method returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. 
+🟢12 - #findIndex method returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. 
 */
 
 const person = [
@@ -248,7 +248,7 @@ function bb(val){
 }
 
 /*[=============================================================================]
-13 - #filter
+🟢13 - #filter
 Doesn’t change the original array. Faz uma shallow copy do que é encontrado
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 Como o nome já diz é um filtro e assim se faz, filtrando todos os elementos, requer  função
@@ -417,7 +417,7 @@ for(let i = 0; i <= 10; i++){
 console.log(num.filter((num) => num %2 == 1));
 
 /* [=============================================================================]
-14 - #find - requer função
+🟢 14 - #find - requer função
 */
 
 const persons = [{name:"Geraldo",city:"Maceio",age:"29"}, {name:"Felipe",city:"Palmeira",age:"28"}];
@@ -485,7 +485,7 @@ console.log(lista.filter(per => per.age > 18));
 console.log(lista.find(per => per.age > 18));
 
 /* [=============================================================================]
-15 - #some - The Array.some() method checks if any of the elements in an array pass a test (provided as a function).
+🟢 15 - #some - The Array.some() method checks if any of the elements in an array pass a test (provided as a function).
 */
 const ages = [3,10,18,20];
 
@@ -529,7 +529,7 @@ console.log(array.includes("dev")); // true
 
 
 /* [=============================================================================] 
-16 - #every
+🟢 16 - #every
  true if the function returns true for all elements.
  false if the function returns false for one element.
 Parameters:
@@ -567,7 +567,7 @@ console.log(numbers.some(maior)); //true pq existe valores > 10
 
 
 /* [=============================================================================]
-17 - #map - percorrer um array e obter um novo vetor cujo itens são resultados de uma função de callback
+🟢 17 - #map - percorrer um array e obter um novo vetor cujo itens são resultados de uma função de callback
 */
 //way 1
 const arr = [1,2,3,4,5];
@@ -608,7 +608,9 @@ x = pessoa.map((value) => {
 /// #replace  
 let txt = "Visit Microsoft";
 let newtxt = txt.replace("Microsoft", "Google");
-console.log(newtxt)
+console.log(newtxt);
+
+console.log("Geraldo Filho".replace(" ", "-")); // Geraldo-Filho
   
 //map and replace and transformar string em number
   const n = ["a 199","a 200","a 300"];
@@ -620,7 +622,7 @@ console.log(newtxt)
 // Map.set https://stackoverflow.com/questions/63595841/find-element-in-map-by-its-property-value
 
 /* [=============================================================================]
-18 - #splice  index ? + delete ? + add elements? | emendar
+🟢 18 - #splice  index ? + delete ? + add elements? | emendar
 - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 - https://gmapdev.netlify.app/demo/indexof_and_splice
 */
@@ -636,13 +638,27 @@ cars2.splice(0,1,'new') // add 'new' to index 0 e remove index 1
 console.log(cars2);
 
 /* [=============================================================================]
-19 - 🟢 #split - gera string de substrings, split the string based on the space ('  ') character
-split - dividir | split second - fração de segundos / dividir
+🟢 19 -  #split - The split() method splits (divides) a string into two or more substrings depending on a splitter (or divider), split the string based on the space ('  ') character
+🔰 sempre retorna: An Array of strings, split at each point where the separator occurs in the given string.
+🔰split - dividir | split second - fração de segundos / dividir
+
 */
 
+//📌 return a new arr
+console.log("Geraldo".split(""));  //['G', 'e', 'r', 'a', 'l', 'd', 'o']
 let a = "Rio de Janeiro";
 const myarr = a.split(" ");
 console.log(myarr) //3) ['Rio', 'de', 'Janeiro']
+
+//📌 acesso por index
+//If the separator parameter is omitted, an array with the original string is returned:
+const myarr2 = "Rio de Janeiro".split(' ');
+console.log(myarr2); // ['Rio', 'de', 'Janeiro']
+
+console.log(myarr2[0]) // Rio
+console.log(myarr2[1]) // de
+console.log(myarr2[2]); //Janeiro
+
 
 //📌get arrays index
 console.log(myarr[2]) //Janeiro
@@ -651,72 +667,51 @@ console.log(myarr[2]) //Janeiro
 const myarr2 = a.split("",2);
 console.log(myarr2)  //['R', 'i']
 
-
 //📌When you invoke the split() method on a string without a splitter, it returns an array containing the entire string.
-
 let a = "Rio de Janeiro";
 const myarr = a.split();
 console.log(myarr); // ['Rio de Janeiro']
 
-
 //📌com array
 console.log(["Geraldo","filho","na"].map(val => val.split("")));
-
 
 //📌Pequena comparação com o slice - fatiar, pedaço
 console.log(ts.slice(0, 2)); // Ta
 
+//📌 usando com join
+const tag = "Geraldo Filho";
+let sub = tag.split("");
+console.log(sub);
+console.log(sub.join("-")); // G-e-r-a-l-d-o -F-i-l-h-o
 
-//🔰using an empty string as the splitter returns an empty array.
-console.log("".split(""));
+//📌limit
+const myarr4 = "DEVMAP.code".split("", 2)
+console.log(myarr4); // (2) ['D', 'E']
 
-
-/* [=============================================================================]
-20 - #join - method create e returns concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string */
-arr = ['fire', 'water', 'airplane', 'car']
-
-console.log(arr.join()); // fire,water,airplane,car
-console.log(arr.join('.')) // fire.water.airplane.car
-console.log(arr.join('')) // firewaterairplanecar
-
-
-// 21 - #concat - merge arrays
-arr = [1,2,3,4,5]
-arr2 = [6,7,8,9,10]
-arr_all = arr.concat(arr2);
-console.log(arr_all);
-
-/* [=============================================================================]
-22 - #split - create array of substrings - only for strings |  dividir, fracionar
-*/
-const arr3 = ("Geraldo");
-let c = arr3.split("")
-console.log(c) // ['G', 'e', 'r', 'a', 'l', 'd', 'o']
-
-
-//split("") espaço = cada word , no space = every letter is dividida
-let a = "Rio de Janeiro";
-const myarr = a.split(" ");
-console.log(myarr); // (3) ['Rio', 'de', 'Janeiro']
-
-// index - praticamente converteu tudo em array
-//If the separator parameter is omitted, an array with the original string is returned:
-console.log(myarr[0]) // Rio
-console.log(myarr[1]) // de
-console.log(myarr[2]); //Janeiro
-
-
-// limit
-const a = "DEVMAP.code";
-const myarr2 = a.split("", 2)
-console.log(myarr2); // (2) ['D', 'E']
-
-// array
+//📌Interate usando array map() e forEach
 console.log(["Geraldo","filho","na"].map(val => val.split("")));
 
+["Geraldo","filho","na"].forEach(el => {
+  console.log(el.split(""));
+});
+
+// 📌 ES6: How to Split with Array Destructuring
+let name = "Geraldo Filho";
+let [nome, surname] = name.split(" ");
+console.log(nome, surname);
+
+
+//❗ using an empty string as the splitter returns an empty array.
+console.log("".split(""));
+//❗ method on an empty string('') without a splitter will return an array with an empty string. It doesn't return an empty array.
+console.log("".split()); // [ '' ]
+
+// 🌐usar regex e Destructuring? https://www.freecodecamp.org/news/javascript-split-how-to-split-a-string-into-an-array-in-js/
+
+
 
 /* [=============================================================================]
- 23 - #slice  - slice(start, end not included); | fatiar, pedaço
+🟢 20 - #slice  - slice(start, end not included); | fatiar, pedaço
 retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é necessário) de um array original. 
 O Array original não é modificado.
 
@@ -727,16 +722,34 @@ let b = arr2.slice(1,3); //get itens between
 console.log(b);
 
 //também funciona com strings
-console.log("Geraldo".slice(0,)); // Ger 0,1,2 > die não inclui o ultimo
+console.log("Geraldo".slice(0,3)); // Ger 0,1,2 > die não inclui o ultimo
 
 /* [=============================================================================]
-24 - #repeat
+🟢 21 - #join - method create e returns concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string */
+const arr = ['fire', 'water', 'airplane', 'car']
+
+console.log(arr.join()); // fire,water,airplane,car
+console.log(arr.join('.')) // fire.water.airplane.car
+console.log(arr.join('')) // firewaterairplanecar
+
+
+//🟢 22 - #concat - merge arrays
+arr = [1,2,3,4,5]
+arr2 = [6,7,8,9,10]
+arr_all = arr.concat(arr2);
+console.log(arr_all);
+
+/* [=============================================================================]
+🟢 //23 // vazio
+
+/* [=============================================================================]
+🟢 24 - #repeat
 */ 
 const lt = "Geraldo";
 console.log("hello", lt.repeat(10));
 
 /* [=============================================================================]
-25 - #startsWith() #endsWith() - for Strings
+🟢 25 - #startsWith() #endsWith() - for Strings
 */ 
 console.log("Geraldo".startsWith("G")); //true
 console.log("Geraldo".endsWith("G")); //false
@@ -748,7 +761,7 @@ console.log("Geraldo".startsWith("Geraldo")); //true
 console.log("Geraldo".endsWith("Geraldo")); //true
 
 /* [=============================================================================]
-25 - #forEach
+🟢 26 - #forEach
 */ 
 //checkout in https://github.com/geraldotech/DevMap/blob/main/JavaScript/forEach.js
 
