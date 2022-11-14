@@ -402,7 +402,7 @@ document.addEventListener("click", function(e){
 </details>
 
 <details>
-<summary>toString, toFixed, toUpperCase, toLowerCase</summary>
+<summary>toString, toFixed, toPrecision, toUpperCase, toLowerCase</summary>
 <a href="https://codepen.io/geraldopcf/pen/PoRVXQB" target="_blank">CodePen</a>
 
 ```html
