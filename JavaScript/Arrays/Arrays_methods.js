@@ -15,6 +15,16 @@ console.log(x.length);
 let tamanho = x.length;
 console.log(tamanho);
 
+//📌 func check number
+function check(){
+  let a = 10;
+   if(a.length > 8) {
+      console.log("maior que 8");
+      return
+   }
+   console.log("menor que 8");
+
+
 //📌size if a Array string
 console.log('Array 0 tem ', x[0].length);
 

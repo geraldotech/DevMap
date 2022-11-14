@@ -82,7 +82,7 @@ function add(){
 
 
 <details>
-<summary>Math. padStart, lenght...</summary>
+<summary>Math. padStart, padEnd</summary>
 
 ```js
 Math //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
@@ -128,24 +128,9 @@ let cpf = "083".padStart(11,0);
 console.log(cpf);
 
 
-//e.g string truncada
+// padEnd() e.g string truncada
 let str2 = "1234567".padEnd(10,"Hello");
 console.log(str2);
-
-function exp(number){
-	console.log(2** number);
-}
-exp(5,2);
-
-//lenght
-    function check(){
-        let a = 10;
-         if(a.length > 8) {
-            console.log("maior que 8");
-            return
-         }
-         console.log("menor que 8")
-     };
 
 //show-loop-img-button-click
 //html
@@ -402,7 +387,7 @@ document.addEventListener("click", function(e){
 </details>
 
 <details>
-<summary>toString, toFixed, toPrecision, toUpperCase, toLowerCase</summary>
+<summary>toString, toFixed, toPrecision, toUpperCase, toLowerCase, parseInt, toLocaleString</summary>
 <a href="https://codepen.io/geraldopcf/pen/PoRVXQB" target="_blank">CodePen</a>
 
 ```html

@@ -58,5 +58,10 @@ console.log(mult(5, 5));
 let x = mult(5);
 console.log(x);
 
+//function exponentiation 
+function exp(number){
+	console.log(2** number);
+}
+exp(5,2);
 
 
