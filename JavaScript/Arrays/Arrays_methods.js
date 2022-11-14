@@ -636,17 +636,18 @@ cars2.splice(0,1,'new') // add 'new' to index 0 e remove index 1
 console.log(cars2);
 
 /* [=============================================================================]
-19 - #split - gera string de substrings, split the string based on the space ('  ') character
+19 - 🟢 #split - gera string de substrings, split the string based on the space ('  ') character
+split - dividir | split second - fração de segundos / dividir
 */
 
 let a = "Rio de Janeiro";
 const myarr = a.split(" ");
 console.log(myarr) //3) ['Rio', 'de', 'Janeiro']
 
-//get arrays index
+//📌get arrays index
 console.log(myarr[2]) //Janeiro
 
-//limitando output and no space divite todos os caracteres
+//📌limitando output and no space divite todos os caracteres
 const myarr2 = a.split("",2);
 console.log(myarr2)  //['R', 'i']
 
@@ -658,20 +659,15 @@ const myarr = a.split();
 console.log(myarr); // ['Rio de Janeiro']
 
 
-//com array
+//📌com array
 console.log(["Geraldo","filho","na"].map(val => val.split("")));
 
 
-//split - dividir | split second - fração de segundos / dividir
-const ts = "Tale as old Time";
-const se = ts.split("", 2);
-console.log(se); // ["T". "A"]
-
-// Pequena comparação com o slice - fatiar, pedaço
+//📌Pequena comparação com o slice - fatiar, pedaço
 console.log(ts.slice(0, 2)); // Ta
 
 
-// using an empty string as the splitter returns an empty array.
+//🔰using an empty string as the splitter returns an empty array.
 console.log("".split(""));
 
 
