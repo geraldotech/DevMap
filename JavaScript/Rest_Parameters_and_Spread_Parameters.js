@@ -124,17 +124,6 @@ console.log(card);
 /*clonar objetos com nomes iguais visitar
 https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/
 */
-
-
-
-//📌Math.max
-const ages = [12, 3234, 54, 34];
-console.log(Math.max(1, 2, 3, 4)); //4
-console.log(Math.max(ages)); // NaN
-console.log(Math.max(...ages)); //3234
-
-
-
 /*see more 
 🔗 https://www.youtube.com/watch?v=j3bXlt3NOZA
 🔗 https://dev.to/sagar/three-dots---in-javascript-26ci

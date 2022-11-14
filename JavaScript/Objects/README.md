@@ -91,8 +91,13 @@ Object.keys(pessoas).forEach(item => {
    res.innerHTML += (val + ":" + geraldo[val]);
   });
 
+
 for(const p of Object.keys(pessoas)){
   console.log(p, pessoas[p]);
+}
+
+for(const [key, val] of Object.entries(pessoas)){
+  console.log(key, val);
 }
 
 ```

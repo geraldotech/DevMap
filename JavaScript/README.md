@@ -102,13 +102,16 @@ Math.floor(Math.random() * 5 +1); // 0 - 5
 
 Math.PI
 
-// Math.max() returns the number with the highest value:
+//📌Math.max() returns the number with the highest value:
 const a = [1,2,3,4];
 console.log(Math.max(...a));
 
-Math.max(1,2,3,4,5);
+const ages = [12, 3234, 54, 34];
+console.log(Math.max(1, 2, 3, 4)); //4
+console.log(Math.max(ages)); // NaN
+console.log(Math.max(...ages)); //3234
 
-//usando apply:null
+//📌usando apply:null
 const num = [1,2,3,4];
 console.log(Math.max.apply(null, num));
 
