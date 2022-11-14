@@ -2,10 +2,10 @@
 JavaScript String and Array Methods
 
 Table of JavaScript String and Array Methods => 
-https://medium.com/jsunderthescope/table-of-javascript-string-and-array-methods-fdba7c5289f1
+https://www.notion.so/geraldodev/Arrays-Strings-Methods-21cd45a06d6a4b1e83478c01d590ad26
 */
 
-// 1 - 2
+// 1 - #Strings/#Arrays #Length 
 const x = ['BMW','GOL','LATAM','AMERICAN','BRAZIL','RAPPI'];
 
 //display #length of Array direct
@@ -15,9 +15,40 @@ console.log(x.length);
 let tamanho = x.length;
 console.log(tamanho);
 
-//size if a array string
-size = x[0].length;
-console.log('Array 0 tem '+size);
+//size if a Array string
+console.log('Array 0 tem ', x[0].length);
+
+
+// strings in JavaScript is that we can access the characters in a string using its index
+//https://www.freecodecamp.org/news/javascript-split-how-to-split-a-string-into-an-array-in-js/
+let str = "Yes, You Can Do It!";
+
+console.log(str[0]); // Y
+console.log(str[1]); // e
+console.log(str[2]); // s
+console.log(str[3]); // ,
+console.log(str[10]); // a
+
+//2 process-each-letter-of-text
+
+var text = 'uololooo';
+
+// With ES6
+[...text].forEach((c) => {
+  console.log(c)
+});
+
+for(const d of text){
+  console.log(d);
+}
+
+// With ES5
+for (var x = 0, c=''; c = text.charAt(x); x++) { 
+  console.log(c); 
+}
+// https://stackoverflow.com/questions/1966476/how-can-i-process-each-letter-of-text-using-javascript
+
+
 
 // 3 - display all content using for
 for(i = 0; i < x.length; i++){
@@ -32,10 +63,12 @@ for(i = 0; i < x.length; i++){
  //console.log(myarr.sort());
  console.log(ord);
 
+
 // 5 - The #shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
 const x = ['A', ' B', ' C',' D',' E'];
 const first = x.shift();
 console.log(x); //output (4) [' B', ' C', ' D', ' E']
+
 
 // 6 - The #unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
@@ -51,6 +84,7 @@ console.log(mercado.pop());
 //show array modificado
 console.log(mercado);
 
+
 // 8 The #push() method adds one or more elements to the end of an array and returns the new length of the array.
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 const n = [1,2,3,4,5];
@@ -61,33 +95,69 @@ console.log(n);
 //inverter array
  fruits.reverse();
  
- // 10 - #includes - boolean returning true or false as appropriate - require entire "name" for Arrays - certain value among its entries
-const cars = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
+/* [=============================================================================]
+ 10 - #includes - boolean returning true or false as appropriate - Case-sensitivity
 
-var x = cars.includes('BMW'); //true because exists
-console.log(x);
-var y = cars.includes('Ford')
-console.log(y); 
+ - funciona com arrays syntax: includes(searchElement, fromIndex)
 
-//includes e.g:2
-const cars = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
-let item = 'FIAT'; //item a ser procurado
+ - funciona com strings syntax: includes(searchString, position)
+ 
+ - buscar na MDN...
+ */
+ const cars = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
+
+ var y = cars.includes('BMW'); //true
+ console.log(y);
+ 
+ let item = 'FIAT'; //item a ser procurado
+ let x = cars.includes(item);
+ console.log(x); 
+ 
+ if(x === true){
+   console.log(cars.indexOf(item)); //if true so get index of item
+ } else{ //if false
+   console.log('nao existe');
+ };
+
+console.log(cars.includes("GOL", 2)); // inc after index 2 ? false
+
+// usando LowerCase, includes, map e filter
+const busca = cars.map(el => el.toLowerCase().includes('pajero'));
+console.log(busca); // 5 false e 1 true
+// para filtra apenas os true
+console.log(busca.filter(Boolean)); // true
 
 
-//includes e.g:3
-var x = cars.includes(item); 
-console.log(x)//true because exists
+//OBS usar o index do includes com map != = só retorna false
 
-if(x === true){
-  console.log(cars.indexOf(item)); //if true so get index of item
-} else{ //if false
-  console.log('nao existe')
-}
 //for Strings shortnames works
+
 console.log("Geraldo".includes("Geraldo")); //true
 console.log("Geraldo".includes("Ge")); //true
 console.log("Geraldo".includes("ldo")); //true
 console.log("Geraldo".includes("Geldo")); // false - precisa ser exato
+console.log("PAJERO".toLowerCase().includes("pajero")); // true 
+
+/*
+POSITION
+* String cada letra e espaço contam como position, iniciando em: zero
+* Returns true if searchString appears as a substring of the result of converting this object to a String, at one or more positions that are greater than or equal to position; otherwise, returns false.
+*/
+console.log("Browser compatibility".length); // 21
+console.log("".length); // 0
+console.log("Browser compatibility".includes("B",0)); // tem B na posicao 0 ? // true
+console.log("Browser compatibility".includes("B",1)); // tem B na posicao 1 ? // false
+
+console.log("Browser compatibility".includes("w",3)); //true
+//encontrando index de um valor: 14
+console.log("Browser compatibility".indexOf("ibi")); 
+//apos index/position 17 tem i ? true pegou do ity
+console.log("Browser compatibility".includes("i", 17)); 
+
+/*
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+*/
 
 //11 - #indexOf e.g: 1
 
@@ -98,11 +168,11 @@ function getx(){
   const cars = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
   const index = cars.indexOf(n); //get index of element
   if(index == 1){  //case
-    console.log('encontrado gol')
+    console.log('encontrado gol');
   } else if (index == 2){ //case
-    console.log('encontrado fiat')
+    console.log('encontrado fiat');
   } else { //case not found
-    console.log("not found!")
+    console.log("not found!");
   }
 } 
 //indexOf e.g: 2
@@ -535,7 +605,7 @@ x = pessoa.map((value) => {
   }
 })
 
-///replace  
+/// #replace  
 let txt = "Visit Microsoft";
 let newtxt = txt.replace("Microsoft", "Google");
 console.log(newtxt)
@@ -550,7 +620,7 @@ console.log(newtxt)
 // Map.set https://stackoverflow.com/questions/63595841/find-element-in-map-by-its-property-value
 
 /* [=============================================================================]
-18 - #splice  index ? + delete ? + add elements?
+18 - #splice  index ? + delete ? + add elements? | emendar
 - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 - https://gmapdev.netlify.app/demo/indexof_and_splice
 */
@@ -566,19 +636,43 @@ cars2.splice(0,1,'new') // add 'new' to index 0 e remove index 1
 console.log(cars2);
 
 /* [=============================================================================]
-19 - #split - gera string de substrings
+19 - #split - gera string de substrings, split the string based on the space ('  ') character
 */
 
 let a = "Rio de Janeiro";
 const myarr = a.split(" ");
 console.log(myarr) //3) ['Rio', 'de', 'Janeiro']
 
-//get arrays
+//get arrays index
 console.log(myarr[2]) //Janeiro
 
-//limitando output and no spance ""
+//limitando output and no space divite todos os caracteres
 const myarr2 = a.split("",2);
 console.log(myarr2)  //['R', 'i']
+
+
+//📌When you invoke the split() method on a string without a splitter, it returns an array containing the entire string.
+
+let a = "Rio de Janeiro";
+const myarr = a.split();
+console.log(myarr); // ['Rio de Janeiro']
+
+
+//com array
+console.log(["Geraldo","filho","na"].map(val => val.split("")));
+
+
+//split - dividir | split second - fração de segundos / dividir
+const ts = "Tale as old Time";
+const se = ts.split("", 2);
+console.log(se); // ["T". "A"]
+
+// Pequena comparação com o slice - fatiar, pedaço
+console.log(ts.slice(0, 2)); // Ta
+
+
+// using an empty string as the splitter returns an empty array.
+console.log("".split(""));
 
 
 /* [=============================================================================]
@@ -596,39 +690,48 @@ arr2 = [6,7,8,9,10]
 arr_all = arr.concat(arr2);
 console.log(arr_all);
 
-/* 22 - #slice 
+/* [=============================================================================]
+22 - #split - create array of substrings - only for strings |  dividir, fracionar
+*/
+const arr3 = ("Geraldo");
+let c = arr3.split("")
+console.log(c) // ['G', 'e', 'r', 'a', 'l', 'd', 'o']
+
+
+//split("") espaço = cada word , no space = every letter is dividida
+let a = "Rio de Janeiro";
+const myarr = a.split(" ");
+console.log(myarr); // (3) ['Rio', 'de', 'Janeiro']
+
+// index - praticamente converteu tudo em array
+//If the separator parameter is omitted, an array with the original string is returned:
+console.log(myarr[0]) // Rio
+console.log(myarr[1]) // de
+console.log(myarr[2]); //Janeiro
+
+
+// limit
+const a = "DEVMAP.code";
+const myarr2 = a.split("", 2)
+console.log(myarr2); // (2) ['D', 'E']
+
+// array
+console.log(["Geraldo","filho","na"].map(val => val.split("")));
+
+
+/* [=============================================================================]
+ 23 - #slice  - slice(start, end not included); | fatiar, pedaço
 retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é necessário) de um array original. 
 O Array original não é modificado.
 
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 */
-arr2 = [0,1,2,3,4,5];
+const arr2 = [0,1,2,3,4,5];
 let b = arr2.slice(1,3); //get itens between
 console.log(b);
 
-
-/* [=============================================================================]
-23 - #split - create array of substrings - only for strings
-*/
-arr3 = ("Geraldo");
-let c = arr3.split("")
-console.log(c) // ['G', 'e', 'r', 'a', 'l', 'd', 'o']
-
-
-//split("") espaço = cada word , no space = every letter
-let a = "Rio de Janeiro";
-const myarr = a.split(" ");
-console.log(myarr); // (3) ['Rio', 'de', 'Janeiro']
-
-
-//get second word
-console.log(myarr[2]) //Janeiro
-document.getElementById("res").innerHTML = myarr;
-
-//limiter
-const a = "DEVMAP.code";
-const myarr2 = a.split("", 2)
-console.log(myarr2); // (2) ['D', 'E']
+//também funciona com strings
+console.log("Geraldo".slice(0,)); // Ger 0,1,2 > die não inclui o ultimo
 
 /* [=============================================================================]
 24 - #repeat
