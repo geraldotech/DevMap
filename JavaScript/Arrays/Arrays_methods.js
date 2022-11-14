@@ -8,19 +8,19 @@ https://www.notion.so/geraldodev/Arrays-Strings-Methods-21cd45a06d6a4b1e83478c01
 //🟢 1 - #Strings/#Arrays #Length 
 const x = ['BMW','GOL','LATAM','AMERICAN','BRAZIL','RAPPI'];
 
-//display #length of Array direct
+//📌display #length of Array direct
 console.log(x.length);
 
-//ou declando varivel
+//📌ou declando varivel
 let tamanho = x.length;
 console.log(tamanho);
 
-//size if a Array string
+//📌size if a Array string
 console.log('Array 0 tem ', x[0].length);
 
 
-// strings in JavaScript is that we can access the characters in a string using its index
-//https://www.freecodecamp.org/news/javascript-split-how-to-split-a-string-into-an-array-in-js/
+//🔰strings in JavaScript is that we can access the characters in a string using its index
+// https://www.freecodecamp.org/news/javascript-split-how-to-split-a-string-into-an-array-in-js/
 let str = "Yes, You Can Do It!";
 
 console.log(str[0]); // Y
@@ -33,21 +33,21 @@ console.log(str[10]); // a
 
 var text = 'uololooo';
 
-// With ES6
+//📌With ES6 - Destructing
 [...text].forEach((c) => {
   console.log(c)
 });
 
+//📌With of operator
 for(const d of text){
   console.log(d);
 }
 
-// With ES5
+//📌With ES5
 for (var x = 0, c=''; c = text.charAt(x); x++) { 
   console.log(c); 
 }
 // https://stackoverflow.com/questions/1966476/how-can-i-process-each-letter-of-text-using-javascript
-
 
 
 //🟢 3 -  display all content using for
@@ -417,7 +417,7 @@ for(let i = 0; i <= 10; i++){
 console.log(num.filter((num) => num %2 == 1));
 
 /* [=============================================================================]
-🟢 14 - #find - requer função
+🟢 14 - #find -  method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
 */
 
 const persons = [{name:"Geraldo",city:"Maceio",age:"29"}, {name:"Felipe",city:"Palmeira",age:"28"}];
@@ -605,7 +605,9 @@ x = pessoa.map((value) => {
   }
 })
 
-/// #replace  
+/* [=============================================================================]
+🟢 17.1 #replace  
+*/
 let txt = "Visit Microsoft";
 let newtxt = txt.replace("Microsoft", "Google");
 console.log(newtxt);
@@ -620,6 +622,32 @@ console.log("Geraldo Filho".replace(" ", "-")); // Geraldo-Filho
   console.log(num);
 
 // Map.set https://stackoverflow.com/questions/63595841/find-element-in-map-by-its-property-value
+
+
+//📌replace
+let name = "gg";
+let rpl = name.replace("gg","Felipe");
+console.log(rpl);
+
+//JSON.stringify change output
+let a = '[[{"nome":"ISA"}]]';
+console.log(a.replace(/["}{}[]|(])/g,"")); //nome:ISA
+
+/*
+https://www.w3schools.com/jsref/jsref_replace.asp
+https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
+
+CPF formatado
+https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-number-in-chrome
+*/
+  <input type="number" id="test" onInput="this.value = this.value.slice(0, 11)"/>  
+
+     document.querySelector("#cpf").addEventListener("input", show);
+    function show (e){   
+      const str = this.value.replace(/(\d{3})?(\d{3})?(\d{3})?(\d{2})/, "$1.$2.$3-$4")
+      console.log(str);
+    }
+
 
 /* [=============================================================================]
 🟢 18 - #splice  index ? + delete ? + add elements? | emendar
@@ -644,21 +672,18 @@ console.log(cars2);
 
 */
 
-//📌 return a new arr
+//📌 return a new arr each char
 console.log("Geraldo".split(""));  //['G', 'e', 'r', 'a', 'l', 'd', 'o']
 let a = "Rio de Janeiro";
-const myarr = a.split(" ");
-console.log(myarr) //3) ['Rio', 'de', 'Janeiro']
 
-//📌 acesso por index
+//📌 return a new arr each 
 //If the separator parameter is omitted, an array with the original string is returned:
 const myarr2 = "Rio de Janeiro".split(' ');
 console.log(myarr2); // ['Rio', 'de', 'Janeiro']
-
+//📌 acesso por index
 console.log(myarr2[0]) // Rio
 console.log(myarr2[1]) // de
 console.log(myarr2[2]); //Janeiro
-
 
 //📌get arrays index
 console.log(myarr[2]) //Janeiro
@@ -675,7 +700,9 @@ console.log(myarr); // ['Rio de Janeiro']
 //📌com array
 console.log(["Geraldo","filho","na"].map(val => val.split("")));
 
-//📌Pequena comparação com o slice - fatiar, pedaço
+//📌Pequena comparação com o slice
+const ts = "Tale as old Time";
+console.log(ts.split("", 2)); // ["T". "A"]
 console.log(ts.slice(0, 2)); // Ta
 
 //📌 usando com join
@@ -688,17 +715,29 @@ console.log(sub.join("-")); // G-e-r-a-l-d-o -F-i-l-h-o
 const myarr4 = "DEVMAP.code".split("", 2)
 console.log(myarr4); // (2) ['D', 'E']
 
-//📌Interate usando array map() e forEach
+//📌Interate usando array map()
 console.log(["Geraldo","filho","na"].map(val => val.split("")));
 
+
+//📌Interate usando forEach()
 ["Geraldo","filho","na"].forEach(el => {
   console.log(el.split(""));
 });
 
 // 📌 ES6: How to Split with Array Destructuring
 let name = "Geraldo Filho";
-let [nome, surname] = name.split(" ");
+let [nome, surname] = name.split(" "); //array e destructuring
 console.log(nome, surname);
+
+
+//📌 Split with Spread
+//checkout Rest_Parameters_and_Spread_Parameters.js
+
+
+// 📌 truque convert and filter
+const txt = "method extracts a section of a string and returns";
+const me = txt.split(" ", ); // each word in a array index
+console.log(me.filter(val => val.startsWith("s"))); // section, string 
 
 
 //❗ using an empty string as the splitter returns an empty array.
@@ -711,18 +750,51 @@ console.log("".split()); // [ '' ]
 
 
 /* [=============================================================================]
-🟢 20 - #slice  - slice(start, end not included); | fatiar, pedaço
-retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é necessário) de um array original. 
-O Array original não é modificado.
+🟢 20 - #slice  - slice(start, end not included);
+🔰 fatiar - extracts a section returns it as a new string
+🔰 retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é necessário) de um array original. 
+🔰 O Array original não é modificado.
 
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 */
+
+//📌Arrays
 const arr2 = [0,1,2,3,4,5];
-let b = arr2.slice(1,3); //get itens between
+let b = arr2.slice(1,3); //get itens between 1 e 2
 console.log(b);
 
-//também funciona com strings
+//📌pegar o ultimo item
+console.log(["A","Geraldo","Z"].slice(-1));
+
+
+//📌 Strings
 console.log("Geraldo".slice(0,3)); // Ger 0,1,2 > die não inclui o ultimo
+
+const txt = "method extracts a section of a string and returns";
+console.log(txt.slice(6, 25))// extracts a section
+console.log(txt.length, txt.slice(-7))// 49.lenght - 7 = returns
+console.log(txt.length, txt.slice(18, -24));
+
+
+// entre 18 até 25 => 49.lenght -24 = 25 
+// 18, -24 é o mesmo que passar 18, 25 e no como podemos ver abaixo[25] é vazio
+//from scratch usando os proprios index de strings
+console.log(txt[18]); //s
+console.log(txt[19]); //e
+console.log(txt[20]); //c
+console.log(txt[21]); //t
+console.log(txt[22]); //i
+console.log(txt[23]); //o
+console.log(txt[24]); //n
+console.log(txt[25]); // vazio
+console.log(txt[26]); // o
+
+// ou jogue esse forEach no console e vai ver o mesmo resultado
+[...txt].forEach((val, ind) => {
+  console.log(ind,val)
+});
+
+
 
 /* [=============================================================================]
 🟢 21 - #join - method create e returns concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string */
@@ -740,7 +812,10 @@ arr_all = arr.concat(arr2);
 console.log(arr_all);
 
 /* [=============================================================================]
-🟢 //23 // vazio
+🟢 //23 - #search()
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
+
 
 /* [=============================================================================]
 🟢 24 - #repeat
@@ -786,6 +861,11 @@ const busca = person.filter(val => val.idade == 28);
 console.log(busca); // ISA , Philips
 person.forEach((el, ind) => console.log(ind)); // 1,2,3,4
 
+/*-*[=============================================================================]
+🟢 27 #toString, toFixed, toPrecision, toUpperCase, toLowerCase 
+
+📌checkout README https://github.com/geraldotech/DevMap/tree/main/JavaScript
+*-*/
 /*-*[=============================================================================]*-*/
 
 
@@ -798,7 +878,7 @@ console.log('includes', arr.includes("DEBITO")); //true
 // console.log(arr.includes("R$")); < isso não funciona, includes requer fullname, usar flter
 console.log('filter,includes',arr.filter(value => value.includes("R$")));  //(2) ['R$ 100', 'R$ 200']
 
-/*-*[=============================================================================]*-*/
+/*-*[===========================MIX EXAMPLES====================================]*-*/
 
 const array = [1,2,3,4,5];
 
@@ -817,6 +897,8 @@ console.log(array.fill(0,2)) // (value, start, end) [1 ,2 , 0, 0, 0]
 console.log("tem B",["A","B","C"].some(val => val == "B")); // tem B ? // true
 console.log("vazio",array.filter(el => [].includes(el))); // se true filtra e display ou vazio se for false
 console.log([1,2,3].some(el => array.includes(el))); // tem algum elemento assim no array? true
+//convert string to array use map to get number and sum with reduce
+console.log("2+3+2".split("+").map(el => +el).reduce((val, ind) => val+= ind)); // 7
 
 
 //keys

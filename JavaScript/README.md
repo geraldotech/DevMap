@@ -82,7 +82,7 @@ function add(){
 
 
 <details>
-<summary>Math. padStart, replace, lenght...</summary>
+<summary>Math. padStart, lenght...</summary>
 
 ```js
 Math //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
@@ -108,6 +108,10 @@ console.log(Math.max(...a));
 
 Math.max(1,2,3,4,5);
 
+//usando apply:null
+const num = [1,2,3,4];
+console.log(Math.max.apply(null, num));
+
 
 /*
 padStart - define o tamanho minimo, e adiciona um complemento caso não tenha o mínimo
@@ -122,7 +126,6 @@ console.log(str);
 
 let cpf = "083".padStart(11,0);
 console.log(cpf);
-
 
 
 //e.g string truncada
@@ -162,31 +165,7 @@ exp(5,2);
   
       // This next line will just add it to the <body> tag
       document.body.appendChild(img);
-  }
-
-//replace
-let name = "gg";
-let rpl = name.replace("gg","Felipe");
-console.log(rpl);
-
-//JSON.stringify change output
-let a = '[[{"nome":"ISA"}]]';
-console.log(a.replace(/["}{}[]|(])/g,"")); //nome:ISA
-
-/*
-https://www.w3schools.com/jsref/jsref_replace.asp
-https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
-
-CPF formatado
-https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-number-in-chrome
-*/
-  <input type="number" id="test" onInput="this.value = this.value.slice(0, 11)"/>  
-
-     document.querySelector("#cpf").addEventListener("input", show);
-    function show (e){   
-      const str = this.value.replace(/(\d{3})?(\d{3})?(\d{3})?(\d{2})/, "$1.$2.$3-$4")
-      console.log(str);
-    }
+  };
 
   ```
 </details>
