@@ -341,13 +341,13 @@ var obj = {
 ]
 };
 
-// declaration function direct
+//📌declaration function direct
 const busca5 = arr2.filter(function(val){
   return val.startsWith("F");
 });
 console.log(busca5);
 
-// call function
+//📌 call function
 const fil = obj.students.filter(filhos);
 console.log(fil);
 
@@ -360,41 +360,41 @@ function verage(idade){
   return idade >= 21;
 }
 
-// inside console
+//📌 inside console
 console.log(arr2.filter(function(a){
   return a.startsWith("C")
 }));
 
-// arrow functions
+//📌 arrow functions
 console.log(arr2.filter(val => val.endsWith("s")));
 console.log(arr.filter(l => l.length > 5));
 
 const maiorIdade = obj.students.filter(ida => ida.Age > 18);
 console.log(maiorIdade);
 
-// find aqui também works
+//📌 find aqui também works
 const busca = obj.students.find(function (el){
   return el.Age >= 29;
 });
 console.log(busca);
 
 
-// ternary 
+//📌 ternary 
 const words = arr.filter((word) => word.startsWith('F'));
 words == '' ? console.log('nao') : console.log(words); // Foxtrot
 
-//ou alternative
+//📌ou alternative
 words != '' ? console.log(words) : console.log('not'); // Foxtrot
 words.length != 0 ? console.log(words) : console.log('not'); // Foxtrot
 
-// best ?
+//📌 best ?
 !words ? console.log("not found") : console.log(words); // Foxtrot
 
 const brazil = arr2.filter(pa => pa == "Bra");
 !brazil ? console.log("nao") : console.log(brazil);
 
 
-// the index, what iteration we are on https://debbie.codes/blog/js-array-filter-method/
+//📌 the index, what iteration we are on https://debbie.codes/blog/js-array-filter-method/
 const callNom = ['Felipe', 'Char', 'Delta', 'Echoss', 'Foxtrot', ]
 console.log(callNom.filter(function(val, index){
     //decide who should be returned
@@ -403,7 +403,7 @@ console.log(callNom.filter(function(val, index){
     }
 }));
 
-//forma negativa
+//📌forma negativa
 const ages = [15,17,20,21,24,25,30];
 const chaves = [15];
 console.log(ages.filter(val => !chaves.includes(val))); // mostra todos exceto o 15 !means "not"
@@ -428,18 +428,18 @@ dog = petshop.filter(el => el.includes("cao"));
 console.log(`results ${dog}`);
 
 
-// como buscar varios termos
+//📌como buscar varios termos
 const array = ["12","zuz","dev","Element","cam"];
 const keys0 = ["zuz", "dev"];
 
 
 const fil4 = keys0.filter(val => array.includes(val));
 console.log(fil4);
-//direct
+//📌direct
 console.log(["dev","cam"].filter(ba => array.includes(ba)));
 
 
-// outro e.g com includes
+//📌outro e.g com includes
 let busca3 =  ["20","12","zuz","dev","Element","cam", "56","Deltra","Delly"].filter(a => a.includes("D")); 
 console.log(busca3); // (2) ['Deltra', 'Delly']
 
@@ -452,7 +452,7 @@ console.log(busca);  // ['12', 'dev', 'Element'];
 como buscar varios termos com piece de informações adicionando o some o
 */
 
-// toda as strings que incluir esse dados serão mostradas
+//📌toda as strings que incluir esse dados serão mostradas
 const keys2 = ["z","d"];
 
 let filbusca = array.filter(a => keys2.some(e => a.includes(e)));
@@ -469,7 +469,7 @@ console.log(getfl);
 prática desnecessária!!!, podemos usar apenas o filter endsWith, filter pode o começo, tamanho e fim.
 */
 
-// not that
+//📌not that
 const 
 get = ["o"], 
 files = ['Geraldo', 'Algo', 'Felipe'],
@@ -477,16 +477,34 @@ res = files.filter(al => get.some(b => al.endsWith(b)));
 console.log(res); // (2) ['Geraldo', 'Algo']
 
 
-// code this 
+//📌code this 
 console.log(files.filter(o => o.endsWith("o")));
 
-// filter odd with loop
+//📌filter odd with loop
 const num = [];
 for(let i = 0; i <= 10; i++){
   num.push(i);
 }
-
 console.log(num.filter((num) => num %2 == 1));
+
+//📌remover valores duplicados
+
+const arr = ['Z', 'B', 'Z', 'C', 'B',];
+
+console.log(arr.filter((val, ind) => {
+    console.log(val);
+    console.log(ind);
+  return arr.indexOf(val) === ind; 
+}));
+
+
+//To find the duplicate values, you just need to reverse the condition: !== ind
+
+/*
+📍https://www.figma.com/file/OhSMZ8e7SJlOQWD2iBuenv/how-filter-works?node-id=0%3A1&t=tqWIXLfIHMPrHqhF-0
+📍https://dev.to/nomishah/remove-duplicates-from-an-array-using-indexof-and-filter-methods-2jeh
+*/
+
 
 /* [=============================================================================]
 🟢 14 - #find -  method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
