@@ -97,8 +97,9 @@ num.innerHTML = +num.innerHTML + 1;
 
 <details>
 <summary>Immutability</summary>
-<a href="./assets/immutability.html">immutability.html</a>
-<a href="./assets/string_immutability.js">immutability.html</a>
+
+[immutability.html](./assets/immutability.html)  
+[immutability.js](./assets/immutability.js)
 </details>
 
 <details>
@@ -442,8 +443,16 @@ console.log(Math.PI.toPrecision(2)); //3.1
 //toUpperCase and toLowerCase
 let firtName = "Geraldo";
 console.log(firtName.toUpperCase()); //GERALDO
+console.log(firtName.toLocaleUpperCase()); //GERALDO
+
+/*
+The locale is based on the language settings of the browser.
+
+Generally, this method returns the same result as the toLowerCase() method. However, for some locales, where language conflict with the regular Unicode case mappings occurs (such as Turkish), the results may vary.
+*/
 
 console.log(firtName.toLowerCase()); //geraldo
+console.log(firtName.toLocaleLowerCase()); //geraldo
 
 //toString
 //https://linuxhint.com/javascript-tostring-method/

@@ -959,10 +959,14 @@ console.log(paragraph.lastIndexOf("lazy?")); // 78
 //nesse caso indexOf retornou o mesmo resultado
 console.log(paragraph.indexOf("lazy?")); // 78
 
+/* [=============================================================================]
+🟢 29 - match() https://ricardo-reis.medium.com/o-tipo-string-no-javascript-e3fb621856d1
+*/
 
-/*-*[=============================================================================]*-*/
 
 
+
+/*-*[===========================MIX EXAMPLES======================================]*-*/
 const arr = ["CREDITO", "R$ 100", "DEBITO", "R$ 200"];
 // includes e some alone looks no difference
 console.log('some arr',arr.some(el => el === "CREDITO")); //true
