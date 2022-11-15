@@ -233,10 +233,19 @@ console.log(e.target.attributes.data.value); //get value of Attr data
  <li class="menu" itemtype="tip">Steak</li>
  console.log(e.target.attributes.itemtype.value); //tip
 
-#target
+#addEventListener: click -  target
 document.getElementById("bar").addEventListener("click", function(event){
     console.log(event.target); //  <p id="bar">TypeScript</p>
 });
+
+#addEventListener: input - captura o input em realtime
+ document.querySelector("input").addEventListener("input", function(e){
+   console.log(e);
+ });
+#addEventListener: change
+ document.querySelector("input[type='checkbox']").addEventListener("change", function(e){
+   console.log(e);
+ });
 
 console.log(event.target.id); //bar
 console.log(event.target.getAttribute("data")); //eu
@@ -259,6 +268,7 @@ console.log(rootElement);
 
 //js
 const get = (el) => {return document.getElementById(el)};
+#addEventListener: mousemove
 
 document.addEventListener("mousemove", function(event){
     console.log(event);
@@ -281,7 +291,6 @@ const el = document.querySelector("ul");
       console.log(e.currentTarget);  // <ul> 
       console.log(e.target); // <li>
     });
-
 
 ```
 </details>

@@ -601,6 +601,9 @@ console.log(mercado.get('Bebidas'));
 console.log(mercado.get('higiene'));
 console.log(mercado.keys);
 
+//first letters
+console.log(['BMW','GOL','LATAM','AMERICAN','BRAZIL','RAPPI'].map(el => el[0]));
+
 //https://stackoverflow.com/questions/1144705/best-way-to-store-a-key-value-array-in-javascript
 
 //MAP add values in obj
