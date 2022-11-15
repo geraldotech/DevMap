@@ -29,7 +29,7 @@ function check(){
 console.log('Array 0 tem ', x[0].length);
 
 
-//🔰strings in JavaScript is that we can access the characters in a string using its index
+//🔰Strings in JavaScript is that we can access the characters in a string using its index
 // https://www.freecodecamp.org/news/javascript-split-how-to-split-a-string-into-an-array-in-js/
 let str = "Yes, You Can Do It!";
 
@@ -39,7 +39,7 @@ console.log(str[2]); // s
 console.log(str[3]); // ,
 console.log(str[10]); // a
 
-//🟢 - 2 process-each-letter-of-text
+//📂process-each-letter-of-text
 
 var text = 'uololooo';
 
@@ -59,8 +59,54 @@ for (var x = 0, c=''; c = text.charAt(x); x++) {
 }
 // https://stackoverflow.com/questions/1966476/how-can-i-process-each-letter-of-text-using-javascript
 
+/* [=============================================================================]
+🟢 2 - #substring  extrair uma sequência de caracteres de uma string. returns the substring.
 
-//🟢 3 -  display all content using for
+substring(indexStart, indexEnd);
+*/
+
+//📌e.g usando o indexOf para auxiliar no parametro do substring
+
+let str = "finding substring in string";
+let ind = str.indexOf("sub");
+console.log(ind); //8
+console.log(str.substring(8)) //  substring in string
+
+//📌e.g usando o lastIndexOf para auxiliar no parametro do substring
+
+const mystr = "Did you hear my covert";
+console.log(mystr.lastIndexOf("Li")); //34
+
+//📌já notando as direnças entre substring e substr começando em 0 mesmo resultado
+console.log(mystr.substring(0, 15)); // Did you hear my 
+console.log(mystr.substr(0, 15)); // Did you hear my 
+
+/*
+The difference is in the second argument
+
+📌 substring - second argument is the index to stop at (but not include),  
+aceita apenas o end negativo contudo definindo 0 start positivo
+
+📌 substr - second argument  is the maximum length to return.  accepts a negative starting position
+🚩 MDN considers substr legacy. This feature is no longer recommended.
+https://tinyurl.com/mzp65jky
+*/
+
+console.log("Geraldo".substring(1, 5)); //eral
+console.log("Geraldo".substr(1, 5)); //erald
+
+
+console.log("Geraldo".substring(0, 5)); //eral
+console.log("Geraldo".substr(-4)); //Geraldo -4 letras da direita para esquerda => aldo
+console.log("JavaScript".substr(-6)); // Script
+console.log("Feriado".substr(-2)); // /do
+console.log("JavaScript".substr(-5, 1)); // c
+console.log("JavaScript".substr(-3, 2)); // ip
+console.log("JavaScript".substring(2 ,-1)); // Ja
+
+
+
+//🟢 3 - Display all array using for
 for(i = 0; i < x.length; i++){
     console.log(x[i]);
 }
@@ -185,22 +231,38 @@ function getx(){
     console.log("not found!");
   }
 } 
-//indexOf e.g: 2
+//📌indexOf e.g: 2
 const array = [1,2,3,4,5];
 getindex = array.indexOf(5);
 getindex > -1 ? console.log('item existe') : console.log('item nao existe') 
 
-//indexof e.g: 3
+//📌indexof e.g: 3
 const arr = ['lactose','feijao','agua','queijo'];
 arr.push('Suco light');
 
-
-  index = arr.indexOf('agua'); //get agua index
-  console.log(index);
-  if(index !== -1){ //if index agua dif -1 
-  arr.splice(index,1); //so remove this index value
-  }
+const index = arr.indexOf('agua'); //get agua index
+console.log(index);
+if(index !== -1){ //if index agua dif -1 
+arr.splice(index,1); //so remove this index value
+}
 console.log(arr); 
+//📌Strings
+
+console.log("Geraldo".indexOf("G")); // 0
+console.log("Geraldo".indexOf("e")); // 1
+console.log("Geraldo".indexOf("r")); // 2
+
+
+//📌contando o numero de ocorrências
+let msn = "You do not know what you do not know until you know";
+let cont = 0;
+let index = msn.indexOf("know");
+
+while(index !== -1){
+  cont++;
+  index = msn.indexOf("know", index + 1)
+}
+console.log(cont);// 3
 
 /* [=============================================================================]
 🟢12 - #findIndex method returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. 
@@ -601,7 +663,7 @@ console.log(mercado.get('Bebidas'));
 console.log(mercado.get('higiene'));
 console.log(mercado.keys);
 
-//first letters
+//get first letters
 console.log(['BMW','GOL','LATAM','AMERICAN','BRAZIL','RAPPI'].map(el => el[0]));
 
 //https://stackoverflow.com/questions/1144705/best-way-to-store-a-key-value-array-in-javascript
@@ -780,7 +842,7 @@ console.log(b);
 console.log(["A","Geraldo","Z"].slice(-1));
 
 
-//📌 Strings
+//📌Strings
 console.log("Geraldo".slice(0,3)); // Ger 0,1,2 > die não inclui o ultimo
 
 const txt = "method extracts a section of a string and returns";
@@ -841,10 +903,11 @@ console.log("hello", lt.repeat(10));
 */ 
 console.log("Geraldo".startsWith("G")); //true
 console.log("Geraldo".endsWith("G")); //false
-//não apenas 1 letra
+//📌não apenas 1 letra
 console.log("Geraldo".startsWith("Ger")); //true
 console.log("Geraldo".endsWith("aldo")); //true
-//todas as letras
+
+//📌todas as letras
 console.log("Geraldo".startsWith("Geraldo")); //true
 console.log("Geraldo".endsWith("Geraldo")); //true
 
@@ -879,6 +942,24 @@ person.forEach((el, ind) => console.log(ind)); // 1,2,3,4
 
 📌checkout README https://github.com/geraldotech/DevMap/tree/main/JavaScript
 *-*/
+
+/* [=============================================================================]
+🟢 28 - #lastIndexOf
+ returns the index of the last occurrence of the specified substring
+*/ 
+
+console.log("Geraldo".lastIndexOf(""));
+const arr = ["Geraldo", "Costa"];
+console.log(arr.map(val => val.lastIndexOf(""))); // 7 , 5
+
+
+const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+
+console.log(paragraph.lastIndexOf("lazy?")); // 78
+//nesse caso indexOf retornou o mesmo resultado
+console.log(paragraph.indexOf("lazy?")); // 78
+
+
 /*-*[=============================================================================]*-*/
 
 

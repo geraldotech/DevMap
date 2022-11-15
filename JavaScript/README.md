@@ -77,9 +77,29 @@ function add(){
   sum = sum +1;
   num.innerHTML = sum; //update variable
 }
+
+
+//short by gmap
+let start = 0;
+function add(){   
+document.getElementById("num").innerHTML = start = start +1;  
+}
+
+//short by gmap recuperando o valor da var diretamente no DOM succinct way
+
+const add = () => {   
+let num = document.getElementById("num");
+num.innerHTML = +num.innerHTML + 1;
+//num.innerHTML = parseInt(num.innerHTML) +1;
+}
 ```
 </details>
 
+<details>
+<summary>Immutability</summary>
+<a href="./assets/immutability.html">immutability.html</a>
+<a href="./assets/string_immutability.js">immutability.html</a>
+</details>
 
 <details>
 <summary>Math. padStart, padEnd</summary>

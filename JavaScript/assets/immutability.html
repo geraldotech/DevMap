@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Immutability</title>
+    <style>
+:root{
+  color-scheme: dark;
+  box-sizing: border-box;
+}
+code{
+  text-decoration: underline;
+  color: rgb(25, 155, 2);
+}
+main{
+  padding: 0 20px;
+}
+footer{
+  margin-top: 20px;
+}
+  </style>
+  </head>
+  <body>
+<main>
+  
+  <h1>JavaScript String Immutability</h1>
+  <p>These methods return new strings and don't modify the original (JavaScript strings are immutable). You will need to re-assign the value back to the element.</p>
+  <p>click e nada vai acontecer, nem erro no <code>console</code></p>    
+    <button onclick="UpperCase();">By UpperCase</button>
+    <p id="demo">HeLlo woRlD!</p>
+
+<hr>
+<p>Agora quando pegarmos o <code>value.innerText</code> e atribuir = a ele mesmo porém com modificações isso vai funcionar</p>
+<div>
+<code>value.innerText = value.innerText.toLocaleUpperCase()</code>
+</div>
+<p>click e o vai funcionar</p>
+<button onclick="UpperCase2();">By UpperCase</button>
+
+<hr>
+<p>Note que isso é bem diferente de pegar um ID e atribuir um novo conteúdo</p>
+<button onclick="dia()">Dia</button>
+<div id="demo2">Java</div>
+<hr>
+<p>Nesse exemplo pegando o <code>innerText</code> convertendo o valor para inteiro <ins><i>parse</i></ins> ou simplesmente um <code><i>`+`</i></code> e reatribuindo o valor +1 <code>num.innerText = +num.innerText + 1;</code></p>
+<button onclick="add()">Add</button>
+<div id="num">0</div>
+<footer>
+  <a href="https://stackoverflow.com/questions/34283414/difference-between-tolocalelowercase-and-tolowercase">referencias</a>
+</footer>
+</main>
+    <script>
+
+function UpperCase() {
+  demo.innerText.toLocaleUpperCase();
+}
+
+function UpperCase2() {
+  const demo = document.getElementById("demo");
+  demo.innerText = demo.innerText.toLocaleUpperCase();
+}
+
+function dia(){
+  document.getElementById("demo2").innerHTML = "Script";
+}
+
+
+const add = () => {
+const num = document.getElementById("num");
+num.innerText = +num.innerText + 1;
+}
+
+</script>
+  </body>
+</html>
