@@ -23,10 +23,20 @@ function check(){
       return
    }
    console.log("menor que 8");
-
+  }
+  //👉 Ternary
+  console.log(["12345678"].length > 8 ? 'maior que 8' : 'menor que 8');
 
 //📌size if a Array string
 console.log('Array 0 tem ', x[0].length);
+
+//📌mostrando index de um determinado value
+const arr = ["A","B","A","C","B","Z"];
+for(let i = 0; i < arr.length; i++){
+  if(arr[i] == "A"){
+    console.log(arr[i], i); // A0, A2
+  }
+}
 
 
 //🔰Strings in JavaScript is that we can access the characters in a string using its index
@@ -421,7 +431,7 @@ Fiat, Ferrari, OPALFA
 */
 console.log(["PAPA","FELIPE","GERALDO"].filter(a => a.includes("E")));
 
-//e.g 2
+//📌e.g 2
 const petshop = ["cao: 10","gato: 20","cao: 20"];
 
 dog = petshop.filter(el => el.includes("cao"));
@@ -487,21 +497,11 @@ for(let i = 0; i <= 10; i++){
 }
 console.log(num.filter((num) => num %2 == 1));
 
-//📌remover valores duplicados
-
-const arr = ['Z', 'B', 'Z', 'C', 'B',];
-
-console.log(arr.filter((val, ind) => {
-    console.log(val);
-    console.log(ind);
-  return arr.indexOf(val) === ind; 
-}));
-
-
 //To find the duplicate values, you just need to reverse the condition: !== ind
 
 /*
 📍https://www.figma.com/file/OhSMZ8e7SJlOQWD2iBuenv/how-filter-works?node-id=0%3A1&t=tqWIXLfIHMPrHqhF-0
+
 📍https://dev.to/nomishah/remove-duplicates-from-an-array-using-indexof-and-filter-methods-2jeh
 */
 
@@ -982,8 +982,6 @@ console.log(paragraph.indexOf("lazy?")); // 78
 */
 
 
-
-
 /*-*[===========================MIX EXAMPLES======================================]*-*/
 const arr = ["CREDITO", "R$ 100", "DEBITO", "R$ 200"];
 // includes e some alone looks no difference
@@ -994,7 +992,7 @@ console.log('includes', arr.includes("DEBITO")); //true
 // console.log(arr.includes("R$")); < isso não funciona, includes requer fullname, usar flter
 console.log('filter,includes',arr.filter(value => value.includes("R$")));  //(2) ['R$ 100', 'R$ 200']
 
-/*-*[===========================MIX EXAMPLES====================================]*-*/
+/*-*[===========================🟢MIX EXAMPLES====================================]*-*/
 
 const array = [1,2,3,4,5];
 
@@ -1050,6 +1048,36 @@ console.log(notas.some(a => keyz.includes(a))); // true
 const name = ["Geraldo", "Costa", "Barra", "George", "Aome"];
 const letter = name.filter(val => ["G","C"].some(b => val.startsWith(b)));
 console.log(letter); // Geraldo, George
+
+/*-*[=============================================================================]*-*/
+//🟢Remove duplicate itens usando new Set ES6
+
+//Arrays
+const arr = ["A","B","A","C","B","Z"];
+console.log(Array.from(new Set (arr))); //A, B, C, Z
+console.log([...new Set(arr)]);  //A, B, C, Z
+
+// it will not work with objects objects are compared they are compared by reference and not by value. 
+//via https://medium.com/@rbkannan1/filter-an-array-for-unique-values-in-javascript-27dd3dfbe7a8
+
+
+// Objects
+const pessoas = [
+  {nome:"Fel", value: '45'},
+  {nome:"Geraldo", value: '99'},
+  {nome:"Geraldo", value: '99'},
+  {nome:"Costa", value: '14'},
+]
+
+console.log(pessoas.filter((ele, ind) => pessoas.findIndex(obj => obj.value == ele.value) == ind));
+
+
+// Reduce and includes
+const chars = ["A","B","A","C","B","Z"];
+console.log(chars.reduce((acc, char) => acc.includes(char) ? acc : [...acc, char], []));
+
+const estados = ["GO","AL","AL","ES", "RJ","SP","RJ"];
+console.log(estados.reduce((val, ind) => val.includes(ind) ? val: [...val, ind], []));
 
 
 
@@ -1131,7 +1159,6 @@ console.log(api.filter((val, ind) => {
 //mesmo resultado shorthand
 console.log(api.filter((val, ind) => val.endsWith("o") && ind != pegain));
 
-
 // 12 - Todos esses itens existe no array ? ["Geraldo", "CostAo"]
 console.log(["Geraldo", "CostAo"].every(val => api.includes(val))); // true
 
@@ -1176,14 +1203,22 @@ console.log(api.find((val, ind) => { //Barrao
 //alternative shorthand
 console.log(api.find((val, ind) => val.length == 6 && ind != primeiro()));
 
+//19 - Dado o array abaixo remover valores duplicados
+
+const arr = ['Z', 'B', 'Z', 'C', 'B',];
+console.log(arr.filter((val, ind) => {
+    console.log(val);
+    console.log(ind);
+  return arr.indexOf(val) === ind; 
+}));
+
 
 /*
 _______________________EXERCICIOS 2_____________________________
 */
 
 const itens = ["home.html","downloads.html","index.html","main.js","index.js"];
-
-console.log(itens.filter(val => val.includes("html")));
+console.log(itens.filter(val => val.includes("html"))); //home, downloads, index
 
 //filtre todos com .html exceto o index.html, quando você sabe o determinado index
 console.log(itens.filter((val, ind) => { //home e downloads
@@ -1208,4 +1243,4 @@ console.log(itens.filter((val, ind) => {
 }));  
   
 // retorna todos que inclui html exceto o index do indItem - shorthand
-  console.log(itens.filter((val, ind) => val.includes("html") && ind != indItem));
+ console.log(itens.filter((val, ind) => val.includes("html") && ind != indItem));
