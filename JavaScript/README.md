@@ -99,7 +99,7 @@ num.innerHTML = +num.innerHTML + 1;
 <summary>Immutability</summary>
 
 [immutability.html](https://geraldotech.github.io/DevMap/JavaScript/assets/immutability.html)  
-[immutability.js](./blob/main/JavaScript/assets/string_immutability.js)
+[immutability.js](./assets/string_immutability.js)
 </details>
 
 <details>
