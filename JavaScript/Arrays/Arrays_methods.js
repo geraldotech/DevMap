@@ -486,7 +486,6 @@ files = ['Geraldo', 'Algo', 'Felipe'],
 res = files.filter(al => get.some(b => al.endsWith(b)));
 console.log(res); // (2) ['Geraldo', 'Algo']
 
-
 //📌code this 
 console.log(files.filter(o => o.endsWith("o")));
 
@@ -498,13 +497,32 @@ for(let i = 0; i <= 10; i++){
 console.log(num.filter((num) => num %2 == 1));
 
 //To find the duplicate values, you just need to reverse the condition: !== ind
-
+//see question 19
 /*
 📍https://www.figma.com/file/OhSMZ8e7SJlOQWD2iBuenv/how-filter-works?node-id=0%3A1&t=tqWIXLfIHMPrHqhF-0
 
 📍https://dev.to/nomishah/remove-duplicates-from-an-array-using-indexof-and-filter-methods-2jeh
 */
 
+//📌objetos duplicados from https://stackoverflow.com/questions/2218999/how-to-remove-all-duplicates-from-an-array-of-objects
+
+const arr = [{id: 1, name: 'one'}, {id: 2, name: 'two'}, {id: 1, name: 'one'}]
+
+const ids = arr.map(o => o.id)
+const filtered = arr.filter(({id}, index) => !ids.includes(id, index + 1))
+
+console.log(filtered);
+
+
+
+//📌visualizando o shallow copy do filter
+const arrz = ['Z', 'B', 'Z', 'C', 'B',];
+const busca = arrz.filter((val,ind) => val);
+
+console.log(busca[0]); // Z
+//📌até podemos modificar
+busca[0] = "H"; 
+console.log(busca[4]); // B
 
 /* [=============================================================================]
 🟢 14 - #find -  method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
@@ -1203,13 +1221,18 @@ console.log(api.find((val, ind) => { //Barrao
 //alternative shorthand
 console.log(api.find((val, ind) => val.length == 6 && ind != primeiro()));
 
-//19 - Dado o array abaixo remover valores duplicados
+//19 - Dado o array abaixo remover os valores duplicados
 
 const arr = ['Z', 'B', 'Z', 'C', 'B',];
 console.log(arr.filter((val, ind) => {
     console.log(val);
     console.log(ind);
   return arr.indexOf(val) === ind; 
+}));
+
+//alternativa podemos usar 3 parametros no filter, value, index, ArrayAtual, então o indexOf chama esse parametros ao inves do Array original diretamente
+console.log(arr.filter((val, ind, arrAtual) => {
+  return arrAtual.indexOf(val) == ind
 }));
 
 

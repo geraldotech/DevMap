@@ -9,6 +9,7 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [change](#change)
 - [Newproperty](#property)
 - [remove](#remove)
+- [Constructor](#constructor)
 
 
 ### access
@@ -57,6 +58,8 @@ geraldo.travel = ["Maceio", "Rio"];
 delete geraldo.name;
 ```
 
+### constructor
+[https://www.w3schools.com/js/js_object_constructors.asp](https://www.w3schools.com/js/js_object_constructors.asp)
 
 
 /* [============================[for in]================================] */

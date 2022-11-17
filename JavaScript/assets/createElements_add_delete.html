@@ -9,9 +9,15 @@
       * {
         color-scheme: dark;
       }
-      input {
-        display: block;
+      main{
+        max-width: 800px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
       }
+      
       .delete {
         display: flex;
         align-items: center;
@@ -25,7 +31,6 @@
         max-width: 250px;
         margin: auto;
       }
-
       button {
         background: red;
       }
@@ -35,6 +40,7 @@
     </style>
   </head>
   <body>
+   <main>
     <h1>createElements - add e delete</h1>
     <section>
       <input type="text" />
@@ -46,6 +52,7 @@
         <li><span>Mango 2</span><button class="delete">x</button></li>
       </ul>
     </section>
+   </main>
 
     <script>
       function add() {

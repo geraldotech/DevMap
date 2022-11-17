@@ -489,7 +489,7 @@ console.log(g); //R$ 2.000,00
 </details>
 
 <details>
-<summary>getAttributes,createElement ,set ,has ,remove...classList.add</summary>
+<summary>getAttributes,createElement ,set ,has ,remove...classList.add.contains</summary>
 
 - 1 [create_get_remove_Attribute](./assets/create_get_remove_Attribute.md) 
 - 2 [hasAttribute_setAttribute](./assets/hasAttribute_setAttribute.md) 
