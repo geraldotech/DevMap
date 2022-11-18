@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create_get_remove_Attribute</title>
+    <style>
+                code {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .header {
+            color: rgb(255, 0, 64);
+        }
+        .filho {
+            color: dodgerblue;
+        }
+        .isa {
+            color: rgb(251, 22, 221);
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <code>1 -  createAttribute and setAttributeNode</code>
+
+ <p>Pay for Attention <b style="color: red;"><u>create.attribute</u></b> uses <b style="color: blue"><u>setAttributeNode</u></b></p>
+ <samp>setAttributeNode()</samp>
+ <h1>Change Color</h1>
+<button onclick="addClass()">change color</button>
+
+<br>
+<hr>
+<code>2 - getAttribute</code>
+
+<p id="geral" class="filho">Geraldo.getAttribute("class"): <span id="attr" style="color: red;"></span>
+</p>   
+
+<button onclick="getattr()">display attribute</button>
+
+<p>Se não existir return null</p>
+<br><hr>
+<code>3 - removeAttribute</code>
+
+<h2 class="isa">ISABELLA</h2>
+<button onclick="rmattr()">Remover attr</button>
+<script>
+    //createAttributeNode and setAttributeNode
+function addClass(){
+    attr = document.createAttribute("class");
+    attr.value = "header";
+    myele = document.getElementsByTagName("h1")[0];
+    myele.setAttributeNode(attr);
+}
+
+//getAttribute
+const element = document.getElementById("geral");
+let txt = element.getAttribute("class"); //
+console.log(txt);
+function getattr(){
+    document.getElementById("attr").textContent = txt;
+}
+
+//removeAttribute
+function rmattr(){
+isa = document.getElementsByClassName("isa");
+isa[0].removeAttribute("class");
+}
+
+</script>
+</body>
+</html>

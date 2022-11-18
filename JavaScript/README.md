@@ -313,7 +313,7 @@ const el = document.querySelector("ul");
       console.log(e.target); // <li>
     });
 ```
-[appendChild](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_change_backgrround_SVG.html)
+[currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
 
 </details>
 
@@ -400,11 +400,7 @@ document.addEventListener("click", function(e){
 });
 ```
 
-<a href="https://codepen.io/geraldopcf/pen/vYrWVMw" target="_blank">CodePen e.g 2</a>
-
 [contains-e-target.html](./assets/thread/contains-e-target.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/contains-e-target.html)
-
-
 
 </details>
 

@@ -21,7 +21,7 @@
 ```
 </details>
 
-[Examples.onclick=document.open(codepen...)](https://codepen.io/geraldopcf/pen/XWEQQMG)
+[Examples.onclick=document.open(create_get_remove_Attribute)](../assets/thread/create_get_remove_Attribute.html)
 
 ### 1 - create and setAtributeNode
 #### _-create.attribute uses setAttributeNode-_
