@@ -21,7 +21,7 @@
 ```
 </details>
 
-[Examples.onclick=document.open(create_get_remove_Attribute)](../assets/thread/create_get_remove_Attribute.html)
+[Examples.onclick=document.open(create_get_remove_Attribute)](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html) - [Demo]
 
 ### 1 - create and setAtributeNode
 #### _-create.attribute uses setAttributeNode-_
