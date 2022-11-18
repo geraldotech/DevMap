@@ -401,7 +401,9 @@ document.addEventListener("click", function(e){
 
 <a href="https://codepen.io/geraldopcf/pen/vYrWVMw" target="_blank">CodePen e.g 2</a>
 
-[contains-e-target.html](./assets/contains-e-target.html.md) - [Demo](https://github.com/geraldotech/DevMap/blob/main/JavaScript/assets/contains-e-target.html)
+[contains-e-target.html](./assets/contains-e-target.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/contains-e-target.html)
+
+
 
 </details>
 
