@@ -312,8 +312,9 @@ const el = document.querySelector("ul");
       console.log(e.currentTarget);  // <ul> 
       console.log(e.target); // <li>
     });
-
 ```
+[appendChild](https://geraldotech.github.io/DevMap/JavaScript/assets/currentTarget_change_backgrround_SVG.html)
+
 </details>
 
 <details>
@@ -693,6 +694,7 @@ document.querySelectorAll("section span")[1];
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">_cloneNode(true)</a>
 - <a href="https://devhints.io/es6" target="_blank">_devhints.io/es6</a>
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
+- <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/render_table.html" target="_blank">render_table.html</a>
 
 ## Videos
 

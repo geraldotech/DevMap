@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Render Array and JSON data</h1>
+    <div class="container"></div>
+
+    <hr />
+    <section>
+      <table class="table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <script>
+      //way one
+      // https://linuxhint.com/create-table-from-array-objects-javascript/#2
+      const itens = [
+        { name: "Geraldo", age: 10 },
+        { name: "Felipe", age: 10 },
+      ];
+
+      document
+        .querySelector(".container")
+        .insertAdjacentHTML(
+          "afterend",
+          `<table><tr><th>${itens
+            .map((val) => Object.values(val).join("<td>"))
+            .join("<tr><td>")}</table>`
+        );
+
+      //way 2
+
+      const dados = {
+        headers: ["ID", "City", "Age", "Region"],
+        rows: [
+          ["1", "Geraldo", 26, "AWS"],
+          ["2", "Costa", 25, "Ocean"],
+        ],
+      };
+
+      console.log(dados.headers);
+      console.log(dados.rows);
+      function table(arr) {
+        const tableHead = document.querySelector("section thead");
+        const tableBody = document.querySelector("section tbody");
+
+        const { headers, rows } = arr;
+
+        tableHead.innerHTML = "<tr></tr>";
+        tableBody.innerHTML = "";
+
+        //header
+        for (const headertext of headers) {
+          const headerElement = document.createElement("th");
+          headerElement.textContent = headertext;
+          tableHead.querySelector("tr").appendChild(headerElement);
+        }
+
+        //rows
+        for (const row of rows) {
+          const rowElement = document.createElement("tr");
+
+          for (const cellText of row) {
+            const cellElement = document.createElement("td");
+            cellElement.textContent = cellText;
+            rowElement.appendChild(cellElement);
+          }
+          tableBody.appendChild(rowElement);
+        }
+      }
+
+      table(dados);
+    </script>
+  </body>
+</html>
