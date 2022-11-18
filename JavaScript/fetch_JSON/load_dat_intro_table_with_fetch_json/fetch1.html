@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1> Load Data Into Tables With the Fetch API in JavaScript</h1>
+    <style>
+      .table {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-collapse: collapse;
+        font-family: 'Quicksand' sans-serif;
+        overflow: hidden;
+        font-weight: bold;
+      }
+      
+      .table thead th {
+        background-color: #5a69f7;
+        color: #ffffff;
+        text-align: left;
+      }
+      
+      .table th,
+      .table td {
+        padding: 10px 20px;
+      }
+      
+      .table tbody tr:nth-of-type(even) {
+        background-color: #eeeeee;
+      }
+      
+      .table tbody tr:last-of-type {
+        border-bottom: 2px solid #009578;
+      }
+      </style>
+</head>
+<body>
+    
+    <table class="table">
+        <thead></thead>        
+        <tbody></tbody>
+    </table>
+
+    
+<br>
+<a href="https://www.youtube.com/watch?v=qBg8IB3u28s">ref</a>
+</body>
+<script>
+async function introxTable(url, table){
+    const tableHead = table.querySelector("thead");
+    const tableBody = table.querySelector("tbody");
+    const response = await fetch(url);
+    const { headers, rows } = await response.json();
+
+   /*  const data = await response.json()
+    console.log(data) */
+
+  //clear the table
+  tableHead.innerHTML = "<tr></tr>";
+  tableBody.innerHTML = "";
+
+  for(const headerText of headers){
+    const headerElement = document.createElement("th");
+    headerElement.textContent = headerText;
+    tableHead.querySelector("tr").appendChild(headerElement);
+    } 
+
+    for(const row of rows){
+      const rowElement = document.createElement("tr");
+
+      for(const cellText of row){
+        const cellElement = document.createElement("td");
+        cellElement.textContent = cellText;
+        rowElement.appendChild(cellElement);
+      }
+      tableBody.appendChild(rowElement);
+    }
+}
+
+introxTable("./test.json", document.querySelector("table"));
+
+</script>
+</html>

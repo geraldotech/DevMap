@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(e).target</title>
+    <style>
+      *{color-scheme:dark;}
+      section{
+        border: 1px solid;
+        margin: 10px 0;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>contains(e.target)</h1>
+    <section>
+      <p>section one</p>
+      <div data="one">one</div>
+      <div data="two">two</div>
+    </section>
+
+    <section>
+      <p>section two hasAttribute data ?</p>
+      <p>section two</p>
+    </section>
+
+    <script>
+      const section = document.querySelectorAll("section")[0];
+      section.onclick = function (e) {
+        const has = e.target.hasAttribute("data");
+        console.log(has);
+        if (section.contains(e.target)) console.log("Sou a section one");
+        //todo click dentro da section vai ser alertado
+      };
+
+      document.querySelectorAll("section")[1].onclick = (e) => {
+        console.log("section two");
+        const hasattr = e.target.hasAttribute("data");
+        console.log(hasattr);
+      }
+    </script>
+  </body>
+</html>

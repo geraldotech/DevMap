@@ -369,7 +369,7 @@ img.classList.add('meuimg');
 </details>
 
 <details>
-<summary>Contains target</summary>
+<summary>Contains (e.target)</summary>
 <a href="https://codepen.io/geraldopcf/pen/yLKZROJ" target="_blank">CodePen</a>
 
 ```html and css
@@ -399,23 +399,7 @@ document.addEventListener("click", function(e){
 });
 ```
 
-```js
-<section id="a">
-   <div data="one">one</div>
-      <br>
-      <div data="two">two</div>
-</section>
-
-    <script>
-   const section = document.getElementById("a");
-   section.onclick = function(e){
-     const getAttr = e.target.getAttribute("data");
-     console.log(getAttr);  
-    if(section.contains(e.target)) alert("Sou a section");
-    //todo click dentrro da section vai ser alertado
-   }
- </script>
-```
+<a href="https://codepen.io/geraldopcf/pen/vYrWVMw" target="_blank">CodePen e.g 2</a>
 
 </details>
 

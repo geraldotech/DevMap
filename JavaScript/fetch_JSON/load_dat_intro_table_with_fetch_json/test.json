@@ -1,0 +1,13 @@
+{
+    "headers": [
+        "ID",
+        "City",
+        "Age",
+        "Region"
+    ],
+    "rows":[
+        ["1", "Geraldo", 26, "AWS" ],
+        ["2", "Costa",  25,"Ocean" ]
+
+    ]
+}
