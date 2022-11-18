@@ -313,7 +313,7 @@ const el = document.querySelector("ul");
       console.log(e.target); // <li>
     });
 ```
-[appendChild](https://geraldotech.github.io/DevMap/JavaScript/assets/currentTarget_change_backgrround_SVG.html)
+[appendChild](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_change_backgrround_SVG.html)
 
 </details>
 
@@ -402,7 +402,7 @@ document.addEventListener("click", function(e){
 
 <a href="https://codepen.io/geraldopcf/pen/vYrWVMw" target="_blank">CodePen e.g 2</a>
 
-[contains-e-target.html](./assets/contains-e-target.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/contains-e-target.html)
+[contains-e-target.html](./assets/thread/contains-e-target.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/contains-e-target.html)
 
 
 
@@ -483,8 +483,8 @@ console.log(g); //R$ 2.000,00
 - 1 [create_get_remove_Attribute](./assets/create_get_remove_Attribute.md) 
 - 2 [hasAttribute_setAttribute](./assets/hasAttribute_setAttribute.md) 
 - 3 [setAttribute_vs_classList_classToggle](./assets/setAttribute_vs_classList.md) 
-- 4 [createElements_add_delete.html](./assets/createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/createElements_add_delete.html)
-- 5 [createElements_add_delete_template_literal_add_assigment](./assets/createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/createElements_add_delete_template_literal_add_assigment.html)
+- 4 [createElements_add_delete.html](./assets/createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
+- 5 [createElements_add_delete_template_literal_add_assigment](./assets/createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete_template_literal_add_assigment.html)
 
 </details>
 
@@ -693,8 +693,8 @@ document.querySelectorAll("section span")[1];
 - <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">[read_more]_artigos/operadores-matematicos-em-javascript</a>
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">_cloneNode(true)</a>
 - <a href="https://devhints.io/es6" target="_blank">_devhints.io/es6</a>
-- <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
-- [render_table.html](https://geraldotech.github.io/DevMap/JavaScript/assets/render_table.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/render_table.html" target="_blank">Demo</a>
+- <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
+- [render_table.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/render_table.html" target="_blank">Demo</a>
 
 ## Videos
 
