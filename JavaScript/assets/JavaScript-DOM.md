@@ -140,7 +140,20 @@ document.credito.onclick = function(event){
     }
 ```
 
-- [DOM - Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
+# DOM Events 
+>> mais usados comuns
+
+- click
+- change
+- input
+- mousemove
+- mouseover
+- mouseleave
+- keypress
+
+[DOM - Events list](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
 
 - formas de chamar uma function com `onclick`
 

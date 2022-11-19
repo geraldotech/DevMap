@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descendant - child_selector</title>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        min-width: 320px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      h3 {
+        text-decoration: underline;
+        text-decoration-color: coral;
+        text-decoration-style: dotted;
+        padding: 25px 0;
+      }
+      /*
+        Global
+        */
+      img {
+        width: 30%;
+        border: 1px solid red;
+      }
+      /* parent is body*/
+      body > img {
+        border-radius: 10px;
+      }
+
+      /*Especifica todos os imgs dentro da div mesmo que o parent dentro não seja a div*/
+      div img {
+        width: 5%;
+        border: 2px solid rgb(209, 6, 125);
+      }
+
+      /*Especifica imgs que seu parent a div | ou todos os filhos img da div*/
+      div > img {
+        width: 10%;
+        border: 2px solid rgb(6, 71, 192);
+      }
+      main > p {
+        text-transform: uppercase;
+        color: rgb(6, 71, 192);
+      }
+
+      main p {
+        color: red;
+      }
+
+      main > section {
+        background: coral;
+      }
+
+      xmp {
+        color: crimson;
+      }
+      footer {
+        text-align: center;
+        padding-top: 50px;
+      }
+      code{
+        color: rgb(107, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Diferenças entre</h1>
+
+    <p>
+      Para contextualizar vamos usar uma imagem em 3 diferentes cenários, a ordem
+      de chamada pode alterar os resultados, deixar o mais específico por
+      último.
+    </p>
+    <h3>👉Global parent is body</h3>
+    <img src="https://gpnotes.droppages.com/img/1.jpg" alt="" />
+    <xmp
+>
+    img {
+      width: 30%;
+      border: 1px solid red;
+    }
+   /* parent is body*/
+    body > img {
+      border-radius: 10px;
+    }
+    </xmp>
+
+    <h3>👉Descendant Selector(space)</h3>
+    <p>selector matches all elements that are descendants of a specified element.</p>
+    <div>
+      <span>
+        <img src="https://gpnotes.droppages.com/img/1.jpg" alt="" />
+      </span>
+    </div>
+    <xmp>
+      div img {
+        width: 5%;
+        border: 2px solid rgb(209, 6, 125);
+      }
+    </xmp>
+
+    <h3>👉Child-Selector(>)</h3>
+    <p>The child selector selects all elements that are the children of a specified element.</p>
+    <div>
+      <img src="https://gpnotes.droppages.com/img/1.jpg" alt="" />
+      <img src="https://gpnotes.droppages.com/img/1.jpg" alt="" />
+      <img src="https://gpnotes.droppages.com/img/1.jpg" alt="" />
+    </div>
+    <xmp>
+      div > img {
+        width: 10%;
+        border: 2px solid rgb(6, 71, 192);
+      }
+    </xmp>
+    <hr />
+    <h3>Exemplos...</h3>
+
+    <p><code>`main > section`</code> works? 👉yes, It's parent is main</p>
+    <xmp>
+    <main>
+        <p>one</p>
+        <section>
+          <p>two</p>
+        </section>
+    </main>
+</xmp>
+    <p><code>`main > section`</code> works? 👉no</p>
+
+    <xmp>
+    <main>
+        <p>one</p>
+       <div>
+        <section>
+            <p>two</p>
+          </section>
+       </div>
+    </main>
+</xmp>
+
+    <p>
+      Tudo é questão de especificar os elementos corretamente, quando entender
+      os parents/child/siblings tudo vai ficando mais fácil, o img não está dentro de
+      nenhuma tag, isso significa que seu parent é o body, e por exemplo para
+      enconder a primeira imagem:
+    </p>
+
+    <xmp
+>
+    body > img{
+        display: none;
+    } 
+</xmp
+    >
+
+    <p>
+      Sem o selector <code>`>`</code> estariamos afetando todas as imagens, faça os testes.
+    </p>
+
+    <a href="https://www.w3schools.com/css/css_combinators.asp">https://www.w3schools.com/css/css_combinators.asp</a>
+    <footer>
+      <p>by Geraldo Filho - Novembro 2022</p>
+    </footer>
+  </body>
+</html>

@@ -106,7 +106,6 @@ function add(){
   num.innerHTML = sum; //update variable
 }
 
-
 //short by gmap
 let start = 0;
 function add(){   
@@ -252,6 +251,7 @@ const log = (x)=> {console.log(x)};
 <details>
 <summary>addEventListener, Pointer Events, e.target, documentElement</summary>
 
+DOM Events access [JavaScript-DOM.md](./assets/JavaScript-DOM.md)
 ```js
 #simple
 <p id="foo">JavaScript</p>

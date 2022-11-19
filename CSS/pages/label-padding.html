@@ -23,16 +23,15 @@ label{
   </head>
   <body>
 
+    <p>Recomendado envolver o input na label</p>
+
 <form action="" name="form">
-<label for="1"><input type="radio" name="opt" id="1">one</label>
-<label for="2"><input type="radio" name="opt" id="2">two</label>
+<label><input type="radio" name="opt" data="1">one</label>
+<label><input type="radio" name="opt" data="2">two</label>
 </form>
 
 
 <div id="res"></div>
-
-
-
 
 
     <script>
@@ -41,13 +40,10 @@ console.log(rad);
 
 const opcoes = (e) => {
   console.log(e.target.value);
-  res.textContent = e.target.id;
+  res.textContent = e.target.getAttribute("data");
 }
 
 rad.forEach(ele => {ele.addEventListener("change", opcoes)});
-
-
-
 
 
 </script>
