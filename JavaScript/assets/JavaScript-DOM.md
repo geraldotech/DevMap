@@ -5,7 +5,7 @@
 
 É uma linguagem de programação de alto nível que manipula o DOM - Document Object Model do HTML.
 <div align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png" style="max-width: 40%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png" style="width: 40%">
 </div>
 
 </details>
