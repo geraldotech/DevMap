@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>usando has - alinhar imgs</title>
+    <style>
+      * {
+        color-scheme: dark;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        max-width: 800px;
+        margin: auto;
+        min-width: 320px;
+        padding: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      code{
+          color: darkcyan;
+      }
+      section {
+        margin: 30px 0;
+      }
+      h3,
+      p {
+        padding: 20px 0;
+      }
+      xmp {
+        color: royalblue;
+      }
+
+      div {
+        background: rgb(184, 173, 173);
+        padding: 10px;
+      }
+      div img {
+        display: block;
+        margin: auto;
+        max-width: 50%;
+        border-radius: 10px;
+      }
+      ul li {
+          text-decoration: underline;
+          text-decoration-style: dotted;
+          text-decoration-color: seagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Usando o pseudo-class <code>:has</code></h1>
+    <p>
+      Temos uma img que é display:inline dentro de uma div: display: block, como
+      podemos centralizar ?
+    </p>
+    <p>A só chamar:</p>
+    <xmp>
+    div{
+    text-align:center;
+    }
+    </xmp>
+    <p>
+      Isso vai centralizar a imagem, e <strong>TODO</strong> o conteúdo de todas
+      as divs da página, queremos apenas a div que tem a img
+    </p>
+
+    <div>
+      <img src="https://gpnotes.droppages.com/img/1.jpg" alt="" />
+    </div>
+
+    <xmp
+>
+    div img{
+    text-align: center;
+    }
+    </xmp>
+    <p>
+      Isso está selecionando todas as img diretamente e não o element que se
+      encontra a img.
+    </p>
+    <hr />
+
+    <xmp>
+    div > img{
+    text-align: center;
+    }
+    </xmp>
+
+    <p>
+      Isso está selecionando as img que são filhos da div e não o element que se
+      encontra a img.
+    </p>
+    <hr />
+    <p>
+      No nosso exemplo como se trata apenas de uma imagem, tanto faz usar ou não
+      o seletor `>`, mais por que não está alinhando?...bem dos tipos de
+      display?
+    </p>
+    <ul>
+      <li>
+        inline: ocupa apenas a width necessário, como vou centralizar?👎
+      </li>
+      <li>block: ocupa toda width disponível, posso centralizar👍</li>
+    </ul>
+    <section>
+      <h3>Possibilidades</h3>
+      <ul>
+        <li>👉Adicionar uma classe, id na div e centralizar</li>
+        <xmp
+>
+        .img{
+        text-align: center;
+        }
+    </xmp
+        >
+        <li>
+          👉usar o nth-child do body(n) - Você precisa indicar o número do child
+        </li>
+        <xmp>
+        body > :nth-child(6){
+        text-align: center;
+        }
+    </xmp        >
+        <li>👍👉usar o :has - todas as divs que tem img serão afetadas</li>
+
+        <xmp>
+        div:has(img){
+        text-align: center;
+        }
+    </xmp        >
+        <li>👍👉Mudar img `<code>display: block</code>` + `<code>margin: auto</code>`</li>
+        <p>img nem precisa estar dentro de div, quando mudamos para block,
+          estamos permitindo ocupar toda o largura mesmo que não precise
+        </p>
+        <xmp>
+        img{
+        display: block;
+        margin: auto;    
+        }
+    </xmp>
+        <p>tu ainda pode estilizar mais com:</p>
+        <xmp>
+        img{
+            display: block;
+            margin: auto;    
+            max-width: 50%;
+            border-radius: 10px;
+        }
+    </xmp>
+      </ul>
+    </section>
+    <footer>
+        <p>By Geraldo Filho</p>
+    </footer>
+  </body>
+</html>

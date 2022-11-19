@@ -13,16 +13,43 @@ Projects and Demos: [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 ## Extra Fast Code Cheats and examples
 
 <details>
-<summary>Display vars, strings and syntax</summary>
+<summary>Concatenação, Interpolação and syntax</summary>
+From scratch aspas 'simples' ou "dupla" tanto faz, contudo dependendo do cenário há algunas peculiaridades
+
+```js
+console.log("I'm Geraldo");
+console.log('I\'m Geraldo'); // precisa usar a barra invertida \
+
+//📌descatar palavra
+
+//usar barras \
+console.log("TypeScript é uma \"linguagem\" de programação"); 
+
+//mais simples
+console.log('TypeScript é uma "linguagem" de programação');
+```
 
 ```js
 let name = "Geraldo";
 console.log("Eu sou", name);
-console.log("Eu sou " +name);
-console.log(`grace accent ${name}`);
-console.log('Eu sou ' +name);
+
+// Concatenando - operador +
+console.log('Eu sou ' +name); 
+console.log("Eu sou " +name); 
+console.log("Eu sou " +name + 'e tenho ' + age + ' anos'); 
+
+// ES6 template string
+console.log(`grace accent ${name} and ${age}`);  // interpolation sem concatenação
 
 ("Ola") apenas no console.log show infos F12
+
+//converter valores em string - consulte toString() nesse README ou String(n) em https://ricardo-reis.medium.com/strings-dd656f371ff3
+
+/*
+Comparando strings
+Para comparar duas strings, use os operadores > , >= , < , <= e ==.
+*/
+console.log("a" < "A"); //false
 
 ```
 ### syntax / sintaxe
@@ -41,6 +68,7 @@ square brackets [] - colchetes
 ```js
 //ES6
 let [cont,start] = [0, 10];
+let = [name,age] = ["Geraldo", 30];
 
 let a,b;
 a = 4;
@@ -679,18 +707,20 @@ document.querySelectorAll("section span")[1];
 ```
 </details>
 
-### Operadores Lógicos (Logical Operators 
+### pequena diferença entre esses peradores lógicos (Logical Operators)
 | SINAL     | TIPO          |
 | :---:       |   :---:         |
 |   =       |   atribuição  |
 |   ==      | compara valor |
 |   ===      | compara valor e tipo |
 
-- <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">[read_more]_artigos/operadores-matematicos-em-javascript</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math" target="_blank">table operadores matemáticos</a>
+- [table operadores comparação/lógicos ]<a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">Alura</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators">MDN</a>
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">_cloneNode(true)</a>
 - <a href="https://devhints.io/es6" target="_blank">_devhints.io/es6</a>
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
 - [render_table.html](./assets/thread/render_table.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table.html" target="_blank">Demo</a>
+- <a href="https://ricardo-reis.medium.com/try-catch-tratando-erros-no-javascript-91bcce0b93ae" target="_blank">Try catch - nice article</a>
 
 ## Videos
 

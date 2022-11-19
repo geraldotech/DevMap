@@ -49,6 +49,11 @@ console.log(str[2]); // s
 console.log(str[3]); // ,
 console.log(str[10]); // a
 
+//📌 use -1 para pegar o último caractere da string
+let str = "Geraldo";
+console.log(str[str.length -1]);
+
+
 //📂process-each-letter-of-text
 
 var text = 'uololooo';

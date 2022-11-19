@@ -10,6 +10,7 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [Newproperty](#property)
 - [remove](#remove)
 - [Constructor](#constructor)
+- [Object Methods](#object)
 
 
 ### access
@@ -59,7 +60,24 @@ delete geraldo.name;
 ```
 
 ### constructor
-[https://www.w3schools.com/js/js_object_constructors.asp](https://www.w3schools.com/js/js_object_constructors.asp)
+[https://www.w3schools.com/js/js_object_constructors.asp](https://www.w3schools.com/js/js_object_constructors.asp);
+
+### Object Methods
+###### object
+
+```js   
+    let smart = {
+      open: function(){
+        console.log("open conexao")
+      },
+      close: function(){
+        console.log("fechar conexao")
+      }
+    }
+    smart.open();
+    smart.close();
+```
+
 
 
 /* [============================[for in]================================] */
