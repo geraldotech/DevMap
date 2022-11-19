@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Label Padding</title>
+    <style>
+:root{
+  color-scheme: dark;
+}
+label{
+  margin: 10px 20px;
+  cursor: pointer;
+}
+label{
+  background: gray;
+  padding: 15px;
+  width: 150px;
+  display: block;
+}
+  </style>
+  </head>
+  <body>
+
+<form action="" name="form">
+<label for="1"><input type="radio" name="opt" id="1">one</label>
+<label for="2"><input type="radio" name="opt" id="2">two</label>
+</form>
+
+
+<div id="res"></div>
+
+
+
+
+
+    <script>
+const rad = document.querySelectorAll("input[type='radio']");
+console.log(rad);
+
+const opcoes = (e) => {
+  console.log(e.target.value);
+  res.textContent = e.target.id;
+}
+
+rad.forEach(ele => {ele.addEventListener("change", opcoes)});
+
+
+
+
+
+</script>
+  </body>
+</html>
