@@ -1,4 +1,4 @@
-// Basic example
+//🟢 Basic button example
     
 <select id="lista">
 <option value="red">Red</option>
@@ -15,7 +15,7 @@ function getColor(){
 };
 
 
-// by ID
+//👉by ID
 
 <select id="lista">
     <option id="vermelho" value="red">Red</option>
@@ -25,30 +25,45 @@ function getColor(){
 
 document.getElementById("lista").value; // vermelho, azul, coral2
 
-// selectedIndex - get Index of itens
+//👉selectedIndex - get Index of itens
 document.getElementById("lista").selectedIndex;
 console.log(x); // 0 , 1 , 2
 
 
-// Como só é possível selecionar apenas um item, por isso o index sempre será [0]
+//👉Como só é possível selecionar apenas um item, por isso o index sempre será [0]
 // selectedIndex - get value
 document.getElementById("lista").selectedOptions[0].value; // red, blue, coral
 
-// selectedIndex - getting id
+//👉selectedIndex - getting id
 document.getElementById("lista").selectedOptions[0].id; // vermelho, azul, coral2
 document.getElementById("lista").selectedOptions[0].getAttribute('id'); // vermelho, azul, coral2
 
-// getAttribute("data");
+//👉getAttribute("data");
 <select id="lista">
     <option data="verm" id="vermelho" value="red">Red</option>
     <option data="ilha" id="azul" value="blue">Blue</option>
     <option data="smart" id="coral2" value="coral">Coral</option>
 </select>
+
 document.getElementById("lista").selectedOptions[0].getAttribute("data");
 console.log(x); // verm. ilha, smart
 
+//🟢querySelector and this.value
 
-// querySelectorAll
+<select>
+<option>- Select -</option>
+<option value="red">Red</option>
+<option value="blue">Blue</option>
+<option value="coral">Coral</option>
+</select>
+
+
+document.querySelector("select").onchange = function(){
+    console.log(this.value);
+}
+
+
+//🟢querySelectorAll
 
 <select name="planos">
 <option value="1">Alpha</option>
@@ -63,16 +78,17 @@ console.log(x); // verm. ilha, smart
 </select> 
 
 /*
-O querySelectorAll vai pegar o select com name = 'planos' com isso ele cria uma hirarquia de Nodelist, por exemplo de tivessimos outro select com mesmo nome o seu index seria select[1]
+O querySelectorAll vai pegar o select com name ='planos' com isso retorna uma Nodelist, por exemplo de tivessimos outro select com mesmo nome o seu index seria select[1]
 */
 
-const opt = document.querySelectorAll("select[name='planos']");
+
+const opt = document.querySelectorAll("select[name='planos']"); //select + name
+const opt2 = document.querySelectorAll("select"); // select apenas
 console.log(opt); //a prova está que opt[0] é o select[0]
-// outro exemplo
-console.log(document.querySelectorAll("select[name='planos']")[0][0].innerHTML); // Alpha */
 
-console.log(document.querySelectorAll("select[name='planos']")[1][1].innerHTML); // Alpha 2 */
+console.log(opt[0][0].innerHTML); // Alpha */
 
+console.log(opt2[1][0].innerHTML); // Alpha 2 */
 
 // querySelectorAll e addEventListener
 
