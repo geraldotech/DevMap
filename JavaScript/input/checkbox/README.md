@@ -1,0 +1,1 @@
+[https://geraldotech.github.io/DevMap/JavaScript/input/checkbox/](https://geraldotech.github.io/DevMap/JavaScript/input/checkbox/)
