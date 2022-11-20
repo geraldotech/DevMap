@@ -163,6 +163,13 @@ console.log(Math.max(...ages)); //3234
 const num = [1,2,3,4];
 console.log(Math.max.apply(null, num));
 
+//📌 for of by gmap
+const arr = [1,2,3,4];
+let n = ''
+for(const i of arr){
+  n = Math.max(i);
+}
+console.log(n); //4
 
 /*
 padStart - define o tamanho minimo, e adiciona um complemento caso não tenha o mínimo

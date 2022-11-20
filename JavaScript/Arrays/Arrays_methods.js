@@ -463,6 +463,12 @@ const keys = ["1","e"];
 const busca = array.filter(a => keys.some(e => a.includes(e)))
 console.log(busca);  // ['12', 'dev', 'Element'];
 
+
+//📌filtrando typeof
+console.log([12,3,"2"].filter(val => {
+  return typeof val === 'number';
+}))
+
 /* [=============================================================================]
 como buscar varios termos com piece de informações adicionando o some o
 */
@@ -1003,6 +1009,10 @@ console.log(paragraph.indexOf("lazy?")); // 78
 /* [=============================================================================]
 🟢 29 - match() https://ricardo-reis.medium.com/o-tipo-string-no-javascript-e3fb621856d1
 */
+/* [=============================================================================]
+🟢 30 - trim() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+*/
+
 
 
 /*-*[===========================MIX EXAMPLES======================================]*-*/
@@ -1105,7 +1115,7 @@ console.log(estados.reduce((val, ind) => val.includes(ind) ? val: [...val, ind],
 
 
 /*
-_______________________EXERCICIOS_____________________________
+_______________________🟢EXERCICIOS🟢_____________________________
 https://www.notion.so/geraldodev/Exercicios-1-2a427cfc7d5b4e989ac1da54a3f7e21a
 */
 const api = ["Geraldo", "CostAo", "Barrao", "Georgeo", "Aomeo","asoa","oplz"];
@@ -1157,7 +1167,7 @@ console.log(api.filter((el, ind) => {
   if(ind > 0 ) return el.endsWith("o");  
 }));
 /*-*[=============================================================================]*-*/
-// SUPER DICA: alternative indicando o proprio value
+// 👉SUPER DICA: alternative indicando o proprio value
 console.log(api.filter(val => {
   if(val != "Geraldo") return val.endsWith("o");
 }));
@@ -1254,8 +1264,8 @@ console.log(itens.filter((val, ind) => { //home e downloads
 }));
 
 /*
-Mais e se não soubermos o deternimado index e quando o mesmo pode mudar a qualquer momento?
-- usar o findIndex
+Mais e se não soubermos o determinado index e quando o mesmo pode mudar a qualquer momento?
+👉 usar o findIndex
 */
 
 function achaInd(val){
