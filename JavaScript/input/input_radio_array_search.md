@@ -1,4 +1,4 @@
-[Live Demo](https://gmapdev.netlify.app/demo/array_input_radio_search/index.html)
+## [Netlify](https://gmapdev.netlify.app/projects/array_input_radio_search/index.html)
 
 <details>
 <summary>HTML</summary>

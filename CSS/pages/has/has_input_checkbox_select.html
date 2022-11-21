@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS has()</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div>
+          <h2>CSS has()</h2>
+        </div>
+        <nav class="list_menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">JavaScript</a></li>
+          <li><a href="">CSS</a></li>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <p>
+        O truque estar em usar em mudar o valor das variáveis e quem estiver
+        associados será afetado, em casos de muitos checks como essa página
+        atribuir um #id para cada section ou div
+      </p>
+      <p>checkbox tem mais prioridade do que select&options</p>
+      <div id="menu">
+        <label>
+          <input type="checkbox" name="del" />
+          text-decoration: none
+        </label>
+        <label>
+            <input type="checkbox" name="font">
+            Font-size
+        </label>
+      </div>
+      <section>
+        <h2>has() change styles</h2>
+        <form>
+          <label>Mudar cor h2 e span:</label>
+          <select>
+            <option value="default">Padrao</option>
+            <option value="red">Red</option>
+          </select>
+        </form>
+        <div>
+          <span class="demo">demo</span>
+        </div>
+      </section>
+
+      <hr />
+      <section class="dropdown">
+        <h2>Menu dropdown com CSS has()</h2>
+        <form>
+          <label for="">Selecionar Language:</label>
+          <select>
+            <option value=""></option>
+            <option value="1">HTML</option>
+            <option value="2">CSS</option>
+          </select>
+        </form>
+        <div id="one">
+          <img
+            src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png"
+            alt=""
+          />
+        </div>
+        <div id="two">
+          <img
+            src="https://logospng.org/download/css-3/logo-css-3-2048.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Check test</h2>
+        <label>
+          <input type="checkbox" name="" id="" />
+          check `sections`
+        </label>
+      </section>
+
+      <section id="sec">
+        <h2>Check test</h2>
+        <label>
+          <input type="checkbox" name="" id="" />
+          check by id #sec
+        </label>
+      </section>
+
+      <section id="test">
+        <h2>Body background and p</h2>
+        <p>marque para alterar o background, cor dos p e h2</p>
+        <label>
+          <input type="checkbox" />
+          check
+        </label>
+      </section>
+      <footer>
+          <p>by Geraldo Filho</p>
+      </footer>
+    </main>
+  </body>
+</html>
