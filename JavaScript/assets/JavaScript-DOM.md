@@ -50,8 +50,8 @@ console.log(window) - display all objects in window
 window.document - display document objects
 window.location - vai retornar uma lista de objetos, algums são:
 - .pathname
-- .href = "new url to redirect"
-- .reload()
+- .href 👉 "new url to redirect"
+- .reload() 👉 "reload page"
 
 //tudo que acompanhar nome + parênteses() são funções nativas, você também pode criar as suas.
 ```
@@ -78,15 +78,15 @@ console.log(document); //#document
 
 ```js
  //  HTML objects
-- document.documentElement // #rootElement #html
 - document; // #document
+- document.documentElement // #rootElement #html
 - document.head);
 - document.body);
 - document.URL);
 - document.lastModified); 
 - document.title; // currently value
 - document.title = "new title"; // set new value for title
-- document.write("gmap"); // write text in dom
+- document.write("gmap"); // write text in DOM
 - document.domain
 - document.URL
 - document.all 
@@ -178,7 +178,6 @@ const btn3 = document.querySelector("button[name='btn3']");
 btn3.onclick = function (){
   alert("hello");
 }
-
 
 ```
 ### more in:

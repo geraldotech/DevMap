@@ -22,8 +22,9 @@
     font-size: var(--bodyFS);
   }
 
-  h2 {
+  section h2 {
     color: var(--cores);
+    padding-bottom: 10px;
   }
 
   .demo {
@@ -31,10 +32,10 @@
   }
 
   /*
-verifica se option tem value checked
+Se option tem determinado value checked
 */
   html:has(option[value="red"]:checked) {
-    --cores: red;
+    --cores: red; /*var associado a section h2 {...}*/
   }
 
   body:has(option[value="1"]:checked) {
@@ -88,23 +89,29 @@ se no body tem esse #id com checkbox: checked então mude a var
   body:has(#menu [type="checkbox"][name="font"]:checked) {
     --bodyFS: 1.2rem;
   }
-  p {
+  section p {
     color: var(--pColor);
     padding: 10px 0;
   }
   main {
     padding: 0px 20px;
   }
+  #menu label{
+    display: block;
+  }
 
   label {
     color: var(--label);
+  }
+  label, select{
+    cursor: pointer;
   }
   img {
     width: 10%;
   }
 
   header {
-    background: rgb(199, 175, 175);
+    background: rgb(56, 37, 37);
   }
 
   .container {
@@ -141,4 +148,6 @@ se no body tem esse #id com checkbox: checked então mude a var
   }
   footer{
       text-align: center;
+      padding-top: 35px;
+      padding-bottom: 5px;
   }

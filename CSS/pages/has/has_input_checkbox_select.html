@@ -21,22 +21,24 @@
       </div>
     </header>
     <main>
-      <p>
-        O truque estar em usar em mudar o valor das variáveis e quem estiver
-        associados será afetado, em casos de muitos checks como essa página
-        atribuir um #id para cada section ou div
-      </p>
-      <p>checkbox tem mais prioridade do que select&options</p>
-      <div id="menu">
-        <label>
-          <input type="checkbox" name="del" />
-          text-decoration: none
-        </label>
-        <label>
-            <input type="checkbox" name="font">
-            Font-size
-        </label>
-      </div>
+      
+        <section>
+          <p>
+            O truque é atribuir variáveis aos seletores, então mudar o valor das variávels quando determinado checkbox/select seja ativado, em casos de muitos checks como essa página
+            atribuir um #id para cada section ou div pode ajudar. Os checkboxs tem mais prioridade do que `select&options`
+          </p>
+        </section>
+        <div id="menu">
+          <label>
+            <input type="checkbox" name="del" />
+            text-decoration: none
+          </label>
+          <label>
+              <input type="checkbox" name="font">
+              Font-size
+          </label>
+        </div>
+      
       <section>
         <h2>has() change styles</h2>
         <form>
@@ -79,24 +81,24 @@
       <hr />
 
       <section>
-        <h2>Check test</h2>
+        <h2>Check green</h2>
         <label>
-          <input type="checkbox" name="" id="" />
-          check `sections`
+          <input type="checkbox"/>
+          check `section:has`
         </label>
       </section>
 
       <section id="sec">
-        <h2>Check test</h2>
+        <h2>Check violeta</h2>
         <label>
-          <input type="checkbox" name="" id="" />
-          check by id #sec
+          <input type="checkbox"/>
+          check `id#sec:has`
         </label>
       </section>
 
       <section id="test">
         <h2>Body background and p</h2>
-        <p>marque para alterar o background, cor dos p e h2</p>
+        <p>marque para alterar o background, color p, h2</p>
         <label>
           <input type="checkbox" />
           check

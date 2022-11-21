@@ -189,28 +189,8 @@ console.log(cpf);
 // padEnd() e.g string truncada
 let str2 = "1234567".padEnd(10,"Hello");
 console.log(str2);
-
-//show-loop-img-button-click
-//html
- <button onclick=
-  "show_image('https://www.w3schools.com/jsref/klematis.jpg',
-               500, 
-               500, 
-               'Google Logo');">Add Google Logo</button> 
-
-//js
-    function show_image(src, width, height, alt) {
-      var img = document.createElement("img");
-      img.src = src;
-      img.width = width;
-      img.height = height;
-      img.alt = alt;
-  
-      // This next line will just add it to the <body> tag
-      document.body.appendChild(img);
-  };
-
   ```
+
 </details>
 
 <details>
@@ -389,7 +369,7 @@ div.appendChild(img);
 //append body
 document.body.appendChild(div);
 
-# Images2 Template Alternative
+# Images 2 Template Alternative
 
    const btn = document.querySelector("button");
    btn.onclick = function(){
@@ -400,6 +380,29 @@ document.body.appendChild(div);
 document.addEventListener('click', function(){
 img.classList.add('meuimg');
 });
+
+# Images 3
+//create img -loop-img-button-click
+//html
+ <button onclick=
+  "show_image('https://www.w3schools.com/jsref/klematis.jpg',
+               500, 
+               500, 
+               'Google Logo');">Add Google Logo</button> 
+
+//js
+    function show_image(src, width, height, alt) {
+      var img = document.createElement("img");
+      img.src = src;
+      img.width = width;
+      img.height = height;
+      img.alt = alt;
+  
+      // This next line will just add it to the <body> tag
+      document.body.appendChild(img);
+  };
+
+
 ```
 
 </details>
