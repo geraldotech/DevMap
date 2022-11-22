@@ -15,27 +15,31 @@
         </div>
         <nav class="list_menu">
           <li><a href="">Home</a></li>
-          <li><a href="">JavaScript</a></li>
           <li><a href="">CSS</a></li>
+          <li><a href="./has_input_radio.html">has() input radio</a></li>
         </nav>
       </div>
     </header>
     <main>
-      
         <section>
           <p>
-            O truque é atribuir variáveis aos seletores, então mudar o valor das variávels quando determinado checkbox/select seja ativado, em casos de muitos checks como essa página
-            atribuir um #id para cada section ou div pode ajudar. Os checkboxs tem mais prioridade do que `select&options`
+            O truque é atribuir variáveis aos seletores, então mudar o valor das variávels quando determinado <code>checkbox/select</code> seja ativado, em casos de muitos checks como essa página
+            atribuir um #id para cada section ou div pode ajudar. Os checkboxs tem mais prioridade do que <code>select&options</code>
           </p>
+          <p>Preferencialmente é bom manter tudo no mesmo <code>`block`</code> e assim chamar o element pai por <code>tag/class/id</code>, se vc chamar <code>section:has</code> e o block estiver fora não vai funcionar, desse modo vai ser necessário chamar por <code>body:has ou html:has</code> assim não importa onde estiver vai funcionar, no caso de <code>radio/checkbox</code> especifique usando <code>[type="radio"][id="html"]</code></p>
         </section>
         <div id="menu">
           <label>
             <input type="checkbox" name="del" />
-            text-decoration: none
+            text-decoration: none;
           </label>
           <label>
               <input type="checkbox" name="font">
-              Font-size
+              font-size: 1.2rem;
+          </label>
+          <label>
+            <input type="checkbox" name="fontFamily">
+              font-family: cursive;
           </label>
         </div>
       
@@ -84,7 +88,7 @@
         <h2>Check green</h2>
         <label>
           <input type="checkbox"/>
-          check `section:has`
+          check <code>`section:has`</code>
         </label>
       </section>
 
@@ -92,7 +96,7 @@
         <h2>Check violeta</h2>
         <label>
           <input type="checkbox"/>
-          check `id#sec:has`
+          check <code>`id#sec:has`</code>
         </label>
       </section>
 

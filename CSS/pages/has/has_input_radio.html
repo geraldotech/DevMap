@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --html:none;
+            --css:none;
+            --js:none;
+        }
+        *{
+            color-scheme:dark;
+        }
+       html:has([type="radio"][id="html"]:checked){
+           --html: block;
+       }
+       html:has([type="radio"][id="js"]:checked){
+           --js: block;
+       }
+       html:has([type="radio"][id="css"]:checked){
+           --css: block;
+       }
+
+        .html{
+            display: var(--html);
+        }
+        .css{
+            display: var(--css);
+        }
+        .js{
+            display: var(--js);
+        }
+        label{
+            cursor: pointer;
+        }
+
+        section{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <h1>input radio css has()</h1>
+        <label>
+            <input type="radio" name="opt" id="html">
+            HTML
+        </label>
+        <label>
+            <input type="radio" name="opt" id="js">
+            JavaScript
+        </label>
+        <label>
+            <input type="radio" name="opt" id="css">
+            CSS
+        </label>
+        <div class="html">
+            <p>html content</p>
+        </div>
+        <div class="js">
+            <p>javascript content</p>
+        </div>
+        <div class="css">
+            <p>CSS content</p>
+        </div>
+    </section>
+   
+</body>
+</html>

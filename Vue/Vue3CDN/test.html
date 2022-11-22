@@ -1,54 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://technotesbr.blogspot.com/favicon.ico"
-      rel="icon"
-      type="image/x-icon"
-    />
-    <title>VueJS</title>
-    <script src="https://unpkg.com/vue@3"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-      :root {
-        color-scheme: dark;
-      }
-      
+        *{
+            color-scheme:dark;
+        }
     </style>
-  </head>
-  <body>
-    <h1>VueJS Loader GitHub examples</h1>
-    <section id="app">
-      <select name="" id="" v-model="opt">
-        <option value="">selecionar</option>
-        <option value="checkbox/carriers/index.html">carries checkbox</option>
-        <option value="checkbox/Filter_checkbox_sum_mult_gmap.html">Filter_checkbox_sum_mult_gmap</option>
-        <option value="checkbox/checkbox_toggle.html">checkbox_toggle.html</option>
-      </select>      
-      <div>
-        <a :href="link" target="_blank">{{link}}</a>
-      </div>
-      <iframe :src="link" width="100%" height="800px" frameborder="0"></iframe>
-    </section>  
-    <script>
-Vue.createApp({
-  data(){
-    return{
-        opt:'',
-        link:''
-    }
-  },methods:{
-      completePage(){
-        this.link = `https://geraldotech.github.io/DevMap/JavaScript/input/${this.opt}`
-      }
-  },watch:{
-    opt(){
-      this.completePage();
-    }
-  }
-}).mount(app);
-    </script>
-  </body>
+</head>
+<body>
+   
+</body>
 </html>

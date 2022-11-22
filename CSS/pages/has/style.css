@@ -13,11 +13,12 @@
     --pColor: white;
     --txtDe: underline;
     --bodyFS: 16px;
+    --family: Verdana, Geneva, Tahoma, sans-serif;
   }
   body {
     max-width: 75rem;
     margin: auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--family);
     background: var(--bkbody);
     font-size: var(--bodyFS);
   }
@@ -76,11 +77,11 @@ se no body tem esse #id com checkbox: checked então mude a var
 */
   body:has(#test [type="checkbox"]:checked) {
     --bkbody: rgb(22, 0, 63);
-    --pColor: coral;
+    --pColor: rgb(53, 211, 79);
     --cores: white;
   }
   /*
-  um belo exemplo de como usar varios checks em uma section/div com mesmo #id passando um nome na input
+  um belo exemplo de como usar varios checks em uma section/div com mesmo #id passando um nome na input, necessário chamar body,html
   */
   body:has(#menu [type="checkbox"][name="del"]:checked) {
     --txtDe: none;
@@ -89,6 +90,11 @@ se no body tem esse #id com checkbox: checked então mude a var
   body:has(#menu [type="checkbox"][name="font"]:checked) {
     --bodyFS: 1.2rem;
   }
+
+  html:has(#menu [type="checkbox"][name="fontFamily"]:checked) {
+    --family: cursive;    
+  }
+  
   section p {
     color: var(--pColor);
     padding: 10px 0;
@@ -98,6 +104,7 @@ se no body tem esse #id com checkbox: checked então mude a var
   }
   #menu label{
     display: block;
+    padding-bottom: 10px;
   }
 
   label {
@@ -150,4 +157,9 @@ se no body tem esse #id com checkbox: checked então mude a var
       text-align: center;
       padding-top: 35px;
       padding-bottom: 5px;
+  }
+
+  code{
+    color: rgb(240, 107, 18);
+    text-decoration: underline;
   }
