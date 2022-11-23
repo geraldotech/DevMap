@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      section {
+        display: none;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <select id="options">
+      <option value="1"></option>
+      <option value="2">Santander</option>
+      <option value="3">Pan</option>
+    </select>
+
+    <section id="1"></section>
+    <section id="2">SX</section>
+    <section id="3">Americano</section>
+
+    <div id="res"></div>
+    <script>
+      document.getElementById("options").onchange = function () {
+        let i = 1;
+        let div = document.getElementById(i);
+        while (div) {
+          div.style.display = "none";
+          div = document.getElementById(++i);
+        }
+        document.getElementById(this.value).style.display = "block";
+      };
+    </script>
+    <script>
+      const get = function (id) {
+         return document.getElementById(id);
+      };
+      const query = function (id) {
+        return document.querySelector(id);
+      };
+      const log = function (...id) {
+        console.log(id);
+      };
+
+     const l = (...a) => console.log(a);
+
+     l(5 + 8, "d")
+     
+    </script>
+  </body>
+</html>

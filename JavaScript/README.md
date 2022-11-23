@@ -199,9 +199,17 @@ console.log(str2);
 ```js
 
  //shorhand
-  const get = function (id) { return document.getElementById(id) };
-  const query = function (id) { return document.querySelector(id) };
-  const log = function (id) { return console.log(id) };
+  const get = function (id) {
+         return document.getElementById(id);
+      };
+      const query = function (id) {
+        return document.querySelector(id);
+      };
+      const log = function (...id) {
+        console.log(id);
+      };
+
+     const l = (...a) => console.log(a);
 
 input = query("input");
   input.addEventListener("input", function () {

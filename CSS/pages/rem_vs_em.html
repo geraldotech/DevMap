@@ -4,27 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sizing</title>
+    <title>rem vs em</title>
     <style>
       * {
         color-scheme: dark;
+        box-sizing: border-box;
+      }
+      body{
+          max-width: 75rem;
+          margin: 0 auto;
+          padding: 0 20px;
+      }
+  
+      body > p:first-of-type {
+        font-size: 2em;
+        color: red;
       }
 
-      p:nth-child(1) {
-        font-size: 32px;
+      body > :nth-child(4) {
+        font-size: 2em;
+        color: rgb(7, 5, 146);
       }
+
 
       p:nth-child(2) {
-        font-size: 2rem;
+        font-size: 2em;
       }
       div {
-        font-size: 10px;
         border: 1px solid;
+        font-size: 30px;
+        text-align: center;
       }
+      /*
+      seleciona o primeiro filho que seja p
+      */
       div > p:first-child {
-        font-size: 2em;
+        font-size: 3rem;
         color: coral;
+      } 
+      div > p:last-child{
+        color: violet;
+        font-size: 2em;
       }
+  
+      ul li{
+        padding: 10px 0;
+      }
+     
     </style>
   </head>
   <body>
@@ -33,19 +59,25 @@
         <ul>
           <li>px - absolute</li>
           <li>
-            rem - root-em relativo ao font-size do elemento html, default is 16px
+            rem - <strong>root-em</strong> relativo ao font-size do elemento html, default is 16px = 1em
           </li>
-          <li>em - relativo ao body - geralmente 16px = 1em</li>
+          <li>em - relativo ao font-size da sua classe pai e também ao body 16px = 1em</li>
           <li>W3C recomenda usar apenas px e em</li>
         </ul>
       </section>
 
-    <p>32px</p>
-    <p>2rem</p>
+
+      <h3>e.g todos se baseado default 16px</h3>
+    <p>p 2rem => 32px</p>
+    <p>p 2em => 32px</p>
 
     <div>
-      <p>2em - relative parent</p>
+      <mark>use o inspecionar para verificar o tamanho das fontes em px</mark>
+      <p>3rem - relative body 16px</p>
+      <p>2em - relative parent, this div is font-size: 30px ou seja 2em x 30px = 60px</p>
     </div>
+
+
 
   
   </body>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>usando has - alinhar imgs</title>
+    <title>Align imagens and has()</title>
     <style>
       * {
         color-scheme: dark;
@@ -25,7 +25,7 @@
       section {
         margin: 30px 0;
       }
-      h3,
+      h2, h3,
       p {
         padding: 20px 0;
       }
@@ -47,13 +47,20 @@
           text-decoration: underline;
           text-decoration-style: dotted;
           text-decoration-color: seagreen;
+          padding: 8px 0;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      h1, footer{
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <h1>Usando o pseudo-class <code>:has</code></h1>
+    <h1>O princípio para alinhar elementos e um pouco do pseudo-class <code>:has</code></h1>
     <p>
-      Temos uma img que é display:inline dentro de uma div: display: block, como
+      Situação: temos uma img que é <code>`display:inline`</code> dentro de uma div: <code>`display: block`</code>, como
       podemos centralizar ?
     </p>
     <p>A só chamar:</p>
@@ -64,7 +71,7 @@
     </xmp>
     <p>
       Isso vai centralizar a imagem, e <strong>TODO</strong> o conteúdo de todas
-      as divs da página, queremos apenas a div que tem a img
+      as divs de forma global, contúdo queremos apenas a div que tem a img.
     </p>
 
     <div>
@@ -96,17 +103,17 @@
     <hr />
     <p>
       No nosso exemplo como se trata apenas de uma imagem, tanto faz usar ou não
-      o seletor `>`, mais por que não está alinhando?...bem dos tipos de
+      o seletor `>`, mais por que não está alinhando?...bem lembra dos tipos de
       display?
     </p>
     <ul>
       <li>
-        inline: ocupa apenas a width necessário, como vou centralizar?👎
+        <code>`inline:`</code> ocupa apenas a width necessário, by default não posso centralizar!👎... a menos que me torne <code>`block`</code> ou seja envoldido por alguma tag desse tipo.
       </li>
-      <li>block: ocupa toda width disponível, posso centralizar👍</li>
+      <li><code>`block:`</code> ocupa toda width disponível, by default posso centralizar👍</li>
     </ul>
     <section>
-      <h3>Possibilidades</h3>
+      <h2>Possibilidades:</h2>
       <ul>
         <li>👉Adicionar uma classe, id na div e centralizar</li>
         <xmp
