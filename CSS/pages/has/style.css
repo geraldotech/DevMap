@@ -15,12 +15,16 @@
     --bodyFS: 16px;
     --family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  body {
-    max-width: 75rem;
-    margin: auto;
+  body{
     font-family: var(--family);
     background: var(--bkbody);
     font-size: var(--bodyFS);
+  }
+
+  article {
+    max-width: 75rem;
+    margin: auto;  
+    padding: 0px 20px; 
   }
 
   section h2 {
@@ -99,9 +103,6 @@ se no body tem esse #id com checkbox: checked então mude a var
     color: var(--pColor);
     padding: 10px 0;
   }
-  main {
-    padding: 0px 20px;
-  }
   #menu label{
     display: block;
     padding-bottom: 10px;
@@ -119,14 +120,22 @@ se no body tem esse #id com checkbox: checked então mude a var
 
   header {
     background: rgb(56, 37, 37);
+    position: sticky;
+    top: 0;
   }
 
-  .container {
+  .menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
     align-content: center;
     min-height: 50px;
+    position: sticky;
+    top: 0
+  }
+  div.menu h2{
+    padding-left: 5px;
+  
   }
 
   li {
@@ -153,13 +162,24 @@ se no body tem esse #id com checkbox: checked então mude a var
   form {
     margin: 15px 0;
   }
-  footer{
+  footer p {
       text-align: center;
-      padding-top: 35px;
-      padding-bottom: 5px;
+      padding: 10px 0;
+      background: rgb(56, 37, 37);
+      font-size: 12px;
+      font-family: sans-serif;
   }
 
   code{
-    color: rgb(240, 107, 18);
+    color: #e91e63;
     text-decoration: underline;
+  }
+
+  code::after{
+    content: '`';
+    color: dodgerblue;
+  }
+  code::before{
+    content: '`';
+    color: dodgerblue;
   }

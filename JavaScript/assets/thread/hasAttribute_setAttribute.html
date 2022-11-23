@@ -1,12 +1,56 @@
-[Code Pen](https://codepen.io/geraldopcf/pen/ZExZZmN)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hasAttribute _setAttribute</title>
+    <style>
+        * {
+        color-scheme: dark;
+      } 
 
-CodePen is newer version!!
-
-<details>
-<summary>html</summary>
-
-```html
-<code>hasAttribute e setAttribute</code><br />
+code {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      .header {
+        color: blue;
+      }
+      .header2 {
+        color: rgb(0, 212, 177);
+      }
+      .myh4 {
+        color: rgba(198, 3, 162, 0.956);
+        font-size: 1.5rem;
+      }
+      .mytest {
+        background-color: crimson;
+      }
+      .democlass {
+        color: dodgerblue;
+      }
+      #h5 {
+        color: rgba(198, 3, 162, 0.956);
+      }
+      .every2,
+      .every {
+        color: red;
+        font-size: 20px;
+        background: #f2f2f2;
+        
+}
+    .has{
+          border: 2px solid red;
+        }
+.has p{
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <code>hasAttribute e setAttribute</code><br />
     <p>true or false Boolean, seta um attributo, não depende do has!</p>
     <h1>my h1</h1>
     <h2>my h2</h2>
@@ -14,6 +58,18 @@ CodePen is newer version!!
     <br />
     <pp>GERALDO</pp>
     <p id="tenho" class="myclass">FILHO</p>
+
+<div class="has">
+  <p>click e verifica usando o hasAttribute qual section tem `data` como atributo</p>
+  <section data="">
+       <p>session 1</p>
+   </section>
+
+   <section>
+       <p>session 2</p>
+   </section>
+</div>
+
     <hr />
     <h3 class="">my h3</h3>
     <h4>setAttribute h4</h4>
@@ -49,52 +105,9 @@ CodePen is newer version!!
       Show numbers of Attributes on this button
     </button>
     <hr />
+    <script>
+        //1 hasAttribute
 
-```
-</details>
-
-<details>
-<summary>CSS</summary>
-
-```css
- code {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1.2rem;
-      }
-      .header {
-        color: blue;
-      }
-      .header2 {
-        color: rgb(0, 212, 177);
-      }
-      .myh4 {
-        color: rgba(198, 3, 162, 0.956);
-        font-size: 1.5rem;
-      }
-      .mytest {
-        background-color: crimson;
-      }
-      .democlass {
-        color: dodgerblue;
-      }
-      #h5 {
-        color: rgba(198, 3, 162, 0.956);
-      }
-      .every2,
-      .every {
-        color: red;
-        font-size: 20px;
-        background: #f2f2f2;
-```
-</details>
-
-<details>
-<summary>JS</summary>
-
-```js
-//1 hasAttribute
     //byTagName
     h1 = document.getElementsByTagName("h1")[0].hasAttribute("class");
     console.log(h1); //false
@@ -107,6 +120,15 @@ CodePen is newer version!!
     h3 = document.querySelectorAll("h3")[0].hasAttribute("class");
     console.log(h3); //true
 
+
+        //seleciona todos os section
+document.querySelectorAll("section").forEach((el) => {
+    el.addEventListener("click", verifica)
+});
+//verifica qual tem o attr
+function verifica(){
+    alert(this.hasAttribute("data"));
+}
     //setAttribue
 
     myh1 = document.getElementsByTagName("h1");
@@ -184,5 +206,6 @@ CodePen is newer version!!
 
     var btn_name2 = document.getElementById("btn").attributes[0].name;
     console.log(btn_name2); //output: id
-```
-</details>
+    </script>
+</body>
+</html>

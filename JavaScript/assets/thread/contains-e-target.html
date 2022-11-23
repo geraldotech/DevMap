@@ -6,41 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>(e).target</title>
     <style>
-      *{color-scheme:dark;}
-      section{
+      * {
+        color-scheme: dark;
+      }
+      section {
         border: 1px solid;
         margin: 10px 0;
-        width: 50%;
+        width: 70%;
+      }
+      p {
+        cursor: pointer;
+      }
+      p:hover {
+        background: green;
       }
     </style>
   </head>
   <body>
     <h1>contains(e.target)</h1>
     <section>
-      <p>section one</p>
-      <div data="one">one</div>
-      <div data="two">two</div>
+      <p>section one - hasAttribute attr data ?</p>
+      <p data="one">one</p>
+      <p data="two">two</p>
     </section>
 
     <section>
-      <p>section two hasAttribute data ?</p>
+      <p>section two hasAttribute attr data ?</p>
       <p>section two</p>
     </section>
 
+    <section>
+      <p>section 3</p>
+      <p itemtype="hello">I has attr itemtype</p>
+    </section>
     <script>
-      const section = document.querySelectorAll("section")[0];
-      section.onclick = function (e) {
-        const has = e.target.hasAttribute("data");
-        console.log(has);
-        if (section.contains(e.target)) console.log("Sou a section one");
-        //todo click dentro da section vai ser alertado
-      };
+      const section = document.querySelectorAll("section");
 
-      document.querySelectorAll("section")[1].onclick = (e) => {
+      //adicionando Event de click em todo document
+      document.addEventListener("click", function (e) {
+        //verifica se o no event.target o paragrafo no click tem o attr
+        const has = e.target.hasAttribute("data");
+        console.log("hasAttr", has);
+
+        //verifica se o click em cada section
+        if (section[0].contains(e.target)) {
+          console.log("click inside section one");
+        }
+        if (section[1].contains(e.target)) {
+          console.log("click inside section two");
+        }
+        //verifica se o no event.target o paragrafo no click tem o attr
+        const has2 = e.target.hasAttribute("itemtype");
+        console.log("has itemtype", has2);
+      });
+
+      section[1].onclick = (e) => {
         console.log("section two");
         const hasattr = e.target.hasAttribute("data");
         console.log(hasattr);
-      }
+      };
     </script>
   </body>
 </html>

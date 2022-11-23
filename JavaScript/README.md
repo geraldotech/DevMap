@@ -523,7 +523,7 @@ console.log(g); //R$ 2.000,00
 <summary>getAttributes,createElement ,set ,has ,remove...classList.add.contains</summary>
 
 - 1 [create_get_remove_Attribute](./assets/create_get_remove_Attribute.md) 
-- 2 [hasAttribute_setAttribute](./assets/hasAttribute_setAttribute.md) 
+- 2 [hasAttribute_setAttribute.html](./assets/thread/hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
 - 3 [setAttribute_vs_classList_classToggle](./assets/setAttribute_vs_classList.md) 
 - 4 [createElements_add_delete.html](./assets/thread/createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
 - 5 [createElements_add_delete_template_literal_add_assigment](./assets/thread/createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete_template_literal_add_assigment.html)
