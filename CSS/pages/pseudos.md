@@ -10,7 +10,7 @@ https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
 - :nth-of-type [https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/](https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/) sempre o determinado tipo!
 - :link
 - :is [CodePen](https://codepen.io/geraldopcf/pen/NWMVXZK) | [Twitter](https://twitter.com/addyosmani/status/1411942923671785474)
-- :has() [has_and_center_imgs.html](https://github.com/geraldotech/DevMap/blob/main/CSS/pages/has/has_and_center_imgs.html) - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/has_and_center_imgs.html) | [has_input_checkbox_select.html](https://github.com/geraldotech/DevMap/blob/main/CSS/pages/has/has_input_checkbox_select.html) - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/has_input_checkbox_select.html)
+- :has() [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/has_and_center_imgs.html) | [has_input_checkbox_select.html](https://github.com/geraldotech/DevMap/blob/main/CSS/pages/has/has_input_checkbox_select.html) - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/has_input_checkbox_select.html)
 
 # pseudo-element 
 
