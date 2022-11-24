@@ -2,47 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>box sizing</title>
-
+    <title>Box Sizing</title>
     <link rel="stylesheet" href="../assets/box_model.css" />
   </head>
-
   <body>
-    <h1>CSS Box Model</h1>
-    <h2>box-sizing: content-box vs border-box</h2>
+    <main>
+      <section>
+        <h1>CSS Box Model</h1>
+        <h2>box-sizing: content-box vs border-box</h2>
+        <ul>
+          <li>Todas as divs: 100x100 e padding; 20px,</li>
+          <li>margin e padding do html foram zerados para evitar conflitos</li>
+          <li>
+            Tamanho da div <span style="color: red">red</span> é relativo ao
+            conteúdo e vaza do elemento pai, agora a div tem 120x120 com padding
+          </li>
+        </ul>
+      </section>
+      <section class="check">
+        <input type="checkbox" id="turn">
+        <label for="turn">Turn red Box-sizing</label>
+      </section>
+      <section class="box">
+        <div>
+          <p>Lorem is a text for rooting</p>
+        </div>
+        <div>
+          <p>Lorem is a text for rooting</p>
+        </div>
+      </section>
+      <ul class="ul2">
+        <li>
+          Tamanho da div <span style="color: green">green</span> se limita até a
+          borda, não vaza e permanece com 100x100 mesmo com padding
+        </li>
+      </ul>
+      <footer><p>by gmapdev em <date>26/10/2022</date></p></footer>
 
-    <ul>
-      <li>Todas as divs: 100x100 e padding; 20px,</li>
-      <li>margin e padding do html foram zerados para evitar conflitos</li>
-      <li>
-        Tamanho da div <span style="color: red">red</span> é relativo ao
-        conteúdo e vaza do elemento pai, agora a div tem 120x120 com padding
-      </li>
-    </ul>
-    <section class="check">
-      <input type="checkbox" id="turn">
-      <label for="turn">Turn red Box-sizing</label>
-    </section>
-    <section>
-      <div>
-        <p>Lorem is a text for rooting</p>
-      </div>
-      <div>
-        <p>Lorem is a text for rooting</p>
-      </div>
-    </section>
-
-    <ul class="ul2">
-      <li>
-        Tamanho da div <span style="color: green">green</span> se limita até a
-        borda, não vaza e permanece com 100x100 mesmo com padding
-      </li>
-    </ul>
-
-    <footer>by gmapdev em <date>26/10/2022</date></footer>
+    </main>
     <script>
       const div = document.querySelector("div");
       const inputBox = document.querySelector("input");
