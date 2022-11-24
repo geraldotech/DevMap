@@ -29,3 +29,6 @@ num.forEach((ele, ind) => console.log(ind + ":" + ele));
 const api = ["Geraldo", "CostAo", "Barrao"];
 api.forEach((val,ind) => console.log(ind, val)); // index, value, 
 api.forEach((val,ind) => console.log(ind, val.length)); //  index, value.length
+
+//setAttribute and classListAdd 
+//READ => setAttribute_vs_classList.html
