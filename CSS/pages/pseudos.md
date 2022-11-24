@@ -1,15 +1,13 @@
 # pseudo-classes
 
-https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
-
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 ### :hover 
 - [hover.html](./hover.html) [Demo](https://geraldotech.github.io/DevMap/CSS/pages/hover.html) 
 - [hover2.html](./hover2.html) [Demo](https://geraldotech.github.io/DevMap/CSS/pages/hover2.html)  
 
 ### :active
 ### :first-child 
-- [first-child.md](./first-child.md)
-first element amoung a group of siblings.. primeiro filho do parent
+- first element amoung a group of siblings.. primeiro filho do parent
 
 ### :last-child: 
 - Seleciona o VERY LAST element in a container `main`, `div`...
