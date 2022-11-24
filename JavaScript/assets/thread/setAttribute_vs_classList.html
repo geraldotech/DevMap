@@ -1,10 +1,12 @@
-[Code Pen](https://codepen.io/geraldopcf/pen/NWYmmoB)
-
-<details>
-<summary>CSS</summary>
-
-```css
-:root{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute_vs_classList</title>
+    <style>
+        :root{
     color-scheme: dark;
     }
     .isa {
@@ -43,13 +45,9 @@
       .demo{
         color: blue;
       }
-```
-</details>
-
-<details>
-<summary>HTML</summary>
-
-```html
+    </style>
+</head>
+<body>
     <h2 class="isa sim" id="son">ISABELLA (click this txt)</h2>
     <p id="cpf">084.000.000-70</p>
 
@@ -62,7 +60,7 @@
     <a href="#">link 2</a>
     <a href="#">link 3</a>
     <a href="#">link 4</a>
-   
+
 
     <h2>forEach</h2>
 
@@ -77,12 +75,8 @@
 
 <hr>
 <div class="beta" onclick="change(this)">geraldo class.toggle()</div>
-
-```
-</details>
-
-```js
-let isa = document.getElementById("son");
+    <script>
+        let isa = document.getElementById("son");
 isa.addEventListener("click", function () {
 //isa.setAttribute("class","isa");
 //isa.classList.add("isa");
@@ -138,5 +132,6 @@ changelinks("links");
  function change(x){        
        x.classList.toggle("demo");
       }
-
-```
+    </script>
+</body>
+</html>
