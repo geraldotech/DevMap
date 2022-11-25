@@ -1,122 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>from scratch sticky</title>
     <style>
-   *{
-       box-sizing: border-box;
-       
-   }
-   :root{
-       --aside-w: 300px;
-   }
-   html, body{
-       margin: 0;
-       height: 100vh;
-    }
-   aside{
-       width: var(--aside-w);
-       background: coral;
-       position: fixed;
-       height: 100vh;
-   }
-   .container{
-       top: 50%;
-       position: absolute;
-       transform: translateY(-50%);
-   }
+      * {
+        box-sizing: border-box;
+        color-scheme: dark;
+      }
+      body {
+        height: 200vh;
+      }
 
-   .avatar img{
-       width: 50%;
-   }
-   .avatar{
-       text-align: center;
-   }
-   .menu a{
-       display: block;
-       text-align: center;
-       font-size: 20px;
-       margin-top: 10px;
-       line-height: 30px;
-       text-decoration: none;
-       color: white;
-       opacity: 0.6;
-   }
-
-   .menu a:hover{
-       opacity: 1;
-       text-decoration: underline;
-       color: purple;
-   }
-   nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: var(--menu-height);
-    background: var(--bg-dark);
-    padding: 0  100px;
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    background: black;
-   }
-   nav a{
-       color: white;
-       text-decoration: none;
-       padding: 10px 15px;
-
-   }
-   nav a:hover{
-       background: dodgerblue;      
-   }
-   
-nav ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.main{
-    width: calc(100% - var(--aside-w));
-    background: red;
-    position: absolute;
-    height: 100vh;
-    left: var(--aside-w);
-}
+      .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        padding: 0 100px;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        background: dodgerblue;
+        opacity: 0.9;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+      }
+      nav a:hover {
+        background: dodgerblue;
+      }
     </style>
-</head>
-<body>
-    <nav>
-        <img src="./assets/logo.png" alt="logo">
-        <ul>
-            <a href="#"><i data-feather="user"></i>Sobre mim</a>
-            <a href="#"><i data-feather="briefcase"></i>Serviços</a>
-            <a href="#"><i data-feather="image"></i>Portfolio</a>
-            <a href="#"><i data-feather="list"></i>Curriculo</a>
-            <a href="#"><i data-feather="send"></i>Contato</a>
-        </ul>
+  </head>
+  <body>
+    <section>
+      <h1>from scratch sticky</h1>
+      <h4>Elemento é posicionado baseado na posição do scroll do usuário</h4>
+      <ul>
+        <li>definir um nav para os links</li>
+        <li>nav deve ser display: sticky e top: 0</li>
+        <li>adicionar um height: 100vh no elemento parent, body or main</li>
+      </ul>
+    </section>
+
+    <nav class="menu">
+      <div>
+        <img src="https://via.placeholder.com/100x40" alt="logo" />
+      </div>
+      <ul>
+        <a href="#"><i data-feather="user"></i>Sobre mim</a>
+        <a href="#"><i data-feather="briefcase"></i>Serviços</a>
+        <a href="#"><i data-feather="image"></i>Portfolio</a>
+        <a href="#"><i data-feather="list"></i>Curriculo</a>
+        <a href="#"><i data-feather="send"></i>Contato</a>
+      </ul>
     </nav>
-    <aside>
-        <div class="container">
-
-            <div class="avatar">
-                <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="">
-            </div>
-
-            <div class="menu">
-                <a href="">Software Enginner</a>
-                <a href="">Front-End</a>
-                <a href="">Back-End</a>
-            </div>
-        </div>
-    </aside>
-  
-    <div class="main">
-        <p>content goes here!</p>
-    </div>
- 
-</body>
+    <article>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus
+        aliquam, ad nesciunt natus necessitatibus cum veniam facilis, voluptates
+        quidem voluptate quod fuga sapiente aperiam dolorem odio unde! Ducimus,
+        aliquid? Voluptatibus quis dicta reprehenderit ipsum laboriosam minus
+        quibusdam nemo, suscipit illo earum explicabo tenetur libero dolore
+        ipsam facilis maiores beatae. A aperiam perferendis praesentium corrupti
+        modi, quae debitis possimus minima distinctio provident id quis nostrum
+        tenetur nulla suscipit incidunt magni velit earum consectetur
+        exercitationem fuga? Tempore dolores voluptatibus laborum, soluta quasi
+        laboriosam magni maxime temporibus deserunt a, perferendis molestias
+        esse ut. Exercitationem quisquam facere ducimus quia rem, voluptas
+        expedita perferendis commodi labore culpa dolorem hic quod sed tempore
+        nulla veritatis magnam atque cumque! Ut iure fugiat suscipit excepturi
+        facere, incidunt ratione reiciendis accusantium repellendus animi
+        doloribus fugit. Quibusdam quia necessitatibus est, obcaecati, tempora
+        numquam aliquam impedit at laborum vel eveniet qui! Quia ipsa, commodi
+        earum temporibus est, quam necessitatibus distinctio culpa vero laborum
+        dolor officiis error nulla, magnam soluta molestias modi dicta ab
+        ducimus aut iste omnis. A nam magnam debitis numquam impedit quisquam
+        quaerat harum officia voluptatum, error explicabo facilis eius quo
+        praesentium. Commodi perspiciatis voluptatum natus illum rem dignissimos
+        porro, debitis facere consectetur hic ipsum, architecto vitae, qui
+        numquam!
+      </p>
+    </article>
+  </body>
 </html>
