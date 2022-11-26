@@ -10,36 +10,38 @@
         margin: 0;
       }
       div {
-        border: 1px solid blue;
         width: 200px;
         height: 200px;
       }
-
       .container {
         background: gray;
         width: 100%;
         height: 100%;
-        margin-top: 100px;
-        position: relative;
+        margin-top: 65px;
       }
 
       #teste {
         background: red;
-        position: absolute;
+        position: fixed;
         top: 0;
-        right: 0;
+        width: 100%;
+        height: 65px; /*nova altura*/
+      }
+
+      p {
+        height: 1000px;
+        background: purple;
       }
     </style>
   </head>
   <body>
-    <h2>
-      absolute necessário englobar no elemento relativo, senão será relativo ao
-      body
-    </h2>
     <div class="container">
+      <!--container deve ter o margin-top ref ao height da div fixed-->
+      <h1>div fixed</h1>
       <div>primeira div</div>
       <div id="teste">Segunda div</div>
       <div>Terceira div</div>
+      <p>teste</p>
     </div>
   </body>
 </html>

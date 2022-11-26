@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>relative vs absolute</title>
+    <title>Relative vs Absolute</title>
     <style>
       * {
         color-scheme: dark;
@@ -43,35 +43,49 @@
         justify-content: center;
         align-items: center;
         padding: 60px 0;
+        flex-direction: column;
+      }
+      .flex div {
+        margin-top: 10px;
       }
       h1 {
         text-align: center;
       }
-      input{
+      input {
         width: 18px;
         height: 18px;
       }
-      .container{
+      .container {
         max-width: 800px;
         margin: auto;
+      }
+      [type="checkbox"]:checked + label {
+        color: green;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
     <div class="flex">
-      <input type="checkbox" id="rel" value="rel" />
-      <label id="txt" for="rel">Wall Relative</label>   
+      <h1>Relative vs Absolute</h1>
+      <div>
+        <input type="checkbox" id="rel" value="rel" />
+        <label id="txt" for="rel">Wall Relative</label>
+      </div>
     </div>
-  
+
     <div class="container">
-      <p>box é absoluto, então deve ser relativo a algum element</p>
+      <p>
+        box é absoluto, então deve ser relativo ao seu element, geralmente o
+        parent, caso contrário será relativo ao body.
+      </p>
       <div class="wall" id="wall">
-     
         <h1>wall</h1>
         <div class="box">
           <h3>box</h3>
         </div>
       </div>
+      <!--wall-->
     </div>
 
     <script>

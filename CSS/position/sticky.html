@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>from scratch sticky</title>
     <style>
       * {
@@ -22,9 +23,7 @@
         padding: 0 100px;
         position: sticky;
         top: 0;
-        z-index: 99;
         background: dodgerblue;
-        opacity: 0.9;
       }
       nav a {
         color: white;
@@ -55,7 +54,6 @@
         <a href="#"><i data-feather="user"></i>Sobre mim</a>
         <a href="#"><i data-feather="briefcase"></i>Serviços</a>
         <a href="#"><i data-feather="image"></i>Portfolio</a>
-        <a href="#"><i data-feather="list"></i>Curriculo</a>
         <a href="#"><i data-feather="send"></i>Contato</a>
       </ul>
     </nav>
@@ -86,5 +84,8 @@
         numquam!
       </p>
     </article>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
