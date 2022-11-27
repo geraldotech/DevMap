@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!--   <input type="text" v-model="name" />
+      <div>{{name}}</div>
+      <div v-show="name == '123'">one two tree</div> -->
+    </div>
+
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            headers: [],
+            workers: [],
+          };
+        },
+        components: {
+          Table: Vue.defineAsyncComponent(() => import("./table.js")),
+        },
+        template: `<Table :headers="headers" :workers="workers"></Table>`,
+        methods: {},
+        mounted() {},
+      }).mount("#app");
+    </script>
+  </body>
+</html>

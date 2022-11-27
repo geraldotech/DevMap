@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        Do not use built-in or reserved HTML elements as component id: footer
+      </p>
+      <home></home>
+      <foo></foo>
+    </div>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {},
+        components: {
+          home: httpVueLoader("home.vue"),
+          foo: httpVueLoader("footer.vue"),
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,33 +1,35 @@
 ## Vue 3 CDN
 
 - **add in header**
+
 ```js
-<script src="https://unpkg.com/vue@3"></script>  
+<script src="https://unpkg.com/vue@3"></script>
 //attribute "defer" the defer attribute tells the browser not to wait for the script
 <script src="app.js" defer></script>
+//link altenativo que extrai do https://github.com/FranckFreiburger/http-vue-loader
+<script src="https://unpkg.com/vue@next"></script>
 ```
 
 - **body**
 
 ```html
 <div id="app">{{ greeting }}</div>
-
 ```
 
 - **basic script**
 
 ```js
-  Vue.createApp({
-    data() {
-      return {
-        greeting: 'Hello, World!'
-      }
-    }
-  }).mount('#app')
-  //.mount(app); //works too
+Vue.createApp({
+  data() {
+    return {
+      greeting: "Hello, World!",
+    };
+  },
+}).mount("#app");
+//.mount(app); //works too
 ```
 
-Error: production build (*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
+Error: production build (\*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
 
 ## Vue properties
 
@@ -36,41 +38,45 @@ Error: production build (*.prod.js) when deploying for production?: `https://unp
 - watch
 - computed
 
-## Directives 
+## Directives
+
 has -v prefix [REF](https://vuejs.org/guide/essentials/template-syntax.html#directives)
 
-- v-model 
-- v-if 
+- v-model
+- v-if
 - [v-bind](#v-bind)
-- [v-on](#v-on) 
-- v-show 
-- v-for 
+- [v-on](#v-on)
+- v-show
+- v-for
 - v-html
 
-
 ## v-bind
+
 title get a variavel message
+
 ```html
 ::before
 <span title="hello">hello</span>
 ::after
-  <span v-bind:title="message">v-bind</span>
+<span v-bind:title="message">v-bind</span>
 ::short hand
-   <span :title="message">v-bind</span>
+<span :title="message">v-bind</span>
 :: links
- <a :href="face">{{face}}</a> in date link: 'http...'
+<a :href="face">{{face}}</a> in date link: 'http...'
 ```
 
 ## v-on
->> (parenteses são dispensáveis)
-- `<button v-on:click="hello()">hello</button>` 
-- `<button @click="msn">btn</button>`   
-  - @[event] [REF](https://vuejsbr-docs-next.netlify.app/guide/template-syntax.html#abreviacao-de-v-bind)
-    -  <input type="text" @change="handleChange" />
-    -  <input type="text" @click="handleChange" />
-    -  <input type="text" @mouseover="handleChange" />
 
- now just create a method
+> > (parenteses são dispensáveis)
+
+- `<button v-on:click="hello()">hello</button>`
+- `<button @click="msn">btn</button>`
+  - @[event] [REF](https://vuejsbr-docs-next.netlify.app/guide/template-syntax.html#abreviacao-de-v-bind)
+    - <input type="text" @change="handleChange" />
+    - <input type="text" @click="handleChange" />
+    - <input type="text" @mouseover="handleChange" />
+
+now just create a method
 
 ```js
  methods: {
@@ -80,7 +86,7 @@ title get a variavel message
     }
 
 //getting value target in select options
- handleChange(event){      
+ handleChange(event){
     const selel = event.target.value;
        console.log(selel);
     }
@@ -88,10 +94,11 @@ title get a variavel message
 ```
 
 ## Vue router CDN
+
 [`vue-router@3.0.2/dist/`](https://unpkg.com/browse/vue-router@3.0.2/dist/)
 
-
 ## simples minimum to input return
+
 ```js
   <div id="app">
     <input type="text" v-model="input_num">
@@ -112,13 +119,14 @@ Vue.createApp({
 
 ### Form app
 
-Fazer uma div que engloba tudo `<div id="app"> </div>` 
+Fazer uma div que engloba tudo `<div id="app"> </div>`
 depois fazer o form com v-model e um output
+
 ```html
 <form id="app">
-<input type="text" v-model="input_name" placeholder="your name">
-<p>Meu nome é {{name}}</p>
-<p>Data bind: {{input_name}}</p>
+  <input type="text" v-model="input_name" placeholder="your name" />
+  <p>Meu nome é {{name}}</p>
+  <p>Data bind: {{input_name}}</p>
 </form>
 ```
 
@@ -127,22 +135,22 @@ Você pode ou não declarar uma const, o resultado foi o mesmo:
 - const e Vue.createApp
 
 ```js
-  const meuApp = {
-    data(){
-      return {
-        name: "gmapdev",
-        input_name: ""
-      }
+const meuApp = {
+  data() {
+    return {
+      name: "gmapdev",
+      input_name: "",
+    };
+  },
+  methods: {
+    meuFormulario() {
+      this.name = this.input_name;
     },
-    methods:{
-      meuFormulario(){
-        this.name = this.input_name;
-      }
-    }
-  }
-  Vue.createApp(meuApp).mount(app);
+  },
+};
+Vue.createApp(meuApp).mount(app);
 
-  /* Vue.createApp({
+/* Vue.createApp({
   data(){
     return {
       name: "Geraldo",
@@ -156,13 +164,13 @@ Você pode ou não declarar uma const, o resultado foi o mesmo:
 }
   }).mount('#app');
  */
-
 ```
 
 submitForm é referente ao v-on:click
-` <input type="submit" value="Enviar" v-on:click="submitForm">`  
+` <input type="submit" value="Enviar" v-on:click="submitForm">`
 
 ## How preventDefault:
+
 ```js
 methods: {
     submitForm(e){
@@ -171,10 +179,13 @@ methods: {
       this.name = this.input_name;
     }
 ```
+
 [CodePen LiveDemo](https://codepen.io/geraldopcf/pen/ExEMjob)
 
 ## Templates para englobar vários elementos
+
 exemplo
+
 ```js
  <div id="app">
         <span v-if="isUnderAge">vc precisa ser maior de 18 anos</span>
@@ -187,6 +198,7 @@ exemplo
     </template>
 
 ```
+
 ## radio box value and checkbox true/false with change name
 
 ```js
