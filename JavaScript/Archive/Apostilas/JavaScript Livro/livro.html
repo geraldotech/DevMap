@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+      //livro
+function veridade(pessoa, nasc){
+  var idade = 2022 - nasc;
+  if(idade >=18){
+   console.log(pessoa + ':' + nasc);
+  } else {
+    console.log("menor de idade");
+  }
+}
+veridade("Geraldo",1992);
+
+veridade("Isabella",2000);
+
+
+function maioridade(nome,idade){
+  var age = 2022 - idade;
+  if(age >=18){
+    console.log(nome+" maior idade")
+  } else {
+    console.log(nome+" menor idade")
+  }
+}
+maioridade("Beto "+2008);
+
+//Statement (declaração)
+
+function minhaFuncao(param1){
+  console.log("executa acao");
+}
+if(1 !== 2){
+  console.log("um if é uma declaracao");
+}
+console.log(minhaFuncao);
+
+//Expression (declaração)
+var minhaOutrafuncao = function(param2){
+console.log("executa outra acao");
+}
+console.log(minhaOutrafuncao);
+
+function exp(x,y){
+  console.log(Math.pow(x,y));
+}
+
+exp(2,5);
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --bg:#181818;
+            --txtc:#f2f2f2;
+        }
+        body{
+            background-color: var(--bg);
+            color: var(--txtc);
+        }
+    </style>
+</head>
+<body>
+    <h1>Livro 2</h1>
+</body>
+<script>
+
+//page 44
+var Jogadores = ['Geraldo','Felipe','Ramon'];
+var anoNas = new Array(1992,1994,1990);
+var pontos = [951,856,900];
+pontos[1] += 10;
+console.log(Jogadores);
+console.log(Jogadores[1] + ' tem ' + pontos[1] + ' pontos.');
+
+
+console.log('-------------------')
+    arrGeraldo = new Array('Geraldo',1992);
+    arrIsa = new Array('Isabella',2016);
+    arrCam = new Array('Camilly',1993);
+
+    var arrall = new Array(arrGeraldo, arrIsa, arrCam);
+
+    console.log(arrall);
+    console.log(arrGeraldo+' '+arrIsa);
+
+
+var arr2 = new Array('Matematica','English','Física');
+arr2.shift('novo');
+console.log(arr2);
+
+
+//IndexOf page 48
+
+var prato = new Array('Arroz','Tomate','Alface');
+prato.push('Feijão');
+if(prato.indexOf('Arroz') === -1){
+    prato.unshift('nao tem');
+}
+console.log(prato);
+
+console.log('-------------------')
+var prato2 = new Array('Arroz','Tomate','Alface','cebolinha');
+if(prato2.indexOf('cebolinha') !== -1){ //sera diferente de -1 pq cebola existe
+prato2.shift(); //entao remote cebola
+}
+console.log(prato2);
+
+console.log('-------------------')
+
+//version2 splice index of a value
+//https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
+
+var prato3 = new Array('Arroz doce','Tomate verde ','Laranja','cebola');
+const index = prato3.indexOf('cebola')
+console.log(index);
+if(index > -1){ // >-1 = encontrado
+prato3.splice(index, 1); //entao remove 
+}
+console.log('prato 3: '+prato3);
+
+
+
+console.log('-------------------')
+prato2.forEach(listar)
+function listar(item, index){
+    console.log(index+':'+item)
+}
+
+//listar array com decremento
+var alunos = ['Maria','João','Aurora','Malevola'];
+for(var i = alunos.length -1; i >=0; i--){
+    console.log(alunos[i]);
+}
+console.log('-------------------')
+
+//https://github.com/kelvinbiffi/javascript-book/blob/master/12.La%C3%A7os%20e%20Intera%C3%A7%C3%B5es/5.Continue/script.js
+var flores = ['rosa', 'azul', 'amarelo', 'rosa', 'amarelo', 'vermelho'];
+var i = 0;
+var numeroDeFlores = 0;
+for (var i = 0; i < flores.length; i++) {
+  if (flores[i] == 'amarelo') {
+    continue;
+  }
+  numeroDeFlores++;
+}
+console.log('Numero de flores: ' + numeroDeFlores);
+
+</script>
+
+</html>

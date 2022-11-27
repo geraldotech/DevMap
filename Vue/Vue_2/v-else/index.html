@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h1>v-else</h1>
+    <div id="app">
+
+        <input type="text" v-model="age" placeholder="qual sua idade">
+        <br><br>
+        <span v-if="age < 17">vc precisa ser maior de 18 anos</span>
+        <span v-else-if="age > 60">very old man to drink</span>
+  <template v-else>
+        <span>veja os itens</span>
+        <ul>
+            <li>Black label</li>
+            <li>Chivas</li>
+        </ul>
+    </template>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

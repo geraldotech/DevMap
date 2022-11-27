@@ -1,13 +1,18 @@
 # JavaScript
+
 :rocket: :zap: Let's Code :zap: :rocket:
->> Memorize is a bad ideia, instead focus on concepts
+
+> > Memorize is a bad ideia, instead focus on concepts
 
 Projects and Demos: [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 
-### O que é JavaScript?    
-- **From Scratch by _Geraldo Filho_** 
-[onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)  
-### Estrutura de dados  
+### O que é JavaScript?
+
+- **From Scratch by _Geraldo Filho_**
+  [onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
+
+### Estrutura de dados
+
 - [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
 
 ## Extra Fast Code Cheats and examples
@@ -18,12 +23,12 @@ From scratch aspas 'simples' ou "dupla" tanto faz, contudo dependendo do cenári
 
 ```js
 console.log("I'm Geraldo");
-console.log('I\'m Geraldo'); // precisa usar a barra invertida \
+console.log("I'm Geraldo"); // precisa usar a barra invertida \
 
 //📌descatar palavra
 
 //usar barras \
-console.log("TypeScript é uma \"linguagem\" de programação"); 
+console.log('TypeScript é uma "linguagem" de programação');
 
 //mais simples
 console.log('TypeScript é uma "linguagem" de programação');
@@ -34,9 +39,9 @@ let name = "Geraldo";
 console.log("Eu sou", name);
 
 // Concatenando - operador +
-console.log('Eu sou ' +name); 
-console.log("Eu sou " +name); 
-console.log("Eu sou " +name + 'e tenho ' + age + ' anos'); 
+console.log('Eu sou ' +name);
+console.log("Eu sou " +name);
+console.log("Eu sou " +name + 'e tenho ' + age + ' anos');
 
 // ES6 template string
 console.log(`grace accent ${name} and ${age}`);  // interpolation sem concatenação
@@ -52,6 +57,7 @@ Para comparar duas strings, use os operadores > , >= , < , <= e ==.
 console.log("a" < "A"); //false
 
 ```
+
 ### syntax / sintaxe
 
 ```js
@@ -62,30 +68,27 @@ braces {} - chaves
 square brackets [] - colchetes
 ```
 
-
 ### multiple var/let/const
 
 ```js
 //ES6
-let [cont,start] = [0, 10];
-let = [name,age] = ["Geraldo", 30];
+let [cont, start] = [0, 10];
+let = [name, age] = ["Geraldo", 30];
 
-let a,b;
+let a, b;
 a = 4;
 b = 3;
-console.log(a + b)
+console.log(a + b);
 
-const 
-rua = "a",
-cidade = "b",
-sim = "sd"
+const rua = "a",
+  cidade = "b",
+  sim = "sd";
 
 // old
-var eu = "Ge"
-, filho = "a"
-, agr = "now"
+var eu = "Ge",
+  filho = "a",
+  agr = "now";
 console.log(eu, filho, agr);
-
 ```
 
 </details>
@@ -108,18 +111,19 @@ function add(){
 
 //short by gmap
 let start = 0;
-function add(){   
-document.getElementById("num").innerHTML = start = start +1;  
+function add(){
+document.getElementById("num").innerHTML = start = start +1;
 }
 
 //short by gmap recuperando o valor da var diretamente no DOM succinct way
 
-const add = () => {   
+const add = () => {
 let num = document.getElementById("num");
 num.innerHTML = +num.innerHTML + 1;
 //num.innerHTML = parseInt(num.innerHTML) +1;
 }
 ```
+
 </details>
 
 <details>
@@ -127,6 +131,7 @@ num.innerHTML = +num.innerHTML + 1;
 
 [immutability.html](https://geraldotech.github.io/DevMap/JavaScript/assets/immutability.html)  
 [immutability.js](./assets/string_immutability.js)
+
 </details>
 
 <details>
@@ -175,7 +180,7 @@ console.log(n); //4
 padStart - define o tamanho minimo, e adiciona um complemento caso não tenha o mínimo
 padStart or end se baseia em dois parâmetros:
 
-- padLength 
+- padLength
 - padString - opcional , suporta string/number
 */
 
@@ -189,7 +194,7 @@ console.log(cpf);
 // padEnd() e.g string truncada
 let str2 = "1234567".padEnd(10,"Hello");
 console.log(str2);
-  ```
+```
 
 </details>
 
@@ -197,28 +202,26 @@ console.log(str2);
 <summary>JS Shorhand</summary>
 
 ```js
+//shorhand
+const get = function (id) {
+  return document.getElementById(id);
+};
+const query = function (id) {
+  return document.querySelector(id);
+};
+const log = function (...id) {
+  console.log(id);
+};
 
- //shorhand
-  const get = function (id) {
-         return document.getElementById(id);
-      };
-      const query = function (id) {
-        return document.querySelector(id);
-      };
-      const log = function (...id) {
-        console.log(id);
-      };
-
-     const l = (...a) => console.log(a);
+const l = (...a) => console.log(a);
 
 input = query("input");
-  input.addEventListener("input", function () {
-    const str = +this.value;
-    console.log(str.toString(16));
-    get("res").innerText = str.toString(2);
-    get("hex").innerText = str.toString(16);
-  });
-
+input.addEventListener("input", function () {
+  const str = +this.value;
+  console.log(str.toString(16));
+  get("res").innerText = str.toString(2);
+  get("hex").innerText = str.toString(16);
+});
 
 // Shorhand for getElementById
 
@@ -234,8 +237,11 @@ const get2 = (a) => {
 };
 get2("root");
 
-const log = (x)=> {console.log(x)};
+const log = (x) => {
+  console.log(x);
+};
 ```
+
 </details>
 
 <details>
@@ -247,6 +253,7 @@ const log = (x)=> {console.log(x)};
 <summary>addEventListener, Pointer Events, e.target, documentElement</summary>
 
 DOM Events access [JavaScript-DOM.md](./assets/JavaScript-DOM.md)
+
 ```js
 #simple
 <p id="foo">JavaScript</p>
@@ -294,7 +301,7 @@ document.getElementById("bar").addEventListener("click", function(event){
 console.log(event.target.id); //bar
 console.log(event.target.getAttribute("data")); //eu
 console.log(event.target.value); //only for input radio/checkbox
- 
+
 
 #documentElement
 document.documentElement.addEventListener("mousemove", function(e){
@@ -332,10 +339,11 @@ document.addEventListener("mousemove", function(event){
 
 const el = document.querySelector("ul");
     el.addEventListener("click", function(e){
-      console.log(e.currentTarget);  // <ul> 
+      console.log(e.currentTarget);  // <ul>
       console.log(e.target); // <li>
     });
 ```
+
 [currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
 
 </details>
@@ -394,9 +402,9 @@ img.classList.add('meuimg');
 //html
  <button onclick=
   "show_image('https://www.w3schools.com/jsref/klematis.jpg',
-               500, 
-               500, 
-               'Google Logo');">Add Google Logo</button> 
+               500,
+               500,
+               'Google Logo');">Add Google Logo</button>
 
 //js
     function show_image(src, width, height, alt) {
@@ -405,7 +413,7 @@ img.classList.add('meuimg');
       img.width = width;
       img.height = height;
       img.alt = alt;
-  
+
       // This next line will just add it to the <body> tag
       document.body.appendChild(img);
   };
@@ -420,29 +428,25 @@ img.classList.add('meuimg');
 <a href="https://codepen.io/geraldopcf/pen/yLKZROJ" target="_blank">CodePen</a>
 
 ```html and css
-<div id="mydiv" style="width: 100px;height: 100px;background-color: blue;"></div>
+<div
+  id="mydiv"
+  style="width: 100px;height: 100px;background-color: blue;"
+></div>
 
-  div {
-  margin: auto;
-  padding: 1em;
-  max-width: 6em;
-  background: rgba(0, 0, 0, .2);
-  text-align: center;
-}
-
+div { margin: auto; padding: 1em; max-width: 6em; background: rgba(0, 0, 0, .2);
+text-align: center; }
 ```
 
 ```js
-
 var mydiv = document.getElementById("mydiv");
 
-document.addEventListener("click", function(e){
-    var inside = mydiv.contains(e.target);
-    if(inside){
-        alert("click inside");
-    } else {
-        alert("click outsite");
-    }
+document.addEventListener("click", function (e) {
+  var inside = mydiv.contains(e.target);
+  if (inside) {
+    alert("click inside");
+  } else {
+    alert("click outsite");
+  }
 });
 ```
 
@@ -456,12 +460,12 @@ document.addEventListener("click", function(e){
 
 ```html
 <h2>toString converter</h2>
-   <form>
-     <label for="number">Number:</label>
-        <input type="number">
-    </form>
-    <div>Binary: <span id="res"></span></div>
-    <div>Hex: <span id="hex"></span></div>
+<form>
+  <label for="number">Number:</label>
+  <input type="number" />
+</form>
+<div>Binary: <span id="res"></span></div>
+<div>Hex: <span id="hex"></span></div>
 ```
 
 ```js
@@ -500,23 +504,23 @@ console.log(typeof aget); //now is a string
 parseInt(1111, 2); // 15
 
 //convert to base(2) binary
-const ipnumber = [192,168,100,200];
-let binary = ipnumber.map((value)=> value.toString(2));
-console.log(binary) //[ '11000000', '10101000', '1100100', '11001000' ]
+const ipnumber = [192, 168, 100, 200];
+let binary = ipnumber.map((value) => value.toString(2));
+console.log(binary); //[ '11000000', '10101000', '1100100', '11001000' ]
 
 //Also support base(8) octal , base(16) hexadecimal
 
 //Moedas
 //https://franciscochaves.com.br/blog/formatacao-de-moedas-em-javascript
-var atual = 600.00;
+var atual = 600.0;
 var saldo = 2000;
 
-var f = atual.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-var g = saldo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+var f = atual.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+var g = saldo.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 console.log(f); //R$ 600,00
 console.log(g); //R$ 2.000,00
-
 ```
+
 </details>
 
 <details>
@@ -524,7 +528,7 @@ console.log(g); //R$ 2.000,00
 
 - 1 [create_get_remove_Attribute](./assets/thread/create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
 - 2 [hasAttribute_setAttribute.html](./assets/thread/hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
-- 3 [setAttribute_vs_classList](./assets/thread/setAttribute_vs_classList.html)  - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
+- 3 [setAttribute_vs_classList](./assets/thread/setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
 - 4 [createElements_add_delete.html](./assets/thread/createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
 - 5 [createElements_add_delete_template_literal_add_assigment](./assets/thread/createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete_template_literal_add_assigment.html)
 
@@ -537,10 +541,11 @@ console.log(g); //R$ 2.000,00
 document.body.style.zoom="150%";
 
 //css
-body{    
+body{
   zoom:150%;
   }
 ```
+
 </details>
 
 <details>
@@ -553,16 +558,19 @@ body{
 <summary>insertAdjacent, insertCSS</summary>
 
 ```html
- <h1 id="foo">hello</h1>
-    <hr>
-    <h1 id="el">Element</h1>
-    <hr>
-    <footer id="vue" style="color:red">
-        <p>footer</p>
-    </footer>
-    <button onclick="document.getElementById('el').insertAdjacentElement('afterbegin', document.getElementById('vue'))">Move</button>
-    <!--inline hardcore-->
-    
+<h1 id="foo">hello</h1>
+<hr />
+<h1 id="el">Element</h1>
+<hr />
+<footer id="vue" style="color:red">
+  <p>footer</p>
+</footer>
+<button
+  onclick="document.getElementById('el').insertAdjacentElement('afterbegin', document.getElementById('vue'))"
+>
+  Move
+</button>
+<!--inline hardcore-->
 ```
 
 ```js
@@ -581,22 +589,21 @@ dependendo da posição pode herdar os attributes!
 */
 
 const foo = document.getElementById("foo");
-foo.insertAdjacentHTML("beforebegin","<b>Hiii</b>");
-foo.insertAdjacentHTML("beforeend","<b>Hiii</b>");
+foo.insertAdjacentHTML("beforebegin", "<b>Hiii</b>");
+foo.insertAdjacentHTML("beforeend", "<b>Hiii</b>");
 
 /*
 insertAdjacentElement() is used to insert an element which is already in the DOM. You can get this element with getElementById() for example.
 */
 //move footer to
 
-function moveel(){
-const vue = document.getElementById("vue");
-document.getElementById("el").insertAdjacentElement("afterbegin", vue);
+function moveel() {
+  const vue = document.getElementById("vue");
+  document.getElementById("el").insertAdjacentElement("afterbegin", vue);
 }
 ```
 
 ```js
-
 // Write css inside JavaScript 1.0
 document.head.innerHTML += `
     <style>
@@ -623,8 +630,6 @@ document.head.insertAdjacentHTML(
   "beforeend",
   "<link rel=stylesheet href=/foo.css>"
 );
-
-
 ```
 
 </details>
@@ -657,11 +662,11 @@ document.head.insertAdjacentHTML(
 //GetElementById:
 document.getElementById("test"); //return only the id
 
-//getElementsByTagName - 
+//getElementsByTagName -
 console.log(document.getElementsByTagName("a")); //returns a HTML Collection[x] required a Array.from
 
 //getElementsByClassName
-const menu = document.getElementsByClassName("menu"); 
+const menu = document.getElementsByClassName("menu");
 console.log(menu); //return a HTML Collection[x]  e.g menu[0].innerHTML = "Hello World!";
 
 //Ainda temos o byName() https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
@@ -692,9 +697,10 @@ console.log(btnSection.innerHTML); //"btn inside section"
 
 // querySelector selecionando um segundo button inside tags, adicionar um "name" ou "data"
 const sbtn = document.querySelector("section button[data='btn2']");
-console.log(sbtn);
+const Calc = document.querySelector("dialog button[name='ok']");
+
 // querySelector selecionando class e tag dentro dessa classe
-const el = document.querySelector(".secao span"); 
+const el = document.querySelector(".secao span");
 el.textContent = "novo";
 
 
@@ -706,7 +712,7 @@ console.log(link); //return a NodeList()
 
 link.forEach(el => {
     el.classList.add("linkr");
-  el.href = "http://technotesbr.blogspot.com";  
+  el.href = "http://technotesbr.blogspot.com";
   el.setAttribute("target","_blank");
   el.setAttribute("title","open new tab");
 });
@@ -719,23 +725,24 @@ link.forEach(el => {
 <section>
   <span>[1]</span>
 </section>
-
 document.querySelectorAll("section span")[1];
 
 ```
+
 </details>
 
-### pequena diferença entre esses peradores lógicos (Logical Operators)
-| SINAL     | TIPO          |
-| :---:       |   :---:         |
-|   =       |   atribuição  |
-|   ==      | compara valor |
-|   ===      | compara valor e tipo |
+### pequena diferença entre esses operadores lógicos (Logical Operators)
+
+| SINAL |         TIPO         |
+| :---: | :------------------: |
+|   =   |      atribuição      |
+|  ==   |    compara valor     |
+|  ===  | compara valor e tipo |
 
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math" target="_blank">table operadores matemáticos</a>
 - [table operadores comparação/lógicos ]<a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">Alura</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators">MDN</a>
-- <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">_cloneNode(true)</a>
-- <a href="https://devhints.io/es6" target="_blank">_devhints.io/es6</a>
+- <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">\_cloneNode(true)</a>
+- <a href="https://devhints.io/es6" target="_blank">\_devhints.io/es6</a>
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
 - [render_table.html](./assets/thread/render_table.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table.html" target="_blank">Demo</a>
 - <a href="https://ricardo-reis.medium.com/try-catch-tratando-erros-no-javascript-91bcce0b93ae" target="_blank">Try catch - nice article</a>
@@ -744,6 +751,3 @@ document.querySelectorAll("section span")[1];
 
 - [Stop Trying To Memorize Code - Do This Instead](https://www.youtube.com/watch?v=vP2MNhC_Igw&list=PL_VP_qub8HfIva3X7o4FbRqoqg9K-s8z4&index=1)
 - [Learning Functional Programming with JavaScript](https://www.youtube.com/watch?v=e-5obm1G_FY)
-
-
-
