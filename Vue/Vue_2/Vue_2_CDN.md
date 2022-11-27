@@ -12,6 +12,11 @@
 
 ### Vue Router
 
+Segundo [esse site](https://github.com/vuejs/router)
+
+- Router 3 para VueJS 2/3
+- Router 4 para Vue JS 3
+
 [https://cdnjs.com/libraries/vue-router](https://cdnjs.com/libraries/vue-router)
 
 ```js
