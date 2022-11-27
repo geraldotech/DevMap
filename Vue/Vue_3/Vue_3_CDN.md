@@ -95,7 +95,10 @@ now just create a method
 
 ## Vue router CDN
 
-[`vue-router@3.0.2/dist/`](https://unpkg.com/browse/vue-router@3.0.2/dist/)
+```js
+<script src="https://unpkg.com/browse/vue-router@3.0.2/dist/"></script>
+<script src="https://unpkg.com/vue-router@4"></script>
+```
 
 ## simples minimum to input return
 

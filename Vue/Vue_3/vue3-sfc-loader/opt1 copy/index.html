@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <!--
+    tambem pode fazer um global de CSS nessa index page
+  --></head>
+  <body>
+    <div id="app">
+      <!--varios components-->
+    </div>
+    <h2>index Page</h2>
+
+    <!--single components-->
+    <div id="foo"></div>
+    <div id="rotas">
+      <hr />
+      <nav>
+        <ul>
+          <router-link to="/">Home</router-link>
+          <router-link to="/route1">About</router-link>
+          <router-link to="/route2">Port</router-link>
+          <router-link to="/route3">Pets</router-link>
+        </ul>
+      </nav>
+      <!-- component matched by the route will render here -->
+      <router-view></router-view>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
