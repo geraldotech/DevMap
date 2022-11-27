@@ -14,6 +14,10 @@
 
 [https://cdnjs.com/libraries/vue-router](https://cdnjs.com/libraries/vue-router)
 
+```js
+<script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
+```
+
 ### for Prodution:
 
 ```js

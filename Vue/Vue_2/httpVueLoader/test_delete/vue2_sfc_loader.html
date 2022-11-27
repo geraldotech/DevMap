@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-router@3/dist/vue-router.js"></script>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p><router-link to="/page1">Go to Page 1</router-link></p>
+      <p><router-link to="/page2">Go to Page 2</router-link></p>
+      <p><router-view></router-view></p>
+    </div>
+
+    <script>
+      const app = new Vue({
+        data() {
+          return {};
+        },
+      });
+      const Foo = { template: "<div>foo</div>" };
+      const Bar = { template: "<div>bar</div>" };
+
+      const routes = [
+        { path: "/foo", component: Foo },
+        { path: "/bar", component: Bar },
+      ];
+
+      const router = new VueRouter({
+        //importe para criar o: #/
+        history: createWebHistory(),
+        routes,
+        // base: "/page/",
+      });
+
+      const app = new Vue({
+        el: "#app",
+        router: router,
+      });
+
+      router.use(VueRouter);
+    </script>
+  </body>
+</html>

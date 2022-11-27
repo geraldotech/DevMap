@@ -7,7 +7,7 @@
         <a href="https://github.com/FranckFreiburger/http-vue-loader">link</a>
       </li>
       <li>
-        <abbr title="vue3-sfc-loader">Vue 2</abbr>
+        <abbr title="vue3-sfc-loader">Vue 3</abbr>
         <a href="https://github.com/FranckFreiburger/vue3-sfc-loader">link</a>
       </li>
       <li>
