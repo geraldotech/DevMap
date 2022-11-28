@@ -1,34 +1,26 @@
-<h1>Vue 2</h1>
-<html>
-    <head>
-        
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    </head>
-    <body>
-        
-        <div id="app">
-       
-            <p v-if="4 > 1">teste</p>
+<html style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Vue 2</h1>
+      <p v-if="4 > 8">teste</p>
+      <h1 v-if="working">Trabalhando</h1>
+      <h1 v-else="">Procurar vagas</h1>
 
-            <
-                 
+      <p v-show="mostrar_mail">{{email}}</p>
 
-            <h1 v-if="working">Trabalhando</h1>
-            <h1 v-else="">Procurar vagas</h1>
-
-
-            <p v-show="mostrar_mail"> {{email}}</p>
-            {{counter}}
-           <button @click="increase">Somar</button>
-           <button @click="decrease">Diminuir</button>
-           <button @click="clear">Reset</button>
-            <button @click="addn">Add psw</button>
-
-        
-         
-         
-
-        </div>
-        <script src="index.js"></script>
-    </body>
+      <button @click="addn">Hide Email / Add Working true</button>
+      <hr />
+      <div>
+        <button @click="increase">Adicionar</button>
+        <button @click="decrease">Diminuir</button>
+        <button @click="clear">Reset</button>
+        <p>{{counter}}</p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>

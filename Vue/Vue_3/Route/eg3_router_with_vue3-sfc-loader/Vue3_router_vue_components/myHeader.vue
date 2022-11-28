@@ -2,7 +2,10 @@
   <div>
     <header>
       <h1>header</h1>
-      <p>mais um exemplo de rotas carregando componentes</p>
+      <p>
+        mais um exemplo de rotas components são pré carregados direitamentos em
+        #id
+      </p>
     </header>
   </div>
 </template>

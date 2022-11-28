@@ -86,11 +86,11 @@ const Myfooter = Vue.createApp({
     return {};
   },
   components: {
-    "my-footer": Vue.defineAsyncComponent(() =>
+    "my-Header": Vue.defineAsyncComponent(() =>
       loadModule("./myHeader.vue", options)
     ),
   },
-  template: `<my-footer></my-footer>`,
+  template: `<my-Header></my-Header>`,
 });
 
 Myfooter.mount("#had");

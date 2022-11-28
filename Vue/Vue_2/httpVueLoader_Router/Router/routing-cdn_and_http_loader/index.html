@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vue.js Routing From Scratch Using Vue Router CDN</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    <style>
+      * {
+        color-scheme: dark;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0px;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        max-width: 75rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+      header {
+        min-height: 50px;
+        background: rgb(61, 71, 71);
+      }
+      article {
+        flex: 1;
+      }
+      footer {
+        min-height: 50px;
+        background: olive;
+      }
+
+      nav ul {
+        display: flex;
+        width: 400px;
+        justify-content: space-evenly;
+      }
+      ul li {
+        list-style: none;
+      }
+      picture > img {
+        width: 100%;
+        max-width: 30%;
+      }
+      .route-content {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>header</p>
+    </header>
+    <article>
+      <div id="app">
+        <nav>
+          <ul>
+            <li><router-link class="nav-link" to="/"> Home </router-link></li>
+            <li>
+              <router-link class="nav-link" to="about"> About </router-link>
+            </li>
+            <li>
+              <router-link class="nav-link" to="contact"> Contact </router-link>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="route-content">
+          <router-view></router-view>
+        </div>
+      </div>
+    </article>
+    <!--footer #id-->
+    <div id="app2">
+      <foo></foo>
+    </div>
+
+    <!-- Vue Pages -->
+    <script src="pages/home.vue.js"></script>
+    <script src="pages/about.vue.js"></script>
+    <script src="pages/contact.vue.js"></script>
+    <!--rota para assets-->
+    <script src="pages/assets.vue.js"></script>
+
+    <script>
+      const app2 = new Vue({
+        el: "#app2",
+        data: {},
+        components: {
+          foo: httpVueLoader("./footer.vue"),
+          //foo: httpVueLoader("footer.vue"),
+        },
+      });
+
+      var routes = [
+        { path: "/", component: Home },
+        { path: "/about", component: About },
+        { path: "/contact", component: Contact },
+        { path: "/assets", component: Assets },
+        //{ path: "/assets/files", component: "/assets/files/" },
+      ];
+
+      var router = new VueRouter({
+        routes: routes,
+        mode: "history",
+        base: "/#",
+      });
+
+      var app = new Vue({
+        el: "#app",
+        router: router,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      body {
+        max-width: 55rem;
+        margin: 0 auto;
+      }
+    </style>
+    <script src="axios.min.js"></script>
+    <script src="vue.js"></script>
+    <script src="aaaa.js">
+      // <------ Load component
+    </script>
+    <script src="bbbb.js">
+      // <------ Load component
+    </script>
+  </head>
+  <body>
+    <div id="app" class="main-content col-12">
+      <h1>Vue CDN load component like a Pro</h1>
+
+      <br />
+      <component_a></component_a>
+      <br />
+      <component_b></component_b>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        //register components
+        let html = await axios.get("aaaa.html"); // <---- Load HTML file
+        aaaa.template = html.data;
+        Vue.component("component_a", aaaa);
+
+        html = await axios.get("bbbb.html"); // <---- Load HTML file
+        bbbb.template = html.data;
+        Vue.component("component_b", bbbb);
+
+        new Vue({
+          el: "#app",
+
+          data: {
+            m: '"App" is mounted now!',
+          },
+          methods: {
+            autoexec: function () {
+              console.log(this.m);
+            },
+          },
+          mounted: function () {
+            this.autoexec();
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

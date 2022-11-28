@@ -1,0 +1,3 @@
+var Assets = {
+  template: `../img`,
+};
