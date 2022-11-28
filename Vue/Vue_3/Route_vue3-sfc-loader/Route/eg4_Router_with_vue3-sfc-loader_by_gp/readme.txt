@@ -1,0 +1,4 @@
+Includes .vue groups in #id
+Includes .vue single in #id
+Router load .vue
+Router load string templates

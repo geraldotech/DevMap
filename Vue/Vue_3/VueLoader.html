@@ -15,43 +15,49 @@
       :root {
         color-scheme: dark;
       }
-      iframe{
+      iframe {
         background: #181818;
+        margin-top: 10px;
       }
-      
     </style>
   </head>
   <body>
     <h1>VueJS Loader GitHub examples</h1>
     <section id="app">
-      <select name="" id="" v-model="opt">
+      <select v-model="opt">
         <option value="">selecionar</option>
         <option value="checkbox/carriers/index.html">carries checkbox</option>
-        <option value="checkbox/Filter_checkbox_sum_mult_gmap.html">Filter_checkbox_sum_mult_gmap</option>
-        <option value="checkbox/checkbox_toggle.html">checkbox_toggle.html</option>
-      </select>      
+        <option value="checkbox/Filter_checkbox_sum_mult_gmap.html">
+          Filter_checkbox_sum_mult_gmap
+        </option>
+        <option value="checkbox/checkbox_toggle.html">
+          checkbox_toggle.html
+        </option>
+      </select>
       <div>
         <a :href="link" target="_blank">{{link}}</a>
       </div>
       <iframe :src="link" width="100%" height="800px" frameborder="0"></iframe>
-    </section>  
+    </section>
     <script>
-Vue.createApp({
-  data(){
-    return{
-        opt:'',
-        link:''
-    }
-  },methods:{
-      completePage(){
-        this.link = `https://geraldotech.github.io/DevMap/JavaScript/input/${this.opt}`
-      }
-  },watch:{
-    opt(){
-      this.completePage();
-    }
-  }
-}).mount(app);
+      Vue.createApp({
+        data() {
+          return {
+            opt: "",
+            link: "",
+          };
+        },
+        methods: {
+          completePage() {
+            this.link = `https://geraldotech.github.io/DevMap/JavaScript/input/${this.opt}`;
+          },
+        },
+        watch: {
+          opt() {
+            this.completePage();
+          },
+        },
+      }).mount(app);
     </script>
   </body>
 </html>

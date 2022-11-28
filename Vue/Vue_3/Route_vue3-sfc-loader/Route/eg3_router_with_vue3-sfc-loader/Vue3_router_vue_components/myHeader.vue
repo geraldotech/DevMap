@@ -1,10 +1,10 @@
 <template>
   <div>
     <header>
-      <h1>header</h1>
+      <h1>header.vue</h1>
       <p>
-        mais um exemplo de rotas components são pré carregados direitamentos em
-        #id
+        mais um exemplo de rotas components.vue são pré carregados direitamentos
+        em #id
       </p>
     </header>
   </div>

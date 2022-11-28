@@ -3,12 +3,6 @@
     <header>
       <h1>h1 Header</h1>
     </header>
-    <nav>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-      </ul>
-    </nav>
   </div>
 </template>
 

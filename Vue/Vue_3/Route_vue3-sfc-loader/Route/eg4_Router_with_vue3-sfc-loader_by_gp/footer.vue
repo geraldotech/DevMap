@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <h1>footer</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quidem.
-    </p>
-  </div>
+  <footer>
+    <p>my footer</p>
+  </footer>
 </template>
 
 <script>
@@ -19,7 +16,12 @@ module.exports = {
 /*
 CSS scoped only fot this page!
  */
-h1 {
-  color: rgb(255, 17, 17);
+footer {
+  background: gray;
+  color: black;
+  min-height: 30px;
+}
+footer p {
+  color: rgb(255, 255, 255);
 }
 </style>
