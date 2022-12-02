@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 150%;
+      }
+      .coral {
+        color: coral;
+      }
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="app">
+      <input type="text" v-model="nome" />
+      <button @click="veri()">Check</button>
+      <p>{{FullName}}</p>
+      <h1 :class="cls">{{msn}}</h1>
+    </section>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            msn: "Hello people!",
+            h1: "Hello people!",
+            cls: "",
+            nome: "",
+            FullName: "",
+          };
+        },
+        methods: {
+          veri() {
+            if (["gp", "eu"].some((el) => el.includes(this.nome))) {
+              return (this.cls = `coral`);
+            }
+            if (this.nome.includes("ver")) {
+              return (this.cls = `red`);
+            }
+            if (this.nome == "aq") {
+              return (this.cls = `green`);
+            }
+          },
+          completeName() {
+            return (this.FullName = this.nome + " Petronilo");
+          },
+        },
+        watch: {
+          nome(value, old) {
+            console.log(value, old);
+            this.veri();
+          },
+        },
+        computed: {},
+      }).mount("#app");
+    </script>
+  </body>
+</html>

@@ -52,7 +52,7 @@ has -v prefix [REF](https://vuejs.org/guide/essentials/template-syntax.html#dire
 
 ## v-bind
 
-title get a variavel message
+Atributos dinâmicos
 
 ```html
 ::before
@@ -175,12 +175,16 @@ submitForm é referente ao v-on:click
 ## How preventDefault:
 
 ```js
+//@click
 methods: {
     submitForm(e){
       e.preventDefault();
       //console.log('here')
       this.name = this.input_name;
     }
+
+//direct in form
+   <form action="" @submit.prevent="enviar">
 ```
 
 [CodePen LiveDemo](https://codepen.io/geraldopcf/pen/ExEMjob)
