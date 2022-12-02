@@ -46,7 +46,7 @@ has -v prefix [REF](https://vuejs.org/guide/essentials/template-syntax.html#dire
 - v-if
 - [v-bind](#v-bind)
 - [v-on](#v-on)
-- v-show
+- [v-show](#v-show)
 - v-for
 - v-html
 
@@ -55,13 +55,13 @@ has -v prefix [REF](https://vuejs.org/guide/essentials/template-syntax.html#dire
 Atributos dinâmicos
 
 ```html
-::before
+::DOM html
 <span title="hello">hello</span>
 ::after
 <span v-bind:title="message">v-bind</span>
-::short hand
+::before
 <span :title="message">v-bind</span>
-:: links
+::links
 <a :href="face">{{face}}</a> in date link: 'http...'
 ```
 
@@ -90,6 +90,21 @@ now just create a method
     const selel = event.target.value;
        console.log(selel);
     }
+
+```
+
+## v-show
+
+```js
+<button @click="ativar">Ativar</button>
+<span v-show="ativou">Ativou!</span>
+
+
+//in data   ativou: false,
+
+ ativar() {
+this.ativou = !this.ativou;
+},
 
 ```
 

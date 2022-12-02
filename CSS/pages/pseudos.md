@@ -4,14 +4,14 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 ### :hover
 
-- [hover.html](./hover.html) [Demo](https://geraldotech.github.io/DevMap/CSS/pages/hover.html)
-- [hover2.html](./hover2.html) [Demo](https://geraldotech.github.io/DevMap/CSS/pages/hover2.html)
+- [hover.html](./hover.html) - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/hover.html)
+- [hover2.html](./hover2.html) - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/hover2.html)
 
 ### :active
 
 ### :first-child
 
-- first element amoung a group of siblings.. primeiro filho do parent
+- [Notion](https://www.notion.so/geraldodev/first-child-60d0eeb40caf4854b84c4a0a6f347831)
 
 ### :last-child:
 
@@ -26,6 +26,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 - [https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/](https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/) sempre o determinado tipo!
 
 ### :link
+
+- [https://developer.mozilla.org/en-US/docs/Web/CSS/:link](https://developer.mozilla.org/en-US/docs/Web/CSS/:link)
 
 ### :is
 

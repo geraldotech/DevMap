@@ -30,6 +30,9 @@
       <button @click="veri()">Check</button>
       <p>{{FullName}}</p>
       <h1 :class="cls">{{msn}}</h1>
+      <hr />
+      <button @click="ativar">Ativar</button>
+      <span v-show="ativou">Ativou!</span>
     </section>
     <script>
       Vue.createApp({
@@ -40,6 +43,7 @@
             cls: "",
             nome: "",
             FullName: "",
+            ativou: false,
           };
         },
         methods: {
@@ -56,6 +60,9 @@
           },
           completeName() {
             return (this.FullName = this.nome + " Petronilo");
+          },
+          ativar() {
+            this.ativou = !this.ativou;
           },
         },
         watch: {
