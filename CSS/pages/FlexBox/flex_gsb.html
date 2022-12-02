@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox - GSB</title>
+    <link rel="stylesheet" href="../../assets/style_flex.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Entendendo o Flex Grow, Shrink e Basis</h1>
+      <p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex#constituent_properties"
+          >Constituent properties</a
+        >
+      </p>
+    </header>
+    <div class="container">
+      <div class="box item-1" id="one">
+        <span>1</span>
+        <p>I am Flex Grow</p>
+      </div>
+      <div class="box item-2" id="two">
+        <span>2</span>
+        <p>I am Flex Grow</p>
+      </div>
+      <div class="box item-3" id="three">
+        <span>3</span>
+        <p>I am Flex Shrink</p>
+      </div>
+      <div class="box item-4" id="four">
+        <span>4</span>
+        <p>I am Flex Basis</p>
+      </div>
+    </div>
+    <section class="cards">
+      <div class="menu">
+        <h3>Flex Grow</h3>
+        <p>valor inicial: 0</p>
+        <button onclick="getrr(0)">grow 0</button>
+        <button onclick="getx(1)">grow 1</button>
+        <button onclick="getxx(2)">grow 2</button>
+        <p>1 - aumenta</p>
+        <p>2 - aumenta++</p>
+      </div>
+
+      <div class="menu">
+        <h3>Flex Shrink</h3>
+        <p>valor inicial:1</p>
+
+        <button onclick="getz(1)">shrink 1</button>
+        <button onclick="getz(0)">shrink 0</button>
+        <button onclick="getz(2)">shrink 2</button>
+        <p>0 - não diminuiu nada</p>
+        <p>2 - diminui muito</p>
+        <p><span>Diminuir a tela para ver o efeito!</span></p>
+      </div>
+
+      <div class="menu">
+        <h3>Flex Basis</h3>
+        <p>define uma largura</p>
+        <button onclick="gety('200px')">Default 200px</button>
+        <button onclick="gety('300px')">300px</button>
+        <button onclick="gety('0')">0px</button>
+        <p>
+          Define uma largura, mesmo já tendo uma largura definida anteriormente
+        </p>
+      </div>
+    </section>
+    <!--container 2-->
+
+    <footer>
+      <div class="txt">
+        <p>
+          Made with ❤ By
+          <a href="https://github.com/geraldotech" target="_blank">gmapDev</a> -
+          2022
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function getrr(val) {
+        document.getElementById("one").style.flexGrow = val;
+        document.getElementById("two").style.flexGrow = val;
+      }
+
+      function getx(val) {
+        document.getElementById("one").style.flexGrow = val;
+        getxx(0);
+      }
+      function getxx(val) {
+        document.getElementById("two").style.flexGrow = val;
+      }
+      function getz(val) {
+        document.getElementById("three").style.flexShrink = val;
+      }
+      function gety(val) {
+        document.getElementById("four").style.flexBasis = val;
+      }
+    </script>
+  </body>
+</html>

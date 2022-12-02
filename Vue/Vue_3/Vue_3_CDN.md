@@ -176,8 +176,10 @@ submitForm é referente ao v-on:click
 
 ```js
 //@click
+<button @click="enviar">Enviar 2</button>
+
 methods: {
-    submitForm(e){
+    enviar(e){
       e.preventDefault();
       //console.log('here')
       this.name = this.input_name;
@@ -185,6 +187,21 @@ methods: {
 
 //direct in form
    <form action="" @submit.prevent="enviar">
+
+ methods: {
+    enviar() {
+      code...
+    }
+    }
+
+//more complex
+  <form action="" @submit="enviar($event)">
+
+   methods: {
+    enviar(e) {
+      e.preventDefault();
+    }
+   }
 ```
 
 [CodePen LiveDemo](https://codepen.io/geraldopcf/pen/ExEMjob)
