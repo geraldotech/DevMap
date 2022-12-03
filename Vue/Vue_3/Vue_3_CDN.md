@@ -31,6 +31,13 @@ Vue.createApp({
 
 Error: production build (\*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
 
+## Vue Router CDN
+
+```js
+<script src="https://unpkg.com/browse/vue-router@3.0.2/dist/"></script>
+<script src="https://unpkg.com/vue-router@4"></script>
+```
+
 ## Vue properties
 
 - created() - hook
@@ -106,13 +113,6 @@ now just create a method
 this.ativou = !this.ativou;
 },
 
-```
-
-## Vue router CDN
-
-```js
-<script src="https://unpkg.com/browse/vue-router@3.0.2/dist/"></script>
-<script src="https://unpkg.com/vue-router@4"></script>
 ```
 
 ## simples minimum to input return

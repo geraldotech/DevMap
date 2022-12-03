@@ -6,7 +6,7 @@
 
 <script>
 /*
-aparentemente não precisa exportar...
+requer module.exports... para logic
  module.exports = {
   data: function () {
     return {};

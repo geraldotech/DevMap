@@ -52,3 +52,13 @@ const app = new Vue({
   },
 });
 ```
+
+### v-bind
+
+```js
+<a v-bind:href="hreflink">{{hreflink}}</a>
+<a :href="hreflink">{{hreflink}}</a>
+   hreflink: "http://www.google.com",
+        },
+
+```
