@@ -51,6 +51,8 @@ export default {
 
 - ir na pasta de Componentes > MeuPrimeiro.vue
 
+- Fast template+script+style: start typing: `vue`
+
 ```js
 <template>
     <h1>Olá Vue</h1>
@@ -347,7 +349,7 @@ methods: {
 
 ## Reutilização de components
 
-- independencia de components
+- independência de components
 - cada component será completamente independente
 - Declarar o compoments varias vezes e testar
 
@@ -436,8 +438,6 @@ props: ["esta_logado", "esta_logado2"],
 //declaration
  <MHeader :esta_logado="true" :esta_logado2="true" />
 
-
-
 //checkbox
 <MHeader :esta_logado="true" :esta_logado2="logado2" />
 
@@ -448,9 +448,37 @@ props: ["esta_logado", "esta_logado2"],
   },
 ```
 
+# Button Props with default value
+
+```js
+<template>
+  <div>
+    <button>{{ title }}</button>
+  </div>
+</template>;
+
+export default {
+  name: "AppButton",
+  props: {
+    title: {
+      type: String,
+      default: "Botao",
+    },
+  },
+};
+```
+
+parent
+
+```js
+ <AppButton title="Editar" />
+ <AppButton title="Comprar" />
+ <AppButton />
+```
+
 ## Ouvindo events com $emit
 
-- Ultilizando o #emit é possível ouvir um `event` de um component filho em um component `pai`
+- Utilizando o #emit é possível ouvir um `event` de um component filho em um component `pai`
   Com isso, podemos ativar comportamentos "como métodos" no component pai
 - O **`evento deve ser registrado`** no componente
 - E é preciso definir o que será feito com a ativação do evento na chamada do componente.
@@ -477,8 +505,182 @@ Ao declarar o component devemos associar a um method do component pai
 
 `<MudarImagem @mudarImagem="trocarImagem" />`
 
+### outro exemplo
+
+`footer` has uma prop $msn e um method que apaga essa string, então usando o created() definimos o $emit
+
+```js
+ created() {
+    this.$emit("criado");
+  },
+
+  ...
+
+   props: {
+    foot: String,
+  },
+```
+
+In our parent component, we will listen to that event, method criadoFun a ser criado no parent
+
+```js
+ <Footer :foot="foot" @criado="criadoFun" />
+```
+
 ## Contextualizar
 
 - props - component pai envia o prop para o filho
-- emits - algo ocorrer no filho emitir ao pai e ativa o method
+- emits - algo ocorrer no filho emitir ao pai que ativa o method
   [ref 7:00](https://www.youtube.com/watch?v=RXldGbtzZdI)
+
+# API JSON Server
+
+`npm install json-server`
+
+create `db` folder and `file.json`
+
+`$ npx json-server --watch db/db.json`
+
+## Or in scripts in package.json add
+
+`"backend": "json-server --watch ./db/db.json"`
+then run `npm run backend`
+
+# slots nos components, não requer props
+
+Em vez de
+
+```js
+//child
+  <button>
+    {{mybutton}}
+    </button>
+
+    //parent
+
+     <AppButton title="Comprar" />
+```
+
+Fazer
+
+```js
+//child
+<button>
+  <slot />
+</button>
+
+//parent
+<AppButton>btn one</AppButton>
+
+```
+
+# slots with props default value
+
+```js
+
+  <button>
+      <slot>padrao</slot>
+    </button>
+
+    //parent
+      <AppButton>Button</AppButton>
+        <AppButton></AppButton>//padrao
+
+
+    //pegando o title da props no slot
+       <slot>{{ title }}</slot>
+
+         props: {
+    title: {
+      type: String,
+      default: "Botao",
+    },
+  },
+```
+
+Podemos adicionar um spinner dentro do botão que está sendo chamado ou definir para todos no slots
+
+```html
+<button :class="baseClass">
+  <span
+    class="spinner-border spinner-border-sm"
+    role="status"
+    aria-hidden="true"
+  ></span>
+  <slot>{{ title }} </slot>
+</button>
+```
+
+## Não é regra, porém é uma boa lógica para se levar em consideração
+
+- props para comportamento
+- slot para conteúdo
+
+Definindo estado do `button`, criando uma `prop` e usar o `v-if`
+
+```js
+ busy: {
+      type: Boolean,
+      default: false,
+    },
+
+
+<button :class="baseClass">
+      <span
+        v-if="busy"
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true">
+ </span>
+    </button>
+
+
+Então ao chamar o button adicinar essa `prop` para true
+
+<AppButton busy> </AppButton>
+
+Para false seria necessário:
+
+:busy="false"
+```
+
+# slot name v-slot
+
+Existem slots default e com name
+
+Alterar o loading do button usando o slot:name
+
+```js
+  <button :class="baseClass">
+      <slot name="loading" v-if="busy">
+        <span
+          class="spinner-border spinner-border-sm"
+          role="status"
+          aria-hidden="true"
+        ></span>
+      </slot>
+
+      <slot>{{ title }} </slot>
+    </button>
+
+
+    //no parent... slots sem name são sempre padrão, não precisa chamar assim:
+
+
+    <AppButton busy>
+      <template v-slot:default> Salvar </template>
+    </AppButton>
+
+    //...então adicionar o novo icone ou qualquer texto
+
+
+    <AppButton busy>
+      <template v-slot:loading>
+        <span
+          class="spinner-grow spinner-grow-sm"
+          role="status"
+          aria-hidden="true"
+        ></span>
+      </template>
+    </AppButton>
+```

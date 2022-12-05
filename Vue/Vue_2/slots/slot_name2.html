@@ -1,0 +1,86 @@
+<html style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Slot name</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--app-->
+      <div id="app">
+        <card>
+          <h3 slot="title" class="card-title">Card Title</h3>
+          <p slot="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <a slot="action" href="#">Click and Go</a>
+        </card>
+
+        <!-- e.g em caso de fazer mais paragrafos etc..., usar o `template` -->
+        <card>
+          <h3 slot="title" class="card-title">Card usando `template`</h3>
+          <template slot="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </template>
+          <a
+            slot="action"
+            href="https://www.youtube.com/watch?v=UiEqXVmHg7o&t=325s"
+            >Youtube about slots</a
+          >
+        </card>
+
+        <card>
+          <h3 slot="title" class="card-title">Card 3 mesmo slot name</h3>
+          <p slot="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <!--aparentemente fazer o mesmo paragrafo usando o mesmo slot works-->
+          <p slot="text">seria um novo parafrago?</p>
+          <a slot="action" href="#">Click and Go</a>
+        </card>
+      </div>
+      <!--#app-->
+      <!--template fica fora de #app será a base para montar mais cards -->
+      <template id="card">
+        <div class="card">
+          <p>Slots por seções, tudo que digitar é enviado aos demais</p>
+          <div><img src="https://via.placeholder.com/240x130" alt="" /></div>
+          <div class="card-block">
+            <!-- definir os slots com name -->
+            <slot name="title"></slot>
+            <article>
+              <slot name="text"></slot>
+            </article>
+            <slot name="action"></slot>
+          </div>
+        </div>
+      </template>
+      <!--container -->
+    </div>
+
+    <script>
+      //component
+      Vue.component("card", {
+        template: "#card",
+        props: {
+          title: {
+            type: String,
+          },
+        },
+        data() {
+          return {};
+        },
+      });
+
+      //vuejs
+      const app = new Vue({
+        el: "#app",
+        data: {
+          msn: "Ge",
+        },
+      });
+    </script>
+  </body>
+</html>

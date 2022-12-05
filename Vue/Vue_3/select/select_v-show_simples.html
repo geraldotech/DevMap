@@ -35,28 +35,36 @@
   </head>
   <body>
     <h1>VueJS - v-show</h1>
-    <code>v-show doens't support the <mark><u>template</u></mark></code>
-<p>In comparison, v-show is much simpler - the element is always rendered regardless of initial condition, with <mark>CSS-based toggling</mark>, read more in <a href="https://vuejs.org/guide/essentials/conditional.html#v-show">vuejs.org</a></p>
-    
-<div id="app">        
+    <code
+      >v-show doens't support the <mark><u>template</u></mark></code
+    >
+    <p>
+      In comparison, v-show is much simpler - the element is always rendered
+      regardless of initial condition, with <mark>CSS-based toggling</mark>,
+      read more in
+      <a href="https://vuejs.org/guide/essentials/conditional.html#v-show"
+        >vuejs.org</a
+      >
+    </p>
+
+    <div id="app">
       <select name="" id="" v-model="selected">
         <option value="">Selecionar</option>
         <option value="1">NetFlix</option>
         <option value="2">Amazon Prime</option>
       </select>
-      
+      <p>{{selected}}</p>
       <h1 v-show="selected == '1'">NetFlix</h1>
       <h1 v-show="selected == '2'">Amazon Prime</h1>
-        
     </div>
     <script>
-Vue.createApp({
-    data(){
-        return {
-            selected: "",          
-        }
-    },
-}).mount(app);
- </script>
-</body>
+      Vue.createApp({
+        data() {
+          return {
+            selected: "",
+          };
+        },
+      }).mount(app);
+    </script>
+  </body>
 </html>

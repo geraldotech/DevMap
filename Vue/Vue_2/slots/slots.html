@@ -1,0 +1,102 @@
+<html style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Slots</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 50px auto;
+        max-width: 75rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .card {
+        border: 2px solid rgb(58, 57, 57);
+        width: 350px;
+        height: 300px;
+        margin-bottom: 20px;
+      }
+      .card-block {
+        padding: 12px 10px;
+      }
+      .card a {
+        display: block;
+        background: teal;
+        color: white;
+        padding: 4px 7px;
+        width: 120px;
+        text-align: center;
+        margin-top: 20px;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.5s;
+        font-weight: bold;
+      }
+      .card a:hover {
+        background: transparent;
+        color: teal;
+        border: 1px solid;
+      }
+      .card-title {
+        font-weight: bold;
+        color: coral;
+        margin: 10px 0;
+      }
+      #app {
+        text-align: center;
+        display: flex;
+        height: 80vh;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <card>
+          <h3 class="card-title">Card title</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="#">Click and Go</a>
+        </card>
+        <card>
+          <h3 class="card-title">Outro</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="https://www.youtube.com/watch?v=UiEqXVmHg7o">Click and Go</a>
+        </card>
+      </div>
+    </div>
+    <!-- #app -->
+    <template id="card">
+      <div class="card">
+        <div><img src="https://via.placeholder.com/350x130" alt="" /></div>
+        <div class="card-block">
+          <slot></slot>
+        </div>
+      </div>
+    </template>
+
+    <script>
+      Vue.component("card", {
+        template: "#card",
+        props: {
+          title: {
+            type: String,
+          },
+        },
+        data() {
+          return {};
+        },
+      });
+
+      const app = new Vue({
+        el: "#app",
+        data: {
+          msn: "Ge",
+        },
+      });
+    </script>
+  </body>
+</html>
