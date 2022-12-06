@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS Components,</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        max-width: 50rem;
+        margin: 0 auto;
+        padding: 0 50px;
+      }
+      .ver {
+        color: red;
+      }
+      .df {
+        color: seagreen;
+      }
+
+      .center {
+        text-decoration: underline coral;
+        font-size: 2rem;
+        font-style: italic;
+      }
+      label {
+        display: block;
+        cursor: pointer;
+      }
+      h2 {
+        min-height: 50px;
+      }
+      .card {
+        border: 2px solid;
+        margin: 20px 0;
+        text-align: center;
+      }
+      button {
+        margin: 20px 0;
+      }
+      .wall {
+        background-image: url("https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80");
+        background-position: left;
+        background-size: cover;
+        font-weight: bold;
+      }
+      .painel {
+        text-align: left;
+        padding-left: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="app">
+      <primary meutitulo="Cards"></primary>
+      <h3>Independência de componentes, apesar de usar as mesmas funções.</h3>
+      <primary>
+        <template v-slot>
+          <p>segundo component v-slot default</p>
+          <p>Informações após login</p>
+        </template>
+      </primary>
+    </section>
+
+    <!--template-->
+    <template id="card">
+      <div class="card" :class="{wall : isWall}">
+        <h2 class="ver" :class="{'df' : isActive, 'center': isCenter}">
+          {{meutitulo}}
+        </h2>
+        <h3>Bem vindo ao painel Administrativo</h3>
+        <p>
+          Senha:
+          <input type="password" placeholder="senha" v-model="senha" />
+        </p>
+        <hr />
+        <!--
+para sempre true adicionar v-if="!isLogado" a fim de o menu sempre estar aberto para mudanças CSS
+-->
+        <template v-if="isLogado">
+          <article class="painel">
+            <p class="df">Logado com sucesso!</p>
+            <label>
+              Alterar cor do Header
+              <input type="checkbox" @click="ativar" />
+              {{ativou}}
+            </label>
+            <label>
+              underline, italic, font-size: 2rem
+              <input type="checkbox" @click="center" />
+              {{ativou2}}
+            </label>
+            <label>
+              Change Wallpaper
+              <input type="checkbox" @click="isWall = !isWall" />
+              {{isWall ? 'ativado' : 'desativado'}}
+            </label>
+            <br /><br />
+            <slot></slot>
+            <!-- <button onclick="window.location.reload()">Logout</button> -->
+            <button @click="this.senha = ''">Logout</button>
+          </article>
+        </template>
+        <p v-else-if="isWrong">Fazer Login para acessar o painel!</p>
+        <p v-else>..</p>
+      </div>
+    </template>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {};
+        },
+        methods: {},
+      });
+
+      //component com props, methods to all components
+      app.component("primary", {
+        template: "#card",
+        props: {
+          meutitulo: {
+            type: String,
+            default: "Untitled", //txt padrao
+          },
+        },
+        created() {
+          this.Checksenha();
+        },
+        data() {
+          return {
+            ativou: "desativado",
+            ativou2: "desativado",
+            isActive: false,
+            isCenter: false,
+            senha: null,
+            isWall: false,
+          };
+        },
+        methods: {
+          ativar() {
+            this.isActive = !this.isActive;
+            //se ativou então o texto Toggle
+            this.isActive
+              ? (this.ativou = "ativado")
+              : (this.ativou = "desativado");
+          },
+          center() {
+            this.isCenter = !this.isCenter;
+            this.isCenter
+              ? (this.ativou2 = "ativado")
+              : (this.ativou2 = "desativado");
+          },
+          Checksenha(el) {
+            this.senha = el;
+            if (this.isLogado) {
+              console.log("Logado");
+              return;
+            }
+            if (this.isWrong) {
+              console.log("wrong");
+              return;
+            }
+          },
+        },
+
+        computed: {
+          isLogado() {
+            return this.senha == "123";
+          },
+          isWrong() {
+            return this.senha !== "123";
+          },
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

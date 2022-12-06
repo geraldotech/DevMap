@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Document</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      .red {
+        color: rgb(209, 50, 45);
+        font-weight: bold;
+      }
+      .ge {
+        color: rgb(21, 206, 21);
+        background: rgb(49, 40, 40);
+        font-weight: bold;
+        padding: 12px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p>Digite sua idade</p>
+      <input type="text" v-model="age" placeholder="sua idade" />
+
+      <p v-if="isUnderAge" class="red">Você precisa ter mais de 18 anos!</p>
+      <p v-else-if="isold" class="red">
+        Não deveria beber tem mais de 65 anos!
+      </p>
+      <template v-else>
+        <p class="ge">Idade ok, escolher as bebidas</p>
+        <ul>
+          <li>Heineken</li>
+          <li>Brahma</li>
+          <li>Stella Artois</li>
+          <li>Amstel</li>
+          <li>Budweiser</li>
+        </ul>
+      </template>
+    </div>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            age: "",
+          };
+        },
+        created() {
+          this.checkAge(this.age);
+        },
+        methods: {
+          checkAge(val) {
+            this.age = val;
+            if (this.isUnderAge) {
+              console.log(`tem menos de 18`);
+              return;
+            }
+            if (this.isold) {
+              console.log(`tem mais de 65`);
+              return;
+            }
+            console.log(`Idade ok!`);
+          },
+        },
+        computed: {
+          isUnderAge() {
+            return this.age < 18;
+          },
+          isold() {
+            return this.age > 65;
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

@@ -1,46 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title></title>
-  <script src="https://unpkg.com/vue@3"></script>
-  <style>
-    :root{
-      color-scheme: dark;
-    }
-  </style>
-</head>
-<body>
-<h1>Digite as notas</h1>
-  <div id="app">
-   
-
-   <input type="number" v-model="n1" placeholder="your num">
-   <input type="number" v-model="n2" placeholder="your num">
-   
-   <p>Data n1: {{n1}}</p>
-   <p>Data n2: {{n2}}</p>
-    
-   <!-- <p v-show='soma'>{{sum}}</p> -->
-    
-   <p>Soma: {{soma2}}</p>
-    
- </div>
-<script>
-Vue.createApp({
-  data(){
-    return{     
-      n1: '',     
-      n2: '',      
-    }
-  },
-  methods:{
-  },
-  computed:{
-        soma2(){
-          return this.sum = (this.n1 + this.n2);         
-        },
+  <head>
+    <title></title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
       }
-}).mount(app);
-</script>
-</body>
+    </style>
+  </head>
+  <body>
+    <h1>Digite as notas</h1>
+    <div id="app">
+      <input type="number" v-model="n1" placeholder="your num" />
+      <input type="number" v-model="n2" placeholder="your num" />
+
+      <p>Data n1: {{n1}}</p>
+      <p>Data n2: {{n2}}</p>
+
+      <!-- <p v-show='soma'>{{sum}}</p> -->
+
+      <p>Soma: {{soma2}}</p>
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            n1: "",
+            n2: "",
+          };
+        },
+        methods: {},
+        computed: {
+          soma2() {
+            return this.n1 + this.n2;
+          },
+        },
+      }).mount(app);
+    </script>
+  </body>
 </html>
