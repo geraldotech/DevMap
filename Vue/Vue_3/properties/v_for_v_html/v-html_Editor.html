@@ -22,37 +22,44 @@
   </head>
   <body>
     <div id="app">
-      <textarea id="area" type="text" placeholder="your html code" v-model="code" rows="5" cols="50" contenteditable="true">
-      </textarea>      
+      <textarea
+        id="area"
+        type="text"
+        placeholder="your html code"
+        v-model="code"
+        rows="5"
+        cols="50"
+        contenteditable="true"
+      >
+      </textarea>
+
       <p v-html="code"></p>
-      <p>{{code}}</p>
     </div>
     <script>
       Vue.createApp({
         data() {
           return {
-            code: "<p>oi</p>",
+            code: "<h1>Basic Rich Text Editor</h1>",
             padrao: "22",
-           
           };
         },
-        watch:{
-          code(){
+        watch: {
+          code() {
             console.log("mudou");
-          }
-        }
+          },
+        },
       }).mount(app);
     </script>
 
     <script>
-      area.onclick = function () {
+      /*    area.onclick = function () {
         inject();
       };
       function inject() {
         document.querySelector("textarea").value = `<h1 class="red">geraldo</h1>
         <a href="#">link </a>
 <h2 style="color: coral"> gmapdev</h2>`;
-      }
+      } */
     </script>
   </body>
 </html>

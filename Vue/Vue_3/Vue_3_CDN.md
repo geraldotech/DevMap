@@ -1,5 +1,7 @@
 ## Vue 3 CDN
 
+Temos Vue.createApp, components
+
 - **add in header**
 
 ```js
@@ -275,3 +277,11 @@ exemplo
 - [Vue refs (change element name @click)](https://www.nicesnippets.com/blog/vue-js-get-element-by-id-example)
 
 > abrir o console e chamar o app."var". "adicionar ou true/false"
+
+# props
+
+Envia dados para componentes, melhor uso para comportamento
+
+# slots
+
+Envia conteúdo extra para os componentes

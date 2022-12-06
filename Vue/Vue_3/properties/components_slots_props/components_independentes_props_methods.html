@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS slots</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      .ver {
+        color: red;
+      }
+      .df {
+        color: seagreen;
+      }
+      .ama {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="app">
+      <p>e.g component template string</p>
+
+      <card classe="ama" meutitulo="MuGNN">
+        <template v-slot:header> </template>
+        <template v-slot>
+          <a href="https://www.sitepoint.com/vue-slots-comprehensive-guide/"
+            >https://www.sitepoint.com/vue-slots-comprehensive-guide/</a
+          >
+        </template>
+        <template v-slot:footer>
+          <p>footer</p>
+        </template>
+      </card>
+      <card>
+        <template v-slot:header> </template>
+        <template v-slot>
+          <a href="https://www.sitepoint.com/vue-slots-comprehensive-guide/"
+            >https://www.sitepoint.com/vue-slots-comprehensive-guide/</a
+          >
+        </template>
+        <template v-slot:footer> </template>
+      </card>
+      <button @click="rotina2">Button</button>
+    </section>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {};
+        },
+        methods: {
+          rotina2() {
+            console.warn(`hello`);
+          },
+        },
+      });
+
+      //component com props, methods to all components
+      app.component("card", {
+        template: `
+          <div class="container">
+        <header>
+          <slot name="header"></slot>
+            <h2 :class="classe">{{meutitulo}}</h2>
+            
+          <p>cada component será completamente independente</p>
+        </header>
+        <footer>
+          <slot name="footer"></slot>
+          <button @click="rotina">Button  {{num}}</button>         
+        </footer>
+      </div> `,
+        props: {
+          meutitulo: {
+            type: String,
+            default: "Untitled", //txt padrao
+          },
+          classe: {
+            type: String,
+            default: "df",
+          },
+        },
+        data() {
+          return {
+            num: 0,
+          };
+        },
+        methods: {
+          rotina() {
+            this.num++;
+          },
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

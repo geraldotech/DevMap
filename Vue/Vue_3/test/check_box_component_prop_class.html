@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS slots</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      .ver {
+        color: red;
+      }
+      .df {
+        color: seagreen;
+      }
+      .ama {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="app">
+      <primary meutitulo="Card 1"></primary>
+      <primary></primary>
+   
+    </section>
+
+    <!--template-->
+    <template id="card">
+      <div class="card">
+        <h2 :class="classe">{{meutitulo}}</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur</p>
+        <label>
+        <input type="checkbox" id="btn" v-model="ativa"></button>
+          {{ativa ? 'ativado' : 'desativado'}}
+      </label>
+    </template>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {};
+        },
+        methods: {},
+      });
+
+      //component com props, methods to all components
+      app.component("primary", {
+        template: "#card",
+        props: {
+          meutitulo: {
+            type: String,
+            default: "Untitled", //txt padrao
+          },
+        },
+        data(){
+          return{
+           ativa:'',
+          classe: '' //classe em props é desnecessário pq o checkbox vai alterar com o watch
+          }
+        },
+        watch:{
+          ativa(){           
+          //this.classe = "ver"
+          this.ativa ? this.classe = 'ver' : this.classe = ''
+          }
+        }
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

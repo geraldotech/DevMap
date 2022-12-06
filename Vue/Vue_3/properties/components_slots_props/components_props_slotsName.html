@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS slots</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      .ver {
+        color: red;
+      }
+      .df {
+        color: seagreen;
+      }
+      .active {
+        color: greenyellow;
+      }
+      .ama {
+        color: yellow;
+      }
+      code {
+        color: tomato;
+      }
+      .card {
+        border: 2px solid wheat;
+        margin: 50px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="app">
+      <p>
+        e.g de `<code>components+slotsName+props+$emit</code>`, adicionar data
+        dentro das tags é necessário um
+        <code>slot</code> no template
+      </p>
+      <!--
+
+  onde tem a function, adicionar o `fun` para mostrar o botão, by default a prof esconde todos os buttons
+-->
+      <primary @mycdn="logi" fun>
+        <p slot="smart">
+          primeiro component, sem slot esse texto não seria adicionado
+        </p>
+        <div slot="action">
+          <a href="#">link</a>
+        </div>
+      </primary>
+      <primary ativou></primary>
+      <primary title="Titulo Definido" ver="ama">
+        <p>
+          Ativando casses por meio de `props` e adicionando extra content com
+          slots
+        </p>
+      </primary>
+      <!--emit and v-slot-->
+      <primary @mycdn="hello('Hello')" ativou fun>
+        <template v-slot:smart>
+          <p>Lista de SmartPhones</p>
+          <ul>
+            <li>Note 9</li>
+            <li>Note 20</li>
+          </ul>
+        </template>
+        <template v-slot:notebook>
+          <p>List de Notebooks</p>
+          <ul>
+            <li>Samsung</li>
+            <li>LG</li>
+          </ul>
+        </template>
+      </primary>
+    </section>
+
+    <!--template compoments base da reutilização-->
+    <template id="card">
+      <div class="card">
+        <h1 :class="ver">{{title}}</h1>
+        <div><img src="https://via.placeholder.com/100x30" alt="" /></div>
+        <p v-if="ativou" class="active">`props` ativada</p>
+        <p v-else class="ver">`props` desativada</p>
+        <!--slot recebe dados extras que não estão no template-->
+        <slot name="smart"></slot>
+        <slot name="notebook"></slot>
+
+        <p v-show="fun">
+          <button @click="$emit('mycdn')">Button</button>
+        </p>
+      </div>
+    </template>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {};
+        },
+        methods: {
+          hello(el) {
+            alert(el);
+          },
+          logi() {
+            alert(`tech`);
+          },
+        },
+      });
+
+      //component com props
+      app.component("primary", {
+        template: "#card",
+        props: {
+          title: {
+            type: String,
+            default: "Untitled", //txt padrao
+          },
+          ativou: {
+            type: Boolean,
+            default: false,
+          },
+          ver: {
+            type: String,
+            default: "df",
+          },
+          fun: {
+            type: Boolean,
+            default: false,
+          },
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

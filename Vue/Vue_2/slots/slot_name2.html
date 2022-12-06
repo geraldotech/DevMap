@@ -38,7 +38,12 @@
           </p>
           <!--aparentemente fazer o mesmo paragrafo usando o mesmo slot works-->
           <p slot="text">seria um novo parafrago?</p>
+          <p slot="text">seria um novo parafrago?</p>
           <a slot="action" href="#">Click and Go</a>
+          <!-- div works too -->
+          <div slot="action">
+            <a href="#">link</a>
+          </div>
         </card>
       </div>
       <!--#app-->
@@ -61,7 +66,7 @@
     </div>
 
     <script>
-      //component
+      //component //nome da tag <card>
       Vue.component("card", {
         template: "#card",
         props: {

@@ -384,7 +384,7 @@ export default {
 ## Passar dados como props
 
 - Os components podem receber dados, recurso é chamado de `props`
-- As props podem ser passados por valores do data
+- As `props` podem ser passados por valores do data
 - Precisamos declarar as propriedades recebidas pelos componentes em um array ou objeto chamado props.
 - ação de passar dados do parent to children.
 
@@ -590,7 +590,7 @@ Fazer
     //pegando o title da props no slot
        <slot>{{ title }}</slot>
 
-         props: {
+    props: {
     title: {
       type: String,
       default: "Botao",

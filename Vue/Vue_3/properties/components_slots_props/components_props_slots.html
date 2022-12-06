@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      .ver {
+        color: red;
+      }
+      .df {
+        color: seagreen;
+      }
+      .ama {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="app">
+      <p>
+        e.g de components+slots+props, adicionar data dentro das tags é
+        necessário um
+        <code>slot</code> no template
+      </p>
+
+      <primary>
+        <p>primeiro component, sem slot esse texto não seria adicionado</p>
+      </primary>
+      <primary ativou></primary>
+      <primary title="Titulo Definido" ver="ama">
+        <p>
+          Ativando class por meio de `props` e adicionando extra content com
+          slots
+        </p>
+      </primary>
+
+      <hr />
+      <primary>
+        <template v-slot>
+          <p>template slot default, boa prática do Vue CLI</p>
+        </template>
+      </primary>
+    </section>
+
+    <!--template compoments base da reutilização-->
+    <template id="card">
+      <div class="card">
+        <h1 :class="ver">{{title}}</h1>
+        <div><img src="https://via.placeholder.com/100x30" alt="" /></div>
+        <button>Button</button>
+        <p v-show="ativou">`prop` ativada</p>
+        <!--slot recebe dados extras que não estão no template-->
+        <slot></slot>
+      </div>
+    </template>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {};
+        },
+      });
+
+      //component com props
+      app.component("primary", {
+        template: "#card",
+        props: {
+          title: {
+            type: String,
+            default: "Untitled", //txt padrao
+          },
+          ativou: {
+            type: Boolean,
+            default: false,
+          },
+          ver: {
+            type: String,
+            default: "df",
+          },
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="app">
+      <p>e.g de components with props VueJS3</p>
+      <primary-btn></primary-btn>
+      <primary-btn></primary-btn>
+      <primary-btn title="novo"></primary-btn>
+    </section>
+
+    <template id="card">
+      <div class="card">
+        <div><img src="https://via.placeholder.com/100x30" alt="" /></div>
+        <p>{{title}}</p>
+      </div>
+    </template>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {};
+        },
+      });
+
+      app.component("primary-btn", {
+        template: "#card",
+        props: {
+          title: {
+            type: String,
+            default: "Titulo", //txt padrao
+          },
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>
