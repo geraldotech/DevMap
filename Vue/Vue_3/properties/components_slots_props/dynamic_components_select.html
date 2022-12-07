@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/vue@3"></script>
-    <script src="https://unpkg.com/vue-router@4"></script>
     <title>Document</title>
     <style>
       :root {
@@ -14,30 +13,23 @@
     </style>
   </head>
   <body>
-    <h1>component select</h1>
+    <h1>component select usando `:is`</h1>
     <div id="app">
       <select v-model="opt">
         <option value="songs">Songs</option>
         <option value="movies">Movies</option>
       </select>
+
       <component :is="opt"></component>
     </div>
 
     <!--templates-->
     <template id="movie">
       <h1>Movies</h1>
-      <ul>
-        <li v-for="(item, index) in filmes" :keys="filmes.name">
-          {{item.nome}}
-        </li>
-      </ul>
     </template>
 
     <template id="song">
       <h1>Songs</h1>
-      <ul>
-        <li v-for="(item, index) in musicas" :key="item.nome">{{item.nome}}</li>
-      </ul>
     </template>
     <script>
       const app = Vue.createApp({
@@ -48,33 +40,12 @@
         },
       });
 
-      const Songs = app.component("songs", {
+      app.component("songs", {
         template: "#song",
-        data() {
-          return {
-            musicas: [{ nome: "Youtube" }, { nome: "Apple Music" }],
-          };
-        },
       });
-      const Movies = app.component("movies", {
+      app.component("movies", {
         template: "#movie",
-        data() {
-          return {
-            filmes: [{ nome: "Os vingadores" }, { nome: "Transformers" }],
-          };
-        },
       });
-
-      const routes = [
-        { path: "/msongs", component: Songs },
-        { path: "/mmovies", component: Movies },
-      ];
-
-      const router = VueRouter.createRouter({
-        history: VueRouter.createWebHashHistory(location.pathname),
-        routes,
-      });
-      //  history: VueRouter.createWebHashHistory("/#"),
 
       app.mount("#app");
     </script>

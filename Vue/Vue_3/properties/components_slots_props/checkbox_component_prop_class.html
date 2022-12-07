@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VueJS Components,</title>
+    <title>VueJS Components checkbox</title>
     <script src="https://unpkg.com/vue@3"></script>
     <style>
       :root {
@@ -64,6 +64,10 @@
           <p>Informações após login</p>
         </template>
       </primary>
+      <!--
+        usando o `is` para dar nome a um component anonimo
+      -->
+      <component is="primary"></component>
     </section>
 
     <!--template-->
@@ -111,12 +115,7 @@ para sempre true adicionar v-if="!isLogado" a fim de o menu sempre estar aberto 
     </template>
 
     <script>
-      const app = Vue.createApp({
-        data() {
-          return {};
-        },
-        methods: {},
-      });
+      const app = Vue.createApp({});
 
       //component com props, methods to all components
       app.component("primary", {

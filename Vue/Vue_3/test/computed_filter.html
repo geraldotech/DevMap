@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Document</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="user in Adultos">{{user.name}} - {{user.age}}</li>
+      </ul>
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            list: [
+              { name: "Geraldo", age: 30 },
+              { name: "Felipe", age: 28 },
+              { name: "Isabella", age: 5 },
+            ],
+            test: "test",
+          };
+        },
+        computed: {
+          Adultos() {
+            return this.list.filter((el) => el.age > 18);
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
