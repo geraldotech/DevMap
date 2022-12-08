@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://unpkg.com/vue-router@4"></script>
-    <title>Document</title>
+   
+    <title>Vue JS 3 - Router Demo</title>
     <style>
       :root {
         color-scheme: dark;
@@ -14,69 +15,47 @@
     </style>
   </head>
   <body>
-    <h1>component select</h1>
     <div id="app">
-      <select v-model="opt">
-        <option value="songs">Songs</option>
-        <option value="movies">Movies</option>
-      </select>
-      <component :is="opt"></component>
+      
+     <ul>
+         <li><router-link to="/">Home Page</router-link>         
+    </li>
+    <li> <router-link to="/youtube">Youtube</router-link></li>
+    <li> <router-link to="/linkedin">Linkedin</router-link></li>
+     </ul>
+        <router-view></router-view>
+      </div>
     </div>
-
-    <!--templates-->
-    <template id="movie">
-      <h1>Movies</h1>
-      <ul>
-        <li v-for="(item, index) in filmes" :keys="filmes.name">
-          {{item.nome}}
-        </li>
-      </ul>
-    </template>
-
-    <template id="song">
-      <h1>Songs</h1>
-      <ul>
-        <li v-for="(item, index) in musicas" :key="item.nome">{{item.nome}}</li>
-      </ul>
-    </template>
     <script>
-      const app = Vue.createApp({
+      const { createRouter, createWebHashHistory, createWebHistory } = VueRouter;
+      const { createApp } = Vue;
+
+      const app = createApp({
         data() {
           return {
-            opt: "",
+            Title: "VueJS Ninja Way",
           };
         },
       });
 
-      const Songs = app.component("songs", {
-        template: "#song",
-        data() {
-          return {
-            musicas: [{ nome: "Youtube" }, { nome: "Apple Music" }],
-          };
-        },
-      });
-      const Movies = app.component("movies", {
-        template: "#movie",
-        data() {
-          return {
-            filmes: [{ nome: "Os vingadores" }, { nome: "Transformers" }],
-          };
-        },
+      // String templates
+      const Home = { template: `<p>Home Page</p>` };
+      const Youtube = { template: `<p>Youtube Page</p>` };
+      const Linkedin = { template: `<p>Linkedin Page</p>` };
+
+      //Router
+      const router = createRouter({
+        history: createWebHashHistory(),
+        
+        
+        routes: [
+          { path: "/", component: Home },
+          { path: "/youtube", component: Youtube },
+          { path: "/linkedin", component: Linkedin },
+        ],
       });
 
-      const routes = [
-        { path: "/msongs", component: Songs },
-        { path: "/mmovies", component: Movies },
-      ];
-
-      const router = VueRouter.createRouter({
-        history: VueRouter.createWebHashHistory(location.pathname),
-        routes,
-      });
-      //  history: VueRouter.createWebHashHistory("/#"),
-
-      app.mount("#app");
+      app.use(router).mount("#app");
     </script>
   </body>
 </html>

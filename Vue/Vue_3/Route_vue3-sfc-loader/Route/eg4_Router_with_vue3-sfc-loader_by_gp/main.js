@@ -96,8 +96,8 @@ const routes = [
 
 const router = VueRouter.createRouter({
   //importe para criar o: #/
-  //history: VueRouter.createWebHashHistory(),
-  history: VueRouter.createWebHistory(), // remove !#
+  history: VueRouter.createWebHashHistory(),
+  //history: VueRouter.createWebHistory(), // remove !# porém bugou carregar componentes.vue
   routes,
 });
 

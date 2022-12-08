@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/vue@3"></script>
-    <title>Document</title>
+    <title>Dynamic components</title>
     <style>
       :root {
         color-scheme: dark;
@@ -26,10 +26,18 @@
     <!--templates-->
     <template id="movie">
       <h1>Movies</h1>
+      <ul>
+        <li v-for="(item, index) in filmes" :key="item.nome">{{item.nome}}</li>
+      </ul>
     </template>
 
     <template id="song">
       <h1>Songs</h1>
+      <ul>
+        <li v-for="(item, index) in musicas" :key="item.index">
+          {{index}} - {{item.nome}}
+        </li>
+      </ul>
     </template>
     <script>
       const app = Vue.createApp({
@@ -42,9 +50,19 @@
 
       app.component("songs", {
         template: "#song",
+        data() {
+          return {
+            musicas: [{ nome: "Youtube" }, { nome: "Apple Music" }],
+          };
+        },
       });
       app.component("movies", {
         template: "#movie",
+        data() {
+          return {
+            filmes: [{ nome: "Os vingadores" }, { nome: "Transformers" }],
+          };
+        },
       });
 
       app.mount("#app");
