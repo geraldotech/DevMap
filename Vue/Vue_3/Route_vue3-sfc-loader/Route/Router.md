@@ -1,6 +1,6 @@
 # VueJS Router From Scratch
 
-A base usando CDN
+A base usando CDN:
 
 ```js
 <script src="https://unpkg.com/vue@3"></script>
@@ -39,7 +39,7 @@ HTML
 <router-link to="/youtube">Youtube</router-link> <router-view></router-view>
 ```
 
-Tudo funcionando agora vamos adicionar uma HOME Page só adicionar:
+Adicionando uma Home Page:
 
 ```js
 
@@ -65,4 +65,28 @@ e.g sem hash `HTML Mode` [https://gpnotes.droppages.com/linkedin](https://gpnote
 
 Ler mais aqui [https://router.vuejs.org/guide/essentials/history-mode.html#html5-mode](https://router.vuejs.org/guide/essentials/history-mode.html#html5-mode)
 
-Ha exemplos usando type module e exports, além de carregar um component
+Há exemplos usando type module, exports, components dinâmicos internos e .vue
+
+# Named Routes
+
+Rotas nomeadas, identificar a rota com um objeto name, em caso de mudar o `path` não é necessário voltar no HTML.
+
+```js
+
+//inves de definir assim
+<router-link to="/msongs">Songs</router-link>
+
+// bing the :to e passar um objecto com o nome do name
+  <router-link :to="{name: 'songs'}">Songs</router-link>
+
+// no routes path ficará assim
+{ path: "/msongs", name: "songs", component: Songs },
+
+//se mudar o path a rota ainda vai funcionar, pq foi passado o objeto com rota nomeada
+{ path: "/rota-de-musicas", name: "songs", component: Songs },
+
+```
+
+[named-routes.html](https://v3.router.vuejs.org/guide/essentials/named-routes.html)
+
+# sub rotas

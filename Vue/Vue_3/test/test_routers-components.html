@@ -27,8 +27,8 @@
       <div class="container">
         <h1 href="#">{{Title}}</h1>
 
-        <router-link to="/msongs">msongs</router-link>
-        <router-link to="/mmovies">mmovies</router-link>
+        <router-link :to="{name: 'songs'}">Songs</router-link>
+        <router-link :to="{name: 'movies'}">Movies</router-link>
 
         <router-view></router-view>
       </div>
@@ -47,8 +47,15 @@
     <template id="song">
       <h1>Songs</h1>
       <ul>
-        <li v-for="(item, index) in musicas" :key="item.nome">{{item.nome}}</li>
+        <!-- <li v-for="(item, index) in musicas" :key="item.nome">{{item.nome}}</li> -->
+        <li v-for="(item, index) in musicas" :key="item.nome">
+          <router-link :to="{name: 'list-all', params: {name:item.slug }}"
+            >{{item.nome}}</router-link
+          >
+        </li>
       </ul>
+
+      <router-view></router-view>
     </template>
     <script>
       // Destructuring
@@ -69,7 +76,10 @@
         template: "#song",
         data() {
           return {
-            musicas: [{ nome: "Youtube" }, { nome: "Apple Music" }],
+            musicas: [
+              { nome: "Youtube Music", slug: "youtube-music" },
+              { nome: "Apple Music", slug: "apple-music" },
+            ],
           };
         },
       });
@@ -81,29 +91,46 @@
           };
         },
       });
-
-      // fazer const Songs = app.component e depois chamar essa const retur error Component is missing template or render function.
-      /*
-      https://stackoverflow.com/questions/64409157/vue-js-component-is-missing-template-or-render-function
-      */
-      //solucao de acordo com o stackoverflow chamar assim
       const Songs = app.component("songs");
+
+      //sub rotas
+      const youtubeContent = { template: `{{$route.params.name}}` };
+      const ListAll = {
+        template: `<p>Listar tudo</p>{{$route.params.name}}`,
+      };
+      const about = { template: `sobre my page` };
 
       //ou adicionar o app.component('name') diretamente no path
 
       const router = createRouter({
         history: createWebHashHistory(location.pathname),
         routes: [
-          { path: "/msongs", component: Songs },
-          { path: "/mmovies", component: app.component("movies") },
+          {
+            path: "/rota-musicas",
+            name: "songs",
+            component: Songs,
+            children: [
+              {
+                path: ":name",
+                name: "list-all",
+                component: ListAll,
+              },
+              {
+                path: "/youtube-music",
+                name: "list-all2",
+                component: about,
+              },
+            ],
+          },
+          {
+            path: "/rota-filmes",
+            name: "movies",
+            component: app.component("movies"),
+          },
         ],
       });
       //  history: VueRouter.createWebHashHistory("/#"),
-      /*
-      app.use(router);
-      app.mount("#app");
-      //shorthand below
-      */
+
       app.use(router).mount("#app");
     </script>
   </body>
