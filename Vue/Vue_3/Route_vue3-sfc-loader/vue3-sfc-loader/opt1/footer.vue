@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>footer</h1>
+    <h1>{{ foo }}</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quidem.
     </p>
@@ -9,8 +9,10 @@
 
 <script>
 module.exports = {
-  data: function () {
-    return {};
+  data() {
+    return {
+      foo: "Footer",
+    };
   },
 };
 </script>

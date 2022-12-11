@@ -1,3 +1,23 @@
+# scratch para uso desse plugin
+
+- Não é necessário usar `module.exports = ....`, contúdo além de ser considerado uma boa prática o uso do `data()` faz necessário uma estrutura formal.
+
+e.g para `httpVueLoader` `vue3-sfc-loader`
+
+```js
+module.exports = {
+  data() {
+    return {
+      foo: "Footer",
+    };
+  },
+};
+```
+
+- `vue3-sfc-loader` é um loader de arquivos.vue
+- `VueRouter` faz as rotas
+- Ambos podem ser usado em conjunto, consultar exemplos!
+
 httpVueLoader load .vue files Router do router no refresh page
 
 ## Basic example

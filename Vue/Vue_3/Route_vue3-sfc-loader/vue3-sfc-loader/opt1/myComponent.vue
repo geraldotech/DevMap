@@ -13,6 +13,13 @@
         <a href="https://github.com/FranckFreiburger/http-vue-loader">here</a>
       </li>
       <li>criar a página html e importar os components</li>
+      <li>
+        Como pode perceber, esse e.g não tem rotas, simula bem um
+        <code>ng-includes</code> os arquivos.html requer o mesmo
+        <code>div#id</code> onde será renderizado os componenets, para não
+        exibir um determinado component, basta não fazer o
+        <code>div#id</code> deste item caso o mesmo tenho #id específico.
+      </li>
     </ul>
 
     <p>{{ gp }}</p>
@@ -38,5 +45,9 @@ module.exports = {
 
 h1 {
   color: orange;
+}
+code {
+  text-decoration: underline #fff;
+  color: coral;
 }
 </style>
