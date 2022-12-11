@@ -1,29 +1,6 @@
-const options = {
-  moduleCache: {
-    vue: Vue,
-  },
-  async getFile(url) {
-    const res = await fetch(url);
-    if (!res.ok)
-      throw Object.assign(new Error(res.statusText + " " + url), { res });
-    return {
-      getContentData: (asBinary) => (asBinary ? res.arrayBuffer() : res.text()),
-    };
-  },
-  addStyle(textContent) {
-    const style = Object.assign(document.createElement("style"), {
-      textContent,
-    });
-    const ref = document.head.getElementsByTagName("style")[0] || null;
-    document.head.insertBefore(style, ref);
-  },
-};
+import { options, loadModule } from "./sfc-loader.js";
 
-const { loadModule } = window["vue3-sfc-loader"];
-
-/*
-varios components em uma const
-*/
+//varios components em uma const
 
 const app = Vue.createApp({
   data() {
@@ -31,10 +8,10 @@ const app = Vue.createApp({
   },
   components: {
     "my-component": Vue.defineAsyncComponent(() =>
-      loadModule("./myComponent.vue", options)
+      loadModule("./dist/myComponent.vue", options)
     ),
     myHeader: Vue.defineAsyncComponent(() =>
-      loadModule("./myHeader.vue", options)
+      loadModule("./dist/myHeader.vue", options)
     ),
   },
   template: `Carregando components: <myHeader></myHeader>  <my-component></my-component>`,
@@ -52,10 +29,10 @@ const Myfooter = Vue.createApp({
   },
   components: {
     "my-footer": Vue.defineAsyncComponent(() =>
-      loadModule("./footer.vue", options)
+      loadModule("./dist/footer.vue", options)
     ),
     "my-novo": Vue.defineAsyncComponent(() =>
-      loadModule("./outro.vue", options)
+      loadModule("./dist/outro.vue", options)
     ),
   },
   // Mount compoments Controller / pode escolher a ordem que é montado
@@ -69,7 +46,7 @@ const extra = Vue.createApp({
   },
   components: {
     extravue: Vue.defineAsyncComponent(() => {
-      return loadModule("./extra.vue", options); // funciona sem return
+      return loadModule("./dist/extra.vue", options); // funciona sem return
     }),
   },
   template: `<extravue></extravue>`,
@@ -81,6 +58,7 @@ const About = {
 };
 const Port = { template: "<div>route Port</div>" };
 const Pets = { template: "<div>route pets</div>" };
+const NotFound = { template: "<h1 style='color:red'>Not Found</h1>" };
 
 const routes = [
   { path: "/", component: Home },
@@ -89,9 +67,10 @@ const routes = [
   {
     path: "/route3",
     component: Vue.defineAsyncComponent(() =>
-      loadModule("./radio.vue", options)
+      loadModule("./dist/radio.vue", options)
     ),
   },
+  { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ];
 
 const router = VueRouter.createRouter({

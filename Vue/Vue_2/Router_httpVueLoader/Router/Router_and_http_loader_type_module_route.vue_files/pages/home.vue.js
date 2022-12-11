@@ -11,6 +11,7 @@ var Home = {
   href="https://shouts.dev/articles/vue-js-routing-from-scratch-using-cdn-without-cli"
   >REF</a
 ></li>
+<li>Se ocorrer algum bug abrir somente a pasta do projeto no Server</li>
 </ul>
   </div>`,
 };

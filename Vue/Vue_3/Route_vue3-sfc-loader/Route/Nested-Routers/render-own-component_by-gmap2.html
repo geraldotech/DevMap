@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <title>VueJS - Componentes Routers - subRouters</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      .container {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      .container a {
+        display: block;
+      }
+      div img {
+        width: 100%;
+        max-width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1 href="#">{{Title}}</h1>
+        <p>
+          Version
+          <ins style="color: coral"
+            >children render own component using parent</ins
+          >, `this.$route.path` in array caso nenhuma rota for encontrada é
+          renderizado o conteúdo do pai
+        </p>
+
+        <router-link to="/">Home</router-link>
+        <router-link :to="{name: 'songs'}">Songs</router-link>
+        <router-link :to="{name: 'movies'}">Movies</router-link>
+
+        <router-view></router-view>
+      </div>
+    </div>
+
+    <!--templates-->
+    <template id="movie">
+      <h1>Movies</h1>
+      <ul>
+        <li v-for="(item, index) in filmes" :keys="filmes.name">
+          {{item.nome}}
+        </li>
+      </ul>
+    </template>
+
+    <template id="song">
+      <h1>Songs</h1>
+
+      <ol>
+        <li v-for="(item) in links" :key="item.id">
+          <router-link :to="item.carrega">{{item.website}}</router-link>
+        </li>
+      </ol>
+
+      <!--show /rota-musicas/ content-->
+      <router-view></router-view>
+    </template>
+
+    <!-- template children Apple -->
+    <template id="apple">
+      <p>Apple Music Top 10</p>
+      <div>
+        <img
+          src="https://img.grouponcdn.com/deal/4QBCgF7yFG5M9GyKVLnyAA4eRRoy/4Q-700x420/v1/c870x524.jpg"
+          alt=""
+        />
+      </div>
+    </template>
+
+    <!-- render Todos-->
+    <template id="todos">
+      <h1>Semi Parent component</h1>
+
+      <h1>Rota não encontrada!</h1>
+      <div style="width: 100%; height: 2px; background: coral"></div>
+
+      <router-view></router-view>
+    </template>
+
+    <script>
+      // Destructuring
+      const { createRouter, createWebHashHistory } = VueRouter;
+      const { createApp } = Vue;
+
+      const app = createApp({
+        created() {
+          console.log(this.$route);
+          console.log(this.$router);
+        },
+        data() {
+          return {
+            opt: "",
+            Title: "VueJS Ninja Way",
+            content: "",
+          };
+        },
+      });
+
+      //components
+      app.component("songs", {
+        template: "#song",
+        data() {
+          return {
+            links: [
+              {
+                id: 1,
+                website: "Apple Music",
+                carrega: this.$route.path + "/apple-music",
+              },
+              {
+                id: 2,
+                website: "Youtube Music",
+                carrega: this.$route.path + "/youtube-music",
+              },
+              {
+                id: 3,
+                website: "Not Found",
+                carrega: this.$route.path + "/some-thing",
+              },
+            ],
+          };
+        },
+      });
+      app.component("movies", {
+        template: "#movie",
+        data() {
+          return {
+            filmes: [{ nome: "Os vingadores" }, { nome: "Transformers" }],
+          };
+        },
+      });
+
+      //todos
+      app.component("todos", {
+        template: "#todos",
+      });
+
+      //apple-music
+
+      app.component("apple", {
+        template: "#apple",
+      });
+
+      const Songs = app.component("songs");
+      // String templates
+      const NotFound = { template: `not found` };
+      const HomePage = { template: `<h1>Home</h1>` };
+      const YouMusic = { template: `<h2>Youtube Music String Template</h2>` };
+      //sub rotas
+
+      const router = createRouter({
+        history: createWebHashHistory(location.pathname),
+        routes: [
+          {
+            path: "/",
+            name: "",
+            component: HomePage,
+          },
+          {
+            path: "/rota-musicas-novo",
+            name: "songs",
+            component: Songs,
+            children: [
+              {
+                path: ":name",
+                name: "getall",
+                component: app.component("todos"),
+              },
+              {
+                path: "apple-music",
+                name: "list-all.appleMusic",
+                component: app.component("apple"),
+                //redirect: "/apple-music",
+              },
+              {
+                path: "youtube-music",
+                name: "YouMusic",
+                component: YouMusic,
+              },
+              {
+                path: "/:pathMatch(.*)*",
+                name: "NotFound",
+                component: NotFound,
+              },
+            ],
+          },
+          {
+            path: "/rota-filmes",
+            name: "movies",
+            component: app.component("movies"),
+          },
+        ],
+      });
+      history: VueRouter.createWebHashHistory("/#"),
+        app.use(router).mount("#app");
+    </script>
+  </body>
+</html>

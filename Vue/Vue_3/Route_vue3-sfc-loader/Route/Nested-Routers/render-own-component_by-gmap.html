@@ -22,6 +22,7 @@
       }
       div img {
         width: 100%;
+        max-width: 50%;
       }
     </style>
   </head>
@@ -29,7 +30,12 @@
     <div id="app">
       <div class="container">
         <h1 href="#">{{Title}}</h1>
+        <p>
+          Version children render own component direct - sem components que
+          renderiza filhos
+        </p>
 
+        <router-link to="/">Home</router-link>
         <router-link :to="{name: 'songs'}">Songs</router-link>
         <router-link :to="{name: 'movies'}">Movies</router-link>
 
@@ -49,41 +55,26 @@
 
     <template id="song">
       <h1>Songs</h1>
-      <ul>
-        <li v-for="(item, index) in musicas" :key="item.nome">
-          <router-link :to="{name: 'list-all', params: {name:item.slug }}"
-            >{{item.nome}}</router-link
-          >
-        </li>
-      </ul>
 
+      <ol>
+        <li v-for="(item) in links" :key="item.id">
+          <router-link :to="item.carrega">{{item.website}}</router-link>
+        </li>
+      </ol>
+
+      <!--show /rota-musicas/ content-->
       <router-view></router-view>
     </template>
 
-    <template id="todos">
-      <p>{{email}}</p>
-      <!--
-        by ID
-      -->
-      <template v-if="$route.params.name == 'apple-music'">
-        <p>Apple Music Top 10</p>
-        <div>
-          <img
-            src="https://img.grouponcdn.com/deal/4QBCgF7yFG5M9GyKVLnyAA4eRRoy/4Q-700x420/v1/c870x524.jpg"
-            alt=""
-          />
-        </div>
-      </template>
-      <template v-if="$route.params.name == 'youtube-music'">
-        Youtube Music Top 10
-
-        <div>
-          <img
-            src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6.jpg"
-            alt=""
-          />
-        </div>
-      </template>
+    <!-- template children Apple -->
+    <template id="apple">
+      <p>Apple Music Top 10</p>
+      <div>
+        <img
+          src="https://img.grouponcdn.com/deal/4QBCgF7yFG5M9GyKVLnyAA4eRRoy/4Q-700x420/v1/c870x524.jpg"
+          alt=""
+        />
+      </div>
     </template>
     <script>
       // Destructuring
@@ -109,9 +100,17 @@
         template: "#song",
         data() {
           return {
-            musicas: [
-              { nome: "Apple Music", slug: "apple-music" },
-              { nome: "Youtube Music", slug: "youtube-music" },
+            links: [
+              {
+                id: 1,
+                website: "Apple Music",
+                carrega: "/rota-musicas/apple-music",
+              },
+              {
+                id: 2,
+                website: "Youtube Music",
+                carrega: "/rota-musicas/youtube-music",
+              },
             ],
           };
         },
@@ -125,39 +124,46 @@
         },
       });
 
-      //todos
-      app.component("todos", {
-        template: "#todos",
-        props: {
-          email: "String",
-        },
-        data() {
-          return {};
-        },
+      //apple-music
+
+      app.component("apple", {
+        template: "#apple",
       });
 
       const Songs = app.component("songs");
-
-      // String templates for sub router
-      const ListAll = {
-        template: `<p>Listar todos:</p>{{$route.params.name}}
-        <p v-if="$route.params.name == 'youtube-music'">Você está na rota: youtube-music</p>
-        `,
-      };
+      // String templates
+      const NotFound = { template: `not found` };
+      const HomePage = { template: `<h1>Home</h1>` };
+      const YouMusic = { template: `<h2>Youtube Music String Template</h2>` };
 
       const router = createRouter({
         history: createWebHashHistory(location.pathname),
         routes: [
           {
+            path: "/",
+            name: "",
+            component: HomePage,
+          },
+          {
             path: "/rota-musicas",
             name: "songs",
             component: Songs,
-            //redirect: "/rota-musicas/",
             children: [
               {
-                path: ":name",
-                name: "list-all",
-                component: app.component("todos"), // ou chamar ListAll
+                path: "apple-music",
+                name: "list-all.appleMusic",
+                component: app.component("apple"),
+                //redirect: "/apple-music",
+              },
+              {
+                path: "youtube-music",
+                name: "list-all.YouMusic",
+                component: YouMusic,
+              },
+              {
+                path: "/:pathMatch(.*)*",
+                name: "NotFound",
+                component: NotFound,
               },
             ],
           },
@@ -168,9 +174,8 @@
           },
         ],
       });
-      //  history: VueRouter.createWebHashHistory("/#"),
-
-      app.use(router).mount("#app");
+      history: VueRouter.createWebHashHistory("/#"),
+        app.use(router).mount("#app");
     </script>
   </body>
 </html>

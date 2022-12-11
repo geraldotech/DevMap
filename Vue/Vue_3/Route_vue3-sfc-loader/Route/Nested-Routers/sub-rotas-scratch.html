@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <title>VueJS - Componentes Routers</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      .container {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      .container a {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1 href="#">{{Title}}</h1>
+
+        <router-link :to="{name: 'songs'}">Songs</router-link>
+        <router-link :to="{name: 'movies'}">Movies</router-link>
+
+        <router-view></router-view>
+      </div>
+    </div>
+
+    <!--templates-->
+    <template id="movie">
+      <h1>Movies</h1>
+      <ul>
+        <li v-for="(item, index) in filmes" :keys="filmes.name">
+          {{item.nome}}
+        </li>
+      </ul>
+    </template>
+
+    <template id="song">
+      <h1>Songs</h1>
+      <ul>
+        <!-- <li v-for="(item, index) in musicas" :key="item.nome">{{item.nome}}</li> -->
+        <li v-for="(item, index) in musicas" :key="item.nome">
+          <router-link
+            :to="{name: 'youtubeConteudo', params: {name:item.slug }}"
+            >{{item.nome}}</router-link
+          >
+        </li>
+      </ul>
+
+      <router-view></router-view>
+    </template>
+    <script>
+      // Destructuring
+      const { createRouter, createWebHashHistory } = VueRouter;
+      const { createApp } = Vue;
+
+      const app = createApp({
+        created() {
+          //redirecionamento da home
+          /*   this.$router.push({
+            name: "youtubeConteudo",
+            params: { name: "movies" },
+          }); */
+        },
+        data() {
+          return {
+            opt: "",
+            Title: "VueJS Ninja Way",
+          };
+        },
+      });
+
+      //components
+      app.component("songs", {
+        template: "#song",
+        data() {
+          return {
+            musicas: [
+              { nome: "Youtube Music", slug: "youtube-music" },
+              { nome: "Apple Music", slug: "apple-music" },
+            ],
+          };
+        },
+      });
+      app.component("movies", {
+        template: "#movie",
+        data() {
+          return {
+            filmes: [{ nome: "Os vingadores" }, { nome: "Transformers" }],
+          };
+        },
+      });
+      const Songs = app.component("songs");
+
+      //sub rotas
+      const youtubeContent = { template: `{{$route.params.name}}` };
+      const appleContent = { template: `<p>Apple Content</p>` };
+
+      //ou adicionar o app.component('name') diretamente no path
+
+      const router = createRouter({
+        history: createWebHashHistory(location.pathname),
+        routes: [
+          {
+            path: "/rota-musicas",
+            name: "songs",
+            component: Songs,
+            children: [
+              {
+                path: ":name",
+                name: "youtubeConteudo",
+                component: youtubeContent,
+              },
+              {
+                path: ":name",
+                name: "appleContent",
+                component: appleContent,
+              },
+            ],
+          },
+          {
+            path: "/rota-filmes",
+            name: "movies",
+            component: app.component("movies"),
+          },
+        ],
+      });
+      //  history: VueRouter.createWebHashHistory("/#"),
+
+      app.use(router).mount("#app");
+    </script>
+  </body>
+</html>
