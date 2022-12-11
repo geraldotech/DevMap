@@ -6,54 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://unpkg.com/vue-router@4"></script>
-   
-    <title>Vue JS 3 - Router Demo</title>
+    <title>VueJS - Componentes Routers - subRouters</title>
     <style>
       :root {
         color-scheme: dark;
+      }
+      .container {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      .container a {
+        display: block;
+      }
+      div img {
+        width: 100%;
       }
     </style>
   </head>
   <body>
     <div id="app">
-      
-     <ul>
-         <li><router-link to="/">Home Page</router-link>         
-    </li>
-    <li> <router-link to="/youtube">Youtube</router-link></li>
-    <li> <router-link to="/linkedin">Linkedin</router-link></li>
-     </ul>
+      <div class="container">
+        <h1 href="#">{{Title}}</h1>
+
+        <router-link :to="{name: 'songs'}">Songs</router-link>
+        <router-link :to="{name: 'movies'}">Movies</router-link>
+
         <router-view></router-view>
       </div>
     </div>
+
+    <!--templates-->
+    <template id="movie">
+      <h1>Movies</h1>
+      <ul>
+        <li v-for="(item, index) in filmes" :keys="filmes.name">
+          {{item.nome}}
+        </li>
+      </ul>
+    </template>
+
+    <template id="song">
+      <h1>Songs</h1>
+      <ul>
+        <li v-for="(item, index) in musicas" :key="item.nome">
+          <router-link :to="{name: 'list-all', params: {name:item.slug }}"
+            >{{item.nome}}</router-link
+          >
+        </li>
+      </ul>
+
+      <router-view></router-view>
+    </template>
+
+    <template id="todos">
+      <p>{{email}}</p>
+      <!--
+        by ID
+      -->
+      <template v-if="$route.params.name == 'apple-music'">
+        <p>Apple Music Top 10</p>
+        <div>
+          <img
+            src="https://img.grouponcdn.com/deal/4QBCgF7yFG5M9GyKVLnyAA4eRRoy/4Q-700x420/v1/c870x524.jpg"
+            alt=""
+          />
+        </div>
+      </template>
+      <template v-if="$route.params.name == 'youtube-music'">
+        Youtube Music Top 10
+
+        <div>
+          <img
+            src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6.jpg"
+            alt=""
+          />
+        </div>
+      </template>
+    </template>
     <script>
-      const { createRouter, createWebHashHistory, createWebHistory } = VueRouter;
+      // Destructuring
+      const { createRouter, createWebHashHistory } = VueRouter;
       const { createApp } = Vue;
 
       const app = createApp({
+        created() {
+          console.log(this.$route);
+          console.log(this.$router);
+        },
         data() {
           return {
+            opt: "",
             Title: "VueJS Ninja Way",
+            content: "",
           };
         },
       });
 
-      // String templates
-      const Home = { template: `<p>Home Page</p>` };
-      const Youtube = { template: `<p>Youtube Page</p>` };
-      const Linkedin = { template: `<p>Linkedin Page</p>` };
+      //components
+      app.component("songs", {
+        template: "#song",
+        data() {
+          return {
+            musicas: [
+              { nome: "Apple Music", slug: "apple-music" },
+              { nome: "Youtube Music", slug: "youtube-music" },
+            ],
+          };
+        },
+      });
+      app.component("movies", {
+        template: "#movie",
+        data() {
+          return {
+            filmes: [{ nome: "Os vingadores" }, { nome: "Transformers" }],
+          };
+        },
+      });
 
-      //Router
+      //todos
+      app.component("todos", {
+        template: "#todos",
+        props: {
+          email: "String",
+        },
+        data() {
+          return {};
+        },
+      });
+
+      const Songs = app.component("songs");
+
+      // String templates for sub router
+      const ListAll = {
+        template: `<p>Listar todos:</p>{{$route.params.name}}
+        <p v-if="$route.params.name == 'youtube-music'">Você está na rota: youtube-music</p>
+        `,
+      };
+
       const router = createRouter({
-        history: createWebHashHistory(),
-        
-        
+        history: createWebHashHistory(location.pathname),
         routes: [
-          { path: "/", component: Home },
-          { path: "/youtube", component: Youtube },
-          { path: "/linkedin", component: Linkedin },
+          {
+            path: "/rota-musicas",
+            name: "songs",
+            component: Songs,
+            //redirect: "/rota-musicas/",
+            children: [
+              {
+                path: ":name",
+                name: "list-all",
+                component: app.component("todos"), // ou chamar ListAll
+              },
+            ],
+          },
+          {
+            path: "/rota-filmes",
+            name: "movies",
+            component: app.component("movies"),
+          },
         ],
       });
+      //  history: VueRouter.createWebHashHistory("/#"),
 
       app.use(router).mount("#app");
     </script>

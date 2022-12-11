@@ -90,3 +90,15 @@ Rotas nomeadas, identificar a rota com um objeto name, em caso de mudar o `path`
 [named-routes.html](https://v3.router.vuejs.org/guide/essentials/named-routes.html)
 
 # sub rotas
+
+```
+//obter o params da rota
+$route.params.name
+
+//no data do app
+
+ created() {
+          console.log(this.$route);
+          console.log(this.$router);
+        },
+```
