@@ -2,65 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-:root{
-  color-scheme: dark;
-}
-
-  </style>
+      :root {
+        color-scheme: dark;
+      }
+    </style>
   </head>
   <body>
-
-<div id="res"></div>
-
+    <div id="res"></div>
 
     <script>
-const api = "https://api.github.com/repos/geraldotech/DevMap/git/trees/main";
+      //versão sem filter para path e sha
+      const api =
+        "https://api.github.com/repos/geraldotech/DevMap/git/trees/main";
 
-async function get(url){
-const response = await fetch(url);
+      async function get(url) {
+        const response = await fetch(url);
 
-const data = await response.json();
-if(data){
-  console.log(data.tree);
-  console.log(data.tree[1]); // get last sha
-  const ultimosha = data.tree[1].sha; // get last sha of JavaScript folder
-  console.log('sha Js folder', ultimosha); 
-  console.log(data.tree[1]);
-pasta(ultimosha);
-}
-}
+        const data = await response.json();
+        if (data) {
+          console.log(data.tree);
+          console.log(data.tree[1]); // print this path
+          const ultimosha = data.tree[1].sha; // get last sha of JavaScript folder, porém isso não está filtrando path, qualquer mudança quebra o code!
+          console.log("sha path: JS", ultimosha);
+          pasta(ultimosha); // chamar fun fetch this path
+        }
+      }
 
+      get(api);
 
+      async function pasta(sha) {
+        const js = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sha}`;
+        const resposta = await fetch(js);
+        const dados = await resposta.json();
+        console.log(dados.tree[26]); //dentro tree acessa um index especifico
+        const inputF = dados.tree[26].sha; //pegar last sha desse index
+        console.log("sha path: input", inputF); //ultimo sha dessa pasta input
+        input(inputF); //chama fun fetch this path
+      }
 
-get(api);
+      async function input(sh) {
+        const jsin = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sh}`;
+        const dados3 = await fetch(jsin);
+        const dadosR = await dados3.json();
+        console.log(dadosR);
+        //filter paths.html
+        const OnlyHtml = dadosR.tree.filter((val) => val.path.includes("html"));
+        console.log("OnlyHtml:", OnlyHtml);
 
-async function pasta(sha){
-  const js = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sha}`
-  const resposta = await fetch(js);
-  const dados = await resposta.json();
-  const inputF = dados.tree[25].sha;
-  console.log('sha input', inputF); //ultimo sha dessa pasta input
-  input(inputF);
-}
-
-async function input(sh){
-  const jsin = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sh}`
-  const dados3 = await fetch(jsin);
-  const dadosR = await dados3.json();
-  console.log(dadosR);
-  const temhtml = dadosR.tree.filter(val => val.path.includes("html"));
-  console.log('saida', temhtml);
-  console.log('saida', temhtml[0].path);
-  document.getElementById("res").innerHTML = temhtml.map((val) => {
-    const full_link = `https://geraldotech.github.io/DevMap/JavaScript/input/`;
-    return `<a href="${full_link}${val.path}" target="_blank">${full_link}${val.path}</a>`
-  })
-};
-
-</script>
+        //print in HTML
+        const full_link = `https://geraldotech.github.io/DevMap/JavaScript/input/`;
+        document.getElementById("res").innerHTML = OnlyHtml.map((val) => {
+          return `<a href="${full_link}${val.path}" target="_blank">${full_link}${val.path}</a>`;
+        });
+      }
+    </script>
   </body>
 </html>

@@ -6,77 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Api Filter html - Home Page</title>
     <style>
-:root{
-  color-scheme: dark;
-}
-a{
-  display: block;
-  line-height: 2rem;
-}
-a::before{
-  content: '👉';
-}
-  </style>
+      :root {
+        color-scheme: dark;
+      }
+      a {
+        display: block;
+        line-height: 2rem;
+      }
+      a::before {
+        content: "";
+      }
+    </style>
   </head>
   <body>
-
-  <div id="res"></div>
-
+    <div id="res"></div>
 
     <script>
-// novo way 2 de pegar o ultimo sha
-const api = "https://api.github.com/repos/geraldotech/DevMap/git/trees/main"; //url arvore main
+      // novo way final
+      const api =
+        "https://api.github.com/repos/geraldotech/DevMap/git/trees/main"; //url arvore main
 
-async function get(url){
-const response = await fetch(url);
-const data = await response.json();
-if(data){
-  console.log(data.tree);
-  const javas = data.tree.filter(val => val.path == "JavaScript"); // filter javascript.path
-  console.log('filter', javas[0].sha); // get last sha do path filtered  
-  pastaInput(javas[0].sha); //chama fun e envia ultimo asha
-}
-};
+      async function get(url) {
+        const data = await fetch(url).then((res) => res.json());
 
-get(api);
+        if (data) {
+          console.log(data.tree);
+          const javas = data.tree
+            .filter((val) => val.path == "JavaScript")
+            .map((a) => a.sha)
+            .join(""); // filter javascript.path
+          console.log("filter", javas); // get last sha do path filtered
+          pastaInput(javas); //chama fun e envia ultimo asha
+        }
+      }
+      get(api);
 
-async function pastaInput(sha){
-  const js = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sha}`; //ulr para acesse a pasta do ultimo sha filtrado
-  const resposta = await fetch(js);
-  const dados = await resposta.json();
-  const filInput = dados.tree.filter(val => val.path == "input");
-  console.log(filInput);
-  console.log(filInput[0].sha); // get input sha
-  checkbox(filInput[0].sha);
-}
+      async function pastaInput(sha) {
+        const js = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sha}`; //ulr para acesse a pasta do ultimo sha filtrado
+        const resposta = await fetch(js).then((res) => res.json());
+        //get filter path and get .sha the join convert to inteiro
+        const filInput = resposta.tree
+          .filter((val) => val.path == "input")
+          .map((a) => a.sha)
+          .join("");
+        checkbox(filInput);
+      }
 
-async function checkbox(sha){
-  const sks = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sha}`;
-  const resposta3 = await fetch(sks);
-  const dados3 = await resposta3.json();
- const filtraBox = dados3.tree.filter(val => val.path == "checkbox").map(a => a.sha).join(''); //filtra o path checkbox, pega o sha e transforma em inteiro com o join
-  console.log(filtraBox); 
-  input(filtraBox);
-};
+      async function checkbox(sha) {
+        const sks = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sha}`;
+        const resposta3 = await fetch(sks).then((res) => res.json());
+        const filtraBox = resposta3.tree
+          .filter((val) => val.path == "checkbox")
+          .map((a) => a.sha)
+          .join(""); //filtra o path checkbox, pega o sha e transforma em inteiro com o join
+        console.log(filtraBox);
+        input(filtraBox);
+      }
 
+      async function input(sh) {
+        const jsin = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sh}`;
+        const dados3 = await fetch(jsin);
+        const dadosR = await dados3.json();
+        console.log(dadosR);
 
-async function input(sh){
-  const jsin = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sh}`
-  const dados3 = await fetch(jsin);
-  const dadosR = await dados3.json();
-  console.log(dadosR);
+        //encontrar o index do index.html para ser fintrado
+        const getInd = dadosR.tree.findIndex((val) => val.path == "index.html");
+        //filter todos os .html exceto da o index da lista acima
+        const temhtml = dadosR.tree.filter(
+          (val, ind) => val.path.includes("html") && ind != getInd
+        );
+        console.log("saida", temhtml);
 
-  //encontrar o index do index.html para ser fintrado
-  const getInd = dadosR.tree.findIndex((val) => val.path == "index.html");
-
-  const temhtml = dadosR.tree.filter((val, ind) => val.path.includes("html") && ind != getInd);
-  console.log('saida', temhtml);
-  document.getElementById("res").innerHTML = temhtml.map((val) => {
-    const full_link = `https://geraldotech.github.io/DevMap/JavaScript/input/checkbox/`;
-    return `<a href="${full_link}${val.path}" target="_blank">${full_link}${val.path}`
-  }).join("")
-};
-
-</script>
+        //show DOM
+        const full_link = `https://geraldotech.github.io/DevMap/JavaScript/input/checkbox/`;
+        document.getElementById("res").innerHTML = temhtml
+          .map((val) => {
+            return `<a href="${full_link}${val.path}" target="_blank">${val.path}`;
+          })
+          .join("");
+      }
+    </script>
   </body>
 </html>

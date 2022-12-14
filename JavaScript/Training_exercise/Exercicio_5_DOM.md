@@ -1,11 +1,11 @@
-***HTML DOM  Exercicios 5*** 
+**_HTML DOM Exercicios 5_**
 
-link: https://www.w3schools.com/jsref/dom_obj_document.asp 
+link: https://www.w3schools.com/jsref/dom_obj_document.asp
 
-***When a HTML document is loaded into a web browser, it becomer a document object*** 
+**_When a HTML document is loaded into a web browser, it becomer a document object_**
 
 1. Exercicio clicar qualquer área fazer aparecer um texto:  
-    1.2 mouse sobre a div show a alert:
+   1.2 mouse sobre a div show a alert:
 
 2. Ao pressionar uma tecla especifica mostre um alert:
 
@@ -17,11 +17,11 @@ link: https://www.w3schools.com/jsref/dom_obj_document.asp
 
 6. Criar um texto simples com createTextNode e mostrar na **tela**
 
-7. Fazer uma saída em ```<h1>``` com appendChild, createElement e create TextNode  
-    7.1. Limitar a saída com if return para 3x:
+7. Fazer uma saída em `<h1>` com appendChild, createElement e create TextNode  
+   7.1. Limitar a saída com if return para 3x:
 
 8. Fazer a saída da calculadora com createTextNode e limitar com if return false (abrir arquivo html inside this folder) 4 lines, depois aplicar o preventDefault()
-<a href="https://geradev.netlify.app/js_exercises/js_exercicio_5_question_8.html" target="_blank">geradev.netlify</a>
+   <a href="https://geradev.netlify.app/js_exercises/js_exercicio_5_question_8.html" target="_blank">geradev.netlify</a>
 
 9. Fazer um button click onde start no html
 
@@ -35,26 +35,27 @@ link: https://www.w3schools.com/jsref/dom_obj_document.asp
 
 14. Fazer uma div#app display a text em h1, uma classe e ao clicar no document seja atribuido a classe alterando sua cor original `classList.add();` teste também o `classList.remove("")`
 
-15.Fazer uma div#app e mostrar a imagem usando DOM: `http://smartdicastutorial.appspot.com/images/6d88733c461.jpg` também atribuir uma class que deve diminuir o tamanho da imagem: 
+15.Fazer uma div#app e mostrar a imagem usando DOM: `http://smartdicastutorial.appspot.com/images/6d88733c461.jpg` também atribuir uma class que deve diminuir o tamanho da imagem:
 
-16. Dois modos de escrever: 
+16. Dois modos de escrever:
+
 ```js
 txt = document.createTextNode("asas"); //no direct
-div.textContent = "asas"; //direct 
+div.textContent = "asas"; //direct
 ```
 
-# Special 
-##### Start with => first class function  
+# Special
 
-1. List ul com map: 
-2. List ul com for of 1
-3. List ul com for of 2
+##### Start with => first class function
+
+1. List ul and com map:
+2. List ul com for of v1
+3. List ul com for of v2
 4. Array forEach inline
-5. For of show Array index 
+5. For of show Array index
 6. Box click contains
 7. Exemplo com function constructor (retirada do Livro)
 8. Empréstimo de método (obj) [resp](https://github.com/kelvinbiffi/javascript-book/blob/master/18.Empr%C3%A9stimo%20de%20m%C3%A9todo/script.js)
 9. Make a clock  
-[respostas](https://gist.github.com/geraldotech/017b5431d853b37af18e0c7fbab97246)
-
-
+   [respostas](https://gist.github.com/geraldotech/017b5431d853b37af18e0c7fbab97246)
+10. Make links with Array using `nav` and `select`

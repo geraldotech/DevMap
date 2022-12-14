@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue 2</title>
+    <title>Vue 2 2</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
      <script src="https://unpkg.com/http-vue-loader"></script>
     <script type="module" src="./src/main.js" defer></script>
+    <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
   </head>
 </head>
 <body>
-    <main id="app">
+    <div id="app">
+  
+     <router-link to="/">Home</router-link>
+     <router-link to="/download">Download</router-link>
+    <br>
+    <router-view></router-view>  
+  
+       
+    
+</div> 
+<div id="myapp">
         <h1>{{message}}</h1>
         <vmenu></vmenu>
-        <section>
-            <h1>Home Page</h1>
-        </section>        
         <vfoo></vfoo>
-    </main>
+   
+    </div>
   
   
 </body>

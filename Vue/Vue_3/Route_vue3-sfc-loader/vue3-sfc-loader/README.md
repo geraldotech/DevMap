@@ -5,6 +5,7 @@
 e.g para `httpVueLoader` `vue3-sfc-loader`
 
 ```js
+<script>
 module.exports = {
   data() {
     return {
@@ -12,6 +13,7 @@ module.exports = {
     };
   },
 };
+</script>
 ```
 
 - `vue3-sfc-loader` é um loader de arquivos.vue

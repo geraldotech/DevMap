@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS2 Router Nested</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>VueJS 2 Router Nested</h1>
+      <router-link to="/">Home</router-link>
+      <router-link :to="{name: 'abt'}">About</router-link>
+      <router-link to="/download">Downloads</router-link>
+
+      <router-view></router-view>
+    </div>
+
+    <!--template-->
+    <template id="baixar">
+      <div>
+        <h1>{{titulo}}</h1>
+
+        <ul>
+          <li v-for="(item, index) in list" :key="item.nome">
+            <router-link :to="{ name: item.slug}">{{item.nome}}</router-link>
+          </li>
+        </ul>
+        <router-view></router-view>
+      </div>
+    </template>
+
+    <script>
+      Vue.component("myd-content", {
+        template: "#baixar",
+        data() {
+          return {
+            list: [
+              { nome: "one opt", slug: "one" },
+              { nome: "two opt", slug: "two" },
+            ],
+            titulo: "All",
+          };
+        },
+      });
+      const Home = { template: `<h1>Home</h1>` };
+      const a = { template: `<p>A</p>` };
+      const b = { template: `<p>B</p>` };
+      const About = { template: `<p>About</p>` };
+      const downl = Vue.component("myd-content");
+
+      var routes = [
+        { path: "/", component: Home },
+        { path: "/about", name: "abt", component: About },
+        {
+          path: "/download",
+          component: downl,
+          children: [
+            { path: "link-one", name: "one", component: a },
+            { path: "link-two", name: "two", component: b },
+          ],
+        },
+      ];
+
+      var router = new VueRouter({
+        routes: routes,
+        mode: "history",
+        base: "/#",
+      });
+      var app = new Vue({
+        el: "#app",
+        router: router,
+      });
+    </script>
+  </body>
+</html>

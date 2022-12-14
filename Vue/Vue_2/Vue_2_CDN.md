@@ -62,3 +62,7 @@ const app = new Vue({
         },
 
 ```
+
+### components registration:
+
+[https://v2.vuejs.org/v2/guide/components-registration.html](https://v2.vuejs.org/v2/guide/components-registration.html)

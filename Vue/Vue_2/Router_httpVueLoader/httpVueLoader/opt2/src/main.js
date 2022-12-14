@@ -1,5 +1,6 @@
-const app = new Vue({
-  el: "#app",
+const app2 = new Vue({
+  el: "#myapp",
+
   data: {
     message: "VueJS 2",
   },
@@ -9,4 +10,20 @@ const app = new Vue({
     vabout: httpVueLoader("./src/about.vue"),
     vdownload: httpVueLoader("./src/vdownload.vue"),
   },
+});
+
+var routes = [
+  { path: "/", component: httpVueLoader("./src/home.vue") },
+  { path: "/download", component: httpVueLoader("./src/downloads.vue") },
+];
+
+var router = new VueRouter({
+  routes: routes,
+  mode: "history",
+  base: "#/",
+});
+
+var app = new Vue({
+  el: "#app",
+  router: router,
 });

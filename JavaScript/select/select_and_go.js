@@ -45,3 +45,27 @@ function website(el){
     };
     alert("selecionar uma opção");
 };
+
+//version 3 - adicinando os links diretamente no DOM
+
+<select name="menu3">
+      <option value=""></option>
+      <option value="http://google.com">Google</option>
+      <option value="http://youtube.com">Youtube</option>
+</select>
+
+
+//e precisamos adicioanar um evento de onchange nesse select
+
+document.querySelector("select[name='menu3']").onchange = (e) => {
+        window.open().location.href = e.target.value;
+      };
+
+//onchange direct in DOM - gmap
+
+<select onchange="location.href = this.value">
+      <option value=""></option>
+      <option value="http://google.com">Google</option>
+      <option value="http://youtube.com">Youtube</option>
+      <option value="http://linkedin.com">Linkedin</option>
+</select>
