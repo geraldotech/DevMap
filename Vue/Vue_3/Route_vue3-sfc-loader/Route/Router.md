@@ -60,9 +60,9 @@ Para remover o #/ altera para:
 
 Contudo páginas carregadas diretamente sem o `hash` retornaram erro
 
-e.g com hash [https://gpnotes.droppages.com/vuejs-Router/test-hash.html#/linkedin](https://gpnotes.droppages.com/vuejs-Router/test-hash.html#/linkedin)
+e.g com `hash Mode` [/test-hash.html#/linkedin](https://gmapdev.netlify.app/docs_demo/vuejs-Router/test-hash.html#/linkedin)
 
-e.g sem hash `HTML Mode` [https://gpnotes.droppages.com/vuejs-Router/test-nohash.html/linkedin](https://gpnotes.droppages.com/vuejs-Router/test-nohash.html/linkedin)
+e.g com `HTML Mode` [test-nohash.html/linkedin](https://gmapdev.netlify.app/docs_demo/vuejs-Router/test-nohash.html/linkedin)
 
 Ler mais aqui [https://router.vuejs.org/guide/essentials/history-mode.html#html5-mode](https://router.vuejs.org/guide/essentials/history-mode.html#html5-mode)
 

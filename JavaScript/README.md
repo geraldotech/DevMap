@@ -349,7 +349,7 @@ const el = document.querySelector("ul");
 </details>
 
 <details>
-<summary>createElement, createTextNode, appendChild</summary>
+<summary>createElement, createTextNode, appendChild, append</summary>
 
 ```js
 # Basic texts
@@ -363,11 +363,11 @@ p = document.createElement("p");
 h1.textContent = 'Hello ';
 txt = document.createTextNode("JavaScript");
 
-//append
+//appendChild
 p.appendChild(txt);
 div.appendChild(h1);
 
-//append body
+//appendChild body
 document.body.appendChild(div);
 
 
@@ -379,11 +379,38 @@ img = document.createElement("img");
 img.setAttribute("src", "http://smartdicastutorial.appspot.com/images/6d88733c461.jpg");
 img.setAttribute("alt", "img test");
 
-//append
+//appendChild
 div.appendChild(img);
 
-//append body
+//appendChild body
 document.body.appendChild(div);
+
+
+/*
+👉appendChild() only accepts Node Objects.
+👉append() Allows Us To Add Multiple Node Objects At Once, Arrays, strings... Unlike appendChild()
+*/
+  //direct arr or string
+     document.body.append(`${arr}`, `Hello`);
+    const arr = ["Alpha", "Bravo", "Charlie"];
+    const div = document.createElement("div");
+    //appendChild aqui não funcionaria
+    div.append(arr);
+    document.body.appendChild(div);
+
+    //append support, string, Arrays
+    const box = document.getElementById("box");
+    box.append("Super Man!");
+  //append support, string, Arrays
+    const box = document.getElementById("box");
+
+    const novo = document.createElement("div");
+    novo.innerHTML = `My new div`;
+    box.append(arr, ", Super Man!", novo);
+
+    //💻output Alpha,Bravo,Charlie, Super Man! My new div
+
+
 
 # Images 2 Template Alternative
 

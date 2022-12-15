@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Api Filter html - Home Page</title>
     <style>
@@ -18,7 +17,7 @@
     <div id="res"></div>
 
     <script>
-      // novo way 2 de pegar o ultimo sha - com apenas 1 function
+      // novo way 3  de pegar o ultimo sha - com apenas 1 function
       const api =
         "https://api.github.com/repos/geraldotech/DevMap/git/trees/main"; //url arvore main
 
@@ -53,6 +52,8 @@
         }
       }
       get(api);
+
+      //show DOM
       function show(ele) {
         document.getElementById("res").innerHTML = ele
           .map((val) => {

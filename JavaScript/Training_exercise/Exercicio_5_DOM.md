@@ -46,8 +46,9 @@ div.textContent = "asas"; //direct
 
 # Special
 
-##### Start with => first class function
+### [resp](https://github.com/kelvinbiffi/javascript-book/blob/master/18.Empr%C3%A9stimo%20de%20m%C3%A9todo/script.js)
 
+0. Start with => first class function
 1. List ul and com map:
 2. List ul com for of v1
 3. List ul com for of v2
@@ -55,7 +56,6 @@ div.textContent = "asas"; //direct
 5. For of show Array index
 6. Box click contains
 7. Exemplo com function constructor (retirada do Livro)
-8. Empréstimo de método (obj) [resp](https://github.com/kelvinbiffi/javascript-book/blob/master/18.Empr%C3%A9stimo%20de%20m%C3%A9todo/script.js)
-9. Make a clock  
-   [respostas](https://gist.github.com/geraldotech/017b5431d853b37af18e0c7fbab97246)
-10. Make links with Array using `nav` and `select`
+8. Empréstimo de método (obj)
+9. Make a clock [respostas](https://gist.github.com/geraldotech/017b5431d853b37af18e0c7fbab97246)
+10. Make links with Array using `nav` and `select` so I don't have to edit the code on every page when a change is made to the menu.
