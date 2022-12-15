@@ -662,7 +662,7 @@ document.head.insertAdjacentHTML(
 </details>
 
 <details>
-<summary>getElement and querySelector</summary>
+<summary>getElement and QuerySelector</summary>
 <br>
 <a href="https://www.w3schools.com/js/js_htmldom_nodelist.asp" target="_blank">HTML Collection vs NodeList</a>
 
