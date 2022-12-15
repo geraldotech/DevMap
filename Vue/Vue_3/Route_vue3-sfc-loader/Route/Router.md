@@ -132,7 +132,7 @@ $route.params.name
 
 [https://router.vuejs.org/guide/essentials/dynamic-matching.html#reacting-to-params-changes](https://router.vuejs.org/guide/essentials/dynamic-matching.html#reacting-to-params-changes)
 
-## Props na sidebar
+## Props na Sidebar
 
 ```js
 //na router add

@@ -6,7 +6,7 @@
 
 Projects and Demos: [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 
-### O que é JavaScript?
+### What is JavaScript?
 
 - **From Scratch by _Geraldo Filho_**
   [onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
