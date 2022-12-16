@@ -27,6 +27,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 
 <p>Adquira VIP e tenha acesso direto!</p>
 */
+
 //js
 const contador = () => {
   let start = document.querySelector("span");
