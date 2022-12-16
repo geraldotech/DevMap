@@ -46,7 +46,7 @@ const contador = () => {
 };
 contador();
 
-//infinity - arrow function
+//infinity - Arrow function
 const wel = () =>
   setInterval(function () {
     alert("bom dia");
