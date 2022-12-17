@@ -146,7 +146,7 @@ list.innerHTML = Object.values(getValores()).join("");
 
 # e.g 5 template literals
 
-Além de menu dinâmico, pode incluir páginas a partir de strings
+Além de menu dinâmico, pode incluir páginas a partir de strings com custom tags
 
 🔰e.g 5 + Full Code: https://gmapdev.netlify.app/docs_demo/js_list_menu/eg5/
 
@@ -159,3 +159,4 @@ visite a session de Ajax [https://github.com/geraldotech/DevMap/tree/main/JavaSc
 # e.g 7 using Fetch
 
 É uma versão mais conveninente do Ajax
+[https://github.com/geraldotech/DevMap/tree/main/JavaScript/Fetch/fetch_html](https://github.com/geraldotech/DevMap/tree/main/JavaScript/Fetch/fetch_html)
