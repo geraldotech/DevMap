@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>onclick fetch`html`</h2>
+
+    <button onclick="getfile(file)">Fetch Html</button>
+
+    <p id="load"></p>
+
+    <script>
+      const load = document.querySelector("#load");
+      const file = "./onclick.html";
+
+      /*  async function getfile(url) {
+        const req = await fetch(url)
+          .then((res) => res.text())
+          .then((ref) => (load.innerHTML = ref));
+      } */
+      async function getfile(url) {
+        const req = await fetch(url);
+        const res = await req.text();
+        console.log(res);
+        load.innerHTML = res;
+      }
+    </script>
+  </body>
+</html>

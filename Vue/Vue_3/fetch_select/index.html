@@ -30,10 +30,14 @@
         },
         methods: {
           async bancos() {
-            const req = await fetch("http://localhost:3000/cartoes");
-
+            //const req = await fetch("http://localhost:3000/cartoes");
+            const req = await fetch("./db/db.json");
             const data = await req.json();
-            this.cartoes = data.cards;
+
+            //for server
+            //this.cartoes = data.cards;
+            //for local json
+            this.cartoes = data.cartoes.cards;
             console.log(data);
           },
         },

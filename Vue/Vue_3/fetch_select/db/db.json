@@ -1,0 +1,21 @@
+{
+  "cartoes": {
+    "cards": [
+      {
+        "id": 1,
+          "tipo": "SX Master",
+          "limite": 2800
+      },
+      {
+        "id": 2,
+        "tipo": "Santander 123",
+        "limite": 4500
+      },
+      {
+        "id": 3,
+        "tipo": "SX Unique",
+        "limite": 19500
+      }
+    ]
+  }
+}

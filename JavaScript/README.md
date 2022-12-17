@@ -445,7 +445,6 @@ img.classList.add('meuimg');
       document.body.appendChild(img);
   };
 
-
 ```
 
 </details>
@@ -779,6 +778,7 @@ document.querySelectorAll("section span")[1];
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math" target="_blank">table operadores matemáticos</a>
 - <a href="https://devhints.io/es6" target="_blank">\_devhints.io/es6</a>
 - <a href="https://ricardo-reis.medium.com/try-catch-tratando-erros-no-javascript-91bcce0b93ae" target="_blank">Try catch - nice article</a>
+- <a href="https://www.base64encode.org/">base64encode.org</a>
 
 ## Videos
 
