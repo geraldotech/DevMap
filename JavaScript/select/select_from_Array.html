@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>select from Array</title>
+  </head>
+  <body>
+    <p>
+      e.g de `select` com Object Array usando template literal e
+      createEle+append
+    </p>
+    <select id="seo"></select>
+    <select id="sel"></select>
+    <p id="res"></p>
+    <script>
+      const dados = [
+        { id: 1, nome: "Geraldo" },
+        { id: 2, nome: "Fel" },
+        { id: 3, nome: "Martias" },
+      ];
+
+      //literal
+      document.getElementById("seo").innerHTML = dados.map(
+        (val) => `<option>${val.nome}</option>`
+      );
+
+      //append with value, no literal com sabemos no opt incluir um value="${val.id}"
+      const sel = document.getElementById("sel");
+      dados.map((val) => {
+        const opt = document.createElement("option");
+        opt.append(val.nome);
+        opt.setAttribute("value", val.id);
+        sel.appendChild(opt);
+      });
+      //atribuindo um event de change to get currently id only from select[1] - usar um SelectorAll com forEach to get all
+      document
+        .querySelectorAll("select")[1]
+        .addEventListener("change", function () {
+          console.log(this.value);
+          res.textContent = this.value;
+        });
+      /* document.querySelectorAll("select").forEach((val) =>
+        val.addEventListener("change", function () {
+          console.log(this.value);
+          res.textContent = this.value;
+        })
+      ); */
+    </script>
+  </body>
+</html>

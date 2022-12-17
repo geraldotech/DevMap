@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch JSON server DATA</title>
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <div id="app">
+      <select name="" v-model="opt">
+        <option value="">Selecionar</option>
+        <option v-for="item in cartoes" key="item.id" :value="item.limite">
+          {{item.tipo}}
+        </option>
+      </select>
+      <p>{{opt}}</p>
+    </div>
+    <script>
+      Vue.createApp({
+        created() {
+          this.bancos();
+        },
+        data() {
+          return {
+            cartoes: null,
+            opt: "",
+          };
+        },
+        methods: {
+          async bancos() {
+            const req = await fetch("http://localhost:3000/cartoes");
+
+            const data = await req.json();
+            this.cartoes = data.cards;
+            console.log(data);
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

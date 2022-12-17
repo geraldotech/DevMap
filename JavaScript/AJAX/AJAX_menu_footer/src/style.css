@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 350px;
+  margin: auto;
+  background: gray;
+  padding: 5px;
+  color: blueviolet;
+}
+nav a {
+  color: rgb(37, 20, 28);
+  text-decoration: none;
+}
+
+main {
+  background: rgb(58, 58, 61);
+}
+
+footer {
+  background: coral;
+  padding: 2px 0;
+}

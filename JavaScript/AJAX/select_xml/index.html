@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Baseado no e.g da
+      <a
+        href="https://www.w3schools.com/xml/tryit.asp?filename=tryajax_responsexml"
+        >w3</a
+      >
+      editado por gmap
+    </p>
+    <p>Tales as old as time</p>
+    <select id="demo"></select>
+    <p>Ano: <span id="ano"></span></p>
+    <script>
+      function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          myFunction(this);
+        };
+        xhttp.open("GET", "cd_catalog.xml");
+        xhttp.send();
+      }
+      function myFunction(xml) {
+        const xmlDoc = xml.responseXML;
+        const x = xmlDoc.getElementsByTagName("CD");
+        const year = xmlDoc.getElementsByTagName("YEAR");
+        let table = "";
+        for (let i = 0; i < x.length; i++) {
+          table += ` 
+            <option value="${
+              x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue
+            }">
+           ${x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue}
+            </option>`;
+        }
+        document.getElementById("demo").innerHTML = table;
+      }
+      loadDoc();
+
+      document.querySelector("#demo").addEventListener("change", function () {
+        document.getElementById("ano").innerText = this.value;
+      });
+    </script>
+  </body>
+</html>

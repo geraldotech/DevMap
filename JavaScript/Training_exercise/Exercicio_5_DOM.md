@@ -58,4 +58,3 @@ div.textContent = "asas"; //direct
 7. Exemplo com function constructor (retirada do Livro)
 8. Empréstimo de método (obj)
 9. Make a clock [respostas](https://gist.github.com/geraldotech/017b5431d853b37af18e0c7fbab97246)
-10. Make links with Array using `nav` and `select` I don't have to edit the code on every page when a change is made to the menu.
