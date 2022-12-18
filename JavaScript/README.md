@@ -209,11 +209,16 @@ const get = function (id) {
 const query = function (id) {
   return document.querySelector(id);
 };
+
+//
 const log = function (...id) {
   console.log(id);
 };
-
+//
 const l = (...a) => console.log(a);
+//
+const log = console.log.bind(document);
+log(5 + 5, "hello");
 
 input = query("input");
 input.addEventListener("input", function () {

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>e.g filter and show in HTML</p>
+    <div id="res"></div>
+    <script>
+      banco = {
+        trigg: {
+          nome: "Trigg",
+          limite: 6000,
+        },
+        sx: {
+          nome: "Santander",
+          limite: 5000,
+          fatura: {
+            valor: 2.566,
+            venc: 27,
+          },
+        },
+      };
+
+      let busca = Object.fromEntries(
+        Object.entries(banco).filter(([key]) => key.includes("trigg"))
+      );
+      console.log("busca", busca);
+      for (val in busca.trigg) {
+        console.log(val);
+        res.textContent += `${val} : ${busca.trigg[val]}  `;
+      }
+    </script>
+  </body>
+</html>

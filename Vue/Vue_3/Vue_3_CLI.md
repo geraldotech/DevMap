@@ -26,6 +26,8 @@ npm run server
 
 ## Components:
 
+[https://vuejs.org/guide/essentials/component-basics.html](https://vuejs.org/guide/essentials/component-basics.html)
+
 - instalar a extensão Vetur para sugestões, formatar code, identificar erros, dividir nosso layout em partes, cada um pode ter seu CSS
 - deletar o conteudo de App.vue e deletar o HelloWord.vue
 
@@ -167,6 +169,7 @@ components: {
 ## Diretivas são muitas
 
 > Aprendar ou masterizar as diretivas
+> [https://vuejs.org/api/built-in-directives.html](https://vuejs.org/api/built-in-directives.html) consultar também VueJS3_CDN.
 
 - e.g: v-if
 

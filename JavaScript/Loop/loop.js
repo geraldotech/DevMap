@@ -1,6 +1,6 @@
 <span id="res"></span>;
 
-// while statemet
+// 👉while statemet
 let txt = "";
 let n = 0; // start n 0
 while (n < 10) {
@@ -10,7 +10,7 @@ while (n < 10) {
 }
 document.getElementById("res").innerHTML = `${txt}`;
 
-//do whie
+//👉do whie
 
 let z = 1;
 do {
@@ -18,7 +18,16 @@ do {
   z++; // do not forget to increase the variable, otherwise the loop will never end!
 } while (z <= 10);
 
-// for of
+//👉for
+var total = 0;
+var num = [1, 2, 3];
+
+for (i = 0; i < num.length; i++) {
+  total += num[i];
+}
+console.log(total); // 6
+
+// 👉for of
 
 function somar(...n) {
   let z = 0;
@@ -29,7 +38,7 @@ function somar(...n) {
 }
 somar(1, 2, 3, 4);
 
-// for of sum Array
+// 👉for of sum Array
 const arr = [1, 2, 3];
 let ab = 0;
 for (let el of arr) {
@@ -37,7 +46,7 @@ for (let el of arr) {
 }
 console.log(ab); //6
 
-// for of
+// 👉for of
 
 const interable = [10, 20, 30];
 for (let value of interable) {
@@ -59,19 +68,12 @@ for (const vall of name) {
              */
 }
 
-//for of even
+//👉for of even
 const arr = [1, 2, 3, 4, 5, 6];
 for (val of arr) {
   if (val % 2 == 0) {
     console.log(val); // 2,4,6
-  };
-};
-
-//for
-var total = 0;
-var num = [1, 2, 3];
-
-for (i = 0; i < num.length; i++) {
-  total += num[i];
+  }
 }
-console.log(total); // 6
+
+//for of em NodeList, consultar input>radio em https://github.com/geraldotech/DevMap/tree/main/JavaScript/input

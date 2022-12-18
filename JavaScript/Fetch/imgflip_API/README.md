@@ -1,1 +1,1 @@
-[Live demo](https://geraldotech.github.io/DevMap/JavaScript/fetch_JSON/imgflip_API/)
+[Live demo](https://geraldotech.github.io/DevMap/JavaScript/Fetch/imgflip_API/)

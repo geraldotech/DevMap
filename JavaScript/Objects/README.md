@@ -90,18 +90,41 @@ smart.close();
 
 ```js
 //for in is a method for iterating over "enumerable" properties of an object.
-// keys
-for(let key in geraldo){
+
+const pessoas = {
+  01: "Geraldo",
+  02: "Felipe",
+  03: "Bella",
+  04: "Milly",
+};
+
+// Scratch: getting the keys
+for (let key in pessoas) {
   console.log(key);
 }
-// value
-for(let values in geraldo){
-  console.log(geraldo[values]);
+
+//se chamar o `pessoas` vai retonar todos os values duplicados, por isso devemos chamar junto com a chave
+//👉o que não fazer ❌
+for (const key in pessoas) {
+  console.log(pessoas);
 }
+
+//👉 o que fazer passar a key na chamada👍
+for (let values in pessoas) {
+  console.log(pessoas[values]);
 }
+//🔰 ah mais eu quero o id+value, simples só chamar a key de forma independente.
+for (let key in pessoas) {
+  console.log(key, pessoas[key]);
+}
+//👉print no HTML seria:
+for (const key in pessoas) {
+  p.innerHTML += key + ": " + pessoas[key];
+}
+//beatuiful string literal: p.innerHTML += `${key} - ${pessoas[key]} `;
 ```
 
-/_ [=====================[iterate object with forEach / of of]====================] _/
+/_ [=================[iterate object with forEach / of of]==================] _/
 
 ```js
 const pessoas = {
@@ -160,7 +183,7 @@ const persons = {
 console.log(persons.nome);
 console.log(persons.surname);
 
-//forma resumida atribuir a uma const
+//shorthand atribuir a uma const
 const { nome, surname } = persons;
 console.log(nome);
 console.log(surname);
@@ -170,3 +193,4 @@ console.log(surname);
 
 - [difference-between-array-and-array-of-objects-in-javascript/](https://www.geeksforgeeks.org/difference-between-array-and-array-of-objects-in-javascript/);
 - [https://medium.com/@zac_heisey/objects-vs-arrays-42601ff79421](https://medium.com/@zac_heisey/objects-vs-arrays-42601ff79421#:~:text=Both%20objects%20and%20arrays%20are%20considered%20%E2%80%9Cspecial%E2%80%9D%20in%20JavaScript.,store%20a%20list%20of%20values.)s
+- [filter objects](<https://masteringjs.io/tutorials/fundamentals/filter-key#:~:text=JavaScript%20objects%20don%27t%20have,()%20function%20as%20shown%20below.>)

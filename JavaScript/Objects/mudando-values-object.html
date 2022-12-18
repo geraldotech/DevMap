@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span>Mudando valores de object - click to nomeUpperCase()</span>
+    </div>
+
+    <input type="text" placeholder="digite nova cidade" />
+    <button>Click</button>
+    <p></p>
+    <script>
+      const person = {
+        nome: "Geraldo",
+        city: "RJ",
+        age: 30,
+      };
+
+      document.querySelector("button").onclick = () => {
+        const input = document.querySelector("input").value;
+        person.city = input;
+        p.textContent = `Meu nome é ${person.nome.toUpperCase()} e moro em ${
+          person.city
+        }`;
+      };
+      p.textContent = `Meu nome é ${person.nome} e moro em ${person.city}`;
+    </script>
+  </body>
+</html>

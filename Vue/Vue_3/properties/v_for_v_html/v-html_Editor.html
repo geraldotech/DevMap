@@ -4,24 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://technotesbr.blogspot.com/favicon.ico"
-      rel="icon"
-      type="image/x-icon"
-    />
     <title>VueJS</title>
     <script src="https://unpkg.com/vue@3"></script>
     <style>
       :root {
         color-scheme: dark;
+        font-family: Verdana;
       }
       .red {
         color: red;
+      }
+      div {
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <div id="app">
+      <style>
+        {{css}}
+      </style>
+
       <textarea
         id="area"
         type="text"
@@ -39,27 +42,11 @@
       Vue.createApp({
         data() {
           return {
-            code: "<h1>Basic Rich Text Editor</h1>",
-            padrao: "22",
+            code: "<h1 style='color:blue'>Basic Text Editor</h1>",
+            css: ``,
           };
         },
-        watch: {
-          code() {
-            console.log("mudou");
-          },
-        },
       }).mount(app);
-    </script>
-
-    <script>
-      /*    area.onclick = function () {
-        inject();
-      };
-      function inject() {
-        document.querySelector("textarea").value = `<h1 class="red">geraldo</h1>
-        <a href="#">link </a>
-<h2 style="color: coral"> gmapdev</h2>`;
-      } */
     </script>
   </body>
 </html>
