@@ -40,7 +40,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 ### :has()
 
 - [Get Start](../pages/has/getStart.md)
-- [from-scratch-align-ele-and-has.html](../pages/has/from-scratch-align-ele-and-has.html) | [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/from-scratch-align-ele-and-has.html)
 
 ### :not()
 
