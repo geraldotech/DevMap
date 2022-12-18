@@ -93,4 +93,4 @@ Usando has() em radio, checkbox e select manipulando as var do CSS fiz esse exem
 
 O princípio para alinhar elementos e como aplicar o has() nessas situações:
 
-- [from-scratch-align-ele-and-has.html](../pages/has/from-scratch-align-ele-and-has.html) | [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/from-scratch-align-ele-and-has.html)
+- [from-scratch-align-ele-and-has.html](/has/from-scratch-align-ele-and-has.html) | [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/from-scratch-align-ele-and-has.html)
