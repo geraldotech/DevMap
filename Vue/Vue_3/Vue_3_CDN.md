@@ -41,6 +41,8 @@ Error: production build (\*.prod.js) when deploying for production?: `https://un
 <script src="https://unpkg.com/vue-router@4"></script>
 ```
 
+[routing.html#simple-routing-from-scratch](https://vuejs.org/guide/scaling-up/routing.html#simple-routing-from-scratch)
+
 ## Vue properties
 
 - created() - hook

@@ -125,10 +125,19 @@ apesar de funcionar prefira a boa pratica na page README em <ins>getElements and
 
 ## DOM - Events
 
-- on + event_name
-- addEventListener("name", function(e){}) - consultar README
+- HTML DOM Events Attribute: `on + event_name` [DOM - Attributes](https://www.w3schools.com/tags/ref_eventattributes.asp)
+- JS Event: `addEventListener("event", function(e){...})` - [DOM - Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
-- get PointerEvent e.g simples, outros consultar a page README
+> > mais comuns
+
+- click | onclick
+- change | on..
+- mousemove | on..
+- mouseover | on..
+- mouseleave | on..
+- keypress | on..
+- error | on..
+- input | oninput
 
 ```js
 <form name="credito">credito</form>;
@@ -143,22 +152,7 @@ document.credito.onclick = function (event) {
 };
 ```
 
-# DOM Events
-
-> > mais usados comuns
-
-- click
-- change
-- input
-- mousemove
-- mouseover
-- mouseleave
-- keypress
-- error
-- input | oninput
-
-[DOM - Events list](https://www.w3schools.com/jsref/dom_obj_event.asp)
-
+- get PointerEvent e.g simples, outros consultar a page README
 - formas de chamar uma function com `onclick`
 
 ```js
@@ -184,8 +178,10 @@ btn3.onclick = function (){
 
 ```
 
-### more in:
+### useful links:
 
 - [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)
 - [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
 - [Evitando populir o objeto-global](http://devfuria.com.br/javascript/objeto-global/)
+- [https://en.wikipedia.org/wiki/DOM_events](https://en.wikipedia.org/wiki/DOM_events)
+- [DOM_obj_style-for-CSS](https://www.w3schools.com/jsref/dom_obj_style.asp)
