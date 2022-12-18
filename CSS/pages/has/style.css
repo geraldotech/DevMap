@@ -1,185 +1,185 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color-scheme: dark;
-  }
-  :root {
-    --cores: #466ec0;
-    --divone: none;
-    --divtwo: none;
-    --label: rgb(10, 104, 141);
-    --bkbody: #181818;
-    --pColor: white;
-    --txtDe: underline;
-    --bodyFS: 16px;
-    --family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  body{
-    font-family: var(--family);
-    background: var(--bkbody);
-    font-size: var(--bodyFS);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color-scheme: dark;
+}
+:root {
+  --cores: #466ec0;
+  --divone: none;
+  --divtwo: none;
+  --label: rgb(10, 104, 141);
+  --bkbody: #181818;
+  --pColor: white;
+  --txtDe: underline;
+  --bodyFS: 16px;
+  --family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  font-family: var(--family);
+  background: var(--bkbody);
+  font-size: var(--bodyFS);
+}
 
-  article {
-    max-width: 75rem;
-    margin: auto;  
-    padding: 0px 20px; 
-  }
+article {
+  max-width: 75rem;
+  margin: auto;
+  padding: 0px 20px;
+}
 
-  section h2 {
-    color: var(--cores);
-    padding-bottom: 10px;
-  }
+section h2 {
+  color: var(--cores);
+  padding-bottom: 10px;
+}
 
-  .demo {
-    background: var(--cores);
-  }
+.demo {
+  background: var(--cores);
+}
 
-  /*
+/*
 Se option tem determinado value checked
 */
-  html:has(option[value="red"]:checked) {
-    --cores: red; /*var associado a section h2 {...}*/
-  }
+html:has(option[value="red"]:checked) {
+  --cores: red; /*var associado a section h2 {...}*/
+}
 
-  body:has(option[value="1"]:checked) {
-    --divone: block;
-  }
+body:has(option[value="1"]:checked) {
+  --divone: block;
+}
 
-  body:has(option[value="2"]:checked) {
-    --divtwo: block;
-  }
-  /*
+body:has(option[value="2"]:checked) {
+  --divtwo: block;
+}
+/*
   esconde o content
   */
-  #one {
-    display: var(--divone);
-  }
+#one {
+  display: var(--divone);
+}
 
-  #two {
-    display: var(--divtwo);
-  }
-  /*
+#two {
+  display: var(--divtwo);
+}
+/*
 global, todas as section que tiver check marcados serão alteradas
 */
-  section:has([type="checkbox"]:checked) {
-    --label: rgb(46, 190, 3);
-  }
+section:has([type="checkbox"]:checked) {
+  --label: rgb(46, 190, 3);
+}
 
-  /*
+/*
 
 se mudar para body, html:has vai afetar todas as labels do body
 section/label vai afetar todas
 #id que tiver "checkbox" checked... better para especificidade
 */
-  #sec:has([type="checkbox"]:checked) {
-    --label: rgb(165, 6, 165);
-  }
-  /*
+#sec:has([type="checkbox"]:checked) {
+  --label: rgb(165, 6, 165);
+}
+/*
 se no body tem esse #id com checkbox: checked então mude a var
 */
-  body:has(#test [type="checkbox"]:checked) {
-    --bkbody: rgb(22, 0, 63);
-    --pColor: rgb(53, 211, 79);
-    --cores: white;
-  }
-  /*
+body:has(#test [type="checkbox"]:checked) {
+  --bkbody: rgb(22, 0, 63);
+  --pColor: rgb(53, 211, 79);
+  --cores: white;
+}
+/*
   um belo exemplo de como usar varios checks em uma section/div com mesmo #id passando um nome na input, necessário chamar body,html
   */
-  body:has(#menu [type="checkbox"][name="del"]:checked) {
-    --txtDe: none;
-  }
+body:has(#menu [type="checkbox"][name="del"]:checked) {
+  --txtDe: none;
+}
 
-  body:has(#menu [type="checkbox"][name="font"]:checked) {
-    --bodyFS: 1.2rem;
-  }
+body:has(#menu [type="checkbox"][name="font"]:checked) {
+  --bodyFS: 1.2rem;
+}
 
-  html:has(#menu [type="checkbox"][name="fontFamily"]:checked) {
-    --family: cursive;    
-  }
-  
-  section p {
-    color: var(--pColor);
-    padding: 10px 0;
-  }
-  #menu label{
-    display: block;
-    padding-bottom: 10px;
-  }
+html:has(#menu [type="checkbox"][name="fontFamily"]:checked) {
+  --family: cursive;
+}
 
-  label {
-    color: var(--label);
-  }
-  label, select{
-    cursor: pointer;
-  }
-  img {
-    width: 10%;
-  }
+section p {
+  color: var(--pColor);
+  padding: 10px 0;
+}
+#menu label {
+  display: block;
+  padding-bottom: 10px;
+}
 
-  header {
-    background: rgb(56, 37, 37);
-    position: sticky;
-    top: 0;
-  }
+label {
+  color: var(--label);
+}
+label,
+select {
+  cursor: pointer;
+}
+img {
+  width: 10%;
+}
 
-  .menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    min-height: 50px;
-    position: sticky;
-    top: 0
-  }
-  div.menu h2{
-    padding-left: 5px;
-  
-  }
+header {
+  background: rgb(56, 37, 37);
+  position: sticky;
+  top: 0;
+}
 
-  li {
-    list-style: none;
-  }
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  min-height: 50px;
+  position: sticky;
+  top: 0;
+}
+div.menu h2 {
+  padding-left: 5px;
+}
 
-  .list_menu {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 300px;
-    justify-content: space-around;
-  }
-  .list_menu a {
-    text-decoration: var(--txtDe);
-  }
+li {
+  list-style: none;
+}
 
-  section {
-    margin: 25px 0;
-  }
-  section.dropdown {
-    min-height: 200px;
-  }
-  form {
-    margin: 15px 0;
-  }
-  footer p {
-      text-align: center;
-      padding: 10px 0;
-      background: rgb(56, 37, 37);
-      font-size: 12px;
-      font-family: sans-serif;
-  }
+.list_menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  justify-content: space-around;
+}
+.list_menu a {
+  text-decoration: var(--txtDe);
+}
 
-  code{
-    color: #e91e63;
-    text-decoration: underline;
-  }
+section {
+  margin: 25px 0;
+}
+section.dropdown {
+  min-height: 200px;
+}
+form {
+  margin: 15px 0;
+}
+footer p {
+  text-align: center;
+  padding: 10px 0;
+  background: rgb(56, 37, 37);
+  font-size: 12px;
+  font-family: sans-serif;
+}
 
-  code::after{
-    content: '`';
-    color: dodgerblue;
-  }
-  code::before{
-    content: '`';
-    color: dodgerblue;
-  }
+code {
+  color: #e91e63;
+  text-decoration: underline;
+}
+
+code::after {
+  content: "`";
+  color: dodgerblue;
+}
+code::before {
+  content: "`";
+  color: dodgerblue;
+}

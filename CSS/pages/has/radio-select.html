@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pseudo-class CSS has()</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="menu">
+          <div>
+            <h2>pseudo-class CSS has() radio/checked</h2>
+          </div>
+          <nav class="list_menu">
+            <li><a href="">Home</a></li>
+            <li><a href="./dist/has_input_radio.html">has() input radio</a></li>
+            <li><a href="./dist/has_checkbox.html">has()checkbox</a></li>
+          </nav>
+        </div>
+      </header>
+      <article>
+        <section>
+          <p>
+            O truque é atribuir variáveis aos seletores, então mudar o valor das
+            variávels quando determinado <code>checkbox/select</code> seja
+            ativado, em casos de muitos checks como essa página atribuir um #id
+            para cada section ou div pode ajudar. Os checkboxs tem mais
+            prioridade do que <code>select&options</code>
+          </p>
+          <p>
+            Preferencialmente é bom manter tudo no mesmo <code>block</code> e
+            assim chamar o element pai por <code>tag/class/id</code>, se chamar
+            <code>section:has</code> e o <code>block</code> estiver fora não vai
+            funcionar, desse modo vai ser necessário chamar por
+            <code>body:has ou html:has</code> assim não importa onde estiver vai
+            funcionar, no caso de <code>radio/checkbox</code> especificar usando
+            <code>[type="radio"][id="html"]</code>.
+          </p>
+        </section>
+        <div id="menu">
+          <label>
+            <input type="checkbox" name="del" />
+            text-decoration: none;
+          </label>
+          <label>
+            <input type="checkbox" name="font" />
+            font-size: 1.2rem;
+          </label>
+          <label>
+            <input type="checkbox" name="fontFamily" />
+            font-family: cursive;
+          </label>
+        </div>
+
+        <section>
+          <h2>has() change styles</h2>
+          <form>
+            <label>Mudar cor h2 e span:</label>
+            <select>
+              <option value="default">Padrao</option>
+              <option value="red">Red</option>
+            </select>
+          </form>
+          <div>
+            <span class="demo">demo</span>
+          </div>
+        </section>
+
+        <hr />
+        <section class="dropdown">
+          <h2>Menu dropdown com CSS has()</h2>
+          <form>
+            <label for="">Selecionar Language:</label>
+            <select>
+              <option value=""></option>
+              <option value="1">HTML</option>
+              <option value="2">CSS</option>
+            </select>
+          </form>
+          <div id="one">
+            <img
+              src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png"
+              alt=""
+            />
+          </div>
+          <div id="two">
+            <img
+              src="https://logospng.org/download/css-3/logo-css-3-2048.png"
+              alt=""
+            />
+          </div>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>Check green</h2>
+          <label>
+            <input type="checkbox" />
+            check <code>section:has</code>
+          </label>
+        </section>
+
+        <section id="sec">
+          <h2>Check violeta</h2>
+          <label>
+            <input type="checkbox" />
+            check <code>id#sec:has</code>
+          </label>
+        </section>
+
+        <section id="test">
+          <h2>Body background and p</h2>
+          <p>marque para alterar o background, color p, h2</p>
+          <label>
+            <input type="checkbox" />
+            check
+          </label>
+        </section>
+      </article>
+      <footer>
+        <p>by Geraldo Filho</p>
+      </footer>
+    </main>
+  </body>
+</html>
