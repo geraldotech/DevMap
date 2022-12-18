@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark">
+  <head>
+    <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/input/radio-querySelectorAll-clickbtn-eg1.html
+  -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        background: black;
+        color: white;
+      }
+
+      button {
+        background: green;
+        font-size: 1.2rem;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="radio" name="calc" value="html" id="one" />
+    <label for="one">HTML</label>
+
+    <input type="radio" name="calc" value="js" id="js" />
+    <label for="js">JavaScript</label>
+
+    <button onclick="check()">checkout</button>
+
+    <p id="output"></p>
+    <script>
+      function check() {
+        const inputs = document.querySelectorAll("input[type='radio']");
+
+        let selected = "";
+        for (radiobtn of inputs) {
+          if (radiobtn.checked) {
+            select = radiobtn.value;
+            break;
+          }
+        }
+        output.innerText = radiobtn
+          ? "vc selecionou " + select
+          : "nao houve selação";
+      }
+    </script>
+  </body>
+</html>

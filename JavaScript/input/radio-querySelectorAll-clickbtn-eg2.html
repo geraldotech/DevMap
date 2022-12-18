@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark">
+  <!--
+    preview this file in:
+    https://geraldotech.github.io/DevMap/JavaScript/input/radio-querySelectorAll-clickbtn-eg2.html
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>input radio checked with button</h1>
+    <div>
+      <label>
+        <input type="radio" id="1" name="op" />
+        AL</label
+      >
+
+      <label>
+        <input type="radio" id="2" name="op" />
+        RJ</label
+      >
+    </div>
+    <button onclick="check()">Click</button>
+    <div id="res"></div>
+    <script>
+      function check() {
+        const op1 = document.querySelectorAll("input[name='op']");
+        const toArr = Array.from(op1)
+          .filter((val) => val.checked)
+          .map((a) => +a.id);
+
+        if (toArr == "") res.textContent = `selecionar opt`;
+        if (toArr == 1) res.textContent = `Alagoas`;
+        if (toArr == 2) res.textContent = `Rio`;
+      }
+    </script>
+  </body>
+</html>
