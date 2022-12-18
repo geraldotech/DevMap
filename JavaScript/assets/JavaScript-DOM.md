@@ -155,6 +155,7 @@ document.credito.onclick = function (event) {
 - mouseleave
 - keypress
 - error
+- input | oninput
 
 [DOM - Events list](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
