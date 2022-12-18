@@ -44,36 +44,47 @@ console.log(busca2)
 
 //7
     <input type="text" id="input" />
-    <div id="re"></div>
+    <div id="res"></div>
     
 
-
-input = document.querySelector("#input");
-input.addEventListener("input", function(event) {
-   const str = this.value;
-   console.log(str)
-   document.getElementById("re").innerHTML = str;
-})
+    const input = document.querySelector("#input");
+    input.addEventListener("input", function (event) {
+      const str = this.value;
+      console.log(str);
+      document.getElementById("res").innerHTML = str;
+    });
 
 // 7 - DOM - Event alternative: oninput
-      const input2 = document.querySelector("input[name='two']").oninput = function(){
-        console.log(this.value);
-        re.innerHTML = this.value;
-      }
+<input type="text" id="input" />
+<div id="res"></div>
+
+document.querySelector("input").oninput = function () {
+  console.log(this.value);
+  res.innerHTML = this.value;
+};
 
 //7.1
-input = document.querySelector("#res");
 
-input.addEventListener("input", function (){
-  const str = this.value;
-  console.log(str);
-  if(str == 'ge'){
-    document.getElementById("out").innerHTML = "Geraldo";
-  }
-})
+<input type="text" id="input" />
+    <div id="out"></div>
+
+
+    const input = document.querySelector("input");
+    input.addEventListener("input", function () {
+      const str = this.value;
+      console.log(str);
+      if (str == "ge") {
+        document.getElementById("out").innerHTML = "Geraldo";
+      }
+    });
 
 //8
-input = document.querySelector("input");
+//DOM
+
+<input type="text" id="input" />
+<div id="res"></div>
+
+const input = document.querySelector("input");
 +input.addEventListener("input", function(ele){
 
   let str = this.value;
