@@ -1,0 +1,29 @@
+<html style="color-scheme: dark">
+  <!--
+    Available in: 
+    https://gist.github.com/geraldotech/6e1d81eff46501dc1014bd499ab20974
+-->
+  <script>
+    let [cont, sum, qt] = [1, 0, 2]; //contador, soma e quantidade de notas
+    while (cont <= qt) {
+      const notas = +prompt(`Digite a nota ${cont}`);
+      if (notas > 10) {
+        alert("nota invalida!");
+        break;
+      } // verifica se a nota for maior que 10 cancela a operacao
+      sum += notas; //faz a soma
+
+      document.write(`Nota ${cont} => ${notas}`);
+      document.write("<br>");
+      cont++;
+    }
+    let media = sum / qt;
+    document.write(`A soma => ${sum}`);
+    document.write("<br>");
+    document.write(`A media => ${media}`);
+    document.write("<br>");
+    media >= 6
+      ? document.write("Situação: APROVADO!")
+      : document.write("Situação: REPROVADO!");
+  </script>
+</html>
