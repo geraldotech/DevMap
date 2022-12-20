@@ -27,6 +27,15 @@ for (i = 0; i < num.length; i++) {
 }
 console.log(total); // 6
 
+//👉chamar a fun com loop
+for (let i = 0; i <= 5; i++) {
+  ola(i, "Geraldo");
+}
+
+function ola(n, val) {
+  console.log(val);
+}
+
 // 👉for of
 
 function somar(...n) {

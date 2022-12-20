@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+  <body>
+    <!-- <div ng-include="'./partials/aside.html'"></div> -->
+    <h1>includes .html .txt files by gmap</h1>
+    <p ing="./gp.txt"></p>
+    <p ing="./pm.txt"></p>
+    <p ing="./test.html"></p>
+    <script>
+      const tag = document.querySelectorAll("p");
+      const toArr = Array.from(tag);
+      for (let i = 0; i < toArr.length; i++) {
+        let file = toArr[i].getAttribute("ing");
+        console.log("file", file);
+
+        inclui(i, file, toArr[i]);
+      }
+
+      async function inclui(n, file, el) {
+        const req = await fetch(file);
+        const res = await req.text();
+
+        el.innerHTML = res;
+      }
+    </script>
+  </body>
+</html>
