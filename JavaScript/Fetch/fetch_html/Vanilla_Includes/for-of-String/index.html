@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <div>Lo</div>
+
+<div include="./test.html"></div>
+<div include="./a.txt"></div>
+
+<div>posso usar divs sem bugs</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum, fugit perspiciatis magnam iste fuga saepe eaque cupiditate nobis quos excepturi, doloribus modi quam dolore placeat error ad? Numquam, ex.</div>
+
+
+    <script>
+    
+    const div = document.querySelectorAll("div");
+let [path, domAttr] = ["", "include"];
+for (attr of div) {
+  if (attr.hasAttribute(domAttr)) {
+    path = attr.getAttribute(domAttr);
+    console.log(`path:`, path, `attr:`, attr);
+    inclui(attr, path); //fun fica dentro da condicao if
+  }
+}
+
+async function inclui(el, path) {
+  try {
+    const req = await fetch(path);
+    //console.log(req);
+    if (req.status == 200) {
+      const res = await req.text();
+      el.innerHTML = res;
+    }
+  } catch (err) {
+    console.log(err);
+  }
+}
+    </script>
+  </body>
+</html>
