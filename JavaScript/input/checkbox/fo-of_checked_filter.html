@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+
+  <input type="checkbox" id="1" />
+  <label for="1">1</label>
+  <input type="checkbox" id="2" />
+  <label for="2">2</label>
+  <button onclick="res()">toggle</button>
+  <body>
+    <script>
+      //filtrando checked with for of, filter
+      const inp = document.querySelectorAll("input");
+      console.log(inp);
+      inp.forEach((item) => item.addEventListener("change", RetunMultFun));
+
+      //function multiple return
+      function RetunMultFun() {
+        return [myloop(), filtro()];
+      }
+
+      //for of update string
+      function myloop() {
+        let str = "";
+        for (const chech of inp) {
+          str = chech.checked;
+          console.log(str);
+        }
+      }
+      //for of arr push
+      /*  function myloop() {
+        const arr = [];
+        for (const chech of inp) {
+          arr.push(chech.checked);
+          console.log(`arr.push`, arr);
+        }
+      }
+ */
+
+      //filter and map
+      function filtro() {
+        const arr = Array.from(inp)
+          .filter((val) => val.checked)
+          .map((a) => a.checked);
+        //map return arr checked true or false
+        const onlymap = Array.from(inp).map((a) => a.checked); // [false, true]
+        //
+        console.log("arr", arr);
+        console.log("onlymap", onlymap);
+      }
+      // button toggle
+      function res() {
+        for (let marca of inp) {
+          marca.checked = !marca.checked;
+        }
+        RetunMultFun();
+      }
+    </script>
+  </body>
+</html>

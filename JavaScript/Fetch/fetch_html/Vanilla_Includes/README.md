@@ -161,7 +161,7 @@ async function inclui(path, el) {
 
 ## for Of
 
-### Usando String para armanzenar os paths
+### Usando String para armazenar os paths
 
 Final code:
 
@@ -200,9 +200,9 @@ Formar de resolver esse `bug`:
 
 2 - Adicionar method get último: `pop()` na chamada `inclui(attr, arrPath.pop());`
 
-3 - Descobri que limpar o Array antes de adicionar novo item `splice()` ` inclui(attr, arrPath.splice(""));`
+3 - Descobri que usando o `splice()` podemos limpar o Array antes de adicionar novo item ` inclui(attr, arrPath.splice(""));`
 
-4 - Para para pop() pode adicionar direto no loop `arrPath.pop();`
+4 - Podemos adicionar `pop()` direto no loop `arrPath.pop();`
 
 Final code:
 
@@ -230,6 +230,24 @@ async function inclui(el, path) {
     }
   } catch (err) {
     console.log(err);
+  }
+}
+```
+
+5 - Usando `unshit()` que adicionar items na primeira posição, depois só chamar por `arr[0]`
+
+Final Code:
+
+```js
+const div = document.querySelectorAll("div");
+//Array vazio e string do atribudo
+const [arrPath, domAttr] = [[], "include"];
+for (attr of div) {
+  if (attr.hasAttribute(domAttr)) {
+    arrPath.unshift(attr.getAttribute(domAttr));
+    console.log(`path:`, arrPath);
+    console.log(`attr:`, attr);
+    inclui(attr, arrPath[0]);
   }
 }
 ```

@@ -6,25 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filter from Scratch</title>
     <style>
-      *{
+      * {
         color-scheme: dark;
       }
-
     </style>
   </head>
   <body>
-
-
-    <input type="checkbox" name="" id="1">
-  <label for="1">check</label>
-
-
+    <input type="checkbox" name="" id="1" />
+    <label for="1">check</label>
 
     <script>
-
       const label = document.querySelector("label");
-      document.querySelector("input").addEventListener("change", function(){
-        this.checked ? label.innerText = "checked" : label.innerText = "check"
+      document.querySelector("input").addEventListener("change", function () {
+        this.checked
+          ? (label.innerText = "checked")
+          : (label.innerText = "check");
+        console.log(this.checked);
       });
     </script>
   </body>
