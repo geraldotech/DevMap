@@ -28,6 +28,7 @@ A ideia é selecionar a tag alvo, basicamente podemos usar qualquer tag, sendo a
 Vamos analisar o código:
 
 - podemos remover o `Array.from` tendo em vista que os metodos funcionam bem com a NodeList gerada pelo querySelectorAll
+- Podemos atribuir o attr a uma string
 
 ```js
 const tag = document.querySelectorAll("div");
@@ -62,9 +63,10 @@ Final code:
 
 ```js
 const tag = document.querySelectorAll("div");
+const DOMatt = "include";
 for (let i = 0; i < tag.length; i++) {
-  let path = tag[i].getAttribute("include");
-  let fileHas = tag[i].hasAttribute("include");
+  let path = tag[i].getAttribute(DOMatt);
+  let fileHas = tag[i].hasAttribute(DOMatt);
   //linha para log de arquivos
   //console.log("attrValue", path, fileHas);
   if (fileHas) {

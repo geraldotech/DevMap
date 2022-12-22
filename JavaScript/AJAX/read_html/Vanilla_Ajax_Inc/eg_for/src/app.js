@@ -1,16 +1,16 @@
 const div = document.querySelectorAll("div");
+const DOMAttr = "include";
 console.log(div);
 for (let i = 0; i < div.length; i++) {
-  const attr = div[i].hasAttribute("include");
-  const path = div[i].getAttribute("include");
-  console.log(attr);
+  const HasAttr = div[i].hasAttribute(DOMAttr);
+  const path = div[i].getAttribute(DOMAttr);
+  console.log(HasAttr, path);
   //se tiver chamar o fun passando o path e a div element.
-  if (attr) {
+  if (HasAttr) {
     loadDoc(path, div[i]);
   }
 }
 
-//ajax menu
 function loadDoc(path, val) {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function () {

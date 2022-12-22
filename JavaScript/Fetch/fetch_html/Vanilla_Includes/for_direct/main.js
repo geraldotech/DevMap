@@ -1,7 +1,8 @@
 const tag = document.querySelectorAll("div");
+const DOMatt = "include";
 for (let i = 0; i < tag.length; i++) {
-  let path = tag[i].getAttribute("include");
-  let fileHas = tag[i].hasAttribute("include");
+  let path = tag[i].getAttribute(DOMatt);
+  let fileHas = tag[i].hasAttribute(DOMatt);
   //linha para log de arquivos
   //console.log("attrValue", path, fileHas);
   if (fileHas) {
