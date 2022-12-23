@@ -10,6 +10,46 @@ while (n < 10) {
 }
 document.getElementById("res").innerHTML = `${txt}`;
 
+/*
+recursividade = function que chama ela mesma
+*/
+function printfrase(frase, n) {
+  while (n > 0) {
+    console.log(frase);
+    n--;
+  }
+}
+printfrase("Hello", 5);
+
+function printRecursividade(frase, n) {
+  if (n < 0) return;
+  console.log(frase);
+  printRecursividade(frase, n - 1);
+}
+
+printRecursividade("2023", 4);
+
+// 👉Recursion
+function soma(arr) {
+  if (arr.length === 1) {
+    return arr[0];
+  } else {
+    return arr.pop() + soma(arr);
+  }
+}
+
+console.log(soma([10, 5, 3])); //18
+
+function add(num) {
+  if (num <= 0) {
+    return 0;
+  } else {
+    return num + add(num - 1);
+  }
+}
+
+console.log(add(3)); //6
+
 //👉do whie
 
 let z = 1;

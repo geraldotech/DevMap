@@ -1,5 +1,7 @@
 # Async/Await
 
+### .then vs await
+
 > > https://www.youtube.com/watch?v=Ij-B0Yiizyw
 > > função assíncrona é uma promisse e síncrona é undefined
 > > jogar esse código direito no console do browser e vai retornar uma promisse:
@@ -9,15 +11,6 @@ Teste async func no console
 ```js
 async function assincrona() {}
 assincrona(); //Promise {<fulfilled>: undefined}
-```
-
-.then
-
-```js
-async function assincrona() {}
-assincrona().then(() => {
-  console.log("Alguma logica vai aqui");
-});
 ```
 
 Apenas síncrona retorna undefined
@@ -32,7 +25,9 @@ sincrona(); //undefined
     fetch('https://api.github.com/users/geraldotech') //promisse
     await fetch('https://api.github.com/users/geraldotech') //return data
 
-# Modo console e IDE 1
+# Modo console e IDE 2.json `.then`
+
+Modo console e IDE 1
 
 ```js
 fetch("https://api.github.com/users/geraldotech").then((retornoAPI) => {
@@ -42,7 +37,12 @@ fetch("https://api.github.com/users/geraldotech").then((retornoAPI) => {
 });
 ```
 
-# Modo 2 console e IDE 2.json
+```js
+async function assincrona() {}
+assincrona().then(() => {
+  console.log("Alguma logica vai aqui");
+});
+```
 
 direct
 
@@ -76,8 +76,6 @@ fetch("https://api.github.com/users/geraldotech")
   });
 ```
 
-# Modo 3
-
 .then {try catch} and .text()
 
 ```js
@@ -93,6 +91,8 @@ async function get() {
 
 get();
 ```
+
+# Modo `await`
 
 await
 
@@ -130,8 +130,6 @@ async function pegar() {
 pegar();
 ```
 
-### Pesquisar sobre .then vs await
-
 ### Promises
 
 <details>
@@ -147,11 +145,10 @@ const promise = new Promise((resolve, reject) => {
    */
   console.log("Olá,");
   setTimeout(() => {
-    resolve("mundo!");
-  }, 300);
-});
-promise.then((response) => {
-  console.log(response);
+    fetch("https://api.github.com/users/geraldotech")
+      .then((res) => res.json())
+      .then((resf) => console.log(resf));
+  }, 5000);
 });
 ```
 

@@ -713,19 +713,41 @@ console.log(mercado.keys);
 //get first letters
 console.log(['BMW','GOL','LATAM','AMERICAN','BRAZIL','RAPPI'].map(el => el[0]));
 
+//Getting index
+console.log(arr.map((val, index) => [index,val]));
+
 //https://stackoverflow.com/questions/1144705/best-way-to-store-a-key-value-array-in-javascript
 
 //MAP add values in obj
-pessoa = [{
+const pessoa = [{
   name:"Geraldo",
   cidade:"Palmeira",
 }];
 
-x = pessoa.map((value) => {
+let x = pessoa.map((value) => {
   return {
     value, "Active":true,
   }
 })
+
+/*
+Contextualizando #map vs #flapMap
+*/
+
+let arr = [1, 3, 5, 7];
+
+console.log(arr.map(val => val + 1)); //2,4,6,8
+//Nested subArrways
+console.log(arr.map(val => [val, val + 1])); // [[1, 2], [3, 4], [5, 6], [7, 8]] ❌
+
+console.log(arr.map(val => [val, val + 1]).reduce((acc,curr) => acc.concat(curr))); // // [1, 2, 3, 4, 5, 6, 7, 8] ✅
+
+
+
+
+console.log(arr.flatMap(val => [val, val + 1])); //1,2,3,4,5,6,7,8
+//ou seja contém os valures do oldvalue concatenados
+//https://blog.travismclarke.com/post/flatmap-vs-map/
 
 /* [=============================================================================]
 🟢 17.1 #replace  
