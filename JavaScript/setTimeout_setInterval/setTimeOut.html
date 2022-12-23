@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      p:nth-of-type(2) {
+        font-weight: bold;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+      }
+      .suc {
+        color: green;
+      }
+      .err {
+        color: red;
+      }
+    </style>
+  </header>
+  <body>
+    <h2>My custom setTimeOut</h2>
+    <p>
+      Usando Array.from, if/return, some/includes, classList, removeAttribute
+    </p>
+    <div>
+      <input type="text" placeholder="name" />
+      <button>Get Started</button>
+    </div>
+    <p></p>
+
+    <script>
+      //optei usar o SelectorAll para pegar o index do segundo p
+      //const p = document.querySelectorAll("p")[1];
+      // ou usar o nth-of-type
+      const p = document.querySelector("p:nth-of-type(2)");
+      console.log(document.querySelector(":nth-child(3)"));
+
+      const btn = (document.querySelector("button").onclick = () => {
+        const inpt = document.querySelector("input").value;
+        const Ainpt = Array.from(inpt).join(""); //join serve para unir os caracteres
+        if (inpt.length == 0) {
+          return (p.textContent = "input vazia!");
+          false;
+        }
+
+        p.removeAttribute("class");
+        console.log(inpt);
+        p.textContent = "Fazendo leitura....";
+        setTimeout(function () {
+          p.textContent = "decodificando...";
+        }, 2000);
+        const keys = ["ge", "fe"];
+        const scanOk = keys.some((val) => Ainpt.includes(val));
+
+        /*
+        só faltava adicionar return nas condições if/return
+        if return usando Array some/includes
+        */
+        if (scanOk) {
+          return setTimeout(() => {
+            p.textContent = "success!";
+            p.classList.add("suc");
+          }, 4000);
+        }
+
+        //2
+        if (!scanOk) {
+          //console.log(Boolean(inpt !== "ge"));
+          return setTimeout(() => {
+            p.textContent = "Error";
+            p.classList.add("err");
+          }, 3000);
+        }
+      });
+    </script>
+  </body>
+</html>

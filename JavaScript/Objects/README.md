@@ -121,7 +121,16 @@ for (let key in pessoas) {
 for (const key in pessoas) {
   p.innerHTML += key + ": " + pessoas[key];
 }
-//beatuiful string literal: p.innerHTML += `${key} - ${pessoas[key]} `;
+//👉beatuiful string literal: p.innerHTML += `${key} - ${pessoas[key]} `;
+
+//👉iterating over Array to get Index
+function getIndex(arr) {
+  for (const tem in arr) {
+    console.log(tem);
+  }
+}
+
+getIndex(["A", "B", "C"]);
 ```
 
 /_ [=================[iterate object with forEach / of of]==================] _/

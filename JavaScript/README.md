@@ -690,13 +690,13 @@ document.head.insertAdjacentHTML(
 }) */
 
 
-//GetElementById:
+//👉GetElementById:
 document.getElementById("test"); //return only the id
 
-//getElementsByTagName -
+//👉getElementsByTagName -
 console.log(document.getElementsByTagName("a")); //returns a HTML Collection[x] required a Array.from
 
-//getElementsByClassName
+//👉getElementsByClassName
 const menu = document.getElementsByClassName("menu");
 console.log(menu); //return a HTML Collection[x]  e.g menu[0].innerHTML = "Hello World!";
 
@@ -705,7 +705,7 @@ console.log(menu); //return a HTML Collection[x]  e.g menu[0].innerHTML = "Hello
 Dica: Array.from convert HTML Collection to Array, manupulando todos os itens com forEach
 */
 
-// querySelector
+//👉querySelector
 console.log(document.querySelector(".oi")); //return class
 console.log(document.querySelector("#hello").innerHTML); //return id
 
@@ -734,8 +734,12 @@ const Calc = document.querySelector("dialog button[name='ok']");
 const el = document.querySelector(".secao span");
 el.textContent = "novo";
 
+// querySelector and nth-child
+ const p = document.querySelector("p:nth-child(3)"); //lembrando regras de CSS se não existir o tipo tipo p `3` vai retornar `null`
+ const p = document.querySelector("p:nth-of-type(2)");
 
-// querySelectorAll - support forEach
+
+//👉querySelectorAll - support forEach
 console.log(document.querySelectorAll(".menu")); //return a NodeList()
 
 const link = document.querySelectorAll("a"); //return all tags

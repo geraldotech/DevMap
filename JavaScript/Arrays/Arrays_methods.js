@@ -1065,8 +1065,8 @@ Devo chamar primeiro o array ou keys?
 Depende do objetivo! no caso de every/some quando vai verificar se aquela lista de keys existe no Array, então chamar primeiro as keys.
 
 * caso que whatever
-console.log(["Geraldo", "Barra"].filter(el => api.includes(el))); // Geraldo
-console.log(api.filter(val => ["Geraldo","Georgeo"].includes(val))); // Geraldo, Georgeo
+console.log(["Geraldo", "Barra", "Georgeo"].filter(el => api.includes(el))); // Geraldo, Georgeo
+console.log(api.filter(val => ["Geraldo", "Barra", "Georgeo"].includes(val))); // Geraldo, Georgeo
 
 * outro e.g
 //todos da key tem no arr ? // true
@@ -1162,17 +1162,18 @@ console.log(api.filter(function(val, index){
     }
 }));
 
-// alternative arrow
-console.log(api.filter((el, ind) => {
-  if(ind > 0 ) return el.endsWith("o");  
-}));
+// 🔰alternative arrow
+console.log(api.filter((el, ind) => { if(ind > 0 ) return el.endsWith("o")}));
+
+// 🔰alternative &&
+console.log(api.filter((val,index) => index > 0 && val.endsWith("o")))
 /*-*[=============================================================================]*-*/
 // 👉SUPER DICA: alternative indicando o proprio value
 console.log(api.filter(val => {
   if(val != "Geraldo") return val.endsWith("o");
 }));
 
-//shorthand filter exceto sem index usando value
+// 🔰 arrow shorthand filter exceto sem index usando value
 console.log(api.filter(val => val != "Geraldo" && val.endsWith("o")));
 
 
@@ -1189,8 +1190,10 @@ console.log(api.filter((val, ind) => {
   if(ind != pegain) return val.endsWith("o");
 }));
 
-//mesmo resultado shorthand
+//mesmo resultado arrow shorthand
 console.log(api.filter((val, ind) => val.endsWith("o") && ind != pegain));
+//mesmo resultado condicoes invertidas
+console.log(api.filter((val,index) => index != pegaInde && val.endsWith("o")))
 
 // 12 - Todos esses itens existe no array ? ["Geraldo", "CostAo"]
 console.log(["Geraldo", "CostAo"].every(val => api.includes(val))); // true
@@ -1214,7 +1217,7 @@ api.forEach((el, ind)=> {
 });
 
 // 17 - find primeiro ele == 6
-console.log(api.find(el => el.length == 6));
+console.log(api.find(el => el.length == 6)); //CostAo
 
 // 18 - encontrar o element == 6 - pulando o primeiro que foi encontrado
 console.log(api.find((el, ind) => { // em vez de: "CostAo", pega: "Barrao"
@@ -1236,7 +1239,17 @@ console.log(api.find((val, ind) => { //Barrao
 //alternative shorthand
 console.log(api.find((val, ind) => val.length == 6 && ind != primeiro()));
 
-//19 - Dado o array abaixo remover os valores duplicados
+//alternative declarando string
+console.log(api.find((item) => item != "CostAo" && item.length == 6));
+
+//tudo em uma linha
+console.log(api.filter((val,index, ArrAtual) => {
+  if(index > ArrAtual.findIndex(val => val.length == 6)){
+    return val.length == 6
+  }
+}));
+
+//19 - Dado o Array abaixo remover os valores duplicados
 
 const arr = ['Z', 'B', 'Z', 'C', 'B',];
 console.log(arr.filter((val, ind) => {
@@ -1249,6 +1262,54 @@ console.log(arr.filter((val, ind) => {
 console.log(arr.filter((val, ind, arrAtual) => {
   return arrAtual.indexOf(val) == ind
 }));
+
+
+// 20 👉pegar multiple Index de um Array multiple ways to do it
+//https://stackoverflow.com/questions/52154331/how-to-get-multiple-indexes-of-array-by-a-value-in-pure-javascript-value-exact
+
+//🔰criar um array vazio
+let index = [];
+let filtro = api.filter((val,ind) => {
+  index.push(ind);
+});
+console.log(index);
+
+//🔰pegar multiple Index de um Array 2
+//filtra os valores e salva os index em um array vazio
+let index2 = [];
+let filtro2 = api.filter((val,ind, atual) => {
+  if(val.startsWith("G")){
+    return index2.push(ind);
+  }
+});
+
+console.log(filtro2); //Geraldo, Georgeo
+console.log(index2); // 0,3
+
+//🔰 forEach if push
+let index3 = [];
+api.forEach((val,ind) => {
+  if(val.startsWith("G")){
+    index3.push(ind, val); //adiciona o index e value da condição
+    
+  }
+})
+
+console.log(index3); // 0 Geraldo, 3 Georgeo
+
+//🔰 reduce if push
+
+let index4 = [];
+const res = ["Ger", "Mi", "Goo"].reduce((acc, currElement, index) => {
+  if(currElement.startsWith("G"))
+  index4.push(index);
+  return index4;
+}, [])
+
+console.log(index4); // 0,3
+
+
+//visite for of / forEach para simples if statement
 
 
 /*

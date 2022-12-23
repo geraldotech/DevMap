@@ -1,4 +1,5 @@
 // 👉for of
+//📍Para uso de for of in Object visite: https://github.com/geraldotech/DevMap/blob/main/JavaScript/Objects/README.md
 
 function somar(...n) {
   let z = 0;
@@ -57,3 +58,40 @@ for (const letter of arr) {
   li.textContent = letter;
   document.querySelector("ol").appendChild(li);
 }
+
+const arr = [10, 20, 30, 40, 50];
+const api = ["Geraldo", "CostAo", "Barrao", "Georgeo", "Aomeo", "asoa", "oplz"];
+
+for (let i of arr) {
+  if (i > 20) {
+    console.log(i); //30,40,50
+  }
+}
+
+for (const busca of api) {
+  if (busca.length == 6) {
+    console.log(busca); //CostAo, Barrao
+  }
+}
+
+for (const busca of api) {
+  if (busca.startsWith("G")) {
+    console.log(busca); //Geraldo, Georgeo
+  }
+}
+
+//for of adicionando parameters entre []
+
+for (const [key, busca] of ["Geraldo", "Filho"]) {
+  console.log(key); //primeiras letras
+  console.log(busca); // segundo letra
+}
+
+function para(el) {
+  for (const [key, busca] of el) {
+    console.log(key); //primeiras letras
+    console.log(busca); // segundo letra
+  }
+}
+//usando uma function
+para(["Geraldo", "Filho"]);
