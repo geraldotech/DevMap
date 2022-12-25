@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <h2>My custom setTimeOut v2 <br />getUser Name</h2>
+    <p>Usando Array.from, if/return, includes, classList, removeAttribute</p>
+    <div>
+      <h2>
+        Digite
+        <span>`fe` ou `ge`</span>
+      </h2>
+      <form onsubmit="event.preventDefault()">
+        <input type="text" placeholder="secret name" />
+        <button>Get Started <i class="fa fa-code"></i></button>
+      </form>
+    </div>
+
+    <div class="data">
+      <section>
+        <span class="hide">
+          <i class="fa fa-spinner fa-spin" style="font-size: 24px"></i>
+        </span>
+        <span class="res"></span>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

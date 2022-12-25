@@ -846,7 +846,7 @@ console.log(["Geraldo","filho","na"].map(val => val.split("")));
 
 //📌Pequena comparação com o slice
 const ts = "Tale as old Time";
-console.log(ts.split("", 2)); // ["T". "A"]
+console.log(ts.split("", 2)); // ["T". "a"]
 console.log(ts.slice(0, 2)); // Ta
 
 //📌 usando com join

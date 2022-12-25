@@ -152,11 +152,17 @@ Além de menu dinâmico, pode incluir páginas a partir de strings com custom ta
 
 # e.g 6 using Ajax
 
-menu dinâmico, include .html files
-Parece tão obvio, e não podemos deixar de listar essa possibilidade
-visite a session de Ajax [https://github.com/geraldotech/DevMap/tree/main/JavaScript/AJAX/Ajax_menu](https://github.com/geraldotech/DevMap/tree/main/JavaScript/AJAX/Ajax_menu)
+menu dinâmico, include .html files parece tão obvio, e não podemos deixar de listar essa recurso visite a session de Ajax [https://github.com/geraldotech/DevMap/tree/main/JavaScript/AJAX/Ajax_menu](https://github.com/geraldotech/DevMap/tree/main/JavaScript/AJAX/Ajax_menu)
 
 # e.g 7 using Fetch
 
 É uma versão mais conveninente do Ajax
 [https://github.com/geraldotech/DevMap/tree/main/JavaScript/Fetch/fetch_html](https://github.com/geraldotech/DevMap/tree/main/JavaScript/Fetch/fetch_html)
+
+# e.g 8 AngularJS
+
+Versão antigas do AngularJS mesmo na versão CDN conta com o recurso de ng-includes
+
+# e.g 9
+
+Versão CDN podemos carregar um component de forma dinâmica `VueJS loader component`

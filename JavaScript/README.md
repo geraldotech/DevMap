@@ -777,7 +777,7 @@ document.querySelectorAll("section span")[1];
 # Threads
 
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
-- [render_table.html](./assets/thread/render_table.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table.html" target="_blank">Demo</a>
+- [render_table.html](./assets/thread/render_table.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table_json.html" target="_blank">Demo</a>
 - [Menu All Pages](./assets/thread/Menu_All_pages.md)
 
 ## links:
