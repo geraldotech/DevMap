@@ -762,6 +762,11 @@ link.forEach(el => {
 </section>
 document.querySelectorAll("section span")[1];
 
+// select multiples elements and change values.
+  document.querySelectorAll("#demo, #demo2").forEach((item) => {
+    item.innerHTML = `DOM Loaded!`;
+  });
+
 ```
 
 </details>

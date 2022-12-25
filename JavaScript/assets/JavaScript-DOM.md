@@ -55,7 +55,7 @@ window.location - vai retornar uma lista de objetos, algums são:
 - .pathname
 - .href 👉 "new url to redirect"
 - .reload() 👉 "reload page"
-
+window.onload = function (){...}
 //tudo que acompanhar nome + parênteses() são funções nativas, você também pode criar as suas.
 ```
 
@@ -199,17 +199,14 @@ Attribute set para o browser que o script vai ser executado depois que o documen
 <script src="content.js" async></script>
 ```
 
-<u>JavaScript</u>
-
 - normal [=== parse going on DOM ===] => "fetch script" => "executa script" => [=== continua parse DOM ===]
 - async [=== parse going on DOM ===] => "fetch script" => [=== "executa script" em sincronia com o parse DOM que ainda acontece ===] => [=== continua parse DOM ===]
   the async não garante a ordem de executação do script
 - defer [=== parse going on DOM ===] "fetch script" => [continua *parsing DOM" => "completou parse DOM]"] => executa script
   [video ajuda](https://www.youtube.com/watch?v=IrHmpdORLu8)
 
-## DOMContentLoaded
+## [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
 
-[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
 A documentação diz que o event `fires` when o HTML foi completamente loaded and parsed "carregado e analisado" sem esperar por stylesheets, images ou subframes.
 
 - Basic usage
@@ -224,7 +221,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 ```
 
-- Partindo desses princípios eu fiz 2 scripts, um _*main.js*_ que cria 2 elementos HTML com id usando `createElement` em fim... O segundo script _*content.js*_ deve alterar os valores criados pelo primeiro.
+- Então usando DOMContentLoaded podemos add um conteúdo na DOM que sem defer retornaria um erro. [live example](https://gmapdev.netlify.app/docs_demo/DOMContentLoaded/eg1/ContentLoaded.html)
+
+- Partindo desse princípio eu fiz 2 scripts, um _*main.js*_ com attr `defer` que cria 2 elementos HTML com id usando _`createElement`_ em fim... O segundo script _`content.js`_ deve alterar os valores criados pelo primeiro script.
+  [live example](https://gmapdev.netlify.app/docs_demo/DOMContentLoaded/eg2/ContentLoaded.html)
+
+Ordem de declaração:
+
+```js
+<script src="main.js" defer></script>
+<script src="content.js"></script>
+```
+
+content não precisa de defer pq estamos usando `document.addEventListener("DOMContentLoaded"` que vai chamar a func que vai sobreescrever os valores do primeiro script.
+
+- Considerações se o content.js não tivese o DOMContentLoaded e fosse atribuído o defer, matendo a ordem dos scripts, obviamente o resultado seria o mesmo.
+-
 
 ### useful links:
 

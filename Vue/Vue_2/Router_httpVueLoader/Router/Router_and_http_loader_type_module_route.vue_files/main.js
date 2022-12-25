@@ -1,6 +1,5 @@
 import Home from "./pages/home.vue.js";
 import About from "./pages/about.vue.js";
-//import Assets from "./pages/assets.vue.js";
 
 const test = {
   template: `<p>Apenas uma rota de tests!</p>`,
@@ -26,7 +25,6 @@ var routes = [
   {
     path: "/:pathMatch(.*)*",
     name: "not-found",
-    //component: httpVueLoader("./pages/sobre.vue"),
     component: NotFound,
   },
 ];
@@ -40,6 +38,6 @@ var router = new VueRouter({
 });
 
 var app = new Vue({
-  el: "#app",
+  el: "#rotas",
   router: router,
 });
