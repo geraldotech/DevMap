@@ -3,6 +3,8 @@ AJAX is not a programming language. AJAX is a technique for accessing web server
 AJAX is a developer's dream, because you can:
 [https://www.w3schools.com/js/js_ajax_intro.asp](https://www.w3schools.com/js/js_ajax_intro.asp)
 
+[MDN Synchronous and asynchronous requests ](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
+
 # Server Response Properties
 
 - responseText

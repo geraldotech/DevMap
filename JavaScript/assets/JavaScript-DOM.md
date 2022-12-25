@@ -178,6 +178,54 @@ btn3.onclick = function (){
 
 ```
 
+# Local do script
+
+- Na header será carregado antes do DOM o que pode causar erros, a menos que defina o `defer`
+- Final do body vai carregar quando praticamente todo DOM tiver siado loaded e parsed
+
+# Booean [Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+
+## defer
+
+Attribute set para o browser que o script vai ser executado depois que o document foor parsed "analisado", ou seja o script é carregado em background.
+
+```js
+<script src="main.js" defer></script>
+```
+
+## async
+
+```js
+<script src="content.js" async></script>
+```
+
+<u>JavaScript</u>
+
+- normal [=== parse going on DOM ===] => "fetch script" => "executa script" => [=== continua parse DOM ===]
+- async [=== parse going on DOM ===] => "fetch script" => [=== "executa script" em sincronia com o parse DOM que ainda acontece ===] => [=== continua parse DOM ===]
+  the async não garante a ordem de executação do script
+- defer [=== parse going on DOM ===] "fetch script" => [continua *parsing DOM" => "completou parse DOM]"] => executa script
+  [video ajuda](https://www.youtube.com/watch?v=IrHmpdORLu8)
+
+## DOMContentLoaded
+
+[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
+A documentação diz que o event `fires` when o HTML foi completamente loaded and parsed "carregado e analisado" sem esperar por stylesheets, images ou subframes.
+
+- Basic usage
+
+```js
+window.addEventListener("DOMContentLoaded", function () {
+  console.log(this);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  console.log(this);
+});
+```
+
+- Partindo desses princípios eu fiz 2 scripts, um _*main.js*_ que cria 2 elementos HTML com id usando `createElement` em fim... O segundo script _*content.js*_ deve alterar os valores criados pelo primeiro.
+
 ### useful links:
 
 - [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)

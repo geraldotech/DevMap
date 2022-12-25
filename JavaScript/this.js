@@ -30,3 +30,8 @@ document.querySelector("input").addEventListener("click", function () {
 document.querySelector("input").addEventListener("input", function () {
   console.log(+this.value);
 });
+
+//this DOM
+document.addEventListener("DOMContentLoaded", function () {
+  console.log(this);
+});
