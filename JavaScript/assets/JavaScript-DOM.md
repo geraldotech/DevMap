@@ -236,7 +236,14 @@ Ordem de declaração:
 content não precisa de defer pq estamos usando `document.addEventListener("DOMContentLoaded"` que vai chamar a func que vai sobreescrever os valores do primeiro script.
 
 - Considerações se o content.js não tivese o DOMContentLoaded e fosse atribuído o defer, matendo a ordem dos scripts, obviamente o resultado seria o mesmo.
--
+
+### inner + HTML + Text + TextContent
+
+```js
+console.log(root.innerHTML);
+console.log(root.textContent);
+console.log(root.innerText);
+```
 
 ### useful links:
 

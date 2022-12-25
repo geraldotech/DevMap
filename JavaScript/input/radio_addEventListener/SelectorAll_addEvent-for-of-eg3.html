@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JavaScript</title>
+  </head>
+  <body>
+    <h3>Usando for of para radio inputs</h3>
+    <input type="radio" name="opt" id="box" />
+    <label for="box">10GB</label>
+    <input type="radio" name="opt" id="boz" />
+    <label for="boz">20GB</label>
+
+    <p></p>
+    <div>
+      <p></p>
+    </div>
+
+    <script>
+      const input = document.querySelectorAll("input[type='radio']");
+      input.forEach((val) => val.addEventListener("change", getbox));
+
+      function getbox() {
+        let str = "";
+        for (let box of input) {
+          if (box.checked) {
+            str = box.id;
+          }
+        }
+        console.log(str);
+        document.querySelector("p").innerText = `id: ${str}`;
+        //if string includes
+        const pd = document.querySelector("div p");
+        if (str.includes("box")) {
+          pd.textContent = "plano 1";
+        }
+        if (str.includes("boz")) {
+          pd.textContent = "plano 2";
+        }
+      }
+    </script>
+  </body>
+</html>

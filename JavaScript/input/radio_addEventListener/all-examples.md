@@ -1,12 +1,12 @@
-# 1 
+# 1
 
 - #### [radio_button_addEventListener](https://codepen.io/geraldopcf/pen/NWYQVvy)
-- Array.from  
-- includes()  
-- map 
-- filter  
+- Array.from
+- includes()
+- map
+- filter
 
-:zap: *checkout Item 5 alternative*
+:zap: _checkout Item 5 alternative_
 
 # 2
 
@@ -16,23 +16,30 @@
 # 3
 
 #### [radio_button_addEventListener_3_attr](https://codepen.io/geraldopcf/pen/oNdvpWP)
+
 - event.target.getAttribute
 - event.target.id
 
 # 4
 
 - #### [radio_button_addEventListener_4](https://codepen.io/geraldopcf/pen/rNvNgjd)
-- Array.from  
-- filter() 
-- map 
+- Array.from
+- filter()
+- map
 - includes()
 - findIndex()
 - switch
-- toString 
+- toString
 
 # 5 alternative
 
 - #### [radio_button_addEventListener_alternative_gmap](https://codepen.io/geraldopcf/pen/xxzEJLy)
 - e.target.value
 
+# 6 Selector_All_addEvent_for-of
 
+- #### [Live Demo](https://geraldotech.github.io/DevMap/JavaScript/input/radio_addEventListener/SelectorAll_addEvent-for-of-eg3.html)
+
+# 7 Selector All addEvent Each
+
+- #### [Live Demo](https://geraldotech.github.io/DevMap/JavaScript/input/radio_addEventListener/SelectorAll_addE-forEach.html)

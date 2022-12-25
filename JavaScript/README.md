@@ -794,6 +794,8 @@ document.querySelectorAll("section span")[1];
 - <a href="https://ricardo-reis.medium.com/try-catch-tratando-erros-no-javascript-91bcce0b93ae" target="_blank">Try catch - nice article</a>
 - <a href="https://www.base64encode.org/">base64encode.org</a>
 - <a href="https://twitter.com/ATechAjay/status/1606115109842976768">XOX operator</a>
+- <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getcomputedstyle">getComputedStyle()</a>
+  [CodePen](https://codepen.io/geraldopcf/pen/VwBvyPw)
 
 ## Videos
 

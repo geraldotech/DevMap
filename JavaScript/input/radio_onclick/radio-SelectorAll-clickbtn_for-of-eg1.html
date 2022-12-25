@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html style="color-scheme: dark">
   <head>
-    <!--
-    preview this file in:
-    https://geraldotech.github.io/DevMap/JavaScript/input/radio-querySelectorAll-clickbtn-eg1.html
-  -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      * {
-        background: black;
-        color: white;
-      }
-
       button {
         background: green;
         font-size: 1.2rem;
       }
     </style>
-    <title>Document</title>
+    <title>radio for of click</title>
   </head>
   <body>
     <input type="radio" name="calc" value="html" id="one" />
@@ -30,20 +21,33 @@
     <button onclick="check()">checkout</button>
 
     <p id="output"></p>
+    <p id="my"></p>
     <script>
       function check() {
         const inputs = document.querySelectorAll("input[type='radio']");
+        //varia´vel a ser atualizada
 
         let selected = "";
         for (radiobtn of inputs) {
           if (radiobtn.checked) {
-            select = radiobtn.value;
+            selected = radiobtn.value;
             break;
           }
         }
-        output.innerText = radiobtn
-          ? "vc selecionou " + select
+        output.innerText = selected
+          ? "vc selecionou " + selected
           : "nao houve selação";
+
+        //of arr version
+        let arr = [];
+        for (radiob of inputs) {
+          if (radiob.checked) {
+            arr.push(radiob.id);
+            break;
+          }
+        }
+
+        my.innerText = `of of: selecionou: ${arr}`;
       }
     </script>
   </body>

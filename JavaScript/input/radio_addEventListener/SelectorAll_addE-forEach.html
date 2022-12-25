@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JavaScript</title>
+  </head>
+  <body>
+    <h2>forEach usando addEventListener</h2>
+    <input type="radio" name="one" id="1" />
+    <label for="1">Nice</label>
+    <input type="radio" name="one" id="2" />
+    <label for="2">Good</label>
+
+    <div id="res"></div>
+    <script>
+      const inpt = document.querySelectorAll("input[type='radio']");
+
+      inpt.forEach((val) => {
+        val.addEventListener("click", verifica);
+      });
+
+      function verifica() {
+        let str = "";
+        inpt.forEach((item) => {
+          if (item.checked) {
+            str = item.id;
+          }
+        });
+        res.innerText = str;
+      }
+    </script>
+  </body>
+</html>

@@ -1,7 +1,8 @@
 <h1 align="center">Um resumo sobre forms from scratch</h1>
-<a href="https://codepen.io/geraldopcf/pen/OJzqRKJ" target="_blank">form completo Estacio</a>
-
 Com forms como o nome já sugere é usado para formulários e inputs de diversos tipos, dentro do forms temos os inputs que são as entradas de texto.
+
+- <a href="https://codepen.io/geraldopcf/pen/OJzqRKJ" target="_blank">form completo Estacio</a>
+- [MDN_Document/forms](https://developer.mozilla.org/en-US/docs/Web/API/Document/forms)
 
 - e.g:
 
@@ -33,11 +34,12 @@ Alguns:
 - `number`
 - `submit` enviar
 - `reset` resetar
+
 ```html
 [mesmo resultado]
-<input type="submit" value="Send">
+<input type="submit" value="Send" />
 <button type="submit">Send 2</button>
-<input type="reset" value="resetar">
+<input type="reset" value="resetar" />
 <button type="reset">Resetar 2</button>
 ```
 
@@ -45,31 +47,33 @@ Alguns:
 
 Alguns:
 
-- `id` 
-- `name` 
-- `value` 
-- `placeholder` 
-- `required` 
-- `readonly` 
-- `size="2"` default 
+- `id`
+- `name`
+- `value`
+- `placeholder`
+- `required`
+- `readonly`
+- `size="2"` default
 
 ### label for - required input id
 
 `<label for="id">Your Age </label>`
 
-
 ### validações
 
-- `pattern` - regular expression 
+- `pattern` - regular expression
+
 ```
  pattern="[A-Za-z]{3}" title="somete 3 letras"
 ```
-- `maxlenght` 
-- `minlenght` 
+
+- `maxlenght`
+- `minlenght`
 
 ## input size
-é possível ajustar o input para um determinado size, contúdo prefira usar CSS
-  `<input type="text" size="1">`
+
+é possível ajustar o input para um determinado size, contudo prefira usar CSS
+`<input type="text" size="1">`
 
 ### input attribute placeholder with JavaScript and preventDefault()
 
@@ -81,8 +85,7 @@ Alguns:
 </form>
 
 /*
-//Atribuindo placeholder
-//https://developer.mozilla.org/en-US/docs/Web/API/Document/forms
+Atribuindo placeholder
 */
 const forms = document.forms["login"];
 forms.elements.email.placeholder = "test@example.com";
@@ -97,16 +100,16 @@ document.getElementById("checkingUserName").onclick = function(e){
 }
 ```
 
-preventDefault inline
+# preventDefault inline
 
 ```html
- <form onsubmit="event.preventDefault(); return myfunction()">
-      <input type="text" id="num" />
-      <button type="submit">submit</button>
+<form onsubmit="event.preventDefault(); return myfunction()">
+  <input type="text" id="num" />
+  <button type="submit">submit</button>
 </form>
 ```
 
-event.preventDefault <a href="https://codepen.io/geraldopcf/pen/VwXgqgQ" target="_blank">CodePen</a>
+event.preventDefault and reset() <a href="https://codepen.io/geraldopcf/pen/VwXgqgQ" target="_blank">CodePen</a>
 
 ### Fieldset [tag_fieldset.asp](https://www.w3schools.com/tags/tag_fieldset.asp)
 
@@ -124,15 +127,14 @@ tag to group related elements in a form - pode usar para agrupar inputs relacion
 </form>
 ```
 
-
 # form names
 
 ```js
-<form  name="test">teste</form> 
+<form name="test">teste</form>;
 console.log(document.test);
 console.log(document.test.innerHTML);
-
 ```
+
 - Two names:
 
 ```js

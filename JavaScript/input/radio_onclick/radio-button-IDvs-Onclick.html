@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input radio button onClick</title>
+    <style>
+      input {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><label for="plan">1 - No ID</label><br /></h1>
+    <input type="radio" name="plan" id="10" onclick="geta()" />
+    <label for="10">10GB</label>
+    <input type="radio" name="plan" id="50" onclick="getb()" />
+    <label for="50">50GB</label>
+    <g></g>
+    <span id="res"></span>
+    <hr />
+
+    <!--e.g with ID -->
+    <h1><label for="banks">2 - Com ID</label><br /></h1>
+    <form action="" onsubmit="event.preventDefault()">
+      <input type="radio" name="bank" id="sx" />
+      <label for="sx">Santander</label>
+      <input type="radio" name="bank" id="bb" />
+      <label for="bb">Banco do Brasil</label>
+      <input type="button" value="clean" id="cleanHtml" />
+      <input type="reset" value="resetar" />
+    </form>
+    <b></b>
+
+    <script>
+      //1 - No ID
+      var p = document.querySelector("g");
+      function geta() {
+        p.innerHTML =
+          '<div style="background-color:dodgerblue;width:300px;height:100px;color:white">10 gigas</div>';
+      }
+      function getb() {
+        p.innerHTML =
+          '<div style="background-color:purple;width:300px;height:100px;color:white">50 gigas</div>';
+      }
+
+      //2 - Com ID
+      const body = document.querySelector("body");
+      var b = document.querySelector("b");
+      document.getElementById("sx").onclick = function () {
+        b.innerHTML = "SX";
+        body.style.backgroundColor = "red";
+      };
+      document.getElementById("bb").onclick = function () {
+        b.innerHTML = "Petrobras";
+        body.style.backgroundColor = "coral";
+      };
+
+      document.getElementById("cleanHtml").onclick = function () {
+        //location.reload();
+        // do not refresh page, apenas limpa os styles
+        body.style.background = "";
+      };
+    </script>
+  </body>
+</html>

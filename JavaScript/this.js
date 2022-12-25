@@ -2,6 +2,7 @@
 this se referente ao objeto do qual a função é uma propriedade, o valor vai depender do objeto que está invocando a function
 */
 
+//object window
 function doSomething() {
   console.log(this);
 }
@@ -26,7 +27,7 @@ document.querySelector("input").addEventListener("click", function () {
   console.log(this.checked);
 });
 
-//thi.input
+//this input
 document.querySelector("input").addEventListener("input", function () {
   console.log(+this.value);
 });
@@ -35,3 +36,11 @@ document.querySelector("input").addEventListener("input", function () {
 document.addEventListener("DOMContentLoaded", function () {
   console.log(this);
 });
+
+//this na function(this)
+<button onclick="getx(this)">show</button>;
+function getx(event) {
+  console.log(this);
+  console.log(this.event);
+  console.log(event.innerHTML);
+}
