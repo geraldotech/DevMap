@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="radio" name="calc" value="html" id="one" />
+    <label for="one">HTML</label>
+
+    <input type="radio" name="calc" value="js" id="js" />
+    <label for="js">JavaScript</label>
+
+    <div id="txt"></div>
+    <script>
+      const inputs = document.querySelectorAll("input[type='radio']");
+      inputs.forEach((val) => {
+        val.addEventListener("click", verifica);
+      });
+
+      function verifica() {
+        const arr = [...inputs]
+          .filter((val) => val.checked)
+          .map((id) => id.value);
+        //spread para saida ser String
+        console.log(arr, ...arr);
+        txt.innerText = arr;
+      }
+    </script>
+  </body>
+</html>

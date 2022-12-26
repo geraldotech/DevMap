@@ -43,3 +43,7 @@
 # 7 Selector All addEvent Each
 
 - #### [Live Demo](https://geraldotech.github.io/DevMap/JavaScript/input/radio_addEventListener/SelectorAll_addE-forEach.html)
+
+# 8 Selector All addEvent for
+
+- #### [Live Demo](https://geraldotech.github.io/DevMap/JavaScript/input/radio_addEventListener/SelectorAll-addEven-for_push_Arr.html)

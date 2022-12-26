@@ -47,3 +47,24 @@ function onItemClick(event){
   if(value == 'feijao') log('tropeiro?');
   if(value == 'arroz') log('arroz');  
 }
+
+//Spread alternative 
+<input type="radio" name="calc" value="html" id="one" />
+<label for="one">HTML</label>
+
+<input type="radio" name="calc" value="js" id="js" />
+<label for="js">JavaScript</label>
+
+<button onclick="check()">checkout</button>
+
+function check() {
+  const inputs = document.querySelectorAll("input[type='radio']");
+  let opt = "";
+  [...inputs].forEach((value) => {
+    if (value.checked) {
+      opt = value.id;
+    }
+  });
+  console.log(opt);
+}
+
