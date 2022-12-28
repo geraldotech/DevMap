@@ -218,7 +218,7 @@ for (attr of div) {
     console.log(`path:`, arrPath);
     console.log(`attr:`, attr);
     inclui(attr, arrPath);
-    arrPath.pop();
+    //arrPath.pop();
   }
 }
 
@@ -236,7 +236,7 @@ async function inclui(el, path) {
 }
 ```
 
-5 - Usando `unshit()` que adicionar items na primeira posição, depois só chamar por `arr[0]`
+5 - Usando `unshit()` que adiciona items na primeira posição, depois só chamar por `arr[0]`
 
 Final Code:
 

@@ -4,6 +4,7 @@
 👉currentValue
 👉currentIndex
 👉array
+and a 👉initialValue `[]` ou um `0` dependendo do contexto
 
 */
 
@@ -18,7 +19,7 @@ let keysOrVal = [];
   }
 }, []);
 
-//final ter um `[]` ou um `0`
+//final deve ter um initialValue um `[]` ou um `0`
 console.log(keysOrVal); // [0, 'Ger', 2, 'Goo']
 
 //version 2

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JavaScript</title>
+  </head>
+  <body>
+    <input type="radio" name="calc" value="html" id="one" />
+    <label for="one">HTML</label>
+
+    <input type="radio" name="calc" value="js" id="js" />
+    <label for="js">JavaScript</label>
+
+    <p id="output"></p>
+
+    <script>
+      const inpt = document.querySelectorAll("input");
+      inpt.forEach((val) => {
+        val.addEventListener("click", checkout);
+      });
+      function checkout() {
+        let arr = [];
+        [...inpt].reduce((accu, curre) => {
+          /*   if (curre.checked) {
+            arr.push(curre.id);
+          } */
+          curre.checked ? arr.push(curre.id) : null;
+        }, []);
+        console.log(arr);
+        output.innerText = arr;
+      }
+    </script>
+  </body>
+</html>
