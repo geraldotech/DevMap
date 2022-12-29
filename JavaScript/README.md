@@ -113,6 +113,7 @@ function add(){
 let start = 0;
 function add(){
 document.getElementById("num").innerHTML = start = start +1;
+// ou usar++ document.getElementById("num").innerHTML = start++;
 }
 
 //short by gmap recuperando o valor da var diretamente no DOM succinct way
@@ -782,6 +783,7 @@ document.querySelectorAll("section span")[1];
 # Threads
 
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
+- <a href="JavaScript/assets/thread/Operadores-Atribuicao.md" target="_blank">Operadores-Atribuicao</a>
 - [render_table.html](./assets/thread/render_table.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table_json.html" target="_blank">Demo</a>
 - [Menu All Pages](./assets/thread/Menu_All_pages.md)
 
