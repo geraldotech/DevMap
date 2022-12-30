@@ -820,7 +820,7 @@ console.log(cars2);
 console.log("Geraldo".split(""));  //['G', 'e', 'r', 'a', 'l', 'd', 'o']
 let a = "Rio de Janeiro";
 
-//📌 return a new arr each 
+//📌 return a new arr between the spaces
 //If the separator parameter is omitted, an array with the original string is returned:
 const myarr2 = "Rio de Janeiro".split(' ');
 console.log(myarr2); // ['Rio', 'de', 'Janeiro']
