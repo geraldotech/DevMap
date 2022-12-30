@@ -76,6 +76,9 @@ function bnt() {
     x %2 == 0 ? res.textContent = ("par") : res.textContent = ("impar");
     }
 
+//one condition
+curre.checked ? arr.push(curre.id) : curre.checked;
+
 ```
 
 # if-return

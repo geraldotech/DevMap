@@ -24,7 +24,7 @@
           /*   if (curre.checked) {
             arr.push(curre.id);
           } */
-          curre.checked ? arr.push(curre.id) : null;
+          curre.checked ? arr.push(curre.id) : curre.checked;
         }, []);
         console.log(arr);
         output.innerText = arr;
