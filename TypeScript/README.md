@@ -20,6 +20,7 @@
 - Desenvolvido e mantido pela Microsoft
 
 ## Installing:
+
 <a name="installing"></a>  
 Vamos instalar o TypeScript em modo Global, basta adicionar o -g
 
@@ -69,39 +70,42 @@ O compilador do **TypeScript** é altamente configurável. Ele nos permite defin
 
 Cada uma das opções de configuração pode ser passada para um arquivo chamado _tsconfig.json_ . Para quem não conhece, esse é o principal arquivo de configuração do _TypeScript_.
 
-1 - Começando pelo arquivo de configuração `tsconfig.json`:
+1 - Começando pelo arquivo de configuração `tsconfig.json` para gerar:
 
 ```js
 tsc --init
 ```
 
-- Na linha `"outDir": "./dist/js"`, na linha 59 aponte os arquivos que serão emitidos ao client, "arquivos de deploy"
+- Na linha 52 `"outDir": "./dist/js"`, aponte os arquivos que serão emitidos ao client,"arquivos de deploy".
 
 ```js
 "outDir": "./dist/js/"
 ```
 
-- Abra o arquivo `tsconfig.json` e na `linha 29 “// "rootDir": "./",”` aponte onde vai ficar o arquivo de TypeScript:
+- No `tsconfig.json` linha 29 `“// "rootDir": "./",”` aponte onde vai ficar o arquivo de TypeScript:
 
 ```js
 "rootDir": "./src"
 ```
 
-2 - criar pasta src e `index.ts` file:
+2 - criar pasta `src` e `index.ts` file com um código de test:
+
+`$ mkdir src && touch src/index.ts`
 
 ```ts
-var myname: string = "gmapdev";
+const myname: string = "Hello TypeScripts works! by gmapdev";
 console.log(myname);
 ```
 
-3 - pasta dist será criada o comando `tsc`
+3 - criar o `index.html` e adicionando o `./dist/js/index.js`
 
-4 - criar o `index.html` e adicionar script.js
+4 - A pasta e o arquivos final `dist/js/index.js` serão criados pelo TS após o comando `tsc`
 
 ### watch mode:
 
 ```
-tsc -w index.ts
+Tudo definido no arquivo `tsconfig`: tsc -w
+Modo apontando um arquivo: tsc -w index.ts
 ```
 
 ### Mais sobre tsconfig.json
@@ -233,19 +237,18 @@ let sam = "samsung"; // 'sam' has already been declared
 - However, if the same variable is defined in different scopes, there will be no error:
 
 ```js
-if(true){
-let hey = "hello";
-console.log(hey); // hello
+if (true) {
+  let hey = "hello";
+  console.log(hey); // hello
 }
 
 let hey = "how";
 console.log(hey); // how
-
 ```
 
 Why is there no error? This is because both instances are treated as different variables since they have different scopes. [https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/#:~:text=Hoisting%20of%20const&text=var%20variables%20can%20be%20updated,the%20top%20of%20their%20scope.)
 
-- variable declared in a block with let  is only available for use within that block, entretando fora do block scoped é acessível globalmente igual ao var
+- variable declared in a block with let is only available for use within that block, entretando fora do block scoped é acessível globalmente igual ao var
 
 ```js
 let b = "b";
@@ -261,7 +264,7 @@ console.error(bb); // Uncaught ReferenceError: bb is not defined
 
 A palavra reservada `const` é usada para declarar variáveis read-only, isto é, a variável não pode ter o seu valor alterado, seu estado é imutável. Assim como as variáveis declaradas como let e const também ficam limitadas a o block they were declared.
 
--  cannot be updated or re-declared 
+- cannot be updated or re-declared
 - const object cannot be updated
 
 ```js

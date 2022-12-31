@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#" onclick="rota('/'); return false">Home</a>
+    <a href="#" onclick="rota('/one'); return false">one</a>
+    <a href="#" onclick="rota('/two'); return false">two</a>
+
+    <div id="res"></div>
+
+    <script>
+      const one = `<p>click one</p>`;
+      const two = `<p>click two</p>`;
+
+      const router = {
+        "/": `<h1>Home</h1>`,
+        "/one": one,
+        "/two": two,
+      };
+
+      const res = document.querySelector("#res");
+      res.innerHTML = router[window.location.pathname];
+
+      const rota = (el) => {
+        window.history.pushState({}, el, window.location.origin + el);
+        res.innerHTML = router[el];
+      };
+
+      //set default route
+      // rota("/one");
+    </script>
+  </body>
+</html>
