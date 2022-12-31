@@ -33,3 +33,39 @@ let [x2, y2] = [10, 1];
 x2 += --y2; // x2 permanece com 10 pq y2 decrementou para 0
 console.log(x2, y2);
 ```
+
+More examples:
+
+```js
+let n = 5;
+n++;
+console.log(n); //6
+n = n + 2;
+console.log(n); //8
+n += n;
+console.log(n); //16
+n += 4 + n;
+console.log(n); //20
+
+let a = 2;
+a = a * a;
+console.log(a); //4
+
+let b = 5;
+b *= 5;
+console.log(b);
+
+let saldo = 100;
+saldo /= 2;
+console.log(saldo); //50
+saldo = saldo / 2;
+console.log(saldo); //25
+
+saldo = saldo += 5;
+console.log(saldo); // 30
+
+saldo %= 2;
+console.log(saldo); //0
+
+console.log(saldo); //0
+```

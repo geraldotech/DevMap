@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JavaScript</title>
+  </head>
+  <body>
+    <button id="plus">plus</button>
+
+    <div id="price"></div>
+    <script>
+      const prices = [
+        { plano: "1 GB", price: 9.99 },
+        { plano: "2 GB", price: 14.99 },
+        { plano: "3 GB", price: 25.99 },
+        { plano: "4 GB", price: 25.99 },
+        { plano: "5 GB", price: 25.99 },
+        { plano: "10 GB", price: 25.99 },
+        { plano: "20 GB", price: 89.99 },
+      ];
+      console.log(prices);
+      const price = document.getElementById("price");
+      let i = -1;
+
+      document.querySelector("button#plus").onclick = function () {
+        if (i + 1 == prices.length) {
+          return false;
+        }
+        i++;
+        price.innerHTML = `${prices[i].plano} - ${prices[i].price}`;
+      };
+    </script>
+  </body>
+</html>

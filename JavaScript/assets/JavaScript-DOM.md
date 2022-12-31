@@ -183,7 +183,7 @@ btn3.onclick = function (){
 - Na header será carregado antes do DOM o que pode causar erros, a menos que defina o `defer`
 - Final do body vai carregar quando praticamente todo DOM tiver siado loaded e parsed
 
-# Booean [Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+# Boolean [Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 
 ## defer
 

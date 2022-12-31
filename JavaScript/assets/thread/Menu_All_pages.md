@@ -166,3 +166,7 @@ Versão antigas do AngularJS mesmo na versão CDN conta com o recurso de ng-incl
 # e.g 9
 
 Versão CDN podemos carregar um component de forma dinâmica `VueJS loader component`
+
+# e. 10
+
+Versão do princípio++ usando apenas HTML com a tag `object` deveriamos ter conhecimento do poder essa tag que pode fazer o papel de includes [https://gmapdev.netlify.app/html/](https://gmapdev.netlify.app/html/)

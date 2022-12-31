@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+
+  <body>
+    <p>
+      percorrer Arrays with click, increment and decrement var para usar com
+      index do click atual
+    </p>
+    <button id="menos">Get lower</button>
+    <button id="plus">Get more</button>
+    <div id="res"></div>
+
+    <script>
+      const arr = ["Geraldo", "Filho", "Costa", "Hello", "JavaScript"];
+      const div = document.querySelector("div#res");
+      console.log(div);
+      let atual = -1; //começa -1 primeiro click vai para 0
+      document.querySelector("button#plus").onclick = function () {
+        console.log(atual);
+        //ultimo atual(3)+1 = (4) == arr.length 4 chegou no final e retorna false
+        if (atual + 1 == arr.length) {
+          return false;
+        }
+
+        atual++;
+        const current = arr[atual];
+        console.log(current);
+        div.innerText = ` ${atual} - ${current}`;
+      };
+
+      document.querySelector("button#menos").onclick = function () {
+        console.log(atual);
+        //atual[1] -1 = (-1) == (-1) ? return false
+        if (atual - 1 == -1) {
+          return false;
+        }
+        //atual for == -1 return false para evitar undefined
+        if (atual == -1) {
+          return false;
+        }
+        atual--;
+        const currentM = arr[atual];
+        console.log(currentM);
+        div.innerText = ` ${atual} - ${currentM}`;
+      };
+    </script>
+  </body>
+</html>
