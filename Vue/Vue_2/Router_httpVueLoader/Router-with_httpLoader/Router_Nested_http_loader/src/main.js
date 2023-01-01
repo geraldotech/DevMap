@@ -17,8 +17,7 @@ const a = { template: `<p>A</p>` };
 const b = { template: `<p>B</p>` };
 const About = { template: `<h1>About</h1>` };
 const downl = Vue.component("myd-content");
-const imgs = { template: `<vimages></vimages` };
-const loader = httpVueLoader("./src/image.vue");
+const vimg = httpVueLoader("./src/image.vue");
 
 var routes = [
   { path: "/", component: Home },
@@ -32,7 +31,7 @@ var routes = [
       {
         path: "link-images",
         name: "img",
-        component: loader,
+        component: vimg,
       },
     ],
   },
@@ -48,6 +47,6 @@ var app = new Vue({
   router: router,
   data: {},
   components: {
-    vimg: httpVueLoader("./image.vue"),
+    //vimg: httpVueLoader("./image.vue"),
   },
 });
