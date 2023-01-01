@@ -3,6 +3,7 @@
     <h1>Parent Component</h1>
     <Menua></Menua>
     <router-view></router-view>
+    <Foo></Foo>
   </div>
 </template>
 
@@ -13,6 +14,7 @@ module.exports = {
   },
   components: {
     Menua: httpVueLoader("../src/components/Menu.vue"),
+    Foo: httpVueLoader("../src/components/footer.vue"),
   },
 };
 </script>
@@ -63,8 +65,11 @@ section p {
 }
 
 footer {
-  min-height: 50px;
+  color: coral;
+  position: absolute;
+  bottom: 0;
   background: olive;
+  width: 100%;
 }
 
 nav ul li {

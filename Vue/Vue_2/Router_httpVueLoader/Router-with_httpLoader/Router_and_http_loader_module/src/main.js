@@ -1,13 +1,13 @@
-import Home from "./pages/home.vue.js";
-import About from "./pages/about.vue.js";
-import Assets from "./pages/assets.vue.js";
-import Contact from "./pages/contact.vue.js";
+import Home from "../src/views/home.vue.js";
+import About from "../src/views/about.vue.js";
+import Assets from "../src/views/assets.vue.js";
+import Contact from "../src/views/contact.vue.js";
 
-const app2 = new Vue({
+new Vue({
   el: "#app2",
   data: {},
   components: {
-    foo: httpVueLoader("./pages/footer.vue"),
+    foo: httpVueLoader("../src/compo/footer.vue"),
   },
 });
 
@@ -16,7 +16,6 @@ var routes = [
   { path: "/about", component: About },
   { path: "/contact", component: Contact },
   { path: "/assets", component: Assets },
-  //{ path: "/assets/files", component: "/assets/files/" },
 ];
 
 var router = new VueRouter({
@@ -25,7 +24,7 @@ var router = new VueRouter({
   base: "/#",
 });
 
-var app = new Vue({
-  el: "#app",
+new Vue({
+  el: "#rotas",
   router: router,
 });
