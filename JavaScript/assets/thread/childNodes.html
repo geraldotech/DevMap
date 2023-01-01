@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <object data="nav.html" type="">Nav</object>
+    <object data="test.txt" type=""></object>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse veritatis
+      deserunt impedit? Debitis officia cupiditate quaerat totam magni ea
+      laudantium, nihil quibusdam unde tempora, quia vero consequatur optio ad
+      possimus?
+    </p>
+
+    <div id="link">
+      <a href="http://google.com">Google</a>
+      depois
+      <a href="http://microsoft.com"
+        >Microsoft
+        <p>filho</p>
+      </a>
+    </div>
+
+    <script>
+      const a = document.querySelectorAll("div#link");
+      console.log(a[0].childNodes);
+      console.log(a[0].childNodes[1].href); //google.com
+      console.log(a[0].childNodes[1]); //google.com
+      a[0].childNodes[1].setAttribute("target", "_blank"); //google.com
+      console.log(a[0].childNodes[1].target); //google.com
+    </script>
+  </body>
+</html>

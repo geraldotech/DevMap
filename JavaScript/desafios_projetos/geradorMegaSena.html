@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vanilla JavaScript</title>
+  </head>
+  <body>
+    <h1>Gerador números da MegaSena<e</h1>
+    <div>
+      <button onclick="gerar()">Gerar novos números</button>
+    </div>
+    <div id="mega"></div>
+
+    <script>
+      function mega() {
+        let arr = [];
+        for (let i = 1; i <= 6; i++) {
+          arr.push(Math.floor(Math.random() * 60 + 1));
+        }
+        return arr;
+      }
+
+      function gerar() {
+        document.getElementById("mega").innerHTML = mega().join(" - ");
+      }
+      gerar();
+    </script>
+  </body>
+</html>

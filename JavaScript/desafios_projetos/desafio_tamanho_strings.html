@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="res"></div>
+
+    <script>
+      const nomes = "Should not be left to my own devices";
+
+      //convert para arr
+      const todos = nomes.trim().split(" ");
+      console.log(todos);
+
+      //array armazerar o todos os lenght, trim remove espaços e split para quebrar as palavras em array
+      const arr = [];
+      for (const val of todos) {
+        arr.push(val.length);
+      }
+      console.log(arr);
+      //pegar o min length do array
+      const IndexMinEncontrado = Math.min(...arr); //spread o max value
+      console.log("menorWord tem index", IndexMinEncontrado); // 2
+
+      //findIndex o value que tem esse length e show
+      const pegaIndex = todos.find(
+        (val, ind) => val.length == IndexMinEncontrado
+      );
+      console.log(pegaIndex);
+
+      //loop tradicional
+      const menorWord = (str) => {
+        const toArr = str.trim().split(" ");
+        let menor = toArr[0];
+        for (let i = 1; i < toArr.length; i++) {
+          if (toArr[i].length < menor.length) {
+            menor = toArr[i];
+          }
+        }
+        return menor;
+      };
+
+      console.log(`menorWord =>`, menorWord("Geraldo Filho sr dk"));
+
+      // reduce
+      function menor(str) {
+        const todos = str.trim().split(" ");
+
+        return todos.reduce((total, val) => {
+          if (val.length < total.length) {
+            return val;
+          }
+          return total;
+        });
+      }
+
+      console.log(`menor =>`, menor("Should not be left to my own devices"));
+    </script>
+  </body>
+</html>

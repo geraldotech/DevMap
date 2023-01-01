@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JavaScript</title>
+    </style>
+  </head>
+  <body>
+    <p class="class?">exemplificando</p>
+    <a
+      href="https://javascript.info/onload-ondomcontentloaded#domcontentloaded-and-styles"
+      >ref</a
+    >
+
+    <form name="main" action="">
+      <input type="number" name="num" />
+      <input type="button" value="button" />
+    </form>
+    <script>
+      window.onbeforeunload = function () {
+        return "There are unsaved changes. Leave now?";
+      };
+
+      console.log(document.readyState);
+    </script>
+  </body>
+</html>
