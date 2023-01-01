@@ -53,6 +53,18 @@ const app = new Vue({
 });
 ```
 
+### short way
+
+```js
+//v1
+new Vue({
+  el: "#app",
+  data: {},
+});
+
+//v2
+```
+
 ### v-bind
 
 ```js

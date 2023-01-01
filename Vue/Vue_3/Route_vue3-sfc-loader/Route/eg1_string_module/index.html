@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script type="module" src="./src/main.js" defer></script>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      .home {
+        color: red;
+      }
+      nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: 332px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- use router-link component for navigation. -->
+      <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
+      <nav>
+        <ul>
+          <router-link to="/">Home</router-link>
+          <router-link to="/route1">About</router-link>
+          <router-link to="/route2">Port</router-link>
+          <router-link to="/route3">Pets</router-link>
+          <router-link to="/404">404</router-link>
+        </ul>
+      </nav>
+      <!-- route outlet -->
+      <!-- component matched by the route will render here -->
+      <router-view></router-view>
+    </div>
+    <!--
+       Small content is ok, porém um conteudo grande podemos seperar em
+        arquivos.js
+    -->
+  </body>
+</html>
