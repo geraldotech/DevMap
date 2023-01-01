@@ -1,3 +1,23 @@
+<template>
+  <div>
+    <h1>Parent Component</h1>
+    <Menua></Menua>
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+module.exports = {
+  data() {
+    return {};
+  },
+  components: {
+    Menua: httpVueLoader("../src/components/Menu.vue"),
+  },
+};
+</script>
+
+<style>
 * {
   color-scheme: dark;
   box-sizing: border-box;
@@ -58,3 +78,4 @@ nav ul li a {
 nav ul li a:hover {
   color: rgb(18, 223, 137);
 }
+</style>

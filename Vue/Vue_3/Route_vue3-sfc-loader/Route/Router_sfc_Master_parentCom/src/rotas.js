@@ -4,14 +4,14 @@ const About = {
 };
 const Port = { template: "<div>route Port</div>" };
 const NotFound = { template: "<h1 style='color:red'>Not Found</h1>" };
-const teste = () => loadModule("/dist/rotepages/radio.vue", options);
+//const teste = () => loadModule("/src/views/radio.vue", options);
 const routes = [
   { path: "/", component: Home },
   { path: "/route1", component: About },
   { path: "/route2", component: Port },
   {
     path: "/route3",
-    component: teste,
+    component: () => loadModule("/src/views/radio.vue", options),
   },
   { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ];

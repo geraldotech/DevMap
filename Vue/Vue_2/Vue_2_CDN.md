@@ -23,6 +23,8 @@ Segundo [esse site](https://github.com/vuejs/router)
 <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
 ```
 
+[Vue 2 Router](https://shouts.dev/articles/vue-js-routing-from-scratch-using-cdn-without-cli)
+
 ### for Prodution:
 
 ```js
@@ -63,6 +65,9 @@ new Vue({
 });
 
 //v2
+new Vue({
+  data: {},
+}).$mount("#app");
 ```
 
 ### v-bind

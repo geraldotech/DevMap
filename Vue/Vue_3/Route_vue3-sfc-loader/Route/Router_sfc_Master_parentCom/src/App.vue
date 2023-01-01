@@ -16,22 +16,25 @@ module.exports = {
   },
   components: {
     Extra: Vue.defineAsyncComponent(() =>
-      loadModule("../dist/extra.vue", options)
+      loadModule("../src/components/extra.vue", options)
     ),
     Foo: Vue.defineAsyncComponent(() =>
-      loadModule("../dist/footer.vue", options)
+      loadModule("../src/components/footer.vue", options)
     ),
     NavBar: Vue.defineAsyncComponent(() =>
-      loadModule("../dist/NavBar.vue", options)
+      loadModule("../src/components/NavBar.vue", options)
     ),
     MyHeader: Vue.defineAsyncComponent(() =>
-      loadModule("../dist/myHeader.vue", options)
+      loadModule("../src/components/myHeader.vue", options)
     ),
   },
 };
 </script>
 <style>
 /*global */
+* {
+  color-scheme: dark;
+}
 .hello {
   background-color: rgb(31, 31, 13);
   color: white;
@@ -39,5 +42,15 @@ module.exports = {
 
 h4 {
   color: orange;
+}
+
+ul li,
+p {
+  color: dodgerblue;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 332px;
 }
 </style>

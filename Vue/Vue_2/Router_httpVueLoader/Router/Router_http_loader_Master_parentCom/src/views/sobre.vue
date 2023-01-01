@@ -2,7 +2,7 @@
   <section>
     <h1>about page loaded from router</h1>
     <div>
-      <img src="../assets/nova.jpg" alt="img" />
+      <img src="../src/assets/nova.jpg" alt="img" />
     </div>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quam

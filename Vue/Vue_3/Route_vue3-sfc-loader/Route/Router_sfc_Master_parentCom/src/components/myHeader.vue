@@ -14,26 +14,6 @@ module.exports = {
 };
 </script>
 
-
-<style>
-/*
-global header all pages
-*/
-* {
-  color-scheme: dark;
-}
-ul li,
-p {
-  color: dodgerblue;
-}
-nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  width: 332px;
-}
-</style>
-
-
 <style scoped>
 /*
 scoped only for this header
