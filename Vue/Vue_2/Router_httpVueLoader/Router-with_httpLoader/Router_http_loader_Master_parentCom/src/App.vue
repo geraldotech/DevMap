@@ -64,14 +64,6 @@ section p {
   padding: 0 40px;
 }
 
-footer {
-  color: coral;
-  position: absolute;
-  bottom: 0;
-  background: olive;
-  width: 100%;
-}
-
 nav ul li {
   background: darkblue;
   padding: 5px 10px;
@@ -82,5 +74,16 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: rgb(18, 223, 137);
+}
+
+footer {
+  height: 50px;
+  background: grey;
+  padding-top: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
 }
 </style>
