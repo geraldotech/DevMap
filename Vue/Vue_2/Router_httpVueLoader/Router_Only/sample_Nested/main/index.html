@@ -5,17 +5,21 @@
     <title>Vue.js Routing From Scratch Using Vue Router CDN</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
+    <p>e.g rotas com Arrays definidas automaticamente</p>
     <div id="app">
       <nav>
         <ul>
           <li><router-link class="nav-link" to="/"> Home </router-link></li>
           <li>
-            <router-link class="nav-link" to="about"> About </router-link>
+            <router-link class="nav-link" :to="{name:'abo'}">
+              About
+            </router-link>
           </li>
           <li>
-            <router-link class="nav-link" to="contact"> Contact </router-link>
+            <router-link class="nav-link" to="contact"> More </router-link>
           </li>
         </ul>
       </nav>
@@ -24,26 +28,17 @@
       </div>
     </div>
 
-    <script>
-      const Home = { template: `<p>Home</p>` };
-      const About = { template: `<p>About</p>` };
-      const Contact = { template: `<p>Contact</p>` };
+    <template id="more">
+      <div>
+        <p>more examples</p>
+        <ol>
+          <li v-for="(item) in rotas" :key="item.id">
+            <router-link :to="{name: item.slug}">{{item.name}}</router-link>
+          </li>
+        </ol>
 
-      const routes = [
-        { path: "/", component: Home },
-        { path: "/about", component: About },
-        { path: "/contact", component: Contact },
-      ];
-
-      const router = new VueRouter({
-        routes: routes,
-        //  base: "#",
-      });
-
-      new Vue({
-        el: "#app",
-        router: router,
-      });
-    </script>
+        <router-view></router-view>
+      </div>
+    </template>
   </body>
 </html>

@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
   </head>
   <body>
+    <p>e.g rotas sem Arrays definidas manualmente</p>
     <div id="app">
       <nav>
         <ul>
@@ -15,7 +16,7 @@
             <router-link class="nav-link" to="about"> About </router-link>
           </li>
           <li>
-            <router-link class="nav-link" to="contact"> Contact </router-link>
+            <router-link class="nav-link" to="contact"> More </router-link>
           </li>
         </ul>
       </nav>
@@ -24,25 +25,49 @@
       </div>
     </div>
 
+    <template id="more">
+      <div>
+        <p>more examples</p>
+        <router-link :to="{name:'p1'}">Pessoa1</router-link>
+        <router-link :to="{name:'p2'}">Pessoa2</router-link>
+
+        <router-view></router-view>
+      </div>
+    </template>
     <script>
+      const mais = Vue.component("mais", {
+        template: "#more",
+      });
+
       const Home = { template: `<p>Home</p>` };
       const About = { template: `<p>About</p>` };
-      const Contact = { template: `<p>Contact</p>` };
+      const pessoa = { template: `<p>pessoa One</p>` };
+      const pessoa2 = { template: `<p>pessoa 2</p>` };
 
       const routes = [
         { path: "/", component: Home },
         { path: "/about", component: About },
-        { path: "/contact", component: Contact },
+        {
+          path: "/contact",
+          component: mais,
+
+          children: [
+            { path: "pessoaone", name: "p1", component: pessoa },
+            { path: "pessoatwo", name: "p2", component: pessoa2 },
+          ],
+        },
       ];
 
       const router = new VueRouter({
         routes: routes,
-        //  base: "#",
       });
 
       new Vue({
         el: "#app",
         router: router,
+        created() {
+          console.log(this.$route);
+        },
       });
     </script>
   </body>

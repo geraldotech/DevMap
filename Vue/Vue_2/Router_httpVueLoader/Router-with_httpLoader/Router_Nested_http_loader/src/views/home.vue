@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ img }}</p>
+    <h1>HOME Page</h1>
     <input type="checkbox" v-model="sks" id="op" />
     <label for="op">{{ sks ? "Checked" : "Unchecked" }}</label>
     <p v-show="sks">Show</p>

@@ -27,22 +27,49 @@
     <script>
       const Home = { template: `<p>Home</p>` };
       const About = { template: `<p>About</p>` };
-      const Contact = { template: `<p>Contact</p>` };
+      //Nested
+      const tpessoa = { template: `<p>key one</p>` };
+      const tpessoa1 = `<p>key one</p>`;
+      const tpessoa22 = `<p>key two</p>`;
+      const tpessoa2 = { template: `<p>key two</p>` };
+
+      const Contact = {
+        template: `
+        <div>
+          <router-link :to="{name:'keyone', params: {name: 'subrota'}}">Pessoa</router-link>
+          <router-link :to="{name:'keytwo', params: {name: 'subrota2'}}">Pessoa 2</router-link>
+          
+          <div v-if="$route.params.name == 'subrota'">${tpessoa1}</div>
+          <div v-if="$route.params.name == 'subrota2'">${tpessoa22}</div>         
+
+          </div>`,
+      };
+      // <router-view></router-view> só detecta rota atual no click, podemos usar no lugar v-if e template strings
 
       const routes = [
         { path: "/", component: Home },
         { path: "/about", component: About },
-        { path: "/contact", component: Contact },
+        {
+          path: "/contact",
+          component: Contact,
+          children: [
+            { path: ":name", name: "keyone", component: tpessoa },
+            { path: ":name", name: "keytwo", component: tpessoa2 },
+          ],
+        },
       ];
 
       const router = new VueRouter({
         routes: routes,
-        //  base: "#",
+        //base: window.location.origin,
       });
 
       new Vue({
         el: "#app",
         router: router,
+        created() {
+          console.log(this.$route);
+        },
       });
     </script>
   </body>
