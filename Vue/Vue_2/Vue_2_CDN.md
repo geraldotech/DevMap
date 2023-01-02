@@ -40,6 +40,11 @@ const app = new Vue({
     message: "Geraldo",
   },
 });
+
+//simpler
+new Vue({
+  el: "#app",
+});
 ```
 
 For CDN components

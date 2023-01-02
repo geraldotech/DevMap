@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html style="color-scheme: dark">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue.js Routing From Scratch Using Vue Router CDN</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
-    <script type="module" src="./src/main.js" defer></script>
-    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
     <div id="app">
@@ -25,5 +23,27 @@
         <router-view></router-view>
       </div>
     </div>
+
+    <script>
+      const Home = { template: `<p>Home</p>` };
+      const About = { template: `<p>About</p>` };
+      const Contact = { template: `<p>Contact</p>` };
+
+      const routes = [
+        { path: "/", component: Home },
+        { path: "/about", component: About },
+        { path: "/contact", component: Contact },
+      ];
+
+      const router = new VueRouter({
+        routes: routes,
+        base: "#",
+      });
+
+      new Vue({
+        el: "#app",
+        router: router,
+      });
+    </script>
   </body>
 </html>

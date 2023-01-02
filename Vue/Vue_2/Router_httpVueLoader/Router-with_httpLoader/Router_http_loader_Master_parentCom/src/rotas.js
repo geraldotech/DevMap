@@ -21,15 +21,7 @@ var routes = [
 
 var router = new VueRouter({
   routes: routes,
-  mode: "history",
-  //base: "/#apps",
-  //base: "/app",
-  base: "/#",
-});
-
-var app = new Vue({
-  //el: "#rotas",
-  router: router,
+  base: "#",
 });
 
 export default router;
