@@ -31,7 +31,7 @@ Segundo [esse site](https://github.com/vuejs/router)
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script>
 ```
 
-### Basic script
+### Basic script + short way
 
 ```js
 const app = new Vue({
@@ -45,6 +45,11 @@ const app = new Vue({
 new Vue({
   el: "#app",
 });
+
+//v2
+new Vue({
+  data: {},
+}).$mount("#app");
 ```
 
 For CDN components
@@ -58,21 +63,6 @@ const app = new Vue({
     foo: httpVueLoader("footer.vue"),
   },
 });
-```
-
-### short way
-
-```js
-//v1
-new Vue({
-  el: "#app",
-  data: {},
-});
-
-//v2
-new Vue({
-  data: {},
-}).$mount("#app");
 ```
 
 ### v-bind
