@@ -1,6 +1,7 @@
 <template>
   <div>
     {{ msn }}
+    <img :src="link" alt="img" />
   </div>
 </template>
 
@@ -9,6 +10,8 @@ export default {
   data() {
     return {
       msn: "Outro componente footer",
+
+      link: "./src/assets/vuejs-nested.jpg",
     };
   },
   methods: {},

@@ -12,9 +12,6 @@
             <li>
               <router-link to="test"> Test </router-link>
             </li>
-            <li>
-              <router-link to="testccc"> Not Found </router-link>
-            </li>
           </ul>
         </nav>
         <div class="route-content">

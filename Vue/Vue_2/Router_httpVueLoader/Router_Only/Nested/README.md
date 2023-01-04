@@ -41,4 +41,7 @@ Fazendo slugs com array de objects no component filho, basicamente o slug aqui d
 </ol>
 ```
 
-Se tiver problemas quando estiver dentro de uma Nested router e precisar voltar para uma rota principal, sugiro verificar se está usando name nas rotas principais.
+Se tiver problemas quando estiver dentro de uma Nested router e precisar voltar para uma rota principal e se deparar com /contact/contact sugiro verificar se está usando :name nas rotas principais.
+e.g in
+
+- <img src="https://s3.amazonaws.com/cdn-content.geraldo.tech/img/vuejs-nested.jpg">

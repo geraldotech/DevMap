@@ -18,7 +18,9 @@
             </router-link>
           </li>
           <li>
-            <router-link class="nav-link" to="contact"> More </router-link>
+            <router-link class="nav-link" :to="{name: 'more'}">
+              More
+            </router-link>
           </li>
         </ul>
       </nav>
@@ -62,8 +64,9 @@
         { path: "/", component: Home },
         { path: "/about", name: "abo", component: About },
         {
-          path: "/contact",
+          path: "/more",
           component: mais,
+          name: "more",
 
           children: [
             { path: "pessoa-one-um", name: "pessoa-one", component: pessoa },

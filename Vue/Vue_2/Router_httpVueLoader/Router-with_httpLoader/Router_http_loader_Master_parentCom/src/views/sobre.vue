@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>about page loaded from router</h1>
+    <h1>About page</h1>
     <div>
       <img src="../src/assets/nova.jpg" alt="img" />
     </div>

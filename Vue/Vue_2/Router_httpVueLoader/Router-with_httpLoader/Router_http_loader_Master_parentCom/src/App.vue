@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>Parent Component</h1>
+    <h1>App.vue Parent Component</h1>
+    <h2>Starter Template by geraldox.com</h2>
     <Menua></Menua>
     <router-view></router-view>
     <Foo></Foo>

@@ -20,7 +20,8 @@ const routes = [
   { path: "/", component: Home },
   { path: "/about", name: "abo", component: About },
   {
-    path: "/contact",
+    path: "/more",
+    name: "more",
     component: mais,
 
     children: [

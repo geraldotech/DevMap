@@ -1,17 +1,16 @@
 import { options, loadModule } from "./sfc-loader.js";
 
 //varios components em uma const
-
 const app = Vue.createApp({
   data() {
     return {};
   },
   components: {
     "my-component": Vue.defineAsyncComponent(() =>
-      loadModule("./dist/myComponent.vue", options)
+      loadModule("./src/components/myComponent.vue", options)
     ),
     myHeader: Vue.defineAsyncComponent(() =>
-      loadModule("./dist/myHeader.vue", options)
+      loadModule("./src/components/myHeader.vue", options)
     ),
   },
   template: `Carregando components: <myHeader></myHeader>  <my-component></my-component>`,
@@ -29,24 +28,21 @@ const Myfooter = Vue.createApp({
   },
   components: {
     "my-footer": Vue.defineAsyncComponent(() =>
-      loadModule("./dist/footer.vue", options)
+      loadModule("./src/components/footer.vue", options)
     ),
     "my-novo": Vue.defineAsyncComponent(() =>
-      loadModule("./dist/outro.vue", options)
+      loadModule("./src/components/outro.vue", options)
     ),
   },
-  // Mount compoments Controller / pode escolher a ordem que é montado
+  // Mount "compoments Controller" / pode escolher a ordem que é renderizado
   template: `<my-novo></my-novo> <my-footer></my-footer> `,
 });
 
 //single component
 const extra = Vue.createApp({
-  data() {
-    return {};
-  },
   components: {
     extravue: Vue.defineAsyncComponent(() => {
-      return loadModule("./dist/extra.vue", options); // funciona sem return
+      return loadModule("./src/components/extra.vue", options); // funciona sem return
     }),
   },
   template: `<extravue></extravue>`,
@@ -66,9 +62,7 @@ const routes = [
   { path: "/route2", component: Port },
   {
     path: "/route3",
-    component: Vue.defineAsyncComponent(() =>
-      loadModule("./dist/radio.vue", options)
-    ),
+    component: () => loadModule("./src/views/radio.vue", options),
   },
   { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ];
@@ -81,9 +75,7 @@ const router = VueRouter.createRouter({
 });
 
 // Rotas const para que createapp
-const appR = Vue.createApp({});
-
-// Routers
+//const appR = Vue.createApp({});
 
 //appR.use(router);
 //appR.mount("#rotas"); //deve ser o ultimo apos o mount(router)

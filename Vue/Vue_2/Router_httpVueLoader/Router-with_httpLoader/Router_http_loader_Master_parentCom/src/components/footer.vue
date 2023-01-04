@@ -11,7 +11,7 @@
 module.exports = {
   data: function () {
     return {
-      ab: "by gmapdev - footer.vue - Footer Component",
+      ab: "by gmapdev - footer.vue",
     };
   },
 };

@@ -28,10 +28,9 @@
       const Home = { template: `<p>Home</p>` };
       const About = { template: `<p>About</p>` };
       //Nested
-      const tpessoa = { template: `<p>key one</p>` };
-      const tpessoa1 = `<p>key one</p>`;
-      const tpessoa22 = `<p>key two</p>`;
-      const tpessoa2 = { template: `<p>key two</p>` };
+
+      const tpessoa1 = `<p>key 1.0</p>`;
+      const tpessoa2 = `<p>key 2.0</p>`;
 
       const Contact = {
         template: `
@@ -40,7 +39,7 @@
           <router-link :to="{name:'keytwo', params: {name: 'subrota2'}}">Pessoa 2</router-link>
           
           <div v-if="$route.params.name == 'subrota'">${tpessoa1}</div>
-          <div v-if="$route.params.name == 'subrota2'">${tpessoa22}</div>         
+          <div v-if="$route.params.name == 'subrota2'">${tpessoa2}</div>         
 
           </div>`,
       };
@@ -53,8 +52,8 @@
           path: "/contact",
           component: Contact,
           children: [
-            { path: ":name", name: "keyone", component: tpessoa },
-            { path: ":name", name: "keytwo", component: tpessoa2 },
+            { path: ":name", name: "keyone" },
+            { path: ":name", name: "keytwo" },
           ],
         },
       ];
