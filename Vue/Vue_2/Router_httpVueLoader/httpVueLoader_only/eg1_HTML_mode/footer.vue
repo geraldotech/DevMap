@@ -1,18 +1,17 @@
 <template>
   <footer>
-    <p>footer</p>
+    <p>{{ f }}</p>
   </footer>
 </template>
 
 <script>
-/*
-requer module.exports... para logic
- module.exports = {
+module.exports = {
   data: function () {
-    return {};
+    return {
+      f: "Footer",
+    };
   },
-}; 
-*/
+};
 </script>
 
 <style scoped>

@@ -21,9 +21,7 @@ const options = {
 
 const { loadModule } = window["vue3-sfc-loader"];
 
-/*
-varios components em uma const
-*/
+//varios components em uma const
 
 const app = Vue.createApp({
   data() {
@@ -31,13 +29,13 @@ const app = Vue.createApp({
   },
   components: {
     "my-component": Vue.defineAsyncComponent(() =>
-      loadModule("./myComponent.vue", options)
+      loadModule("./components/myComponent.vue", options)
     ),
     myHeader: Vue.defineAsyncComponent(() =>
-      loadModule("./myHeader.vue", options)
+      loadModule("./components/myHeader.vue", options)
     ),
   },
-  template: `Carregando components: <myHeader></myHeader>  <my-component></my-component>`,
+  template: `Loading components: <myHeader/> <my-component/>`,
 });
 
 app.mount("#app");
@@ -52,7 +50,7 @@ const Myfooter = Vue.createApp({
   },
   components: {
     "my-footer": Vue.defineAsyncComponent(() =>
-      loadModule("./footer.vue", options)
+      loadModule("./components/footer.vue", options)
     ),
   },
   template: `<my-footer></my-footer>`,

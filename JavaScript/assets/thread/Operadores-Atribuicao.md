@@ -6,7 +6,7 @@
       https://www.javascriptprogressivo.net/2018/12/Operadores-Atribuicao-Como-Usar.html?m=1
 
 ```js
-//e.g x + y qual valor resultado adicionando o novo valor dentro do p´roprio x, substritindo o valor anterior de x?
+//e.g x + y qual valor do resultado adicionando o novo valor dentro do p´roprio x, substituindo o valor anterior de x?
 
 let [x, y] = [2, 8];
 //x = x + y; // é o mesmo que usar *=😀
