@@ -154,3 +154,8 @@ $route.params.name
           sidebar: Boolean,
         },
 ```
+
+# Links
+
+[Getting Started](https://router.vuejs.org/guide/)
+[Navigation Guards](https://router.vuejs.org/guide/advanced/navigation-guards.html)

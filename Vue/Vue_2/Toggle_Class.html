@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
     <script src="https://unpkg.com/http-vue-loader"></script>
@@ -13,9 +13,7 @@
         color-scheme: dark;
         box-sizing: border-box;
       }
-      html {
-        font-size: 150%;
-      }
+
       .red {
         color: red;
       }
@@ -28,14 +26,12 @@
     <section id="app">
       <label>
         <input type="checkbox" v-model="opt" />
-        {{opt ? 'ativado' : 'desativado'}}
+        {{opt ? 'ativado' : 'desativado'}} {{opt ? classe = 'red' : classe =
+        'purple'}}
       </label>
-      {{opt ? classe = 'red' : classe = 'purple'}}
+
       <h2 :class="classe">Costa</h2>
       <hr />
-
-      <p><a :href="hreflink" :target="target">{{hreflink}}</a></p>
-      <foo></foo>
     </section>
 
     <script>
@@ -43,19 +39,8 @@
         el: "#app",
         data: {
           active: "red",
-          link: "http://goo.com",
-          hreflink: "http://www.google.com",
-          target: "",
           opt: "",
           classe: "",
-        },
-        components: {
-          foo: httpVueLoader("./views/foo.vue"),
-        },
-        watch: {
-          opt() {
-            // this.opt ? (this.classe = "red") : (this.classe = "black");
-          },
         },
       });
     </script>

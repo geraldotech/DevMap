@@ -1,16 +1,16 @@
 <template>
   <div>
-    <p>{{ a }}</p>
+    <h1>DOWNLOAD.vue</h1>
   </div>
 </template>
+
 <script>
 module.exports = {
-  name: "foo",
   data() {
-    return {
-      a: "footer",
-    };
+    return {};
   },
 };
 </script>
 
+<style>
+</style>

@@ -18,7 +18,7 @@ Vue + Loader:
 
 ```
 
-## registrando components
+## Bad Way
 
 > > Do not use built-in or reserved HTML elements as component id: footer
 
@@ -84,14 +84,14 @@ E pra finalizar basta chamar o components no index.html dentro do #app ` <home><
 
 Deixando o index.html com poucas linhas registrando um component `pai` parent component, vamos chamar de `App.vue` e adotando a estrutura de pastas do Vue CLI o nosso projeto mesmo sendo via CDN terá uma estrutura profissional facilitando futuras manutenções, se pensou que poderia criar várias páginas HTML e chamar os `components` individualmente, sim também funciona, porém é mais inviável ainda, melhor implementar o Vue Router.
 
-## Procurar os exemplo nas respectivas pastas:
+## Exemplo nas respectivas pastas:
 
 - eg1_HTML_mode
 - eg2_HTML_mode
 
-## Modo mais adequado
+## Beautiful Way
 
-Na instância do Vue a propriedade `template` tem suporte apenas para um root element, e adivinha? será nosso `App.vue` sendo assim para renderizar o component não será necessário ir no index.html declarar a respectiva tag.
+Na instância do Vue a propriedade `template` tem suporte apenas para um root element, e como você deve imaginar será nosso `App.vue` sendo assim para renderizar esse component não será necessário ir no index.html declarar a respectiva tag `<App/>`.
 
 main.js
 
@@ -129,7 +129,7 @@ module.exports = {
 </script>
 ```
 
-## Procurar os exemplo nas respectivas pastas:
+## Exemplo nas respectivas pastas:
 
 - eg3_parentCom
 
@@ -148,7 +148,7 @@ Vue + Loader
     <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
 ```
 
-Consultar os exemplos prontos, há mais de uma maneira de fazer
+Consultar os exemplos, há mais de uma maneira de fazer
 
 export default + render()
 

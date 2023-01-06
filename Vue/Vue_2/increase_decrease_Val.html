@@ -1,0 +1,62 @@
+<html style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>VueJS</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Vue 2</h1>
+      <p v-if="4 > 8">teste</p>
+      <h1 v-if="working">Trabalhando</h1>
+      <h1 v-else="">Procurar vagas</h1>
+
+      <p v-show="mostrar_mail">{{email}}</p>
+
+      <button @click="addn">Hide Email / Add Working true</button>
+      <hr />
+      <div>
+        <button @click="increase">Adicionar</button>
+        <button @click="decrease">Diminuir</button>
+        <button @click="clear">Reset</button>
+        <p>{{counter}}</p>
+      </div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Geraldo",
+          link: "http://google.com",
+          counter: 0,
+          working: false,
+          input_res: "",
+          email: "geraldofilho@.com",
+          mostrar_mail: true,
+        },
+        methods: {
+          increase() {
+            this.counter++;
+          },
+          decrease() {
+            if (this.counter === 0) return;
+            this.counter--;
+          },
+          clear() {
+            this.counter = 0;
+          },
+          addn() {
+            this.mostrar_mail = false;
+            this.working = true;
+          },
+          submitForm(e) {
+            e.preventDefault();
+            this.name = this.input_name;
+          },
+        },
+      });
+
+      app.message = "Geraldo 2";
+    </script>
+  </body>
+</html>

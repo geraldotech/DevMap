@@ -1,3 +1,11 @@
+rotas consiste em
+
+- templates / components
+- map paths + templates / com
+- create Router instance
+- mount the instance
+- Set router-link + router-view
+
 Assim já faz o hash open direct
 
 ```js
