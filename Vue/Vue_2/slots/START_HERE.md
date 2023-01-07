@@ -2,8 +2,8 @@
 
 # slots turn more flexible and reusable
 
-Quando fazermos a reutilização de components e quiser adicionar alguma informação extra? devemos adicionar um slot no component
-Essa informação só vai aparecer caso o component carregando tenha esse suporte.
+informação só vai aparecer caso o component carregando tenha esse suporte.
+Fazendo o uso de reutilização de components para adicionar informações extra devemos usar slots.
 
 Também podemos passar outros components
 

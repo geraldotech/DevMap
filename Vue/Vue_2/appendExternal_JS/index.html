@@ -9,4 +9,13 @@
   </head>
   <body>
     <div id="app"></div>
+    <script>
+      const api = "https://jsvanilla-node-api-way.onrender.com/api/products";
+      async function get(url){
+        const req = await fetch(url).then(res => res.json());
+        console.log(req)
+      }
+
+      get("https://jsvanilla-node-api-way.onrender.com/api/products");
+    </script>
 </html>

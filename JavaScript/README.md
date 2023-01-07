@@ -11,10 +11,6 @@ Projects and Demos: [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 - **From Scratch by _Geraldo Filho_**
   [onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
 
-### Estrutura de dados
-
-- [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
-
 ## Extra Fast Code Cheats and examples
 
 <details>
@@ -789,8 +785,9 @@ document.querySelectorAll("section span")[1];
 - [childNodes.html](./assets/thread/childNodes.html)
 - [onbeforeunload.html](./assets/thread/onbeforeunload.html)
 
-## links:
+## Links:
 
+- <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures">Dada Structures</a>
 - [table operadores comparação/lógicos] <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">Alura </a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators">MDN</a>
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">\_cloneNode(true)</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math" target="_blank">table operadores matemáticos</a>
@@ -800,6 +797,7 @@ document.querySelectorAll("section span")[1];
 - <a href="https://twitter.com/ATechAjay/status/1606115109842976768">XOX operator</a>
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getcomputedstyle">getComputedStyle()</a>
   [CodePen](https://codepen.io/geraldopcf/pen/VwBvyPw)
+- [use strict](https://www.w3schools.com/js/js_strict.asp)
 
 ## Videos
 
