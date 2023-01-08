@@ -43,9 +43,12 @@ Error: production build (\*.prod.js) when deploying for production?: `https://un
 
 [routing.html#simple-routing-from-scratch](https://vuejs.org/guide/scaling-up/routing.html#simple-routing-from-scratch)
 
-## Vue properties
+## Lifecyle hooks
 
-- created() - hook
+[https://vuejs.org/guide/essentials/lifecycle.html](https://vuejs.org/guide/essentials/lifecycle.html)
+
+## Properties
+
 - methods
 - watch
 - computed
@@ -87,6 +90,7 @@ Atributos dinâmicos
     - <input type="text" @change="handleChange" />
     - <input type="text" @click="handleChange" />
     - <input type="text" @mouseover="handleChange" />
+    - <input type="text" v-model="nome" v-on:input="Complete" />
 
 now just create a method
 

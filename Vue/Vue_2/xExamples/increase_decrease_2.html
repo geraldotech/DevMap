@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="menos">Menos</button>
+      <button @click="more">Mais</button>
+      <button @click="reseta">Clean</button>
+      {{cont}}
+    </div>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          cont: 0,
+        },
+        methods: {
+          more() {
+            this.cont++;
+          },
+          menos() {
+            this.cont--;
+          },
+          reseta() {
+            this.cont = 0;
+          },
+        },
+        watch: {
+          cont() {
+            if (this.cont < 0) {
+              this.cont = 0;
+            }
+            if (this.cont > 10) {
+              this.cont = 10;
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

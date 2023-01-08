@@ -8,13 +8,22 @@
   </head>
   <body>
     <div id="app">
-      <p>{{a}}</p>
+      <input type="text" v-model="nome" @input="Complete" />
+      <p>{{nome}}</p>
+      <p>{{nome.length == 0 ? '' : FullName}}</p>
     </div>
     <script>
       new Vue({
         el: "#app",
         data: {
-          a: "sd",
+          nome: "",
+          FullName: "",
+        },
+        methods: {
+          Complete() {
+            return (this.FullName = this.nome + "@petronilo");
+            console.log("mudando");
+          },
         },
       });
     </script>

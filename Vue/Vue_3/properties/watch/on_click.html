@@ -15,28 +15,26 @@
       :root {
         color-scheme: dark;
       }
-
     </style>
   </head>
   <body>
-<p>quem controla a variable é o watch</p>
+    <p>quem controla a variable é o watch</p>
     <div id="app">
       <button @click="sum++">Increase++</button>
       <p>{{sum}}</p>
-        
     </div>
     <script>
       Vue.createApp({
         data() {
           return {
-            sum: '',
-         }
+            sum: "",
+          };
         },
-       watch:{
-        sum(){
-           if(this.sum > 5) this.sum = 5;
-         }
-       }
+        watch: {
+          sum() {
+            if (this.sum > 5) this.sum = 5;
+          },
+        },
       }).mount(app);
     </script>
   </body>

@@ -27,7 +27,6 @@
     </style>
   </head>
   <body>
-
     <div id="app">
       <select name="" id="select" v-model="selected">
         <option value="">Selecionar</option>
@@ -53,33 +52,34 @@
           />
         </div>
       </template>
-
     </div>
-  
+
     <script>
-  Vue.createApp({
-    data(){
-      return{
-        selected: "",
-        output: "",
-      }
-    },methods:{
-      verifica(){
-          this.output = this.selected; // para evitar o computed show automaticamente, transferencia de valor, atribuindo o select para 'output' que será analisada pelo computed
-      }      
-    },computed: {
-          netflix(){
-            if(this.output == '1'){
-              return this.netflix = true;
+      Vue.createApp({
+        data() {
+          return {
+            selected: "",
+            output: "",
+          };
+        },
+        methods: {
+          verifica() {
+            this.output = this.selected; // para evitar o computed show automaticamente, transferencia de valor, atribuindo o select para 'output' que será analisada pelo computed
+          },
+        },
+        computed: {
+          netflix() {
+            if (this.output == "1") {
+              return true;
             }
           },
-          amazon(){
-            if(this.output == '2'){
-              return this.amazon = true;
+          amazon() {
+            if (this.output == "2") {
+              return true;
             }
-          }
-        }
-  }).mount(app);
+          },
+        },
+      }).mount(app);
     </script>
   </body>
 </html>

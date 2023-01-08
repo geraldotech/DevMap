@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://technotesbr.blogspot.com/favicon.ico"
@@ -35,51 +34,56 @@
   </head>
   <body>
     <h1>VueJS - v-if - computed</h1>
-    <code>v-show doens't support the <mark><u>template</u></mark></code>
-<p>In comparison, v-show is much simpler - the element is always rendered regardless of initial condition, with <mark>CSS-based toggling</mark>, read more in <a href="https://vuejs.org/guide/essentials/conditional.html#v-show">vuejs.org</a></p>
-    
-<div id="app">        
+    <code
+      >v-show doens't support the <mark><u>template</u></mark></code
+    >
+    <p>
+      In comparison, v-show is much simpler - the element is always rendered
+      regardless of initial condition, with <mark>CSS-based toggling</mark>,
+      read more in
+      <a href="https://vuejs.org/guide/essentials/conditional.html#v-show"
+        >vuejs.org</a
+      >
+    </p>
+
+    <div id="app">
       <select name="" id="" v-model="selected">
         <option value="">Selecionar</option>
         <option value="1">NetFlix</option>
         <option value="2">Amazon Prime</option>
         <option value="3">Disney Plus</option>
       </select>
-      
+
       <h1 v-if="net">NetFlix</h1>
       <h1 v-if="ama">Amazon Prime</h1>
       <h1 v-if="dis">Disney Plus</h1>
-      
-        
     </div>
     <script>
-Vue.createApp({
-    data(){
-        return {
-            selected: "",             
-        }
-    },
-    methods:{
-       
-    },
-    computed:{
-      net(){
-        if(this.selected == '1'){
-          return this.net = true;
-        }
-      },
-      ama(){
-        if(this.selected == '2'){
-          return this.ama = true;
-        }
-      },
-      dis(){
-        if(this.selected == '3'){
-          return this.dis = true;
-        }
-      }
-    }
-}).mount(app);
- </script>
-</body>
+      Vue.createApp({
+        data() {
+          return {
+            selected: "",
+          };
+        },
+        methods: {},
+        computed: {
+          net() {
+            if (this.selected == "1") {
+              return true;
+            }
+          },
+          ama() {
+            if (this.selected == "2") {
+              return true;
+            }
+          },
+          dis() {
+            if (this.selected == "3") {
+              return true;
+            }
+          },
+        },
+      }).mount(app);
+    </script>
+  </body>
 </html>
