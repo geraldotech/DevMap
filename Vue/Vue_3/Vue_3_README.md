@@ -292,3 +292,5 @@ Envia dados para componentes, melhor uso para comportamento
 # slots
 
 Envia conteúdo extra para os componentes
+
+[Form Input Bindings](https://vuejs.org/guide/essentials/forms.html)
