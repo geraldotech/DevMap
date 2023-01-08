@@ -7,7 +7,7 @@ A base usando CDN:
 <script src="https://unpkg.com/vue-router@4"></script>
 ```
 
-O básico para criar uma rota usando component string template
+Básico para criar uma rota usando `component string template`
 
 ```js
 const { createRouter, createWebHashHistory, createWebHistory } = VueRouter;
