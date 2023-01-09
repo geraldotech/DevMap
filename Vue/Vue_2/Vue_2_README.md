@@ -51,9 +51,9 @@ new Vue({
 }).$mount("#app");
 ```
 
-### Data na Vue instance declar variable
+### Data na Vue instance declarar variable
 
-> > vm (short for ViewModel)
+> vm (short for ViewModel)
 
 ```js
 const vm = new Vue({
@@ -73,7 +73,7 @@ vm.a; //"ok"
 console.log(app.a); //"ok"
 ```
 
-Exemplo de dados
+> Exemplo de dados
 
 ```js
 <div id="app">{{name}}, {{idade}}, {{facul.curso}}</div>
