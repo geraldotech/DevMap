@@ -34,15 +34,6 @@ Vue.createApp({
 
 Error: production build (\*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
 
-## Vue Router CDN
-
-```js
-<script src="https://unpkg.com/browse/vue-router@3.0.2/dist/"></script>
-<script src="https://unpkg.com/vue-router@4"></script>
-```
-
-[routing.html#simple-routing-from-scratch](https://vuejs.org/guide/scaling-up/routing.html#simple-routing-from-scratch)
-
 ## Lifecyle hooks
 
 [https://vuejs.org/guide/essentials/lifecycle.html](https://vuejs.org/guide/essentials/lifecycle.html)

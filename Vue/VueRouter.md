@@ -1,60 +1,176 @@
-# VueJS Router From Scratch
+### Vue Router From Scratch
 
-A base usando CDN:
+repository for Vue Router
+[https://github.com/vuejs/router](https://github.com/vuejs/router)
+
+- [Router 3 for Vue 2](#router3)
+- [Router 4 for Vue 3](#router4)
+
+<hr>
+
+# Router 3
+
+<a name="router3"></a>
+
+[https://v3.router.vuejs.org/](https://v3.router.vuejs.org/)
+
+CDN
 
 ```js
-<script src="https://unpkg.com/vue@3"></script>
+<script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
+```
+
+```js
+<script src="https://unpkg.com/vue-router@3.6.5/dist/vue-router.js"></script>
+```
+
+- [Vue 2 Router article](https://shouts.dev/articles/vue-js-routing-from-scratch-using-cdn-without-cli)
+
+Básico para criar rota [https://v3.router.vuejs.org/guide/](https://v3.router.vuejs.org/guide/)
+
+Contextualizando Rotas:
+
+- use router-link component for navigation
+- render the components that matched
+- Define the route templates / components
+- Define map paths
+- Create the Router instance
+- Create and mount the root instance.
+- Set router-link + router-view
+
+```html
+<router-link to="/">Home Page</router-link>
+<router-link to="/youtube">Youtube</router-link> <br />
+<router-view></router-view>s
+```
+
+```js
+const Home = { template: `<p>Home Page</p>` };
+const youtube = { template: `<p>About Page</p>` };
+
+//maping the path
+
+const routes = [
+  { path: "/", component: Home },
+  { path: "/youtube", component: youtube },
+];
+
+const router = new VueRouter({
+  routes, // short for `routes: routes`
+});
+
+new Vue({
+  el: "#app",
+  router,
+});
+```
+
+# Tips
+
+Assim já faz o hash open direct
+
+```js
+
+var router = new VueRouter({
+  routes: routes,
+}
+```
+
+remove o hash
+
+```js
+mode: "history";
+```
+
+if add + mode history o hash permanece porém não abre direto nada muda
+
+```js
+base: "#";
+```
+
+only this = hash direct ok
+
+```js
+base: "#";
+```
+
+e se remove mode: history o hash volta open direct
+
+```js
+base: window.location.origin;
+```
+
+outras:
+
+```js
+base: "/#apps",
+base: "/app",
+```
+
+# Named views
+
+Sometimes you need to display multiple views at the same time instead of nesting them, e.g. creating a layout with a.... [https://v3.router.vuejs.org/guide/essentials/named-views.html#nested-named-views](https://v3.router.vuejs.org/guide/essentials/named-views.html#nested-named-views)
+
+## e.g na Home exibindo 2 components
+
+```js
+ { path: "/", components: { default: Home, yt: youtube } },
+
+ //HTML
+  <router-view name="yt"></router-view>
+```
+
+<hr>
+
+# Router 4
+
+<a name="router4"></a>
+
+[https://router.vuejs.org/](https://router.vuejs.org/)
+
+CDN
+
+```js
 <script src="https://unpkg.com/vue-router@4"></script>
 ```
 
-Básico para criar uma rota usando `component string template`
+[routing.html#simple-routing-from-scratch](https://vuejs.org/guide/scaling-up/routing.html#simple-routing-from-scratch)
+
+Básico para criar rota usando `component string template` na documentação oficial visitar [https://router.vuejs.org/guide/](https://router.vuejs.org/guide/)
 
 ```js
 const { createRouter, createWebHashHistory, createWebHistory } = VueRouter;
 const { createApp } = Vue;
 
-const app = createApp({
-  data() {
-    return {
-      Title: "VueJS Ninja Way",
-    };
-  },
-});
-
 // String templates
+const Home = { template: `<p>Home Page</p>` };
 const Youtube = { template: `<p>Youtube Page</p>` };
 
-//Router
+//map the component
+// We'll talk about nested routes later.
+const routes = [
+  { path: "/", component: Home },
+  { path: "/youtube", component: Youtube },
+];
+
 const router = createRouter({
   history: createWebHashHistory(location.pathname),
-  routes: [{ path: "/youtube", component: Youtube }],
+  routes: routes,
 });
-
+//create and mount the root instance
+const app = createApp({});
 app.use(router).mount("#app");
 ```
 
 HTML:
 
 ```html
+<router-link to="/">Home Page</router-link>
 <router-link to="/youtube">Youtube</router-link> <br />
 <router-view></router-view>
 ```
 
-Criando uma rota raiz: root adicionando uma Home Page:
-
-```js
-
-//component string template
-  const Home = { template: `<p>Home Page</p>` };
-
-//rota
- { path: "/youtube", component: Youtube }
-
-//html
-<router-link to="/">Home Page</router-link>
-```
-
-Para remover o #/ altera para:
+Para remover o #/ alterar para:
 
 `history: createWebHistory(),`
 

@@ -1,12 +1,23 @@
 ## Vue 2 CDN
 
-[https://v2.vuejs.org/v2/guide/installation.html](https://v2.vuejs.org/v2/guide/installation.html)
+## Documentation
+
+[https://v2.vuejs.org/v2/guide/installation.html](https://v2.vuejs.org/v2/guide/installation.html) or [ptbr](https://br.vuejs.org/v2/guide/installation.html)
 
 ```js
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
 
-//latest version:
-<script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+### Development Version:
+
+2.7.14
+
+```js
+https://v2.vuejs.org/js/vue.js
+```
+
+```js
+https://cdn.jsdelivr.net/npm/vue/dist/vue.js
 ```
 
 ### Prodution:
@@ -14,21 +25,6 @@
 ```js
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script>
 ```
-
-### Vue Router
-
-Segundo [esse site](https://github.com/vuejs/router)
-
-- Router 3 para VueJS 2/3
-- Router 4 para Vue JS 3
-
-[https://cdnjs.com/libraries/vue-router](https://cdnjs.com/libraries/vue-router)
-
-```js
-<script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
-```
-
-[Vue 2 Router](https://shouts.dev/articles/vue-js-routing-from-scratch-using-cdn-without-cli)
 
 # The Vue Instance
 
@@ -192,6 +188,136 @@ console.log(vm.a); //5
    hreflink: "http://www.google.com",
         },
 
+```
+
+# Registrando components no HTML
+
+- [https://v2.vuejs.org/v2/guide/components.html](https://v2.vuejs.org/v2/guide/components.html)
+- [https://v2.vuejs.org/v2/guide/components-registration.html](https://v2.vuejs.org/v2/guide/components-registration.html)
+
+> > Registrar fora da root instance
+
+```js
+//the component
+ Vue.component("myd-content", {
+        template: "#baixar",
+        data() {
+          return {
+            we: "Welcome",
+            list: [
+              { id: 1, name: "A" },
+              { id: 2, name: "B" },
+              { id: 3, name: "C" },
+            ],
+          };
+        },
+      });
+
+//No router
+const Download = Vue.component("myd-content");
+
+//No html
+<template id="baixar">
+      <div>
+        <p>{{we}}</p>
+        <ul>
+          <li v-for="(item, index) in list" :key="item.name">{{item.name}}</li>
+        </ul>
+      </div>
+</template>
+```
+
+Outras possibilidades:
+
+```js
+Vue.component("myd-content", {
+  template: `<p>Baixe now Page {{we}}</p>`,
+  data() {
+    return {
+      we: "Welcome",
+    };
+  },
+});
+//usando uma string
+const Baixar = `<p>Baixe now Page</p>`;
+
+Vue.component("myd-content", {
+  template: Baixar,
+  data() {
+    return {
+      we: "Welcome",
+    };
+  },
+});
+
+//importando, porém como você já sabe e se esquecer o erros vão te fazer lembrar, precisamos do nosso code em um arquivo separado + type module para fazer importações
+
+import baixar from "./baixar.js";
+
+Vue.component("myd-content", {
+  template: baixar,
+  data() {
+    return {
+      we: "Welcome",
+      list: [
+        { id: 1, name: "A" },
+        { id: 2, name: "B" },
+        { id: 3, name: "C" },
+      ],
+    };
+  },
+});
+
+//baixar.js
+const baixar = `
+<div>
+<p>{{we}}</p>
+<ul>
+  <li v-for="(item, index) in list" :key="item.name">{{item.name}}</li>
+</ul>
+</div>
+`;
+
+export default baixar;
+
+
+//importando nível Ninja
+
+//baixar.js
+const baixar = `
+<div>
+<p>{{we}}</p>
+<ul>
+  <li v-for="(item, index) in list" :key="item.name">{{item.name}}</li>
+</ul>
+</div>
+`;
+
+const baixe = Vue.component("myd-content", {
+  template: baixar,
+  data() {
+    return {
+      we: "Welcome",
+      list: [
+        { id: 1, name: "A" },
+        { id: 2, name: "B" },
+        { id: 3, name: "C" },
+      ],
+    };
+  },
+});
+
+export default baixe;
+
+
+//main.js
+import baixe from "./baixar.js";
+
+//no path vai definir direto
+ { path: "/download", component: baixe },
+
+ //📍❌Apenas importando o arquivo sem chamar, caso esteja usando Vue.component, o mesmo será detectado automaticamente, porém vai é necessário Vue.component em cada arquivo o que deixa nosso code BAD
+  { path: "/download", component: Vue.component("myd-content") },
 ```
 
 ### guide
