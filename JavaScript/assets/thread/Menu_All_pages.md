@@ -12,7 +12,7 @@ Definir a tag parent:
 Fazer um map, a div aqui serve para todos os links ser display:block, `.html` para definir a extensão, agora criar as pages HTML correspondentes aos itens do Array.
 
 ```js
-const arr = ["home", "about", "contact"];
+const arr = ["index", "about", "contact"];
 
 document.getElementById("list").innerHTML = arr
   .map((val) => `<div><a href="${val}.html">${val}</a></div>`)
@@ -61,7 +61,7 @@ document.querySelector("select").onchange = (e) => {
 
 👉select HTML parent:
 
-`<select id="mylist"></select>`
+`<select id="list"></select>`
 
 ```js
 document.getElementById("mylist").innerHTML = arr.map(
