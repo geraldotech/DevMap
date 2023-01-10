@@ -69,7 +69,7 @@ document.getElementById("mylist").innerHTML = arr.map(
 );
 ```
 
-👉definindo `onchange` para todos os select do DOM
+👉Definindo `onchange` para todos os select do DOM
 
 ```js
 const todos = document.querySelectorAll("select");
@@ -81,10 +81,23 @@ todos.forEach((val) => {
 });
 ```
 
-Almost perfect! se não fosse pelo index.html no modo `select` sempre chamando ele mesmo `index.html`, então na primeira posição do Arr vamos deixar vazio:  
+Almost perfect! se não fosse pelo `index.html` no modo `select` sempre chamando ele mesmo , então na primeira posição do Arr vamos deixar vazio:  
 `const arr = ["", "index", "about", "contact"];`
 
 🙂Okay works!
+
+🔰e.g + Full Code: https://gmapdev.netlify.app/docs_demo/js_list_menu/eg1_select/
+
+👉Se quiser deixar tudo mais dinâmico, podemos criar a tag do nosso menu em todas as páginas e adotar esse padrão para os exemplos a seguir:
+
+```js
+//create nav + id em todas as páginas
+const nav = document.createElement("nav");
+nav.setAttribute("id", "list");
+document.body.append(nav);
+```
+
+🔰e.g + Full Code: https://gmapdev.netlify.app/docs_demo/js_list_menu/eg1_createElement/
 
 # eg 2: Array de Objetos
 
@@ -106,8 +119,9 @@ document.getElementById("list").innerHTML = menu
 
 # eg 3:
 
-🔰e.g 3 - solution `template literal` semi-automática, contudo sempre escrever toda estrutura do href, porém ainda é uma solução dinâmica
-toda page criar uma chamada: `<nav id="list"></nav>`
+🔰e.g 3 - solution `template literal` semi-automático, contudo sempre escrever toda estrutura do href, porém ainda é uma solução dinâmica, toda page criar uma chamada:
+
+- `<nav id="list"></nav>`
 
 ```js
 const mymenu = `<a href="index.html">Home</a> <a href="about.html">About</a> <a href="contact.html">Contact</a>`;
@@ -117,8 +131,6 @@ document.getElementById("list").innerHTML = mymenu;
 🔰e.g 3 + Full Code: https://gmapdev.netlify.app/docs_demo/js_list_menu/eg3/
 
 # e.g 4 usando multiple fun return and Object
-
-🔰e.g 4 + Full Code: https://gmapdev.netlify.app/docs_demo/js_list_menu/eg4/
 
 ```js
 //Nested version by gmap
@@ -144,15 +156,40 @@ console.log();
 list.innerHTML = Object.values(getValores()).join("");
 ```
 
-# e.g 5 template literals
+🔰e.g 4 + Full Code: https://gmapdev.netlify.app/docs_demo/js_list_menu/eg4/
+
+# e.g 5 Template Literals
 
 Além de menu dinâmico, pode incluir páginas a partir de strings com custom tags
+
+```js
+//components
+const footer = `<p>My footer</p>`;
+const menu = [
+  { nome: "Home", path: "index.html" },
+  { nome: "About", path: "about.html" },
+];
+
+//load data
+const fo = document.querySelector("foo");
+
+if (fo) {
+  //se a tag existir
+  fo.innerHTML = footer;
+}
+
+document.querySelector("nav").innerHTML = menu
+  .map((val) => `<a href="${val.path}">${val.nome}</a>`)
+  .join("");
+```
+
+Basta em cada página criar `<nav></nav> <foo></foo>`
 
 🔰e.g 5 + Full Code: https://gmapdev.netlify.app/docs_demo/js_list_menu/eg5/
 
 # e.g 6 using Ajax
 
-menu dinâmico, include .html files parece tão obvio, e não podemos deixar de listar essa recurso visite a session de Ajax [https://github.com/geraldotech/DevMap/tree/main/JavaScript/AJAX/Ajax_menu](https://github.com/geraldotech/DevMap/tree/main/JavaScript/AJAX/Ajax_menu)
+Menu dinâmico, include .html files parece tão obvio, e não podemos deixar de listar essa recurso visite a session de Ajax [https://github.com/geraldotech/DevMap/tree/main/JavaScript/AJAX/Ajax_menu](https://github.com/geraldotech/DevMap/tree/main/JavaScript/AJAX/Ajax_menu)
 
 # e.g 7 using Fetch
 
@@ -163,10 +200,10 @@ menu dinâmico, include .html files parece tão obvio, e não podemos deixar de 
 
 Versão antigas do AngularJS mesmo na versão CDN conta com o recurso de ng-includes
 
-# e.g 9
+# e.g 9 VueJS Loader component
 
-Versão CDN podemos carregar um component de forma dinâmica `VueJS loader component`
+Mesmo na versão CDN podemos carregar um component de forma dinâmica
 
-# e. 10
+# e. 10 tag `object`
 
-Versão do princípio++ usando apenas HTML com a tag `object` deveriamos ter conhecimento do poder essa tag que pode fazer o papel de includes [https://gmapdev.netlify.app/html/](https://gmapdev.netlify.app/html/)
+Versão do princípio++ usando apenas HTML deveriamos ter conhecimento do poder essa tag que pode fazer o papel de includes [https://gmapdev.netlify.app/html/](https://gmapdev.netlify.app/html/)
