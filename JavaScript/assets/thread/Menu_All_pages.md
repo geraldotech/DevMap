@@ -9,7 +9,7 @@ Make links with Array using `nav` and `select` I don't have to edit the code on 
 Definir a tag parent:  
 `<nav id="list"></nav>`
 
-Fazer um map, a div aqui serve para todos os links ser display:block, `.html` para definir a extensão, agora criar as pages HTML correspondentes aos itens do Array.
+Fazer um map, a div aqui serve para todos os links ser display:block, `.html` para definir a extensão, agora criar as pages HTML correspondentes.
 
 ```js
 const arr = ["index", "about", "contact"];
@@ -35,8 +35,8 @@ arr.map((val, ind) => {
 });
 ```
 
-👉select version direct
-parent `select` depois um map colocando todos os itens no `option` com value + extension .html
+👉`select` version direct
+parent depois um map colocando todos os itens no `option + value` + .html
 
 ```js
 document.getElementById("list").innerHTML = `
@@ -48,7 +48,7 @@ document.getElementById("list").innerHTML = `
      `;
 ```
 
-Fazer as pages.html e atribuir um event no select, claro que no Array a string poderia ser "mypage.html" o que seria dispensável adicionar .html posteriormente.
+Fazer às pages e atribuir um event no select, claro que no Array a string poderia ser "mypage.html" o que seria dispensável adicionar .html posteriormente.
 
 ```js
 document.querySelector("select").onchange = (e) => {
@@ -206,4 +206,4 @@ Mesmo na versão CDN podemos carregar um component de forma dinâmica
 
 # e. 10 tag `object`
 
-Versão do princípio++ usando apenas HTML deveriamos ter conhecimento do poder essa tag que pode fazer o papel de includes [https://gmapdev.netlify.app/html/](https://gmapdev.netlify.app/html/)
+Versão do princípio++ usando apenas HTML deveriamos ter conhecimento do poder essa tag que pode fazer o papel de includes [https://gmapdev.netlify.app/html/#object](https://gmapdev.netlify.app/html/#object)
