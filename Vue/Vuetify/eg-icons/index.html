@@ -19,7 +19,26 @@
   <body>
     <div id="app">
       <v-app width="400" class="mx-auto mt-5">
-        <h1 class="display-1">Hello</h1>
+        <v-bottom-navigation color="primary" v-model="value">
+          <v-btn to="/">
+            <span>Home</span>
+            <v-icon>mdi-home</v-icon>
+          </v-btn>
+          <v-spacer></v-spacer>
+
+          <v-btn to="youtube">
+            <span>Mobile</span>
+            <v-icon>mdi-network-strength-4</v-icon>
+          </v-btn>
+          <v-btn to="wifi">
+            <span>Wifi</span>
+            <v-icon>mdi-wifi-star</v-icon>
+          </v-btn>
+        </v-bottom-navigation>
+        <v-divider></v-divider>
+        <v-container width="400" class="mx-auto mt-5">
+          <router-view></router-view>
+        </v-container>
       </v-app>
     </div>
 

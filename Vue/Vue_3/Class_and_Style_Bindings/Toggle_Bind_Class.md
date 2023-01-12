@@ -15,7 +15,7 @@
 3 - in data:
 <a> `data() { return { isActive: false, }; </a>
 
-4 - Get Better Toggle button name:
+4 - Toggle button name:
 <button @click="isActive = !isActive">
   {{isActive ? 'ativado' : 'desativado'}}
 </button>
@@ -26,52 +26,46 @@
 
 Outra forma diferente com checkbox de fazer é atribuir uma `var` com `v-model` na input caso queira uma classe padrão, e um `watch` quando a `var` mudar atribuir um novo valor à `var` que está no bind da classe
 
+6 - CSS:
+.active {
+color: green;
+}
+.padrao {
+text-decoration: underline blue;
+}
+
 ```js
-
-<h1 :class="static">My title</h1>
-
-<label>
-        <input type="checkbox" v-model="ativa" />
-        {{ativa ? 'ativado' : 'desativado'}}
-</label>
+👉Multiclass
+ <input type="checkbox" v-model="ativa" id="to" />
+<label for="to">Toogle</label>
+<h1 :class="{'static': ativa, 'active': ativa }">My title</h1>
 
 
 
-        data() {
+data() {
           return {
             ativa: false,
             static: "",
           };
         },
-        methods: {},
         watch: {
           ativa() {
             this.ativa ? (this.static = "active") : (this.static = "");
           },
-        },
+      },
 
+👉ou usar chamar um `method`
 
-👉ou usar chamar um method
+       <input type="checkbox" v-model="ativa" id="to" />
+      <label for="to">Toogle</label>
+      <h1 :class="{'static': ativa, 'active': ativa }">My title</h1>
 
-        data() {
+          data() {
           return {
             ativa: false,
             static: "",
           };
         },
-        methods: {
-          ativar() {
-            this.ativa ? (this.static = "active") : (this.
-static = "");
-          },
-        },
-        watch: {
-          ativa() {
-            this.ativar();
-          },
-        },
-
-👉  `static` onde ficou vázio podemos definir um default class
 
 👉 checkbox using methods
 
@@ -95,7 +89,7 @@ static = "");
       }).mount(app);
 ```
 
-Multiclass
+Multiple Values
 
 ```js
 
@@ -118,4 +112,67 @@ Multiclass
             this.hasError = !this.hasError;
           },
         },
+```
+
+Arrays e.g from [vuejs...](https://vuejs.org/guide/essentials/class-and-style.html#binding-html-classes)
+
+```js
+👉CSS
+  .active {
+        color: green;
+      }
+      .erroClass {
+        text-decoration: underline blue;
+      }
+
+👉HTML
+
+<div id="app">
+      <button @click="isActive = !isActive">Toggle</button>
+      <!--
+        Em Array ocorre o inverso esta ativo? ok, senão em branco, e ainda a classe default é erroClass
+      -->
+      <div :class="[isActive ? active : '', erroClass]">
+        Lorem ipsum dolor sit damet consectetur adipisicing elit. Aliquid odio
+      </div>
+</div>
+
+👉JS
+
+        data() {
+          return {
+            isActive: false,
+            erroClass: "erroClass",
+            active: "active",
+          };
+        },
+
+
+```
+
+# Binding to Objects
+
+```
+👉CSS:
+.verde {
+        color: green;
+      }
+      .red {
+        color: red;
+      }
+
+👉html:
+ <h1 :class="css.ver">Binding multiple classes</h1>
+      <h2 :class="css.verm">Isabella</h2>
+
+👉JS:
+ data() {
+          return {
+            css: {
+              ver: "verde",
+              verm: "red",
+            },
+          };
+        },
+
 ```

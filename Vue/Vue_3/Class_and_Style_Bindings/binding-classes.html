@@ -5,32 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VueJS</title>
     <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      .verde {
+        color: green;
+      }
+      .red {
+        color: red;
+      }
+      .static {
+        text-decoration: underline blue;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
-      <input :value="text" @input="event => text = events.target.value" />
+      <h1 :class="css.ver">Binding classes</h1>
+      <h2 :class="css.verm">Isabella</h2>
     </div>
 
     <script>
       const app = Vue.createApp({
         data() {
           return {
-            text: "itemss",
+            css: {
+              ver: "verde",
+              verm: "red",
+            },
           };
         },
-        methods: {
-          mudar() {
-            app.element = "s";
-          },
-        },
       }).mount("#app");
-
-      console.error("s");
-      console.warn("s");
-      console.log("s");
-      console.debug("Geraldo");
-      console.dir("Geraldo");
-      console.info("Pel");
     </script>
   </body>
 </html>

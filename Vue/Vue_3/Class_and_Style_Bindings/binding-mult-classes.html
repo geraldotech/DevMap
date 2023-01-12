@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+      .verde {
+        color: green;
+      }
+      .red {
+        color: red;
+      }
+      .static {
+        text-decoration: underline blue;
+      }
+      .flex {
+        display: flex;
+        color: coral;
+        justify-content: space-around;
+      }
+      .s1 {
+        font-size: 1.5rem;
+      }
+      .s2 {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p :class="css[0].red">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+      </p>
+      <p :class="css[0].ver">Lorem ipsum dolor sit amet.</p>
+      <ul :class="css[1].dflex">
+        <li>1</li>
+        <li>2</li>
+      </ul>
+      <a
+        href="https://vuejs.org/guide/essentials/class-and-style.html#binding-html-classes"
+        >bind class to an Array of multiple style objects</a
+      >
+      <p :class="[sass.txt.rxx, sass.color.ver]">Geraldo</p>
+    </div>
+
+    <script>
+      /*
+      exemplo usando Array e Objetos
+      */
+      const app = Vue.createApp({
+        data() {
+          return {
+            css: [
+              { id: 1, red: "red", ver: "verde" },
+              { id: 2, dflex: "flex", d: "none" },
+            ],
+            sass: {
+              txt: {
+                rx: "s1",
+                rxx: "s2",
+              },
+              color: {
+                ver: "verde",
+                red: "red",
+              },
+            },
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
