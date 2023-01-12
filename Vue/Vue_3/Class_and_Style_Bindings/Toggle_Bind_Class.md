@@ -5,6 +5,8 @@
 
 <hr>
 
+## Binding to Objects
+
 ```html
 1 - :bind the class and set class to isActive Booelan:
 <h1 :class="{active: isActive}">My title</h1>
@@ -22,17 +24,12 @@
 
 5 - Set a default class
 <h1 class="static" :class="{active: isActive}">My title</h1>
+
+6 - 👉CSS: .active { color: green; } .padrao { text-decoration: underline blue;
+}
 ```
 
-Outra forma diferente com checkbox de fazer é atribuir uma `var` com `v-model` na input caso queira uma classe padrão, e um `watch` quando a `var` mudar atribuir um novo valor à `var` que está no bind da classe
-
-6 - CSS:
-.active {
-color: green;
-}
-.padrao {
-text-decoration: underline blue;
-}
+Outra forma diferente usando checkbox é atribuir uma `var` com `v-model` na input caso queira uma classe padrão, e um `watch` quando a `var` mudar atribuir um novo valor à `var` que está no bind da classe.
 
 ```js
 👉Multiclass
@@ -40,8 +37,7 @@ text-decoration: underline blue;
 <label for="to">Toogle</label>
 <h1 :class="{'static': ativa, 'active': ativa }">My title</h1>
 
-
-
+👉JS
 data() {
           return {
             ativa: false,
@@ -114,6 +110,8 @@ Multiple Values
         },
 ```
 
+# Binding to Arrays
+
 Arrays e.g from [vuejs...](https://vuejs.org/guide/essentials/class-and-style.html#binding-html-classes)
 
 ```js
@@ -146,13 +144,11 @@ Arrays e.g from [vuejs...](https://vuejs.org/guide/essentials/class-and-style.ht
             active: "active",
           };
         },
-
-
 ```
 
-# Binding to Objects
+Multiple Values
 
-```
+```js
 👉CSS:
 .verde {
         color: green;
