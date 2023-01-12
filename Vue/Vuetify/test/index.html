@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
+    <title>Vuetify</title>
+  </head>
+  <body>
+    <div id="app">
+      <v-app width="400" class="mx-auto mt-5">
+        <v-bottom-navigation color="primary" v-model="value">
+          <v-btn to="/">
+            <span>Home</span>
+            <v-icon>mdi-home</v-icon>
+          </v-btn>
+          <v-btn to="youtube">
+            <span>Mobile</span>
+            <v-icon>mdi-network-strength-4</v-icon>
+          </v-btn>
+          <v-btn to="wifi">
+            <span>Wifi</span>
+            <v-icon>mdi-wifi-star</v-icon>
+          </v-btn>
+        </v-bottom-navigation>
+        <v-divider></v-divider>
+        <v-container width="400" class="mx-auto mt-5">
+          <router-view></router-view>
+        </v-container>
+      </v-app>
+    </div>
+    <a href="https://www.youtube.com/watch?v=8eCoSsTNzG4">ref</a>
+    <script src="./main.js"></script>
+  </body>
+</html>

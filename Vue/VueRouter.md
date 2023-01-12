@@ -41,7 +41,7 @@ Contextualizando Rotas:
 ```html
 <router-link to="/">Home Page</router-link>
 <router-link to="/youtube">Youtube</router-link> <br />
-<router-view></router-view>s
+<router-view></router-view>
 ```
 
 ```js

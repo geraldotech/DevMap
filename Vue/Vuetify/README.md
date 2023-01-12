@@ -1,0 +1,52 @@
+[https://vuetifyjs.com/en/getting-started/installation/#font-installation](https://vuetifyjs.com/en/getting-started/installation/#font-installation)
+
+[https://materialdesignicons.com/](https://materialdesignicons.com/)
+
+CDN:
+
+```js
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+```
+
+Basic:
+
+```js
+new Vue({
+  el: "#app",
+  vuetify: new Vuetify(),
+  data: {},
+});
+```
+
+Dark Mode:
+
+```js
+vuetify: new Vuetify({
+    theme: { dark: true },
+  }),
+```
+
+Button:
+
+> must wrap it in a v-app component
+
+```js
+//width: 100%
+<v-app>
+    <v-btn>Button</v-btn>
+</v-app>
+
+//width: container size
+    <v-app>
+        <v-container>
+          <v-btn>Button</v-btn>
+        </v-container>
+      </v-app>
+//button color //color => https://vuetifyjs.com/en/features/theme/
+ <v-app>
+        <v-container>
+          <v-btn color="warning">Button</v-btn>
+        </v-container>
+</v-app>
+```

@@ -5,64 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VueJS2</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <style>
-      input {
-        display: inline-block;
-      }
-      label,
-      input {
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
-    <div id="app">
-      <h2>Bermudas - R$ <span>{{price}}</span></h2>
-      <p>Quant: {{total}}</p>
-      <button @click="total++">Adicionar</button>
-      <button @click="total--">Remover</button>
-      <h2>Forma de pagamento:</h2>
-      <label>
-        <input
-          type="radio"
-          value="1"
-          name="opt[1]"
-          v-model="sel"
-          checked="true"
-        />
-        Crédito
-      </label>
-      <p></p>
-      <label>
-        <input type="radio" value="2" name="opt[1]" v-model="sel" />
-        PIX - Ganhe {{desconto}}% desconto
-      </label>
-      <p></p>
-
-      <div>
-        <span v-if="sel == '1'">
-          <p>Descontos: 0</p>
-          <p>Total: {{price * total}}</p>
-        </span>
-        <p></p>
-        <span v-if="sel == '2'">
-          <p>Descontos: {{desconto}}%: {{desconto * price * total / 100}}</p>
-          <p>Total: {{price * total - desconto * price * total / 100}}</p>
-        </span>
-      </div>
-    </div>
+    <div id="app"></div>
     <script>
       const vm = new Vue({
         el: "#app",
         data: {
-          price: 65,
-          total: 0,
-          desconto: 10,
-          sel: "",
+          sele: "",
+        },
+        filters: {
+          pegaId(data) {
+            const attr = data.filter((val) => val.getAttribute("data"));
+            return attr;
+          },
+        },
+        methods: {
+          funone(e) {},
         },
       });
-      //default radio
-      //vm.sel = "1";
     </script>
   </body>
 </html>

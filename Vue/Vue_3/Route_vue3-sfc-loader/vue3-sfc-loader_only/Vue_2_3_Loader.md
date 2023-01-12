@@ -3,7 +3,7 @@
 - `httpVueLoader` e `vue3-sfc-loader` são loaders do Vue o último funciona no Vue 2/3
 
 - [Vue_2 httpVueLoader](#vue2)
-- [Vue_3](#vue3)
+- [Vue_3 SFC - Single File Component](#vue3)
 
 Considerações:
 
