@@ -1,5 +1,7 @@
 [https://vuetifyjs.com/en/getting-started/installation/#font-installation](https://vuetifyjs.com/en/getting-started/installation/#font-installation)
 
+[https://next.vuetifyjs.com/en/getting-started/installation/](https://next.vuetifyjs.com/en/getting-started/installation/)
+
 [https://materialdesignicons.com/](https://materialdesignicons.com/)
 
 CDN:

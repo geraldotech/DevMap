@@ -19,17 +19,32 @@ new Vue({
     theme: { dark: true },
   }),
   data: {
-    value: "",
-    opt: "",
+    ativo: false,
+    primo: "primary",
+    mudar: false,
+    loading: false,
+    box: false,
+    combo: "",
+    radio: "",
+    select: { state: "Florida", abbr: "FL" },
+    items: [
+      { state: "Florida", abbr: "FL" },
+      { state: "Georgia", abbr: "GA" },
+    ],
   },
   methods: {
     dados(e) {
       console.log(e.target);
     },
+    classe() {
+      this.primo = "primary";
+    },
   },
   watch: {
-    navegar() {
-      this.dados(event);
+    loading() {
+      setTimeout(() => {
+        this.loading = false;
+      }, 1000);
     },
   },
 });

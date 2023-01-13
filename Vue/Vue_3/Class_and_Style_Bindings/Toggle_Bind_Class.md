@@ -1,7 +1,7 @@
 # ToggleClass Like a Pro
 
-[link1](https://vuejs.org/guide/essentials/class-and-style.html#binding-html-classes)
-[link2](https://renatello.com/vue-js-toggle-class/)
+[vuejs guide](https://vuejs.org/guide/essentials/class-and-style.html#binding-html-classes)
+[link 2](https://renatello.com/vue-js-toggle-class/)
 
 <hr>
 

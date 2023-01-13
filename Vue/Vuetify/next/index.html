@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@mdi/font@6.x/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@vuetify/nightly@3.1.2-next-20230112.0/dist/vuetify.css"
+    />
+    <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+
+    <script src="https://unpkg.com/@vuetify/nightly@3.1.2-next-20230112.0/dist/vuetify.js"></script>
+    <script src="https://unpkg.com/@vuetify/nightly@3.1.2-next-20230112.0/dist/vuetify.js"></script>
+    <script type="text/x-template" id="app-template">
+      <v-app>
+        <v-select
+          v-model="select"
+          :hint="`${select.state}, ${select.abbr}`"
+          :items="items"
+          item-title="state"
+          item-value="abbr"
+          label="Select"
+          persistent-hint
+          return-object
+        ></v-select>
+      </v-app>
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      const { createApp } = Vue;
+      const { createVuetify } = Vuetify;
+
+      const vuetify = createVuetify();
+
+      const app = createApp({
+        template: "#app-template",
+        data() {
+          return {
+            select: { state: "Florida", abbr: "FL" },
+            items: [
+              { state: "Florida", abbr: "FL" },
+              { state: "Georgia", abbr: "GA" },
+              { state: "Nebraska", abbr: "NE" },
+              { state: "California", abbr: "CA" },
+              { state: "New York", abbr: "NY" },
+            ],
+          };
+        },
+      })
+        .use(vuetify)
+        .mount("#app");
+    </script>
+  </body>
+</html>
