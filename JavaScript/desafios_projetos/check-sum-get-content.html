@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Check sum get content</title>
+  </head>
+  <body>
+    <div>
+      <span id="x"></span> +
+      <span id="y"></span>
+      = ?
+    </div>
+    <input type="number" />
+    <button>Check</button>
+    <div id="res"></div>
+  </body>
+  <script>
+    const res = document.getElementById("res");
+
+    function redirect() {
+      document.getElementById("res").innerHTML = `Loading...`;
+      setTimeout(() => {
+        window.location.href = "https://www.youtube.com/watch?v=jJ2d1FJRv3E";
+      }, 2000);
+    }
+
+    function gerar() {
+      return Math.floor(Math.random() * 10);
+    }
+
+    let [x, y] = [gerar(), gerar()];
+    /*
+      function gerar() {
+      let n = Math.floor(Math.random() * 10);
+      let x = Math.floor(Math.random() * 10);
+      return [n, x];
+    }
+
+    let [x, y] = gerar();
+    */
+    console.log(x, y);
+    document.getElementById("x").innerHTML = x;
+    document.getElementById("y").innerHTML = y;
+
+    const input = document.querySelector("input");
+    const btn = document.querySelector("button");
+
+    btn.onclick = function () {
+      const str = +input.value;
+      const sum = x + y;
+
+      if (str == sum) {
+        //document.getElementById("res").innerHTML = `Your content goes here!!!`;
+        redirect();
+        return;
+      }
+      res.innerHTML = `wrong!`;
+      setTimeout(() => {
+        res.innerHTML = "";
+        input.value = "";
+      }, 2000);
+    };
+  </script>
+</html>

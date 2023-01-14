@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /*necessario registrar as strings*/
+      :root {
+        --background-color: #fff;
+        --text-color: black;
+      }
+
+      body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+      div {
+        margin-top: 40px;
+      }
+      a {
+        display: block;
+        color: var(--text-color);
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, id.</p>
+    <input type="checkbox" id="opt" />
+    <label for="opt">checkbox</label>
+
+    <div>
+      <a href="https://codepen.io/geraldopcf/pen/GRxyZMg?editors=0110"
+        >https://codepen.io/geraldopcf/pen/GRxyZMg?editors=0110</a
+      >
+      <a href="https://www.youtube.com/watch?v=JrIHtMNJbkU"
+        >https://www.youtube.com/watch?v=JrIHtMNJbkU</a
+      >
+    </div>
+    <script>
+      const rootElement = document.documentElement;
+      const input = document.querySelector("input[type='checkbox']");
+
+      const dark = {
+        "--background-color": "#1A1A1A",
+        "--text-color": "green",
+      };
+
+      const lite = {
+        "--text-color": "black",
+        "--background-color": "#FFF",
+      };
+
+      input.addEventListener("change", function () {
+        input.checked ? changebk(dark) : changebk(lite);
+        //  console.log(dark);
+      });
+
+      function changebk(theme) {
+        console.log(theme);
+        for (let prop in theme) {
+          console.log(prop, theme[prop]);
+          Proprieades(prop, theme[prop]);
+        }
+
+        //works too
+        /*  for (const p of Object.keys(theme)) {
+          console.log(p, theme[p]);
+          Proprieades(p, theme[p]);
+        } */
+        //with Arrays
+        /*  for (const [prop, value] of Object.entries(theme)) {
+          console.log(prop, value);
+          Proprieades(prop, value);
+        } */
+      }
+
+      function Proprieades(property, val) {
+        console.log(property, val);
+        rootElement.style.setProperty(property, val);
+      }
+    </script>
+  </body>
+</html>

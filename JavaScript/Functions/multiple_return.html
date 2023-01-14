@@ -2,67 +2,99 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <style>
-        :root{
-  color-scheme: dark;
-}
-
+      :root {
+        color-scheme: dark;
+      }
     </style>
   </head>
   <body>
-
-
-
     <script>
-// multiple functions and returns
-function valor1(){
-  return 1 +1;
-}
+      // multiple functions and returns
+      function valor1() {
+        return 1 + 1;
+      }
 
-function valor2(){
-  return 2 +2;
-}
+      function valor2() {
+        return 2 + 2;
+      }
 
-function getvalores(){
-  return [valor1(), valor2()];
-}
+      function getvalores() {
+        return [valor1(), valor2()];
+      }
 
-console.log(getvalores()); //(2) [2, 4]
-// Then you can access them like so
-const pegarValores = getvalores();
-let primeiro = pegarValores[0];
-let segundo = pegarValores[1];
+      console.log(getvalores()); //(2) [2, 4]
+      // Then you can access them like so
+      const pegarValores = getvalores();
+      let primeiro = pegarValores[0];
+      let segundo = pegarValores[1];
 
-console.log(primeiro,segundo); // 2,4
+      console.log(primeiro, segundo); // 2,4
 
-// ECMAScript 6 syntax destructure 
+      // ECMAScript 6 syntax destructure
 
-const [first,second] = getvalores();
-console.log(first,second); // 2,4
+      const [first, second] = getvalores();
+      console.log(first, second); // 2,4
 
-/*[=============================================================================]
+      /*[================================================]
 Return an object:
 */
 
-function pegarValores3(){
-  return {
-    one: valor1(),
-    two: valor2()
-  }
-}
+      function pegarValores3() {
+        return {
+          one: valor1(),
+          two: valor2(),
+        };
+      }
 
-console.log(pegarValores3()); // {one: 2, two: 4}
-console.log(pegarValores3().one); // 2
+      console.log(pegarValores3()); // {one: 2, two: 4}
+      console.log(pegarValores3().one); // 2
 
-//ES6 syntax
-const {one, two} = pegarValores3();
-console.log(one, two); // 2 ,4
-console.log('somando o retorno de 2 functions', one + two);
+      //ES6 syntax
+      const { one, two } = pegarValores3();
+      console.log(one, two); // 2 ,4
+      console.log("somando o retorno de 2 functions", one + two);
 
-// https://stackoverflow.com/questions/2917175/return-multiple-values-in-javascript
+      /*Return random values*/
+      function gerar() {
+        return Math.floor(Math.random() * 10);
+      }
+
+      console.log(gerar());
+
+      function getOne() {
+        return gerar();
+      }
+      function getTwo() {
+        return gerar();
+      }
+
+      function getValues() {
+        return [getOne(), getTwo()];
+      }
+      const valores = getValues();
+      console.log(valores[0]);
+      console.log(valores[1]);
+      console.log(getValues());
+
+      //ECMA 6
+      const [one, two] = getValues();
+
+      console.log(one, two);
+
+      function getValuesObj() {
+        return {
+          first: getOne(),
+          second: getTwo(),
+        };
+      }
+
+      const valorObj = getValuesObj();
+      console.log(valorObj);
+      console.log(valorObj.first);
+      console.log(valorObj.second);
+      // https://stackoverflow.com/questions/2917175/return-multiple-values-in-javascript
     </script>
   </body>
 </html>

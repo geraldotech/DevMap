@@ -3,9 +3,9 @@
 > Always check out documentation
 > [vuejs guide](https://vuejs.org/guide/essentials/class-and-style.html#binding-html-classes) > [link 2](https://renatello.com/vue-js-toggle-class/)
 
-<hr>
+# Binding to Objects
 
-## Binding to Objects
+<hr>
 
 ```html
 1 - :bind the class and set class to isActive Booelan:
@@ -28,15 +28,20 @@
 }
 ```
 
+````
+
 Uma forma diferente usando checkbox é atribuir uma `var` com `v-model` na input caso queira uma classe padrão, e um `watch` quando a `var` mudar atribuir um novo valor à `var` que está no bind da classe.
 
 ## Multiple Values
 
 ```js
 
+👉HTML
 <input type="checkbox" v-model="ativa" id="to" />
 <label for="to">Toogle</label>
 <h1 :class="{'static': ativa, 'active': ativa }">My title</h1>
+//sem ''
+<h1 :class="{active: ativa, static: ativa}">My title</h1>
 
 👉CSS
   .active {
@@ -47,7 +52,7 @@ Uma forma diferente usando checkbox é atribuir uma `var` com `v-model` na input
       }
 
 👉JS
-data() {
+        data() {
           return {
             ativa: false,
             static: "",
@@ -61,7 +66,7 @@ data() {
 
 👉 Using `methods`
 
-       <input type="checkbox" v-model="ativa" id="to" />
+      <input type="checkbox" v-model="ativa" id="to" />
       <label for="to">Toogle</label>
       <h1 :class="{'static': ativa, 'active': ativa }">My title</h1>
 
@@ -103,17 +108,17 @@ data() {
             static: "static",
           };
         },
-```
+````
 
 ## Multiple Values 2
 
 ```js
 
- <h1 :class="{'active' : static, 'text-danger': hasError}">My title</h1>
+      <h1 :class="{'active' : static, 'text-danger': hasError}">My title</h1>
       <label>
         <input type="checkbox" @click="ativar" />
          {{hasError ? 'ativado' : 'desativado'}}
-</label>
+      </label>
 
 
         data() {
@@ -130,7 +135,36 @@ data() {
         },
 ```
 
+### Pass object values
+
+```js
+👉CSS:
+      .verde {
+        color: green;
+      }
+      .red {
+        color: red;
+      }
+
+👉html:
+<h1 :class="css.ver">Binding multiple classes</h1>
+<h2 :class="css.verm">Isabella</h2>
+
+👉JS:
+        data() {
+          return {
+            css: {
+              ver: "verde",
+              verm: "red",
+            },
+          };
+        },
+
+```
+
 # Binding to Arrays
+
+<hr>
 
 Arrays e.g from [vuejs...](https://vuejs.org/guide/essentials/class-and-style.html#binding-html-classes)
 
@@ -156,7 +190,6 @@ Arrays e.g from [vuejs...](https://vuejs.org/guide/essentials/class-and-style.ht
 </div>
 
 👉JS
-
         data() {
           return {
             isActive: false,
@@ -168,42 +201,23 @@ Arrays e.g from [vuejs...](https://vuejs.org/guide/essentials/class-and-style.ht
 👉Pass direct Multiple Values
  <h1 :class="[active, static]">My title</h1>
 
- data() {
+        data() {
           return {
             ativa: false,
             active: "active",
             static: "static",
           };
-},
+        },
+
 👉Toggle  Multiple Values
+
 <h1 :class="[ativa ? {active,static} : '']">My title</h1>
 //return o próprio 'ativa'
 <h1 :class="[ativa ? {static, active} : ativa]">My title</h1>
-```
 
-## Pass object Values
-
-```js
-👉CSS:
-      .verde {
-        color: green;
-      }
-      .red {
-        color: red;
-      }
-
-👉html:
- <h1 :class="css.ver">Binding multiple classes</h1>
-      <h2 :class="css.verm">Isabella</h2>
-
-👉JS:
- data() {
+    data() {
           return {
-            css: {
-              ver: "verde",
-              verm: "red",
-            },
+            ativa: false,
           };
-        },
-
+    },
 ```

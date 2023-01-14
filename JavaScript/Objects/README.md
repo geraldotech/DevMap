@@ -147,7 +147,7 @@ Object.keys(pessoas).forEach((item) => {
   console.log(item + " - " + pessoas[item]);
 });
 
-//para HTML não esquecer do +=
+//HTML não esquecer do +=
 Object.keys(pessoas).forEach((val) => {
   res.innerHTML += val + ":" + pessoas[val];
 });
@@ -155,7 +155,7 @@ Object.keys(pessoas).forEach((val) => {
 for (const p of Object.keys(pessoas)) {
   console.log(p, pessoas[p]);
 }
-
+// returns an array of a given object's own enumerable string-keyed property key-value pairs. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
 for (const [key, val] of Object.entries(pessoas)) {
   console.log(key, val);
 }
