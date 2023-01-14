@@ -14,13 +14,6 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [Constructor](#constructor)
 - [Object Methods](#object)
 
-### access
-
-```js
-console.log(geraldo.age);
-console.log(geraldo["age"]);
-```
-
 ### add
 
 ```js
@@ -35,6 +28,13 @@ const geraldo = {
   age: 30,
   Developer: true,
 };
+```
+
+### access
+
+```js
+console.log(geraldo.age);
+console.log(geraldo["age"]);
 ```
 
 ### change
@@ -74,7 +74,7 @@ delete geraldo.name;
 ###### object
 
 ```js
-let smart = {
+const smart = {
   open: function () {
     console.log("open conexao");
   },

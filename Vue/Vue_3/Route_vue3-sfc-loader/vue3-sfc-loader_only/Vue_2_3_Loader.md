@@ -20,7 +20,7 @@ Vue + Loader:
 
 ## Bad Way
 
-> > Do not use built-in or reserved HTML elements as component id: footer
+> > Do not use built-in or reserved HTML elements as component id: footer, as vezes nav pode não funcionar porém nava works então pay for attention no nome
 
 name+Loader+path
 

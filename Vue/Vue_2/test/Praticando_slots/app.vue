@@ -1,22 +1,29 @@
 <template>
   <div>
-    <p>App.vue</p>
-    <Aa />
-    <Aa>
-      <p>Master</p>
-      <Download />
-    </Aa>
+     <Nava></Nava>
+
+    <button @click="opt = !opt">Show</button>
+    <p v-if="opt">
+      <Blog blogtitle="Nova postagem">
+      
+    </p>
+  
+   <Download/>
   </div>
 </template>
+
 
 <script>
 module.exports = {
   data() {
-    return {};
+    return {
+      opt: false,
+    };
   },
   components: {
-    Aa: httpVueLoader("./a.vue"),
     Download: httpVueLoader("./download.vue"),
+    Blog: httpVueLoader("./blog.vue"),
+    Nava: httpVueLoader("./Nava.vue"),
   },
 };
 </script>
