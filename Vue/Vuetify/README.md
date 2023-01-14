@@ -1,8 +1,12 @@
-[https://vuetifyjs.com/en/getting-started/installation/#font-installation](https://vuetifyjs.com/en/getting-started/installation/#font-installation)
+# Vuetify 2
 
-[https://next.vuetifyjs.com/en/getting-started/installation/](https://next.vuetifyjs.com/en/getting-started/installation/)
+### Links
 
-[https://materialdesignicons.com/](https://materialdesignicons.com/)
+- for Vue 3 👉[https://next.vuetifyjs.com/getting-started/installation/](https://next.vuetifyjs.com/getting-started/installation/)
+
+- [https://vuetifyjs.com/en/getting-started/installation/#font-installation](https://vuetifyjs.com/en/getting-started/installation/#font-installation)
+
+- [https://next.vuetifyjs.com/en/getting-started/installation/](https://next.vuetifyjs.com/en/getting-started/installation/)
 
 CDN:
 
@@ -11,7 +15,7 @@ CDN:
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 ```
 
-Basic:
+Get Started:
 
 ```js
 new Vue({

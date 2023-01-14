@@ -30,6 +30,14 @@ Vue.createApp({
 }).mount("#app");
 //.mount(app); //works too
 // .mount(document.body); works too tks VueLoader
+
+//👉 v2 https://vuejs.org/guide/essentials/application.html
+const { createApp } = Vue;
+const app = createApp({
+  data() {
+    return {};
+  },
+}).mount("#app");
 ```
 
 Error: production build (\*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`

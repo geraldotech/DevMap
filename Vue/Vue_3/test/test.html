@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+    <style>
+      .active {
+        color: green;
+      }
+      .static {
+        text-decoration: underline red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input type="checkbox" v-model="ativa" id="to" />
+      <label for="to">Toogle</label>
+      <h1 :class="{{static, active}: ativa}">My title</h1>
+    </div>
+    <script>
+      const { createApp } = Vue;
+      const app = createApp({
+        data() {
+          return {
+            ativa: false,
+            active: "active",
+            static: "static",
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

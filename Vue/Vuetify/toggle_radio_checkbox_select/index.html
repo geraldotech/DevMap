@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
+    <title>Vuetify</title>
+    <style>
+      h2 {
+        padding: 30px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <v-app width="400" class="mx-auto mt-5">
+        <h1 class="display-1">Hello</h1>
+        <v-container>
+          <label>
+            <input type="checkbox" v-model="ativo" />
+            Primary
+          </label>
+          <!--
+            attr loading depende boolean ativo
+          -->
+          <v-btn :color="ativo ? 'primary' : 'success'" :loading="ativo" rounded
+            >block button</v-btn
+          >
+
+          <h2>Loading</h2>
+          <v-btn :loading="loading" @click="loading = 'loading'">
+            Accept
+          </v-btn>
+          <h2>checkbox</h2>
+          <v-checkbox label="MyCheckbox" v-model="box"></v-checkbox>
+          <p>{{box}}</p>
+
+          <hr />
+          <v-combobox
+            clearable
+            label="Combobox"
+            :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+            v-model="combo"
+          ></v-combobox>
+          <p>{{combo}}</p>
+          <p v-show="combo == 'California'">USA</p>
+
+          <hr />
+          <v-radio-group label="Radio group label" v-model="radio">
+            <v-radio label="Radio 1" value="1"></v-radio>
+            <v-radio label="Radio 2" value="2"></v-radio>
+            <v-radio label="Radio 3" value="3"></v-radio>
+          </v-radio-group>
+          <p>{{radio}}</p>
+
+          <hr />
+          <h2>Select</h2>
+
+          <v-select
+            v-model="select"
+            :hint="`${select.state}, ${select.abbr}`"
+            :items="items"
+            item-text="state"
+            item-value="abbr"
+            persistent-hint
+            return-object
+          >
+          </v-select>
+        </v-container>
+      </v-app>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 # ToggleClass Like a Pro
 
-[vuejs guide](https://vuejs.org/guide/essentials/class-and-style.html#binding-html-classes)
-[link 2](https://renatello.com/vue-js-toggle-class/)
+> Always check out documentation
+> [vuejs guide](https://vuejs.org/guide/essentials/class-and-style.html#binding-html-classes) > [link 2](https://renatello.com/vue-js-toggle-class/)
 
 <hr>
 
@@ -14,8 +14,7 @@
 2 - Set a methods or inline Toggle:
 <button @click="isActive = !isActive">Toggle</button>
 
-3 - in data:
-<a> `data() { return { isActive: false, }; </a>
+3 - in data: data() { return { isActive: false, }} <br />
 
 4 - Toggle button name:
 <button @click="isActive = !isActive">
@@ -29,13 +28,23 @@
 }
 ```
 
-Outra forma diferente usando checkbox é atribuir uma `var` com `v-model` na input caso queira uma classe padrão, e um `watch` quando a `var` mudar atribuir um novo valor à `var` que está no bind da classe.
+Uma forma diferente usando checkbox é atribuir uma `var` com `v-model` na input caso queira uma classe padrão, e um `watch` quando a `var` mudar atribuir um novo valor à `var` que está no bind da classe.
+
+## Multiple Values
 
 ```js
-👉Multiclass
- <input type="checkbox" v-model="ativa" id="to" />
+
+<input type="checkbox" v-model="ativa" id="to" />
 <label for="to">Toogle</label>
 <h1 :class="{'static': ativa, 'active': ativa }">My title</h1>
+
+👉CSS
+  .active {
+      color: green;
+      }
+  .static {
+      text-decoration: underline red;
+      }
 
 👉JS
 data() {
@@ -50,7 +59,7 @@ data() {
           },
       },
 
-👉ou usar chamar um `method`
+👉 Using `methods`
 
        <input type="checkbox" v-model="ativa" id="to" />
       <label for="to">Toogle</label>
@@ -63,7 +72,7 @@ data() {
           };
         },
 
-👉 checkbox using methods
+👉 Using methods + checkbox
 
  <h1 :class="{active : static}">My title</h1>
       <label>
@@ -83,9 +92,20 @@ data() {
           },
         },
       }).mount(app);
+
+👉Pass direct Multiple Values
+    <h1 :class="{active, static}">My title</h1>
+
+      data() {
+          return {
+            ativa: false,
+            active: "active",
+            static: "static",
+          };
+        },
 ```
 
-Multiple Values
+## Multiple Values 2
 
 ```js
 
@@ -116,7 +136,7 @@ Arrays e.g from [vuejs...](https://vuejs.org/guide/essentials/class-and-style.ht
 
 ```js
 👉CSS
-  .active {
+      .active {
         color: green;
       }
       .erroClass {
@@ -144,13 +164,28 @@ Arrays e.g from [vuejs...](https://vuejs.org/guide/essentials/class-and-style.ht
             active: "active",
           };
         },
+
+👉Pass direct Multiple Values
+ <h1 :class="[active, static]">My title</h1>
+
+ data() {
+          return {
+            ativa: false,
+            active: "active",
+            static: "static",
+          };
+},
+👉Toggle  Multiple Values
+<h1 :class="[ativa ? {active,static} : '']">My title</h1>
+//return o próprio 'ativa'
+<h1 :class="[ativa ? {static, active} : ativa]">My title</h1>
 ```
 
-Multiple Values
+## Pass object Values
 
 ```js
 👉CSS:
-.verde {
+      .verde {
         color: green;
       }
       .red {
