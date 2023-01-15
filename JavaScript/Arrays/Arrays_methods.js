@@ -1,11 +1,11 @@
 /*
 JavaScript String and Array Methods
 
-Table of JavaScript String and Array Methods => 
+Table of JavaScript String and Array Methods
 https://www.notion.so/geraldodev/Arrays-Strings-Methods-21cd45a06d6a4b1e83478c01d590ad26
 */
 
-//🟢 1 - #Strings/#Arrays #Length 
+//🟢 1 - #Strings #Arrays #Length 
 const x = ['BMW','GOL','LATAM','AMERICAN','BRAZIL','RAPPI'];
 
 //📌display #length of Array direct
@@ -24,11 +24,11 @@ function check(){
    }
    console.log("menor que 8");
   }
-  //👉 Ternary
-  console.log(["12345678"].length > 8 ? 'maior que 8' : 'menor que 8');
+//👉 Ternary
+    console.log(["12345678"].length > 8 ? 'maior que 8' : 'menor que 8');
 
 //📌size if a Array string
-console.log('Array 0 tem ', x[0].length);
+    console.log('Array 0 tem ', x[0].length);
 
 //📌mostrando index de um determinado value
 const arr = ["A","B","A","C","B","Z"];
@@ -109,8 +109,6 @@ https://tinyurl.com/mzp65jky
 
 console.log("Geraldo".substring(1, 5)); //eral
 console.log("Geraldo".substr(1, 5)); //erald
-
-
 console.log("Geraldo".substring(0, 5)); //eral
 console.log("Geraldo".substr(-4)); //Geraldo -4 letras da direita para esquerda => aldo
 console.log("JavaScript".substr(-6)); // Script
@@ -118,8 +116,6 @@ console.log("Feriado".substr(-2)); // /do
 console.log("JavaScript".substr(-5, 1)); // c
 console.log("JavaScript".substr(-3, 2)); // ip
 console.log("JavaScript".substring(2 ,-1)); // Ja
-
-
 
 //🟢 3 - Display all array using for
 for(i = 0; i < x.length; i++){
@@ -684,7 +680,6 @@ function maior(value){
 console.log(numbers.every(maior)); // false pq nem todos são >10
 console.log(numbers.some(maior)); //true pq existe valores > 10
 
-
 /* [=============================================================================]
 🟢 17 - #map - percorrer um array e obter um novo vetor cujo itens são resultados de uma função de callback
 */
@@ -741,9 +736,6 @@ console.log(arr.map(val => val + 1)); //2,4,6,8
 console.log(arr.map(val => [val, val + 1])); // [[1, 2], [3, 4], [5, 6], [7, 8]] ❌
 
 console.log(arr.map(val => [val, val + 1]).reduce((acc,curr) => acc.concat(curr))); // // [1, 2, 3, 4, 5, 6, 7, 8] ✅
-
-
-
 
 console.log(arr.flatMap(val => [val, val + 1])); //1,2,3,4,5,6,7,8
 //ou seja contém os valures do oldvalue concatenados
@@ -829,22 +821,22 @@ console.log(myarr2[0]) // Rio
 console.log(myarr2[1]) // de
 console.log(myarr2[2]); //Janeiro
 
-//📌get arrays index
+//📌 get arrays index
 console.log(myarr[2]) //Janeiro
 
-//📌limitando output and no space divite todos os caracteres
+//📌 limitando output and no space divite todos os caracteres
 const myarr2 = a.split("",2);
 console.log(myarr2)  //['R', 'i']
 
-//📌When you invoke the split() method on a string without a splitter, it returns an array containing the entire string.
+//📌 When you invoke the split() method on a string without a splitter, it returns an array containing the entire string.
 let a = "Rio de Janeiro";
 const myarr = a.split();
 console.log(myarr); // ['Rio de Janeiro']
 
-//📌com array
+//📌 com array
 console.log(["Geraldo","filho","na"].map(val => val.split("")));
 
-//📌Pequena comparação com o slice
+//📌 Pequena comparação com o slice
 const ts = "Tale as old Time";
 console.log(ts.split("", 2)); // ["T". "a"]
 console.log(ts.slice(0, 2)); // Ta
@@ -1033,6 +1025,9 @@ console.log(paragraph.indexOf("lazy?")); // 78
 */
 /* [=============================================================================]
 🟢 30 - trim() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+*/
+/* [=============================================================================]
+🟢 31 - String.prototype.#search() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
 */
 
 
