@@ -67,5 +67,6 @@ porém ao atingir >= 800px volta a primeira regra
 
 # e.g:
 
-- [smart_vs_notebook.html](./smart_vs_notebook.html)
-- [window-matchMedia.html](./window-matchMedia.html)
+- [smart_vs_notebook.html](https://geraldotech.github.io/DevMap/CSS/pages/media_queries/smart_vs_notebook.html)
+- [window-matchMedia.html](https://geraldotech.github.io/DevMap/CSS/pages/media_queries/window-matchMedia.html)
+- [eg](https://geraldotech.github.io/DevMap/CSS/pages/media_queries/eg/index.html)
