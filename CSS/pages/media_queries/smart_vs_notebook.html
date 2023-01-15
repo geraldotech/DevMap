@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      * {
+        color-scheme: dark;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      body {
+        max-width: 75rem;
+        min-width: 320px;
+        margin: 0 auto;
+      }
+
+      .note,
+      .phone,
+      .smart {
+        margin-top: 100px;
+        display: none;
+        background: darkblue;
+        text-align: center;
+        font-size: 2rem;
+      }
+      @media (max-width: 944px) and (min-width: 500px) {
+        .note {
+          display: block;
+        }
+      }
+
+      @media (min-width: 944px) {
+        .smart {
+          display: block;
+        }
+      }
+      @media (max-width: 500px) {
+        .phone {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="smart">Estou na SmartTV</div>
+    <div class="note">Estou no Notebook</div>
+    <div class="phone">Estou no SmartPhone</div>
+    <div>width: <span id="res"></span></div>
+    <script>
+      window.addEventListener("resize", function () {
+        const size = window.screen.width;
+        res.innerHTML = size;
+      });
+
+      /*   window.onload = function () {
+        res.innerHTML = size;
+      }; */
+    </script>
+  </body>
+</html>

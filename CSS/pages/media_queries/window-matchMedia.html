@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media queries</title>
+    <style>
+      * {
+        color-scheme: dark;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      /* When the browser is at least 600px and above */
+      @media screen and (min-width: 600px) {
+        div {
+          color: coral;
+        }
+      }
+      /*
+      mult
+      */
+      @media (min-width: 700px) and (max-width: 800px) {
+        div {
+          color: purple;
+        }
+      }
+      /*when brower tem no máximo 480 - Habitualmente para mobile*/
+      @media screen and (max-width: 480px) {
+        div {
+          border: 1px solid;
+          text-decoration: underline;
+        }
+      }
+
+      @media (max-width: 500px) {
+        div {
+          color: rgb(8, 172, 131);
+        }
+      }
+
+      @media print {
+        * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+        div {
+          background-color: rgb(155, 3, 3);
+          padding-top: 30px;
+        }
+      }
+      @media screen and (min-width: 1320px) {
+        h1 {
+          font-size: 5rem;
+          color: cornflowerblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ex
+      delectus dolores nemo corporis esse culpa iure, numquam voluptates
+      laudantium nam ipsam assumenda aut minus corrupti quae dolorem? Iste,
+      consequatur.
+    </div>
+    <h1>Teste</h1>
+
+    <script>
+      //👉Using matchMedia()
+      const media = window.matchMedia("(min-width: 480px)");
+      console.log(media); //MediaQueryList
+      console.log(media.matches); // boolean
+
+      //👉The old way of doing things
+      const janela = window.screen.width;
+      console.warn("window.sceen", janela);
+      console.log(janela == 800);
+
+      console.log(window.matchMedia("(max-width: 500px)").matches);
+
+      //add
+      const Mycss = window.matchMedia("(min-width: 480px)");
+      function handle(event) {
+        if (Mycss.matches) {
+          console.log("Media Query Matched!");
+        }
+      }
+
+      window.addEventListener("resize", handle);
+    </script>
+  </body>
+</html>
