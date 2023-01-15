@@ -46,6 +46,7 @@ window.localStorage;
 window.console.log same | console.log
 window.screen.height
 window.innerHeight
+window.innerWidth
 window.open(); // abre nova janela
 window.prompt() // get prompt text
 window.print();
@@ -56,6 +57,7 @@ window.location - vai retornar uma lista de objetos, algums são:
 - .href 👉 "new url to redirect"
 - .reload() 👉 "reload page"
 window.onload = function (){...}
+window.onresize = function(){...}
 //tudo que acompanhar nome + parênteses() são funções nativas, você também pode criar as suas.
 ```
 

@@ -254,21 +254,43 @@ const log = (x) => {
 <details>
 <summary>addEventListener, Pointer Events, e.target, documentElement</summary>
 
-DOM Events access [JavaScript-DOM.md](./assets/JavaScript-DOM.md)
+DOM Events access [JavaScript-DOM.md](./assets/JavaScript-DOM.md#dom---events)
 
 ```js
-#simple
+//Register the addEventListener🔹
+document.addEventListener("click", function () {
+  console.log("click");
+});
+//🔹
+const root = document.documentElement;
+
+root.addEventListener("click", myfun);
+
+function myfun() {
+  console.log("click");
+}
+//🔹
+const rootEl = document.documentElement;
+
+const myfunction = () => {
+  console.log("click");
+};
+
+rootEl.addEventListener("click", myfunction);
+
+
+//👉 Get html content
 <p id="foo">JavaScript</p>
 const p = document.getElementById("foo");
 console.log(p); //check output on console
 
-#PointerEvent direct
+//👉 PointerEvent direct
 <p id="bar">TypeScript</p>
 document.getElementById("bar").addEventListener("click", function(event){
     console.log(event); //check output on console
 });
 
-#PointerEvent const direct não precisa do event(e).target pode chamar a const direto
+//👉PointerEvent usando `var` não precisa do event(e).target pode chamar a const direto
 
  <p id="bar">TypeScript</p>
 const p = document.getElementById("bar");
@@ -276,26 +298,26 @@ p.addEventListener("click", function(e){
      console.log(p.id);  //bar
 });
 
-#caso o target tenha um custom Attr like "data";
+//👉 Target com custom Attr like "data";
  <p id="bar" data="eu">TypeScript</p>
 console.log(p.getAttribute("data")); //eu
 console.log(e.target.getAttribute("data")); //eu
 console.log(e.target.attributes.data.value); //get value of Attr data
 
-#caso o target tenha um custom Attr like "itemtype";
+//👉 Target com custom Attr like "itemtype";
  <li class="menu" itemtype="tip">Steak</li>
  console.log(e.target.attributes.itemtype.value); //tip
 
-#addEventListener: click -  target
+//👉addEventListener: click -  target
 document.getElementById("bar").addEventListener("click", function(event){
     console.log(event.target); //  <p id="bar">TypeScript</p>
 });
 
-#addEventListener: input - captura o input em realtime
+//👉addEventListener: input - captura o input em realtime
  document.querySelector("input").addEventListener("input", function(e){
    console.log(e);
  });
-#addEventListener: change
+//👉addEventListener: change
  document.querySelector("input[type='checkbox']").addEventListener("change", function(e){
    console.log(e);
  });
@@ -305,23 +327,24 @@ console.log(event.target.getAttribute("data")); //eu
 console.log(event.target.value); //only for input radio/checkbox
 
 
-#documentElement
+//👉documentElement - mousemove
 document.documentElement.addEventListener("mousemove", function(e){
     console.log(e);
 });
 
-#documentElement
+//👉documentElement
 const rootElement = document.documentElement;
 console.log(rootElement);
 
-#eventListener_mouseMove
+
+//👉eventListener_mouseMove
+
 //html
 <div id="OutDataX"></div>
 <div id="OutDataY"></div>
 
 //js
 const get = (el) => {return document.getElementById(el)};
-#addEventListener: mousemove
 
 document.addEventListener("mousemove", function(event){
     console.log(event);
@@ -330,7 +353,7 @@ document.addEventListener("mousemove", function(event){
     get("OutDataY").innerHTML = `Y: ${event.clientY}`;
 });
 
-#target vs currentTarget
+//👉target vs currentTarget
 
 <ul>
       <li>A</li>
@@ -798,6 +821,7 @@ document.querySelectorAll("section span")[1];
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getcomputedstyle">getComputedStyle()</a>
   [CodePen](https://codepen.io/geraldopcf/pen/VwBvyPw)
 - [use strict](https://www.w3schools.com/js/js_strict.asp)
+- [Nice articles: https://bobbyhadz.com/blog/](https://bobbyhadz.com/blog/)
 
 ## Videos
 
