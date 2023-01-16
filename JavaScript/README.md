@@ -376,8 +376,9 @@ const el = document.querySelector("ul");
 <details>
 <summary>createElement, createTextNode, textContent, append vs appendChild</summary>
 
+[Learn DOM Manipulation In 18 Minutes](https://github.com/geraldotech/DevMap/blob/main/JavaScript/assets/thread/Learn-DOM-Manipulation/main.js)
+
 ```js
-//Learn DOM Manipulation In 18 Minutes
 
 //Select the body
 const body = document.body;
