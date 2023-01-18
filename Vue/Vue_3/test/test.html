@@ -16,22 +16,11 @@
   </head>
   <body>
     <div id="app">
+      <h1>{{title}}</h1>
       <input type="checkbox" v-model="ativa" id="to" />
       <label for="to">Toogle</label>
       <h1 :class="{active: ativa, static: ativa}">My title</h1>
     </div>
-    <script>
-      const { createApp } = Vue;
-      const app = createApp({
-        data() {
-          return {
-            ativa: false,
-          };
-        },
-        watch: {
-          ativa() {},
-        },
-      }).mount("#app");
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -777,7 +777,6 @@ document.querySelectorAll("section span")[1];
 - <a href="https://twitter.com/ATechAjay/status/1606115109842976768">XOX operator</a>
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getcomputedstyle">getComputedStyle()</a>
   [CodePen](https://codepen.io/geraldopcf/pen/VwBvyPw)
-- [use strict](https://www.w3schools.com/js/js_strict.asp)
 - [Nice articles: https://bobbyhadz.com/blog/](https://bobbyhadz.com/blog/)
 
 ## Videos

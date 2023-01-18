@@ -21,6 +21,10 @@
         display: block;
         color: var(--text-color);
       }
+      input,
+      label {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -59,22 +63,22 @@
         console.log(theme);
         for (let prop in theme) {
           console.log(prop, theme[prop]);
-          Proprieades(prop, theme[prop]);
+          Propriedades(prop, theme[prop]);
         }
 
         //works too
         /*  for (const p of Object.keys(theme)) {
           console.log(p, theme[p]);
-          Proprieades(p, theme[p]);
+          Propriedades(p, theme[p]);
         } */
         //with Arrays
         /*  for (const [prop, value] of Object.entries(theme)) {
           console.log(prop, value);
-          Proprieades(prop, value);
+          Propriedades(prop, value);
         } */
       }
 
-      function Proprieades(property, val) {
+      function Propriedades(property, val) {
         console.log(property, val);
         rootElement.style.setProperty(property, val);
       }
