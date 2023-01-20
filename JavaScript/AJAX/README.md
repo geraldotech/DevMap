@@ -86,5 +86,8 @@ xhttp.open("GET", "./onclick.txt");
 xhttp.send();
 ```
 
-HTML Includes by W3 + onreadystatechange
-[https://www.w3schools.com/howto/howto_html_include.asp](https://www.w3schools.com/howto/howto_html_include.asp)
+- HTML Includes by W3 + onreadystatechange
+  [https://www.w3schools.com/howto/howto_html_include.asp](https://www.w3schools.com/howto/howto_html_include.asp)
+
+- Ajax form submit + Stringnify + fetch - great article
+  [https://metamug.com/article/html5/ajax-form-submit.html](https://metamug.com/article/html5/ajax-form-submit.html)
