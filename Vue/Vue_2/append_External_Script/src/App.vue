@@ -10,9 +10,6 @@
 
 <script>
 module.exports = {
-  data() {
-    return {};
-  },
   components: {
     About: httpVueLoader("./components/about.vue"),
   },

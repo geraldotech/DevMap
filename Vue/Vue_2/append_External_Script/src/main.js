@@ -1,9 +1,10 @@
-render("https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js");
-render("./src/test.js");
-render("https://unpkg.com/vue-router@3.0.2/dist/vue-router.js");
-render("https://unpkg.com/http-vue-loader");
+LoadRender("https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js");
+LoadRender("./src/test.js");
+LoadRender("https://unpkg.com/vue-router@3.0.2/dist/vue-router.js");
+LoadRender("https://unpkg.com/http-vue-loader");
 
-function render(link) {
+//fun LoadScript
+function LoadRender(link) {
   let script = document.createElement("script");
   script.src = link;
 

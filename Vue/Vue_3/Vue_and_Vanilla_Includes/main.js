@@ -1,12 +1,13 @@
+import LoadVanilla from "./vanillaAjxaxInc.js";
+
 const { createApp } = Vue;
 const app = createApp({
   data() {
     return {
-      ativa: false,
-      title: "Titulo",
+      gera: "gege",
     };
   },
-  watch: {
-    ativa() {},
-  },
 }).mount("#app");
+
+//Vanilla Includes
+LoadVanilla();

@@ -4,21 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/vue@next"></script>
+    <script src="main.js" type="module" defer></script>
     <title>VueJS</title>
-    <style>
-      .active {
-        color: green;
-      }
-      .static {
-        text-decoration: underline red;
-      }
-    </style>
   </head>
   <body>
     <div id="app">
+      {{9*9}}
       <div include="a.html"></div>
     </div>
-    <script src="main.js"></script>
-    <script src="https://gmapdev.s3.amazonaws.com/src/vanillaAjaxInc.js"></script>
   </body>
 </html>

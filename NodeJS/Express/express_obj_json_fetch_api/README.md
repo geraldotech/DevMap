@@ -1,9 +1,10 @@
-## :rocket: Como executar 
-```
-# Install REST Client for VSCode 
+## :rocket: How to run:
+
+```js
+# Install REST Client for VSCode
 
 # Instale as dependências
-$ npm install
+    $ npm install
 
 # Execute a aplicação
  $ node appex.js
