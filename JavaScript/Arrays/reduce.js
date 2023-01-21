@@ -216,6 +216,14 @@ console.log(
   })
 ); //dcba
 
+//Somando Array de Strings
+const n = ["1", "2"];
+
+const sum = n.reduce((accumu, curren) => {
+  return accumu + parseInt(curren);
+}, 0);
+console.log(sum); // 3
+
 //refs
 //https://blog.betrybe.com/javascript/javascript-reduce/
 //https://raullesteves.medium.com/javascript-entendendo-o-reduce-de-uma-vez-por-todas-c4cbaa16e380

@@ -248,7 +248,7 @@ const log = (x) => {
 
 <details>
 <summary>document.forms - preventDefault</summary>
-<a href="./assets/forms.md">forms.md</a>
+<a href="./assets/thread/forms.md">forms.md</a>
 
 </details>
 <details>

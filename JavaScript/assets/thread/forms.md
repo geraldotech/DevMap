@@ -3,6 +3,7 @@ Com forms como o nome já sugere é usado para formulários e inputs de diversos
 
 - <a href="https://codepen.io/geraldopcf/pen/OJzqRKJ" target="_blank">form completo Estacio</a>
 - [MDN_Document/forms](https://developer.mozilla.org/en-US/docs/Web/API/Document/forms)
+- [FormData](./FormData/)
 
 - e.g:
 
