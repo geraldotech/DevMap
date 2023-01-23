@@ -4,10 +4,10 @@ const { createApp } = Vue;
 const app = createApp({
   data() {
     return {
-      gera: "gege",
+      wel: "Welcome to Vue + div includes html files",
     };
   },
 }).mount("#app");
 
-//Vanilla Includes
+//Load plugin after VueMount
 LoadVanilla();

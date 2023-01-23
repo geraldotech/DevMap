@@ -316,11 +316,11 @@ import baixe from "./baixar.js";
 //no path vai definir direto
  { path: "/download", component: baixe },
 
- //📍❌Apenas importando o arquivo sem chamar, caso esteja usando Vue.component, o mesmo será detectado automaticamente, porém vai é necessário Vue.component em cada arquivo o que deixa nosso code BAD
+ //📍❌Apenas importando o arquivo sem chamar, caso esteja usando Vue.component, o mesmo será detectado automaticamente, porém é necessário Vue.component em cada arquivo o que deixa nosso code BAD
   { path: "/download", component: Vue.component("myd-content") },
 ```
 
-### guide
+### Guide
 
 - [components registration](https://v2.vuejs.org/v2/guide/components-registration.html)
 - [Template Syntax](https://v2.vuejs.org/v2/guide/syntax.html)

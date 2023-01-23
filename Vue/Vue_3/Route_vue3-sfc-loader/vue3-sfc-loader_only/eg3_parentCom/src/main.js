@@ -16,10 +16,14 @@ const sobre = Vue.createApp({
   },
   components: {
     sobre: Vue.defineAsyncComponent(() =>
-      loadModule("./dist/About.vue", options)
+      loadModule("./src/components/About.vue", options)
     ),
   },
   template: `<sobre></sobre>`,
 });
 
-sobre.mount("#aabout");
+// Verifica se o #id existe para evitar erros
+const tem = document.getElementById("aabout");
+if (tem) {
+  sobre.mount("#aabout");
+}

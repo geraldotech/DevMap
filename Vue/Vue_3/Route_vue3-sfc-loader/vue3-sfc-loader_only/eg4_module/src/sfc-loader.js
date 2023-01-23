@@ -21,4 +21,4 @@ const options = {
 
 const { loadModule } = window["vue3-sfc-loader"];
 
-export { options, loadModule };
+//export { options, loadModule };

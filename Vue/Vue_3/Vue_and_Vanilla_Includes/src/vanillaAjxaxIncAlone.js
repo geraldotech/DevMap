@@ -1,4 +1,4 @@
-export default function LoadVanilla() {
+function LoadVanilla() {
   const div = document.querySelectorAll("div");
   const DOMAttr = "include";
 
@@ -7,7 +7,7 @@ export default function LoadVanilla() {
     if (tem.hasAttribute(DOMAttr)) {
       Path = tem.getAttribute(DOMAttr);
       loadItem(Path, tem);
-      console.log(`Path`, Path, tem);
+      //console.log(`Path`, Path, tem);
     }
   }
 
@@ -20,3 +20,4 @@ export default function LoadVanilla() {
     smarthttp.send();
   }
 }
+LoadVanilla();

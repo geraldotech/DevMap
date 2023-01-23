@@ -427,7 +427,7 @@ data(){
 }
 ```
 
-### Usando Array
+### Arrays
 
 ```js
 <li v-if="esta_logado"><a href="#">Meu perfil</a></li>
@@ -530,7 +530,7 @@ In our parent component, we will listen to that event, method criadoFun a ser cr
  <Footer :foot="foot" @criado="criadoFun" />
 ```
 
-## Contextualizar
+## Contextualizando
 
 - props - component pai envia o prop para o filho
 - emits - algo ocorrer no filho emitir ao pai que ativa o method

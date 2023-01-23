@@ -1,8 +1,12 @@
 <template>
   <div>
+    <MyHeader />
     <p>Home</p>
     <p>Também serve de exemplo praticando export and import</p>
     <button @click="change">change</button>
+
+    <MyCompo />
+    <Foo />
   </div>
 </template>
 
@@ -10,6 +14,17 @@
 module.exports = {
   data: function () {
     return {};
+  },
+  components: {
+    MyHeader: Vue.defineAsyncComponent(() =>
+      loadModule("../src/components/myHeader.vue", options)
+    ),
+    MyCompo: Vue.defineAsyncComponent(() =>
+      loadModule("../src/components/myComponent.vue", options)
+    ),
+    Foo: Vue.defineAsyncComponent(() =>
+      loadModule("../src/components/footer.vue", options)
+    ),
   },
   methods: {
     change() {

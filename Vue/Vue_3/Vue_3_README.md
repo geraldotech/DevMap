@@ -1,7 +1,5 @@
 ## Vue 3 CDN
 
-Temos Vue.createApp, components
-
 - **add in header**
 
 ```js

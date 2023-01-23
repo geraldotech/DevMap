@@ -3,7 +3,7 @@
     <h1>Header</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="./downloads.html">Contact</a>
+      <a href="./downloads.html">Downloads</a>
     </nav>
   </div>
 </template>

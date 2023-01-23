@@ -2,6 +2,7 @@
   <div>
     <h1>Parent component</h1>
     <MyHeader>
+    <Home>
   </div>
 </template>
 <script>
@@ -11,10 +12,10 @@ module.exports = {
   },
   components: {
     MyHeader: Vue.defineAsyncComponent(() =>
-      loadModule("../dist/myHeader.vue", options)
+      loadModule("./src/components/myHeader.vue", options)
     ),
-    About: Vue.defineAsyncComponent(() =>
-      loadModule("../dist/About.vue", options)
+    Home: Vue.defineAsyncComponent(() =>
+      loadModule("./src/components/Home.vue", options)
     ),
   },
 };

@@ -17,6 +17,17 @@ Permite executar `snippets of code` no navegador, muito usado para testar a saí
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/console" target="_blank">Todos os tipos de consoles</a>
 
+e.g básico
+
+```js
+const person = [{ nome: "Geraldo", age: 30 }];
+
+console.warn(person); //warning
+console.log(person); //log
+console.dir(person); //disclosure direto ao ponto, melhor para leitura
+console.table(person); // beatiful way to show tables
+```
+
 ## window and document
 
 <div align="center">
@@ -32,15 +43,18 @@ Permite executar `snippets of code` no navegador, muito usado para testar a saí
 
 ## window [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 
-- window - é um object global que representa o que aparece no document, manipulando o BOM "Browser Object Model", sendo a primeira coisa que é carregada no browser, não é atoa que a função alert()
-   originalmente pode ser chamada por como window.alert()
+- window = interface global que contém o #document "DOM", BOM "Browser Object Model" window e o JavaScript e seus objetos, Arrays, functions... Primeira coisa que começa a ser carregada, a função alert() originalmente pode ser chamada por como window.alert()
+
+  👉[img eg](https://javascript.info/article/browser-environment/windowObjects.svg)
 
 - É incomum chamar o window, basta chamar o nome do object ou função, exemplos são apenas para contextualizar o conceito do window e suas propriedades.
 
 ```js
+console.log(window); //same input ou digite `window` diretamente no console do browser
+console.log(window.window); //same input
+console.log(window.document) // #document
 console.log("height",window.innerHeight, "Width",window.innerWidth);
 console.log(window) - display all objects in window
-
 window;
 window.localStorage;
 window.console.log same | console.log
@@ -51,7 +65,6 @@ window.open(); // abre nova janela
 window.prompt() // get prompt text
 window.print();
 window.confirm();
-window.document - display document objects
 window.location - vai retornar uma lista de objetos, algums são:
 - .pathname
 - .href 👉 "new url to redirect"
@@ -68,7 +81,7 @@ window.onresize = function(){...}
 - document - contains the DOM represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
 
 ```js
-console.dir(document); //#document
+console.dir(document); //#document Why .dir ? https://developer.mozilla.org/en-US/docs/Web/API/console/dir
 console.log(document); //#document
 ```
 
@@ -93,7 +106,7 @@ console.log(document); //#document
 - document.domain
 - document.URL
 - document.all
-
+- ❌document.onload 👉 document.body.onload ✔
 ```
 
 Mais propriedades e a versão do DOM em que foram adicionadas:
@@ -106,6 +119,18 @@ Aqui o uso de da palavra <span style="color:red">document é required</span>, ex
 function abrenovaJanela() {
   open().document.write("oi");
 }
+```
+
+```js
+//who is faster ?
+window.onload = function () {
+  console.log("window.onload");
+};
+
+document.onreadystatechange = function (e) {
+  console.warn("document.onready", document.readyState);
+  console.log(document.readyState == "complete");
+};
 ```
 
 <hr>
