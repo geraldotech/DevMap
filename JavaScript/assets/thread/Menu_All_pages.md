@@ -1,8 +1,13 @@
 <h1 align="center">
-Menu for all pages by `gmap`
+Menu for All pages by `gmap`
 </h1>
 
-Make links with Array using `nav` and `select` I don't have to edit the code on every page when a change is made to the menu.
+Make links with Array using `nav` and `select`, `object` tag and more...
+you don't have to edit the code on every page when a change is made to the menu.
+
+# e.g 0: tag `object`
+
+Versão do princípio++ usando apenas HTML deveriamos ter conhecimento do poder essa tag que pode fazer o papel de includes [https://gmapdev.netlify.app/html/#object](https://gmapdev.netlify.app/html/#object)
 
 # eg 1: Using Array, select, append
 
@@ -203,7 +208,3 @@ Versão antigas do AngularJS mesmo na versão CDN conta com o recurso de ng-incl
 # e.g 9 VueJS Loader component
 
 Mesmo na versão CDN podemos carregar um component de forma dinâmica
-
-# e. 10 tag `object`
-
-Versão do princípio++ usando apenas HTML deveriamos ter conhecimento do poder essa tag que pode fazer o papel de includes [https://gmapdev.netlify.app/html/#object](https://gmapdev.netlify.app/html/#object)

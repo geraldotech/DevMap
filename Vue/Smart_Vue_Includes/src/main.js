@@ -1,4 +1,4 @@
-import LoadVanilla from "./vanillaAjxaxInc.js";
+import LoadVanilla from "./smart-ajax-includes-vue.js";
 
 const { createApp } = Vue;
 const app = createApp({

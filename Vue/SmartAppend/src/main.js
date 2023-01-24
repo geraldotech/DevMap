@@ -1,23 +1,16 @@
-/*
-SmartAppend Loader  lets html more clear
-👉 Multiple scripts on DOM Loader
-👉 Require window.onload call the functions after window loading
-👉function LoadRender(link, defer? boolena)  {}
-*/
-
 LoadRender("https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js");
-LoadRender("./src/test.js");
 LoadRender("https://unpkg.com/vue-router@3.0.2/dist/vue-router.js");
 LoadRender("https://unpkg.com/http-vue-loader");
+LoadRender("./src/test.js");
 
 //fun LoadScript
 function LoadRender(link) {
   let script = document.createElement("script");
   script.src = link;
-
-  //return document.head.appendChild(script); //or
-  return document.querySelector("body").appendChild(script);
+  return document.head.appendChild(script); //or
+  //return document.querySelector("body").appendChild(script);
 }
+
 window.onload = function () {
   const Home = {
     template: `<p>Home Page</p>`,
