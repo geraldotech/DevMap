@@ -7,7 +7,13 @@ LoadRender("./src/test.js");
 function LoadRender(link) {
   let script = document.createElement("script");
   script.src = link;
-  return document.head.appendChild(script); //or
+  script.setAttribute("type", "text/javascript");
+  script.async = false;
+  document.head.appendChild(script);
+
+  script.addEventListener("load", function () {
+    console.log("script loaded", link);
+  });
   //return document.querySelector("body").appendChild(script);
 }
 
@@ -25,12 +31,11 @@ window.onload = function () {
   const rota = new VueRouter({
     routes: routes,
   });
-
-  new Vue({
+  const app = new Vue({
     el: "#app",
     router: rota,
     data: {
-      message: "Geraldo",
+      welcome: "welcome",
     },
     components: {
       App: httpVueLoader("./src/app.vue"),
