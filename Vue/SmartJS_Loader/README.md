@@ -2,9 +2,9 @@
 
 > Lets html more clear, add script in header with this plugin
 
-> 👉 Multiple scripts on DOM Loader
-> 👉 Local and remote Scripts
-> 👉 Require window.onload call the functions after window loading
+- Multiple scripts on DOM Loader
+- Local and remote Scripts
+- Require window.onload call the functions after window loading
 
 ```js
 SmartLoader("script.js");
