@@ -274,7 +274,7 @@ console.log(root.innerText);
 
 ### Useful links:
 
-- [Learn-DOM-Manipulation](./assets/thread/Learn-DOM-Manipulation/)
+- [Learn-DOM-Manipulation](./thread/Learn-DOM-Manipulation/)
 - [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)
 - [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
 - [Evitando populir o objeto-global](http://devfuria.com.br/javascript/objeto-global/)

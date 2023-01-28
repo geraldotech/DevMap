@@ -1,4 +1,5 @@
 //Learn DOM Manipulation In 18 Minutes
+//includes Updates by: gmapdev
 
 //Select the body
 const body = document.body;
@@ -88,5 +89,18 @@ Bye.classList.remove("hi1");
 Bye.classList.toggle("hi5", true);
 
 //style
-
 Bye.style.color = "red";
+
+//favicon and CSS
+/*
+      removendo favicon
+    usar  query para "link[rel='shortcut icon']"
+
+*/
+//icon
+const icon = document.querySelector("link[rel='shortcut icon']");
+icon.href = null;
+
+//CSS
+const css = document.querySelector("link[rel='stylesheet']");
+console.log(css);
