@@ -49,6 +49,12 @@ new Vue({
 new Vue({
   data: {},
 }).$mount("#app");
+
+//using template to show simple Hello, sem usar data()
+const vm = new Vue({
+  el: "#app",
+  template: "<p>Hello</p>",
+});
 ```
 
 ### Data na Vue instance declarar variable

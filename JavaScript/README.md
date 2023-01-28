@@ -22,12 +22,15 @@ console.log("I'm Geraldo");
 console.log("I'm Geraldo"); // precisa usar a barra invertida \
 
 //📌descatar palavra
-
-//usar barras \
+console.log('TypeScript é uma "linguagem" de programação');
 console.log('TypeScript é uma "linguagem" de programação');
 
-//mais simples
-console.log('TypeScript é uma "linguagem" de programação');
+console.log("It's a new game");
+//📌usando barra
+console.log("It's a new game");
+console.log("TypeScript é uma 'linguagem' de programação");
+
+//alguns e.g via https://blog.matheuscastiglioni.com.br/string-em-javascript-com-aspas-simples-ou-duplas/
 ```
 
 ```js

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "vue": "https://cdn.jsdelivr.net/npm/vue/dist/vue.js",
+          "test": "./test.js",
+          "vueloader": "https://unpkg.com/http-vue-loader"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app">{{a}}</div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+  <script type="systemjs-module" src="./entry.js"></script>
+  <!--
+    modo de importar o modulo direto do html ou usar o System.register
+  -->
+  <script type="systemjs-module" src="import:test"></script>
+</html>
