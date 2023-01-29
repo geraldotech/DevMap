@@ -107,3 +107,9 @@ function App() {
   );
 }
 ```
+
+Each child in a list should have a unique "key" prop. Just add the key
+
+```js
+return <Todo key={todo} todo={todo} />;
+```
