@@ -121,18 +121,6 @@ function abrenovaJanela() {
 }
 ```
 
-```js
-//who is faster ?
-window.onload = function () {
-  console.log("window.onload");
-};
-
-document.onreadystatechange = function (e) {
-  console.warn("document.onready", document.readyState);
-  console.log(document.readyState == "complete");
-};
-```
-
 <hr>
 
 ## Get a Element by ID direct way:
@@ -263,6 +251,27 @@ Ordem de declaração:
 content não precisa de defer pq estamos usando `document.addEventListener("DOMContentLoaded"` que vai chamar a func que vai sobreescrever os valores do primeiro script.
 
 - Considerações se o content.js não tivese o DOMContentLoaded e fosse atribuído o defer, matendo a ordem dos scripts, obviamente o resultado seria o mesmo.
+
+# onload vs onreadystatechange vs DOMContentLoaded
+
+```js
+//who is faster ?
+
+//3
+window.onload = function () {
+  console.warn("window.onload");
+};
+
+//1
+document.onreadystatechange = function (e) {
+  console.warn("document.onready", document.readyState);
+  console.log(document.readyState == "complete");
+};
+//2
+document.addEventListener("DOMContentLoaded", () => {
+  console.warn("DOM ok");
+});
+```
 
 ### inner + HTML + Text + TextContent
 

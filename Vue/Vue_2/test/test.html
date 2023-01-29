@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VueJS2</title>
-    <!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-    <script src="main.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+
+    <script src="main.js" defer></script>
   </head>
   <body>
     <div id="app">
-      <router-link to="/">Home</router-link>
-      <router-link to="about">About</router-link>
-      <router-view></router-view>
+      <h1>{{prime}}</h1>
+      <input type="text" v-model="pconte" />
+
+      <button @click="createEl">Create</button>
+      <button @click="removeEl">Remove</button>
     </div>
   </body>
 </html>

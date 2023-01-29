@@ -42,13 +42,14 @@ const Bye = document.querySelector("#bye");
 
 //remove +usado
 Bye.remove();
+
 //volta a adicionar
 div2.append(Bye);
+
 //removendo com o parent
 div2.removeChild(Hi);
 
 //Getting Attributes
-
 console.log(Bye.getAttribute("id")); // bye
 //ou shortcut
 
@@ -66,7 +67,6 @@ Bye.title = "New Way";
 Bye.removeAttribute("classe");
 
 // data-test DOMStringMap
-
 console.log(Bye.dataset); // no DOM:  data-test o return: test: "content
 /*
 data-long-beach="california" return longBeach:'california'
@@ -81,7 +81,6 @@ console.log(Bye.dataset.longBeach); //california
 Bye.dataset.novoName = "Costa"; //DOM will updated data-novo-name="Costa"
 
 //ClassList and remove
-
 Bye.classList.add("novaclasse");
 Bye.classList.remove("hi1");
 
@@ -93,9 +92,8 @@ Bye.style.color = "red";
 
 //favicon and CSS
 /*
-      removendo favicon
-    usar  query para "link[rel='shortcut icon']"
-
+  removendo favicon
+  usar  query para "link[rel='shortcut icon']"
 */
 //icon
 const icon = document.querySelector("link[rel='shortcut icon']");
@@ -104,3 +102,11 @@ icon.href = null;
 //CSS
 const css = document.querySelector("link[rel='stylesheet']");
 console.log(css);
+
+//Object.assign
+const createEl = () => {
+  const obj = Object.assign(document.createElement("p"), {
+    textContent: "Novo par",
+  });
+  document.body.appendChild(obj);
+};

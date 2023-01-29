@@ -20,6 +20,12 @@ https://v2.vuejs.org/js/vue.js
 https://cdn.jsdelivr.net/npm/vue/dist/vue.js
 ```
 
+esm.browser
+
+```js
+import Vue from "https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.esm.browser.js";
+```
+
 ### Prodution:
 
 ```js
@@ -50,7 +56,7 @@ new Vue({
   data: {},
 }).$mount("#app");
 
-//using template to show simple Hello, sem usar data()
+//using template to show simple Helloesm.browser, sem usar data()
 const vm = new Vue({
   el: "#app",
   template: "<p>Hello</p>",

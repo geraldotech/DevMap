@@ -383,7 +383,7 @@ const el = document.querySelector("ul");
 
 ```js
 
-# Images
+# Images👇
 
 //createElements
 div = document.createElement("div");

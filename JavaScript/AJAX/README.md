@@ -1,9 +1,10 @@
-https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started#step_3_%E2%80%93_a_simple_exampleAJAX is not a programming language. AJAX is a technique for accessing web servers from a web page. AJAX stands for Asynchronous JavaScript And XML.
+AJAX stands for Asynchronous JavaScript And XML In a nutshell `resumo`, it is the use of the XMLHttpRequest object to communicate with servers.
+is not a programming language. AJAX is a technique for accessing web servers from a web page. AJAX stands for Asynchronous JavaScript And XML.
 
-AJAX is a developer's dream, because you can:
-[https://www.w3schools.com/js/js_ajax_intro.asp](https://www.w3schools.com/js/js_ajax_intro.asp)
-
-[MDN Synchronous and asynchronous requests ](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
+- [Getting started\*\*\*](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started#step_3_%E2%80%93_a_simple_exampleAJAX)
+- AJAX is a developer's dream, because you can:
+  [https://www.w3schools.com/js/js_ajax_intro.asp](https://www.w3schools.com/js/js_ajax_intro.asp)
+- [MDN Synchronous and asynchronous requests ](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
 # Server Response Properties
 
