@@ -1,0 +1,9 @@
+const container = document.getElementById("main");
+
+class App extends React.Component {
+  render() {
+    return <p>Hello</p>;
+  }
+}
+
+ReactDOM.render(<App />, container);

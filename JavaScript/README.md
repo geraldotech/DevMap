@@ -685,7 +685,7 @@ console.log(menu); //return a HTML Collection[x]  e.g menu[0].innerHTML = "Hello
 Dica: Array.from convert HTML Collection to Array, manupulando todos os itens com forEach
 */
 
-//👉querySelector
+//👉querySelector - the Super Selector!! class, id, attributes, tags, subclasses, subtags...
 console.log(document.querySelector(".oi")); //return class
 console.log(document.querySelector("#hello").innerHTML); //return id
 
@@ -732,7 +732,7 @@ link.forEach(el => {
   el.setAttribute("title","open new tab");
 });
 
-// querySelectorAll - selecionando by index
+//👉 querySelectorAll - selecionando by index
 <section>
   <span>[0]</span>
 </section>
@@ -742,11 +742,19 @@ link.forEach(el => {
 </section>
 document.querySelectorAll("section span")[1];
 
-// select multiples elements and change values.
+//👉 select multiples elements and change values.
   document.querySelectorAll("#demo, #demo2").forEach((item) => {
     item.innerHTML = `DOM Loaded!`;
   });
 
+//👉 select by Attribute
+<p data>Data</p>
+const p = document.querySelector("[data]");
+
+//👉 multi Attributes
+<p data>Data</p>
+<p attr2>net</p>
+const p = document.querySelectorAll("[data], [attr2]");
 ```
 
 </details>
@@ -781,6 +789,7 @@ document.querySelectorAll("section span")[1];
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getcomputedstyle">getComputedStyle()</a>
   [CodePen](https://codepen.io/geraldopcf/pen/VwBvyPw)
 - [Nice articles: https://bobbyhadz.com/blog/](https://bobbyhadz.com/blog/)
+- [Expressões Regulares](https://ricardo-reis.medium.com/express%C3%B5es-regulares-javascript-295da6deaee7)
 
 ## Videos
 

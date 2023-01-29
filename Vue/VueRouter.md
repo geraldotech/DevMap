@@ -124,11 +124,18 @@ Sometimes you need to display multiple views at the same time instead of nesting
 
 # Router 4
 
+### CLI Add Router to existend project
+
+`vue add router`
+
+o code será overwrite, será criado pasta router > index.js, pasta views, Se ocorrer erros no HomeView.vue o mesmo está tentando importa um component que não existe, então apagar essas linhas
+Terá que importar todo os components em App.vue. [ref](https://vueschool.io/articles/vuejs-tutorials/how-to-use-vue-router-a-complete-tutorial/)
+
 <a name="router4"></a>
 
 [https://router.vuejs.org/](https://router.vuejs.org/)
 
-CDN
+### CDN
 
 ```js
 <script src="https://unpkg.com/vue-router@4"></script>

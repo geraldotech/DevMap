@@ -332,7 +332,8 @@ import baixe from "./baixar.js";
   { path: "/download", component: Vue.component("myd-content") },
 ```
 
-### Guide
+### Links
 
 - [components registration](https://v2.vuejs.org/v2/guide/components-registration.html)
 - [Template Syntax](https://v2.vuejs.org/v2/guide/syntax.html)
+- [Truncar String usando filtro](https://acervolima.com/truncar-uma-string-usando-filtro-em-vue-js/)
