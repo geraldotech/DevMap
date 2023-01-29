@@ -5,7 +5,6 @@
 <option value="blue">Blue</option>
 <option value="coral">Coral</option>
 </select>
-
 <button onclick="getColor()">Check</button>
 
 function getColor(){

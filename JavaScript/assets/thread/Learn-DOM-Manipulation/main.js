@@ -110,3 +110,9 @@ const createEl = () => {
   });
   document.body.appendChild(obj);
 };
+//ou call first instead
+document.body.appendChild(
+  Object.assign(document.createElement("p"), {
+    textContent: "oi",
+  })
+);
