@@ -1,6 +1,6 @@
 # ReactJS CDN Babel
 
-importação dos scripts
+### v18 production
 
 ```js
  <script
@@ -11,21 +11,80 @@ importação dos scripts
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
     ></script>
- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+```
+
+### v17 production
+
+```js
+ <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script>
+```
+
+### v18 development
+
+```js
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+```
+
+Lastest version
+
+```js
+<script src="https://unpkg.com/react/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+```
+
+# Babel
+
+```js
+  <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 ```
 
 Div root `<div id="root"></div>`
 
-then Hello Wordl!
+then to version 17 e 18 pro `Hello Wordl!`
 
 ```js
 <script type="text/babel">
-  const container = document.getElementById("root"); ReactDOM.render(
+  const container = document.getElementById("root"); ReactDOM.render({" "}
   <h1>Ola</h1>, container);
 </script>
 ```
 
-Em um arquivo separado importe por `<script src="file.babel" type="text/babel"></script>`
+then to version 18 development `Hello Word` includes createRoot, 18 production version não mostra avisos de desenvolvimento.
+
+```js
+<script type="text/babel">
+  const container = document.getElementById("root"); const root =
+  ReactDOM.createRoot(container); root.render(<h1>Hello React 18</h1>);
+</script>
+```
+
+Direct
+
+```js
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<h1>Hello</h1>);
+```
+
+External File
+
+- `<script src="main.babel" type="text/babel"></script>`
+- or .js
+- `<script src="main.js" type="text/babel"></script>`
 
 > JSX expressions must have one parent element
 > Então nosso return ficaria assim:
@@ -35,9 +94,9 @@ const container = document.getElementById("root");
 ReactDOM.render(<h1>Ola</h1>, container);
 ```
 
-# Registrando components
+# 🎉Components
 
-> 👉 primeira letra deve ser Maiúscula
+> 👉 Primeira letra deve ser Maiúscula
 
 ```js
 class App extends React.Component {
@@ -64,7 +123,7 @@ class App extends React.Component {
 }
 ```
 
-# Render multiples components + CSS class
+# Multiples components + CSS
 
 ```js
 ReactDOM.render(

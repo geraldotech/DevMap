@@ -1,0 +1,31 @@
+class SumVar extends React.Component {
+  state = { total: 0 };
+  clicker = () => () => {
+    this.setState((state) => ({
+      total: state.total + 1,
+    }));
+  };
+  render() {
+    return (
+      <div>
+        <span>You have clicked {this.state.total} times</span>
+        {this.props.start.map((i) => {
+          return (
+            <div>
+              <div key={i}>
+                <button onClick={this.clicker()}>Update Var</button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+}
+const container = document.getElementById("root");
+ReactDOM.render(
+  <div class="main">
+    <SumVar start={[{ num: 1 }]} />
+  </div>,
+  container
+);

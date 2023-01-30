@@ -2,7 +2,7 @@ const container = document.getElementById("main");
 
 class Box extends React.Component {
   printNome() {
-    return <h1>func ct</h1>;
+    return <h1>func this.React printNome </h1>;
   }
   render() {
     //const e fun nativa
@@ -12,7 +12,7 @@ class Box extends React.Component {
     }
     return (
       <div>
-        <h1>Ola da class box </h1>
+        <h1>Ola da class box</h1>
         <h2>{name}</h2>
         <p>{printx("printx Function")}</p>
         <p>{this.printNome()}</p>
