@@ -113,3 +113,27 @@ Each child in a list should have a unique "key" prop. Just add the key
 ```js
 return <Todo key={todo} todo={todo} />;
 ```
+
+# How get Input Value in React?
+
+```js
+// add useRef
+import React, { useState, useRef } from "react";
+
+//define const
+const todoNameRef = useRef();
+
+//function get value
+function handleAddTodo(e) {
+  const name = todoNameRef.current.value;
+  //if name empty return
+  if (name === "") return;
+  console.warn(name);
+  //clean input after click
+  todoNameRef.current.value = null;
+}
+
+//App.html
+<input ref={todoNameRef} type="text" />;
+<button onClick={handleAddTodo}>Add Todo</button>;
+```

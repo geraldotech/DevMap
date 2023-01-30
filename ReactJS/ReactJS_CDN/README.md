@@ -14,9 +14,9 @@ importação dos scripts
  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 ```
 
-uma div root `<div id="root"></div>`
+Div root `<div id="root"></div>`
 
-E finalmente nosso Hello Wordl!
+then Hello Wordl!
 
 ```js
 <script type="text/babel">
@@ -31,13 +31,8 @@ Em um arquivo separado importe por `<script src="file.babel" type="text/babel"><
 > Então nosso return ficaria assim:
 
 ```js
-ReactDOM.render(
-  <div>
-    <p>oi</p>
-    <p>hello</p>
-  </div>,
-  container
-);
+const container = document.getElementById("root");
+ReactDOM.render(<h1>Ola</h1>, container);
 ```
 
 # Registrando components
