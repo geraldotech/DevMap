@@ -754,20 +754,10 @@ const p = document.querySelectorAll("[data], [attr2]");
 
 </details>
 
-### pequena diferença entre esses operadores lógicos (Logical Operators)
-
-| SINAL |         TIPO         |
-| :---: | :------------------: |
-|   =   |      atribuição      |
-|  ==   |    compara valor     |
-|  ===  | compara valor e tipo |
-
 ## Threads
 
 - [What is JavaScript? **From Scratch by _Geraldo Filho_** onclick.open"JavaScript-DOM.md"](./assets/thread/JavaScript-DOM.md)
-- [Web Components](./assets/thread/Web-Components)
-
-- <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
+- [Web Components](./assets/thread/)
 - <a href="./assets/thread/Operadores-Atribuicao.md" target="_blank">Operadores-Atribuicao</a>
 - [render_table.html](./assets/thread/render_table_json.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table_json.html" target="_blank">Demo</a>
 - [Menu All Pages](./assets/thread/Menu_All_pages.md)
@@ -776,8 +766,19 @@ const p = document.querySelectorAll("[data], [attr2]");
 
 ## Links:
 
-- <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures">Dada Structures</a>
+- <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
+- <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures">Data Structures</a>
+
+### Diferença entre alguns operadores lógicos (Logical Operators)
+
+| SINAL |         TIPO         |
+| :---: | :------------------: |
+|   =   |      atribuição      |
+|  ==   |    compara valor     |
+|  ===  | compara valor e tipo |
+
 - [table operadores comparação/lógicos] <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">Alura </a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators">MDN</a>
+
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">\_cloneNode(true)</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math" target="_blank">table operadores matemáticos</a>
 - <a href="https://devhints.io/es6" target="_blank">\_devhints.io/es6</a>
