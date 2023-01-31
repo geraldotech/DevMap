@@ -6,11 +6,6 @@
 
 Projects and Demos: [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
 
-### What is JavaScript?
-
-- **From Scratch by _Geraldo Filho_**
-  [onclick.open"JavaScript-DOM.md"](./assets/JavaScript-DOM.md)
-
 ## Extra Fast Code Cheats and examples
 
 <details>
@@ -767,7 +762,10 @@ const p = document.querySelectorAll("[data], [attr2]");
 |  ==   |    compara valor     |
 |  ===  | compara valor e tipo |
 
-# Threads
+## Threads
+
+- [What is JavaScript? **From Scratch by _Geraldo Filho_** onclick.open"JavaScript-DOM.md"](./assets/thread/JavaScript-DOM.md)
+- [Web Components](./assets/thread/Web-Components)
 
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
 - <a href="./assets/thread/Operadores-Atribuicao.md" target="_blank">Operadores-Atribuicao</a>
