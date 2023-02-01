@@ -758,7 +758,7 @@ const p = document.querySelectorAll("[data], [attr2]");
 
 - [What is JavaScript? **From Scratch by _Geraldo Filho_** onclick.open"JavaScript-DOM.md"](./assets/thread/JavaScript-DOM.md)
 - [Web Components](./assets/thread/)
-- <a href="./assets/thread/Operadores-Atribuicao.md" target="_blank">Operadores-Atribuicao</a>
+- <a href="./assets/thread/Operadores-Atribuicao.md" target="_blank">Operadores Atribuicao</a>
 - [render_table.html](./assets/thread/render_table_json.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table_json.html" target="_blank">Demo</a>
 - [Menu All Pages](./assets/thread/Menu_All_pages.md)
 - [childNodes.html](./assets/thread/childNodes.html)
@@ -780,7 +780,7 @@ const p = document.querySelectorAll("[data], [attr2]");
 - [table operadores comparação/lógicos] <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">Alura </a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators">MDN</a>
 
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">\_cloneNode(true)</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math" target="_blank">table operadores matemáticos</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math#arithmetic_operators" target="_blank">Arithmetic operators - Operadores matemáticos</a>
 - <a href="https://devhints.io/es6" target="_blank">\_devhints.io/es6</a>
 - <a href="https://ricardo-reis.medium.com/try-catch-tratando-erros-no-javascript-91bcce0b93ae" target="_blank">Try catch - nice article</a>
 - <a href="https://www.base64encode.org/">base64encode.org</a>
