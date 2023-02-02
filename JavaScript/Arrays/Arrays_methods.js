@@ -1107,6 +1107,16 @@ const arr = ["A","B","A","C","B","Z"];
 console.log(Array.from(new Set (arr))); //A, B, C, Z
 console.log([...new Set(arr)]);  //A, B, C, Z
 
+//@WebDevSimplified https://www.youtube.com/shorts/V81Fb6Yh-UQ
+const arr = ["Z", "B", "Z", "C", "B"];
+const unique = new Set(arr);
+console.log(unique);
+
+const unique2 = new Set(arr);
+unique2.add("Me");
+console.log(unique2.has("Z"));
+console.log(unique2);
+
 // it will not work with objects objects are compared they are compared by reference and not by value. 
 //via https://medium.com/@rbkannan1/filter-an-array-for-unique-values-in-javascript-27dd3dfbe7a8
 
