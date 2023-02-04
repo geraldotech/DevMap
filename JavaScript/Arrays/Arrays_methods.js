@@ -1285,6 +1285,9 @@ console.log(arr.filter((val, ind) => {
   return arr.indexOf(val) === ind; 
 }));
 
+//shorthand
+const unique = arr.filter((val,ind) => arr.indexOf(val) == ind);
+
 //alternativa podemos usar 3 parametros no filter, value, index, ArrayAtual, então o indexOf chama esse parametros ao inves do Array original diretamente
 console.log(arr.filter((val, ind, arrAtual) => {
   return arrAtual.indexOf(val) == ind
