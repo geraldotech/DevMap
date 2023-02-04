@@ -1168,13 +1168,14 @@ console.log(api.filter(el => el.length >= 7));
 
 // 7 - filter quem inclui "m"
 console.log(api.filter(val => ["m"].some(a => val.includes(a))));
-// poderia usar apenas includes!! api.filter(el => el.includes("m"))
+// 👉 single params poderia usar apenas includes!! 
+// 🎉 api.filter(el => el.includes("m"))
 
 // 8 - filter quem inclui "al"
 console.log(api.filter(val => ["al"].some(e => val.includes(e))));
 //poderia usar apenas includes!
 
-// 9 - inclui "Aomeo"
+// 9 - includes "Aomeo"?
 console.log(api.includes("Aomeo"));
 
 // 10 - encontrar o primeiro com a letra "G"
@@ -1195,7 +1196,7 @@ console.log(api.filter((el, ind) => { if(ind > 0 ) return el.endsWith("o")}));
 // 🔰alternative &&
 console.log(api.filter((val,index) => index > 0 && val.endsWith("o")))
 /*-*[=============================================================================]*-*/
-// 👉SUPER DICA: alternative indicando o proprio value
+// 👉SUPER DICA: alternative indicando o own value
 console.log(api.filter(val => {
   if(val != "Geraldo") return val.endsWith("o");
 }));
