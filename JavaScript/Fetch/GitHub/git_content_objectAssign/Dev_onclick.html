@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Content</title>
+  </head>
+  <body>
+    <div id="results"></div>
+    <script>
+      async function get() {
+        const req = await fetch(
+          "https://api.github.com/repos/geraldotech/DevMap/contents"
+        );
+        const res = await req.json();
+
+        const dirJS = res.filter((item) => item.type == "dir");
+        console.dir(dirJS);
+        const container = document.createElement("select");
+
+        dirJS.forEach((item) => {
+          const li = document.createElement("option");
+          li.appendChild(
+            Object.assign(document.createElement("a"), {
+              href: `${item.html_url}`,
+              target: `_blank`,
+              textContent: item.name,
+            })
+          );
+          container.appendChild(li);
+        });
+        document.body.appendChild(container);
+      }
+      get();
+
+      const botao = document.createElement("button");
+      botao.textContent = `Button`;
+      document.body.appendChild(botao);
+      botao.onclick = () => {
+        const sel = document.querySelector(`select`);
+
+        inputCheck(sel.value);
+      };
+
+      async function inputCheck(dir) {
+        const res = await fetch(
+          `https://api.github.com/repos/geraldotech/DevMap/contents/${dir}/`
+        ).then((res) => res.json());
+        console.log(res);
+        const index = res.findIndex((item) => item.name === "index.html");
+        const lista = document.createElement("ul");
+
+        res.map((item) => {
+          const li = document.createElement("li");
+          li.appendChild(
+            Object.assign(document.createElement("a"), {
+              href: `https://git.geraldox.com/${item.path}`,
+              textContent: item.path,
+              target: `_blank`,
+            })
+          );
+          lista.appendChild(li);
+        });
+        document.body.appendChild(lista);
+      }
+    </script>
+  </body>
+</html>
