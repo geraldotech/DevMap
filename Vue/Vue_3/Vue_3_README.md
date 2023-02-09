@@ -26,7 +26,7 @@ Vue.createApp({
     };
   },
 }).mount("#app");
-//.mount(app); //works too
+// .mount(app); //works too
 // .mount(document.body); works too tks VueLoader
 
 //👉 v2 https://vuejs.org/guide/essentials/application.html
@@ -36,6 +36,15 @@ const app = createApp({
     return {};
   },
 }).mount("#app");
+//👉 v3
+const vm = Vue.createApp({
+  data() {
+    return {
+      greeting: "Bem Vindo",
+    };
+  },
+  template: "{{greeting}}",
+}).mount("#root");
 ```
 
 Error: production build (\*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
@@ -228,8 +237,6 @@ methods: {
 [CodePen LiveDemo](https://codepen.io/geraldopcf/pen/ExEMjob)
 
 ## Templates para englobar vários elementos
-
-exemplo
 
 ```js
  <div id="app">
