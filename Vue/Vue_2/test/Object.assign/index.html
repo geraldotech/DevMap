@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VueJS2</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <div id="app">{{3*3}}</div>
+    <div id="app">
+      <h1>{{prime}}</h1>
+      <input type="text" v-model="pconte" />
 
-    <script>
-      const vm = new Vue({
-        el: "#app",
-      });
-    </script>
+      <button @click="createEl">Create</button>
+      <button @click="removeEl">Remove</button>
+    </div>
   </body>
 </html>

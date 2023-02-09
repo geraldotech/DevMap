@@ -19,6 +19,10 @@
     <div id="app">
       <h2>Bermudas - R$ <span>{{price}}</span></h2>
       <p>Quant: {{total}}</p>
+      <p>
+        Valor: {{(price * total).toLocaleString('pt-BR', {style: 'currency',
+        currency: 'BRL'})}}
+      </p>
       <button @click="total++">Adicionar</button>
       <button @click="total--">Remover</button>
       <h2>Forma de pagamento:</h2>
@@ -35,19 +39,28 @@
       <p></p>
       <label>
         <input type="radio" value="2" name="opt[1]" v-model="sel" />
-        PIX - Ganhe {{desconto}}% desconto
+        PIX - {{desconto}}% desconto
       </label>
       <p></p>
-
+      <h2>Resumo:</h2>
       <div>
         <span v-if="sel == '1'">
-          <p>Descontos: 0</p>
-          <p>Total: {{price * total}}</p>
+          <p>Desconto: 0</p>
+          <p>
+            Total: {{(price * total).toLocaleString('pt-BR', {style: 'currency',
+            currency: 'BRL'})}}
+          </p>
         </span>
         <p></p>
         <span v-if="sel == '2'">
-          <p>Descontos: {{desconto}}%: {{desconto * price * total / 100}}</p>
-          <p>Total: {{price * total - desconto * price * total / 100}}</p>
+          <p>
+            Desconto: {{desconto}}%: {{(desconto * price * total /
+            100).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}}
+          </p>
+          <p>
+            Total: {{(price * total - desconto * price * total /
+            100).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}}
+          </p>
         </span>
       </div>
     </div>
@@ -59,6 +72,16 @@
           total: 0,
           desconto: 10,
           sel: "",
+        },
+        watch: {
+          /* 
+          watch a var `total` case == -1 return = 0
+          */
+          total() {
+            if (this.total == -1) {
+              return (this.total = 0);
+            }
+          },
         },
       });
       //default radio
