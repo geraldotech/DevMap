@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!--
+      button que chama a fun independende do tamanho de tela
+    -->
+    <button onclick="res()">create</button>
+    <div id="res"></div>
+    <script>
+      function css() {
+        //no resize enquando não passar de 500px vai criando um loop de imagem
+        const x = window.matchMedia("(max-width: 500px)");
+        //Boolean
+        const tr = x.matches;
+        if (tr) return res();
+        //qdo for !diferente ou seja passar de 500px limpar a tela
+        if (!tr) return (document.getElementById("res").innerHTML = "");
+      }
+
+      //fun create/append the image from url
+      function res() {
+        const img = document.createElement("img");
+        img.src = `https://www.w3schools.com/jsref/klematis.jpg`;
+        img.width = "100";
+        document.getElementById("res").appendChild(img);
+      }
+      //event de movimento de resize da tela, sempre que ocorrer chama a fun que cria imagems
+      window.addEventListener("resize", function () {
+        css();
+      });
+    </script>
+  </body>
+</html>

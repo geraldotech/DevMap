@@ -1,6 +1,6 @@
-# GitAPI
+# Git API repos
 
-# Live Demos
+### Live Demos
 
 [Git_API.html](./live/Git_API.html)  
 [Git-Repo-pinned.html](./live/Git-Repo-pinned.html)
