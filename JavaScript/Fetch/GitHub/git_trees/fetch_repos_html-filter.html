@@ -8,6 +8,9 @@
       :root {
         color-scheme: dark;
       }
+      a {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -25,7 +28,7 @@
         if (data) {
           console.log("data.tree", data.tree[2].sha);
           console.log(data.tree[2]); // print this path
-          const ultimosha = data.tree[2].sha; // get last sha of JavaScript folder, porém isso não está filtrando path, qualquer mudança quebra o code!
+          const ultimosha = data.tree[2].sha; // 👉 ❗ get last sha of JavaScript folder, porém isso não está filtrando path, qualquer mudança quebra o code!
           console.log("sha path: JS", ultimosha);
           pasta(ultimosha); // chamar fun fetch this path
         }
@@ -48,16 +51,22 @@
         const jsin = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${sh}`;
         const dados3 = await fetch(jsin);
         const dadosR = await dados3.json();
-        console.log(dadosR);
-        //filter paths.html
-        const OnlyHtml = dadosR.tree.filter((val) => val.path.includes("html"));
-        console.log("OnlyHtml:", OnlyHtml);
+        console.log("dadosR", dadosR);
+
+        //get checkbox directory
+        const thischeck = `https://api.github.com/repos/geraldotech/DevMap/git/trees/${dadosR.tree[0].sha}`;
+        const res = await fetch(thischeck).then((res) => res.json());
+        console.log("checkbox", res);
+
+        //filterHTML
+        const OnlyHtml = res.tree.filter((item) => item.path.includes("html"));
+        console.warn(OnlyHtml);
 
         //print in HTML
         const full_link = `https://geraldotech.github.io/DevMap/JavaScript/input/`;
         document.getElementById("res").innerHTML = OnlyHtml.map((val) => {
           return `<a href="${full_link}${val.path}" target="_blank">${full_link}${val.path}</a>`;
-        });
+        }).join("");
       }
     </script>
   </body>

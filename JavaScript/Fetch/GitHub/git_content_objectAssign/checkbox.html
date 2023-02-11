@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New document</title>
+    <style>
+      a {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      async function get() {
+        const res = await fetch(
+          `https://api.github.com/repos/geraldotech/DevMap/contents/JavaScript/input/checkbox`
+        ).then((res) => res.json());
+        //filter html
+        const index = res.findIndex((item) => item.name == "index.html");
+        console.log(index);
+        const onlyHTML = res.filter(
+          (item, ind) => item.path.endsWith("html") && ind != index
+        );
+        console.warn(onlyHTML);
+        /*     const render = onlyHTML
+          .map((item) => {
+            return `<a href="https://git.geraldox.com/${item.path}">${item.path}</a>`;
+          })
+          .join("");
+        const div = document.createElement("div");
+        document.body.appendChild(div);
+        document.querySelector("div").innerHTML = render; 
+        
+        */
+        const containerEl = document.createElement("section");
+        onlyHTML.forEach((item) => {
+          console.warn(item.name);
+          const li = document.createElement("li");
+          li.appendChild(
+            Object.assign(document.createElement("a"), {
+              href: `${item.path}`,
+              textContent: `${item.name}`,
+            })
+          );
+          containerEl.appendChild(li);
+        });
+        document.body.appendChild(containerEl);
+      }
+      get();
+    </script>
+  </body>
+</html>
