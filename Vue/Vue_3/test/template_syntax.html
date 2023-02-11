@@ -10,22 +10,32 @@
       :root {
         color-scheme: dark;
       }
+      input {
+        display: block;
+        margin-bottom: 10px;
+      }
     </style>
   </head>
   <body>
     <div id="app">
-
       <p>{{2** 10}}</p>
 
       <span>{{10 > 5}}</span>
 
       <p>{{ 10 > 5 ? 'sim' : 'nao'}}</p>
 
+      <input type="text" v-model="mytxt" placeholder="type a text" />
+      <p>{{mytxt.split('').reverse().join('')}}</p>
+      <hr />
       <p>{{'VueJS'.split('').reverse().join('')}}</p>
 
       <p>{{message.split('').reverse().join('')}}</p>
-      <input type="password" v-model="senha" placeholder="senha" 
-      v-on:focus="oioi()">
+      <input
+        type="password"
+        v-model="senha"
+        placeholder="senha"
+        v-on:focus="oioi()"
+      />
       <!-- isso não funciona
 <p>{{if(senha) {return algo } }}</p> -->
 
@@ -39,14 +49,16 @@
         data() {
           return {
             message: "gmapdev",
-            senha: '',
-            link: "https://github.com/geraldotech/DevMap"
-          }        
-        },methods:{
-          oioi(){
+            senha: "",
+            link: "https://github.com/geraldotech/DevMap",
+            mytxt: "",
+          };
+        },
+        methods: {
+          oioi() {
             console.log("input click detected");
-          }
-        }
+          },
+        },
       }).mount(app);
     </script>
   </body>

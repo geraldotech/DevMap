@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{nome | toUp()}}</p>
+
+      {{onlyA}}
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          nome: "master",
+          arr: ["Gera", "Ala", "Vitor"],
+        },
+
+        //filter strings
+        filters: {
+          truncate: function (data, num) {
+            const reqStr = data.split("").splice(0, num).join("");
+            return reqStr;
+          },
+          toUp: function (data) {
+            return data.toUpperCase();
+          },
+        },
+        //filter arr using computed
+        computed: {
+          onlyA() {
+            return this.arr.filter((item) => item.endsWith("a"));
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
