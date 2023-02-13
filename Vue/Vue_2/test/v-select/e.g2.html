@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-select@latest"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/vue-select@latest/dist/vue-select.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <v-select v-model="selected" :options="items"></v-select>
+      <p>{{selected.id}}</p>
+
+      <hr />
+      <v-select
+        v-model="selected2"
+        :options="[{label: 'Canada', code: 'ca'}, {label: 'USA', code: 'ca'}]"
+      ></v-select>
+      <p>{{selected2}}</p>
+    </div>
+    <script>
+      Vue.component("v-select", VueSelect.VueSelect);
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          selected: "",
+          selected2: "",
+          label: "",
+          items: [
+            { id: 1, label: "Canada", code: "ca" },
+            { id: 2, label: "Canada 2", code: "ca2" },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>

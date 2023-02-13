@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="firstName" />
+      <p>{{fullName}}</p>
+    </div>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          firstName: "Geraldo",
+          lastName: "Filho",
+        },
+        //https://vuejs.org/guide/essentials/computed.html#writable-computed
+        computed: {
+          fullName: {
+            // getter
+            get() {
+              return this.firstName + " " + this.lastName;
+            },
+            // setter
+            set(newValue) {
+              // Note: we are using destructuring assignment syntax here.
+              [this.firstName, this.lastName] = newValue.split(" ");
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

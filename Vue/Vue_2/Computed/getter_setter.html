@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      input {
+        display: inline-block;
+      }
+      label,
+      input {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        Computed properties are by default getter-only. If you attempt to assign
+        a new value to a computed property, you will receive a runtime warning.
+        In the rare cases where you need a "writable" computed property, you can
+        create one by providing both a getter and a setter:
+      </p>
+      <input type="text" v-model="firstName" />
+      <p>{{fullName}}</p>
+    </div>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          firstName: "Geraldo",
+          lastName: "Filho",
+        },
+        //https://vuejs.org/guide/essentials/computed.html
+        computed: {
+          fullName: {
+            // getter
+            get() {
+              //return this.firstName + ' ' + this.lastName
+              if (this.firstName == `gera`) {
+                return (this.lastName = "novo");
+              }
+            },
+            // setter
+            set(newValue) {
+              // Note: we are using destructuring assignment syntax here.
+              [this.firstName, this.lastName] = newValue.split(" ");
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

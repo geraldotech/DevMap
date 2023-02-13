@@ -8,10 +8,17 @@
     <style>
       input {
         display: inline-block;
+        text-transform: uppercase;
       }
       label,
-      input {
+      input,
+      button {
         cursor: pointer;
+      }
+      .cupomok {
+        color: seagreen;
+        font-weight: bold;
+        font-family: "Courier New", Courier, monospace;
       }
     </style>
   </head>
@@ -34,58 +41,37 @@
           v-model="sel"
           checked="true"
         />
-        Crédito
+        Crédito e Débito
       </label>
       <p></p>
       <label>
-        <input type="radio" value="2" name="opt[1]" v-model="sel" />
-        PIX - {{desconto}}% desconto
+        <input type="radio" value="2" name="opt[2]" v-model="sel" />
+        PIX - GANHE {{desconto}}% de desconto
       </label>
-      <p></p>
+
       <h2>Resumo:</h2>
+      <p>
+        CUPOM:
+        <input type="text" placeholder="cupom de desconto" v-model="cupom" />
+        <span class="cupomok">{{applyCupom}}</span>
+      </p>
       <div>
         <span v-if="sel == '1'">
-          <p>Desconto: 0</p>
-          <p>
-            Total: {{(price * total).toLocaleString('pt-BR', {style: 'currency',
-            currency: 'BRL'})}}
-          </p>
+          <hr />
+          <p>Total: {{credito()}}</p>
         </span>
         <p></p>
         <span v-if="sel == '2'">
+          <p>Descontos:</p>
           <p>
-            Desconto: {{desconto}}%: {{(desconto * price * total /
+            PIX - {{desconto}}%: {{(desconto * price * total /
             100).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}}
           </p>
-          <p>
-            Total: {{(price * total - desconto * price * total /
-            100).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}}
-          </p>
+          <hr />
+          <p>Total: {{pix()}}</p>
         </span>
       </div>
     </div>
-    <script>
-      const vm = new Vue({
-        el: "#app",
-        data: {
-          price: 65,
-          total: 0,
-          desconto: 10,
-          sel: "",
-        },
-        watch: {
-          /* 
-          watch a var `total` case == -1 return = 0
-          */
-          total() {
-            if (this.total == -1) {
-              return (this.total = 0);
-            }
-          },
-        },
-      });
-      //default radio
-      //vm.sel = "1";
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

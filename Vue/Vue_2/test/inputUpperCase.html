@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="nome" @input="gnn" />
+
+      <p>{{nome}}</p>
+    </div>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          nome: ``,
+        },
+        methods: {
+          gnn() {
+            this.nome = this.nome.toUpperCase();
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

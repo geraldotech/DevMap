@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js" defer></script>
+    <style>
+      /*
+article que contem esse attr
+      */
+      article[data] {
+        color: skyblue;
+      }
+
+      article[data*="novo"] {
+        color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      Aplique estilo CSS em tags HTML baseado no texto interno do atributo
+    </h2>
+    <a href="https://www.youtube.com/watch?v=YYBb6emmxuY"
+      >https://www.youtube.com/watch?v=YYBb6emmxuY</a
+    >
+    <div>div</div>
+    <hr />
+    <section>section</section>
+
+    <p style="background: rgb(71, 38, 38)">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, natus
+      asperiores odit non ullam veniam totam molestiae sunt recusandae
+      praesentium est ipsum voluptatum, autem doloremque quo quam voluptatibus
+      minus dolorum.
+    </p>
+
+    <p style="background: salmon">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic maiores
+      eveniet nisi, eius rem illum laudantium harum pariatur ea dicta omnis sit
+      quisquam! Aliquid quia laborum tenetur culpa aut alias!
+    </p>
+
+    background: rgb(71, 38, 38)
+    <code> [style*="background: rgb(71, 38, 38)"]{ color: red; } </code>
+
+    <article data="hoje">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+      nesciunt?
+    </article>
+
+    <article>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, modi.
+    </article>
+
+    <article data="novo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
+      nihil.
+    </article>
+  </body>
+</html>

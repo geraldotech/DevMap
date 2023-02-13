@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-select@latest"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/vue-select@latest/dist/vue-select.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <p>Using v-select plugin</p>
+      <v-select :options="list"></v-select>
+    </div>
+    <script>
+      Vue.component("v-select", VueSelect.VueSelect);
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          list: ["foo", "bar", "baz"],
+        },
+      });
+
+      //https://codesandbox.io/s/j243vnpyp3?file=/src/App.vue
+    </script>
+  </body>
+</html>

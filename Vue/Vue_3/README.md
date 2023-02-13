@@ -53,6 +53,14 @@ Error: production build (\*.prod.js) when deploying for production?: `https://un
 
 [https://vuejs.org/guide/essentials/lifecycle.html](https://vuejs.org/guide/essentials/lifecycle.html)
 
+- ### created()
+
+```js
+  created(){
+   console.log("Hello!");
+  },
+```
+
 ## Properties
 
 - methods
@@ -63,13 +71,25 @@ Error: production build (\*.prod.js) when deploying for production?: `https://un
 
 has -v prefix [REF](https://vuejs.org/guide/essentials/template-syntax.html#directives)
 
-- v-model
+- [v-model](#v-model)
 - v-if
 - [v-bind](#v-bind)
 - [v-on](#v-on)
 - [v-show](#v-show)
 - v-for
 - v-html
+
+## v-model
+
+[REF](https://vuejs.org/guide/essentials/forms.html)
+
+```js
+The v-model directive helps us simplify the above to:
+```
+
+The v-model directive helps us simplify the above to:
+
+`<input v-model="text">`
 
 ## v-bind
 
@@ -96,7 +116,8 @@ Atributos dinâmicos
     - <input type="text" @change="handleChange" />
     - <input type="text" @click="handleChange" />
     - <input type="text" @mouseover="handleChange" />
-    - <input type="text" v-model="nome" v-on:input="Complete" />
+    - `<input type="text" v-model="nome" v-on:input="Complete" />`
+    - input type="text" v-model="nome" @input="nome = nome.toUpperCase()" />
 
 now just create a method
 
@@ -107,12 +128,21 @@ now just create a method
       }
     }
 
-//getting value target in select options
+//getting value target in select options sem v-bind
  handleChange(event){
     const selel = event.target.value;
        console.log(selel);
     }
 
+//v-bind ficaria
+ console.warn(this.opcoes);
+
+//html
+<select @change="handleChange" v-model="opcoes">
+<option value="">Selecionar</option>
+<option value="1">one</option>
+<option value="2">two</option>
+</select>
 ```
 
 ## v-show
@@ -275,14 +305,6 @@ methods: {
       tech:[]
     }
 
-```
-
-## created()
-
-```js
-  created(){
-   console.log("Hello!");
-  },
 ```
 
 - [Vue refs (change element name @click)](https://www.nicesnippets.com/blog/vue-js-get-element-by-id-example)
