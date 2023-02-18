@@ -61,14 +61,19 @@ window.console.log same | console.log
 window.screen.height
 window.innerHeight
 window.innerWidth
-window.open(); // abre nova janela
+window.open(); // abre nova janela - 3 params opcionais
+              - syntax //👉 https://developer.mozilla.org/en-US/docs/Web/API/Window/open#syntax
+              -  open("https://developer.mozilla.org/", "_blank", "width=500, height=300");
+              //open window + write text
+              - open("", "", "width=500, height=300").document.write("JS");
+              - open("js.html", "", "width=500, height=300");
 window.prompt() // get prompt text
 window.print();
 window.confirm();
 window.location - vai retornar uma lista de objetos, algums são:
-- .pathname
-- .href 👉 "new url to redirect"
-- .reload() 👉 "reload page"
+                - .pathname
+                - .href 👉 "new url to redirect"
+                - .reload() 👉 "reload page"
 window.onload = function (){...}
 window.onresize = function(){...}
 //tudo que acompanhar nome + parênteses() são funções nativas, você também pode criar as suas.
@@ -185,12 +190,22 @@ const btn2 = document.getElementById("btn2").onclick = function (){
   alert("hello");
 }
 
-//
+//button name
 const btn3 = document.querySelector("button[name='btn3']");
 btn3.onclick = function (){
   alert("hello");
 }
 
+//inline
+<button onclick="console.log(`gge`)">gge</button>
+//chama o javascript sem reload page
+<a href="javascript:console.log('javascript')">Link</a>
+<a    id="color"
+      href="javascript:void(document.getElementById('color').style.backgroundColor = `green`)">Color</a>
+
+  <button onclick="document.getElementById(`res`).textContent = `okay`">
+      Okay
+    </button>
 ```
 
 # Local do script
@@ -279,6 +294,27 @@ document.addEventListener("DOMContentLoaded", () => {
 console.log(root.innerHTML);
 console.log(root.textContent);
 console.log(root.innerText);
+```
+
+# javascript:void(0)
+
+[javascript-void-0-em-javascript/](https://www.freecodecamp.org/portuguese/news/o-que-significa-o-javascript-void-0-em-javascript/)
+
+Evita o reload da página e chama uma function caso houver
+
+```js
+<a href="javascript:void(0)" onclick="openInNewTab(`http://google.com`)">
+  Google
+</a>;
+
+function openInNewTab(url) {
+  open(url, "", "width=500, height=300");
+}
+
+//by geraldoX null works too
+<a href="javascript:null" onclick="openInNewTab()">
+  Link
+</a>;
 ```
 
 ### Useful links:
