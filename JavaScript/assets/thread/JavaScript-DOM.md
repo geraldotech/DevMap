@@ -298,7 +298,7 @@ console.log(root.innerText);
 
 # javascript:void(0)
 
-[javascript-void-0-em-javascript/](https://www.freecodecamp.org/portuguese/news/o-que-significa-o-javascript-void-0-em-javascript/)
+[\_javascript-void-0-em-javascript](https://www.freecodecamp.org/portuguese/news/o-que-significa-o-javascript-void-0-em-javascript/)
 
 Evita o reload da página e chama uma function caso houver
 
@@ -322,6 +322,6 @@ function openInNewTab(url) {
 - [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
 - [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)
 - [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
-- [Evitando populir o objeto-global](http://devfuria.com.br/javascript/objeto-global/)
+- [Evitando poluir o objeto-global](http://devfuria.com.br/javascript/objeto-global/)
 - [https://en.wikipedia.org/wiki/DOM_events](https://en.wikipedia.org/wiki/DOM_events)
 - [DOM_obj_style-for-CSS](https://www.w3schools.com/jsref/dom_obj_style.asp)
