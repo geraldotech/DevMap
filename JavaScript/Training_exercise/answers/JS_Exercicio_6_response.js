@@ -36,11 +36,13 @@ busca = animais.filter((animal) => animal.tipo === 'cao')
 console.log(busca)
 
 //6
-busca2 = animais.reduce((total, element)=>{
-    if(element.tipo === 'cao') return total+= (element.idade *=2);
-    else return total},0)
+const busca3 = animais.reduce((acc, curr) => {
+  if (curr.tipo == "cao") return (acc += curr.idade *= 2);
+  else return acc;
+}, 0);
 
-console.log(busca2)
+console.log(busca3);
+
 
 //7
     <input type="text" id="input" />
@@ -81,28 +83,24 @@ document.querySelector("input").oninput = function () {
 //8
 //DOM
 
-<input type="text" id="input" />
+<input type="text" />
 <div id="res"></div>
 
+
 const input = document.querySelector("input");
-+input.addEventListener("input", function(ele){
-
+input.addEventListener("input", function () {
   let str = this.value;
-  //console.log(str)
-  const writtenN = {
-  0: "Zero",
-  1: "One",
-  "G": "Geraldo"
-}
-const getn = str => {
-  return writtenN[str] || "other" || '';
- 
-}  
 
-console.log(getn(str))
-document.getElementById("res").innerHTML = getn(str);
-if(this.value.length === 0) {
-  document.getElementById("res").innerHTML = '';
- }
+  const written = {
+    0: "Zero",
+    1: "One",
+    G: "GeraldoX",
+  };
 
-})
+  const getn = (val) => {
+    return written[val] || "other";
+  };
+  const root = document.querySelector(`#root`);
+  root.innerHTML = getn(str);
+  if (str.length === 0) return (root.innerHTML = ``);
+});
