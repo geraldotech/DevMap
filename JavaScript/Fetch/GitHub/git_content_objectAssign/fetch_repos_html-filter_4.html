@@ -16,14 +16,15 @@
         const res = await fetch(
           `https://api.github.com/repos/geraldotech/DevMap/contents/JavaScript/input/checkbox`
         ).then((res) => res.json());
-        //filter html
+        //filter index.html
         const index = res.findIndex((item) => item.name == "index.html");
-        console.log(index);
+        //filter all .html except index.html
         const onlyHTML = res.filter(
           (item, ind) => item.path.endsWith("html") && ind != index
         );
         console.warn(onlyHTML);
-        /*     const render = onlyHTML
+        //👉map version
+        /* const render = onlyHTML
           .map((item) => {
             return `<a href="https://git.geraldox.com/${item.path}">${item.path}</a>`;
           })
@@ -33,6 +34,8 @@
         document.querySelector("div").innerHTML = render; 
         
         */
+        //👉forEach version
+
         const containerEl = document.createElement("section");
         onlyHTML.forEach((item) => {
           console.warn(item.name);
