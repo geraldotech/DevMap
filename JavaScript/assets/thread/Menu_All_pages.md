@@ -7,7 +7,7 @@ you don't have to edit the code on every page when a change is made to the menu.
 
 # e.g 0: tag `object`
 
-Versão do princípio++ usando apenas HTML deveriamos ter conhecimento do poder essa tag que pode fazer o papel de includes [https://gmapdev.netlify.app/html/#object](https://gmapdev.netlify.app/html/#object)
+Versão do princípio++ usando apenas HTML deveriamos ter conhecimento do poder essa tag que pode fazer o papel de includes [https://git.geraldox.com/HTML/#object](https://git.geraldox.com/HTML/#object)
 
 # eg 1: Using Array, select, append
 
