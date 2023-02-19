@@ -117,6 +117,14 @@ let num = document.getElementById("num");
 num.innerHTML = +num.innerHTML + 1;
 //num.innerHTML = parseInt(num.innerHTML) +1;
 }
+
+// this
+  <p style="cursor: pointer">0</p>
+document.querySelector("p").onclick = function () {
+  this.innerHTML = +this.innerHTML + 1;
+};
+
+
 ```
 
 </details>
