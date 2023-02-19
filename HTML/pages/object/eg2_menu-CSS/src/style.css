@@ -1,0 +1,33 @@
+* {
+  color-scheme: dark;
+}
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+div {
+  color: rgb(89, 89, 219);
+}
+
+object {
+  height: 60px;
+  width: 100%; /*deixar menu largo*/
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: rgb(156, 57, 46);
+  padding: 8px 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}

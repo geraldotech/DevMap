@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      body {
+        /*
+            responsive body
+            */
+        max-width: 1200px;
+        min-width: 320px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Imagem flexível</h1>
+
+    <picture>
+      <!--
+        source media depende <img src="" se deixar vázio especificar todos os medis inclusive o padrão
+    -->
+      <!--
+        telas máximo 600px mostrar a imagem pequena
+    -->
+      <source
+        media="(max-width: 600px)"
+        srcset="
+          https://raw.githubusercontent.com/gustavoguanabara/html-css/master/desafios/modulo-01/d007/imagens/paisagem-p.png
+        "
+      />
+      <!--
+Telas máxima de 1200px, pegar a partir de 1199px
+   -->
+      <source
+        media="(max-width: 1200px)"
+        srcset="
+          https://raw.githubusercontent.com/gustavoguanabara/html-css/master/desafios/modulo-01/d007/imagens/paisagem-m.png
+        "
+      />
+      <!--
+enquando o tamanho minimo da tela for 1200px vai mostrar a imagem grande, ou DEFINIR a imagem grande como padrão em <img src="imagem-grande.jpg" comentar e descomentar os exemplos
+    -->
+
+      <source
+        media="(min-width: 1200px)"
+        srcset="
+          https://raw.githubusercontent.com/gustavoguanabara/html-css/master/desafios/modulo-01/d007/imagens/paisagem-g.png
+        "
+      />
+      <img src="" alt="" />
+
+      <!--  <img src="https://raw.githubusercontent.com/gustavoguanabara/html-css/master/desafios/modulo-01/d007/imagens/paisagem-g.png" alt=""> -->
+    </picture>
+  </body>
+</html>

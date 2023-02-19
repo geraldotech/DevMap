@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title> - HTML - Hyper Text Markup Language</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		
+	<style>
+		body {
+			background-color: #363636;
+			color: white;
+			margin: 20px;
+		}
+
+		p.f {
+			text-align: center;
+			color: orange;
+			font-size: 20px;
+		}
+
+		p.gera {
+			text-align: center;
+			color: red;
+			font-size: 20px;
+		}
+
+		p.gerab {
+			text-align: center;
+			color: rgb(255, 255, 255);
+			font-size: 20px;
+		}
+
+		div.titulo {
+			margin: 20px;
+			font-size: 20px;
+			text-align: center;
+			border: 3px solid #4CAF50;
+			background-color: black;
+			color: orange;
+		}
+
+		.code {
+			border: 1px solid green;
+			border-radius: 8px;
+			color: green;
+			background-color: black;
+			font-weight: normal;
+			font-family: 'Courier New', monospace;
+			display: block;
+		}
+
+		h1 {
+			text-align: left;
+			color: orange;
+			background-color: black;
+			display: inline-block;
+		}
+
+		a {
+			text-align: center;
+			color: orange;
+			background-color: black;
+		}
+
+		.video {
+			max-width: 150px;
+		}
+
+		table {
+			width: 100%;
+			background-color: black;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		th,
+		td {
+			border: 1px solid white;
+			text-align: center;
+		}
+
+		th {
+			border: 1px solid white;
+			background-color: mediumseagreen;
+		}
+
+		td:hover {
+			background-color: dodgerblue;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<p style="text-align:center;font-size:30px" title="Welcome">Fast codes by Geraldo Filho</p>
+	</div>
+	<div id="gohome"></div>
+	<ul>
+		<li><a id="#home">HOME</a></li>
+		<li><a href="#gofooter">Go to End Page</a></li>
+	</ul>
+	<div class="container">
+		<div class="titulo">HTML - Hyper Text Markup Language</div>
+		<hr>
+		<p style="text-align:center;color:violet;font-size:200%"><i>Do youself your website in html</i></p>
+
+		<h1>Comments </h1>
+		<hr>
+		<div class="code">
+			<xmp>
+				<!-- my comment -->
+			</xmp>
+		</div>
+
+
+		<h1>Paragraph with a line break</h1>
+		<hr>
+		<div class="code"><b>
+				<xmp>
+					<p>This is a <br> paragraph with a line break.</p>
+				</xmp>
+			</b></div>
+
+		<h1>HTML Images</h1>
+		<hr>
+		<p>The source ( src ), alternative text ( alt), width and height are provided as attibutes:
+		<div class="code"><b>
+				<xmp><img src="img/howimg.jpg" alt="exemplo html imagens">
+				</xmp>
+			</b></div>
+
+		<img src="img/howimg.jpg" alt="exemplo html imagens">
+		<p><b><img src="http://gpnote.tech/img/chalkartes.jpg" width="300" height="200" alt="ChalkArtes logo"></b></p>
+
+
+		<h1 title="IMG com LINK">IMG With Links</h1>
+		<hr>
+		<pre><code><xmp><a href="http://blog.com"target="_blank"> <img src="https://technotesbr.files.wordpress.com/2018/01/images.png" 
+target="blank" width="300" height="300" alt="ChalkArtes logo" /></a>
+</xmp>
+</code></pre>
+		<a href="http://blog.com" target="_blank"><img src="https://technotesbr.files.wordpress.com/2018/01/images.png"
+				target="blank" width="300" height="300" alt="ChalkArtes logo" /></a>
+
+		<h1 title="How make html links">HTML Make Links</h1>
+		<hr>
+
+		Sample:<br>
+		<div class="code">
+			<xmp> <a href="full-Link">Buton name</a></xmp>
+		</div>
+		Saída: <a href="full-Link">Buton name</a>
+
+		Title and _blank: <br>
+		<div class="code">
+			<xmp> <a href="full-Link" target="_blank" title="Link">Buton name</a></xmp>
+		</div>
+		Saída: <a href="full-Link" target="_blank" title="Link">Buton name</a>
+
+		<h1 title="XMP tag">XMP tag</h1>
+		<hr>
+		<div class="container">renders text between the start and end tags without interpreting the HTML in between and
+			using a monospaced font.</div>
+		<strong>Exemple use</strong>
+		<p>
+		<div class="code"><b>
+				<xmp>
+					<xmp> my text < /xmp>
+					</xmp>
+			</b></div>
+
+		<h1>HTML Is Not Case Sensitive</h1>
+		<hr>
+		<p>HTML tags are not case sensitive: P means the same as p
+
+		<h1>HR</h1>
+		<hr>
+		<p>tag defines a thematic break in an HTML page (e.g. a shift of topic).</p>
+		Usage:
+		<div class="code">
+			<xmp>
+				<hr>example</hr>
+			</xmp>
+		</div>
+		<hr>
+		example
+		<hr>
+
+
+		<h1>The HTML <a href="https://www.w3schools.com/html/html_styles.asp" target="_blank" title="Checkout">style</a>
+			Attribute</h1>
+		<hr>
+		<p>The style attribute is used to specify the styling of an element, like color, font, size etc.
+		<div class="code"><strong>
+				<xmp>
+					<p style="color:red">Vermelho</p>
+				</xmp>
+			</strong></div>
+		<p style="color:red">Vermelho</p>
+		<div class="code">
+			<xmp>
+				<h1 style="background-color:DodgerBlue;">Hello World</h1>
+			</xmp>
+		</div>
+		<h1 style="background-color:DodgerBlue;">Hello World</h1>
+
+		<div class="code">
+			<pre><xmp>
+				<p style="background-color:Tomato;"> Lorem ipsum dolor sit ametsdsd</p>
+			</xmp></pre>
+		</div>
+		<p style="background-color:Tomato;">
+			Lorem ipsum dolor sit ametsdsd</p>
+
+		<h1> P usage </h1>
+
+		<div class="code">
+			<xmp>
+				<p style="text-align:center;"><a href="index2323.html">
+						Exemplo href Center with P </a></p>
+			</xmp>
+		</div><br>
+		<p style="text-align:center;"><a href="index2323.html">
+				Exemplo href Center with P </a></p>
+
+		<h1> DIV usage </h1>
+
+		<div class="code">
+			<xmp>
+				<p style="font-size:30px;text-align:center;color:purple;">
+					I am 30px, center and purple with P</p>
+			</xmp>
+		</div>
+		<p style="font-size:30px;text-align:center;color:purple;">
+			I am 30px, center and purple with P</p>
+
+		<div class="code">
+			<div style="font-size:20px;color:green;background-color:pink;text-align:center;">
+				<a href="http://speedtest-nyc3.digitalocean.com/" /> http://speedtest-nyc3.digitalocean.com/</a>
+			</div>
+		</div>
+
+		<div class="code">
+			<xmp>
+				<div align="center" font-size="20px"> <a href="index2323.html">
+						Exemplo href Center with Div </a> </div>
+			</xmp>
+		</div>
+		<div align="center" font-size="20px"> <a href="index2323.html">
+				Exemplo href Center with Div </a> </div>
+
+		<div class="code">
+			<xmp>
+				<div style="color:blue;text-align:center;font-size:40px">
+					I am blue and center witi div </div>
+			</xmp>
+		</div>
+		<div style="color:blue;text-align:center;font-size:40px">I am blue and center witi div font size is 40px</div>
+		<div class="code">
+			<xmp>
+				<p style="color:blue;">I am blue
+				<p style="font-size:30px">I am 30px</p>
+				<h1 style="font-size:300%;">This is a heading</h1>
+				<p style="text-align:center;">I am center</p>
+			</xmp>
+		</div>
+		<h1 style:font-size:100%"><a href="https://www.w3schools.com/html/html_formatting.asp" target="_blank"
+				title="HTML">HTML Formatting Elements</a></h1>
+		<hr>
+		<div class="code">
+			<xmp>
+				<b> - Bold text
+					<strong> - Bold Important text
+						<i> - Italic text
+							<em> - Emphasized text
+								<mark> - Marked text
+									<small> - Smaller text
+										<del> - Deleted text
+											<ins> - Inserted text
+												<sub> - Subscript text
+													<sup> - Superscript text
+			</xmp>
+		</div>
+		<h1 style:font-size:100%"><a href="https://www.w3schools.com/html/html_formatting.asp" target="_blank">HTML Text
+				Formating</a></h1>
+		<p>visit link for read more</p>
+		<hr>
+
+
+		<h1><a href="https://www.w3schools.com/html/html_links_bookmarks.asp">HTML Links - Create Bookmarks</a></h1>
+		<p>HTML links can be used to create bookmarks, so that readers <br>can jump to specific parts of a web page</p>
+
+
+		<hr>
+		<h1>Embed video with direct link</h1>
+		<video controls src="https://s3.eu-central-1.amazonaws.com/pipe.public.content/short.mp4"
+			poster="https://s3.eu-central-1.amazonaws.com/pipe.public.content/poster.png" preload="none"> </video>
+		<div class="code">
+			<xmp>
+				<video controls src="https://s3.eu-central-1.amazonaws.com/pipe.public.content/short.mp4" class="video"
+					poster="https://s3.eu-central-1.amazonaws.com/pipe.public.content/poster.png" preload="none">
+				</video>
+			</xmp>
+		</div>
+		<hr>
+		<h1>Redirect-to-antoger-page</h1>
+		<div class="code">
+			<xmp style="color:green;background-color:black;">
+				<html>
+
+				<head>
+					<title>dl.smartdicas.com</title>
+					<meta http-equiv="refresh" content="5;URL=http://www.smartdicas.com">
+
+				</head>
+
+				<body>
+					some text...
+				</body>
+
+				</html>
+			</xmp>
+		</div>
+		<hr>
+		<h1>Estilizar diretamente</h1>
+		<p>LINK REF: <a href="https://www.w3schools.com/tags/tag_style.asp" target="_blank"
+				title="open new window">https://www.w3schools.com/tags/tag_style.asp </a> </p>
+		<div class="code">
+			<xmp>
+				<!DOCTYPE html>
+				<html>
+
+				<head>
+					<style>
+						h1 {
+							color: red;
+							text-align: center;
+						}
+
+						p {
+							color: blue;
+						}
+
+						g {
+							color: green;
+							font-size: 20px
+						}
+					</style>
+				</head>
+
+				<body>
+
+					<h1>This is a heading</h1>
+					<p>This is a paragraph.</p>
+					<g>TEstetet</g>
+
+				</body>
+
+				</html>
+			</xmp>
+		</div>
+
+		<h1>Embed a Youtube video</h1>
+		<div class="code">
+			<xmp>
+				<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>
+			</xmp>
+		</div>
+		<h1>CSS Color link</h1>
+		<div class="code">
+			<xmp>
+				<!DOCTYPE html>
+				<html>
+
+				<head>
+					<style>
+						a {
+							color: hotpink;
+						}
+					</style>
+				</head>
+
+				<body>
+
+					<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+				</body>
+
+				</html>
+			</xmp>
+		</div>
+
+		<h1>Button CSS + html</h1>
+		<div align="center">
+			<img src="img/823948.jpg" class="text-center" alt="...">
+		</div>
+		<p style="text-align: center;font-size: large;background-color: rgb(0, 0, 0);"> Adicionar no CSS</p>
+		<div class="code">
+			<xmp>
+				<!DOCTYPE html>
+
+				<head>
+					<style>
+						p {
+							background-color: #f44336;
+							display: inline-block;
+							padding: 14px 25px;
+							/* tamanho da borda  */
+							font-size: 20px;
+							font-weight: bold;
+
+						}
+
+						a:link,
+						a:visited {
+							background-color: #f44336;
+							color: white;
+							padding: 14px 25px;
+							text-align: center;
+							text-decoration: none;
+							display: inline-block;
+						}
+
+						a:hover,
+						a:active {
+							background-color: green;
+						}
+					</style>
+				</head>
+			</xmp>
+		</div>
+
+		<p style="text-align: center;font-size: large;background-color: rgb(0, 0, 0);"> Adicionar no body</p>
+		<div class="code">
+			<xmp>
+
+				<body>
+
+					<h2>Novidade:</h2>
+					<p>Ganhe até 40% de Cashback</p>
+					<a href="default.asp" target="_blank">SAIBA MAIS</a>
+
+				</body>
+
+</html>
+</xmp>
+</div>
+<h1>Charset ptbr</h1>
+
+<div class="code">
+	<xmp>
+		<meta charset="utf-8">
+	</xmp>
+</div>
+
+<h1>form menu select and go</h1>
+<h2>HTML</h2>
+<div class="code">
+	<xmp>
+		<form action="#">
+			<label for="lang">Language</label>
+			<select name="languages" id="lang">
+				<option value="javascript">JavaScript</option>
+				<option value="php">PHP</option>
+				<option value="java">Java</option>
+				<option value="golang">Golang</option>
+				<option value="python">Python</option>
+				<option value="c#">C#</option>
+				<option value="C++">C++</option>
+				<option value="erlang">Erlang</option>
+			</select>
+			<input type="submit" value="Submit" />
+		</form>
+	</xmp>
+</div>
+<h2>CSS</h2>
+<div class="code">
+	<xmp>
+		body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		height: 100vh;
+		background-color: #f1f1f1;
+		}
+
+		input {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		}
+	</xmp>
+</div>
+<h1>Menu suspenso click and go</h1>
+<div class="code">
+	<xmp>
+		<form>
+			<select onchange="top.location.href=this.form.links.options [this.form.links.selectedIndex].value"
+				name="links">
+				<option selected />Selecione um servidor
+				<option value="http://link1" />Link Um
+				<option value="http://link2" />Link Dois
+			</select>
+		</form>
+
+	</xmp>
+</div>
+<h2>Saida</h2>
+<div class="code">
+	<form>
+		<select onchange="top.location.href=this.form.links.options [this.form.links.selectedIndex].value" name="links">
+			<option selected />Selecione um servidor
+			<option value="http://link1" />Link Um
+			<option value="http://link2" />Link Dois
+		</select>
+	</form>
+</div>
+<h1>Table</h1>
+<h5>Criar tabela</h5>
+<div class="code">
+	<xmp>
+		<table>
+			<caption>Titulo</caption>
+			<tr>
+				<th>BANK</th>
+				<th>VALOR</th>
+			</tr>
+			<tr>
+				<td>SANTANDER</td>
+				<td>R$ 100</td>
+			</tr>
+			<tr>
+				<td>BB</td>
+				<td>R$ 50</td>
+			</tr>
+		</table>
+	</xmp>
+</div>
+<h5>PROPRIEDADES</h5>
+<p>CAPTION - descrição</p>
+<p>TR - Table Row Element</p>
+<p>TH - Table Header</p>
+<p>TD - Table Data</p>
+
+
+<table>
+	<caption>Titulo</caption>
+	<tr>
+		<th>BANK</th>
+		<th>VALOR</th>
+	</tr>
+	<tr>
+		<td>SANTANDER</td>
+		<td>R$ 100</td>
+	</tr>
+	<tr>
+		<td>BB</td>
+		<td>R$ 50</td>
+	</tr>
+</table>
+
+<h1>menu click and go by ID</h1>
+<h2>Set a #id tag in content</h2>
+<div class="code">
+	<xmp>
+		<div id="goyoutube">Youtube</div>
+	</xmp>
+</div>
+<h2>Callback id</h2>
+<div class="code">
+	<xmp>
+		<li><a href="#goyoutube">Youtube</a></li>
+	</xmp>
+</div>
+<h1>Redirect</h1>
+</div> <!-- div ref ao container lá em cima -->
+</body>
+<footer class="pt-3 mt-4 text-muted border-top">
+	<ul>
+		<li><a href="#gohome">HOME</a></li>
+	</ul>
+	<div id="gofooter"></div>
+	<p class="gera">Creation Date: 28 Jan, 2022</p>
+	<p class="gerab">Lastupdate: Today</p>
+	<p class="f"> <a href="https://www.w3schools.com/" target="_blank" title="Credits">Reference W3schools</a></p>
+</footer>
+
+</html>

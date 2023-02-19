@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      div {
+        text-align: center;
+      }
+      div object {
+        display: block;
+        min-height: 100vh;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button onclick="LoadObj('home.html')">Home</button>
+    <button onclick="LoadObj('object.html')">Obj 1</button>
+    <button onclick="LoadObj('object2.html')">Obj 2</button>
+    <p>
+      e.g object router, nada profissional,
+      <s>a url nunca muda é apenas uma ideia</s> de brincar com o
+      <code>object</code>
+    </p>
+    <div>
+      <object id="render" type=""></object>
+    </div>
+    <script src="./src/main.js"></script>
+  </body>
+</html>

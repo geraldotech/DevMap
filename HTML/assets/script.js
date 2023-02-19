@@ -1,0 +1,9 @@
+const d = new Date(document.lastModified);
+let dia = d.getDate();
+let mes = d.getMonth()+1;
+let ano = d.getFullYear();
+let hora = d.getHours();
+let min = d.getMinutes();
+let segs = d.getSeconds();
+document.getElementById('modified').innerHTML = 'lastModified: '+dia+'/'+mes+'/'+ano+' Hora: '+hora+':'+min+':'+segs;
+document.querySelector("#year").innerHTML = ano;

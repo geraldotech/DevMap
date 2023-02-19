@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img error handle</title>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      img {
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Image handler by gmap</p>
+    <figure>
+      <img src="https://gpnotes.droppages.com/img/21.jpg" alt="img" />
+    </figure>
+
+    <img src="https://gpnotes.droppages.com/img/1.jpg" alt="img" />
+
+    <img src="https://gpnotes.droppages.com/img/12.jpg" alt="img" />
+
+    <script>
+      const img = document.querySelectorAll("img");
+      console.log(img);
+      img.forEach((val) =>
+        val.addEventListener("error", function () {
+          // para remover a imagem this.remove();
+          // para substituir
+          this.src = `https://gmapdev.netlify.app/html/assets/img/404.jpg`;
+        })
+      );
+    </script>
+  </body>
+</html>

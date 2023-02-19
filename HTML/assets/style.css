@@ -1,0 +1,134 @@
+html {
+    background-color: grey;
+}
+
+summary {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.child {
+    font-size: 1rem;
+    font-weight: 200;
+    color: orange;
+}
+
+.children {
+    font-size: 15px;
+    margin: 1px;
+    padding: 0;
+}
+
+.green, code {
+    /* background-color: rgb(84, 146, 84); */
+    color: rgb(39, 172, 26);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+u {
+    color: red;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border: 1px solid green;
+    width: 50%;
+}
+
+pre {
+    text-align: left;
+    white-space: pre-line;
+    color: rgb(243, 73, 229);
+    margin: 0 auto;
+    display: inline-block;
+}
+
+pre code{
+    color: green;
+}
+
+h5 {
+    color: orange;
+}
+
+h1 .gera {
+    color: seagreen;
+}
+table {
+    width: 100%;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th,
+td {
+    border: 1px solid white;
+    text-align: center;
+}
+
+th {
+    border: 1px solid white;
+    background-color: mediumseagreen;
+}
+
+tr:hover {
+    background-color: dodgerblue;
+}
+
+.time{
+    display: inline;
+    border-radius: 5px;
+    background-color: rgb(100, 93, 79);
+}
+
+.output::before{
+    content:'Output: ';
+}
+
+.links a { /*fazer uma section links*/
+    display: block;
+    padding: 5px 0;
+}
+
+[target=_blank]::after{
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0 5px 0 3px;
+  }
+
+
+/*output examples*/
+p.gerab {
+    text-align: center;
+        color: mediumseagreen;
+    font-size: 20px;}
+
+dd {
+    margin-left: 15px;
+}
+
+h5 {
+    border-bottom: 2px solid dodgerblue;
+    width: fit-content;
+    margin: 10px 0;
+}
+
+section{
+    margin-bottom: 10px;
+}
+figure:has(img){
+    max-width: 40%;    
+    text-align: center;
+    margin:auto; /*como houve redução no tamanho é necess´ário margin: auto */
+}
+
+@media screen and (max-width: 600px){
+    figure:has(img){
+        max-width: 100%;    
+        width: 90%;
+    }
+    h5{
+        color: purple;
+    }
+}

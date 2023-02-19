@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/prism.css" />  
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1{
+            text-decoration: underline coral;
+            text-align: center;
+        }
+        main{
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        img{
+            width: 100%;
+            max-width: 50%;
+        }
+        p{
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: dodgerblue;
+        }
+        h2::before{
+            content: ">";
+            color: fuchsia;
+            padding-right: 3px;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+       <h1>Prism</h1>
+       <p>a lightweight, extensible syntax highlighter</p>
+        <p>Official website <a href="https://prismjs.com/index.html">https://prismjs.com/index.html</a></p>
+        <h2>Examples</h2>
+      <pre><code class="language-css">p { color: red }</code></pre>
+
+      <pre><code class="language-js">const code = `= ['hi', 'there', 'reader!'].join " "`;</code></pre>
+
+
+      <p>
+       <pre>
+<code class="language-css">body{
+background-color: red; 
+} </code>
+       </pre>
+      </p>
+      <h2>Themes</h2>
+      <p>dark</p>
+      <img src="./img/dark.jpg" alt="">
+      <p>Twilight</p>
+      <img src="./img/Twilight.jpg" alt="">
+      <p>Tomorrow Nigth</p>
+      <img src="./img/Tomorrow-Nigth.jpg" alt="">
+    </main>
+    <script src="./src/prism.js"></script>
+  </body>
+</html>

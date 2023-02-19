@@ -40,9 +40,14 @@
       document.body.appendChild(botao);
       botao.onclick = () => {
         const sel = document.querySelector(`select`);
+        //call fun and pass the selected value from select menu
         inputCheck(sel.value);
         //clear before new content
-        document.querySelector("#menu").remove();
+        const loadedmenu = document.querySelector("#menu");
+        //verificao se o item existe, evita errors no console
+        if (loadedmenu) {
+          loadedmenu.remove();
+        }
       };
 
       async function inputCheck(dir) {
@@ -50,7 +55,7 @@
           `https://api.github.com/repos/geraldotech/DevMap/contents/${dir}/`
         ).then((res) => res.json());
         console.log(res);
-        const index = res.findIndex((item) => item.name === "index.html");
+
         const lista = document.createElement("ul");
         lista.id = `menu`;
 
@@ -58,7 +63,9 @@
           const li = document.createElement("li");
           li.appendChild(
             Object.assign(document.createElement("a"), {
-              href: `https://git.geraldox.com/${item.path}`,
+              //item.path direct link to read file || item.html_url get github
+              //href: `https://git.geraldox.com/${item.path}`,
+              href: `${item.html_url}`,
               textContent: item.path,
               target: `_blank`,
             })
