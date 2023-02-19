@@ -757,7 +757,7 @@ const p = document.querySelectorAll("[data], [attr2]");
 ## Threads
 
 - [What is JavaScript? **From Scratch by _Geraldo Filho_** onclick.open"JavaScript-DOM.md"](./assets/thread/JavaScript-DOM.md)
-- [Web Components](./assets/thread/)
+- [Web Components](./assets/thread/Web-Components)
 - <a href="./assets/thread/Operadores-Atribuicao.md" target="_blank">Operadores Atribuicao</a>
 - [render_table.html](./assets/thread/render_table_json.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table_json.html" target="_blank">Demo</a>
 - [Menu All Pages](./assets/thread/Menu_All_pages.md)

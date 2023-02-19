@@ -103,7 +103,7 @@ icon.href = null;
 const css = document.querySelector("link[rel='stylesheet']");
 console.log(css);
 
-//Object.assign
+//👉 Object.assign
 const createEl = () => {
   const obj = Object.assign(document.createElement("p"), {
     textContent: "Novo par",
@@ -116,3 +116,14 @@ document.body.appendChild(
     textContent: "oi",
   })
 );
+
+const section = document.createElement("section");
+// section + p only
+arr.forEach((item) => {
+  const p = Object.assign(document.createElement("p"), {
+    textContent: item,
+  });
+  section.appendChild(p);
+});
+
+document.body.appendChild(section);
