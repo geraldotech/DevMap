@@ -763,6 +763,7 @@ const p = document.querySelectorAll("[data], [attr2]");
 - [Menu All Pages](./assets/thread/Menu_All_pages.md)
 - [childNodes.html](./assets/thread/childNodes.html)
 - [onbeforeunload.html](./assets/thread/onbeforeunload.html)
+- [List Directories](./assets/thread/List_directories)
 
 ## Links:
 
