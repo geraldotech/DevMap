@@ -274,26 +274,19 @@ content não precisa de defer pq estamos usando `document.addEventListener("DOMC
 
 //3
 window.onload = function () {
-  console.warn("window.onload");
+  console.warn("window loaded");
 };
 
-//1
+//2
 document.onreadystatechange = function (e) {
   console.warn("document.onready", document.readyState);
   console.log(document.readyState == "complete");
 };
-//2
+
+//1
 document.addEventListener("DOMContentLoaded", () => {
-  console.warn("DOM ok");
+  console.warn("DOM Loaded");
 });
-```
-
-### inner + HTML + Text + TextContent
-
-```js
-console.log(root.innerHTML);
-console.log(root.textContent);
-console.log(root.innerText);
 ```
 
 # javascript:void(0)
@@ -320,6 +313,7 @@ function openInNewTab(url) {
 ### Useful links:
 
 - [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
+- [onbeforeunload.html](./assets/thread/Learn-DOM-Manipulation/onbeforeunload.html)
 - [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)
 - [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
 - [Evitando poluir o objeto-global](http://devfuria.com.br/javascript/objeto-global/)

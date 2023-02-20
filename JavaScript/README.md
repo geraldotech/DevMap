@@ -770,7 +770,6 @@ const p = document.querySelectorAll("[data], [attr2]");
 - [render_table.html](./assets/thread/render_table_json.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table_json.html" target="_blank">Demo</a>
 - [Menu All Pages](./assets/thread/Menu_All_pages.md)
 - [childNodes.html](./assets/thread/childNodes.html)
-- [onbeforeunload.html](./assets/thread/onbeforeunload.html)
 - [List Directories](./assets/thread/List_directories)
 
 ## Links:
