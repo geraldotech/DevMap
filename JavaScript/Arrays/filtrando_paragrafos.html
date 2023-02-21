@@ -1,39 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="color-scheme: dark">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS</title>
-    <style>
-:root{
-  color-scheme: dark;
-}
-  </style>
   </head>
   <body>
+    <p>
+      I should not be left with my own devices, They come with prices and vices,
+      I end up in crisis
+    </p>
 
+    <p>
+      Did you head my covert narcissism I disguise as altruism like some kind of
+      congressman
+    </p>
 
-    <p>I should not be left with my own devices, They come with prices and vices, I end up in crisis</p>
-  
-    <p>Did you head my covert narcissism I disguise as altruism like some kind of congressman</p>
-    
     <p>I wake up screaming from dreaming</p>
     <p>My up</p>
-    
+
+    <hr />
+    <p name="x">I wake up screaming from dreaming</p>
+    <p name="x">My up</p>
+    <p name="x">wake up now</p>
 
     <script>
-//pega todas as tags p e joga para um Array
-const fil = Array.from(document.getElementsByTagName('p'));
-//check se no innerHTML inclui keywork
-let busca = fil.filter(name => name.innerHTML.includes("up"));
-console.log(busca.length); //tamanho da busca
+      //pega todas as tags p e joga para um Array
+      const fil = Array.from(document.getElementsByTagName("p"));
+      //check se no innerHTML inclui keywork
+      let busca = fil.filter((name) => name.innerHTML.includes("up"));
+      console.log(busca.length); //tamanho da busca
 
-for(let i = 0; i < busca.length; i++){
-  console.log(busca[i]); //loop para mostrar os resultados
-}
+      //loop para mostrar os resultados com for ou for of
+      for (let i = 0; i < busca.length; i++) {
+        console.log(busca[i]);
+      }
 
+      for (const x of busca) {
+        console.log(x.innerText);
+      }
 
-</script>
+      //
+      const names = document.getElementsByName("x");
+
+      //add in a array
+      let arr = [];
+      for (const x of names) {
+        arr.push(x);
+      }
+      const busca3 = arr.filter((item) => item.textContent.includes(`wake`));
+      //show results
+      for (const res of busca3) {
+        console.warn(res.innerText);
+      }
+    </script>
   </body>
 </html>

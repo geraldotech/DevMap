@@ -1,5 +1,22 @@
 ### id, Class, tagName, byName, QuerySelector and QuerySelectorAll
 
+👉HTMLCollection and NodeList and Array
+
+```js
+const tag = document.getElementsByTagName("p");
+console.log(tag);
+
+//forEach works in Nodelist e Array
+const p = document.querySelectorAll("p");
+console.log(p);
+
+p.forEach((ele) => console.warn(ele.innerText));
+
+const toAr = Array.from(p);
+console.log(toAr);
+toAr.forEach((ele) => console.warn(ele.innerText));
+```
+
 <a href="https://www.w3schools.com/js/js_htmldom_nodelist.asp" target="_blank">HTML Collection vs NodeList</a>
 
 ```html
@@ -43,13 +60,14 @@ const pOfdiv2 = div[1].getElementsByTagName("p");
 console.log(pOfdiv2.length); //2
 
 
-//👉 getElementsByClassName
+//👉 getElementsByClassName - return a HTML Collection[x]
 const menu = document.getElementsByClassName("menu");
-console.log(menu); //return a HTML Collection[x]  e.g menu[0].innerHTML = "Hello World!";
+console.log(menu);  menu[0].innerHTML = "Hello World!";
 
-//👉 Ainda temos o byName() https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
+//👉 byName() return NodeList
+ https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
 /*
-Dica: Array.from convert HTML Collection to Array, manupulando todos os itens com forEach
+Dica: Array.from convert HTML Collection and NodeList to Array
 */
 
 //👉querySelector - the Super Selector!! class, id, attributes, tags, subclasses, subtags...
