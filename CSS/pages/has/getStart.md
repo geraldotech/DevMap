@@ -1,5 +1,7 @@
 # pseudo-class has()
 
+> return booelan
+
 - [fromScratch - do começo](#fromscratch)
 - [Links - fazendo menu](#links)
 
@@ -39,7 +41,33 @@ h1:has(+ p) {
 }
 ```
 
+article tiver algum dessas tags então article
+
+```css
+article:has(h2, ul) {
+  background: red;
+}
+```
+
 # checkbox
+
+### From scratch
+
+- Antes é necessico entender que o primeiro elemento define se a condição será Global ou Escope, `e.g html, body` afetam todo o document, usar tags como label ou um #ID vai afetar os filhos que estão encapsulados nos respectivos elementos.
+
+```js
+  [global,tags,#id]:has(condition...) {
+  .....
+  }
+```
+
+Se a condição for true a alteração será realizada mesmo sem :checked
+
+```js
+body:has([type="checkbox"]) {
+  --bkbody: red;
+}
+```
 
 - Scopo Global, se no `body` tem algum checkbox checked then...
 
@@ -56,9 +84,9 @@ label {
 }
 ```
 
-- Global 2
+- Global #id
 
-> by gmap se no body tem esse #id com checkbox: checked então mude a var mesmo que os elements não esteja encapsulado no respectivo #id
+  > by gmap se no body tem esse #id com checkbox: checked então mude a var mesmo que os elements não esteja encapsulado no respectivo #id
 
 ```css
 body:has(#test [type="checkbox"]:checked) {
@@ -84,17 +112,30 @@ label {
 
 /* html encapsular todos os elements */
  <section id="sec">
-      <label for="">
+      <label>
         <input type="checkbox" />
         check
       </label>
   </section>
 ```
 
-A beautiful exemplo de como usar vários checks em uma section/div com mesmo #id passando um nome na input, necessário chamar body,html
+labe only
 
 ```css
-*/ body:has(#menu [type="checkbox"][name="del"]:checked) {
+label:has([type="checkbox"]:checked) {
+  --bkbody: red;
+}
+
+ <label>
+      <input type="checkbox" />
+      red
+    </label>
+```
+
+A beautiful exemplo de como usar vários checkbox em section/div com mesmo #id passando um nome na input, necessário chamar body,html
+
+```css
+body:has(#menu [type="checkbox"][name="del"]:checked) {
   --txtDe: none;
 }
 
@@ -107,11 +148,15 @@ html:has(#menu [type="checkbox"][name="fontFamily"]:checked) {
 }
 ```
 
-article tiver algum dessas tags então article
+Selecionando vários checkbox globalmente, náo querer #id porém precisa indiciar o name
 
 ```css
-article:has(h2, ul) {
-  background: red;
+body:has([type="checkbox"][name="a"]:checked) {
+  --bkbody: red;
+}
+
+html:has([type="checkbox"][name="b"]:checked) {
+  --bkbody: dodgerblue;
 }
 ```
 
@@ -124,3 +169,5 @@ Usando has() em radio, checkbox e select manipulando as var do CSS fiz esse exem
 O princípio para alinhar elementos e como aplicar o has() nessas situações:
 
 - [from-scratch-align-ele-and-has.html](https://github.com/geraldotech/DevMap/blob/main/CSS/pages/has/from-scratch-align-ele-and-has.html) | [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/from-scratch-align-ele-and-has.html)
+
+Veja também como usar o `[type="checkbox"]:checked + label` [https://codepen.io/geraldopcf/pen/ZERvQBZ](https://codepen.io/geraldopcf/pen/ZERvQBZ)
