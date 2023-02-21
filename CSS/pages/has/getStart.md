@@ -79,11 +79,10 @@ label {
         <input type="checkbox" />
         check
       </label>
-    </section>
+  </section>
 ```
 
-by gmap
-se no body tem esse #id com checkbox: checked então mude a var mesmo que o element não esteje encapsulado no #id
+> by gmap se no body tem esse #id com checkbox: checked então mude a var mesmo que o element não esteje encapsulado no #id
 
 ```css
 body:has(#test [type="checkbox"]:checked) {
