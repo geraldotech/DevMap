@@ -2,37 +2,52 @@
 
 <a href="https://www.w3schools.com/js/js_htmldom_nodelist.asp" target="_blank">HTML Collection vs NodeList</a>
 
-```js
+```html
 <a href="#">link 1</a>
 <a href="#">link 2</a>
 <a href="#">link 3</a>
 <a href="#">link 4</a>
 
 <ul>
-    <li class="menu">A</li>
-    <li class="menu">B</li>
-    <li class="menu" id="c">C</li>
-    <span class="oi"></span>
-    <span id="hello">New York</span>
+  <li class="menu">A</li>
+  <li class="menu">B</li>
+  <li class="menu" id="c">C</li>
+  <span class="oi"></span>
+  <span id="hello">New York</span>
 </ul>
+```
 
+```js
+//👉 GetElementById:
+document.getElementById("test"); //return single element
 
-/* Array.from(document.getElementsByTagName("a")).forEach((el,ind) =>{
+//👉 getElementsByTagName and forEach
+Array.from(document.getElementsByTagName("a")).forEach((el,ind) =>{
     console.log(ind,el.textContent)
-}) */
+})
+
+//👉 getElementsByTagName -
+//returns a HTML Collection[x] required a Array.from
+console.log(document.getElementsByTagName("a"));
+
+//N of caracteres  in each Paragrah
+console.log(p[0].innerText.length);
+console.log(p[1].innerText.length);
+
+//N of paragrah
+const div = document.getElementsByTagName("div");
+const pOfdiv = div[0].getElementsByTagName("p");
+console.log(pOfdiv.length); //1
+
+const pOfdiv2 = div[1].getElementsByTagName("p");
+console.log(pOfdiv2.length); //2
 
 
-//👉GetElementById:
-document.getElementById("test"); //return only the id
-
-//👉getElementsByTagName -
-console.log(document.getElementsByTagName("a")); //returns a HTML Collection[x] required a Array.from
-
-//👉getElementsByClassName
+//👉 getElementsByClassName
 const menu = document.getElementsByClassName("menu");
 console.log(menu); //return a HTML Collection[x]  e.g menu[0].innerHTML = "Hello World!";
 
-//Ainda temos o byName() https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
+//👉 Ainda temos o byName() https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
 /*
 Dica: Array.from convert HTML Collection to Array, manupulando todos os itens com forEach
 */
@@ -49,7 +64,7 @@ console.log(document.querySelector("#hello").innerHTML); //return id
 const input = document.querySelector("input[name='one']");
 console.log(input.placeholder); // ola
 
-// querySelector selecionando button inside tags
+//👉 querySelector selecionando button inside tags
 <section>
   <button>btn inside section</button>
   <button data="btn2">btn number 2 inside section</button>
@@ -58,20 +73,20 @@ console.log(input.placeholder); // ola
 const btnSection = document.querySelector("section button");
 console.log(btnSection.innerHTML); //"btn inside section"
 
-// querySelector selecionando um segundo button inside tags, adicionar um "name" ou "data"
+//👉 querySelector selecionando um segundo button inside tags, adicionar um "name" ou "data"
 const sbtn = document.querySelector("section button[data='btn2']");
 const Calc = document.querySelector("dialog button[name='ok']");
 
-// querySelector selecionando class e tag dentro dessa classe
+//👉 querySelector selecionando class e tag dentro dessa classe
 const el = document.querySelector(".secao span");
 el.textContent = "novo";
 
-// querySelector and nth-child
+//👉 querySelector and nth-child
  const p = document.querySelector("p:nth-child(3)"); //lembrando regras de CSS se não existir o tipo tipo p `3` vai retornar `null`
  const p = document.querySelector("p:nth-of-type(2)");
 
 
-//👉querySelectorAll - support forEach
+//👉 querySelectorAll - support forEach
 console.log(document.querySelectorAll(".menu")); //return a NodeList()
 
 const link = document.querySelectorAll("a"); //return all tags
