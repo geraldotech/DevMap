@@ -41,7 +41,7 @@ h1:has(+ p) {
 
 # checkbox
 
-- Global, se no `body` tem algum checkbox checked then...
+- Scopo Global, se no `body` tem algum checkbox checked then...
 
 ```css
 :root {
@@ -56,9 +56,18 @@ label {
 }
 ```
 
-- scopo local por assim dizer, o target deve estar encapsulado no #id
-- se mudar `id` para body ou html:has isso vai afetar todas as labels do body
-  #id que tiver o "checkbox" checked... better para especificidade
+- Global 2
+
+> by gmap se no body tem esse #id com checkbox: checked então mude a var mesmo que os elements não esteja encapsulado no respectivo #id
+
+```css
+body:has(#test [type="checkbox"]:checked) {
+  --bkbody: rgb(170, 30, 30);
+}
+```
+
+- Scopo Local, o target deve estar encapsulado no #id
+  > se mudar `id` para `body` ou `html` isso vai afetar todas as labels do body tornando nosso scopo global, usar #id que tiver o "checkbox" checked... better para especificidade
 
 ```css
 :root {
@@ -82,15 +91,7 @@ label {
   </section>
 ```
 
-> by gmap se no body tem esse #id com checkbox: checked então mude a var mesmo que o element não esteje encapsulado no #id
-
-```css
-body:has(#test [type="checkbox"]:checked) {
-  --bkbody: rgb(170, 30, 30);
-}
-```
-
-um belo exemplo de como usar varios checks em uma section/div com mesmo #id passando um nome na input, necessário chamar body,html
+A beautiful exemplo de como usar vários checks em uma section/div com mesmo #id passando um nome na input, necessário chamar body,html
 
 ```css
 */ body:has(#menu [type="checkbox"][name="del"]:checked) {
