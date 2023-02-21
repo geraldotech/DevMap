@@ -31,8 +31,34 @@ section:has(span) button {
 }
 ```
 
-se mudar `id` para body ou html:has isso vai afetar todas as labels do body
-#id que tiver o "checkbox" checked... better para especificidade
+se h1 tiver um irmão P adjacente então => h1
+
+```css
+h1:has(+ p) {
+  color: cadetblue;
+}
+```
+
+# checkbox
+
+- Global, se no `body` tem algum checkbox checked then...
+
+```css
+:root {
+  --bkbody: rgb(33, 188, 199);
+}
+
+body:has([type="checkbox"]:checked) {
+  --bkbody: rgb(170, 30, 30);
+}
+label {
+  color: var(--bkbody);
+}
+```
+
+- scopo local por assim dizer, o target deve estar encapsulado no #id
+- se mudar `id` para body ou html:has isso vai afetar todas as labels do body
+  #id que tiver o "checkbox" checked... better para especificidade
 
 ```css
 :root {
@@ -47,7 +73,7 @@ label {
   color: var(--label);
 }
 
-/* html encapsular o parent element + id */
+/* html encapsular todos os elements */
  <section id="sec">
       <label for="">
         <input type="checkbox" />
@@ -56,16 +82,8 @@ label {
     </section>
 ```
 
-se h1 tiver um irmao P adjacente então => h1
-
-```css
-h1:has(+ p) {
-  color: cadetblue;
-}
-```
-
 by gmap
-se no body tem esse #id com checkbox: checked então mude a var
+se no body tem esse #id com checkbox: checked então mude a var mesmo que o element não esteje encapsulado no #id
 
 ```css
 body:has(#test [type="checkbox"]:checked) {
