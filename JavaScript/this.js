@@ -44,3 +44,9 @@ function getx(event) {
   console.log(this.event);
   console.log(event.innerHTML);
 }
+// this selected value direct in HTML
+<select onchange="console.log(this.value)">
+  <option></option>
+  <option>one</option>
+  <option>two</option>
+</select>;

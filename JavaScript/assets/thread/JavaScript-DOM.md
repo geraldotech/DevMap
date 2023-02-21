@@ -111,6 +111,7 @@ console.log(document); //#document
 - document.domain
 - document.URL
 - document.all
+- document.styleSheets //return a list of stylesheets
 - ❌document.onload 👉 document.body.onload ✔
 ```
 
@@ -313,9 +314,9 @@ function openInNewTab(url) {
 ### Useful links:
 
 - [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
+- [CSS Object Model](./CSSOM/README.md)
 - [onbeforeunload.html](./assets/thread/Learn-DOM-Manipulation/onbeforeunload.html)
 - [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)
 - [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
 - [Evitando poluir o objeto-global](http://devfuria.com.br/javascript/objeto-global/)
 - [https://en.wikipedia.org/wiki/DOM_events](https://en.wikipedia.org/wiki/DOM_events)
-- [DOM_obj_style-for-CSS](https://www.w3schools.com/jsref/dom_obj_style.asp)

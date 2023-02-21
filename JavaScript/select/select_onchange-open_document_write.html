@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script>
+      function janela(val) {
+        open().document.write(`<a href="${val}">${val}</a>`);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- envia o this.value para o function -->
+    <select onchange="janela(this.value)">
+      <option></option>
+      <option value="http://google.com">Google</option>
+      <option value="http://microsoft.com">Microsoft</option>
+    </select>
+  </body>
+</html>

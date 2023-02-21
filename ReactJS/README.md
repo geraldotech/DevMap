@@ -29,7 +29,7 @@ function handleClick() {
 }
 const [str, setSrt] = useState("Ola Mundo");
 
-//::inside retorn
+//::inside return
 <h1>{str}</h1>
 <button onClick={() => handleClick()}>click here</button>
 ```

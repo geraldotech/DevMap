@@ -61,6 +61,8 @@ console.log(Bye.title); // Ola
 Bye.setAttribute("classe", "red");
 Bye.id = "novoid";
 Bye.title = "New Way";
+const script = document.createElement("script");
+script.src = "file.js";
 
 //Remove Attr
 
