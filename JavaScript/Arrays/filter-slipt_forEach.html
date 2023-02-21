@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <p name="x">I wake up screaming from dreaming</p>
+    <p name="x">My up</p>
+    <p name="x">wake up now</p>
+    <hr />
+    <div id="res"></div>
+
+    <script>
+      //
+      const names = document.getElementsByName("x");
+
+      names.forEach((item, ind) => {
+        //adicionatodos em Array
+        const arr = item.innerText.split("  ");
+        console.warn(arr);
+        const busca = arr.filter((item) => item.includes(`wake`)).join("");
+        console.log(busca);
+        document.getElementById("res").innerText += busca;
+      });
+    </script>
+  </body>
+</html>
