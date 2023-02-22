@@ -1,5 +1,11 @@
 ### Vue Router From Scratch
 
+<div align="center">
+
+[![](https://mermaid.ink/img/pako:eNpFkLFuwzAMRH-FYNb4BzwUaOIC7dAOTZGhVgZComshFhXQMoLA9r9XtYN0Ox4ficONaKNjLLHp4tW2pAm-KiPP9XFg-IxDYoVGY4CDVUq2PUFRPMFu3CtTehBv0icSy7OR3QJMm9b3Keptgn29eV316bFdz4rOy3mCqv6gwO7-q89UtVAvd__o-frnGsEtBtZA3uXAoxEAg6nlwAbLLB3p2aCROXM0pHi4icUy6cBbHC4u5608_SgFLBvq-uxeSL5j_J_Z-Rz0fW1kKWb-BUagYxc?type=png)](https://mermaid.live/edit#pako:eNpFkLFuwzAMRH-FYNb4BzwUaOIC7dAOTZGhVgZComshFhXQMoLA9r9XtYN0Ox4ficONaKNjLLHp4tW2pAm-KiPP9XFg-IxDYoVGY4CDVUq2PUFRPMFu3CtTehBv0icSy7OR3QJMm9b3Keptgn29eV316bFdz4rOy3mCqv6gwO7-q89UtVAvd__o-frnGsEtBtZA3uXAoxEAg6nlwAbLLB3p2aCROXM0pHi4icUy6cBbHC4u5608_SgFLBvq-uxeSL5j_J_Z-Rz0fW1kKWb-BUagYxc)
+
+</div>
+
 repository for Vue Router
 [https://github.com/vuejs/router](https://github.com/vuejs/router)
 
@@ -82,7 +88,7 @@ remove o hash
 mode: "history";
 ```
 
-if add + mode history o hash permanece porém não abre direto nada muda
+if add + mode history o hash permanece nada muda
 
 ```js
 base: "#";
@@ -114,11 +120,22 @@ Sometimes you need to display multiple views at the same time instead of nesting
 ## e.g na Home exibindo 2 components
 
 ```js
+// 👉component now is `components`
  { path: "/", components: { default: Home, yt: youtube } },
 
  //HTML
   <router-view name="yt"></router-view>
 ```
+
+# Nested Routers
+
+Rotas aninhadas
+
+- Escolher a rota que vai mostrar sub-rotas
+- Fazer um component to `segurar esses sub-links` no parent component, ou seja o component pai permanence
+- Dentro do compoment pai precisamos de router-link e router-view
+- Adicionar o children seguindo o default com Named Routers `{ path: "music", name: "r1", component: musica`
+- fazer os components
 
 <hr>
 
@@ -213,7 +230,7 @@ Rotas nomeadas, identificar a rota com um objeto name, em caso de mudar o `path`
 
 [named-routes.html](https://v3.router.vuejs.org/guide/essentials/named-routes.html)
 
-# sub rotas
+# Nested Routes
 
 ```
 //obter o params da rota
