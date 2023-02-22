@@ -119,7 +119,7 @@ label {
   </section>
 ```
 
-labe only
+label only
 
 ```css
 label:has([type="checkbox"]:checked) {
