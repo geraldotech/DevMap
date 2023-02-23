@@ -90,7 +90,7 @@ console.log(str.substring(8)) //  substring in string
 //📌e.g usando o lastIndexOf para auxiliar no parametro do substring
 
 const mystr = "Did you hear my covert";
-console.log(mystr.lastIndexOf("Li")); //34
+console.log(mystr.lastIndexOf("co")); //16
 
 //📌já notando as direnças entre substring e substr começando em 0 mesmo resultado
 console.log(mystr.substring(0, 15)); // Did you hear my 
@@ -950,7 +950,7 @@ console.log(arr_all);
 /* [=============================================================================]
 🟢 //23 - #search()
 
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
 
 
 /* [=============================================================================]
@@ -1027,7 +1027,6 @@ console.log(paragraph.indexOf("lazy?")); // 78
 🟢 30 - trim() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 */
 /* [=============================================================================]
-🟢 31 - String.prototype.#search() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
 */
 
 
