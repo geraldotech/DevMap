@@ -59,3 +59,11 @@ api.forEach((val,ind) => console.log(ind, val);
 
 //setAttribute and classListAdd 
 //READ => setAttribute_vs_classList.html
+
+//👉create elements
+const content = ["Alpha", "Bravo", "Charlie", 209];
+content.forEach((val) => {
+  const p = document.createElement("p");
+  p.append(val);
+  document.getElementById("post3").append(p);
+});

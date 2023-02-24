@@ -390,19 +390,37 @@ const busca = obj.students.find(function (el){
 console.log(busca);
 
 
+
 //📌 ternary 
-const words = arr.filter((word) => word.startsWith('F'));
-words == '' ? console.log('nao') : console.log(words); // Foxtrot
+const words = arr.filter((word) => word.startsWith("F"));
+
+//📌filter output
+words == "" ? console.log("nao") : console.log(words); // Foxtrot
 
 //📌ou alternative
-words != '' ? console.log(words) : console.log('not'); // Foxtrot
-words.length != 0 ? console.log(words) : console.log('not'); // Foxtrot
+words != "" ? console.log(words) : console.log("not"); // Foxtrot
+words.length != 0 ? console.log(words) : console.log("not"); // Foxtrot
+//by geraldoX
+words.indexOf(words[0]) > -1 ? console.log(words) : console.log(`false`);
 
-//📌 best ?
-!words ? console.log("not found") : console.log(words); // Foxtrot
+const brazil = arr2.filter((pa) => pa == "BR").length;
+!brazil ? console.log("nao") : console.log(brazil); // não
 
-const brazil = arr2.filter(pa => pa == "Bra");
-!brazil ? console.log("nao") : console.log(brazil);
+//📌 best ? 🎉update add .length to: !null, 0, undefined todos essas saídas são filtradas como Not list here https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#description
+
+const wordsx = arr.filter((word) => word.startsWith("xF")).length;
+console.log(wordsx);
+//if !negative show NotFound
+!wordsx ? console.log("not found") : console.log(wordsx); // Foxtrot
+//ou se filter algo...
+if (wordsx) {
+  console.log(`show filter...`); //negative because is empty
+}
+
+const wordsy = arr.filter((word) => word.startsWith("xF"));
+//se tem tamanho ou seja != 0 show results...
+wordsy.length ? console.log(wordsy) : console.log(`false`); //false
+
 
 
 //📌 the index, what iteration we are on https://debbie.codes/blog/js-array-filter-method/
@@ -567,6 +585,8 @@ console.log(find);
 !find ? console.log("not found") : console.log(find); // not found
 find != undefined ? console.log(find) : console.log('not found'); // not found
 
+const find = arrname.find((el) => el == `AlphX`);
+console.log(!find ? "false" : find); //false
 
 /*
 Difference between filter and find
