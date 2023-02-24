@@ -58,7 +58,7 @@ for (const letter of arr) {
   li.textContent = letter;
   document.querySelector("ol").appendChild(li);
 }
-
+//👉 if condition
 const arr = [10, 20, 30, 40, 50];
 const api = ["Geraldo", "CostAo", "Barrao", "Georgeo", "Aomeo", "asoa", "oplz"];
 
