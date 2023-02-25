@@ -1,8 +1,8 @@
 async function getdados() {
-  const req = await fetch("./data.json");
+  const req = await fetch("./src/data.json");
   const res = await req.json();
-  show(res.cartoes.cards);
   const dados = res.cartoes.cards;
+  show(dados);
   console.log(dados);
 }
 

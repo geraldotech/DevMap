@@ -41,9 +41,18 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 - [Get Start](../pages/has/getStart.md)
 
-### :not()
+### :not
 
 - that do not match a list of selectors
+
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)
+
+```css
+/* All divs without a `lang` attribute are italicized. */
+div:not([lang]) {
+  font-style: italic;
+}
+```
 
 ### :only-child
 

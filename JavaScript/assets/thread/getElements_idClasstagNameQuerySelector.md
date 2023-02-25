@@ -117,6 +117,14 @@ link.forEach(el => {
   el.setAttribute("title","open new tab");
 });
 
+//👉 - 👉Alterando vários elements
+const todos = document.querySelectorAll("div, section");
+
+todos.forEach((item) => {
+  item.style.backgroundColor = `red`;
+  item.style.color = "pink";
+});
+
 //👉 querySelectorAll - selecionando by index
 <section>
   <span>[0]</span>

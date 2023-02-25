@@ -1,0 +1,91 @@
+:root {
+  --bkbody: 181818;
+  --divone: none;
+  --divtwo: none;
+  --vivoDiv: none;
+  --claroDiv: none;
+  --claroLabel: none;
+  --vivoLabel: none;
+  --loremClass: none;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body:has(option[value="1"]:checked) {
+  --bkbody: rgb(14, 11, 65);
+  --divone: block;
+}
+body:has(option[value="2"]:checked) {
+  --bkbody: #181818;
+  --divtwo: block;
+}
+
+body {
+  background: var(--bkbody);
+}
+
+#one {
+  display: var(--divone);
+}
+
+#two {
+  display: var(--divtwo);
+}
+
+/*opções de radio button */
+#operadoras:has([type="radio"][id="1"]:checked) {
+  --claroLabel: rgb(179, 1, 39);
+  --claroDiv: block;
+}
+#operadoras:has([type="radio"][id="2"]:checked) {
+  --vivoLabel: rgb(126, 5, 126);
+  --vivoDiv: block;
+}
+
+label[name="claro"] {
+  color: var(--claroLabel);
+}
+label[name*="vivo"] {
+  color: var(--vivoLabel);
+}
+
+#vivo {
+  display: var(--vivoDiv);
+}
+#claro {
+  display: var(--claroDiv);
+}
+
+#operadoras {
+  border: 1px solid;
+  padding: 10px;
+  max-width: 600px;
+}
+
+#claro,
+#vivo {
+  margin-top: 15px;
+}
+label {
+  cursor: pointer;
+}
+
+[data-tool] {
+  position: relative;
+}
+
+body:has([data-tool]:hover) wer {
+  --loremClass: red;
+}
+
+[data-tool]:hover:after {
+  content: attr(class);
+  position: absolute;
+  top: 100%;
+  background: gold;
+}
+.lorem {
+  color: var(--loremClass);
+}

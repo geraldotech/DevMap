@@ -38,6 +38,13 @@ root.style.setProperty("color-scheme", "dark");
 //v2
 const tag = document.getElementsByTagName(`html`);
 tag[0].style.setProperty(`color-scheme`, `dark`);
+
+//v3
+const theme = `color-scheme:dark`;
+document.querySelector("html").style = theme;
+
+//v4
+document.querySelector(":root").style = `color-scheme:dark`;
 ```
 
 Estude também o `window.getComputedStyles` returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.

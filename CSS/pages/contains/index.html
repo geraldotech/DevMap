@@ -2,17 +2,72 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="main.js" defer></script>
+
     <style>
-      /*
-article que contem esse attr
-      */
+      :root {
+        color-scheme: dark;
+      }
+      /*article que contem esse attr      */
       article[data] {
         color: skyblue;
       }
 
+      /*article que contem esse attr com respectivo value */
+
       article[data*="novo"] {
         color: coral;
+      }
+
+      article[data="burnout"] {
+        background: cornflowerblue;
+      }
+
+      [data-samsung] {
+        padding-top: 20px;
+        font-size: 2rem;
+      }
+
+      [data-samsung*="note9"] {
+        text-decoration: underline goldenrod;
+      }
+      /*   only attr equals to */
+      [data-samsung="note10"] {
+        text-decoration: underline palevioletred;
+      }
+      [data-samsung="note10"]::first-letter {
+        color: rgb(62, 14, 194);
+      }
+      /* data-samsung="note10 pro"> contains `pro` ? yes then... */
+      [data-samsung*="pro"]::first-letter {
+        color: rgb(62, 14, 194);
+      }
+
+      /*  Nesse tag em class contains? */
+      p[class*="win"] {
+        color: purple;
+      }
+
+      a[href="nada"] {
+        color: red;
+      }
+      a {
+        display: block;
+      }
+      a::before {
+        content: "📌";
+      }
+
+      a[href$=".net"] {
+        font-size: 2rem;
+      }
+      /* selector de palavra */
+      a[href~="sim"] {
+        color: red;
+      }
+      /* selector de contains */
+      a[href*="x"] {
+        text-decoration: underline rgb(58, 172, 14) 5px;
+        border-bottom: 2px solid tomato;
       }
     </style>
   </head>
@@ -23,7 +78,11 @@ article que contem esse attr
     <a href="https://www.youtube.com/watch?v=YYBb6emmxuY"
       >https://www.youtube.com/watch?v=YYBb6emmxuY</a
     >
-    <div>div</div>
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors"
+      >https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors</a
+    >
+
     <hr />
     <section>section</section>
 
@@ -56,5 +115,19 @@ article que contem esse attr
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
       nihil.
     </article>
+
+    <article data="burnout">Burnout Revenge 2005</article>
+
+    <section data-samsung="note9">Samsung Device 9...</section>
+    <section data-samsung="note10">Samsung Device 10...</section>
+    <section data-samsung="note10 pro">Samsung Device 10...</section>
+
+    <p class="logo win">Lorem ipsum dolor sit.</p>
+
+    <a href="nada">Nothing</a>
+
+    <a href="geraldo.net">Geraldo.net</a>
+
+    <a href="logx sim">logosim</a>
   </body>
 </html>

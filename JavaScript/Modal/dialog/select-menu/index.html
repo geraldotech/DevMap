@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      dialog {
+        background: rgb(11, 11, 61);
+        border: 5px solid red;
+        width: 30%;
+        text-align: center;
+        padding: 30px 0;
+      }
+      dialog:modal {
+      }
+
+      button {
+        cursor: pointer;
+      }
+    </style>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <button>Open</button>
+    <dialog>
+      <label>Select a Stack:</label>
+      <select>
+        <option value="">Select</option>
+        <option value="1">Front-End</option>
+        <option value="2">Back-End</option>
+      </select>
+      <p></p>
+      <button>Cancel</button>
+      <button>Confirm</button>
+    </dialog>
+
+    <div><span id="res"></span></div>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:modal"
+      >Baseado na MDN</a
+    >
+  </body>
+</html>
