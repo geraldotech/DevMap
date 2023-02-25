@@ -1,0 +1,30 @@
+{
+    "blog":{
+        "posts": [
+            {
+            "id": 1,
+            "title":"post one",
+            "slug":"post-one",
+            "author": "geraldox",
+            "data": "22/02/2013",
+            "article":" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, rerum" 
+        },
+        {    
+            "id": 2,
+            "title":"post two",
+            "slug":"post-two",
+            "author": "geraldox",
+            "data": "22/02/2013",
+            "article":"JavaScript VueJS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, rerum" 
+        },
+        {    
+            "id": 3,
+            "title":"post two",
+            "slug":"post2-two",
+            "author": "geraldox",
+            "data": "22/02/2013",
+            "article":"leds leds" 
+        }
+        ]
+    }
+}
