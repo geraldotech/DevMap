@@ -11,7 +11,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 ### :first-child
 
-- [Notion](https://www.notion.so/geraldodev/first-child-60d0eeb40caf4854b84c4a0a6f347831)
+- [Notion](https://geraldodev.notion.site/first-child-abe5a885838a4500a62277b7c89184db)
 
 ### :last-child:
 
