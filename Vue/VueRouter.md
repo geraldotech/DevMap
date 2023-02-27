@@ -137,6 +137,13 @@ Rotas aninhadas
 - Adicionar o children seguindo o default com Named Routers `{ path: "music", name: "r1", component: musica`
 - fazer os components
 
+# redirect router
+
+[https://router.vuejs.org/guide/essentials/redirect-and-alias.html](https://router.vuejs.org/guide/essentials/redirect-and-alias.html)
+
+e.g /blog goes to /youtube
+`{ path: "/blog", component: httpVueLoader("./src/Blog.vue"), redirect: "/youtube", },`
+
 <hr>
 
 # Router 4
