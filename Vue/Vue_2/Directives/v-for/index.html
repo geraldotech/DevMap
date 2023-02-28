@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-</head>
-<body>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
     <h1>v-for</h1>
     <div id="app">
-        <ul>
-            <li v-for="(item, index) in list" :key="item.id">
-                {{item.name}} - {{index}}
-            </li>
-        </ul>
+      <ul>
+        <li v-for="(item, index) in list" :key="item.id">
+          {{item.name}} - {{index}}
+        </li>
+      </ul>
+      <a style="display: block" v-for="item in list" :href="item.name"
+        >{{item.name}}.html</a
+      >
+      <hr />
+      <p>v-for {object}</p>
+      <p>{{categories}}</p>
+
+      <ul v-for="(ele, ind) in categories" :key="ind.id">
+        <li>{{ele}} - {{ind}}</li>
+      </ul>
+
+      <hr />
+      <p>computed filter return</p>
+      <ol>
+        <li v-for="n in evenNum">{{n}}</li>
+      </ol>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <p>
+      <a href="https://v2.vuejs.org/v2/guide/list.html#v-for-with-an-Object"
+        >https://v2.vuejs.org/v2/guide/list.html#v-for-with-an-Object</a
+      >
+    </p>
+  </body>
 </html>
