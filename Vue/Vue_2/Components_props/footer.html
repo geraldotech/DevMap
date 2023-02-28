@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <card></card>
+      <cardx></cardx>
+      <cardy></cardy>
+      <cardpro vue="Propriedades - Props" age="12"></cardpro>
+      <cardpro vue="Propriedades - Props" camilly="Silva" age="2020"></cardpro>
+      <!-- passando um arr direto -->
+      <cardar :myarr="['Alpha', 'Bravo', 'Charlie']"></cardar>
+      <!-- passando um arr from data recebe um arr children trava essa info -->
+      <cardar :myarr="airplane"></cardar>
+      <!-- passando um arr tratado from computed parent -->
+      <cardar :myarr="novoarr"></cardar>
+    </div>
+
+    <!--  components use tag template -->
+    <template id="haze">
+      <p>Hello 2</p>
+    </template>
+    <script>
+      //single component
+      Vue.component("card", {
+        template: `<p>hello</p>`,
+      });
+      //component from html #id
+      Vue.component("cardx", {
+        template: "#haze",
+      });
+      //component from string
+      const word = "<p>Hello 3</p>";
+      Vue.component("cardy", {
+        template: word,
+      });
+
+      //component props - valores default - valores requeridos
+      Vue.component("cardpro", {
+        data: function () {
+          return {};
+        },
+        template: `<p>Using {{vue}} - {{camilly}} - {{age}}</p>`,
+        props: {
+          vue: String,
+          camilly: {
+            type: String,
+            default: `Mello`,
+          },
+          age: {
+            type: [Number, String],
+            required: true,
+          },
+        },
+      });
+
+      //component requer um Array
+      Vue.component("cardar", {
+        template: `<p>Meu arr 2: {{myarr}} - computed from children: {{outro2}}</p>`,
+        props: {
+          myarr: Array,
+        },
+        created() {
+          this.api();
+        },
+        data() {
+          return {
+            // jogando value da prop para nova var
+            outro: this.myarr,
+            retorno: [],
+          };
+        },
+        computed: {
+          //informacao tratada da string que recebe o value da prop
+          outro2() {
+            return this.outro.filter((v) => v.endsWith("u"));
+          },
+        },
+        methods: {
+          //atribuindo value da prop para nova var v2 using methods + created
+          api() {
+            this.retorno = this.$props.myarr;
+            console.log(`this.retorno`, this.retorno);
+          },
+        },
+      });
+
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          airplane: ["Alpha", "Bravo", "Charlie", "Zuzu"],
+        },
+        computed: {
+          novoarr() {
+            return this.airplane.filter((v) => v.startsWith("B"));
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

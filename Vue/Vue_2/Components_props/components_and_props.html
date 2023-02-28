@@ -14,12 +14,10 @@
   <body>
     <h1>Componentizado</h1>
     <div id="app">
-      <!-- <user-profile
-name="Carlos"
-age="29"
-></user-profile> -->
-
-      <user-profile :name="name" :age="age"></user-profile>
+      <!--  pegando valor padrao -->
+      <user-profile age="29"></user-profile>
+      <hr />
+      <user-profile :name="obj.name" :age="obj.age"></user-profile>
     </div>
     <script src="script.js"></script>
   </body>
