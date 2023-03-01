@@ -267,12 +267,26 @@ $route.params.name
       </section>
 ```
 
-# navegação programaticamente/automaticamente
+## Programmatic Navigation - Navegação programaticamente/automaticamente
 
-```
+[https://router.vuejs.org/guide/essentials/navigation.html](https://router.vuejs.org/guide/essentials/navigation.html)
+
+```js
     created() {
           this.$router.push({ name: "apple" });
         },
+
+
+      this.$router.go({
+        name: "threads",
+        params: { category: "android", slug: "post-one" },
+      });
+      this.$router.go({ path: "/blog/android/post-one" });
+
+       this.$router.go({
+        name: "threads",
+        params: { category: "android", slug: "post-one" },
+      });
 ```
 
 ## Catch 404
