@@ -121,7 +121,8 @@ for (let key in pessoas) {
 for (const key in pessoas) {
   p.innerHTML += key + ": " + pessoas[key];
 }
-//👉beatuiful string literal: p.innerHTML += `${key} - ${pessoas[key]} `;
+//👉👉beatuiful string literal: p.innerHTML += `${key} - ${pessoas[key]} `;
+//👉render HTML Array[Objects] checkout
 
 //👉iterating over Array to get Index
 function getIndex(arr) {
@@ -148,6 +149,7 @@ Object.keys(pessoas).forEach((item) => {
 });
 
 //HTML não esquecer do +=
+
 Object.keys(pessoas).forEach((val) => {
   res.innerHTML += val + ":" + pessoas[val];
 });

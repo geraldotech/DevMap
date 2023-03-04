@@ -1,5 +1,5 @@
-Simulando um blog posts using #find, #filter,
-*/
+/* Simulando um blog posts using #find, #filter, */
+
 const blog = [
   { id: 1, published: true, article: "my article one", slug: "one" },
   { id: 2, published: false, article: "my article two", slug: "two" },
