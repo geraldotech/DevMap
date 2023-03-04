@@ -17,13 +17,17 @@ const blog = [
   (val) => (blogpost.innerHTML += "<br>" + Object.values(val).join(" "))
 ); */
 
-//Foor with empty string
-/* let html = "";
+/* //`For in with empty string`
+let html = "";
 for (const key in blog) {
   html += ` ID: ${blog[key].id} <br> Title: ${blog[key].title}  <br> Category: ${blog[key].category} <hr>`;
 }
 blogpost.innerHTML = html; */
-//Foor with empty string
+
+//`For in with empty string no variavel - quase um v-for`
+for (const key in blog) {
+  blogpost.innerHTML += ` ID: ${blog[key].id} <br> Title: ${blog[key].title}  <br> Category: ${blog[key].category} <hr>`;
+}
 
 console.log("all posts", blog);
 

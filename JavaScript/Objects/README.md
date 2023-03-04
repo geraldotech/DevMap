@@ -122,7 +122,8 @@ for (const key in pessoas) {
   p.innerHTML += key + ": " + pessoas[key];
 }
 //👉👉beatuiful string literal: p.innerHTML += `${key} - ${pessoas[key]} `;
-//👉render HTML Array[Objects] checkout
+//👉render HTML Array[Objects] using `for in` checkout
+https://github.com/geraldotech/DevMap/blob/main/JavaScript/Arrays/Blog_Settings2/main.js
 
 //👉iterating over Array to get Index
 function getIndex(arr) {
