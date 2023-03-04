@@ -121,8 +121,8 @@ for (let key in pessoas) {
 for (const key in pessoas) {
   p.innerHTML += key + ": " + pessoas[key];
 }
-//👉👉beatuiful string literal: p.innerHTML += `${key} - ${pessoas[key]} `;
-//👉render HTML Array[Objects] using `for in` checkout
+//👉👉 beatuiful string literal: p.innerHTML += `${key} - ${pessoas[key]} `;
+//👉render HTML Array[Objects] using `for in` and `for of` checkout Arrays > Blog_Settings2
 https://github.com/geraldotech/DevMap/blob/main/JavaScript/Arrays/Blog_Settings2/main.js
 
 //👉iterating over Array to get Index
