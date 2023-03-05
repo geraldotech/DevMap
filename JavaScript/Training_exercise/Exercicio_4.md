@@ -14,7 +14,7 @@
 
 #### 7.Faça um Array de 5 itens, solicite ao usuário quantos itens deve ser exibido:
 
-<a href="./answers/js_exercicio_4_question_7.html" target="_blank">js_exercicio_4_question_7.html</a>
+<a href="./answers/JS_Exercicio_4_question_7.html" target="_blank">js_exercicio_4_question_7.html</a>
 
 #### 8.Declare um array vazio preencha 2 numeros para soma:
 
