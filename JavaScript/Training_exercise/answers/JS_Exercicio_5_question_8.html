@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+<style>
+
+    html{
+        background-color: rgb(71, 71, 71);
+        color: white;   
+        display: flex; 
+        height:100vh;
+        justify-content: center;
+    }
+</style>
+<body>
+<h1>Exercicio para</h1>
+    <p>createTextNode, createElement, appendChild and document.body.appendChild</p>
+
+<form>
+    <fieldset>
+        <legend>Tabuada de:</legend>
+        <label for="n1">Valor</label>
+        <input id="n1" placeholder="valor 1" value="5" /> |
+        <label for="max">Max</label>
+        <input id="max" placeholder="definir maximo" value="10" required/>
+        <input type="submit" id="calc" value="Calcular" />
+    </fieldset>
+</form>
+
+</body>
+<script>
+document.getElementById('calc').onclick = function(event){
+    
+    var n = parseInt(document.getElementById("n1").value);
+    var max = parseInt(document.getElementById("max").value);
+    let x = '';
+    for(i=1 ; i<= max; i++){
+        x += n*i;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+event.preventDefault()
+res = document.createTextNode(x);
+    p = document.createElement("p");
+    p.appendChild(res);
+    document.body.appendChild(p);  */
+
+    //add if return false case get maximum
+    /* 
+
+     let count = 0; //add on top
+     if(count >=2){
+    return false;
+    }
+    count++;
+    */
+</script>
+</html>

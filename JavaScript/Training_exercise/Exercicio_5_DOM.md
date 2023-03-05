@@ -21,7 +21,7 @@ link: https://www.w3schools.com/jsref/dom_obj_document.asp
    7.1. Limitar a saída com if return para 3x:
 
 8. Fazer a saída da calculadora com createTextNode e limitar com if return false (abrir arquivo html inside this folder) 4 lines, depois aplicar o preventDefault()
-   <a href="https://geradev.netlify.app/js_exercises/js_exercicio_5_question_8.html" target="_blank">geradev.netlify</a>
+   <a href="./answers/js_exercicio_5_question_8.html" target="_blank">js_exercicio_5_question_8</a>
 
 9. Fazer um button click onde start no html
 
