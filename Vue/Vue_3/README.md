@@ -320,3 +320,35 @@ Envia dados para componentes, melhor uso para comportamento
 Envia conteúdo extra para os componentes
 
 [Form Input Bindings](https://vuejs.org/guide/essentials/forms.html)
+
+# fetch
+
+await
+
+```js
+created() {
+    this.posts();
+  },
+
+ async posts() {
+      const req = await fetch("./src/db/data.json");
+      const res = await req.json();
+      this.dados = res.blog.posts;
+```
+
+.then
+
+```js
+created() {
+    this.getapi();
+  },
+
+methods: {
+    getapi() {
+      fetch("./src/db/data.json")
+        .then((res) => res.json())
+        .then((f) => {
+          this.dados = f;
+        });
+    },
+```
