@@ -21,14 +21,4 @@ const options = {
 
 const { loadModule } = window["vue3-sfc-loader"];
 
-const app = Vue.createApp({
-  data() {
-    return {};
-  },
-  components: {
-    App: Vue.defineAsyncComponent(() => loadModule("./App.vue", options)),
-  },
-  template: `<App/>`,
-});
-
-app.mount("#app");
+//export { options, loadModule };

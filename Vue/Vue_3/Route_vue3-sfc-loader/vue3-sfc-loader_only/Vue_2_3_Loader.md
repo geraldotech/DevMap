@@ -225,3 +225,9 @@ Nosso code que inicializa o plugin em um arquivo separado é chamado em cada htm
 App.vue encapsulando todos os components
 
 - eg4_module
+
+# ✔ e.g Beautiful 1.4
+
+@click Load Components
+
+- eg5`module`@clic_load

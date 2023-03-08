@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>parent.vue</h1>
+    <h1>App parent.vue</h1>
     <myHeader />
     <my-component />
     <my-footer ativou />
@@ -14,13 +14,13 @@ module.exports = {
   },
   components: {
     "my-component": Vue.defineAsyncComponent(() =>
-      loadModule("./components/myComponent.vue", options)
+      loadModule("./src/components/myComponent.vue", options)
     ),
     myHeader: Vue.defineAsyncComponent(() =>
-      loadModule("./components/myHeader.vue", options)
+      loadModule("./src/components/myHeader.vue", options)
     ),
     "my-footer": Vue.defineAsyncComponent(() =>
-      loadModule("./components/footer.vue", options)
+      loadModule("./src/components/footer.vue", options)
     ),
   },
 };
