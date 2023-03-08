@@ -8,12 +8,27 @@
     <style></style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <form action="" @submit="handler($e)">
+        <input type="text" v-model="dados" />
+        <input type="submit" value="Enviar" />
+      </form>
+      <p>{{dados2}}</p>
+    </div>
 
     <script>
       Vue.createApp({
         data() {
-          return {};
+          return {
+            dados: [],
+            dados2: [],
+          };
+        },
+        methods: {
+          handler(e) {
+            e.preventDefault();
+            this.dados2 = this.dados;
+          },
         },
       }).mount("#app");
     </script>
