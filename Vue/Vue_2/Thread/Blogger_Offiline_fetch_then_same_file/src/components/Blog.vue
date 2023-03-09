@@ -1,98 +1,73 @@
 <template>
   <div>
-    <button @click="all = !all">Show</button>
-    <section v-show="all">
-      {{ produtos }}
-    </section>
+    <h2>Blog Posts</h2>
 
-    <section>
-      <button
-        v-for="itens in produtos"
-        :key="itens.id"
-        @click="fetchProduto(itens.name)"
-      >
-        {{ itens.name }}
-      </button>
-      <p>{{ produto }}</p>
-    </section>
-
-    <hr />
-    <h2>All Posts</h2>
-    <p>{{ posts }}</p>
-
-    <hr />
-
-    <ul>
-      <li v-for="itens in posts" :key="itens.id">
-        <a :href="itens.slug" @click.prevent="fetchPost(itens.id)">{{
-          itens.title
-        }}</a>
-      </li>
-    </ul>
-    <ul>
-      <li>Title: {{ post.title }}</li>
-      <li>Cat: {{ post.category }}</li>
-      <li>Article: {{ post.article }}</li>
-    </ul>
-
-    <select name="" id="" v-model="selecinado">
-      <option :value="opt.id" v-for="opt of posts" :key="opt.id">
-        {{ opt.slug }}
+    <!--   <select v-model="selecionado">
+      <option value=""></option>
+      <option v-for="posx in posts" :key="posx.id" :value="posx.description">
+        {{ posx.name }}
       </option>
     </select>
-    <p>{{ selecinado }}</p>
+     -->
+
+    <hr />
+    <div class="menu">
+      <nav>
+        <a
+          v-for="(links, index) in posts"
+          :key="links.name"
+          :href="index"
+          @click.prevent="RenderPost($event)"
+          >{{ links.name }}</a
+        >
+      </nav>
+    </div>
+
+    <hr />
+    <h3>{{ post.id }}</h3>
+    <h3>{{ post.name }}</h3>
+    <h3>{{ post.description }}</h3>
   </div>
 </template>
 
 <script>
 module.exports = {
   created() {
-    this.fetchProdutos();
-    // this.fetchProduto(`notebook`);
-    this.fetchPosts();
+    this.fetchblog();
+    console.log(this.posts);
   },
   data() {
     return {
-      produtos: [],
-      produto: [],
-      all: false,
-      posts: [],
-      post: [],
-      selecinado: ``,
+      posts: {},
+      post: {},
+      currentIndex: [],
     };
   },
   methods: {
-    fetchProdutos() {
-      fetch("./api/produtos.json")
-        .then((r) => r.json())
-        .then((r) => {
-          this.produtos = r;
-        });
-    },
-    fetchProduto(id) {
-      fetch(`./api/produtos/${id}/dados.json`)
-        .then((r) => r.json())
-        .then((r) => {
-          this.produto = r;
-        });
-    },
-    fetchPosts() {
+    fetchblog() {
       fetch("./api/posts.json")
         .then((r) => r.json())
         .then((r) => {
+          console.log(r[0]);
           this.posts = r;
         });
     },
-    fetchPost(id) {
-      fetch(`./api/blog/${id}/post.json`)
-        .then((r) => r.json())
-        .then((r) => {
-          this.post = r;
-        });
+    RenderPost: function (e) {
+      //get current index of selected button
+      this.currentIndex = e.target.getAttribute("href");
+      //post recebe all posts[index]
+      this.post = this.posts[this.currentIndex];
     },
   },
 };
 </script>
 
 <style>
+nav {
+  display: flex;
+  width: 350px;
+  max-width: 400px;
+  justify-content: space-around;
+  margin: 0 auto;
+}
 </style>
