@@ -14,7 +14,7 @@
         </li>
       </ul>
     </nav>
-
+    <!-- render currently component -->
     <component :is="opt"></component>
   </div>
 </template>
@@ -38,6 +38,7 @@ module.exports = {
     LoadFile(file) {
       //update History
       history.pushState({}, "", file);
+      //this opt rebece o nome do component
       return (this.opt = file);
     },
   },

@@ -29,19 +29,19 @@
         }}</a>
       </li>
     </ul>
+    <!--   render using data v-html for post html -->
     <ul>
-      <li>ID:{{ post.id }}</li>
       <li>Title: {{ post.title }}</li>
       <li>Cat: {{ post.category }}</li>
-      <li>Article: {{ post.article }}</li>
+      <li>Article: <span v-html="post.article"></span></li>
     </ul>
 
-    <select name="" id="" v-model="selecinado">
+    <select name="" id="" v-model="selecionado">
       <option :value="opt.id" v-for="opt of posts" :key="opt.id">
         {{ opt.slug }}
       </option>
     </select>
-    <p>{{ selecinado }}</p>
+    <p>{{ selecionado }}</p>
   </div>
 </template>
 
@@ -59,7 +59,7 @@ module.exports = {
       all: false,
       posts: [],
       post: [],
-      selecinado: ``,
+      selecionado: ``,
     };
   },
   methods: {
