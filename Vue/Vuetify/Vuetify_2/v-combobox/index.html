@@ -14,6 +14,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <style>
+      body {
+        max-width: 75rem;
+        margin: 0 auto;
+      }
       #app {
         margin-top: 20px;
       }
@@ -32,6 +36,11 @@
             >https://vuetifyjs.com/en/components/combobox/</a
           >
         </p>
+        <v-divider></v-divider>
+        <p>
+          Contextualizando o combobox, :bindei o color para ser dinâmico de
+          acordo com a operadora selecionada
+        </p>
         <v-main>
           <v-combobox
             class="operadoras"
@@ -43,10 +52,30 @@
             :hint="`Selecionado: ${combo.name}`"
           ></v-combobox>
 
-          <ul>
-            <li>Operadora: <span>{{combo.name}}</span></li>
-            <li>GB: <span>{{combo.plano}}</span></li>
-          </ul>
+          <v-alert :color="combo.color">
+            <ul>
+              <li>Operadora: <span>{{combo.name}}</span></li>
+              <li>GB: <span>{{combo.plano}}</span></li>
+            </ul>
+          </v-alert>
+
+          <template v-if="combo.name == 'Vivo'">
+            <v-combobox
+              label="Select Valor recarga"
+              :items="[{'valor': 10}, {'valor': 20}, ]"
+              item-text="valor"
+              v-model="vivosub"
+              :hint="`Selecionado: ${vivosub.valor}`"
+            >
+            </v-combobox>
+            <p>{{vivosub}}</p>
+          </template>
+
+          <v-checkbox label="alerta" @click="depende = !depende"></v-checkbox>
+          <v-alert type="success" v-show="depende"
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
+            perferendis!</v-alert
+          >
         </v-main>
       </v-app>
     </div>
