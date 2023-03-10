@@ -116,6 +116,7 @@ Atributos dinâmicos
     - <input type="text" @change="handleChange" />
     - <input type="text" @click="handleChange" />
     - <input type="text" @mouseover="handleChange" />
+    - <input type="text" @keydown.enter />
     - `<input type="text" v-model="nome" v-on:input="Complete" />`
     - input type="text" v-model="nome" @input="nome = nome.toUpperCase()" />
 
