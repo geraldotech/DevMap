@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,8 @@
   </head>
   <body>
     <div id="app">
-      <v-select v-model="selected" :options="items"></v-select>
+      <v-select v-model="selected" :options="items" ></v-select>
+      </v-select>
       <p>{{selected.id}}</p>
 
       <hr />
@@ -30,7 +31,7 @@
         data: {
           selected: "",
           selected2: "",
-          label: "",
+          etiqueta: "label",
           items: [
             { id: 1, label: "Canada", code: "ca" },
             { id: 2, label: "Canada 2", code: "ca2" },
