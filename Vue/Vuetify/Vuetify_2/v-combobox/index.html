@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <style>
+      #app {
+        margin-top: 20px;
+      }
+      .operadoras {
+        padding: 10px;
+        margin-top: 20px;
+      }
+    </style>
+    <title>Vue Form</title>
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <p>
+          <a href="https://vuetifyjs.com/en/components/combobox/"
+            >https://vuetifyjs.com/en/components/combobox/</a
+          >
+        </p>
+        <v-main>
+          <v-combobox
+            class="operadoras"
+            clearable
+            label="Selecionar operadora:"
+            :items="operadoras"
+            v-model="combo"
+            item-text="name"
+            :hint="`Selecionado: ${combo.name}`"
+          ></v-combobox>
+
+          <ul>
+            <li>Operadora: <span>{{combo.name}}</span></li>
+            <li>GB: <span>{{combo.plano}}</span></li>
+          </ul>
+        </v-main>
+      </v-app>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
