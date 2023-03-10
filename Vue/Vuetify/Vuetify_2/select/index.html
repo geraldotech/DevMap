@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="color-scheme: dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,35 +13,37 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-
+    <title>Vue Form</title>
     <style>
-      h2 {
-        padding: 30px 0;
-      }
+    v-app{
+      background: red;
+    }
     </style>
   </head>
   <body>
     <div id="app">
-      <v-app width="400" class="mx-auto mt-5">
-        <h1 class="display-1">Hello</h1>
-        <v-container>
-          <h2>Select</h2>
-
-          <v-select
-            v-model="select"
-            :hint="`${select.state}, ${select.abbr}`"
-            :items="items"
-            item-text="state"
-            item-value="abbr"
-            persistent-hint
-            return-object
-          >
-          </v-select>
-          {{select.id}}
-        </v-container>
-      </v-app>
+       <v-app>
+         <v-main>
+  <v-select
+    v-model="select"
+    :hint="`${select.state}, ${select.abbr}`"
+    :items="items"
+    item-title="state"
+    item-value="abbr"
+    item-text="state"
+    label="Select"
+    persistent-hint
+    return-object
+    single-line
+    
+  ></v-select>
+  
+  <p>{{select}}</p>
+  <p>faltava o item-text, required no 2.0, encapsular v-main reduz o height</p>
+</v-main>
+  </v-app>
     </div>
-
+ 
     <script src="./main.js"></script>
   </body>
 </html>
