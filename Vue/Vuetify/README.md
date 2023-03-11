@@ -1,12 +1,10 @@
-# Vuetify 2
+# <div align="center"> Vuetify</div>
 
-### Links
+# Vuetify 3
 
-- ### Vue 3
+👉[https://next.vuetifyjs.com/getting-started/installation/](https://next.vuetifyjs.com/getting-started/installation/)
 
-  👉[https://next.vuetifyjs.com/getting-started/installation/](https://next.vuetifyjs.com/getting-started/installation/)
-
-- ### Vue 2 👇
+# Vuetify 2 👇
 
 - [https://vuetifyjs.com/en/getting-started/installation/#font-installation](https://vuetifyjs.com/en/getting-started/installation/#font-installation)
 
