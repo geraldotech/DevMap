@@ -19,7 +19,6 @@ new Vue({
     theme: { dark: true },
   }),
   data: {
-    value: "",
     opt: "",
   },
   methods: {

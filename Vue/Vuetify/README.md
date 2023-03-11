@@ -31,7 +31,27 @@ new Vue({
 <v-app>
   <v-main>
     <v-container>
-      <template> </template>
+      <template>
+        👉<!-- card -->
+        <v-card>
+          <v-card-title> </v-card-title>
+          <v-card-text> </v-card-text>
+
+          <v-card-actions>
+            <v-btn color="success">Register</v-btn>
+
+            <v-spacer></v-spacer>
+          </v-card-actions>
+        </v-card>
+        👉<!-- form -->
+        <v-form>
+          <v-text-field></v-text-field>
+        </v-form>
+        👉<!-- hr -->
+        <v-divider></v-divider>
+        👉<!-- btn + icon -->
+        <v-btn> <v-icon>mdi-wifi-star</v-icon></v-btn>
+      </template>
     </v-container>
   </v-main>
 </v-app>
