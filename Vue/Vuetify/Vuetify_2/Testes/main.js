@@ -3,5 +3,7 @@ new Vue({
   vuetify: new Vuetify({
     theme: { dark: true },
   }),
-  data: {},
+  data: () => ({
+    tab: null,
+  }),
 });

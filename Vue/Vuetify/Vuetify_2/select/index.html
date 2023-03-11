@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,35 +15,37 @@
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <title>Vue Form</title>
     <style>
-    v-app{
-      background: red;
-    }
+      v-app {
+        background: red;
+      }
     </style>
   </head>
   <body>
     <div id="app">
-       <v-app>
-         <v-main>
-  <v-select
-    v-model="select"
-    :hint="`${select.state}, ${select.abbr}`"
-    :items="items"
-    item-title="state"
-    item-value="abbr"
-    item-text="state"
-    label="Select"
-    persistent-hint
-    return-object
-    single-line
-    
-  ></v-select>
-  
-  <p>{{select}}</p>
-  <p>faltava o item-text, required no 2.0, encapsular v-main reduz o height</p>
-</v-main>
-  </v-app>
+      <v-app>
+        <v-main>
+          <v-select
+            v-model="select"
+            :hint="`${select.state}, ${select.abbr}`"
+            :items="items"
+            item-title="state"
+            item-value="abbr"
+            item-text="state"
+            label="Select"
+            persistent-hint
+            return-object
+            single-line
+          ></v-select>
+
+          <p>{{select}}</p>
+          <p>
+            faltava o item-text, required no 2.0, encapsular v-main reduz o
+            height
+          </p>
+        </v-main>
+      </v-app>
     </div>
- 
+
     <script src="./main.js"></script>
   </body>
 </html>

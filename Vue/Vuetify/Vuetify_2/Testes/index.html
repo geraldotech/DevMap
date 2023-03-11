@@ -13,18 +13,72 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <title>Vue Form</title>
+    <title>Vue TEST</title>
   </head>
   <body>
     <div id="app">
       <v-app>
         <v-main>
-          <!-- v1.5 -->
+          <template>
+            <v-card>
+              <v-toolbar color="primary">
+                <v-toolbar-title>User Profile</v-toolbar-title>
+              </v-toolbar>
 
-          <v-tabs>
-            ...
-            <v-tabs-items>items </v-tabs-items>
-          </v-tabs>
+              <!-- v-tabs start --><v-tabs>
+                <v-tab>
+                  <v-icon>mdi-account</v-icon>
+                  One</v-tab
+                >
+                <v-tab>
+                  <v-icon>mdi-database</v-icon>
+                  Two
+                </v-tab>
+                <v-tab>
+                  <v-icon>mdi-cart-outline</v-icon>
+                  Three</v-tab
+                >
+
+                <v-tab-item>
+                  <v-card>
+                    <v-card-text>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Natus, sit.
+                      </p>
+                    </v-card-text>
+                  </v-card>
+                </v-tab-item>
+                <v-tab-item>
+                  <v-card>
+                    <v-card-text>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ea ut atque sunt animi, ullam nisi ipsum suscipit sed!
+                        Unde ex officia hic odit ad, corporis obcaecati. Quasi
+                        neque assumenda, quod molestiae illum qui architecto
+                        nobis laborum quis tenetur consequatur, inventore
+                        distinctio a error ad? Maxime laudantium quas cumque
+                        quisquam cum?
+                      </p>
+                    </v-card-text>
+                  </v-card>
+                </v-tab-item>
+                <v-tab-item>
+                  <v-card>
+                    <v-card-text>
+                      <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Qui distinctio enim tempore ex dolore commodi vero
+                        quidem explicabo dolorem soluta!
+                      </p>
+                    </v-card-text>
+                  </v-card>
+                </v-tab-item>
+                <!-- v-tabs ends -->
+              </v-tabs>
+            </v-card>
+          </template>
         </v-main>
       </v-app>
     </div>

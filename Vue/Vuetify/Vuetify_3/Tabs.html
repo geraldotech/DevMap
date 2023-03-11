@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@mdi/font@6.x/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@vuetify/nightly@3.1.2-next-20230112.0/dist/vuetify.css"
+    />
+    <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+
+    <script src="https://unpkg.com/@vuetify/nightly@3.1.2-next-20230112.0/dist/vuetify.js"></script>
+    <script src="https://unpkg.com/@vuetify/nightly@3.1.2-next-20230112.0/dist/vuetify.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <v-main>
+          <v-card>
+            <v-tabs v-model="tab" bg-color="primary">
+              <v-tab value="one">Item One</v-tab>
+              <v-tab value="two">Item Two</v-tab>
+              <v-tab value="three">Item Three</v-tab>
+            </v-tabs>
+
+            <v-card-text>
+              <v-window v-model="tab">
+                <v-window-item value="one">
+                  One -
+                  <a href="https://vuetifyjs.com/en/components/tabs/"
+                    >https://vuetifyjs.com/en/components/tabs/</a
+                  ></v-window-item
+                >
+                <v-window-item value="two"> Two </v-window-item>
+                <v-window-item value="three"> Three </v-window-item>
+              </v-window>
+            </v-card-text>
+          </v-card>
+        </v-main>
+      </v-app>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      const { createVuetify } = Vuetify;
+
+      const vuetify = createVuetify();
+
+      const app = createApp({
+        data() {
+          return {
+            tab: null,
+          };
+        },
+      })
+        .use(vuetify)
+        .mount("#app");
+    </script>
+  </body>
+</html>

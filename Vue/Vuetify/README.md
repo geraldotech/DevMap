@@ -2,7 +2,11 @@
 
 ### Links
 
-- for Vue 3 👉[https://next.vuetifyjs.com/getting-started/installation/](https://next.vuetifyjs.com/getting-started/installation/)
+- ### Vue 3
+
+  👉[https://next.vuetifyjs.com/getting-started/installation/](https://next.vuetifyjs.com/getting-started/installation/)
+
+- ### Vue 2 👇
 
 - [https://vuetifyjs.com/en/getting-started/installation/#font-installation](https://vuetifyjs.com/en/getting-started/installation/#font-installation)
 
@@ -15,17 +19,11 @@
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 ```
 
-### Get Started:
+# Some best Links
 
-```js
-new Vue({
-  el: "#app",
-  vuetify: new Vuetify(),
-  data: {},
-});
-```
+### API
 
-### Tags
+> Tab API
 
 ```html
 <v-app>
@@ -55,6 +53,31 @@ new Vue({
     </v-container>
   </v-main>
 </v-app>
+```
+
+### All Components
+
+[https://vuetifyjs.com/en/components/all/](https://vuetifyjs.com/en/components/all/)
+
+### Colors
+
+- [https://v2.vuetifyjs.com/en/features/theme/#customizing](https://v2.vuetifyjs.com/en/features/theme/#customizing)
+- [https://v2.vuetifyjs.com/en/styles/colors/](https://v2.vuetifyjs.com/en/styles/colors/)
+
+# Tips
+
+### v-icon
+
+[https://materialdesignicons.com/](https://materialdesignicons.com/)
+
+### Get Started:
+
+```js
+new Vue({
+  el: "#app",
+  vuetify: new Vuetify(),
+  data: {},
+});
 ```
 
 ### Dark Mode:
