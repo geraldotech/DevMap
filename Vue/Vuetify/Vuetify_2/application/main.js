@@ -4,6 +4,6 @@ new Vue({
     theme: { dark: true },
   }),
   data: {
-    sheet: false,
+    geraldoX: [12],
   },
 });

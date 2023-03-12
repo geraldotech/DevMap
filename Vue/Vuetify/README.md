@@ -19,6 +19,8 @@
 
 # Some best Links
 
+> bootstrap your application [https://v2.vuetifyjs.com/en/components/application/](https://v2.vuetifyjs.com/en/components/application/)
+
 ### API
 
 > Tab API
