@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vuesax</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./src/main.js" defer></script>
+    <!-- Vuesax -->
+    <link
+      href="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <vs-button>button</vs-button>
+      <vs-button disabled>disabled</vs-button>
+      <vs-button color="#7d33ff" shadow flat border>Flat</vs-button>
+
+      <vs-button icon @click="active = 0">
+        <i class="bx bx-home-alt"></i>
+      </vs-button>
+
+      <hr />
+      <vs-button block>
+        <i class="bx bxs-paint-roll"></i> Edit Theme
+      </vs-button>
+
+      <vs-button>
+        Download
+        <template #animate> Now </template>
+      </vs-button>
+
+      <hr />
+
+      <vs-select placeholder="Select" v-model="valor" @change="myfun($event)">
+        <vs-option label="Vuesax" value="1"> Vuesax </vs-option>
+        <vs-option label="Vue" value="2"> Vue </vs-option>
+        <vs-option label="Javascript" value="3" data="tesy">
+          Javascript
+        </vs-option>
+        <vs-option disabled label="Sass" value="4"> Sass </vs-option>
+      </vs-select>
+
+      <p>{{attr}}</p>
+    </div>
+  </body>
+</html>
