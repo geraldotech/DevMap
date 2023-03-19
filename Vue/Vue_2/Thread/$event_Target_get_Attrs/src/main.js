@@ -18,6 +18,11 @@ const vm = new Vue({
       console.warn($event.target.selectedOptions[0].dataset.id);
       console.warn($event.target.selectedOptions[0].getAttribute("data"));
     },
+    getfun(e) {
+      console.log(e.target.value);
+      console.log(e.target.id);
+      console.log(e.target.dataset.btn);
+    },
   },
 });
 

@@ -14,9 +14,14 @@
         data() {
           return {
             greeting: "Bem Vindo",
+            faculdade: {
+              status: `ativo`,
+              curso: `Sistemas de informacao`,
+            },
           };
         },
-        template: "{{greeting}}",
+        template: `<p>Curso: {{faculdade.curso}}</p>
+      <p>Status: {{faculdade.status}}</p>`,
       }).mount("#root");
     </script>
   </body>
