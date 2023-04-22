@@ -1,0 +1,2 @@
+- Fixed clean old valures
+- add toFixed()
