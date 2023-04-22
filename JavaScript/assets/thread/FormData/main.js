@@ -10,7 +10,7 @@ form.onsubmit = function (e) {
   //Creates a new FormData object.
   const fdata = new FormData(form);
 
-  //Getting data baseed in names and sum
+  //Getting data based on names and sum this values
 
   const [price, year] = [+fdata.get("price"), +fdata.get("year")];
   console.log(price + year);
