@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New document</title>
-    <script src="https://v2.vuejs.org/js/vue.js"></script>
+    <title>VueJS 3.2.47</title>
+
+    <script src="https://unpkg.com/vue@3"></script>
   </head>
   <body>
     <div id="root">
@@ -14,8 +15,7 @@
     </div>
 
     <script>
-      const vm = new Vue({
-        el: "#root",
+      const vm = Vue.createApp({
         data() {
           return {
             greeting: "Bem Vindo",
@@ -27,7 +27,7 @@
         },
         /* template: `<p>Curso: {{faculdade.curso}}</p>
       <p>Status: {{faculdade.status}}</p>`, */
-      });
+      }).mount("#root");
 
       console.log(Vue.version);
     </script>
