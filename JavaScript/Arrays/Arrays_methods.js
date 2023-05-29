@@ -38,6 +38,13 @@ for(let i = 0; i < arr.length; i++){
   }
 }
 
+//📌 Using #includes
+for(let i = 0; i < arr.length; i++){
+  if(arr[i].includes("B")){
+    console.log(arr[i], i);    // Brava 1, Bravo 2
+  }
+}
+
 
 //🔰Strings in JavaScript is that we can access the characters in a string using its index
 // https://www.freecodecamp.org/news/javascript-split-how-to-split-a-string-into-an-array-in-js/
