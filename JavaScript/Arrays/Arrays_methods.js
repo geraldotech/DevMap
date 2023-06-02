@@ -109,11 +109,14 @@ The difference is in the second argument
 📌 substring - second argument is the index to stop at (but not include),  
 aceita apenas o end negativo contudo definindo 0 start positivo
 
-📌 substr - second argument  is the maximum length to return.  accepts a negative starting position
+📌 substr - second argument  is the maximum length to return, accepts a negative starting position or 
+
 🚩 MDN considers substr legacy. This feature is no longer recommended.
 https://tinyurl.com/mzp65jky
 */
 
+console.log(`/blog`.substr(2)); // log   - Get A partir desse ponto
+console.log(`/blog`.substring(2)); // log   - Get A partir desse ponto
 console.log("Geraldo".substring(1, 5)); //eral
 console.log("Geraldo".substr(1, 5)); //erald
 console.log("Geraldo".substring(0, 5)); //eral
@@ -1048,11 +1051,25 @@ console.log(paragraph.lastIndexOf("lazy?")); // 78
 console.log(paragraph.indexOf("lazy?")); // 78
 
 /* [=============================================================================]
-🟢 29 - match() https://ricardo-reis.medium.com/o-tipo-string-no-javascript-e3fb621856d1
+🟢 29 - #match() 
+https://ricardo-reis.medium.com/o-tipo-string-no-javascript-e3fb621856d1
 */
 /* [=============================================================================]
-🟢 30 - trim() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+🟢 30 - #trim() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+
+/* 🟢 31 - #charAt() 
+Get the first character in a string:
+ */
+
+// 📌Pegar uma stringe deixar UpperCase()
+
+const x = `/blog`;
+/* charAt(1) = B 
+.toLocaleUpperCase() = Maiusculo
++ concatenar com x.substr(2) 
 */
+console.log(x.charAt(1).toLocaleUpperCase() + x.substr(2)); // Blog
+
 /* [=============================================================================]
 */
 
