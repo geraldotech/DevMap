@@ -1070,6 +1070,20 @@ const x = `/blog`;
 */
 console.log(x.charAt(1).toLocaleUpperCase() + x.substr(2)); // Blog
 
+//👉First Letter Capitalize
+//https://flexiple.com/javascript/javascript-capitalize-first-letter/
+
+
+//📌Map a Array
+const cat = ["Developer", "amazon", "google", "android"];
+const cat2 = cat.map((el) => el.charAt(0).toLocaleUpperCase() + el.slice(1));
+
+console.log(`cat2`, cat2); // ['Developer', 'Amazon', 'Google', 'Android']
+//📌String
+const str = `geraldo`;
+const str2 = str.charAt(0).toLocaleUpperCase() + str.slice(1);
+
+console.log(`str2`, str2); //Geraldo
 /* [=============================================================================]
 */
 

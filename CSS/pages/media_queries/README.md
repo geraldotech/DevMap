@@ -65,6 +65,31 @@ porém ao atingir >= 800px volta a primeira regra
 }
 ```
 
+Exemplo de Alta prioridade
+
+```css
+* {
+  box-sizing: border-box;
+}
+/* se é mobile first entao nao requer a regra max-width, porem caso essa regra exitir é alta prioridade */
+h1 {
+  color: yellow;
+}
+
+/* desktop */
+@media screen and (min-width: 650px) {
+  h1 {
+    color: violet;
+  }
+}
+/* mobile force */
+@media screen and (max-width: 650px) {
+  h1 {
+    color: tomato;
+  }
+}
+```
+
 # e.g:
 
 - [smart_vs_notebook.html](https://geraldotech.github.io/DevMap/CSS/pages/media_queries/smart_vs_notebook.html)
