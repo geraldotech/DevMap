@@ -687,7 +687,7 @@ document.head.insertAdjacentHTML(
 - <a href="https://www.base64encode.org/">base64encode.org</a>
 - <a href="https://twitter.com/ATechAjay/status/1606115109842976768">XOX operator</a>
 - [Nice articles: https://bobbyhadz.com/blog/](https://bobbyhadz.com/blog/)
-- [Expressões Regulares](https://ricardo-reis.medium.com/express%C3%B5es-regulares-javascript-295da6deaee7)
+- [Expressões Regulares](./assets/thread/Regex.md)
 
 ## Videos
 

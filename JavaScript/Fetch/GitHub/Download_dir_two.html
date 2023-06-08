@@ -6,11 +6,17 @@
   </head>
   <body>
     <form action="" onsubmit="event.preventDefault()">
-      <input type="text" placeholder="Full_URL" name="url" />
+      <input
+        type="text"
+        placeholder="Full_URL"
+        name="url"
+        value="https://api.github.com/repos/geraldotech/DevMap/contents/Vue/Vue_2/lib"
+      />
       <input type="submit" value="Send" />
     </form>
 
     <script>
+      /* https://github.com/geraldotech/DevMap/tree/main/Vue/Vue_2/lib */
       // gitUser + main directory + /contents/ + sub directories
       const url =
         "https://api.github.com/repos/geraldotech/DevMap/contents/Vue/Vue_2/lib";
@@ -19,6 +25,7 @@
         const req = await fetch(respo);
         const res = await req.json();
         if (res) {
+          console.log(res);
         }
       }
 
@@ -40,18 +47,28 @@
         document.body.appendChild(ul);
       }
 
-      //fetchRepoInfo(url);
+      fetchRepoInfo(url);
 
       //form
-      const FormUrl = document.querySelector("input[placeholder='Full_URL']");
-      console.log(FormUrl);
 
-      const form = document.querySelectorAll("form input");
-      console.log(form[0]); // btn one
-      console.log(form[1]); // btn two
+      const FormData = document.querySelector('input[name="url"]');
+      const btn = document.querySelector("input[type='submit']");
+      btn.onclick = () => {
+        console.log(FormData.value);
+        const FormUrl = FormData.value;
+        fetchUserRepo(FormUrl);
+      };
 
-      const form2 = document.querySelector('input[name="url"]');
-      console.log(form2);
+      async function fetchUserRepo(url) {
+        console.log(`url`, url);
+        const req = await fetch(url);
+        const res = await req.json();
+
+        if (res) {
+          console.log(res);
+          console.log(`fetch okay`);
+        }
+      }
     </script>
   </body>
 </html>
