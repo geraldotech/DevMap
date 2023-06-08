@@ -75,7 +75,7 @@ console.log(document.querySelector(".oi")); //return class
 console.log(document.querySelector("#hello").innerHTML); //return id
 
 
-// querySelector - selecionando input by name
+//🟢 querySelector - selecionando input by name
 <input type="text" name="one" placeholder="ola"/>
 <input type="text" name="two" placeholder="hello"/>
 
@@ -103,8 +103,11 @@ el.textContent = "novo";
  const p = document.querySelector("p:nth-child(3)"); //lembrando regras de CSS se não existir o tipo tipo p `3` vai retornar `null`
  const p = document.querySelector("p:nth-of-type(2)");
 
+//👉 querySelector and placeholder
+document.querySelector("input[placeholder='Full_URL'];
 
-//👉 querySelectorAll - support forEach
+
+//🟢 querySelectorAll - support forEach
 console.log(document.querySelectorAll(".menu")); //return a NodeList()
 
 const link = document.querySelectorAll("a"); //return all tags

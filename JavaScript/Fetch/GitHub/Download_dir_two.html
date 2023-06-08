@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <form action="" onsubmit="event.preventDefault()">
+      <input type="text" placeholder="Full_URL" name="url" />
+      <input type="submit" value="Send" />
+    </form>
+
+    <script>
+      // gitUser + main directory + /contents/ + sub directories
+      const url =
+        "https://api.github.com/repos/geraldotech/DevMap/contents/Vue/Vue_2/lib";
+
+      async function fetchRepoInfo(respo) {
+        const req = await fetch(respo);
+        const res = await req.json();
+        if (res) {
+        }
+      }
+
+      //function showHTML
+      function showHTML(info) {
+        console.log(`show`, info);
+        const ul = document.createElement("ul");
+        info.map((item) => {
+          const li = document.createElement("li");
+          li.appendChild(
+            Object.assign(document.createElement("a"), {
+              href: `https://github.com/geraldotech/DevMap/raw/main/${item.path}`,
+              textContent: item.path,
+              target: `_blank`,
+            })
+          );
+          ul.appendChild(li);
+        });
+        document.body.appendChild(ul);
+      }
+
+      //fetchRepoInfo(url);
+
+      //form
+      const FormUrl = document.querySelector("input[placeholder='Full_URL']");
+      console.log(FormUrl);
+
+      const form = document.querySelectorAll("form input");
+      console.log(form[0]); //btn one
+      console.log(form[1]); // btn two
+
+      const form2 = document.querySelector('input[name="url"]');
+      console.log(form2);
+    </script>
+  </body>
+</html>
