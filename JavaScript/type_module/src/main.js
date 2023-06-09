@@ -1,5 +1,4 @@
 import estados from "./estados.js";
-
 console.log(estados.brazilStates);
 
 import tecnologias from "./tech.js";
