@@ -70,6 +70,22 @@ console.dir(matches); // Array(3)
 console.warn(message[0]); //H
 console.warn(message[19]); //h
 console.warn(message[23]); //H
+
+//Get Only Barras via: https://stackoverflow.com/questions/16657152/matching-a-forward-slash-with-a-regex
+let url = "https://github.com/geraldotech/DevMap";
+let res = /\//gi;
+//esquecer o /gi trava tudo!
+
+let matches = [];
+let match;
+do {
+  match = res.exec(url);
+  if (match) {
+    matches.push(match);
+  }
+} while (match != null);
+
+console.log(`matches slash`, matches);
 ```
 
 ### Get words procedido por /barra
