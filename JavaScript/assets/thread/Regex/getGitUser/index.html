@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      main > input:first-child {
+        width: 50%;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+
+        width: 400px;
+        padding: 10px;
+      }
+      .form > :not(:first-child) {
+        width: 50%;
+        margin: 10px auto;
+      }
+      section p {
+        color: dodgerblue;
+      }
+      section span {
+        font-weight: bold;
+        color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="form">
+        <input
+          type="text"
+          placeholder="gitURL"
+          value="https://github.com/geraldotech/DevMap/tree/main/Vue/Vue_2/lib"
+        />
+        <input type="submit" value="Get UserName" onclick="getFullURL()" />
+      </div>
+      <section>
+        <p>Git UserName:<span id="userName"></span></p>
+      </section>
+    </main>
+
+    <script src="regex.js"></script>
+  </body>
+</html>

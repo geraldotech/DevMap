@@ -6,7 +6,7 @@
 - match() - retornará nulo se não encontrar nenhuma correspondência
 - search() - aceita uma expressão regular e retorna a posição da string em que a primeira correspondência foi encontrada. Caso nenhuma correspondência seja encontrada, ele retornará -1.
 
-Uma expressão regular é uma string (sequência de caracteres) que possui um padrão... l[leia mais aqui](https://ricardo-reis.medium.com/express%C3%B5es-regulares-javascript-295da6deaee7)
+Uma expressão regular é uma string (sequência de caracteres) que possui um padrão... [leia mais aqui](https://ricardo-reis.medium.com/express%C3%B5es-regulares-javascript-295da6deaee7)
 
 ## Criando uma expression regular:
 
@@ -70,8 +70,12 @@ console.dir(matches); // Array(3)
 console.warn(message[0]); //H
 console.warn(message[19]); //h
 console.warn(message[23]); //H
+```
 
-//Get Only Barras via: https://stackoverflow.com/questions/16657152/matching-a-forward-slash-with-a-regex
+### Get onlyBarras with loop
+
+```js
+//via: https://stackoverflow.com/questions/16657152/matching-a-forward-slash-with-a-regex
 let url = "https://github.com/geraldotech/DevMap";
 let res = /\//gi;
 //esquecer o /gi trava tudo!
