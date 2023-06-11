@@ -2,7 +2,7 @@
 JavaScript String and Array Methods
 
 Table of JavaScript String and Array Methods
-https://www.notion.so/geraldodev/Arrays-Strings-Methods-21cd45a06d6a4b1e83478c01d590ad26
+https://geraldodev.notion.site/Arrays-Strings-Methods-21cd45a06d6a4b1e83478c01d590ad26?pvs=4
 */
 
 //🟢 1 - #Strings #Arrays #Length 
