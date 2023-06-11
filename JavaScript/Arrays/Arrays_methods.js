@@ -368,7 +368,7 @@ const busca5 = arr2.filter(function(val){
 });
 console.log(busca5);
 
-//📌 call function
+//📌 call function && Alone function 
 const fil = obj.students.filter(filhos);
 console.log(fil);
 
@@ -380,6 +380,12 @@ console.log(ages.filter(verage));
 function verage(idade){
   return idade >= 21;
 }
+
+function odd(array){
+  return array %2 == 0
+}
+// Na chamada chamar a function sem passar os params
+console.log([1,2,3,4].filter(odd)); // 2, 4
 
 //📌 inside console
 console.log(arr2.filter(function(a){

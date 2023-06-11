@@ -2,9 +2,9 @@
 
 ## Expressões Regulares
 
-- replace()
-- match() - retornará nulo se não encontrar nenhuma correspondência
-- search() - aceita uma expressão regular e retorna a posição da string em que a primeira correspondência foi encontrada. Caso nenhuma correspondência seja encontrada, ele retornará -1.
+- [x] replace()
+- [x] match() - retornará nulo se não encontrar nenhuma correspondência
+- [x] search() - aceita uma expressão regular e retorna a posição da. string em que a primeira correspondência foi encontrada. Caso nenhuma correspondência seja encontrada, ele retornará -1.
 
 Uma expressão regular é uma string (sequência de caracteres) que possui um padrão... [leia mais aqui](https://ricardo-reis.medium.com/express%C3%B5es-regulares-javascript-295da6deaee7)
 
