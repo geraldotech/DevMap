@@ -1200,7 +1200,7 @@ console.log(estados.reduce((val, ind) => val.includes(ind) ? val: [...val, ind],
 
 /*
 _______________________🟢EXERCICIOS🟢_____________________________
-https://www.notion.so/geraldodev/Exercicios-1-2a427cfc7d5b4e989ac1da54a3f7e21a
+https://geraldodev.notion.site/Exercicios-1-2a427cfc7d5b4e989ac1da54a3f7e21a
 */
 const api = ["Geraldo", "CostAo", "Barrao", "Georgeo", "Aomeo","asoa","oplz"];
 
@@ -1311,6 +1311,8 @@ console.log(api.find((el, ind) => { // em vez de: "CostAo", pega: "Barrao"
   }
 }));
 
+
+
 //encontra o index do primeiro.length automaticamente
 function primeiro(el){
   return api.findIndex(val => val.length == 6);
@@ -1352,7 +1354,7 @@ console.log(arr.filter((val, ind, arrAtual) => {
 }));
 
 
-// 20 👉pegar multiple Index de um Array multiple ways to do it
+// 20 👉 Pegar multiple Index de um Array multiple ways to do it
 //https://stackoverflow.com/questions/52154331/how-to-get-multiple-indexes-of-array-by-a-value-in-pure-javascript-value-exact
 
 //🔰criar um array vazio
@@ -1395,6 +1397,13 @@ const res = ["Ger", "Mi", "Goo"].reduce((acc, currElement, index) => {
 }, [])
 
 console.log(index4); // 0,3
+
+
+// 21 
+const arr = n.split(" ")
+const surname = arr.find(val => val == `Swank`);
+console.log(surname);
+
 
 
 //visite for of / forEach para simples if statement

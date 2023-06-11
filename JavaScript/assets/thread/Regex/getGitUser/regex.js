@@ -30,13 +30,3 @@ function getUserNamefromURL(url) {
   document.querySelector("#userName").innerHTML = UserNameOnly;
   document.querySelector("#userDir").innerHTML = exceto(search, [0, 2, 3, 4]);
 }
-
-function par() {
-  let x = "";
-  for (let i = 0; i < 10; i++) {
-    x += i;
-  }
-  return x;
-}
-
-document.getElementById("par").innerHTML = par();
