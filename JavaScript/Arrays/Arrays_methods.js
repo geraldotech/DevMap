@@ -1294,10 +1294,12 @@ console.log(api.some(al => ["Geraldo","CostAoo"].includes(al)));
 
 // 14 - filter todos que termimam com a e z
 console.warn("novo",api.filter(val => ["a","z"].some(al => val.endsWith(al))));
-//alternative
+//alternative function alone a ser chamada pelo filter
 function vogais(el){
   return ["a","z"].some(val => el.endsWith(val))
  }
+
+ console.log(api.filter(vogais)); // ["asoa", "aplz"] 
 
 // 15 - filter a letra "A"
 console.log(api.filter(val => val.includes("A")));
@@ -1310,29 +1312,32 @@ api.forEach((el, ind)=> {
 // 17 - find primeiro ele == 6
 console.log(api.find(el => el.length == 6)); //CostAo
 
-// 18 - encontrar o element == 6 - pulando o primeiro que foi encontrado
+// 18 - encontrar o element.length == 6 porém pulando o primeiro que foi encontrado
+
+//informe o index manualmente
 console.log(api.find((el, ind) => { // em vez de: "CostAo", pega: "Barrao"
   if(ind > 1){
     return el.length = 6
   }
 }));
 
-
-
-//encontra o index do primeiro.length automaticamente
+//Alone function encontra o index do primeiro.length automaticamente
 function primeiro(el){
   return api.findIndex(val => val.length == 6);
 }
+// ou string recebe o valor do findIndex
+const getindex = api.findIndex(val => val.length == 6);
 
 console.log(primeiro()); // 1
+//arrow return
 console.log(api.find((val, ind) => { //Barrao
  if(ind > primeiro()) return val.length == 6
 }));
 
-//alternative shorthand
+//alternative shorthand inline
 console.log(api.find((val, ind) => val.length == 6 && ind != primeiro()));
 
-//alternative declarando string
+//alternative declarando string manualmente
 console.log(api.find((item) => item != "CostAo" && item.length == 6));
 
 //tudo em uma linha
@@ -1341,6 +1346,10 @@ console.log(api.filter((val,index, ArrAtual) => {
     return val.length == 6
   }
 }));
+//inline
+const pula2 = api.find((val, ind, arr) => val.length == 6 && ind > arr.findIndex(val => val.length == 6))
+
+console.log(pula2); // Barrao
 
 //19 - Dado o Array abaixo remover os valores duplicados
 
