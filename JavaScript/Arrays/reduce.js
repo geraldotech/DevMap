@@ -224,6 +224,13 @@ const sum = n.reduce((accumu, curren) => {
 }, 0);
 console.log(sum); // 3
 
+// Boolean by geraldoX
+let total = [1, 2, 3, 4, 5].reduce((acumulador, currVal) => {
+  return currVal == 0; // tem 0 ?
+}, Boolean);
+
+console.log(total); // false
+
 //refs
 //https://blog.betrybe.com/javascript/javascript-reduce/
 //https://raullesteves.medium.com/javascript-entendendo-o-reduce-de-uma-vez-por-todas-c4cbaa16e380
