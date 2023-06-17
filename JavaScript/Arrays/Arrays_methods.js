@@ -761,7 +761,7 @@ let x = pessoa.map((value) => {
   }
 })
 
-//contador com map
+//contador com #mapcontador
 let contador = 0
 let mapa = [1,2,3,4,5,1,2,2,2,2].map(val => {
   return val == 2 ? contador++ : contador 
