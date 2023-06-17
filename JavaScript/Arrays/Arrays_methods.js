@@ -761,6 +761,13 @@ let x = pessoa.map((value) => {
   }
 })
 
+//contador com map
+let contador = 0
+let mapa = [1,2,3,4,5,1,2,2,2,2].map(val => {
+  return val == 2 ? contador++ : contador 
+})
+console.log(contador); // 5
+
 /*
 Contextualizando #map vs #flapMap
 */
