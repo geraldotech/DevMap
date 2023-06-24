@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>App.vue Parent Component</h1>
+    <h2>Starter Template 2 with <u>component SideBar</u> by geraldox.com</h2>
     <Menua></Menua>
     <section>
       <router-view class="router-view"></router-view>
