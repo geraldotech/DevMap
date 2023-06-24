@@ -6,11 +6,30 @@
 
 ## Mais usado:
 
-```cs
-@media (`MediaFeature`){...}
-@media screen and (`MediaFeature`){...}
-@media print {}
+```css
+@media (`mediafeature`) {
+  ...;
+}
+@media screen and (`mediafeature`) {
+  ...;
+}
+@media print {
+}
+```
 
+```css
+/*  for desktop */
+@media screen and (min-width: 600px) {
+  h1 {
+    color: coral;
+  }
+}
+/*   for mobile */
+@media screen and (max-width: 600px) {
+  h1 {
+    color: crimson;
+  }
+}
 ```
 
 # Value ranges
@@ -25,7 +44,7 @@ min: 600px div coral
   }
 }
 /*
-porém ao ficar entre 700 e 800 a nova regra é color: purple  
+porém ao ficar entre 700px e 800px a nova regra é color: purple  
       */
 @media (min-width: 700px) and (max-width: 800px) {
   div {
