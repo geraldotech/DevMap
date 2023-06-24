@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLEXBOX TESTES</title>
+	<style>
+		body 
+		* {
+			margin:0px;
+			padding:0px;
+			box-sizing: border-box;
+		}
+
+		.flexbox-container {
+			height: 600px;
+			display:flex;						
+			flex-direction: row;		
+			justify-content: cexnter;
+			justify-content: space-around;
+			align-content: centcer; 
+			flex-wrap: wrap;
+			background-color: purple;
+		}
+
+		.flexbox-item {
+			background-color: gray;
+			width: 200px;
+			height: 200px;
+			border: 2px solid black;		
+			align-content: center;
+			padding: 2px;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<div class="flexbox-container">
+		<div class="flexbox-item">1</div>	
+		<div class="flexbox-item">2</div>	
+		<div class="flexbox-item">3</div>	
+		<div class="flexbox-item">4</div>	
+		<div class="flexbox-item">5</div>	
+		<div class="flexbox-item">5</div>	
+	</div> <!-- container -->
+
+</body>
+</html>

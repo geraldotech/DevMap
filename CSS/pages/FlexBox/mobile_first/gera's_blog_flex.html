@@ -1,103 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");html {
-    height: 100%
-}
-        *{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
-        }
-        body{
-            text-align: justify;
-            max-width: 995px;
-            margin: auto;
-            background: #1f242A;
-            color:#adb5bd;
-            font-family: "Inter", -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
-        }
-        a{
-            color: #91A7FF;
-            text-decoration:none;
-        }
 
-        header, section, main, article, footer{
-            padding: 1.5rem;
-        }
-        h1 {
-            color: #74c0fc;
-        }
-        aside div{
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+      html {
+        height: 100%;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        text-align: justify;
+        max-width: 995px;
+        margin: auto;
+        background: #1f242a;
+        color: #adb5bd;
+        font-family: "Inter", -apple-system, "avenir next", avenir, roboto, noto,
+          ubuntu, "helvetica neue", helvetica, sans-serif;
+      }
+      a {
+        color: #91a7ff;
+        text-decoration: none;
+      }
+
+      header,
+      section,
+      main,
+      article,
+      footer {
+        padding: 1.5rem;
+      }
+      h1 {
+        color: #74c0fc;
+      }
+      aside div {
         text-align: justify;
         width: 90%;
         margin-right: 5%;
-        margin-left: 5%;        
+        margin-left: 5%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;         
+        flex-direction: column;
+      }
+
+      .wrapper {
+        max-width: 7rem;
+        margin: auto;
+      }
+      @media screen and (min-width: 675px) {
+        .container {
+          display: flex;
+        }
+        article {
+          width: 100%;
+        }
+        aside {
+          flex: 0 1 300px;
+          width: 5%;
         }
 
-      
-
-        .wrapper{
-            max-width: 7rem;
-            margin: auto;            
+        footer,
+        aside {
         }
-@media screen and (min-width: 675px){
-    .container{
-        display: flex;
-        
-    }
-    article{
-        width: 100%;
-    }
-    aside{
-        flex:0 1 300px;
-        width: 5%;       
-    }
-
-    footer, aside{
-       
-    }
-    
-}
-
+      }
     </style>
-</head>
+  </head>
 
-<body>
-   
+  <body>
     <main>
-        
-        <header><h1>gera's blog</h1></header>
-        <hr>
-        <section>my section</section>
-        <div class="container">
+      <header><h1>gera's blog</h1></header>
+      <hr />
+      <section>my section</section>
+      <div class="container">
         <article>
-            <hp><del>sim, eu estava apto a realização do trabalho!</del></hp>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius. At Zeno eum non beatum modo, sed etiam divitem dicere ausus est. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Itaque quantum adiit periculum! ad honestatem enim illum omnem conatum suum referebat, non ad voluptatem. Ergo id est convenienter naturae vivere, a natura discedere. Esse enim quam vellet iniquus iustus poterat inpune. Tu enim ista lenius, hic Stoicorum more nos vexat. Duo Reges: constructio interrete.
-            </p>
+          <hp><del>sim, eu estava apto a realização do trabalho!</del></hp>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda
+            potius quam expetenda. Nihil opus est exemplis hoc facere longius.
+            At Zeno eum non beatum modo, sed etiam divitem dicere ausus est.
+            Nunc ita separantur, ut disiuncta sint, quo nihil potest esse
+            perversius. Itaque quantum adiit periculum! ad honestatem enim illum
+            omnem conatum suum referebat, non ad voluptatem. Ergo id est
+            convenienter naturae vivere, a natura discedere. Esse enim quam
+            vellet iniquus iustus poterat inpune. Tu enim ista lenius, hic
+            Stoicorum more nos vexat. Duo Reges: constructio interrete.
+          </p>
         </article>
-     
+
         <aside>
-            <div>
+          <div>
             <p>mysidebar</p>
-           <p>atem enim illum omnem conatum suum referebat, non ad voluptatem. Ergo id est convenienter naturae vivere, a natura discedere. Esse enim quam vellet iniquus iustus poterat inpun</p>
-        </div>
+            <p>
+              atem enim illum omnem conatum suum referebat, non ad voluptatem.
+              Ergo id est convenienter naturae vivere, a natura discedere. Esse
+              enim quam vellet iniquus iustus poterat inpun
+            </p>
+          </div>
         </aside>
-    </div>
-        <footer>footer
-            <a href="https://laylacodes.github.io/myblog/">original blog</a>
-        </footer>
-    </main>    
-</body>
+      </div>
+      <footer>
+        footer
+        <a href="https://laylacodes.github.io/myblog/">original blog</a>
+      </footer>
+    </main>
+  </body>
 </html>
