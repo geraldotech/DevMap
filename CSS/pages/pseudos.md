@@ -52,6 +52,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 div:not([lang]) {
   font-style: italic;
 }
+/* Select All sections except with a class=home */
+section:not([class="home"]) {
+  margin-top: 10px;
+}
 ```
 
 ### :only-child
