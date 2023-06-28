@@ -12,6 +12,10 @@
       body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
+      main {
+        display: grid;
+        place-items: center;
+      }
 
       img {
         width: 20%;
@@ -19,14 +23,16 @@
     </style>
   </head>
   <body>
-    <p>Image handler by gmap</p>
-    <figure>
-      <img src="https://gpnotes.droppages.com/img/21.jpg" alt="img" />
-    </figure>
+    <main>
+      <p>Image handler by gmap</p>
+      <figure>
+        <img src="https://gpnotes.droppages.com/img/21.jpg" alt="img" />
+      </figure>
 
-    <img src="https://gpnotes.droppages.com/img/1.jpg" alt="img" />
+      <img src="https://gpnotes.droppages.com/img/1.jpg" alt="img" />
 
-    <img src="https://gpnotes.droppages.com/img/12.jpg" alt="img" />
+      <img src="https://gpnotes.droppages.com/img/12.jpg" alt="img" />
+    </main>
 
     <script>
       const img = document.querySelectorAll("img");
@@ -35,7 +41,7 @@
         val.addEventListener("error", function () {
           // para remover a imagem this.remove();
           // para substituir
-          this.src = `https://gmapdev.netlify.app/html/assets/img/404.jpg`;
+          this.src = `https://via.placeholder.com/400x100`;
         })
       );
     </script>
