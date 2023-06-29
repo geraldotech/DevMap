@@ -7,7 +7,7 @@
 
 ## How to start
 
-- ✔ HTML <a href="https://git.geraldox.com/HTML/" target="_blank">https://git.geraldox.com/html/</a>
+- ✔ HTML <a href="https://git.geraldox.com/HTML/" target="_blank">https://git.geraldox.com/HTML/</a>
 
   - tags
   - HTML sematic tags
