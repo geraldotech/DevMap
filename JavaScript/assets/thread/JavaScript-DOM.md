@@ -152,13 +152,13 @@ apesar de funcionar prefira a boa pratica na page README em <ins>getElements and
 > > mais comuns
 
 - click | onclick
-- change | on..
-- mousemove | on..
-- mouseover | on..
-- mouseleave | on..
-- keypress | on..
-- error | on..
+- change | onchange
+- mousemove | onmousemove
+- mouseover | onmouseover
+- mouseleave | onmouseleave
+- keypress | onkeypress
 - input | oninput
+- error | on..
 
 ```js
 <form name="credito">credito</form>;
@@ -171,6 +171,9 @@ document.credito.onclick = function (event) {
 document.credito.onclick = function (event) {
   console.log(event.target); // <form name="credito">credito</form>
 };
+
+input.addEventListener("click", handler);
+input.onclick = handler;
 ```
 
 - get PointerEvent e.g simples, outros consultar a page README
