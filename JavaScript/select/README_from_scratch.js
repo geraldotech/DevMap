@@ -13,6 +13,12 @@ function getColor(){
     //if(x == 'red') console.log('vermelho');
 };
 
+<select name="" id="" onchange="console.log(this.selectedOptions[0].value)">
+<option value="">Selecionando:</option>
+<option value="1">A</option>
+<option value="2">B</option>
+</select>
+
 
 //👉by ID
 

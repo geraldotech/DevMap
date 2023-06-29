@@ -397,6 +397,12 @@ footer</pre>   </code>
         </details>
         <details>
             <summary>Forms menu select and go</summary>
+            <ul>
+                <li><a href="https://codepen.io/geraldopcf/pen/OJzqRKJ">Form Estacio [codepen]</a></li>
+                <li> <a href="https://codepen.io/geraldopcf/pen/oNpVzPy">Estacio Lista e Tabelas</a></li>
+            </ul>
+            
+           
             <p class="lead">HTML</p>
             <pre>&lt;form action="#"&gt;
                 &lt;label for="lang"&gt;Language&lt;/label&gt;
@@ -448,13 +454,18 @@ footer</pre>   </code>
                 <h5>Menu suspenso click and go</h5>
                 <pre>
                     &lt;form&gt;
-&lt;select onchange="top.location.href=this.form.links.options [this.form.links.selectedIndex].value"
-name="links"&gt;
-&lt;option selected /&gt;Selecione um servidor
-&lt;option value="http://link1" /&gt;Link Um
-&lt;option value="http://link2" /&gt;Link Dois
-&lt;/select&gt;
-&lt;/form&gt;
+                    &lt;select
+                      onchange="top.location.href=this.form.links.options [this.form.links.selectedIndex].value"
+                      name="links"
+                    &gt;
+                      &lt;option /&gt;
+                      Selecione um servidor
+                      &lt;option selected /&gt;
+                      Selecionar 2
+                      &lt;option value="http://google.com"&gt;Google&lt;/option&gt;
+                      &lt;option value="http://javascript.net"&gt;Link Dois&lt;/option&gt;
+                    &lt;/select&gt;
+                  &lt;/form&gt;
                 </pre>
                 <div class="output">
                     <form>
@@ -466,6 +477,7 @@ name="links"&gt;
                         </select>
                     </form>
                 </div>
+               
         </details>
         <details>
             <summary>Table</summary>
