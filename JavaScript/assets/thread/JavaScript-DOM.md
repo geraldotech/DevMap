@@ -160,6 +160,8 @@ apesar de funcionar prefira a boa pratica na page README em <ins>getElements and
 - input | oninput
 - error | on..
 
+
+### onclick
 ```js
 <form name="credito">credito</form>;
 
@@ -171,9 +173,16 @@ document.credito.onclick = function (event) {
 document.credito.onclick = function (event) {
   console.log(event.target); // <form name="credito">credito</form>
 };
-
+// call fun 1
 input.addEventListener("click", handler);
+// call fun 2
 input.onclick = handler;
+// call Event
+btn.onclick = headerx;
+
+function headerx(event){
+    console.log(`click`, event);
+}
 ```
 
 - get PointerEvent e.g simples, outros consultar a page README
