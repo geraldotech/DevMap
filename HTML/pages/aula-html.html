@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula HTML</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        min-width: 320px;
+        max-width: 70rem;
+        margin: auto;
+      }
+      .block {
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+      .inline {
+        margin-right: 10px;
+        padding-right: 10px;
+      }
+      dt {
+        font-size: x-large;
+        margin: 10px 0;
+      }
+      code {
+        color: green;
+      }
+      h1,
+      h2,
+      figure:has(img) {
+        text-align: center;
+      }
+      form {
+        margin: 30px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Aprendendo HTML</h1>
+    <h2>Contextualizando</h2>
+
+    <ul>
+      <li>
+        É como uma folha em branco, pórem dentro dessa folha existem regras
+        <b>pré-definidas</b>
+      </li>
+      <li><strong>HTML Tags</strong> by default tem CSS pré definido</li>
+      <li>Contextualizar tags <mark>Semanticas + tipos de display</mark></li>
+    </ul>
+
+    <dl>
+      <dt>block:</dt>
+      <dd>
+        ocupam todo espaço disponível e começam em uma nova linha, mesmo
+        definindo w/h <code>p, div, h1, h2, ... h6, section</code>
+      </dd>
+      <p class="block">block</p>
+      <dt>inline:</dt>
+      <dd>ocupam apenas o espaço necessário</dd>
+      <code
+        ><a href="" class="inline">&lt;a></a>
+        <span class="inline">span</span>
+        &lt;img src="" alt=""&gt;
+        <mark>mark</mark>
+      </code>
+      <dt>inline-block:</dt>
+      <dd>Ficam <code>`inline-block`</code> ao mesmo tempo</dd>
+
+      <form action="">
+        <fieldset>
+          <legend>Select a option</legend>
+          <select name="" id="">
+            <option value="">Select</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Enter Login</legend>
+          <input type="text" placeholder="Login" />
+          <input type="password" placeholder="Senha" required />
+          <input type="submit" value="Send" />
+        </fieldset>
+      </form>
+    </dl>
+
+    <h2>Diagram by gmap</h2>
+    <figure>
+      <img
+        src="https://mermaid.ink/img/pako:eNpFT7tuwzAM_BWBUwIo_QAPBZoa3jq1U6MMjMUkQi1RoCgkgeN_r_pCOd2DB9zNMLIn6OA48WU8o6h561162g0ssezNZvNotvMQaPKFdHFp-6U87yY6UfL7X34PKVe9m36ldFVrUo0HEmsylnJh8daUeoihOYI-8EO7tfnLFppobOFhxVkDpzVYiCQRg2-9ZpeMcaBniuSga9CjfDhwaWl_WJVfb2mETqWShZo9KvUBT4IRuiNOpakZ0zvzPycflOXlZ_j3_uUTA4lZJg?type=png"
+        alt=""
+      />
+    </figure>
+  </body>
+</html>
