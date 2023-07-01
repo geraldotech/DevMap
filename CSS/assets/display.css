@@ -1,8 +1,13 @@
 *{color-scheme:dark;}
 
+html{
+  background: rgb(22 2 41);
+}
+
 body{
   margin: 0 20px;
   min-height: 300px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav.menu_block a {
@@ -58,5 +63,6 @@ mark{
 }
 
 .break{
-  display: inline;
+  display: inlinex;
+  background: dodgerblue;
 }

@@ -7,40 +7,46 @@
     <title>Display</title>
     <link rel="stylesheet" href="../assets/display.css" />
   </head>
-  <body>
+  <main>
     <!-- display block -->
     <h1>Display: block <b>width / height</b></h1>
-    <mark
-      >Sempre ocupam toda a largura possível de tela e começam em uma nova
-      linha, mesmo definindo w/h. <strong>text-align:center;</strong> works</mark
-    >
+    <p>
+      Sempre ocupam toda a largura possível de tela e começam em uma nova linha,
+      mesmo definindo w/h. <strong>text-align:center;</strong> works
+    </p>
 
     <div class="block">div</div>
     <p class="block">p</p>
     <h2 class="block">h1, h2...</h2>
+    <section class="block">section</section>
 
     <hr />
     <h1>Display: inline <b>não define width / height</b></h1>
-    <mark
-      >Usam somente o espaço necessário e não precisam começar em uma nova
-      linha, desconsider aplicar <strong>margin/padding: top/bottom</strong> até funciona contúdo vai sair fora do fluxo,  Use Only left/right properties on Margin and Padding. Não tem espaço para ser centralizado.</mark
-    >
+
+    <p>
+      Usam somente o espaço necessário e não precisam começar em uma nova linha,
+      desconsiderar aplicar
+      <strong><code>margin/padding</code> para <code>top/bottom</code></strong>
+      até funciona contúdo vai sair fora do fluxo, use only
+      <code>left/right</code> properties on Margin and Padding. Não tem espaço
+      para ser centralizado.
+    </p>
     <p></p>
     <code class="inline">code</code>
     <span class="inline">span</span>
     <img class="inline" src="" alt="img" />
     <a href="#" class="inline">a</a>
-    <code class="inline">mark</code>
+    <code class="inline">code</code>
     <!-- evitar conflito com mark, usei code -->
 
     <div class="menus">
-      <p>menu a display: default: inline</p>
+      <p>E.g: menu de links default display is inline:</p>
       <nav class="menu">
         <a href="#">links</a>
         <a href="#">links</a>
         <a href="#">links</a>
       </nav>
-      <p>block sendo aplicado</p>
+      <p>block sendo aplicado:</p>
       <nav class="menu_block">
         <a href="#">links</a>
         <a href="#">links</a>
@@ -57,10 +63,21 @@
     <input type="text" placeholder="input inline-block by default" />
     <input type="text" placeholder="input inline-block by default" />
 
-    <span class="break">span</span>
-    <br>
-    <span class="box c">inline-block</span>
-    <span class="box c">inline-block</span>    
+    <span class="breakx">span</span>
+    <br />
+
+    <span class="box c">span inline-block</span>
+    <span class="box c">span inline-block</span>
     <p class="footer">by gmapdev - 2022</p>
-  </body>
+
+    <ul>
+      <li>lisy one</li>
+
+      <p>para</p>
+
+      <div>
+        <img src="" alt="" />
+      </div>
+    </ul>
+  </main>
 </html>
