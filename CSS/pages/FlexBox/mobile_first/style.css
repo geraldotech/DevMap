@@ -1,0 +1,101 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/* COLORS and FONTS */
+body {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    line-height: 3;
+}
+p.welcome {
+    color: black;
+}
+header {
+    margin-bottom: 30px;
+    margin-top: 130px;
+    background: orangered;
+}
+main {
+    background: rgb(252, 251, 255);
+}
+footer {
+    background: rgb(248, 233, 241);
+}
+.left-sidebar {
+    background: dodgerblue;
+}
+.right-sidebar {
+    background: forestgreen;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.conteudo{
+    font-size: 15px;
+}
+
+@media all and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;    
+    } 
+    header, 
+    footer {
+        width: 100%;
+    }
+    main {
+        flex: 2;
+        order: 2;
+        min-height: 80vh;
+    }
+    
+    .left-sidebar {
+        order: 1;
+        flex: 1;
+    }
+    .right-sidebar {
+        flex: 1;
+        order: 3;
+    }
+    footer {
+        order: 4;
+    }
+}
+
+The basic CSS styles are the same as in the previous example:
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* COLORS and FONTS */
+body {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    line-height: 3;
+}
+header {
+    background: orangered;
+}
+main {
+    background: gray;
+}
+footer {
+    /*mobile */
+    background: rgb(167, 18, 18);
+}
+.left-sidebar {
+    background: dodgerblue;
+}
+.right-sidebar {
+    background: forestgreen;
+}
