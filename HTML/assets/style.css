@@ -35,7 +35,7 @@ u {
   flex-direction: column;
   margin-top: 10px;
   border: 1px solid green;
-  width: 50%;
+  width: 70%;
 }
 
 pre {
@@ -126,7 +126,11 @@ figure:has(img) {
   text-align: center;
   margin: auto; /*como houve redução no tamanho é necess´ário margin: auto */
 }
+figure img {
+  width: 100%;
+}
 
+/* mobile */
 @media screen and (max-width: 600px) {
   figure:has(img) {
     max-width: 100%;
@@ -134,5 +138,8 @@ figure:has(img) {
   }
   h5 {
     color: purple;
+  }
+  .output {
+    width: 90%;
   }
 }
