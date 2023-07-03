@@ -323,8 +323,7 @@ function openInNewTab(url) {
 </a>;
 //works but add a hash on url This is bad!
 <a href="#" onclick="openInNewTab(`http://google.com`)">
-  {" "}
-  Google
+  G
 </a>;
 ```
 
