@@ -160,8 +160,8 @@ apesar de funcionar prefira a boa pratica na page README em <ins>getElements and
 - input | oninput
 - error | on..
 
-
 ### onclick
+
 ```js
 <form name="credito">credito</form>;
 
@@ -180,8 +180,8 @@ input.onclick = handler;
 // call Event
 btn.onclick = headerx;
 
-function headerx(event){
-    console.log(`click`, event);
+function headerx(event) {
+  console.log(`click`, event);
 }
 ```
 
@@ -320,6 +320,11 @@ function openInNewTab(url) {
 //by geraldoX null works too
 <a href="javascript:null" onclick="openInNewTab()">
   Link
+</a>;
+//works but add a hash on url This is bad!
+<a href="#" onclick="openInNewTab(`http://google.com`)">
+  {" "}
+  Google
 </a>;
 ```
 
