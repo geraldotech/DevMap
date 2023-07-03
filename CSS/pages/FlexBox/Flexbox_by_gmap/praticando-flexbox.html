@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display flexíveis</title>
+    <style>
+      * {
+        /*  margin: 0;
+        padding: 0; */
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        min-width: 75%;
+        max-width: 50%;
+        margin: auto;
+      }
+
+      .flex-container {
+        border: 1px solid;
+        display: flex;
+        max-width: 1100px;
+        margin: auto;
+        height: 800px;
+        flex-wrap: wrap;
+      }
+      .item {
+        background: red;
+        width: 299px;
+        height: 99px;
+        margin: 0;
+        border: 1px solid;
+      }
+      .special {
+        width: 201px;
+        height: 99px;
+        background: dodgerblue;
+        /* removido margin, padding, border padrao do input 
+        - entendendo melhor o porque resetamos usando o * {...}
+        */
+        margin: 0;
+        padding: 0;
+        border: 1px solid;
+      }
+
+      .box-flex {
+        justify-content: center;
+      }
+      .a {
+        flex: 1;
+      }
+      .b {
+        flex: 2;
+      }
+      .c {
+        flex: ;
+      }
+
+      @media (max-width: 650px) {
+        .b {
+          flex-grow: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      flex-container 1100px com itens a 300px sobra 200px - abrir
+      <strong>DevTools</strong>, depois tive que diminuir 1px de todos para
+      compensar a <code>boder: 1px ...</code>
+    </p>
+    <p>flex itens com diplay: inline / block se tornam flex</p>
+    <div class="flex-container">
+      <img
+        class="item a"
+        src="https://via.placeholder.com/30x30"
+        alt="place holder"
+      />
+      <a class="item b" href="#">link</a>
+      <p class="item"></p>
+      <input type="text" class="special" />
+    </div>
+    <h2>
+      Aplicando Flex: Grow, Shrink e Basis
+      <strong>Constituent Properties</strong>
+    </h2>
+    <h4>removido útilmo item</h4>
+    <div class="flex-container box-flex">
+      <img class="item a" src="https://via.placeholder.com/15x15" alt="" />
+      <a class="item b" href="#"
+        >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima,
+        quae!</a
+      >
+      <p class="item c"></p>
+    </div>
+  </body>
+</html>
