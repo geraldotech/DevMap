@@ -5,6 +5,8 @@
 <details>
 <summary>show code</summary>
 
+- from to
+
 ```cs
 
 .banner{
@@ -31,6 +33,8 @@
 }
 ```
 
+- color
+
 ```css
 h1 {
   color: coral;
@@ -51,6 +55,34 @@ h1 {
 
 //html
 <h1>Geraldox</h1>
+```
+
+- opacity
+
+```cs
+
+ .lead {
+        font-size: 2rem;
+        animation: lead 5s ease-in-out;
+      }
+
+      @keyframes lead {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+
+      //html
+       <p class="lead">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis
+      corrupti quibusdam impedit asperiores nemo necessitatibus esse dignissimos
+      cupiditate possimus culpa quam, rem, voluptates nulla. Ea aliquid tenetur
+      et accusantium id.
+    </p>
 ```
 
 </details>
