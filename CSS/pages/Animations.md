@@ -1,5 +1,7 @@
 # CSS
 
+[Animations Library](https://animista.net/)
+
 ## Animation + keyframes
 
 <details>
