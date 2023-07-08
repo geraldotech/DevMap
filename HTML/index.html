@@ -96,8 +96,9 @@
 <pre>
     p.gerab {
         text-align: center;
-            color: mediumseagreen;
-        font-size: 20px;}
+        color: mediumseagreen;
+        font-size: 20px;
+    }
  </pre>
  <div class="output">
     <p class="gerab">Lastupdate: Today</p>                            
@@ -132,16 +133,23 @@
             <ul>
                 <li><code>&amp;nbsp;</code> - non-breaking-   &nbsp;&nbsp;&nbsp;&nbsp; Space</li>
                 <li><code>&lt;br&gt;</code> - break row</li>
-                <li><code>&lt;b&gt;</code> - <b>Bold text</b></li>
-                <li><code>&lt;strong&gt;</code> - <strong>Important text</strong></li>
-                <li><code>&lt;i&gt;</code> - <i>Italic</i></li>
                 <li><code>&lt;mark&gt;</code> - <mark>Marked text</mark></li>
                 <li><code>&lt;del&gt;</code> - Deleted text  Eu moro na cidade de <del>Palmeira</del></li>
                 <li><code>&lt;hr&gt;</code> - defines a thematic break in a HTMl Page <code>&lt;hr&gt;</code></li>
                 <li><code>&lt;ins&gt;</code> inserted text |  <ins>Rio</ins> <u>GERALDO</u></li>
                 <li><code>&lt;u&gt;</code> - <u>Underline</u> </li>
+                <li>&#128204; Italic and Bold
+                    <dl>
+                        <dt>Decrecated:</dt>
+                        <dd><code>&lt;b&gt;</code> - <b>Bold text</b></dd>
+                        <dd><code>&lt;i&gt;</code> - <i>Italic</i></dd>
+                    </dl>
+                    <dt>New:</dt>
+                    <dd><code>&lt;strong&gt;</code> - <strong>Important text</strong></dd>
+                    <dd><code>&lt;em&gt;</code> - <em>Italic</em></dd>
+                </li>
                 <li><b>See more REF in => </b><a href="https://www.w3schools.com/html/html_formatting.asp"
-                        target="_blank">W3</a> </li>
+                        target="_blank">w3schools</a> </li>
             </ul>
         </details>
         <details>
@@ -319,7 +327,7 @@ footer</pre>   </code>
         </details>
         <details>
             <summary>HTML Styles - CSS Inline</summary>
-            <p class="lead">REF: <a
+            <p>REF: <a
                     href="https://www.w3schools.com/tags/tag_style.asp" target="_blank">https://www.w3schools.com/tags/tag_style.asp</a>
             </p>
             <details>
@@ -398,6 +406,13 @@ footer</pre>   </code>
         </details>
         <details>
             <summary>Forms menu select and go</summary>
+            <figure>
+                <img
+                  src="https://mermaid.ink/img/pako:eNpFT7tuwzAM_BWBUwIo_QAPBZoa3jq1U6MMjMUkQi1RoCgkgeN_r_pCOd2DB9zNMLIn6OA48WU8o6h561162g0ssezNZvNotvMQaPKFdHFp-6U87yY6UfL7X34PKVe9m36ldFVrUo0HEmsylnJh8daUeoihOYI-8EO7tfnLFppobOFhxVkDpzVYiCQRg2-9ZpeMcaBniuSga9CjfDhwaWl_WJVfb2mETqWShZo9KvUBT4IRuiNOpakZ0zvzPycflOXlZ_j3_uUTA4lZJg?type=png"
+                  alt=""
+                />
+              </figure>
+              <h5>Links:</h5>
             <ul>
                 <li><a href="https://codepen.io/geraldopcf/pen/OJzqRKJ" target="_blank">Form Estacio [codepen]</a></li>
                 <li> <a href="https://codepen.io/geraldopcf/pen/oNpVzPy" target="_blank">[Estacio] Lista e Tabelas</a></li>
@@ -616,13 +631,16 @@ height="0"&gt;
         <details>
             <summary>More [+]</summary>
            <section class="links">
-          <div style="border: 1px solid;">
+          <div>           
             <a name="object"></a>
-              <h2>Object tag</h2>
+              <h5>Object tag</h5>
               <a href="./pages/object/eg1/index.html">object e.g 1</a>
               <a href="./pages/object/eg2_menu-CSS/index.html">object e.g 2 menu CSS</a>
               <a href="./pages/object/eg3_js/index.html">object e.g 3 JS Router</a>
           </div>
+        </section>
+           <section class="links">
+            <h5>Links:</h5>
             <a href="./pages/cool-things-justhtml.html">cool things justhtml</a>
             <a href="./pages/Learn-HTML-and-CSS-with-w3schools.html"> Learn-HTML-and-CSS-with-w3schools</a>
             <a href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element" target="_blank">whatwg Standard</a>
@@ -631,7 +649,8 @@ height="0"&gt;
             <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">validator w3.org</a>
             <a href="http://html5doctor.com/nav-element/" target="_blank">http://html5doctor.com/nav-element/</a>
             <a href="./pages/tabindex.html">Tabindex</a>
-            </section>
+           </section>
+        
         </details>
        
         <div class="container pt-5 pb-5">
