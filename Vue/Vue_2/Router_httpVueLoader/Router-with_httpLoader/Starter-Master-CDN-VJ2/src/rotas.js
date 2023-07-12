@@ -21,7 +21,7 @@ const routes = [
 
 const router = new VueRouter({
   routes: routes,
-  base: "#",
+  // base: "#",
 });
 
 export default router;
