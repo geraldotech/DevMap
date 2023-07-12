@@ -1,12 +1,9 @@
-## Vue 2 CDN
+## Vue 2
 
-## Documentation
-
-[https://v2.vuejs.org/v2/guide/installation.html](https://v2.vuejs.org/v2/guide/installation.html) or [ptbr](https://br.vuejs.org/v2/guide/installation.html)
-
-```js
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-```
+- Documentation
+  [https://v2.vuejs.org/v2/guide/installation.html](https://v2.vuejs.org/v2/guide/installation.html) or [ptbr](https://br.vuejs.org/v2/guide/installation.html)
+- The Vue Instance
+  [https://v2.vuejs.org/v2/guide/instance.html](https://v2.vuejs.org/v2/guide/instance.html)
 
 ### Development Version:
 
@@ -20,6 +17,10 @@ https://v2.vuejs.org/js/vue.js
 https://cdn.jsdelivr.net/npm/vue/dist/vue.js
 ```
 
+```js
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
+
 esm.browser
 
 ```js
@@ -31,10 +32,6 @@ import Vue from "https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.esm.browser.js
 ```js
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script>
 ```
-
-# The Vue Instance
-
-[https://v2.vuejs.org/v2/guide/instance.html](https://v2.vuejs.org/v2/guide/instance.html)
 
 ### Basic script + short way
 
@@ -63,7 +60,7 @@ const vm = new Vue({
 });
 ```
 
-### Data na Vue instance declarar variable
+### Data na Vue instance declarar variables
 
 > vm (short for ViewModel)
 
@@ -83,6 +80,38 @@ setTimeout(() => {
 vm.a; //"ok"
 
 console.log(app.a); //"ok"
+```
+
+> e.g Methods in Vue
+
+```js
+myfunc() {...}
+
+myfunc: function(){...}
+
+myfunc: () => {...}
+
+data:() => {...}
+
+```
+
+> data functions should return an object
+
+```js
+- no return bevause is a obj
+  	data: {...}
+- return method Vue style
+    data(){
+      return{ ... }
+    }
+- return arrow function
+  data: () => {
+    return {...}
+  }
+- return extende mode
+   data: function () {
+          return {};
+        },
 ```
 
 > Exemplo de dados
