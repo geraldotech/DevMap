@@ -1,30 +1,32 @@
 <template>
   <section>
-    <h2>text, type</h2>
+    <Menua></Menua>
+    <router-view></router-view>
+    <h2>text, typex</h2>
     <a href="https://vuesax.com/docs/components/Loading.html#type"
       >https://vuesax.com/docs/components/Loading.html#type</a
     >
-    <vs-button @click="openLoading">Open Loading</vs-button>
 
     <hr />
-    <h1>input</h1>
-    <div class="center content-inputs">
-      <vs-input border v-model="value" placeholder="Namexx" />
-      <vs-input border v-model="value" placeholder="Namexx" />
-      <vs-input border v-model="value" placeholder="Namexx" />
-
-      <vs-input
-        color="#7d33ff"
-        border
-        type="password"
-        v-model="value2"
-        placeholder="Password"
-      >
-        <template #icon>
-          <i class="bx bx-lock-open-alt"></i>
-        </template>
-      </vs-input>
-    </div>
+    <vs-button @click="openLoading">Open Loading</vs-button>
+    <vs-alert :hidden-content.sync="hidden">
+      <template #title> Vuesax Framework </template>
+      Vuesax (pronounced / vjusacksː /, as view sacks) is a
+      <b>UI components framework</b> created with
+      <a href="https://vuejs.org/">Vuejs</a> to make projects easily and with a
+      Unique and pleasant style, Vuesax is created from scratch and designed for
+      all types of developed from the frontend lover to the backend that wants
+      to easily create your visual approach to the end user
+    </vs-alert>
+    <vs-alert :hidden-content.sync="hidden2">
+      <template #title> Vuesax Framework </template>
+      Vuesax (pronounced / vjusacksː /, as view sacks) is a
+      <b>UI components framework</b> created with
+      <a href="https://vuejs.org/">Vuejs</a> to make projects easily and with a
+      Unique and pleasant style, Vuesax is created from scratch and designed for
+      all types of developed from the frontend lover to the backend that wants
+      to easily create your visual approach to the end user
+    </vs-alert>
   </section>
 </template>
 
@@ -32,10 +34,12 @@
 module.exports = {
   data() {
     return {
-      value: "",
-      value2: "",
-      value3: "",
+      hidden: true,
+      hidden2: true,
     };
+  },
+  components: {
+    Menua: httpVueLoader("../src/components/Menu.vue"),
   },
   methods: {
     openLoading() {
@@ -111,5 +115,8 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: rgb(18, 223, 137);
+}
+hr {
+  margin: 20px 0;
 }
 </style>
