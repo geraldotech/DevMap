@@ -2,7 +2,7 @@
 
 - works only in web servers
 
-- main.js must be type module
+- main.js must be type `module`
 
 ```js
 <script type="module" src="./src/main.js"></script>
