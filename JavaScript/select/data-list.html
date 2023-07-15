@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <main>
+      <label for="search">Search:</label>
+      <input type="text" id="search" list="search-options" />
+
+      <datalist id="search-options">
+        <option value="Option 1"></option>
+        <option value="Option 2"></option>
+        <option value="Option 3"></option>
+        <option value="Option 4"></option>
+      </datalist>
+    </main>
+    <script>
+      const inputList = document.querySelector("input");
+
+      inputList.onchange = function (event) {
+        console.warn(event.target.value);
+      };
+    </script>
+  </body>
+</html>
