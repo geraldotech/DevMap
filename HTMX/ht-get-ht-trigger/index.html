@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JavaScript</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+  </head>
+  <body>
+    <input type="text" placeholder="name" />
+    <div hx-get="./a.txt" hx-trigger="every 2s"></div>
+    <div hx-get="./info.html" hx-trigger="every 2s"></div>
+  </body>
+</html>

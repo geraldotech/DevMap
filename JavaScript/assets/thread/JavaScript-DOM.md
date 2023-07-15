@@ -81,6 +81,16 @@ window.onresize = function(){...}
 
 <hr>
 
+> > e.g Using window.location to get current url
+
+```js
+<a id="link"></a>;
+
+/* using attr */
+link.href = `${window.location}/img/2022/#/file.zip`;
+link.innerHTML = `${window.location}/img/2022/download-now`;
+```
+
 ## document | [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document) => [MDN - DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
 
 - document - contains the DOM represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.

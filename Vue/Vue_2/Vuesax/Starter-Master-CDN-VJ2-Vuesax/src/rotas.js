@@ -10,7 +10,6 @@ const NotFound = {
 const routes = [
   { path: "/", component: Home },
   { path: "/download", component: httpVueLoader("./src/views/download.vue") },
-  { path: "/sobre", component: httpVueLoader("../src/views/sobre.vue") },
   { path: "/test", component: test },
   {
     path: "/:pathMatch(.*)*",
@@ -21,7 +20,7 @@ const routes = [
 
 const router = new VueRouter({
   routes: routes,
-  base: "#",
+  // base: "#",
 });
 
 export default router;

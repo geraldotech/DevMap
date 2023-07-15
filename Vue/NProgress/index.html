@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html style="color-scheme: dark">
+<html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue.js Routing From Scratch Using Vue Router CDN</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
+    <!-- nprogress -->
     <link
       href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
       rel="stylesheet"
@@ -48,6 +49,8 @@
         if (to) {
           console.log(`foi`);
           NProgress.start();
+          // showPinner ?
+          // NProgress.configure({ showSpinner: false });
         }
         next();
       });
@@ -57,7 +60,7 @@
         NProgress.done();
       });
 
-      new Vue({
+      const vm = new Vue({
         el: "#app",
         router: router,
       });

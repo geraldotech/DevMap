@@ -1,5 +1,7 @@
-Exemplo de rotas com http-vue-loader
+# Starter Master Template CDN Sidebar
 
+- http_vue_loader
+- VueRouter 3.0.2
 - load template.js
 - load string template
 - load components.vue
