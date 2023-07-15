@@ -6,14 +6,13 @@
   </head>
   <body>
     <main>
-      <label for="search">Search:</label>
+      <label for="search">Escolha um item ou digite / Search:</label>
       <input type="text" id="search" list="search-options" />
 
       <datalist id="search-options">
-        <option value="Option 1"></option>
-        <option value="Option 2"></option>
-        <option value="Option 3"></option>
-        <option value="Option 4"></option>
+        <option value="Cars"></option>
+        <option value="Moto"></option>
+        <option value="Airplane"></option>
       </datalist>
     </main>
     <script>
@@ -21,6 +20,10 @@
 
       inputList.onchange = function (event) {
         console.warn(event.target.value);
+        //compara Upper to Upper
+        if (event.target.value.toUpperCase() == "bike".toUpperCase()) {
+          alert("Boa Escolha!");
+        }
       };
     </script>
   </body>

@@ -183,15 +183,20 @@ document.credito.onclick = function (event) {
 document.credito.onclick = function (event) {
   console.log(event.target); // <form name="credito">credito</form>
 };
-// call fun 1
+// call fun with addEvent...
 input.addEventListener("click", handler);
-// call fun 2
+
+// call fun with on[event]...
 input.onclick = handler;
-// call Event
+
+// call fun and get Obj event[e]
 btn.onclick = headerx;
 
-function headerx(event) {
+function headerx() {
   console.log(`click`, event);
+}
+function headerx(e) {
+  console.log(`click`, e);
 }
 ```
 

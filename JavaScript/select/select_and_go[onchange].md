@@ -75,4 +75,10 @@ onchange direct in DOM - gmap
   <option value="http://youtube.com">Youtube</option>
   <option value="http://linkedin.com">Linkedin</option>
 </select>
+
+<select name="" id="" onchange="console.log(this.selectedOptions[0].value)">
+  <option value="">Selecionando:</option>
+  <option value="1">A</option>
+  <option value="2">B</option>
+</select>
 ```
