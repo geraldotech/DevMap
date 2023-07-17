@@ -130,7 +130,7 @@ async function pegar() {
 pegar();
 ```
 
-### Promises
+### Promises - setTimeout
 
 <details>
 <summary>code</summary>
@@ -153,3 +153,30 @@ const promise = new Promise((resolve, reject) => {
 ```
 
 </details>
+
+### map and forEach
+
+```js
+const link = "https://expressjsonrocket.onrender.com/products/";
+
+async function get(url) {
+  const req = await fetch(url);
+  const res = await req.json();
+  console.log(res);
+  //map
+  /* res.map((post) => {
+          const p = document.createElement("p");
+          p.innerText = post.name;
+          document.body.append(p);
+        }); */
+
+  //forEach
+  res.forEach((post) => {
+    const p = document.createElement("p");
+    p.innerText = post.name;
+    document.body.append(p);
+  });
+}
+
+get(link);
+```
