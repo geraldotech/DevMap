@@ -53,13 +53,18 @@ Contextualizando Rotas:
 ```js
 const Home = { template: `<p>Home Page</p>` };
 const youtube = { template: `<p>About Page</p>` };
+const NotFound = { template: `<h1>404</h1>` };
 
 //maping the path
 
 const routes = [
   { path: "/", component: Home },
   { path: "/youtube", component: youtube },
+  //{ path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
+  { path: "*", name: "NotFound", component: NotFound },
 ];
+
+// * works too { path: "*", name: "NotFound", component: NotFound },
 
 const router = new VueRouter({
   routes, // short for `routes: routes`

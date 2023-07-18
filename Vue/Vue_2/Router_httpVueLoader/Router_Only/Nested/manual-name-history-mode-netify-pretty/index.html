@@ -2,7 +2,7 @@
 <html style="color-scheme: dark">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue.js Routing From Scratch Using Vue Router CDN</title>
+    <title>Routing From Scratch Using Vue Router CDN</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
   </head>
@@ -13,10 +13,14 @@
         <ul>
           <li><router-link class="nav-link" to="/"> Home </router-link></li>
           <li>
-            <router-link class="nav-link" to="/about"> About </router-link>
+            <router-link class="nav-link" :to="{name: 'about'}">
+              About
+            </router-link>
           </li>
           <li>
-            <router-link class="nav-link" to="/contact"> More </router-link>
+            <router-link class="nav-link" :to="{name: 'ctt'}">
+              Contato
+            </router-link>
           </li>
         </ul>
       </nav>
@@ -46,11 +50,11 @@
 
       const routes = [
         { path: "/", component: Home },
-        { path: "/about", component: About },
+        { path: "/about", name: "about", component: About },
         {
           path: "/contact",
+          name: "ctt",
           component: mais,
-
           children: [
             { path: "pessoaone", name: "p1", component: pessoa },
             { path: "pessoatwo", name: "p2", component: pessoa2 },
@@ -60,6 +64,7 @@
 
       const router = new VueRouter({
         routes: routes,
+        mode: "history",
       });
 
       new Vue({
