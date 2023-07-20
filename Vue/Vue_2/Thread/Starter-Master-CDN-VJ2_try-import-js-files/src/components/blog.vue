@@ -7,9 +7,7 @@
 </template>
 <script>
 module.exports = {
-  mounted() {
-    console.log(`from`, Posts);
-  },
+  mounted() {},
   name: "blog",
   components: {
     Nvige: httpVueLoader("../components/test2.vue"),

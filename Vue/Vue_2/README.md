@@ -60,7 +60,14 @@ const vm = new Vue({
 });
 ```
 
-### Data na Vue instance declarar variables
+### this.root
+
+```js
+
+console.log(this.$root) same than console.log(vm);
+```
+
+### Data na Vue instance declarar objects:
 
 > vm (short for ViewModel)
 

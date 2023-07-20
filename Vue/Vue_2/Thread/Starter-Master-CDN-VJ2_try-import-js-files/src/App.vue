@@ -4,20 +4,42 @@
     <h2>Starter Template by geraldox.com</h2>
     <Menua></Menua>
     <router-view></router-view>
+    <hr />
+    <p>{{ ExisteComp() ? ExisteComp() : "nao" }}</p>
 
-    <Blog></Blog>
+    <div v-if="ExisteComp()">
+      <h1 style="color: dodgerblue">Existe Component</h1>
+      <Blog></Blog>
+    </div>
   </div>
 </template>
 
 <script>
 module.exports = {
+  created() {
+    console.log("rootCompot", this.$root.$options);
+    console.log("LocalComponents", Object.keys(this.$options.components));
+    console.log(
+      "Exists",
+      Object.keys(this.$options.components).includes("Foo")
+    );
+    console.log("Exists", "Foo" in this.$options.components);
+    console.log(["Foo"]._isVue);
+  },
   data() {
-    return {};
+    return {
+      Blogs: "<Aaaa/>",
+    };
   },
   components: {
     Menua: httpVueLoader("../src/components/Menu.vue"),
     Foo: httpVueLoader("../src/components/footer.vue"),
-    Blog: httpVueLoader("../src/components/blog.vue"),
+    Blogx: httpVueLoader("../src/components/blog.vue"),
+  },
+  methods: {
+    ExisteComp() {
+      return "Blog" in this.$options.components;
+    },
   },
 };
 </script>

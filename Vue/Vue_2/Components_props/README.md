@@ -1,0 +1,2 @@
+- [Global-Registration](https://v2.vuejs.org/v2/guide/components-registration.html#Global-Registration)
+- [Local-Registration](https://v2.vuejs.org/v2/guide/components-registration.html#Local-Registration)

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New document</title>
+    <script src="https://v2.vuejs.org/js/vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <p>Curso: {{faculdade.curso}}</p>
+      <p>Status: {{faculdade.status}}</p>
+      <p>{S20 FE}</p>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: "#root",
+        data() {
+          return {
+            greeting: "Bem Vindo",
+            faculdade: {
+              status: `Active`,
+              curso: `SI - Sistemas de Informacao`,
+            },
+          };
+        },
+        /* template: `<p>Curso: {{faculdade.curso}}</p>
+      <p>Status: {{faculdade.status}}</p>`, */
+      });
+
+      console.log(Vue.version);
+    </script>
+  </body>
+</html>

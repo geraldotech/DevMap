@@ -2,7 +2,7 @@
    <div id="rotas">
         <nav>
           <ul>
-            <li><router-link to="/"> Home </router-link></li>
+            <li><router-link to="/"> Homes </router-link></li>
             <li>
               <router-link to="download"> Downloads </router-link>
             </li>
