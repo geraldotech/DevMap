@@ -3,6 +3,10 @@
     <h1>blog.vue</h1>
     <component :is="Compois.map"></component>
     <component :is="Compois.rtx"></component>
+
+    <notebook></notebook>
+    <!-- nao vai conseguir usar esse component pq o msm foi registrado localmente -->
+    <!--  <Bestsmartphones></Bestsmartphones> -->
   </div>
 </template>
 <script>
@@ -21,9 +25,7 @@ module.exports = {
 };
 </script>
 <style scoped>
-h1 {
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
+div {
+  background: coral;
 }
 </style>

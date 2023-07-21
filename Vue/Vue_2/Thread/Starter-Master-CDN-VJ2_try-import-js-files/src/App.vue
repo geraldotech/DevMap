@@ -11,36 +11,80 @@
       <h1 style="color: dodgerblue">Existe Component</h1>
       <Blog></Blog>
     </div>
+    <notebook></notebook>
+
+    <Bestsmartphones></Bestsmartphones>
+
+    <h1>Dynamic Components</h1>
+    <select @change="mudanca()" v-model="optcom">
+      <option value=""></option>
+      <option value="Bestsmartphones">Bestsmartphones</option>
+      <option value="Bestsmartphones2">Bestsmartphones2</option>
+    </select>
+    <keep-alive>
+      <component v-bind:is="optcom"></component>
+    </keep-alive>
+    <component v-bind:is="Blogs"></component>
   </div>
 </template>
-
 <script>
+//component global
+/* globally, using Vue.component: */
+Vue.component("notebook", {
+  template: "<div><h1>Notebooks</h1></div>",
+});
+
+//local
+const smartphones = Vue.component("mysmartphones", {
+  template: "<div><h1>My Smartphones 1</h1></div>",
+});
+const smartphones2 = {
+  template: "<div><h1>My Smartphones 2</h1></div>",
+};
+
 module.exports = {
   created() {
-    console.log("rootCompot", this.$root.$options);
-    console.log("LocalComponents", Object.keys(this.$options.components));
+    console.warn("Vue-options", Vue.options);
+    //get All Vue Global Components Name
+    console.warn("Vue-options", Object.keys(Vue.options.components));
+    console.warn("this.$options.components", this.$options.components);
+
+    //get All Vue Global Components Name cheking a name
+    console.warn(
+      "Exists Global",
+      Object.keys(this.$options.components).includes("Menua")
+    );
+    console.log(`----------------------------------------`);
+    console.log("Local Components", Object.keys(this.$options.components));
     console.log(
       "Exists",
       Object.keys(this.$options.components).includes("Foo")
     );
     console.log("Exists", "Foo" in this.$options.components);
-    console.log(["Foo"]._isVue);
   },
+
   data() {
     return {
-      Blogs: "<Aaaa/>",
+      Blogs: "Bestsmartphones",
+      optcom: ``,
     };
   },
   components: {
     Menua: httpVueLoader("../src/components/Menu.vue"),
     Foo: httpVueLoader("../src/components/footer.vue"),
-    Blogx: httpVueLoader("../src/components/blog.vue"),
+    Blog: httpVueLoader("../src/components/blog.vue"),
+    Bestsmartphones: smartphones,
+    Bestsmartphones2: smartphones2,
   },
   methods: {
     ExisteComp() {
       return "Blog" in this.$options.components;
     },
+    mudanca() {
+      console.warn(this.optcom);
+    },
   },
+  ready() {},
 };
 </script>
 

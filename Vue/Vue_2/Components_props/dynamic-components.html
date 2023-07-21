@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <select @change="mudanca()" v-model="optcom">
+        <option value=""></option>
+        <option value="Bestsmartphones">Bestsmartphones</option>
+        <option value="Bestsmartphones2">Bestsmartphones2</option>
+      </select>
+      <component v-bind:is="optcom"></component>
+    </div>
+
+    <script>
+      Vue.component("Bestsmartphones", {
+        template: "<div><h1>Bestsmartphones 1</h1></div>",
+      });
+      Vue.component("Bestsmartphones2", {
+        template: "<div><h1>Bestsmartphones 2</h1></div>",
+      });
+
+      const vm = new Vue({
+        el: "#app",
+        data() {
+          return {
+            optcom: ``,
+          };
+        },
+        methods: {
+          mudanca() {
+            console.warn(this.optcom);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
