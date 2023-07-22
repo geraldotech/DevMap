@@ -1,0 +1,14 @@
+* {
+  color-scheme: dark;
+}
+nav ul {
+  display: flex;
+  width: 400px;
+  justify-content: space-evenly;
+}
+ul li {
+  list-style: none;
+}
+div img {
+  width: 50%;
+}
