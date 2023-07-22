@@ -5,9 +5,10 @@
 - The Vue Instance
   [https://v2.vuejs.org/v2/guide/instance.html](https://v2.vuejs.org/v2/guide/instance.html)
 
-### Development Version:
+<details>
+<summary>CDN Links: </summary>
 
-2.7.14
+Development Version: 2.7.14
 
 ```js
 https://v2.vuejs.org/js/vue.js
@@ -21,7 +22,7 @@ https://cdn.jsdelivr.net/npm/vue/dist/vue.js
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 ```
 
-esm.browser
+esm.browser - defina type module e use direto no main.js
 
 ```js
 import Vue from "https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.esm.browser.js";
@@ -33,7 +34,9 @@ import Vue from "https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.esm.browser.js
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script>
 ```
 
-### Basic script + short way
+</details>
+
+### Get Started Basic and short way
 
 ```js
 const app = new Vue({
@@ -43,20 +46,29 @@ const app = new Vue({
   },
 });
 
-//simpler
+//v1 simpler usando el
 new Vue({
   el: "#app",
 });
 
-//v2
+//v2 usando $mount
 new Vue({
   data: {},
 }).$mount("#app");
 
-//using template to show simple Helloesm.browser, sem usar data()
+//v3 using templates to show simple Hello, sem usar data()
 const vm = new Vue({
   el: "#app",
   template: "<p>Hello</p>",
+});
+
+//v4 template, data
+const vm = new Vue({
+  el: root,
+  data: {
+    greeting: "Welcome",
+  },
+  template: `<div><h1>{{greeting}}</h1></div>`,
 });
 ```
 
@@ -89,7 +101,7 @@ vm.a; //"ok"
 console.log(app.a); //"ok"
 ```
 
-> e.g Methods in Vue
+### e.g Methods in Vue
 
 ```js
 myfunc() {...}
@@ -102,26 +114,29 @@ data:() => {...}
 
 ```
 
-> data functions should return an object
+### data functions should return an object
 
 ```js
-- no return bevause is a obj
+- no return because is a obj
   	data: {...}
+
 - return method Vue style
     data(){
       return{ ... }
     }
+
 - return arrow function
   data: () => {
     return {...}
   }
+
 - return extende mode
    data: function () {
           return {};
         },
 ```
 
-> Exemplo de dados
+### Exemplo de objects:
 
 ```js
 <div id="app">{{name}}, {{idade}}, {{facul.curso}}</div>
@@ -140,7 +155,7 @@ data:() => {...}
     </script>
 ```
 
-## # Alterando variáveis
+### Alterando variáveis
 
 ```js
  <div id="app">
