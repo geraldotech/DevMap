@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h1>Computed</h1>
+      <select v-model="opcao">
+        <option value=""></option>
+        <option value="1">Filmes</option>
+        <option value="2">Musicas</option>
+      </select>
+      <h2 v-if="one">One 1</h2>
+      <h2 v-if="two">Two 2</h2>
+      <hr />
+      <select v-model="mapa">
+        <option value=""></option>
+        <option value="4">Chaos</option>
+        <option value="5">Kalima</option>
+      </select>
+      <button @click="MoverChar()">Mover Personagem</button>
+
+      <h2 v-if="Chaos">Movido para: Chaos Castle</h2>
+      <h2 v-if="Kalima">Movido para: Kalima</h2>
+
+      <select name="" id="" v-model="network">
+        <option value=""></option>
+        <option value="mg">MG</option>
+        <option value="bk">BK</option>
+      </select>
+
+      <ul>
+        <li v-show="network == 'mg'">Magic Gladiator</li>
+        <li v-show="network == 'bk'">Blade Knight</li>
+      </ul>
+      <hr />
+      <ul>
+        <li v-if="network == 'mg'">Magic Gladiator</li>
+        <li v-if="network == `bk`">Blade Knight</li>
+      </ul>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: root,
+        data: {
+          opcao: "",
+          mapa: {},
+          output: "",
+          network: {},
+        },
+        methods: {
+          MoverChar() {
+            return (this.output = this.mapa); //recebe o valor noClick o que aciona a computed
+          },
+        },
+        computed: {
+          one() {
+            return this.opcao == 1 ? true : false;
+          },
+          two() {
+            return this.opcao == 2;
+          },
+          Chaos() {
+            return this.output == 4;
+          },
+          Kalima() {
+            return this.output == 5;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
