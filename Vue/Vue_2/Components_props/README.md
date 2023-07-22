@@ -189,6 +189,16 @@ import baixe from "./baixar.js";
   },
 ```
 
+Async Component
+
+```js
+
+Vue.component("Asynexample", function (resolve,
+reject) { setTimeout(() => { resolve({ template: "
+<div>I am async!</div>
+", }); }, 1000); });
+```
+
 ### Links:
 
 - [components registration](https://v2.vuejs.org/v2/guide/components-registration.html)
