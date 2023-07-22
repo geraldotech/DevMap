@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script>
+    <style>
+      .downloads {
+        background: rgb(69, 4, 64);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 2px solid;
+        margin: 5px 0;
+      }
+      nav a {
+        color: chocolate;
+        font-size: 1.5rem;
+      }
+      nav {
+        text-align: center;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <h1>components, slots and props</h1>
+      <a href="https://v2.vuejs.org/v2/guide/components-props.html#ad"
+        >mais sobre props</a
+      >
+      <Download>
+        <template v-slot:title>Download Linux Mint</template>
+        <template v-slot:description
+          >Linux Mint is available in different flavors. Choose an edition
+          below. For more information read the installation
+          instructions.</template
+        >
+        <template v-slot:link>
+          <a href="https://linuxmint.com/download.php" target="_blank"
+            >Download</a
+          >
+        </template>
+      </Download>
+      <Download>
+        <template v-slot:title>Download Linux Ubuntu</template>
+        <template v-slot:description
+          >Linux Mint is available in different flavors. Choose an edition
+          below. For more information read the installation
+          instructions.</template
+        >
+        <template v-slot:link>
+          <a href="https://linuxmint.com/download.php" target="_blank"
+            >Download</a
+          >
+        </template>
+      </Download>
+
+      <Download Secondarybtn Link="download.zip" Button="BAIXAR AGORA MSM">
+        <template v-slot:title>Download Linux Debian</template>
+        <template v-slot:description
+          >Linux Mint is available in different flavors. Choose an edition
+          below. For more information read the installation
+          instructions.</template
+        >
+        <template v-slot:link>
+          <a href="https://linuxmint.com/download.php" target="_blank"
+            >Download</a
+          >
+        </template>
+      </Download>
+    </div>
+
+    <script>
+      const primario = `<div class="downloads">
+        <header>
+          <h1><slot name="title"></slot></h1>
+          </header>
+        <main><slot name="description"></slot></main>
+        <nav><slot name="link"></slot>
+            
+          </nav>     
+          <nav v-show="Secondarybtn">
+            <a :href="Link">{{Button}}</a>
+            </nav>   
+        </div>`;
+      Vue.component("Download", {
+        name: "Primeiro",
+        template: primario,
+        props: {
+          Link: {
+            type: String,
+          },
+          Button: {
+            default: "Name button",
+            type: String,
+          },
+          Secondarybtn: {
+            default: false,
+            type: Boolean,
+          },
+        },
+      });
+
+      const vm = new Vue({
+        el: "#root",
+        data() {
+          return {};
+        },
+      });
+    </script>
+  </body>
+</html>
