@@ -10,6 +10,7 @@
     <p>{{ select }}</p>
     <h2 v-if="one">One more time</h2>
     <h2 v-if="two">Two more time</h2>
+    <h2 v-if="error">Selecionar Opção</h2>
   </div>
 </template>
 
@@ -25,12 +26,17 @@ module.exports = {
       return this.select == 1;
     },
     two() {
-      if (this.select == 2) {
-        return true;
-      }
+      return this.select == 2;
+    },
+    error() {
+      return !this.select;
     },
   },
 };
 </script>
-
-<style></style>
+<style>
+select {
+  width: 200px;
+  margin: 20px 0;
+}
+</style>
