@@ -324,12 +324,12 @@ Seguindo a doc [https://docs.netlify.com/routing/redirects/rewrites-proxies/#his
 `_redirects`
 
 ```js
-_redirects;
+/* /index.html 200
 ```
 
 ### DigitalOcean
 
-Settings > App Spec > adicionar: `catchall_document: index.html` [thanks John Dave Deploy Your ReactJS](https://www.linkedin.com/pulse/deploy-reactjs-application-digitalocean-john-dave-decano/)
+**Settings > App Spec >** :arrow_right: `catchall_document: index.html` [thanks John Dave Deploy Your ReactJS](https://www.linkedin.com/pulse/deploy-reactjs-application-digitalocean-john-dave-decano/)
 
 # Links
 
