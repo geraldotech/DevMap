@@ -333,5 +333,5 @@ Seguindo a doc [https://docs.netlify.com/routing/redirects/rewrites-proxies/#his
 
 # Links
 
-[Getting Started](https://router.vuejs.org/guide/)
-[Navigation Guards](https://router.vuejs.org/guide/advanced/navigation-guards.html)
+- [Getting Started](https://router.vuejs.org/guide/)
+- [Navigation Guards](https://router.vuejs.org/guide/advanced/navigation-guards.html)
