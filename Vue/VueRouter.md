@@ -329,7 +329,7 @@ Seguindo a doc [https://docs.netlify.com/routing/redirects/rewrites-proxies/#his
 
 ### DigitalOcean
 
-**Settings > App Spec >** :arrow_right: `catchall_document: index.html` [thanks John Dave Deploy Your ReactJS](https://www.linkedin.com/pulse/deploy-reactjs-application-digitalocean-john-dave-decano/)
+**Settings :arrow_right: App Spec :arrow_right:** :arrow_right: `catchall_document: index.html` [thanks John Dave Deploy Your ReactJS](https://www.linkedin.com/pulse/deploy-reactjs-application-digitalocean-john-dave-decano/)
 
 # Links
 
