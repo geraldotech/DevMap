@@ -206,7 +206,7 @@ HTML:
 <router-view></router-view>
 ```
 
-Para remover o #/ alterar para:
+Para remover o `#/` alterar para:
 
 `history: createWebHistory(),`
 
@@ -216,7 +216,7 @@ e.g com `hash Mode` [/test-hash.html#/linkedin](https://gmapdev.netlify.app/docs
 
 e.g com `HTML Mode` [test-nohash.html/linkedin](https://gmapdev.netlify.app/docs_demo/vuejs-Router/test-nohash.html/linkedin)
 
-Ler mais aqui [https://router.vuejs.org/guide/essentials/history-mode.html#html5-mode](https://router.vuejs.org/guide/essentials/history-mode.html#html5-mode)
+Ler mais aqui [https://router.vuejs.org/guide/essentials/history-mode.html#html5-mode](https://router.vuejs.org/guide/essentials/history-mode.html#html5-mode) e solucão aqui [History pushState](#history-pushState)
 
 Há exemplos usando type module, exports, components dinâmicos internos e .vue
 
@@ -244,32 +244,26 @@ Rotas nomeadas, identificar a rota com um objeto name, em caso de mudar o `path`
 
 # Nested Routes
 
-```
-//obter o params da rota
-$route.params.name
+```html
+//obter o params da rota $route.params.name //no data do app created() {
+console.log(this.$route); //currently console.log(this.$router); //parametros e
+funcionalidades },
 
-//no data do app
+<section>
+  <h1>$route</h1>
+  <p>{{$route.params.name}}</p>
+  <p>{{$route.fullPath}}</p>
+  <p>{{$route.href + 'my-slug'}}</p>
+  <p>{{$route.path}}</p>
+  <p>{{$route.name}}</p>
+  <p>{{$route.name == 'apple'}}</p>
+  <p>{{$route.name}} {{$route.href}}</p>
+  <p>{{$route}}</p>
+  <p>{{$route}}</p>
 
- created() {
-          console.log(this.$route); //currently
-          console.log(this.$router); //parametros e funcionalidades
-       },
-
-        <section>
-        <h1>$route</h1>
-        <p>{{$route.params.name}}</p>
-        <p>{{$route.fullPath}}</p>
-        <p>{{$route.href + 'my-slug'}}</p>
-        <p>{{$route.path}}</p>
-        <p>{{$route.name}}</p>
-        <p>{{$route.name == 'apple'}}</p>
-        <p>{{$route.name}} {{$route.href}}</p>
-        <p>{{$route}}</p>
-        <p>{{$route}}</p>
-
-        <div style="width: 100%; height: 2px; background: coral"></div>
-        <h1>$router</h1>
-      </section>
+  <div style="width: 100%; height: 2px; background: coral"></div>
+  <h1>$router</h1>
+</section>
 ```
 
 ## Programmatic Navigation - Navegação programaticamente/automaticamente
@@ -320,6 +314,22 @@ $route.params.name
           sidebar: Boolean,
         },
 ```
+
+# History pushState
+
+### Netlify
+
+Seguindo a doc [https://docs.netlify.com/routing/redirects/rewrites-proxies/#history-pushstate-and-single-page-apps](https://docs.netlify.com/routing/redirects/rewrites-proxies/#history-pushstate-and-single-page-apps) arquivos para Netlify:
+
+`_redirects`
+
+```js
+_redirects;
+```
+
+### DigitalOcean
+
+Settings > App Spec > adicionar: `catchall_document: index.html` [thanks John Dave Deploy Your ReactJS](https://www.linkedin.com/pulse/deploy-reactjs-application-digitalocean-john-dave-decano/)
 
 # Links
 
