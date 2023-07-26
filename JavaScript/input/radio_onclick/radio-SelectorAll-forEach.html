@@ -21,6 +21,16 @@
     <button>verificar</button>
 
     <div id="res"></div>
+
+    <hr />
+    <input type="radio" name="calc" value="html" id="one" />
+    <label for="one">HTML</label>
+
+    <input type="radio" name="calc" value="js" id="js" />
+    <label for="js">JavaScript</label>
+
+    <button onclick="check()">checkout</button>
+    <div id="txt"></div>
     <script>
       const input = document.querySelectorAll("input[type='radio']");
 
@@ -31,6 +41,19 @@
         });
         res.innerText = opt;
       };
+
+      // e.g 2
+      function check() {
+        const inputs = document.querySelectorAll("input[type='radio']");
+        let opt = "";
+        inputs.forEach((value) => {
+          if (value.checked) {
+            opt = value.id;
+          }
+        });
+        console.log(opt);
+        txt.innerText = opt;
+      }
     </script>
   </body>
 </html>

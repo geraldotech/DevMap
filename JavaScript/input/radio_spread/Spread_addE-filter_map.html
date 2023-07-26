@@ -6,15 +6,28 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="radio" name="calc" value="html" id="one" />
-    <label for="one">HTML</label>
-
-    <input type="radio" name="calc" value="js" id="js" />
-    <label for="js">JavaScript</label>
+    <form action="" id="formone">
+      <input type="radio" name="calc" value="html" id="one" />
+      <label for="one">HTML</label>
+      <input type="radio" name="calc" value="js" id="js" />
+      <label for="js">JavaScript</label>
+    </form>
 
     <div id="txt"></div>
+
+    <hr />
+    <h3>e.g 2</h3>
+
+    <form action="" id="formtwo">
+      <input type="radio" name="calc2" value="htmlval" id="oneid" />
+      <label for="oneid">HTML</label>
+      <input type="radio" name="calc2" value="jsval" id="jsid" />
+      <label for="jsid">JavaScript</label>
+    </form>
+
     <script>
-      const inputs = document.querySelectorAll("input[type='radio']");
+      const inputs = document.querySelectorAll("#formone input[type='radio']");
+      console.log(inputs);
       inputs.forEach((val) => {
         val.addEventListener("click", verifica);
       });
@@ -26,6 +39,20 @@
         //spread para saida ser String
         console.log(arr, ...arr);
         txt.innerText = arr;
+      }
+
+      // e.g: 2 only filter
+
+      const inputs2 = document.querySelectorAll("#formtwo input[type='radio']");
+      console.warn(inputs2[0]);
+      inputs2.forEach((val) => {
+        val.addEventListener("click", hander);
+      });
+
+      function hander(e) {
+        const selected = [...inputs2].filter((v) => v.checked);
+        console.log("Selecionou: ", selected);
+        console.log("Selecionou: ", e.target.value, this.value);
       }
     </script>
   </body>

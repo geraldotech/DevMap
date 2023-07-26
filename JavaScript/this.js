@@ -1,6 +1,8 @@
 /*
 this se referente ao objeto do qual a função é uma propriedade, o valor vai depender do objeto que está invocando a function
 */
+// e.target.id = this.id
+// e.target.value = this.value
 
 //object window
 function doSomething() {
