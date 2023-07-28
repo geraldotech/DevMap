@@ -1,3 +1,6 @@
+- [O que é JS]("#o-que-e-javascript")
+- [console.log]("#consolelog")
+
 ### O que é JavaScript?
 
 <details>

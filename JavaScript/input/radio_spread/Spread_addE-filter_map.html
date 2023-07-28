@@ -6,11 +6,12 @@
     <title>Document</title>
   </head>
   <body>
+    <h3>e.g 1</h3>
     <form action="" id="formone">
       <input type="radio" name="calc" value="html" id="one" />
       <label for="one">HTML</label>
-      <input type="radio" name="calc" value="js" id="js" />
-      <label for="js">JavaScript</label>
+      <input type="radio" name="calc" value="js" id="two" />
+      <label for="two">JavaScript</label>
     </form>
 
     <div id="txt"></div>
@@ -19,16 +20,17 @@
     <h3>e.g 2</h3>
 
     <form action="" id="formtwo">
-      <input type="radio" name="calc2" value="htmlval" id="oneid" />
+      <input type="radio" name="calc2" value="htmlval" id="oneid" data="1" />
       <label for="oneid">HTML</label>
-      <input type="radio" name="calc2" value="jsval" id="jsid" />
+      <input type="radio" name="calc2" value="jsval" id="jsid" data="2" />
       <label for="jsid">JavaScript</label>
     </form>
 
     <script>
+      // filter and map get the value
       const inputs = document.querySelectorAll("#formone input[type='radio']");
-      console.log(inputs);
       inputs.forEach((val) => {
+        //adiciona ume vent de click para todos os itens
         val.addEventListener("click", verifica);
       });
 
@@ -36,23 +38,34 @@
         const arr = [...inputs]
           .filter((val) => val.checked)
           .map((id) => id.value);
+        console.warn("arr:", arr);
         //spread para saida ser String
-        console.log(arr, ...arr);
+        console.log("spread:", ...arr);
         txt.innerText = arr;
       }
 
-      // e.g: 2 only filter
+      // e.g: 2 only filter get the id
 
       const inputs2 = document.querySelectorAll("#formtwo input[type='radio']");
-      console.warn(inputs2[0]);
       inputs2.forEach((val) => {
         val.addEventListener("click", hander);
       });
 
       function hander(e) {
+        //filter get the id
         const selected = [...inputs2].filter((v) => v.checked);
-        console.log("Selecionou: ", selected);
-        console.log("Selecionou: ", e.target.value, this.value);
+        console.log("Selecionou filter id: ", e.target.value, this.value);
+        //agora como já sabemos  se quiser pegar o value usar map
+        const selected2 = Array.from(inputs2)
+          .filter((v) => v.checked)
+          .map((ele) => ele.value);
+        console.log(...selected2);
+        //agora quero pegar os data-value
+        const selected3 = Array.from(inputs2)
+          .filter((v) => v.checked)
+          .map((id) => id.attributes.data.value);
+
+        console.log("selected3", ...selected3);
       }
     </script>
   </body>

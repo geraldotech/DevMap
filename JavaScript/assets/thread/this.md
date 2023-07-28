@@ -1,9 +1,11 @@
-/*
-this se referente ao objeto do qual a função é uma propriedade, o valor vai depender do objeto que está invocando a function
-*/
-// e.target.id = this.id
-// e.target.value = this.value
+`this` se referente ao objeto do qual a função é uma propriedade, o valor vai depender do objeto que está invocando a function
 
+```js
+e.target.id = this.id;
+e.target.value = this.value;
+```
+
+```js
 //object window
 function doSomething() {
   console.log(this);
@@ -52,3 +54,4 @@ function getx(event) {
   <option>one</option>
   <option>two</option>
 </select>;
+```

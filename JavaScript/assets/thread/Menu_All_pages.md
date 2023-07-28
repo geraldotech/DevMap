@@ -208,3 +208,7 @@ Versão antigas do AngularJS mesmo na versão CDN conta com o recurso de ng-incl
 # e.g 9 VueJS Loader component
 
 Mesmo na versão CDN podemos carregar um component de forma dinâmica
+
+# e.g 10 [SmartVue Includes to VueCDN](https://github.com/geraldotech/DevMap/tree/main/Vue/Smart_Vue_Includes)
+
+Adiciona o recurso de Ajax para incluir páginas html
