@@ -6,7 +6,7 @@
 - [Pointer Events](#pointerevents)
   - [target-custom-attr-data](#target-custom-attr-data)
   - [target-vs-currenttarget](#target-vs-currenttarget)
-  - [Contains (e.target)](#Contains "e.target")
+  - [Contains (e.target)](#contains "e.target")
 - <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">hoisting</a>
 
 <hr>
@@ -101,7 +101,7 @@ p.addEventListener("click", function (e) {
 ```
 
 - Target custom Attr Data
-  <a name="#target-custom-attr-data"></a>
+  <a id="target-custom-attr-data"></a>
 
 ```js
 <p id="bar" data="eu">
@@ -119,7 +119,8 @@ console.log(e.target.attributes.data.value); //get value of Attr data
 console.log(e.target.attributes.itemtype.value); //tip
 ```
 
-### PointerEvents > Target vs currentTarget
+- Target vs currentTarget
+  <a id="target-vs-currenttarget"></a>
 
 ```js
 <ul>
@@ -136,7 +137,8 @@ el.addEventListener("click", function (e) {
 });
 ```
 
-### PointerEvents > Contains
+- Contains
+  <a id="contains"></a>
 
 <a href="https://codepen.io/geraldopcf/pen/yLKZROJ" target="_blank">CodePen</a>
 
