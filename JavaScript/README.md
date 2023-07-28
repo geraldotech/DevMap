@@ -338,11 +338,6 @@ document.documentElement.addEventListener("mousemove", function(e){
     console.log(e);
 });
 
-//👉documentElement
-const rootElement = document.documentElement;
-console.log(rootElement);
-
-
 //👉eventListener_mouseMove
 
 //html

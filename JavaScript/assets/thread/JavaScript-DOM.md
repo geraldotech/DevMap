@@ -1,5 +1,19 @@
-- [O que é JS]("#o-que-e-javascript")
-- [console.log]("#consolelog")
+### JavaScript
+
+- [O que é JS](#o-que-e-javascript)
+- [console.log](#consolelog)
+- [window-and-document](#window-and-document)
+- [window](#window)
+- [document](#document)
+- [Get element by id direct way](#get-a-element-by-id-direct-way)
+- [dom-events](#dom---events)
+  - [onclick](#onclick)
+- [local-do-script](#local-do-script)
+- [boolean-attributes](#boolean-attributes)
+- [domcontentloaded](#domcontentloaded)
+- [onload-vs-onreadystatechange-vs-domcontentloaded](onload-vs-onreadystatechange-vs-domcontentloaded)
+- [javascriptvoid(0)](#javascriptvoid0)
+- [useful-links](#useful-links)
 
 ### O que é JavaScript?
 
@@ -44,7 +58,9 @@ console.table(person); // beatiful way to show tables
 <hr>
 - <a href="https://codepen.io/geraldopcf/pen/jOKNwyM" target="_blank">_representação que fiz no CodePen</a>
 
-## window [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window)
+## window
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 
 - window = interface global que contém o #document "DOM", BOM "Browser Object Model" window e o JavaScript e seus objetos, Arrays, functions... Primeira coisa que começa a ser carregada, a função alert() originalmente pode ser chamada por como window.alert()
 
@@ -94,7 +110,9 @@ link.href = `${window.location}/img/2022/#/file.zip`;
 link.innerHTML = `${window.location}/img/2022/download-now`;
 ```
 
-## document | [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document) => [MDN - DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
+## document
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document) => [MDN - DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
 
 - document - contains the DOM represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
 
