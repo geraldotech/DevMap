@@ -1,7 +1,11 @@
 ### JavaScript 2
 
-- [addEventListener, Pointer Events, e.target, documentElement](#o-que-e-javascript)
 - [currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
+- [addEventListener](#addeventlistener)
+- [#addeventlistener-with-target](#addeventlistener-with-target)
+- [#pointerevents](#pointerevents)
+- [#target-custom-attr-data](#target-custom-attr-data)
+- [#target-vs-currenttarget](#target-vs-currenttarget)
 
 ### addEventListener
 
