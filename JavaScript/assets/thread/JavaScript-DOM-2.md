@@ -3,9 +3,11 @@
 - [currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
 - [addEventListener](#addeventlistener)
 - [addEventListener-with-target](#addeventlistener-with-target)
-- [pointer Events](#pointerevents)
-- [target-custom-attr-data](#target-custom-attr-data)
-- [target-vs-currenttarget](#target-vs-currenttarget)
+- [Pointer Events](#pointerevents)
+  - [target-custom-attr-data](#target-custom-attr-data)
+  - [target-vs-currenttarget](#target-vs-currenttarget)
+  - [Contains (e.target)](#Contains "e.target")
+- <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">hoisting</a>
 
 <hr>
 
@@ -80,7 +82,7 @@ console.log(event.target.getAttribute("data")); //eu
 console.log(event.target.value); //only for input radio/checkbox
 ```
 
-### PointerEvents
+- ### PointerEvents
 
 ```js
 <p id="bar">TypeScript</p>;
@@ -98,7 +100,7 @@ p.addEventListener("click", function (e) {
 });
 ```
 
-### Target custom Attr Data
+- Target custom Attr Data
 
 ```js
 <p id="bar" data="eu">
@@ -116,7 +118,7 @@ console.log(e.target.attributes.data.value); //get value of Attr data
 console.log(e.target.attributes.itemtype.value); //tip
 ```
 
-### Target vs currentTarget
+### PointerEvents > Target vs currentTarget
 
 ```js
 <ul>
@@ -130,5 +132,32 @@ const el = document.querySelector("ul");
 el.addEventListener("click", function (e) {
   console.log(e.currentTarget); // <ul>
   console.log(e.target); // <li>
+});
+```
+
+### PointerEvents > Contains
+
+<a href="https://codepen.io/geraldopcf/pen/yLKZROJ" target="_blank">CodePen</a>
+
+```html
+<div
+  id="mydiv"
+  style="width: 100px;height: 100px;background-color: blue;"
+></div>
+
+div { margin: auto; padding: 1em; max-width: 6em; background: rgba(0, 0, 0, .2);
+text-align: center; }
+```
+
+```js
+var mydiv = document.getElementById("mydiv");
+
+document.addEventListener("click", function (e) {
+  var inside = mydiv.contains(e.target);
+  if (inside) {
+    alert("click inside");
+  } else {
+    alert("click outsite");
+  }
 });
 ```

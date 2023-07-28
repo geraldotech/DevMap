@@ -442,12 +442,6 @@ body{
 </details>
 
 <details>
-<summary>Hoisting</summary>
-<a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">checkout this thread</a>
-
-</details>
-
-<details>
 <summary>insertAdjacent, insertCSS</summary>
 
 ```html
