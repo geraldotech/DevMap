@@ -1,7 +1,8 @@
-### JavaScript
+### JavaScript? **From Scratch by _Geraldo Filho_**
 
 - [O que é JS](#o-que-e-javascript)
 - [console.log](#consolelog)
+- [this]("./this.md")
 - [window-and-document](#window-and-document)
 - [window](#window)
 - [document](#document)
@@ -172,6 +173,14 @@ console.log(fibra); // div#fibra - todos os outros objetos acessíveis pelo espa
 ```
 
 apesar de funcionar prefira a boa pratica na page README em <ins>getElements and querySelector</ins>
+
+//👉 Get html content
+
+```js
+<p id="foo">JavaScript</p>;
+const p = document.getElementById("foo");
+console.log(p); //check output on console
+```
 
 <hr>
 
