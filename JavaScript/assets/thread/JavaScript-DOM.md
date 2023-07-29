@@ -6,18 +6,18 @@
 - [window-and-document](#window-and-document)
 - [window](#window)
 - [document](#document)
-- [Get element by id direct way](#get-a-element-by-id-direct-way)
+- [getElementById {direct way}](#get-a-element-by-id-direct-way)
 - [dom-events](#dom---events)
   - [onclick](#onclick)
 - [local-do-script](#local-do-script)
 - [boolean-attributes](#boolean-attributes)
-- [domcontentloaded](#domcontentloaded)
+- [DOMContentLoaded](#domcontentloaded)
 - [onload-vs-onreadystatechange-vs-domcontentloaded](onload-vs-onreadystatechange-vs-domcontentloaded)
-- [javascriptvoid(0)](#javascriptvoid0)
+- [javascript:void(0)](#javascriptvoid0)
 - [CSS Object Model](./CSSOM/README.md)
 - [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
 - [onbeforeunload.html](./Learn-DOM-Manipulation/onbeforeunload.html)
-- [Addition assignment (+=)](./Addition_assignment.html)
+- <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
 - [useful-links](#useful-links)
 
 ### O que é JavaScript?
