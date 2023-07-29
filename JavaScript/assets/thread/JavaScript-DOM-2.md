@@ -7,6 +7,7 @@
   - [target-custom-attr-data](#target-custom-attr-data)
   - [target-vs-currenttarget](#target-vs-currenttarget)
   - [Contains (e.target)](#contains "e.target")
+  - [Web Components](./Web-Components)
 - <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">hoisting</a>
 - [Regex - Expressões Regulares](./Regex/README.md)
 
