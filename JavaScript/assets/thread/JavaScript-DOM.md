@@ -17,6 +17,7 @@
 - [CSS Object Model](./CSSOM/README.md)
 - [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
 - [onbeforeunload.html](./Learn-DOM-Manipulation/onbeforeunload.html)
+- [Addition assignment (+=)](./Addition_assignment.html)
 - [useful-links](#useful-links)
 
 ### O que é JavaScript?
