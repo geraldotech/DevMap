@@ -14,9 +14,9 @@
 - [domcontentloaded](#domcontentloaded)
 - [onload-vs-onreadystatechange-vs-domcontentloaded](onload-vs-onreadystatechange-vs-domcontentloaded)
 - [javascriptvoid(0)](#javascriptvoid0)
-- [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
 - [CSS Object Model](./CSSOM/README.md)
-- [onbeforeunload.html](./assets/thread/Learn-DOM-Manipulation/onbeforeunload.html)
+- [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
+- [onbeforeunload.html](./Learn-DOM-Manipulation/onbeforeunload.html)
 - [useful-links](#useful-links)
 
 ### O que é JavaScript?

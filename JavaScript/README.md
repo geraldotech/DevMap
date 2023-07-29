@@ -2,7 +2,18 @@
 
 :rocket: :zap: Let's Code :zap: :rocket:
 
-> > Memorize is a bad ideia, instead focus on concepts
+> Memorize is a bad ideia, instead focus on concepts
+
+## Threads
+
+- [JavaScript-DOM.md"](./assets/thread/JavaScript-DOM.md)
+- [JavaScript-DOM2.md"](./assets/thread/JavaScript-DOM-2.md)
+- [Web Components](./assets/thread/Web-Components)
+- <a href="./assets/thread/Operadores-Atribuicao.md" target="_blank">Operadores Atribuicao</a>
+- [render_table.html](./assets/thread/render_table_json.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table_json.html" target="_blank">Demo</a>
+- [Menu All Pages by `gmap`](./assets/thread/Menu_All_pages.md)
+- [childNodes.html](./assets/thread/childNodes.html)
+- [List Directories](./assets/thread/List_directories)
 
 ## Cheats and examples
 
@@ -495,21 +506,7 @@ document.head.insertAdjacentHTML(
 
 </details>
 
-## Threads
-
-- [JavaScript-DOM.md"](./assets/thread/JavaScript-DOM.md)
-- [JavaScript-DOM2.md"](./assets/thread/JavaScript-DOM-2.md)
-- [Web Components](./assets/thread/Web-Components)
-- <a href="./assets/thread/Operadores-Atribuicao.md" target="_blank">Operadores Atribuicao</a>
-- [render_table.html](./assets/thread/render_table_json.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table_json.html" target="_blank">Demo</a>
-- [Menu All Pages](./assets/thread/Menu_All_pages.md)
-- [childNodes.html](./assets/thread/childNodes.html)
-- [List Directories](./assets/thread/List_directories)
-
 ## Links:
-
-- <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
-- <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures">Data Structures</a>
 
 ### Diferença entre alguns operadores lógicos (Logical Operators)
 
@@ -519,6 +516,8 @@ document.head.insertAdjacentHTML(
 |  ==   |    compara valor     |
 |  ===  | compara valor e tipo |
 
+- <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
+- <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures">Data Structures</a>
 - [table operadores comparação/lógicos] <a href="https://www.alura.com.br/artigos/operadores-matematicos-em-javascript" target="_blank">Alura </a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators">MDN</a>
 
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">\_cloneNode(true)</a>
@@ -528,7 +527,6 @@ document.head.insertAdjacentHTML(
 - <a href="https://www.base64encode.org/">base64encode.org</a>
 - <a href="https://twitter.com/ATechAjay/status/1606115109842976768">XOX operator</a>
 - [Nice articles: https://bobbyhadz.com/blog/](https://bobbyhadz.com/blog/)
-- [Regex - Expressões Regulares](./assets/thread/Regex/README.md)
 
 ## Videos
 

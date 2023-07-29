@@ -8,6 +8,7 @@
   - [target-vs-currenttarget](#target-vs-currenttarget)
   - [Contains (e.target)](#contains "e.target")
 - <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">hoisting</a>
+- [Regex - Expressões Regulares](./Regex/README.md)
 
 <hr>
 
