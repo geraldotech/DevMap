@@ -14,6 +14,9 @@
 - [domcontentloaded](#domcontentloaded)
 - [onload-vs-onreadystatechange-vs-domcontentloaded](onload-vs-onreadystatechange-vs-domcontentloaded)
 - [javascriptvoid(0)](#javascriptvoid0)
+- [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
+- [CSS Object Model](./CSSOM/README.md)
+- [onbeforeunload.html](./assets/thread/Learn-DOM-Manipulation/onbeforeunload.html)
 - [useful-links](#useful-links)
 
 ### O que é JavaScript?
@@ -374,9 +377,6 @@ function openInNewTab(url) {
 
 ### Useful links:
 
-- [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
-- [CSS Object Model](./CSSOM/README.md)
-- [onbeforeunload.html](./assets/thread/Learn-DOM-Manipulation/onbeforeunload.html)
 - [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)
 - [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
 - [Evitando poluir o objeto-global](http://devfuria.com.br/javascript/objeto-global/)

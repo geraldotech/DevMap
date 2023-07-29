@@ -4,9 +4,7 @@
 
 > > Memorize is a bad ideia, instead focus on concepts
 
-Projects and Demos: [https://gmapdev.netlify.app/](https://gmapdev.netlify.app/)
-
-## Extra Fast Code Cheats and examples
+## Cheats and examples
 
 <details>
 <summary>Concatenação, Interpolação and syntax</summary>
@@ -313,37 +311,6 @@ img.classList.add('meuimg');
   };
 
 ```
-
-</details>
-
-<details>
-<summary>Contains (e.target)</summary>
-<a href="https://codepen.io/geraldopcf/pen/yLKZROJ" target="_blank">CodePen</a>
-
-```html and css
-<div
-  id="mydiv"
-  style="width: 100px;height: 100px;background-color: blue;"
-></div>
-
-div { margin: auto; padding: 1em; max-width: 6em; background: rgba(0, 0, 0, .2);
-text-align: center; }
-```
-
-```js
-var mydiv = document.getElementById("mydiv");
-
-document.addEventListener("click", function (e) {
-  var inside = mydiv.contains(e.target);
-  if (inside) {
-    alert("click inside");
-  } else {
-    alert("click outsite");
-  }
-});
-```
-
-[contains-e-target.html](./assets/thread/contains-e-target.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/contains-e-target.html)
 
 </details>
 

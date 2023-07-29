@@ -140,7 +140,10 @@ el.addEventListener("click", function (e) {
 - Contains
   <a id="contains"></a>
 
-<a href="https://codepen.io/geraldopcf/pen/yLKZROJ" target="_blank">CodePen</a>
+  - <a href="https://codepen.io/geraldopcf/pen/yLKZROJ" target="_blank">CodePen</a>
+
+  - [contains-e-target.html](./assets/thread/contains-e-target.html)
+  - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/contains-e-target.html)
 
 ```html
 <div
