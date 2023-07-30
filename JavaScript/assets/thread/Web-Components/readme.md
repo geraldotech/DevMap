@@ -5,7 +5,7 @@
 ```js
 class TodoItem extends HTMLElement {
   constructor() {
-    super();
+    super(); //vai puxar tudo do HTMLElement tudo da DOM
     this.innerHTML = "Hi, I am custom";
   }
 }
@@ -234,6 +234,35 @@ customElements.define("mycomp-1", BlogPost);
 This case como se trava de um Hook o mesmo será chamado novamente, evitar isso...
 ` this.shadowRoot.append(this.connectedCallback());`
 
+# slots
+
+- Apenas adicionar dentro do template
+
+```js
+<h1>
+  <slot></slot>
+</h1>
+
+//html
+<discovery-item>Testing Slot</discovery-item>
+```
+
+- Named slots
+
+```js
+<ul>
+  <li>
+    {" "}
+    <slot name="notebook"></slot>
+  </li>
+</ul>
+//html
+    <discovery-item>
+    Welcome default slots
+    <slot slot="notebook">Dell G15</slot>
+  </discovery-item>
+```
+
 &nbsp;
 
 &nbsp;
@@ -241,3 +270,8 @@ This case como se trava de um Hook o mesmo será chamado novamente, evitar isso.
 ### Links:
 
 - [Web Dev Simplified](https://www.youtube.com/watch?v=2I7uX8m0Ta0)
+- [Using_shadow_DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
+
+```
+
+```

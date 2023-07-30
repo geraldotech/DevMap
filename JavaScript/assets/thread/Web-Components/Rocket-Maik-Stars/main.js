@@ -15,13 +15,15 @@ class BlogPost extends HTMLElement {
 
     this.stars.forEach((star) => rater.appendChild(star));
 
+    this.resetRating();
+
     shadow.appendChild(rater);
   }
 
   createRater() {
     const rater = document.createElement("div");
     rater.classList.add("start-rater");
-
+    rater.addEventListener("mouseout", this.resetRating.bind(this));
     return rater;
   }
 
@@ -37,6 +39,11 @@ class BlogPost extends HTMLElement {
       return star;
     };
     return Array.from({ length: 5 }, createStar);
+  }
+
+  resetRating() {
+    this.currentRatingValue = this.dataset.rating || 0;
+    this.hightlighRating();
   }
 
   setRating(event) {
