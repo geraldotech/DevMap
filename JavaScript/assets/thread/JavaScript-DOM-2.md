@@ -172,4 +172,57 @@ document.addEventListener("click", function (e) {
 ```
 
 - ### createElement, createTextNode, textContent, append vs appendChild
+
   <a id="domcreateel"></a>
+
+      ```js
+      //Images👇
+
+      //createElements
+      div = document.createElement("div");
+      img = document.createElement("img");
+      img.setAttribute("src", "http://smartdicastutorial.appspot.com/images/6d88733c461.jpg");
+      img.setAttribute("alt", "img test");
+
+      //appendChild
+      div.appendChild(img);
+
+      //appendChild body
+      document.body.appendChild(div);
+
+      # Images 2 Template Alternative
+
+      const btn = document.querySelector("button");
+      btn.onclick = function(){
+      re.innerHTML += `<img src="http://smartdicastutorial.appspot.com/images/6d88733c461.jpg"/>`
+      }
+
+      //onclick classList
+      document.addEventListener('click', function(){
+      img.classList.add('meuimg');
+      });
+
+      # Images 3
+
+      //create img -loop-img-button-click
+      //html
+      <button onclick=
+        "show_image('https://www.w3schools.com/jsref/klematis.jpg',
+                    500,
+                    500,
+                    'Google Logo');">Add Google Logo</button>
+
+      //js
+      function show_image(src, width, height, alt) {
+      var img = document.createElement("img");
+      img.src = src;
+      img.width = width;
+      img.height = height;
+      img.alt = alt;
+
+            // This next line will just add it to the <body> tag
+            document.body.appendChild(img);
+
+      };
+
+      ```
