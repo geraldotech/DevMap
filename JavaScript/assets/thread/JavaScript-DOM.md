@@ -1,8 +1,8 @@
 ### JavaScript? **From Scratch by _Geraldo Filho_**
 
-- [O que é JS](#o-que-e-javascript)
+- [O que é JS](#what-is-javascript)
 - [console.log](#consolelog)
-- [this]("./this.md")
+- [this]("this.md")
 - [window-and-document](#window-and-document)
 - [window](#window)
   - [onbeforeunload.html](./onbeforeunload.html)
@@ -13,13 +13,13 @@
 - [local-do-script](#local-do-script)
 - [boolean-attributes](#boolean-attributes)
 - [DOMContentLoaded](#domcontentloaded)
-- [onload-vs-onreadystatechange-vs-domcontentloaded](onload-vs-onreadystatechange-vs-domcontentloaded)
+- [onload-vs-onreadystatechange-vs-domcontentloaded](#onload-vs-onreadystatechange-vs-domcontentloaded)
 - [javascript:void(0)](#javascriptvoid0)
 - [CSS Object Model](./CSSOM/README.md)
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
 - [useful-links](#useful-links)
 
-### O que é JavaScript?
+### What is JavaScript?
 
 <details>
 <summary>open content</summary>

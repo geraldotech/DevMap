@@ -1,12 +1,12 @@
 ### JavaScript 2
 
-- [currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
 - [addEventListener](#addeventlistener)
 - [addEventListener-with-target](#addeventlistener-with-target)
 - [Pointer Events](#pointerevents)
   - [target-custom-attr-data](#target-custom-attr-data)
   - [target-vs-currenttarget](#target-vs-currenttarget)
   - [Contains (e.target)](#contains "e.target")
+  - [currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
 - <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">hoisting</a>
 - [Web Components](./Web-Components)
 - [Regex - Expressões Regulares](./Regex/README.md)
