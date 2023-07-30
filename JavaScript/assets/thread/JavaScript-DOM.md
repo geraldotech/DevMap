@@ -4,12 +4,13 @@
 - [console.log](#consolelog)
 - [this](this.md)
 - [window-and-document](#window-and-document)
-- [window](#window)
-  - [onbeforeunload.html](./onbeforeunload.html)
-- [document](#document)
-  - [document.forms.md - preventDefault](forms.md)
+  - [window](#window)
+    - [onbeforeunload.html](./onbeforeunload.html)
+  - [document](#document)
+    - [document.forms.md - preventDefault](forms.md)
 - [Script location - Boolean Attrs](#local-do-script)
 - [javascript:void(0)](#javascriptvoid0)
+- <a href="./assets/thread/Operadores-Atribuicao.md" target="_blank">Operadores Atribuicao</a>
 - [CSS Object Model](./CSSOM/README.md)
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
 - [useful-links](#useful-links)

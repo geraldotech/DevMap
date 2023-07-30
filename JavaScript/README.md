@@ -8,13 +8,13 @@
 
 - [JavaScript-DOM.md"](./assets/thread/JavaScript-DOM.md)
 - [JavaScript-DOM2.md"](./assets/thread/JavaScript-DOM-2.md)
-- <a href="./assets/thread/Operadores-Atribuicao.md" target="_blank">Operadores Atribuicao</a>
+
+## Cheats and examples
+
 - [render_table.html](./assets/thread/render_table_json.html) - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/render_table_json.html" target="_blank">Demo</a>
 - [Menu All Pages by `gmap`](./assets/thread/Menu_All_pages.md)
 - [childNodes.html](./assets/thread/childNodes.html)
 - [List Directories](./assets/thread/List_directories)
-
-## Cheats and examples
 
 <details>
 <summary>Concatenação, Interpolação and syntax</summary>
