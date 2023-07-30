@@ -1,6 +1,6 @@
-# Web Components
+<h1 align="center">Web Components</h1>
 
-### Basic
+### Basic Web Component
 
 ```js
 class TodoItem extends HTMLElement {
@@ -9,12 +9,13 @@ class TodoItem extends HTMLElement {
     this.innerHTML = "Hi, I am custom";
   }
 }
+//nome precisa ser name-item
 customElements.define("todo-item", TodoItem);
 ```
 
-in html call: `<todo-item></todo-item>`
+- on html call: `<todo-item></todo-item>`
 
-Get custom text: `<todo-item>Hello</todo-item>`
+- Get custom text: `<todo-item>Hello</todo-item>`
 
 ```js
 class TodoItem extends HTMLElement {
@@ -39,7 +40,27 @@ class TodoItem extends HTMLElement {
 customElements.define("todo-item", TodoItem);
 ```
 
-- Using templates.content
+- Using `shadowRoot`:
+
+```js
+class Discovery extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.innerHTML = `
+    <style>
+        h1{
+            color: dodgerblue;
+        }
+    </style>
+    <h1>Hello from Discovery</h1>
+    `;
+  }
+}
+customElements.define("discovery-item", Discovery);
+```
+
+- Using templates.content:
 
 ```js
 class TodoItem extends HTMLElement {
@@ -55,4 +76,31 @@ class TodoItem extends HTMLElement {
 customElements.define("todo-item", TodoItem);
 ```
 
-[Web Dev Simplified](https://www.youtube.com/watch?v=2I7uX8m0Ta0)
+### this.addEvent...
+
+```js
+class TodoItem extends HTMLElement {
+  constructor() {
+    const template = document.createElement("template");
+    template.innerHTML = `
+    <style>
+    p{
+        color: orange;
+    }
+    </style>
+    <p>Using shadowDOM and templates</p>
+    `;
+    super();
+    console.log(this); //ref a TodoItem
+    this.onclick = functin(){
+      console.log(`click`);
+    }
+
+    const shadow = this.attachShadow({ mode: "open" });
+    shadow.append(template.content);
+  }
+}
+customElements.define("todo-item", TodoItem);
+```
+
+- [Web Dev Simplified](https://www.youtube.com/watch?v=2I7uX8m0Ta0)
