@@ -62,6 +62,13 @@ class Discovery extends HTMLElement {
 customElements.define("discovery-item", Discovery);
 ```
 
+- Using querySelector[select DOM elements]
+
+```js
+// inside constructor(){... }
+this.shadowRoot.querySelector("h1").innerText = `new text here`;
+```
+
 - Using `templates.content`:
 
 ```js
