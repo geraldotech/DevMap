@@ -7,7 +7,7 @@
 - [window](#window)
   - [onbeforeunload.html](./onbeforeunload.html)
 - [document](#document)
-  - [document.forms.md - preventDefault](./assets/thread/forms.md)
+  - [document.forms.md - preventDefault](forms.md)
 - [getElementById {direct way}](#get-a-element-by-id-direct-way)
 - [dom-events](#dom---events)
   - [onclick](#onclick)
