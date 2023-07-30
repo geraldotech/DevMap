@@ -23,11 +23,11 @@
     <details>
     <summary>getAttributes,createElement ,set ,has ,remove...classList.add.contains</summary>
 
-    - 1 [createAttr,getAttr,removeAttr](./assets/thread/create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
-    - 2 [hasAttribute_setAttribute](./assets/thread/hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
-    - 3 [setAttribute_vs_classList](./assets/thread/setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
-    - 4 [createElements_add_delete-App- TodoList](./assets/thread/createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
-    - 5 [createElements_add_delete_template_literal_add_assigment](./assets/thread/createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete_template_literal_add_assigment.html)
+    - 1 [createAttr,getAttr,removeAttr](./create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/create_get_remove_Attribute.html)
+    - 2 [hasAttribute_setAttribute](./hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/hasAttribute_setAttribute.html)
+    - 3 [setAttribute_vs_classList](./setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/setAttribute_vs_classList.html)
+    - 4 [createElements_add_delete-App- TodoList](./createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/createElements_add_delete.html)
+    - 5 [createElements_add_delete_template_literal_add_assigment](./createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/createElements_add_delete_template_literal_add_assigment.html)
 
     </details>
 
@@ -264,19 +264,27 @@ p.addEventListener("click", function (e) {
 });
 ```
 
-- Target custom Attr Data
+- Target custom Attr
   <a id="target-custom-attr-data"></a>
 
+  [Data](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+
+  - [data] and [itemtype]
+
 ```js
+//👉 Target "data";
 <p id="bar" data="eu">
   TypeScript
 </p>;
+
+//js
+const p = document.querySelector("p");
 
 console.log(p.getAttribute("data")); //eu
 console.log(e.target.getAttribute("data")); //eu
 console.log(e.target.attributes.data.value); //get value of Attr data
 
-//👉 Target com custom Attr like "itemtype";
+//👉 e.Target "itemtype";
 <li class="menu" itemtype="tip">
   Steak
 </li>;

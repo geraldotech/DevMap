@@ -147,6 +147,11 @@ document.querySelectorAll("section span")[1];
 <p data>Data</p>
 const p = document.querySelector("[data]");
 
+//👉 select the span with attr : data-forca="1"
+ <span data-forca="1">Bye 1</span>
+ <span data-forca="2">Bye 2</span>
+const attr = document.querySelector("span[data-forca='1']");
+
 //👉 multi Attributes
 <p data>Data</p>
 <p attr2>net</p>
