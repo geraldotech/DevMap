@@ -4,6 +4,8 @@
   - [onclick](#onclick)
   - [addEventListener](#addeventlistener)
   - [addEventListener-with-target](#addeventlistener-with-target)
+  - [DOMContentLoaded](#domcontentloaded)
+  - [onload-vs-onreadystatechange-vs-domcontentloaded](#onload-vs-onreadystatechange-vs-domcontentloaded)
 - [Pointer Events](#pointerevents)
   - [target-custom-attr-data](#target-custom-attr-data)
   - [target-vs-currenttarget](#target-vs-currenttarget)
@@ -27,7 +29,13 @@
 
     </details>
 
-  <hr>
+<hr>
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 ## DOM - Events
 
@@ -180,6 +188,60 @@ document
 console.log(event.target.id); //bar
 console.log(event.target.getAttribute("data")); //eu
 console.log(event.target.value); //only for input radio/checkbox
+```
+
+## [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
+
+A documentação diz que o event `fires` when o HTML foi completamente loaded and parsed "carregado e analisado" sem esperar por stylesheets, images ou subframes.
+
+- Basic usage
+
+```js
+window.addEventListener("DOMContentLoaded", function () {
+  console.log(this);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  console.log(this);
+});
+```
+
+- Então usando DOMContentLoaded podemos add um conteúdo na DOM que sem defer retornaria um erro. [live example](https://gmapdev.netlify.app/docs_demo/DOMContentLoaded/eg1/ContentLoaded.html)
+
+- Partindo desse princípio eu fiz 2 scripts, um _*main.js*_ com attr `defer` que cria 2 elementos HTML com id usando _`createElement`_ em fim... O segundo script _`content.js`_ deve alterar os valores criados pelo primeiro script.
+  [live example](https://gmapdev.netlify.app/docs_demo/DOMContentLoaded/eg2/ContentLoaded.html)
+
+Ordem de declaração:
+
+```js
+<script src="main.js" defer></script>
+<script src="content.js"></script>
+```
+
+content não precisa de defer pq estamos usando `document.addEventListener("DOMContentLoaded"` que vai chamar a func que vai sobreescrever os valores do primeiro script.
+
+- Considerações se o content.js não tivese o DOMContentLoaded e fosse atribuído o defer, matendo a ordem dos scripts, obviamente o resultado seria o mesmo.
+
+# onload vs onreadystatechange vs DOMContentLoaded
+
+```js
+//who is faster ?
+
+//3
+window.onload = function () {
+  console.warn("window loaded");
+};
+
+//2
+document.onreadystatechange = function (e) {
+  console.warn("document.onready", document.readyState);
+  console.log(document.readyState == "complete");
+};
+
+//1
+document.addEventListener("DOMContentLoaded", () => {
+  console.warn("DOM Loaded");
+});
 ```
 
 # PointerEvents

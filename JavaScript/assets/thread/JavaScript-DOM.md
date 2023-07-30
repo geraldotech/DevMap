@@ -2,16 +2,13 @@
 
 - [O que é JS](#what-is-javascript)
 - [console.log](#consolelog)
-- [this]("this.md")
+- [this](this.md)
 - [window-and-document](#window-and-document)
 - [window](#window)
   - [onbeforeunload.html](./onbeforeunload.html)
 - [document](#document)
   - [document.forms.md - preventDefault](forms.md)
-- [local-do-script](#local-do-script)
-- [boolean-attributes](#boolean-attributes)
-- [DOMContentLoaded](#domcontentloaded)
-- [onload-vs-onreadystatechange-vs-domcontentloaded](#onload-vs-onreadystatechange-vs-domcontentloaded)
+- [Script location - Boolean Attrs](#local-do-script)
 - [javascript:void(0)](#javascriptvoid0)
 - [CSS Object Model](./CSSOM/README.md)
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
@@ -174,82 +171,29 @@ function abrenovaJanela() {
 
 - Na header será carregado antes do DOM o que pode causar erros, a menos que defina o `defer`
 - Final do body vai carregar quando praticamente todo DOM tiver siado loaded e parsed
+- Boolean [Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 
-# Boolean [Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+  - defer
 
-## defer
+  Attribute set para o browser que o script vai ser executado depois que o document foor parsed "analisado", ou seja o script é carregado em background.
 
-Attribute set para o browser que o script vai ser executado depois que o document foor parsed "analisado", ou seja o script é carregado em background.
+  ```js
+  <script src="main.js" defer></script>
+  ```
 
-```js
-<script src="main.js" defer></script>
-```
+  - async
 
-## async
+  ```js
+  <script src="content.js" async></script>
+  ```
 
-```js
-<script src="content.js" async></script>
-```
+  - normal [=== parse going on DOM ===] => "fetch script" => "executa script" => [=== continua parse DOM ===]
+  - async [=== parse going on DOM ===] => "fetch script" => [=== "executa script" em sincronia com o parse DOM que ainda acontece ===] => [=== continua parse DOM ===]
+    the async não garante a ordem de executação do script
+  - defer [=== parse going on DOM ===] "fetch script" => [continua *parsing DOM" => "completou parse DOM]"] => executa script
+    [video ajuda](https://www.youtube.com/watch?v=IrHmpdORLu8)
 
-- normal [=== parse going on DOM ===] => "fetch script" => "executa script" => [=== continua parse DOM ===]
-- async [=== parse going on DOM ===] => "fetch script" => [=== "executa script" em sincronia com o parse DOM que ainda acontece ===] => [=== continua parse DOM ===]
-  the async não garante a ordem de executação do script
-- defer [=== parse going on DOM ===] "fetch script" => [continua *parsing DOM" => "completou parse DOM]"] => executa script
-  [video ajuda](https://www.youtube.com/watch?v=IrHmpdORLu8)
-
-## [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
-
-A documentação diz que o event `fires` when o HTML foi completamente loaded and parsed "carregado e analisado" sem esperar por stylesheets, images ou subframes.
-
-- Basic usage
-
-```js
-window.addEventListener("DOMContentLoaded", function () {
-  console.log(this);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  console.log(this);
-});
-```
-
-- Então usando DOMContentLoaded podemos add um conteúdo na DOM que sem defer retornaria um erro. [live example](https://gmapdev.netlify.app/docs_demo/DOMContentLoaded/eg1/ContentLoaded.html)
-
-- Partindo desse princípio eu fiz 2 scripts, um _*main.js*_ com attr `defer` que cria 2 elementos HTML com id usando _`createElement`_ em fim... O segundo script _`content.js`_ deve alterar os valores criados pelo primeiro script.
-  [live example](https://gmapdev.netlify.app/docs_demo/DOMContentLoaded/eg2/ContentLoaded.html)
-
-Ordem de declaração:
-
-```js
-<script src="main.js" defer></script>
-<script src="content.js"></script>
-```
-
-content não precisa de defer pq estamos usando `document.addEventListener("DOMContentLoaded"` que vai chamar a func que vai sobreescrever os valores do primeiro script.
-
-- Considerações se o content.js não tivese o DOMContentLoaded e fosse atribuído o defer, matendo a ordem dos scripts, obviamente o resultado seria o mesmo.
-
-# onload vs onreadystatechange vs DOMContentLoaded
-
-```js
-//who is faster ?
-
-//3
-window.onload = function () {
-  console.warn("window loaded");
-};
-
-//2
-document.onreadystatechange = function (e) {
-  console.warn("document.onready", document.readyState);
-  console.log(document.readyState == "complete");
-};
-
-//1
-document.addEventListener("DOMContentLoaded", () => {
-  console.warn("DOM Loaded");
-});
-```
+<hr>
 
 # javascript:void(0)
 
