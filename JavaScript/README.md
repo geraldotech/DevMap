@@ -261,64 +261,6 @@ const log = (x) => {
 </details>
 
 <details>
-<summary>createElement, createTextNode, textContent, append vs appendChild</summary>
-
-[Moved to: Learn DOM Manipulation In 18 Minutes](https://github.com/geraldotech/DevMap/blob/main/JavaScript/assets/thread/Learn-DOM-Manipulation/main.js)
-
-```js
-
-# Images👇
-
-//createElements
-div = document.createElement("div");
-img = document.createElement("img");
-img.setAttribute("src", "http://smartdicastutorial.appspot.com/images/6d88733c461.jpg");
-img.setAttribute("alt", "img test");
-
-//appendChild
-div.appendChild(img);
-
-//appendChild body
-document.body.appendChild(div);
-
-# Images 2 Template Alternative
-
-   const btn = document.querySelector("button");
-   btn.onclick = function(){
-    re.innerHTML += `<img src="http://smartdicastutorial.appspot.com/images/6d88733c461.jpg"/>`
-   }
-
-//onclick classList
-document.addEventListener('click', function(){
-img.classList.add('meuimg');
-});
-
-# Images 3
-//create img -loop-img-button-click
-//html
- <button onclick=
-  "show_image('https://www.w3schools.com/jsref/klematis.jpg',
-               500,
-               500,
-               'Google Logo');">Add Google Logo</button>
-
-//js
-    function show_image(src, width, height, alt) {
-      var img = document.createElement("img");
-      img.src = src;
-      img.width = width;
-      img.height = height;
-      img.alt = alt;
-
-      // This next line will just add it to the <body> tag
-      document.body.appendChild(img);
-  };
-
-```
-
-</details>
-
-<details>
 <summary>toString, toFixed, toPrecision, toUpperCase, toLowerCase, parseInt, toLocaleString</summary>
 <a href="https://codepen.io/geraldopcf/pen/PoRVXQB" target="_blank">CodePen</a>
 
@@ -384,17 +326,6 @@ var g = saldo.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 console.log(f); //R$ 600,00
 console.log(g); //R$ 2.000,00
 ```
-
-</details>
-
-<details>
-<summary>getAttributes,createElement ,set ,has ,remove...classList.add.contains</summary>
-
-- 1 [createAttr,getAttr,removeAttr](./assets/thread/create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
-- 2 [hasAttribute_setAttribute](./assets/thread/hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
-- 3 [setAttribute_vs_classList](./assets/thread/setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
-- 4 [createElements_add_delete-App- TodoList](./assets/thread/createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
-- 5 [createElements_add_delete_template_literal_add_assigment](./assets/thread/createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete_template_literal_add_assigment.html)
 
 </details>
 

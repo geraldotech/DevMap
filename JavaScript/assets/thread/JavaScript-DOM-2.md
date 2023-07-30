@@ -11,7 +11,19 @@
 - [Web Components](./Web-Components)
 - [Regex - Expressões Regulares](./Regex/README.md)
 - [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
+
   - [createElement, createTextNode, textContent, append vs appendChild](#domcreateel)
+  - [getElement[id,class,tagName,byName] and QuerySelector](/getElements_idClasstagNameQuerySelector.md)
+    <details>
+    <summary>getAttributes,createElement ,set ,has ,remove...classList.add.contains</summary>
+    - 1 [createAttr,getAttr,removeAttr](./assets/thread/create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
+    - 2 [hasAttribute_setAttribute](./assets/thread/hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
+    - 3 [setAttribute_vs_classList](./assets/thread/setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
+    - 4 [createElements_add_delete-App- TodoList](./assets/thread/createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
+    - 5 [createElements_add_delete_template_literal_add_assigment](./assets/thread/createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete_template_literal_add_assigment.html)
+
+    </details>
+
   <hr>
 
 ### addEventListener
@@ -148,81 +160,69 @@ el.addEventListener("click", function (e) {
   - [contains-e-target.html](./assets/thread/contains-e-target.html)
   - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/contains-e-target.html)
 
-```html
-<div
-  id="mydiv"
-  style="width: 100px;height: 100px;background-color: blue;"
-></div>
+  ```html
+  <div
+    id="mydiv"
+    style="width: 100px;height: 100px;background-color: blue;"
+  ></div>
 
-div { margin: auto; padding: 1em; max-width: 6em; background: rgba(0, 0, 0, .2);
-text-align: center; }
-```
+  div { margin: auto; padding: 1em; max-width: 6em; background: rgba(0, 0, 0,
+  .2); text-align: center; }
+  ```
 
-```js
-var mydiv = document.getElementById("mydiv");
+  ```js
+  var mydiv = document.getElementById("mydiv");
 
-document.addEventListener("click", function (e) {
-  var inside = mydiv.contains(e.target);
-  if (inside) {
-    alert("click inside");
-  } else {
-    alert("click outsite");
-  }
-});
-```
+  document.addEventListener("click", function (e) {
+    var inside = mydiv.contains(e.target);
+    if (inside) {
+      alert("click inside");
+    } else {
+      alert("click outsite");
+    }
+  });
+  ```
 
 - ### createElement, createTextNode, textContent, append vs appendChild
 
   <a id="domcreateel"></a>
 
-      ```js
-      //Images👇
+  ```js
+  //Images
+  //createElements
+  div = document.createElement("div");
+  img = document.createElement("img");
+  img.setAttribute("src", "http://smartdicastutorial.appspot.com/images/6d88733c461.jpg");
+  img.setAttribute("alt", "img test")
+  //appendChild
+  div.appendChild(img)
+  //appendChild body
+  document.body.appendChild(div)
+  # Images 2 Template Alternativ
+  const btn = document.querySelector("button");
+  btn.onclick = function(){
+  re.innerHTML += `<img src="http://smartdicastutorial.appspot.com/images/6d88733c461.jpg"/>`
 
-      //createElements
-      div = document.createElement("div");
-      img = document.createElement("img");
-      img.setAttribute("src", "http://smartdicastutorial.appspot.com/images/6d88733c461.jpg");
-      img.setAttribute("alt", "img test");
-
-      //appendChild
-      div.appendChild(img);
-
-      //appendChild body
-      document.body.appendChild(div);
-
-      # Images 2 Template Alternative
-
-      const btn = document.querySelector("button");
-      btn.onclick = function(){
-      re.innerHTML += `<img src="http://smartdicastutorial.appspot.com/images/6d88733c461.jpg"/>`
-      }
-
-      //onclick classList
-      document.addEventListener('click', function(){
-      img.classList.add('meuimg');
-      });
-
-      # Images 3
-
-      //create img -loop-img-button-click
-      //html
-      <button onclick=
-        "show_image('https://www.w3schools.com/jsref/klematis.jpg',
-                    500,
-                    500,
-                    'Google Logo');">Add Google Logo</button>
-
-      //js
-      function show_image(src, width, height, alt) {
-      var img = document.createElement("img");
-      img.src = src;
-      img.width = width;
-      img.height = height;
-      img.alt = alt;
-
-            // This next line will just add it to the <body> tag
-            document.body.appendChild(img);
-
-      };
-
-      ```
+  //onclick classList
+  document.addEventListener('click', function(){
+  img.classList.add('meuimg');
+  })
+  # Images
+  //create img -loop-img-button-click
+  //html
+  <button onclick=
+    "show_image('https://www.w3schools.com/jsref/klematis.jpg',
+                500,
+                500,
+                'Google Logo');">Add Google Logo</button
+  //js
+  function show_image(src, width, height, alt) {
+  var img = document.createElement("img");
+  img.src = src;
+  img.width = width;
+  img.height = height;
+  img.alt = alt
+        // This next line will just add it to the <body> tag
+        document.body.appendChild(img)
+  }
+  ```
