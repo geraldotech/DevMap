@@ -19,8 +19,10 @@
   - [getElementById {direct way}](#get-a-element-by-id-direct-way)
   - [createElement, createTextNode, textContent, append vs appendChild](#domcreateel)
   - [getElement[id,class,tagName,byName] and QuerySelector](getElements_idClasstagNameQuerySelector.md)
+
     <details>
     <summary>getAttributes,createElement ,set ,has ,remove...classList.add.contains</summary>
+
     - 1 [createAttr,getAttr,removeAttr](./assets/thread/create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
     - 2 [hasAttribute_setAttribute](./assets/thread/hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
     - 3 [setAttribute_vs_classList](./assets/thread/setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
