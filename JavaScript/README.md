@@ -261,12 +261,6 @@ const log = (x) => {
 </details>
 
 <details>
-<summary>document.forms - preventDefault</summary>
-<a href="./assets/thread/forms.md">forms.md</a>
-
-</details>
-
-<details>
 <summary>createElement, createTextNode, textContent, append vs appendChild</summary>
 
 [Moved to: Learn DOM Manipulation In 18 Minutes](https://github.com/geraldotech/DevMap/blob/main/JavaScript/assets/thread/Learn-DOM-Manipulation/main.js)

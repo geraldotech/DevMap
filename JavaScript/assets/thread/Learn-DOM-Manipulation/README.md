@@ -1,0 +1,1 @@
+createElement, createTextNode, querySelector, append-Child, remove(), append(), removeChild, getAttribute, setAttr, removeAttr, classList.add and .remove, classList.toggle, style, href, dataset, #myid.newid, #myid.title,

@@ -5,7 +5,9 @@
 - [this]("./this.md")
 - [window-and-document](#window-and-document)
 - [window](#window)
+  - [onbeforeunload.html](./onbeforeunload.html)
 - [document](#document)
+  - [document.forms.md - preventDefault](./assets/thread/forms.md)
 - [getElementById {direct way}](#get-a-element-by-id-direct-way)
 - [dom-events](#dom---events)
   - [onclick](#onclick)
@@ -15,8 +17,6 @@
 - [onload-vs-onreadystatechange-vs-domcontentloaded](onload-vs-onreadystatechange-vs-domcontentloaded)
 - [javascript:void(0)](#javascriptvoid0)
 - [CSS Object Model](./CSSOM/README.md)
-- [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
-- [onbeforeunload.html](./Learn-DOM-Manipulation/onbeforeunload.html)
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
 - [useful-links](#useful-links)
 

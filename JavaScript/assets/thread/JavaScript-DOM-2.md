@@ -7,11 +7,12 @@
   - [target-custom-attr-data](#target-custom-attr-data)
   - [target-vs-currenttarget](#target-vs-currenttarget)
   - [Contains (e.target)](#contains "e.target")
-  - [Web Components](./Web-Components)
 - <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">hoisting</a>
+- [Web Components](./Web-Components)
 - [Regex - Expressões Regulares](./Regex/README.md)
-
-<hr>
+- [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
+  - [createElement, createTextNode, textContent, append vs appendChild](#domcreateel)
+  <hr>
 
 ### addEventListener
 
@@ -169,3 +170,6 @@ document.addEventListener("click", function (e) {
   }
 });
 ```
+
+- ### createElement, createTextNode, textContent, append vs appendChild
+  <a id="domcreateel"></a>
