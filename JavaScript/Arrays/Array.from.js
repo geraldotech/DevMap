@@ -79,3 +79,14 @@ function check() {
 }
  */
 }
+
+// Array.from[...] loop
+
+function test() {
+  const star = (_, id) => {
+    console.log(`hello`, id + 1); //hello 1,2,3,4,5
+  };
+  return Array.from({ length: 5 }, star);
+}
+
+test();

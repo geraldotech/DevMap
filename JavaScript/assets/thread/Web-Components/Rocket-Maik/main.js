@@ -7,46 +7,80 @@ class BlogPost extends HTMLElement {
   build() {
     console.log(`build importada`);
     const shadow = this.attachShadow({ mode: "open" });
-    shadow.appendChild(this.styles(), this.createRater());
+
+    shadow.appendChild(this.styles());
+
+    const rater = this.createRater();
+    this.stars = this.createStars();
+
+    this.stars.forEach((star) => rater.appendChild(star));
+
+    shadow.appendChild(rater);
   }
 
   createRater() {
     const rater = document.createElement("div");
     rater.classList.add("start-rater");
+
     return rater;
   }
 
-  createStars(_, id) {
-    const createStar = () => {
+  createStars() {
+    const createStar = (_, id) => {
       const star = document.createElement("span");
-      star.classList("star");
+      star.classList.add("star");
       star.setAttribute("data-value", Number(id) + 1);
+      star.innerHTML = "&#9733;";
+
+      star.addEventListener("click", this.setRating.bind(this)); //bind - trazer de volta o this do obj principal
+      star.addEventListener("mouseover", this.ratingHover.bind(this)); //bind - trazer de volta o this do obj principal
+      return star;
     };
     return Array.from({ length: 5 }, createStar);
+  }
+
+  setRating(event) {
+    this.setAttribute(
+      "data-rating",
+      event.currentTarget.getAttribute("data-value")
+    );
+  }
+
+  ratingHover(event) {
+    this.currentRatingValue = event.currentTarget.getAttribute("data-value");
+    console.log(this.currentRatingValue);
+    this.hightlighRating();
+  }
+
+  hightlighRating() {
+    this.stars.forEach((star) => {
+      star.style.color =
+        this.currentRatingValue >= star.getAttribute("data-value")
+          ? "yellow"
+          : "gray";
+    });
   }
 
   styles() {
     const style = document.createElement("style");
     style.textContent = `
-        .start-rater {
-            background-color: #f00;
-        }      
-        h1{
-            color: coral;
-        }
+    span{
+        color: dodgerblue;
+        font-size: 2rem;
+    }
+    .star {
+        font-size: 5rem;
+        cursor:pointer;
+    }      
+     h1{
+         color: coral;
+    }
+    .active{
+        color: yellow;
+    }
     `;
     return style;
   }
 }
 
 customElements.define("mycomp-1", BlogPost);
-
-const Bye = document.querySelector("#bye");
-
-console.log(Bye.dataset);
-console.log(Bye.dataset.test);
-
-Bye.dataset.forca = "1";
-
-const attr = document.querySelector("span[data-test='2']");
-console.log(attr);
