@@ -12,6 +12,7 @@
 - [Regex - Expressões Regulares](./Regex/README.md)
 - [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
 
+  - [getElementById {direct way}](#get-a-element-by-id-direct-way)
   - [createElement, createTextNode, textContent, append vs appendChild](#domcreateel)
   - [getElement[id,class,tagName,byName] and QuerySelector](getElements_idClasstagNameQuerySelector.md)
     <details>
@@ -182,6 +183,29 @@ el.addEventListener("click", function (e) {
     }
   });
   ```
+
+# Learn DOM Manipulation
+
+- ### Get a Element by ID direct way:
+
+Todo ID declarado no document é elevado ao scopo global, então é possível chamar diretamente:
+
+```js
+<div id="fibra">Speed</div>;
+
+console.log(window.fibra); // div#fibra
+console.log(fibra); // div#fibra - todos os outros objetos acessíveis pelo espaço global
+```
+
+apesar de funcionar prefira a boa pratica na page README em <ins>getElements and querySelector</ins>
+
+//👉 Get html content
+
+```js
+<p id="foo">JavaScript</p>;
+const p = document.getElementById("foo");
+console.log(p); //check output on console
+```
 
 - ### createElement, createTextNode, textContent, append vs appendChild
 
