@@ -76,7 +76,7 @@ class TodoItem extends HTMLElement {
 customElements.define("todo-item", TodoItem);
 ```
 
-### this.addEvent...
+- this.addEvent...
 
 ```js
 class TodoItem extends HTMLElement {
@@ -102,5 +102,11 @@ class TodoItem extends HTMLElement {
 }
 customElements.define("todo-item", TodoItem);
 ```
+
+&nbsp;
+
+&nbsp;
+
+### Links:
 
 - [Web Dev Simplified](https://www.youtube.com/watch?v=2I7uX8m0Ta0)
