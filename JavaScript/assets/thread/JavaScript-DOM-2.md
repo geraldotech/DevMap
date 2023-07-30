@@ -13,7 +13,7 @@
 - [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
 
   - [createElement, createTextNode, textContent, append vs appendChild](#domcreateel)
-  - [getElement[id,class,tagName,byName] and QuerySelector](./assets/thread/getElements_idClasstagNameQuerySelector.md)
+  - [getElement[id,class,tagName,byName] and QuerySelector](getElements_idClasstagNameQuerySelector.md)
     <details>
     <summary>getAttributes,createElement ,set ,has ,remove...classList.add.contains</summary>
     - 1 [createAttr,getAttr,removeAttr](./assets/thread/create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
