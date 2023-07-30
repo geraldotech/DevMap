@@ -11,7 +11,7 @@
   - [target-vs-currenttarget](#target-vs-currenttarget)
   - [Contains (e.target)](#contains "e.target")
   - [currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
-- <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">hoisting</a>
+- <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">Hoisting</a>
 - [Web Components](./Web-Components)
 - [Regex - Expressões Regulares](./Regex/README.md)
 - [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)

@@ -6,8 +6,8 @@
 
 ## Threads
 
-- [JavaScript-DOM.md"](./assets/thread/JavaScript-DOM.md)
-- [JavaScript-DOM2.md"](./assets/thread/JavaScript-DOM-2.md)
+- [JavaScript-DOM.md](./assets/thread/JavaScript-DOM.md)
+- [JavaScript-DOM2.md](./assets/thread/JavaScript-DOM-2.md)
 
 ## Cheats and examples
 
@@ -420,13 +420,6 @@ document.head.insertAdjacentHTML(
   "<link rel=stylesheet href=/foo.css>"
 );
 ```
-
-</details>
-
-<details>
-<summary>getElement[id,class,tagName,byName] and QuerySelector</summary>
-
-[idClasstagNamebyNameQuerySelector.md](./assets/thread/getElements_idClasstagNameQuerySelector.md)
 
 </details>
 
