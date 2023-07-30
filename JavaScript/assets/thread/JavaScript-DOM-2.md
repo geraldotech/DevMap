@@ -1,7 +1,9 @@
 ### JavaScript 2
 
-- [addEventListener](#addeventlistener)
-- [addEventListener-with-target](#addeventlistener-with-target)
+- [DOM events](#dom---events)
+  - [onclick](#onclick)
+  - [addEventListener](#addeventlistener)
+  - [addEventListener-with-target](#addeventlistener-with-target)
 - [Pointer Events](#pointerevents)
   - [target-custom-attr-data](#target-custom-attr-data)
   - [target-vs-currenttarget](#target-vs-currenttarget)
@@ -27,7 +29,89 @@
 
   <hr>
 
-### addEventListener
+## DOM - Events
+
+- HTML DOM Events Attribute: `on + event_name` [DOM - Attributes](https://www.w3schools.com/tags/ref_eventattributes.asp)
+- JS Event: `addEventListener("event", function(e){...})` - [DOM - Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
+> > mais comuns
+
+- click | onclick
+- change | onchange
+- mousemove | onmousemove
+- mouseover | onmouseover
+- mouseleave | onmouseleave
+- keypress | onkeypress
+- input | oninput
+- error | on..
+
+  - ### onclick
+
+```js
+<form name="credito">credito</form>;
+
+document.credito.onclick = function (event) {
+  console.log(event);
+};
+
+//onclick Event and target
+document.credito.onclick = function (event) {
+  console.log(event.target); // <form name="credito">credito</form>
+};
+// call fun with addEvent...
+input.addEventListener("click", handler);
+
+// call fun with on[event]...
+input.onclick = handler;
+
+// call fun and get Obj event[e]
+btn.onclick = headerx;
+
+function headerx() {
+  console.log(`click`, event);
+}
+function headerx(e) {
+  console.log(`click`, e);
+}
+```
+
+- get PointerEvent e.g simples, outros consultar a page README
+- formas de chamar uma function com `onclick`
+
+```js
+<button onclick="btn()">btn1</button>
+<button id="btn2">btn2</button>
+<button name="btn3">btn3</button>
+
+//onclick in html
+function btn(){
+  alert("hello");
+}
+
+//direct
+const btn2 = document.getElementById("btn2").onclick = function (){
+  alert("hello");
+}
+
+//button name
+const btn3 = document.querySelector("button[name='btn3']");
+btn3.onclick = function (){
+  alert("hello");
+}
+
+//inline
+<button onclick="console.log(`gge`)">gge</button>
+//chama o javascript sem reload page
+<a href="javascript:console.log('javascript')">Link</a>
+<a    id="color"
+      href="javascript:void(document.getElementById('color').style.backgroundColor = `green`)">Color</a>
+
+  <button onclick="document.getElementById(`res`).textContent = `okay`">
+      Okay
+    </button>
+```
+
+- ### addEventListener
 
 ```js
 //Register the addEventListener on document.click...
@@ -72,7 +156,7 @@ document.addEventListener("mousemove", function(event){
 });
 ```
 
-### addEventListener with target
+- ### addEventListener with target
 
 ```js
 <p id="bar">TypeScript</p>;
@@ -98,7 +182,7 @@ console.log(event.target.getAttribute("data")); //eu
 console.log(event.target.value); //only for input radio/checkbox
 ```
 
-- ### PointerEvents
+# PointerEvents
 
 ```js
 <p id="bar">TypeScript</p>;
