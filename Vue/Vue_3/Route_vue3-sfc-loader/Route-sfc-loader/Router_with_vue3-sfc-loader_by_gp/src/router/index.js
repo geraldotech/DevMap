@@ -1,3 +1,5 @@
+import { options, loadModule } from "../sfc-loader.js";
+
 const Home = { template: `<div class="home">Home page!</div>` };
 const About = {
   template: `<div>route About similar a TabSelector <a href="https://codepen.io/geraldopcf/pen/WNJpPOG" target="_blank">codepen</a></div>`,
