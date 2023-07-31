@@ -1,4 +1,4 @@
-import rotas from "./rotas.js";
+import rotas from "../src/router/index.js";
 
 new Vue({
   el: "#app",

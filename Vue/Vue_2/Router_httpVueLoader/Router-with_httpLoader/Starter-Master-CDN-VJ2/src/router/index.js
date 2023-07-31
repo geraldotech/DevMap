@@ -1,4 +1,4 @@
-import Home from "./views/home.js";
+import Home from "../views/home.js";
 
 const test = {
   template: `<p>Apenas uma rota de tests!</p>`,
@@ -21,7 +21,7 @@ const routes = [
 
 const router = new VueRouter({
   routes: routes,
-  base: "#",
+  // base: "#",
 });
 
 export default router;

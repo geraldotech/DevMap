@@ -1,4 +1,4 @@
-import router from "./rotas.js";
+import router from "../src/router/index.js";
 
 const app = Vue.createApp({
   data() {
