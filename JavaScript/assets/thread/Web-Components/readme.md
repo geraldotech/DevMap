@@ -1,5 +1,7 @@
 <h1 align="center">Web Components</h1>
 
+> Vanilla Web Components
+
 ### Basic Web Component
 
 ```js
@@ -105,7 +107,33 @@ class TodoItem extends HTMLElement {
 customElements.define("todo-item", TodoItem);
 ```
 
-- this.addEvent... and this...
+- template outsite of class...
+
+```js
+const template = document.createElement("template");
+template.innerHTML = `
+  <style>
+  h1{
+    color: coral;
+    text-decoration: underline;
+  }
+  </style>
+  <section>
+  <h1>Hello from Template Web Components</h1>
+  <h2>interno</h2>
+  </section>
+`;
+class BlogArticle extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: "open" });
+    shadow.append(template.content);
+  }
+}
+customElements.define("article-1", BlogArticle);
+```
+
+- this.onclick... and this...
 
 ```js
 class TodoItem extends HTMLElement {
@@ -215,6 +243,85 @@ class BlogPost extends HTMLElement {
 }
 
 customElements.define("mycomp-1", BlogPost);
+```
+
+- Using custom `methods and bing(this)` [REF](https://youtu.be/fZZAt0Sbz5k?t=2335)
+
+```js
+class StartRater extends HTMLElement {
+  constructor() {
+    super();
+
+    const shadow = this.attachShadow({ mode: "open" });
+    //adiciona os styles and o conteudo
+    shadow.append(this.styles(), this.conteudo());
+    this.funcoes();
+  }
+
+  styles() {
+    const style = document.createElement("style");
+    style.textContent = `
+        h1 {
+            color: coral;
+        }
+    `;
+    return style;
+  }
+  conteudo() {
+    const template = document.createElement(`template`);
+    template.innerHTML = `
+    <div>
+      <h1>Hello from templates</h1>    
+      <h2>Hello from templates</h2>
+
+      <button>Button here</button>
+
+      <footer>
+        <p>MyFooter</p>
+      </footer>
+
+      <aside>
+        <p>Aside 1</p>
+      </aside>
+
+      <article>
+        <p>Article start here....</p>
+      <article>
+    </div>
+    `;
+    return template.content;
+  }
+  funcoes() {
+    const h1 = this.shadowRoot.querySelector("h1");
+    h1.textContent = "Hello from methods";
+    h1.onclick = function () {
+      console.log(`click no h1`);
+    };
+    this.shadowRoot.querySelector("button").onclick = () => {
+      alert(`button click`);
+    };
+    this.shadowRoot.querySelector("footer").onclick = this.footer.bind(this);
+
+    this.shadowRoot.querySelector("aside").onclick = this.faside;
+    this.shadowRoot.querySelector("article").onclick = this.faside.bind(this);
+  }
+
+  footer() {
+    return (this.shadowRoot.querySelector("footer").innerHTML = "foox");
+  }
+
+  //context this
+
+  faside() {
+    console.log(this); // <aside></aside>
+  }
+  //mais se quiser o this do parent component, chamada acionar this.myfun.bind(this)
+  farticle() {
+    console.log(this);
+  }
+}
+
+customElements.define("maceio-al", StartRater);
 ```
 
 # Lifecycle Hooks
