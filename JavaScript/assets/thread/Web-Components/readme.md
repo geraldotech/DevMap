@@ -254,7 +254,7 @@ class StartRater extends HTMLElement {
 
     const shadow = this.attachShadow({ mode: "open" });
     //adiciona os styles and o conteudo
-    shadow.append(this.styles(), this.conteudo());
+    shadow.append(this.styles(), this.conteudo(), this.myinput());
     this.funcoes();
   }
 
@@ -263,6 +263,12 @@ class StartRater extends HTMLElement {
     style.textContent = `
         h1 {
             color: coral;
+        }
+        .web{
+          color: #f9265e;
+        }
+        .container{
+          border: 1px solid;
         }
     `;
     return style;
@@ -274,7 +280,7 @@ class StartRater extends HTMLElement {
       <h1>Hello from templates</h1>    
       <h2>Hello from templates</h2>
 
-      <button>Button here</button>
+      <button type="reset">Button here</button>
 
       <footer>
         <p>MyFooter</p>
@@ -287,6 +293,8 @@ class StartRater extends HTMLElement {
       <article>
         <p>Article start here....</p>
       <article>
+
+    
     </div>
     `;
     return template.content;
@@ -315,9 +323,43 @@ class StartRater extends HTMLElement {
   faside() {
     console.log(this); // <aside></aside>
   }
-  //mais se quiser o this do parent component, chamada acionar this.myfun.bind(this)
+  //mais se quiser o this do parent component, chamada acionar this.myfun.bind()
   farticle() {
     console.log(this);
+  }
+  myinput() {
+    const div = document.createElement("div");
+    const h1 = document.createElement("h1");
+    const p = document.createElement("p");
+    const input = document.createElement("input");
+
+    input.setAttribute("type", "text");
+    input.placeholder = "text here";
+    input.value = "";
+    input.oninput = () => {
+      p.textContent = input.value;
+      if (input.value == 1) {
+        console.log(`one`);
+      }
+
+      this.verificainput(input.value); //externo method
+    };
+
+    div.classList.add("container");
+
+    h1.classList.add("web");
+    h1.textContent = "input Component";
+
+    div.appendChild(h1);
+    div.appendChild(input);
+    div.appendChild(p);
+    return div;
+  }
+  //externo method
+  verificainput(val) {
+    if (val == 2) {
+      console.log(`two`);
+    }
   }
 }
 
