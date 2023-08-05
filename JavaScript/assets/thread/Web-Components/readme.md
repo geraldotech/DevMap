@@ -245,7 +245,7 @@ class BlogPost extends HTMLElement {
 customElements.define("mycomp-1", BlogPost);
 ```
 
-- Using custom `methods and bing(this)` [REF](https://youtu.be/fZZAt0Sbz5k?t=2335)
+- Using custom `methods and bind(this)` [REF](https://youtu.be/fZZAt0Sbz5k?t=2335)
 
 ```js
 class StartRater extends HTMLElement {
