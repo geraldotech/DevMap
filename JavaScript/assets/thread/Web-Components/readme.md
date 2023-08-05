@@ -15,17 +15,17 @@ customElements.define("todo-item", TodoItem);
 
 - on html call: `<todo-item></todo-item>`
 
-- Get custom text: `<todo-item>Hello</todo-item>`
+  - Get custom text: `<todo-item>Hello</todo-item>`
 
-```js
-class TodoItem extends HTMLElement {
-  constructor() {
-    super();
-    this.innerHTML = `<h3>${this.innerText}</h3>`;
+  ```js
+  class TodoItem extends HTMLElement {
+    constructor() {
+      super();
+      this.innerHTML = `<h3>${this.innerText}</h3>`;
+    }
   }
-}
-customElements.define("todo-item", TodoItem);
-```
+  customElements.define("todo-item", TodoItem);
+  ```
 
 ### ShadowDOM
 
@@ -36,7 +36,17 @@ class TodoItem extends HTMLElement {
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: "open" });
-    shadow.innerHTML = ` <style> p{ color: orange; } </style> <p>shadow</p>`;
+
+    console.warn(shadow); // get shadowRoot #document-fragment
+    console.log(this); //open the component discovery-item structure
+
+    shadow.innerHTML = `
+      <style> 
+      p { 
+        color: orange; 
+        } 
+      </style> 
+      <p>shadow</p>`;
   }
 }
 customElements.define("todo-item", TodoItem);
@@ -50,19 +60,22 @@ class Discovery extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = `
-    <style>
-        h1{
-            color: dodgerblue;
-        }
-    </style>
-    <h1>Hello from Discovery</h1>
-    `;
+        <style>
+            h1{
+                color: dodgerblue;
+            }
+        </style>
+        <h1>Hello from Discovery</h1>
+        `;
+
+    console.log(this); //open the component discovery-item structure
+    console.warn(this.shadowRoot); // get shadowRoot #document-fragmenttree.
   }
 }
 customElements.define("discovery-item", Discovery);
 ```
 
-- Using querySelector[select DOM elements]
+- Using querySelector[select DOM elements] to change text:
 
 ```js
 // inside constructor(){... }
@@ -74,11 +87,17 @@ this.shadowRoot.querySelector("h1").innerText = `new text here`;
 ```js
 class TodoItem extends HTMLElement {
   constructor() {
+    super();
     //create a template
     const template = document.createElement("template");
-    template.innerHTML = ` <style> p{ color: orange; } </style> <p>shadow</p>`;
+    template.innerHTML = `
+    <style> 
+    p { 
+      color: orange; 
+    } 
+    </style> 
+    <p>shadow</p>`;
 
-    super();
     const shadow = this.attachShadow({ mode: "open" });
     shadow.append(template.content);
   }
@@ -86,22 +105,25 @@ class TodoItem extends HTMLElement {
 customElements.define("todo-item", TodoItem);
 ```
 
-- this.addEvent...
+- this.addEvent... and this...
 
 ```js
 class TodoItem extends HTMLElement {
   constructor() {
+    super();
     const template = document.createElement("template");
     template.innerHTML = `
     <style>
-    p{
+    p {
         color: orange;
     }
     </style>
     <p>Using shadowDOM and templates</p>
     `;
-    super();
-    console.log(this); //ref a TodoItem
+    //this ref the component `TodoItem`
+    console.log(this);
+    console.log(this.innerText == "A"); //ref a TodoItem
+
     this.onclick = function () {
       console.log(`click`);
     };
@@ -114,6 +136,8 @@ customElements.define("todo-item", TodoItem);
 ```
 
 # Methods:
+
+- shadow.append(...)
 
 ```js
 class StartRater extends HTMLElement {
@@ -128,7 +152,7 @@ class StartRater extends HTMLElement {
   styles() {
     const style = document.createElement("style");
     style.textContent = `
-        h1{
+        h1 {
             color: coral;
         }
     `;
@@ -176,9 +200,9 @@ class BlogPost extends HTMLElement {
   styles() {
     const style = document.createElement("style");
     style.textContent = `
-       h1{
+       h1 {
            color: coral;
-       }
+        }
    `;
     return style;
   }
@@ -201,34 +225,54 @@ customElements.define("mycomp-1", BlogPost);
 class BlogPost extends HTMLElement {
   constructor() {
     super();
+  }
+  connectedCallback() {
+    console.log(`connected Hook`);
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.innerHTML = `
+    <style> 
+        h1{
+            color: dodgerblue;
+        }
+    </style>
+    <h1>Hello using connectedCallback()</h1>
+    `;
+  }
+}
 
-    const shadow = this.attachShadow({ mode: "open" });
-    //adiciona os styles and o conteudo
-    shadow.append(this.styles(), this.conteudo());
+customElements.define("mycomp-1", BlogPost);
+```
+
+- call methods:
+
+```js
+class BlogPost extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    console.log(`connected Hook`);
+    //✨ Using this and const
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.append(this.conteudo(), this.styles());
+
+    // const shadow = this.attachShadow({ mode: "open" });
+    // shadow.append(this.styles(), this.conteudo());
   }
 
   styles() {
     const style = document.createElement("style");
     style.textContent = `
-        .start-rater {
-            background-color: #f00;
-        }      
-        h1{
-            color: coral;
-        }
-    `;
+          .start-rater {
+              background-color: #f00;
+          }      
+          h1{
+              color: coral;
+          }
+      `;
     return style;
   }
   conteudo() {
-    //mode 1 direct
-    //this.shadowRoot.innerHTML = `<h1>Interno</h1>`;
-
-    //mode 2 create elements
-    /* const h1 = document.createElement(`h1`);
-    h1.innerHTML = `Welcome - Internal`;
-    return h1; */
-
-    //mode 3 templates or div
     const template = document.createElement(`template`);
     template.innerHTML = `<h1>Hello from templates</h1>`;
     return template.content;
@@ -238,7 +282,7 @@ class BlogPost extends HTMLElement {
 customElements.define("mycomp-1", BlogPost);
 ```
 
-This case como se trava de um Hook o mesmo será chamado novamente, evitar isso...
+This case como se trata de um `Hook` o mesmo será chamado novamente, evitar isso...
 ` this.shadowRoot.append(this.connectedCallback());`
 
 # slots
@@ -278,7 +322,3 @@ This case como se trava de um Hook o mesmo será chamado novamente, evitar isso.
 
 - [Web Dev Simplified](https://www.youtube.com/watch?v=2I7uX8m0Ta0)
 - [Using_shadow_DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
-
-```
-
-```

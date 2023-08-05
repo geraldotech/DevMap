@@ -8,7 +8,7 @@ class ExpandableList extends HTMLUListElement {
         color: purple;
     }
     </style>
-    <h1>Title</h1>
+    <h1>Expandable List</h1>
     `;
     this.appendChild(this.div);
     /*  this.template = document.createElement("template");
