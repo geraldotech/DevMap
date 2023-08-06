@@ -102,7 +102,7 @@ Vue.prototype.$cdnimg23 = "https://gpnotes.droppages.com/geraldox.proxyfiles.com
 
  ```js
  //main.js
-  Vue.mixin({
+Vue.mixin({
   data: function() {
     return {
       imgmix:'https://gpnotes.droppages.com/geraldox.proxyfiles.com/2022/img',
