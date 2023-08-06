@@ -93,7 +93,7 @@ Vue.prototype.$cdnimg23 = "https://gpnotes.droppages.com/geraldox.proxyfiles.com
 
 //binding
 <figure>
-        <img :src="`${$cdnimg23}/vuejs.png`" alt="">
+        <img :src="`${$cdnimg23}/vuejs.png`" alt="" />
 </figure>
 
 ```
