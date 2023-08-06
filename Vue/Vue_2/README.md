@@ -102,16 +102,16 @@ Vue.prototype.$cdnimg23 = "https://gpnotes.droppages.com/geraldox.proxyfiles.com
 
  ```js
  //main.js
- Vue.mixin({
+  Vue.mixin({
   data: function() {
     return {
-      globalVar:'global using mixin'
+      imgmix:'https://gpnotes.droppages.com/geraldox.proxyfiles.com/2022/img',
     }
   }
 })
 
 //Components.vue
-  <h2>{{globalVar}}</h2>
+  <h2>{{imgmix}}</h2>
 
   <figure>
      <img :src="imgmix+'/vuejs.png'" alt="">
