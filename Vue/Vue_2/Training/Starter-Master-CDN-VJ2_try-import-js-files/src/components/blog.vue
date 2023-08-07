@@ -26,11 +26,13 @@
      <img :src="`${imgmix}/vuejs.png`" alt="">
     </figure>
 
+    <hr>
+    <h1>{{globalReadOnlyProperty}}</h1>
+
   </div>
 </template>
 <script>
 module.exports = {
-  mounted() {},
   name: "blog",
   components: {
     Nvige: httpVueLoader("../components/test2.vue"),

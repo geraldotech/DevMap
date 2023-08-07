@@ -21,4 +21,12 @@ module.exports = {
   },
 };
 </script>
+<style scoped>
+footer{
+  position: absolute;
+  bottom: 0;
+  min-height: 30px;
+  
+}
+</style>
 

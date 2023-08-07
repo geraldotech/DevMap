@@ -4,7 +4,7 @@
     <router-view></router-view>
     <Computed></Computed>
     <Blog></Blog>
-    <Foo></Foo>
+    
 
   </div>
 </template>
@@ -14,7 +14,7 @@ module.exports = {
      
   },
   created() {
- 
+      this.pronto()
   },
   data() {
     return {
@@ -31,7 +31,6 @@ module.exports = {
   methods: {
     
   },
-  ready() {},
 };
 </script>
 

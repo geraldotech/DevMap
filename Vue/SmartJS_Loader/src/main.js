@@ -3,7 +3,7 @@ import SmartLoader from "./smartLoader.js";
 SmartLoader("https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js");
 SmartLoader("https://unpkg.com/vue-router@3.0.2/dist/vue-router.js");
 SmartLoader("https://unpkg.com/http-vue-loader");
-SmartLoader("./src/test.js");
+SmartLoader("./src/test.js", "module");
 
 window.onload = function () {
   const Home = {
@@ -26,7 +26,7 @@ window.onload = function () {
       welcome: "welcome",
     },
     components: {
-      App: httpVueLoader("./src/app.vue"),
+      App: httpVueLoader("../src/App.vue"),
     },
     template: `<App/>`,
   });

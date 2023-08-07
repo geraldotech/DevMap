@@ -124,3 +124,5 @@ console.log(Aircrafts);
 
 - `Alpha`
 - `A320 Airbus A380, Boeing 747, Airbus A340, Boeing 777`
+
+- e.g functions params: [https://javascript.info/modules-intro](https://javascript.info/modules-intro)

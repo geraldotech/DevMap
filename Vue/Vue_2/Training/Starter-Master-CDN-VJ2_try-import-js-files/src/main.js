@@ -13,13 +13,18 @@ Vue.mixin({
   }
 })
 
+Vue.mixin({
+  data: function() {
+    return {
+      get globalReadOnlyProperty() {
+        return "https://gpnotes.droppages.com/geraldox.proxyfiles.com";
+      }
+    }
+  }
+})
+
+
 const vm = new Vue({
-    created: function() {
-      this.globalReadOnlyProperty = "This won't change it";
-  },
-  get globalReadOnlyProperty() {
-    return "Can't change me!";
-  },
   data: {},
   el: "#app",
   template: `<App></App>`,
