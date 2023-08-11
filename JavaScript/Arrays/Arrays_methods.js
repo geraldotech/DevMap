@@ -149,8 +149,16 @@ console.log(arr.sort((a ,b) => a - b))
 function ordem(a, b){
   return a - b
 }
+console.log(arr.sort(ordem));
 
-console.log(arr.sort(ordem))
+//alternative thanks (Gi)
+function ordem(a, b){
+  if(a > b) return 1
+  if(a < b) return -1
+  return 0
+}
+
+console.log(arr.sort(ordem));
 
 
 

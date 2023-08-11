@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="text" value="gmap" />
+    <input type="age" value="30" />
+    <button>save</button>
+
+    <button onclick="cleanStorage()">Clear Storage</button>
+
+    <p id="showdados"></p>
+
+    <script>
+      const input = document.querySelector("input");
+      const age = document.querySelector("input[type='age']");
+      const saveButton = document.querySelector("button");
+
+      let itens = [];
+
+      saveButton.onclick = SaveItenstoArr;
+
+      function SaveItenstoArr() {
+        //coloca todos os itens  no arr
+        itens.push(input.value, age.value);
+
+        //set
+        localStorage.setItem("todos", JSON.stringify(itens));
+
+        getdados(); //update console
+        updateDOM(); //update DOM
+
+        //clean the values
+        cleaninputs();
+      }
+
+      function getdados() {
+        console.log(JSON.parse(localStorage.getItem("todos")));
+        console.warn("array", itens);
+      }
+      getdados();
+
+      function updateDOM() {
+        const dados = document.querySelector("#showdados");
+        dados.innerHTML = JSON.parse(localStorage.getItem("todos"));
+      }
+      updateDOM();
+
+      //Object amd localStorage.key
+      console.log(Object.entries(localStorage));
+      console.log(localStorage.key(0) == "todos"); // true
+
+      for (let i = 0; i < localStorage.length; i++) {
+        console.log(localStorage.key(i));
+      }
+
+      function cleanStorage() {
+        localStorage.clear();
+        cleaninputs();
+      }
+
+      function cleaninputs() {
+        input.value = "";
+        age.value = "";
+      }
+    </script>
+  </body>
+</html>
