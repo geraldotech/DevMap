@@ -60,8 +60,11 @@ const blog = [
 ];
 
 function getPosts(n) {
-  //filter and verifica object are publicados
-  let published = blog.filter((val) => val.published).slice(0, n);
+  //filter and verifica object are publicados, slice[limita] and reverse
+  let published = blog
+    .filter((val) => val.published)
+    .slice(0, n)
+    .reverse();
 
   return (post.innerHTML = published
     .map((val) => {
@@ -84,6 +87,6 @@ btn.onclick = function (e) {
 document.querySelector("button[value='100']").onclick = (e) => {
   getPosts(e.target.value);
 };
-document.querySelector("button[value='1']").onclick = (e) => {
+document.querySelector("button[value='2']").onclick = (e) => {
   getPosts(e.target.value);
 };
