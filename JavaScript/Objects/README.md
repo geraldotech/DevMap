@@ -65,13 +65,55 @@ geraldo.travel = ["Maceio", "Rio"];
 delete geraldo.name;
 ```
 
-### constructor
+### e.g
 
-[https://www.w3schools.com/js/js_object_constructors.asp](https://www.w3schools.com/js/js_object_constructors.asp);
+```js
+const person = {
+  name: "Geraldo",
+  age: 29,
+  city: "Maceio",
+};
+console.log(person);
+
+//concatenar
+document.write(person.name + " mora na cidade de " + person.city);
+
+//concatenar
+document.getElementById("objeto2").innerHTML =
+  person.name + " idade atual: " + person.age;
+
+//multiple variables in one line
+const persons = {
+  nome: "Geraldo",
+  surname: "Filho",
+};
+
+console.log(persons.nome);
+console.log(persons.surname);
+
+//shorthand atribuir a uma const
+const { nome, surname } = persons;
+console.log(nome);
+console.log(surname);
+
+//show values and keys
+
+// ✨display `values` [can uso to show objects in HTML]: Geraldo,29,Maceio
+Object.values(person);
+
+// ✨display the `keys`name, age, city
+Object.keys(person);
+
+// ✨returns an array of a given object's own enumerable string-keyed property [key, value]
+Object.entries(person); // display values+keys name,Geraldo,age,29,city,Maceio
+
+// if tudo in JS is Object tente:
+
+console.log(Object.keys(window));
+console.log(Object.values(window)[2]); //#document
+```
 
 ### Object Methods
-
-###### object
 
 ```js
 const smart = {
@@ -110,8 +152,8 @@ for (const key in pessoas) {
 }
 
 //👉 o que fazer passar a key na chamada👍
-for (let values in pessoas) {
-  console.log(pessoas[values]);
+for (let key in pessoas) {
+  console.log(pessoas[key]);
 }
 //🔰 ah mais eu quero o id+value, simples só chamar a key de forma independente.
 for (let key in pessoas) {
@@ -121,9 +163,11 @@ for (let key in pessoas) {
 for (const key in pessoas) {
   p.innerHTML += key + ": " + pessoas[key];
 }
-//👉👉 beatuiful string literal: p.innerHTML += `${key} - ${pessoas[key]} `;
+//👉👉 beatiful string literal:
+p.innerHTML += `${key} - ${pessoas[key]} `;
+
 //👉render HTML Array[Objects] using `for in` and `for of` checkout Arrays > Blog_Settings2
-https://github.com/geraldotech/DevMap/blob/main/JavaScript/Arrays/Blog_Settings2/main.js
+//github.com/geraldotech/DevMap/blob/main/JavaScript/Arrays/Blog_Settings2/main.js
 
 //👉iterating over Array to get Index
 function getIndex(arr) {
@@ -164,45 +208,13 @@ for (const [key, val] of Object.entries(pessoas)) {
 }
 ```
 
-### e.g 2:
-
-```js
-const person = {
-  name: "Geraldo",
-  age: 29,
-  city: "Maceio",
-};
-console.log(person);
-
-//concatenar
-document.write(person.name + " mora na cidade de " + person.city);
-//concatenar
-document.getElementById("objeto2").innerHTML =
-  person.name + " idade atual: " + person.age;
-
-//show values and keys
-Object.values(person); // display `values` in HTML: Geraldo,29,Maceio
-Object.keys(person); // display the `keys`name, age, city
-// returns an array of a given object's own enumerable string-keyed property [key, value]
-Object.entries(person); // display values+keys name,Geraldo,age,29,city,Maceio
-
-//multiple variables in one line
-const persons = {
-  nome: "Geraldo",
-  surname: "Filho",
-};
-
-console.log(persons.nome);
-console.log(persons.surname);
-
-//shorthand atribuir a uma const
-const { nome, surname } = persons;
-console.log(nome);
-console.log(surname);
-```
-
 !important :arrow_right: LEITURA
 
+### constructor
+
+[https://www.w3schools.com/js/js_object_constructors.asp](https://www.w3schools.com/js/js_object_constructors.asp);
+
 - [difference-between-array-and-array-of-objects-in-javascript/](https://www.geeksforgeeks.org/difference-between-array-and-array-of-objects-in-javascript/);
+
 - [https://medium.com/@zac_heisey/objects-vs-arrays-42601ff79421](https://medium.com/@zac_heisey/objects-vs-arrays-42601ff79421#:~:text=Both%20objects%20and%20arrays%20are%20considered%20%E2%80%9Cspecial%E2%80%9D%20in%20JavaScript.,store%20a%20list%20of%20values.)s
 - [filter objects](<https://masteringjs.io/tutorials/fundamentals/filter-key#:~:text=JavaScript%20objects%20don%27t%20have,()%20function%20as%20shown%20below.>)
