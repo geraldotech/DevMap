@@ -140,6 +140,28 @@ for(i = 0; i < x.length; i++){
  //console.log(myarr.sort());
  console.log(ord);
 
+ const arr = [10,23,2,3,6,4,1];
+
+console.log(arr.sort());
+console.log(arr.sort((a ,b) => a - b))
+
+
+function ordem(a, b){
+  return a - b
+}
+console.log(arr.sort(ordem));
+
+//alternative thanks (Gi)
+function ordem(a, b){
+  if(a > b) return 1
+  if(a < b) return -1
+  return 0
+}
+
+console.log(arr.sort(ordem));
+
+
+
 
 //🟢 5 - The #shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
 const x = ['A', ' B', ' C',' D',' E'];

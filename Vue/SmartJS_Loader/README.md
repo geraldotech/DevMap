@@ -14,6 +14,10 @@ window.onload = function () {
 };
 ```
 
+Who vai import must be loaded like type module so:
+
+
+
 1. [https://smartjs-loader.netlify.app/](https://smartjs-loader.netlify.app/)
 2. [https://htmldom.dev/load-a-javascript-file-dynamically/](https://htmldom.dev/load-a-javascript-file-dynamically/)
 3. [https://www.kirupa.com/html5/loading_script_files_dynamically.htm](https://www.kirupa.com/html5/loading_script_files_dynamically.htm)

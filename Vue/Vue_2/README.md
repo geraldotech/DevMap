@@ -72,12 +72,55 @@ const vm = new Vue({
 });
 ```
 
-### this.root
-
+### this.root and this.{obj}
 ```js
 
 console.log(this.$root) same than console.log(vm);
+
+console.log(this.items) same than console.log(vm.items)
 ```
+
+### Global Var
+[global-variable-to-vuejs](https://stackoverflow.com/questions/40896261/apply-global-variable-to-vuejs)
+
+  - Vue.prototype
+```js
+//main.js
+Vue.prototype.$cdnimg23 = "https://gpnotes.droppages.com/geraldox.proxyfiles.com/2023/img";
+
+//AnyComponent.vue
+<p>{{$cdnimg23}}</p>
+
+//binding
+<figure>
+        <img :src="`${$cdnimg23}/vuejs.png`" alt="" />
+</figure>
+
+```
+
+ - using mixin Global
+
+ ```js
+ //main.js
+Vue.mixin({
+  data: function() {
+    return {
+      imgmix:'https://gpnotes.droppages.com/geraldox.proxyfiles.com/2022/img',
+    }
+  }
+})
+
+//Components.vue
+  <h2>{{imgmix}}</h2>
+
+  <figure>
+     <img :src="imgmix+'/vuejs.png'" alt="">
+  </figure>
+
+  <figure>
+     <img :src="`${imgmix}/vuejs.png`" alt="">
+  </figure>
+ ```
 
 ### Data na Vue instance declarar objects:
 

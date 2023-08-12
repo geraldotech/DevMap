@@ -1,7 +1,11 @@
-export default function SmartLoader(link) {
+export default function SmartLoader(link, type) {
   let script = document.createElement("script");
   script.src = link;
+ if(type){
+  script.setAttribute("type", "module");
+ } else{
   script.setAttribute("type", "text/javascript");
+ }
   script.async = false;
   document.head.appendChild(script);
 

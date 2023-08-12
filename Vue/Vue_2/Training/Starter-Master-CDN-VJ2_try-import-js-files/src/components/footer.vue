@@ -1,6 +1,8 @@
 <template>
   <footer>
     <p>{{ ab }}</p>
+
+
   </footer>
 </template>
 
@@ -9,6 +11,9 @@
  
 <script>
 module.exports = {
+  created(){
+    //console.log()
+  },
   data: function () {
     return {
       ab: "by gmapdev - footer.vue",
@@ -16,4 +21,12 @@ module.exports = {
   },
 };
 </script>
+<style scoped>
+footer{
+  position: absolute;
+  bottom: 0;
+  min-height: 30px;
+  
+}
+</style>
 

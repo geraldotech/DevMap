@@ -1,18 +1,25 @@
 <template>
-  <div>
+  <div>    
     <Menua></Menua>
     <router-view></router-view>
     <Computed></Computed>
+    <Blog></Blog>
+    
+
   </div>
 </template>
 <script>
 module.exports = {
-  created() {},
-
+  beforeCreate(){
+     
+  },
+  created() {
+      this.pronto()
+  },
   data() {
     return {
       Blogs: "Bestsmartphones",
-      optcom: ``,
+      optcom: ``,    
     };
   },
   components: {
@@ -21,8 +28,9 @@ module.exports = {
     Blog: httpVueLoader("../src/components/blog.vue"),
     Computed: httpVueLoader("../src/components/Computed.vue"),
   },
-  methods: {},
-  ready() {},
+  methods: {
+    
+  },
 };
 </script>
 
