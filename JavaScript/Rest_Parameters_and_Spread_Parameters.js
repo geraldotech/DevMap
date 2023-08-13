@@ -114,6 +114,36 @@ const person = { nome: "Geraldo", age: 30 };
 const card = { ...person, banco: "Amazonia", limite: 3000 };
 console.log(card);
 
+//📌clone and change values
+var obj1 = { foo: "bar", x: 42 };
+var obj2 = { foo: "baz", y: 13 };
+
+var clonedObj = { ...obj1 };
+clonedObj.x = 50;
+
+console.log(obj1);
+console.log(clonedObj);
+
+//HTMLCollection(4) clone
+```js
+<p class="1" id="a">one</p>
+<p class="1" id="b">two</p>
+<p class="1" id="c">three</p>
+<p class="1" id="d">four</p>
+
+
+const p = document.getElementsByClassName("1");
+
+[...p].forEach((v) => {
+  v.addEventListener("click", handler);
+});
+
+function handler(e) {
+  console.log(e.target.id);
+}
+
+```;
+
 /*clonar objetos com nomes iguais visitar
 https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/
 */

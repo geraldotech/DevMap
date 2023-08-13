@@ -4,4 +4,3 @@
 - getItem
 - removeItem
 - localStorage.clear()
-- localStorage.clear();

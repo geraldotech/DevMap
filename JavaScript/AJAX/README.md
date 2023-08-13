@@ -87,6 +87,36 @@ xhttp.open("GET", "./onclick.txt");
 xhttp.send();
 ```
 
+# Post Example:
+
+[REF](https://wickedev.com/use-vanilla-javascript-to-make-ajax-request/)
+
+```js
+// Create the XMLHttpRequest object.
+const xhr = new XMLHttpRequest();
+// Initialize the request
+xhr.open("POST", "https://jsonplaceholder.typicode.com/users", true);
+// Set content type
+xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+// Send the request with data to post
+xhr.send(
+  JSON.stringify({
+    name: "Jon Doe",
+    username: "jon-doe",
+    email: "jon-doe@unknown.com",
+  })
+);
+// Fired once the request completes successfully
+xhr.onload = function (e) {
+  // Check if the request was a success
+  if (this.readyState === XMLHttpRequest.DONE && this.status === 201) {
+    // Get and convert the responseText into JSON
+    var response = JSON.parse(xhr.responseText);
+    console.log(response);
+  }
+};
+```
+
 - HTML Includes by W3 + onreadystatechange
   [https://www.w3schools.com/howto/howto_html_include.asp](https://www.w3schools.com/howto/howto_html_include.asp)
 
