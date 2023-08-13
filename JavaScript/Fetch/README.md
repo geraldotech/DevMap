@@ -180,3 +180,44 @@ async function get(url) {
 
 get(link);
 ```
+
+### Post Request:
+
+[Ref Ajax and Fetch](https://wickedev.com/use-vanilla-javascript-to-make-ajax-request/)
+
+```js
+// Create and Send the request
+var fetch_status;
+fetch(baseurl, {
+  method: "POST",
+  // Set the headers
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+  // Set the post data
+  body: JSON.stringify({
+    id: 6,
+    title: "gmap.dev",
+    body: "g@map.dev",
+  }),
+})
+  .then(function (response) {
+    // Save the response status in a variable to use later.
+    fetch_status = response.status;
+    // Handle success
+    // eg. Convert the response to JSON and return
+    return response.json();
+  })
+  .then(function (json) {
+    // Check if the response were success
+    if (fetch_status == 201) {
+      // Use the converted JSON
+      console.log(json);
+    }
+  })
+  .catch(function (error) {
+    // Catch errors
+    console.log(error);
+  });
+```

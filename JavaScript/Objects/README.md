@@ -208,6 +208,21 @@ for (const [key, val] of Object.entries(pessoas)) {
 }
 ```
 
+```js
+const obj = {
+  name: "Jon Doe",
+  username: "jon-doe",
+  email: "jon-doe@unknown.com",
+};
+
+//obj to JSON geralmente em Post/PUT Resquests
+const post = JSON.stringify(obj);
+console.log(post);
+
+//voltar a ser obj
+console.log(JSON.parse(post));
+```
+
 !important :arrow_right: LEITURA
 
 ### constructor
