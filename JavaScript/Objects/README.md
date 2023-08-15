@@ -12,7 +12,7 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [Newproperty](#property)
 - [remove](#remove)
 - [Concatenar](#concatenar)
-- [Values,keys, entries](#values-keys-entries)
+- [Values, keys, entries](#values-keys-entries)
   - [Objectfromentries](#objectfromentries)
 - [Constructor](#constructor)
 
@@ -101,47 +101,57 @@ console.log(nome);
 console.log(surname);
 ```
 
-### values-keys-entries
+### Object.'values','keys','entries'(obj)
 
 ```js
-//show values and keys
+const obj = {
+  nameKey: "pessoaVal",
+  ageKey: 30,
+  systemKey: "WindowsVal",
+};
 
-// ✨display `values` [can uso to show objects in HTML]: Geraldo,29,Maceio
-Object.values(person);
-
-// ✨display the `keys`name, age, city
+//✨ display the `keys` (3) ['nameKey', 'ageKey', 'systemKey']
 Object.keys(person);
 
-// ✨returns an array of a given object's own enumerable string-keyed property [key, value]
-Object.entries(person); // display values+keys name,Geraldo,age,29,city,Maceio
+//✨ display `values` (3) ['pessoaVal', 30, 'WindowsVal']
+Object.values(person);
 
-// if tudo in JS is Object tente:
+//✨ returns an Array of a given object's own enumerable string-keyed property [key, value]
 
-console.log(Object.keys(window));
+Object.entries(person);
+// (3) [Array(2), Array(2), Array(2)]
+// 0: (2) ['nameKey', 'pessoaVal']
+// 1: (2) ['ageKey', 30]
+// 2: (2) ['systemKey', 'WindowsVal']
+
+//✨ JS Objects try:
+
+console.log(Object.keys(window)); // document
 console.log(Object.values(window)[2]); //#document
 ```
 
+### Object.fromEntries()
 
-### Object.fromEntries() 
-    
 ```js
- const obj = {
-        "nameKey": "pessoaVal",
-        "ageKey": 30,
-        "systemKey": "WindowsVal"
-    }
-console.dir(obj)
+console.dir(obj);
 
-console.log('keys', Object.keys(obj)) // keys (3) ['nameKey', 'ageKey', 'systemKey']
+console.log(Object.keys(obj)); // (3) ['nameKey', 'ageKey', 'systemKey']
 
-console.log('values', Object.values(obj)) // values (3) ['pessoaVal', 30, 'WindowsVal']
+console.log(Object.values(obj)); // (3) ['pessoaVal', 30, 'WindowsVal']
+
 // method that allows you to transform an object into an array:
-console.log('values', Object.entries(obj)) // values (3) [Array(2), Array(2), Array(2)]
+console.log(Object.entries(obj)); // (3) [Array(2), Array(2), Array(2)]
+
 /*    
-ES2019 introduced the Object.fromEntries() method that allows you to easily convert a list of key-value pairs into an object.
+➡️ ES2019 introduced the Object.fromEntries() method that allows you to easily convert a list of key-value pairs into an object.
  */
-let arr2 = [['color', 'red'], ['borderWidth', '1px']];
-console.log(Object.fromEntries(arr2));  //{color: 'red', borderWidth: '1px'
+
+let arr2 = [
+  ["color", "red"],
+  ["borderWidth", "1px"],
+];
+console.log(Object.fromEntries(arr2)); // {color: 'red', borderWidth: '1px'
+
 /*
 ✔ The Object.fromEntries() performs the reverse of Object.entries().
 ✔ transform an iterable into an object.
