@@ -224,7 +224,7 @@ console.log(JSON.parse(post));
 ```
 
 
-### Contetualizando o Object.fromEntries() 
+### Object.fromEntries() 
     
 ```js    
 console.log('keys', Object.keys(obj)) // keys (3) ['nameKey', 'ageKey', 'systemKey'
