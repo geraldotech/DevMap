@@ -9,11 +9,11 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [Access](#access)
 - [add](#add)
 - [change](#change)
-- [Newproperty](#property)
+- [New property](#property)
 - [remove](#remove)
 - [Concatenar](#concatenar)
-- [Values, keys, entries](#objectvalueskeysentriesobj)
-- [Objectfromentries](#objectfromentries)
+- [Object.Values, keys, entries](#objectvalueskeysentriesobj)
+- [Object.fromEntries](#objectfromentries)
 - [Constructor](#constructor)
 
 - [ObjectMethods](#object-methods)
@@ -193,12 +193,28 @@ for (let key in pessoas) {
 for (let key in pessoas) {
   console.log(key, pessoas[key]);
 }
-//👉print no HTML seria:
+//👉print no HTML:
 for (const key in pessoas) {
   p.innerHTML += key + ": " + pessoas[key];
 }
-//👉👉 beatiful string literal:
+//👉👉 beautiful string literal:
 p.innerHTML += `${key} - ${pessoas[key]} `;
+
+//for in key:value + document.create
+
+// ol ficar dentro do for-in vai repetir várias vezes sem necessidade.
+let ol = document.createElement("ol");
+
+for (let [keys] in pessoas) {
+  let li = document.createElement("li");
+
+  li.innerHTML += pessoas[keys] + "<br>";
+  ol.appendChild(li);
+  document.body.appendChild(ol);
+
+  //  <ol id="a"></ol>
+  // a.innerHTML += "<li>" + keys + "/li>";
+}
 
 //👉render HTML Array[Objects] using `for in` and `for of` checkout Arrays > Blog_Settings2
 //github.com/geraldotech/DevMap/blob/main/JavaScript/Arrays/Blog_Settings2/main.js
