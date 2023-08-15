@@ -13,7 +13,7 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [remove](#remove)
 - [Constructor](#constructor)
 - [Objectfromentries](#objectfromentries)
-- [ObjectMethods](#objectmethods)
+- [ObjectMethods](#object-methods)
 
 ### add
 
