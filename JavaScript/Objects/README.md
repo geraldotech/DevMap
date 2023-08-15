@@ -12,7 +12,8 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [Newproperty](#property)
 - [remove](#remove)
 - [Constructor](#constructor)
-- [Object Methods](#object)
+- [Objectfromentries](#objectfromentries)
+- [Object Methods](#objectmethods)
 
 ### add
 
