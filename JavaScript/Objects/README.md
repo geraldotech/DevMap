@@ -124,8 +124,15 @@ console.log(Object.values(window)[2]); //#document
 
 ### Object.fromEntries() 
     
-```js    
-console.log('keys', Object.keys(obj)) // keys (3) ['nameKey', 'ageKey', 'systemKey'
+```js
+ const obj = {
+        "nameKey": "pessoaVal",
+        "ageKey": 30,
+        "systemKey": "WindowsVal"
+    }
+console.dir(obj)
+
+console.log('keys', Object.keys(obj)) // keys (3) ['nameKey', 'ageKey', 'systemKey']
 
 console.log('values', Object.values(obj)) // values (3) ['pessoaVal', 30, 'WindowsVal']
 // method that allows you to transform an object into an array:
