@@ -12,8 +12,8 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [Newproperty](#property)
 - [remove](#remove)
 - [Concatenar](#concatenar)
-- [Values, keys, entries](#values-keys-entries)
-  - [Objectfromentries](#objectfromentries)
+- [Values, keys, entries](#objectvalueskeysentriesobj)
+- [Objectfromentries](#objectfromentries)
 - [Constructor](#constructor)
 
 - [ObjectMethods](#object-methods)
@@ -133,18 +133,7 @@ console.log(Object.values(window)[2]); //#document
 ### Object.fromEntries()
 
 ```js
-console.dir(obj);
-
-console.log(Object.keys(obj)); // (3) ['nameKey', 'ageKey', 'systemKey']
-
-console.log(Object.values(obj)); // (3) ['pessoaVal', 30, 'WindowsVal']
-
-// method that allows you to transform an object into an array:
-console.log(Object.entries(obj)); // (3) [Array(2), Array(2), Array(2)]
-
-/*    
-➡️ ES2019 introduced the Object.fromEntries() method that allows you to easily convert a list of key-value pairs into an object.
- */
+// ES2019 introduced the Object.fromEntries() method that allows you to easily convert a list of key-value pairs into an object.
 
 let arr2 = [
   ["color", "red"],
@@ -173,7 +162,7 @@ smart.open();
 smart.close();
 ```
 
-/_ [============================[for in]================================] _/
+### for in
 
 ```js
 //for in is a method for iterating over "enumerable" properties of an object.
@@ -224,7 +213,7 @@ function getIndex(arr) {
 getIndex(["A", "B", "C"]);
 ```
 
-/_ [=================[iterate object with forEach / of of]==================] _/
+### iterate object with: forEach / of of
 
 ```js
 const pessoas = {
@@ -248,6 +237,7 @@ for (const p of Object.keys(pessoas)) {
   console.log(p, pessoas[p]);
 }
 // returns an array of a given object's own enumerable string-keyed property key-value pairs. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+
 for (const [key, val] of Object.entries(pessoas)) {
   console.log(key, val);
 }
