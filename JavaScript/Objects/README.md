@@ -136,7 +136,7 @@ console.log('keys', Object.keys(obj)) // keys (3) ['nameKey', 'ageKey', 'system
 
 console.log('values', Object.values(obj)) // values (3) ['pessoaVal', 30, 'WindowsVal']
 // method that allows you to transform an object into an array:
-console.log('values', Object.entries(obj)) // values (3) [Array(2), Array(2), Array(2)
+console.log('values', Object.entries(obj)) // values (3) [Array(2), Array(2), Array(2)]
 /*    
 ES2019 introduced the Object.fromEntries() method that allows you to easily convert a list of key-value pairs into an object.
  */
