@@ -223,6 +223,25 @@ console.log(post);
 console.log(JSON.parse(post));
 ```
 
+
+### Contetualizando o Object.fromEntries() 
+    
+```js    
+console.log('keys', Object.keys(obj)) // keys (3) ['nameKey', 'ageKey', 'systemKey'
+
+console.log('values', Object.values(obj)) // values (3) ['pessoaVal', 30, 'WindowsVal']
+// method that allows you to transform an object into an array:
+console.log('values', Object.entries(obj)) // values (3) [Array(2), Array(2), Array(2)
+/*    
+ES2019 introduced the Object.fromEntries() method that allows you to easily convert a list of key-value pairs into an object.
+ */
+let arr2 = [['color', 'red'], ['borderWidth', '1px']];
+console.log(Object.fromEntries(arr2));  //{color: 'red', borderWidth: '1px'
+/*
+✔ The Object.fromEntries() performs the reverse of Object.entries().
+✔ transform an iterable into an object.
+*/
+```
 !important :arrow_right: LEITURA
 
 ### constructor
