@@ -11,6 +11,7 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [change](#change)
 - [Newproperty](#property)
 - [remove](#remove)
+- [Values,keys, entries]()[](url)
 - [Constructor](#constructor)
 - [Objectfromentries](#objectfromentries)
 - [ObjectMethods](#object-methods)
@@ -66,7 +67,7 @@ geraldo.travel = ["Maceio", "Rio"];
 delete geraldo.name;
 ```
 
-### e.g
+### concatenar
 
 ```js
 const person = {
@@ -96,7 +97,11 @@ console.log(persons.surname);
 const { nome, surname } = persons;
 console.log(nome);
 console.log(surname);
+```
 
+### values-keys-entries
+
+```js
 //show values and keys
 
 // ✨display `values` [can uso to show objects in HTML]: Geraldo,29,Maceio
