@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" style="color-scheme: dark">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla JavaScript FormData()</title>
-    <style>
-      input {
-        display: block;
-        margin: 10px 0;
-      }
-    </style>
-  </head>
-  <body>
-    <p>
-      The FormData interface provides a way to construct a set of key/value
-      pairs representing form fields and their values, which can be sent using
-      the fetch() or XMLHttpRequest.send() method. It uses the same format a
-      form would use if the encoding type were set to "multipart/form-data".
-    </p>
-    <p>
-      The FormData object contains all the fields as name attribute of input
-      fields <code style="color: #e94a93">&lt;input name="iuser" /></code>,
-      Using the FormData.get() API, each form value can be fetched.
-    </p>
-    <form>
-      <input type="text" name="produto" />
-      <input type="number" name="price" placeholder="price one" />
-      <input type="number" name="price" placeholder="price two" />
-      <input name="x" type="number" value="5" />
-      <input name="y" type="number" value="1" />
-      <input type="number" name="year" />
-      <input type="submit" value="Send" />
-    </form>
 
-    <ul>
-      <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData"
-          >FormData</a
-        >
-      </li>
-      <li>
-        <a href="https://metamug.com/article/html5/ajax-form-submit.html"
-          >https://metamug.com/article/html5/ajax-form-submit.html</a
-        >
-      </li>
-    </ul>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla JavaScript FormData()</title>
+  <style>
+    input {
+      display: block;
+      margin: 10px 0;
+    }
+  </style>
+</head>
 
-    <script src="main.js"></script>
-  </body>
+<body>
+  <p>
+    The FormData interface provides a way to construct a set of key/value
+    pairs representing form fields and their values, which can be sent using
+    the fetch() or XMLHttpRequest.send() method. It uses the same format a
+    form would use if the encoding type were set to "multipart/form-data".
+  </p>
+  <p>
+    The FormData object contains all the fields as name attribute of input
+    fields <code style="color: #e94a93">&lt;input name="iuser" /></code>,
+    Using the FormData.get() API, each form value can be fetched.
+  </p>
+  <form>
+    <input type="text" name="produto" placeholder="produto" />
+    <input type="number" name="price" placeholder="price one" />
+    <input type="number" name="price" placeholder="price two" />
+    <input name="x" type="number" value="5" />
+    <input name="y" type="number" value="1" />
+    <input type="number" name="year" />
+    <input type="submit" value="Send" />
+  </form>
+
+  <ul>
+    <li>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">FormData</a>
+    </li>
+    <li>
+      <a
+        href="https://metamug.com/article/html5/ajax-form-submit.html">https://metamug.com/article/html5/ajax-form-submit.html</a>
+    </li>
+  </ul>
+
+  <script src="main.js"></script>
+</body>
+
 </html>

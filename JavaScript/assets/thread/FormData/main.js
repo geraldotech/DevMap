@@ -17,7 +17,7 @@ form.onsubmit = function (e) {
   //Get All Objects
   console.log(Object.fromEntries(fdata));
 
-  //FormData.append(name, value, filename)
+  //Append (name, value, filename)
   fdata.append("novo", "appeded newValue");
   console.log(fdata.get("novo")); // new
 
@@ -39,6 +39,6 @@ form.onsubmit = function (e) {
   const xy = [fdata.get("x"), fdata.get("y")];
   const toNum = xy.map((v) => +v);
   console.log(toNum);
+  console.log('After Append:', Object.fromEntries(fdata));
 
-  //exemples++ set(), keys(), values(), delete(), entries()  👉 https://developer.mozilla.org/en-US/docs/Web/API/FormData/set
 };
