@@ -26,12 +26,27 @@ const object = {
   keys: "values",
 };
 
-//my example
+// my example
 const geraldo = {
   name: "Geraldo Filho",
   age: 30,
   Developer: true,
 };
+
+//Simulate a JavaScript Object
+const windowx = {
+  document: {
+    getElemenyById: function (id) {
+      console.log(`getElemenyById:`, id);
+    },
+    querySelector: (val) => {
+      console.log(`querySelector:`, val);
+    },
+  },
+};
+
+windowx.document.getElemenyById("ElementId");
+windowx.document.querySelector("#id");
 ```
 
 ### access
@@ -79,14 +94,14 @@ const person = {
 };
 console.log(person);
 
-//concatenar
+// concatenar
 document.write(person.name + " mora na cidade de " + person.city);
 
-//concatenar
+// concatenar
 document.getElementById("objeto2").innerHTML =
   person.name + " idade atual: " + person.age;
 
-//multiple variables in one line
+// multiple variables in one line
 const persons = {
   nome: "Geraldo",
   surname: "Filho",
@@ -95,7 +110,7 @@ const persons = {
 console.log(persons.nome);
 console.log(persons.surname);
 
-//shorthand atribuir a uma const
+// shorthand atribuir a uma const
 const { nome, surname } = persons;
 console.log(nome);
 console.log(surname);
@@ -165,7 +180,7 @@ smart.close();
 ### for in
 
 ```js
-//for in is a method for iterating over "enumerable" properties of an object.
+// for in is a method for iterating over "enumerable" properties of an object.
 
 const pessoas = {
   01: "Geraldo",
@@ -179,28 +194,28 @@ for (let key in pessoas) {
   console.log(key);
 }
 
-//se chamar o `pessoas` vai retonar todos os values duplicados, por isso devemos chamar junto com a chave
-//👉o que não fazer ❌
+// Se perform `pessoas` vai retonar todos os values duplicados, por isso devemos chamar junto com a chave
+
 for (const key in pessoas) {
-  console.log(pessoas);
+  console.log(pessoas); //👉 ❌
 }
 
 //👉 o que fazer passar a key na chamada👍
 for (let key in pessoas) {
   console.log(pessoas[key]);
 }
-//🔰 ah mais eu quero o id+value, simples só chamar a key de forma independente.
+//🔰 key+key simples só chamar a key de forma independente.
 for (let key in pessoas) {
   console.log(key, pessoas[key]);
 }
-//👉print no HTML:
+//👉 print no HTML:
 for (const key in pessoas) {
   p.innerHTML += key + ": " + pessoas[key];
 }
 //👉👉 beautiful string literal:
 p.innerHTML += `${key} - ${pessoas[key]} `;
 
-//for in key:value + document.create
+// for in key:value + document.createElement...
 
 // ol ficar dentro do for-in vai repetir várias vezes sem necessidade.
 let ol = document.createElement("ol");
@@ -216,10 +231,10 @@ for (let [keys] in pessoas) {
   // a.innerHTML += "<li>" + keys + "/li>";
 }
 
-//👉render HTML Array[Objects] using `for in` and `for of` checkout Arrays > Blog_Settings2
+//👉 render HTML Array[Objects] using `for in` and `for of` checkout Arrays > Blog_Settings2
 //github.com/geraldotech/DevMap/blob/main/JavaScript/Arrays/Blog_Settings2/main.js
 
-//👉iterating over Array to get Index
+//👉 iterating over Array to get Index
 function getIndex(arr) {
   for (const tem in arr) {
     console.log(tem);
@@ -243,7 +258,7 @@ Object.keys(pessoas).forEach((item) => {
   console.log(item + " - " + pessoas[item]);
 });
 
-//HTML não esquecer do +=
+// HTML não esquecer do +=
 
 Object.keys(pessoas).forEach((val) => {
   res.innerHTML += val + ":" + pessoas[val];
@@ -266,11 +281,11 @@ const obj = {
   email: "jon-doe@unknown.com",
 };
 
-//obj to JSON geralmente em Post/PUT Resquests
+// obj to JSON geralmente em Post/PUT Resquests
 const post = JSON.stringify(obj);
 console.log(post);
 
-//voltar a ser obj
+// voltar a ser obj
 console.log(JSON.parse(post));
 ```
 

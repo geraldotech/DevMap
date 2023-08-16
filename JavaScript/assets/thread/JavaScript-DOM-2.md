@@ -23,10 +23,10 @@
     <details>
     <summary>getAttributes,createElement ,set ,has ,remove...classList.add.contains</summary>
 
-    - 1 [createAttr,getAttr,removeAttr](./create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/create_get_remove_Attribute.html)
-    - 2 [hasAttribute_setAttribute](./hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/hasAttribute_setAttribute.html)
-    - 3 [setAttribute_vs_classList](./setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/setAttribute_vs_classList.html)
-    - 4 [createElements_add_delete-App- TodoList](./createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/createElements_add_delete.html)
+    - 1 [createAttr,getAttr,removeAttr](./create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
+    - 2 [hasAttribute_setAttribute](./hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
+    - 3 [setAttribute_vs_classList](./setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
+    - 4 [createElements_add_delete-App- TodoList](./createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript//assets/thread/createElements_add_delete.html)
     - 5 [createElements_add_delete_template_literal_add_assigment](./createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/createElements_add_delete_template_literal_add_assigment.html)
 
     </details>

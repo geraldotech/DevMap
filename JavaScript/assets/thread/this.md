@@ -1,47 +1,49 @@
 `this` se referente ao objeto do qual a função é uma propriedade, o valor vai depender do objeto que está invocando a function
 
 ```js
-e.target.id = this.id;
-e.target.value = this.value;
+e.target.id === this.id;
+e.target.value === this.value;
+e.target === this;
 ```
 
 ```js
-//object window
+// object window
 function doSomething() {
   console.log(this);
 }
 doSomething();
 
-//button value
+// button value
 <button value="1">Esse</button>;
 
 document.querySelector("button").addEventListener("click", function () {
   console.log(this.value);
 });
 
-//multiple buttons
+// multiple buttons
 document.querySelectorAll("button").forEach((val) =>
   val.addEventListener("click", function () {
     console.log(this.value);
   })
 );
 
-//input checked?
+// input checked?
 document.querySelector("input").addEventListener("click", function () {
   console.log(this.checked);
+  console.log(this.textContent);
 });
 
-//this input
+// this input
 document.querySelector("input").addEventListener("input", function () {
   console.log(+this.value);
 });
 
-//this DOM
+// this DOM
 document.addEventListener("DOMContentLoaded", function () {
   console.log(this);
 });
 
-//this na function(this)
+// this na function(this)
 <button onclick="getx(this)">show</button>;
 function getx(event) {
   console.log(this);
