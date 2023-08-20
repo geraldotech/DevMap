@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main,
+header,
+section,
+footer,
+article {
+  padding: 1rem;
+}
+
+body {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  background: #1f242a;
+  color: #000000;
+}
+header,
+footer {
+  background: #8ab9f3;
+}
+
+article,
+aside {
+  background: rgb(255, 200, 200);
+  padding: 1rem;
+  text-align: justify;
+}
+
+section,
+article,
+footer,
+aside {
+  margin: 2px 0;
+}
+
+section {
+  background: indigo;
+  color: #f2f2f2;
+}
+
+.msn {
+  display: none;
+}
+
+/*for desktops */
+@media screen and (min-width: 650px) {
+  .container {
+    display: flex;
+  }
+
+  article {
+    max-width: 70%;
+  }
+
+  .sidebar2 {
+    margin-left: 2px;
+    min-width: 150px;
+    flex-basis: 280px;
+  }
+
+  .sidebar {
+    margin-right: 2px;
+    flex-grow: 1;
+    /*flex-grow esticar width 10% + 5% = 15% completando 100% */
+    /*flex: 0 1 300px;*/
+    flex-basis: 280px;
+    min-width: 150px;
+  }
+}
+
+/*for mobile orders for me */
+@media screen and (max-width: 650px) {
+  .container {
+    background: rgb(204, 40, 40);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    background: rgb(10, 199, 76);
+    order: 2;
+  }
+
+  .sidebar2 {
+    order: 1;
+  }
+  .msn {
+    display: block;
+    background: coral;
+  }
+}
