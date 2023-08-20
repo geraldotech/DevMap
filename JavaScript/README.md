@@ -17,7 +17,7 @@
 - [List Directories](./assets/thread/List_directories)
 
 <details>
-<summary>Concatenação, Interpolação and syntax</summary>
+<summary>Concatenação, Interpolação, Template-literals and syntax</summary>
 From scratch aspas 'simples' ou "dupla" tanto faz, contudo dependendo do cenário há algunas peculiaridades
 
 ```js
@@ -45,7 +45,7 @@ console.log('Eu sou ' +name);
 console.log("Eu sou " +name);
 console.log("Eu sou " +name + 'e tenho ' + age + ' anos');
 
-// ES6 template string
+// ES6 template string - [Template-literals](https://css-tricks.com/template-literals/)
 console.log(`grace accent ${name} and ${age}`);  // interpolation sem concatenação
 
 ("Ola") apenas no console.log show infos F12
@@ -53,11 +53,12 @@ console.log(`grace accent ${name} and ${age}`);  // interpolation sem concatena�
 //converter valores em string - consulte toString() nesse README ou String(n) em https://ricardo-reis.medium.com/strings-dd656f371ff3
 
 /*
-Comparando strings
+Comparando strings e numbers
 Para comparar duas strings, use os operadores > , >= , < , <= e ==.
 */
 console.log("a" < "A"); //false
-
+5 * 5 == 25 // true
+5 * 5 < 30 // true
 ```
 
 ### syntax / sintaxe
@@ -439,6 +440,8 @@ document.head.insertAdjacentHTML(
 
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">\_cloneNode(true)</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math#arithmetic_operators" target="_blank">Arithmetic operators - Operadores matemáticos</a>
+  - parseInt("1") // 1
+  - +("1") // 1
 - <a href="https://devhints.io/es6" target="_blank">\_devhints.io/es6</a>
 - <a href="https://ricardo-reis.medium.com/try-catch-tratando-erros-no-javascript-91bcce0b93ae" target="_blank">Try catch - nice article</a>
 - <a href="https://www.base64encode.org/">base64encode.org</a>
@@ -449,4 +452,3 @@ document.head.insertAdjacentHTML(
 
 - [Stop Trying To Memorize Code - Do This Instead](https://www.youtube.com/watch?v=vP2MNhC_Igw&list=PL_VP_qub8HfIva3X7o4FbRqoqg9K-s8z4&index=1)
 - [Learning Functional Programming with JavaScript](https://www.youtube.com/watch?v=e-5obm1G_FY)
-- [Template-literals](https://css-tricks.com/template-literals/)
