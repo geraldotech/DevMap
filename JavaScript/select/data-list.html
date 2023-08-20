@@ -19,12 +19,20 @@
       const inputList = document.querySelector("input");
 
       inputList.onchange = function (event) {
+        console.warn(this.value);
         console.warn(event.target.value);
         //compara Upper to Upper
         if (event.target.value.toUpperCase() == "bike".toUpperCase()) {
           alert("Boa Escolha!");
         }
+        verificaVal(event.target);
       };
+
+      function verificaVal(e) {
+        if (e.value == "Cars") {
+          alert(e.value);
+        }
+      }
     </script>
   </body>
 </html>
