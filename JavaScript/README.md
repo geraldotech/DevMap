@@ -68,6 +68,7 @@ comma ,
 parentheses()
 braces {} - chaves
 square brackets [] - colchetes
+backtick `
 ```
 
 ### multiple var/let/const
