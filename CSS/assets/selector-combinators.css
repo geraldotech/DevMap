@@ -1,0 +1,86 @@
+* {
+  color-scheme: dark;
+}
+/* this page styles */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+code {
+  color: rgb(107, 255, 255);
+}
+xmp {
+  color: crimson;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+footer {
+  margin: 20vh 0 10px;
+}
+
+section h2 {
+  border-bottom: 3px solid coral;
+}
+
+/* tag class */
+.demo {
+  text-decoration: underline blue;
+}
+
+div.demo {
+  font-size: 2rem;
+  font-style: bold;
+}
+
+.lead {
+  background: red;
+}
+
+h1.lead {
+  color: orange;
+}
+
+/* Global */
+img {
+  width: 15%;
+  border: 1px solid red;
+}
+
+/* Descendant Selector */
+div img {
+  width: 20%;
+  border: 2px solid rgb(209, 6, 125);
+}
+
+/* Child Selector */
+div > img {
+  width: 10%;
+  border: 2px solid rgb(6, 71, 192);
+}
+main > p {
+  text-transform: uppercase;
+  color: rgb(6, 71, 192);
+}
+
+/* Adjacent sibling selector -  next adjacent sibling */
+p + h1 {
+  color: coral;
+}
+
+/* General Sibling Selector */
+p ~ ul {
+  color: mediumvioletred;
+}
+
+p ~ code {
+  color: seagreen;
+  font-size: 2rem;
+  display: block;
+}

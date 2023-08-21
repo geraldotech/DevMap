@@ -1,135 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      * {
-        color-scheme: dark;
-      }
-      body {
-        max-width: 80rem;
-        margin: 0 auto;
-      }
-      /*  global - all spans  */
-      span {
-        color: dodgerblue;
-      }
-
-      /* selector selects all elements that are the children of a specified element. */
-      div > span {
-        background: red;
-        color: black;
-      }
-
-      /* Seleciona o próximo irmão adjacente / adjacent sibling selector  */
-      div + span {
-        color: palevioletred;
-      }
-
-      /* sel3ciona todas as ul preceded by p  */
-      p ~ ul {
-        color: mediumvioletred;
-      }
-
-      p ~ code {
-        color: seagreen;
-        font-size: 2rem;
-        display: block;
-      }
-      /* adjacent sibling selector -  next adjacent sibling */
-      p + h1 {
-        color: coral;
-      }
-      /*mesma classe com diferentes tags*/
-      .demo {
-        text-decoration: underline blue;
-      }
-
-      div.demo {
-        font-size: 2rem;
-        font-style: bold;
-      }
-
-      .lead {
-        background: red;
-      }
-
-      h1.lead {
-        color: orange;
-      }
-    </style>
+    <meta
+      name="viewport"
+      content="width=device-width, init// Place your key bindings in this file to override the defaultsial-scale=1.0"
+    />
+    <title>Combinator Selectors 2023</title>
+    <link rel="stylesheet" href="../assets/selector-combinators.css" />
   </head>
-
   <body>
-    <h2>
-      Curiosidade: É possível usar a mesma classe e depois custom with:
-      <code>tag.class</code> contudo deve ser mais prático usar duas classes
-    </h2>
+    <header>
+      <h1>CSS contexts</h1>
+    </header>
+    <ul>
+      <li>
+        <del><a href="#tagclass">tag+class [curiosidade]</a></del>
+      </li>
+      <li><a href="#global">Global Selector</a></li>
+    </ul>
 
-    <p class="demo">I am `p` class demo</p>
-    <div class="demo">I am `div` class demo</div>
+    <secion id="tagclass">
+      <h3>
+        👉É possível usar a mesma classe e depois custom with:
+        <code>tag.class</code> contudo deve ser mais prático usar duas classes
+      </h3>
 
-    <p class="lead">p lead</p>
+      <p class="demo">I am `p` class demo</p>
+      <div class="demo">I am `div` class demo</div>
 
-    <h1 class="lead">h1 lead</h1>
+      <p class="lead">p lead</p>
+
+      <h1 class="lead">h1 lead</h1>
+    </secion>
+    <section id="global">
+      <h3>👉Global parent is body</h3>
+      <xmp
+>
+  img {
+    width: 30%;
+    border: 1px solid red;
+  }
+  </xmp
+      >
+    </section>
 
     <hr />
-    <h1>Child Selector (>)</h1>
+    <h1>CSS Selector combinators</h1>
     <ul>
-      <li>A</li>
-      <li>B</li>
+      <li><a href="#descendant">Descendant Selector</a></li>
+      <li>
+        <a href="#childselector">Child Selector</a>
+      </li>
+      <li>
+        <a href="#adjacent">Adjacent Sibling Selector</a>
+      </li>
+      <li>
+        <a href="#general-sibling">General Sibling Selector</a>
+      </li>
     </ul>
+    <p>
+      Vamos contextualizar usando uma imagem em 3 diferentes cenários, a ordem
+      de chamada pode alterar os resultados, deixar o mais específico por
+      último.
+    </p>
 
-    <p>one</p>
-
-    <div>
-      div
-      <span>span div</span>
-    </div>
-
-    <span>span</span>
-
-    <h2>h2</h2>
-
-    <span>Global span style</span>
-
-    <hr />
-
-    <h1>General Sibling Selector (~)</h1>
-    <p>paragrafo</p>
-    <ul>
-      <li>A</li>
-      <li>B</li>
-    </ul>
-    <ul>
-      <li>A</li>
-      <li>B</li>
-    </ul>
-    <ul>
-      <li>A</li>
-      <li>B</li>
-    </ul>
-
-    <article>
-      <h2>Hello article</h2>
-      <span>span</span>
-      <span>Global span style</span>
+    <section id="descendant">
+      <h2>👉Descendant Selector(space)</h2>
+      <xmp
+>
+      div img {
+        width: 5%;
+        border: 2px solid rgb(209, 6, 125);
+      }
+      </xmp>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-        officia.
+        selector matches all elements that are descendants of a specified
+        element.
       </p>
-      <code
-        >todos os codes after `p` will be selected | sudo apt get install</code
-      >
-      <code
-        >todos os codes after `p` will be selected | sudo apt get install</code
-      >
-    </article>
+      <div>
+        <span>
+          <img src="https://gpnotes.droppages.com/img/1.jpg" alt="" />
+        </span>
+      </div>
+    </section>
 
-    <hr />
-    <h1>Adjacent Sibling Selector (+)</h1>
-    <p>classes globais ou tag + class</p>
-    <h1>Eu</h1>
+    <section id="childselector">
+      <h2>👉Child-Selector (>)</h2>
+      <p>
+        The child selector selects all elements that are the children of a
+        specified element.
+      </p>
+
+      <xmp
+>
+        div > img {
+          width: 10%;
+          border: 2px solid rgb(6, 71, 192);
+        }
+      </xmp>
+
+      <div>
+        <img src="https://gpnotes.droppages.com/img/1.jpg" alt="" />
+        <img src="https://gpnotes.droppages.com/img/1.jpg" alt="" />
+        <img src="https://gpnotes.droppages.com/img/1.jpg" alt="" />
+      </div>
+      <h3>Exemplos...</h3>
+      <p><code>`main > section`</code> works? 👉yes, It's parent is main</p>
+      <xmp>
+        <main>
+            <p>one</p>
+            <section>
+              <p>two</p>
+            </section>
+        </main>
+    </xmp>
+
+      <p>
+        <code>`main > section`</code> works? 👉no, `section` is a child of one
+        div inside main, must use descendant selector
+      </p>
+
+      <xmp>
+        <main>
+            <p>one</p>
+           <div>
+            <section>
+                <p>two</p>
+              </section>
+           </div>
+        </main>
+    </xmp>
+
+      <p>
+        Tudo é questão de especificar os elementos corretamente, quando entender
+        os parents/child/siblings tudo vai ficando mais fácil, o img não está
+        dentro de nenhuma tag, isso significa que seu parent é o body, e por
+        exemplo para esconder a primeira imagem:
+      </p>
+      <p>
+        Com o child-selector - seletor de filhos <code>`>`</code> estamos
+        afetando todas as imagens que tem o body como parent
+      </p>
+      <xmp
+>
+        body > img{
+            display: none;
+        } 
+    </xmp
+      >
+    </section>
+
+    <section id="adjacent">
+      <h2>👉Adjacent Sibling (+)</h2>
+      <xmp
+>
+        p + h1 {
+          color: coral;
+        }
+      </xmp>
+      <p>`p` classes globais ou tag + class</p>
+      <h1>h1 styles ok</h1>
+    </section>
+
+    <section id="general-sibling">
+      <h2>👉General Sibling Selector (~)</h2>
+      <p>paragrafo</p>
+      <ul>
+        <li>A</li>
+        <li>B</li>
+      </ul>
+      <ul>
+        <li>A</li>
+        <li>B</li>
+      </ul>
+      <ul>
+        <li>A</li>
+        <li>B</li>
+      </ul>
+
+      <article>
+        <h2>Hello article</h2>
+        <span>span</span>
+        <span>Global span style</span>
+        <p>
+          Outro paragraph... Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Molestiae, officia.
+        </p>
+        <code
+          >todos os codes after `p` will be selected | sudo apt get
+          install</code
+        >
+        <code
+          >todos os codes after `p` will be selected | sudo apt get
+          install</code
+        >
+      </article>
+    </section>
+    <footer>
+      <nav>
+        <span>By :</span><a href="#">gmapdev &copy; 2022</a> |
+        <a href="#">Go Top</a>
+      </nav>
+    </footer>
   </body>
 </html>
