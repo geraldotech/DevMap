@@ -130,7 +130,7 @@
               </section>
            </div>
         </main>
-    </xmp>
+      </xmp>
 
       <p>
         Tudo é questão de especificar os elementos corretamente, quando entender
@@ -144,11 +144,30 @@
       </p>
       <xmp
 >
-        body > img{
+        body > img {
             display: none;
         } 
     </xmp
       >
+      <p>child and decendent:</p>
+      <xmp>
+        <section>
+          <span>span</span>
+          <!-- this position span is child and decendent -->
+        </section>
+      </xmp>
+
+      <p>então ambos seletores works</p>
+      <xmp
+>
+      section span {
+        background: violet;
+      }
+
+      sectiozn > span {
+        color: red;
+      }
+      </xmp>
     </section>
 
     <section id="adjacent">

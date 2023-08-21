@@ -7,10 +7,15 @@
 
 # fromScratch
 
-## single :has()
+## element :has() {...}
 
-section tem span de modo geral
-Se `true` e não tiver mais nada como `+ #` o próprio block é selecionado
+```css
+element:has(condition) {
+  will apply styles to element
+}
+```
+
+section has `span` descendent `true`?
 
 ```css
 section:has(span) {
@@ -23,6 +28,26 @@ Child Selector: Apenas se span for child de section:
 ```css
 section:has(> span) {
   background: violet;
+}
+```
+
+Contextualizando
+
+```css
+section span {
+  zbackground: violet;
+}
+/* equivalent to */
+section:has(span) span {
+  background: violet;
+}
+
+section > span {
+  color: red;
+}
+/* equivalent to */
+section:has(> span) span {
+  color: purple;
 }
 ```
 
@@ -42,11 +67,16 @@ article:has(h2, ul) {
 }
 ```
 
-## :has() + select
+## element :has() element {...}
+
+```css
+element:has(condition) element2 {
+  will apply styles to to the element2 }
+```
 
 section que `has` span como child então => p
 
-> dobs: caso a span estivesse entre divs isso não vai funcionar como já foi visto em CSS Combinators
+> if this Child Selector is true... p get styles...
 
 ```css
 section:has(> span) p {
@@ -57,6 +87,8 @@ section:has(> span) p {
 
 section que tiver span como Descendant então => button
 
+> span is decendent of section? button inside section get styles
+
 ```css
 section:has(span) button {
   background: violet;
@@ -64,6 +96,8 @@ section:has(span) button {
 ```
 
 `true` ? então => #home
+
+> section:has span like children element with tag #home inside section get styles
 
 ```css
 section:has(> span) #home {
