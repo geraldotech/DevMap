@@ -57,6 +57,14 @@ se `h1` tiver um irmão `P` adjacente então => h1
 h1:has(+ p) {
   color: cadetblue;
 }
+
+h1 + p {
+  background: red;
+}
+/* equivalent to */
+h1:has(+ p) + p {
+  color: cadetblue;
+}
 ```
 
 `article` tiver algum dessas tags então `article`

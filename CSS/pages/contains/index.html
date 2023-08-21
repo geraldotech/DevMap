@@ -7,6 +7,11 @@
       :root {
         color-scheme: dark;
       }
+      body {
+        max-width: 90rem;
+        margin: 0 auto;
+        min-width: 400px;
+      }
       /*article que contem esse attr      */
       article[data] {
         color: skyblue;
@@ -56,7 +61,7 @@
       a::before {
         content: "📌";
       }
-
+      /*  domain extesion selector */
       a[href$=".net"] {
         font-size: 2rem;
       }
