@@ -163,6 +163,7 @@ html:has([type="checkbox"][name="b"]:checked) {
 ### select:
 
 ```css
+//html template
 <select name="" id="scratch">
       <option value=""></option>
       <option value="1">HTML</option>
@@ -171,12 +172,13 @@ html:has([type="checkbox"][name="b"]:checked) {
 
 
 //css
-
+/* define variables */
 :root {
   --html: none;
   --css: none;
 }
 
+/* set var */
 .html {
   display: var(--html);
 }
@@ -184,6 +186,7 @@ html:has([type="checkbox"][name="b"]:checked) {
   display: var(--css);
 }
 
+/* define has */
 body:has(#scratch option[value="1"]:checked) {
   --html: block;
 }
