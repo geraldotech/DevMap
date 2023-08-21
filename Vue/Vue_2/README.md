@@ -73,6 +73,7 @@ const vm = new Vue({
 ```
 
 ### this.root and this.{obj}
+
 ```js
 
 console.log(this.$root) same than console.log(vm);
@@ -81,9 +82,11 @@ console.log(this.items) same than console.log(vm.items)
 ```
 
 ### Global Var
+
 [global-variable-to-vuejs](https://stackoverflow.com/questions/40896261/apply-global-variable-to-vuejs)
 
-  - Vue.prototype
+- Vue.prototype
+
 ```js
 //main.js
 Vue.prototype.$cdnimg23 = "https://gpnotes.droppages.com/geraldox.proxyfiles.com/2023/img";
@@ -98,29 +101,29 @@ Vue.prototype.$cdnimg23 = "https://gpnotes.droppages.com/geraldox.proxyfiles.com
 
 ```
 
- - using mixin Global
+- using mixin Global
 
- ```js
- //main.js
+```js
+//main.js
 Vue.mixin({
-  data: function() {
-    return {
-      imgmix:'https://gpnotes.droppages.com/geraldox.proxyfiles.com/2022/img',
-    }
-  }
+ data: function() {
+   return {
+     imgmix:'https://gpnotes.droppages.com/geraldox.proxyfiles.com/2022/img',
+   }
+ }
 })
 
 //Components.vue
-  <h2>{{imgmix}}</h2>
+ <h2>{{imgmix}}</h2>
 
-  <figure>
-     <img :src="imgmix+'/vuejs.png'" alt="">
-  </figure>
+ <figure>
+    <img :src="imgmix+'/vuejs.png'" alt="">
+ </figure>
 
-  <figure>
-     <img :src="`${imgmix}/vuejs.png`" alt="">
-  </figure>
- ```
+ <figure>
+    <img :src="`${imgmix}/vuejs.png`" alt="">
+ </figure>
+```
 
 ### Data na Vue instance declarar objects:
 
@@ -291,9 +294,30 @@ console.log(vm.a); //5
 ```js
 <a v-bind:href="hreflink">{{hreflink}}</a>
 <a :href="hreflink">{{hreflink}}</a>
+
+//data
    hreflink: "http://www.google.com",
         },
+```
 
+### fetch then... and
+
+```js
+//data....
+ data() {
+    return {
+      dados: "",
+    };
+  },
+
+//method
+   getapi() {
+      fetch("./src/db/data.json")
+        .then((res) => res.json())
+        .then((f) => {
+          this.dados = f;
+        });
+    },
 ```
 
 ### Links

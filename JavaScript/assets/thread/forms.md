@@ -128,9 +128,13 @@ tag to group related elements in a form - pode usar para agrupar inputs relacion
 </form>
 ```
 
-# form names
+# Forms names
+
+> returns a collection of all forms in an actual document
+> is a DOM Level 1 (1998) feature. https://www.w3schools.com/jsref/coll_doc_forms.asp
 
 ```js
+//from Scratch
 <form name="test">teste</form>;
 console.log(document.test);
 console.log(document.test.innerHTML);
@@ -145,6 +149,39 @@ console.log(document.test.innerHTML);
 
 document.JS.onclick = function(){
 let val = document.JS.vall.value;
-console.log(val); //TypeScript
+console.log(val); // TypeScript
+}
+```
+
+- `this` in form names
+
+```js
+<form name="opts">
+inputs goes here....
+</form>
+
+document.forms.opts.onclick = function (e) {
+  console.log(e.target.value); ✅
+  console.log(this); // this here❌
+};
+
+
+document.opts.onclick = function (e) {
+  console.log(`this`, this); // this here ✅
+  console.log(e.target);
+};
+```
+
+# Forms Ids
+
+```js
+<form name="dados" id="myid">
+  JavaScript
+</form>;
+
+document.forms.myid.onclick = handler;
+
+function handler(e) {
+  console.log(this.textContent); // JavaScript
 }
 ```

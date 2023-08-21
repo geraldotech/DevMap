@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pseudo-class CSS has()</title>
     <link rel="stylesheet" href="style.css" />
@@ -27,16 +26,16 @@
           <h4>Usando radio/checkbox/select</h4>
           <p>
             O truque é atribuir variáveis aos seletores, então mudar o valor das
-            variávels quando determinado <code>checkbox/select</code> seja
-            ativado, em casos de muitos checks como essa página atribuir um #id
-            para cada section ou div pode ajudar. Os checkboxs tem mais
-            prioridade do que <code>select&options</code>
+            variávels quando determinado <code>checkbox/select</code> for
+            ativado, em casos de muitos checks nesta página atribuir um #id para
+            cada section ou div pode ajudar. Os checkboxs tem mais prioridade
+            que <code>select&options</code>
           </p>
           <p>
             Preferencialmente é bom manter tudo no mesmo <code>block</code> e
             assim chamar o element pai por <code>tag/class/id</code>, se chamar
             <code>section:has</code> e o <code>block</code> estiver fora não vai
-            funcionar, desse modo vai ser necessário chamar por
+            funcionar, desse modo vai ser necessário chamar Globalmente por
             <code>body:has ou html:has</code> assim não importa onde estiver vai
             funcionar, no caso de <code>radio/checkbox</code> especificar usando
             <code>[type="radio"][id="html"]</code>.

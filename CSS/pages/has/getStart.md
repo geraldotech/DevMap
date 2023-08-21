@@ -2,7 +2,7 @@
 
 > return booelan
 
-- [fromScratch - do começo](#fromscratch)
+- [fromScratch](#fromscratch)
 - [Links - fazendo menu](#links)
 
 # fromScratch
@@ -33,7 +33,7 @@ section:has(span) button {
 }
 ```
 
-se h1 tiver um irmão P adjacente então => h1
+se `h1` tiver um irmão `P` adjacente então => h1
 
 ```css
 h1:has(+ p) {
@@ -41,7 +41,7 @@ h1:has(+ p) {
 }
 ```
 
-article tiver algum dessas tags então article
+`article` tiver algum dessas tags então `article`
 
 ```css
 article:has(h2, ul) {
@@ -53,7 +53,7 @@ article:has(h2, ul) {
 
 ### From scratch
 
-- Antes é necessico entender que o primeiro elemento define se a condição será Global ou Escope, `e.g html, body` afetam todo o document, usar tags como label ou um #ID vai afetar os filhos que estão encapsulados nos respectivos elementos.
+- Antes é necessário entender que o primeiro elemento define se a condição será Global ou scoped, `e.g html, body` afetam todo o `document`, usar tags como label ou um #ID vai afetar os filhos que estão encapsulados nos respectivos elementos.
 
 ```js
   [global,tags,#id]:has(condition...) {
@@ -162,12 +162,45 @@ html:has([type="checkbox"][name="b"]:checked) {
 
 # links
 
-Usando has() em radio, checkbox e select manipulando as var do CSS fiz esse exemplo com muita deficação 🙂
+Usando has() em radio, checkbox e select manipulando as var do CSS fiz esse exemplo com muita dedicação 🙂
 
 - [Radio, select and checkbox](https://geraldotech.github.io/DevMap/CSS/pages/has/radio-select.html)
+
+### select:
+
+```css
+<select name="" id="scratch">
+      <option value=""></option>
+      <option value="1">HTML</option>
+      <option value="2">CSS</option>
+</select>
+
+
+//css
+
+:root {
+  --html: none;
+  --css: none;
+}
+
+.html {
+  display: var(--html);
+}
+.css {
+  display: var(--css);
+}
+
+body:has(#scratch option[value="1"]:checked) {
+  --html: block;
+}
+```
 
 O princípio para alinhar elementos e como aplicar o has() nessas situações:
 
 - [from-scratch-align-ele-and-has.html](https://github.com/geraldotech/DevMap/blob/main/CSS/pages/has/from-scratch-align-ele-and-has.html) | [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/from-scratch-align-ele-and-has.html)
 
 Veja também como usar o `[type="checkbox"]:checked + label` [https://codepen.io/geraldopcf/pen/ZERvQBZ](https://codepen.io/geraldopcf/pen/ZERvQBZ)
+
+```
+
+```
