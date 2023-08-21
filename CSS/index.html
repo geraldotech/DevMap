@@ -1,72 +1,130 @@
 <!DOCTYPE html>
 <html lang="eng">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<link rel="stylesheet" href="assets/style.css">
-<style type="text/css">
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Pacifico&family=Raleway&family=Ubuntu:wght@500&display=swap');
-</style>
-<title>CCS - Cheats Sheet</title>
-</head>
-<body> 
-  <header>
-    <section class="title">CSS is AWESOME and !important</section>   
-  </header>  
-  <div class="header_line"></div>
-  <main>  
-    <div class="flex"></div>  
-          <article> 
-            <details> <!--start-->
-              <summary>Position</summary> 
-            
-              <a class="links" href="./position/absolute.html">absolute</a>
-              <a class="links" href="./position/absolute_2.html">absolute 2</a>
-              <a class="links" href="./position/fixed_divs.html">fixed_divs</a>
-              <a class="links" href="./position/fixed_sematic.html">fixed_semantic</a>
-              <a class="links" href="./position/relative-checkbox.html">relative-checkbox</a>
-              <a class="links" href="./position/relative.html">relative</a>
-              <a class="links" href="./position/sticky.html">sticky</a>
-              <h5>Links</h5>
-              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/inset" class="links" target="_blank">inset</a>
-              <a class="links" href="https://geraldodev.notion.site/Position-661b3b67d16d42148e28913f3309e5aa" target="_blank">Positions in Notion</a>
-            
-            </details> <!--end-->
-            <details> <!--start-->
-              <summary>Display</summary>
-           
-            <a class="links" href="https://www.notion.so/geraldodev/Display-391e80ae2ec44a6fb92e8b3d9afe9aee" target="_blank">Display Notion</a>
-            <a class="links" href="./pages/display.html" target="_blank">Display by gmap</a>
-            <a href="https://github.com/geraldotech/DevMap/tree/main/CSS/pages/FlexBox" class="links">FlexBox</a>
-            </details> <!--end-->
-            <details>              
-              <summary>Seletores class, #id</summary>              
-              <h5>Todos os seletores</h5>
-              <a href="https://www.w3schools.com/cssref/css_selectors.php" class="links" target="_blank">_CSS Selector Reference</a>
-              <h5>CSS combinators</h5>
-              <a href="https://www.w3schools.com/css/css_combinators.asp" class="links" target="_blank">W3 css_combinators.asp</a>
-              <a href="./pages/css-selector-combinators.html" class="links">CSS Selector combinators</a>
-              <a href="./pages/descendant_vs_child_selector.html" class="links">Descendant Selector vs Child Selector.html</a>
-              <h5>Exemplo de alguns seletores</h5>
-           
-              <p class="lead"><code>.class</code></p>
-              <p class="lead"><code>#id</code></p>
-              <p class="lead"><code>p.demo</code> - seleciona a tag com a classe .demo </p>
-              <p class="lead"><code>span</code> - seleciona todas as tags correpondentes</p>
-              <p class="lead"><code>div + span</code> - prox span depois de uma div</p>
-              <p class="lead"><code>div > span</code> - span dentro de uma div ou elemento pai seja uma div</p>
-              <p class="lead"><code>p ~ ul</code> - sel3ciona todas as  ul preceded by p </p>
-              <p class="lead"><code>.demo | div.demo</code> - mesma classe com diferentes tags</p>
-              <p class="lead"><code>p.center | p.large</code> - multiclass only for p</p>      
-              <h5 class="lead">Também funciona com tags personalizada</h5>
-              <p class="lead"><code>&lt;g> do it now &lt;/g&gt;</code></p>
-              <pre>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Pacifico&family=Raleway&family=Ubuntu:wght@500&display=swap");
+    </style>
+    <title>CCS - Cheats Sheet</title>
+  </head>
+  <body>
+    <header>
+      <section class="title">CSS is AWESOME and !important</section>
+    </header>
+    <div class="header_line"></div>
+    <main>
+      <div class="flex"></div>
+      <article>
+        <details>
+          <!--start-->
+          <summary>Position</summary>
+
+          <a class="links" href="./position/absolute.html">absolute</a>
+          <a class="links" href="./position/absolute_2.html">absolute 2</a>
+          <a class="links" href="./position/fixed_divs.html">fixed_divs</a>
+          <a class="links" href="./position/fixed_sematic.html"
+            >fixed_semantic</a
+          >
+          <a class="links" href="./position/relative-checkbox.html"
+            >relative-checkbox</a
+          >
+          <a class="links" href="./position/relative.html">relative</a>
+          <a class="links" href="./position/sticky.html">sticky</a>
+          <h5>Links</h5>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/inset"
+            class="links"
+            target="_blank"
+            >inset</a
+          >
+          <a
+            class="links"
+            href="https://geraldodev.notion.site/Position-661b3b67d16d42148e28913f3309e5aa"
+            target="_blank"
+            >Positions in Notion</a
+          >
+        </details>
+        <!--end-->
+        <details>
+          <!--start-->
+          <summary>Display</summary>
+
+          <a
+            class="links"
+            href="https://www.notion.so/geraldodev/Display-391e80ae2ec44a6fb92e8b3d9afe9aee"
+            target="_blank"
+            >Display Notion</a
+          >
+          <a class="links" href="./pages/display.html" target="_blank"
+            >Display by gmap</a
+          >
+          <a
+            href="https://github.com/geraldotech/DevMap/tree/main/CSS/pages/FlexBox"
+            class="links"
+            >FlexBox</a
+          >
+        </details>
+        <!--end-->
+        <details>
+          <summary>Seletores class, #id</summary>
+          <h5>Todos os seletores</h5>
+          <a
+            href="https://www.w3schools.com/cssref/css_selectors.php"
+            class="links"
+            target="_blank"
+            >_CSS Selector Reference</a
+          >
+          <h5>CSS combinators</h5>
+          <a href="./pages/selector-combinators.html" class="links"
+            >CSS Selector combinators.html</a
+          >
+          <a href="./pages/descendant_vs_child_selector.html" class="links"
+            >Descendant Selector vs Child Selector.html</a
+          >
+          <a
+            href="https://www.w3schools.com/css/css_combinators.asp"
+            class="links"
+            target="_blank"
+            >W3 css_combinators.asp</a
+          >
+          <h5>Exemplo de alguns seletores</h5>
+
+          <p class="lead"><code>.class</code></p>
+          <p class="lead"><code>#id</code></p>
+          <p class="lead">
+            <code>p.demo</code> - seleciona a tag com a classe .demo
+          </p>
+          <p class="lead">
+            <code>span</code> - seleciona todas as tags correpondentes
+          </p>
+          <p class="lead">
+            <code>div + span</code> - prox span depois de uma div
+          </p>
+          <p class="lead">
+            <code>div > span</code> - span dentro de uma div ou elemento pai
+            seja uma div
+          </p>
+          <p class="lead">
+            <code>p ~ ul</code> - sel3ciona todas as ul preceded by p
+          </p>
+          <p class="lead">
+            <code>.demo | div.demo</code> - mesma classe com diferentes tags
+          </p>
+          <p class="lead">
+            <code>p.center | p.large</code> - multiclass only for p
+          </p>
+          <h5 class="lead">Também funciona com tags personalizada</h5>
+          <p class="lead"><code>&lt;g> do it now &lt;/g&gt;</code></p>
+          <pre>
                 g{
                   color: blue;
                 }
-              </pre>
-              <h5 class="lead">Multi class: apenas a tag p</h5>              
-              <pre>
+              </pre
+          >
+          <h5 class="lead">Multi class: apenas a tag p</h5>
+          <pre>
                   p.center {
                     text-align: center;
                     color: red;
@@ -74,56 +132,99 @@
                   p.large {
                     font-size: 300%;
                   }
-              </pre>   
-              <p class="lead">A classe center & large foi especifica para a tag <code>p</code> e não global, então outras tags não serão afetadas mesmo declarando a classe em questão <samp>&lt;h1></samp> não será afetado.</p>        
-                <pre>
+              </pre
+          >
+          <p class="lead">
+            A classe center & large foi especifica para a tag <code>p</code> e
+            não global, então outras tags não serão afetadas mesmo declarando a
+            classe em questão <samp>&lt;h1></samp> não será afetado.
+          </p>
+          <pre>
                   &lt;h1 class="center">This heading will not be affected&lt;/h1>
                   &lt;p class="center">This paragraph will be red and center-aligned.&lt;/p>
                   &lt;p class="center large">This paragraph will be red, center-aligned, and in a large font-size.
                   &lt;/p&gt;
-                </pre>                     
-         <div class="output">
-          <h1 class="center">This heading will not be affected</h1>
-          <p class="center">This paragraph will be red and center-aligned.</p>
-          <p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p> 
-         </div>
-         <p class="lead">Exemplo de hierarquia de seleção</p>
-         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FioYxvv7PILAvKxNeBIXLn2%2FHTML-CSS-Seletores%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
-            </details>
-            <details>
-              <summary>Sizing: width/height/min/max/px/rem/em</summary>
-              <a href="https://www.notion.so/geraldodev/CSS-width-height-03af3a7dd2d14e8f91cdafb15050984d" class="links" target="_blank">CSS-width-height</a>
-              <a href="./pages/min_max_width_height.html" class="links">Responsive explorando min/max/HTML/picture/source setsrc</a>
-              <a href="https://pingback.com/papodedev/css-rem-vs-em-vs-px-qual-usar" class="links" target="_blank">css-rem-vs-em-vs-px-qual-usar</a>
-              <a href="./pages/rem_vs_em.html" class="links">rem_vs_em</a>
-            </details>
-            <details>
-              <summary>Box Model</summary>
-              
-                <a class="links" href="https://www.alura.com.br/artigos/entendendo-como-funciona-box-model-e-o-box-sizing" target="_blank">entendendo-como-funciona-box-model-e-o-box-sizing</a>
-                <a class="links" href="./pages/box-sizing.html">Box Sizing by Gmap</a>
-                <a class="links" href="https://codepen.io/geraldopcf/pen/zYjEMVL" target="_blank">CodePen</a>
-              
-            </details>
+                </pre
+          >
+          <div class="output">
+            <h1 class="center">This heading will not be affected</h1>
+            <p class="center">This paragraph will be red and center-aligned.</p>
+            <p class="center large">
+              This paragraph will be red, center-aligned, and in a large
+              font-size.
+            </p>
+          </div>
+          <p class="lead">Exemplo de hierarquia de seleção</p>
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="800"
+            height="450"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FioYxvv7PILAvKxNeBIXLn2%2FHTML-CSS-Seletores%3Fnode-id%3D0%253A1"
+            allowfullscreen
+          ></iframe>
+        </details>
+        <details>
+          <summary>Sizing: width/height/min/max/px/rem/em</summary>
+          <a
+            href="https://www.notion.so/geraldodev/CSS-width-height-03af3a7dd2d14e8f91cdafb15050984d"
+            class="links"
+            target="_blank"
+            >CSS-width-height</a
+          >
+          <a href="./pages/min_max_width_height.html" class="links"
+            >Responsive explorando min/max/HTML/picture/source setsrc</a
+          >
+          <a
+            href="https://pingback.com/papodedev/css-rem-vs-em-vs-px-qual-usar"
+            class="links"
+            target="_blank"
+            >css-rem-vs-em-vs-px-qual-usar</a
+          >
+          <a href="./pages/rem_vs_em.html" class="links">rem_vs_em</a>
+        </details>
+        <details>
+          <summary>Box Model</summary>
 
-            <details>
-              <summary>Metaview Port</summary>           
-                <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
-                </pre>
-                  <a class="links" href="https://www.w3schools.com/css/css_rwd_viewport.asp
-                  " target="_blank">About this</a>
-            </details>
-            <details>
-              <summary>CSS External</summary>
-            <pre> &lt;link rel="stylesheet" href="css/style.css"></pre>       
-            </details>
-            <details>
-              <summary>Properties</summary>
-           
-              <div class="img">
-                <img  src="./assets/img/css-main.jpg" alt="">
-              </div>
-           <pre class="coral">
+          <a
+            class="links"
+            href="https://www.alura.com.br/artigos/entendendo-como-funciona-box-model-e-o-box-sizing"
+            target="_blank"
+            >entendendo-como-funciona-box-model-e-o-box-sizing</a
+          >
+          <a class="links" href="./pages/box-sizing.html">Box Sizing by Gmap</a>
+          <a
+            class="links"
+            href="https://codepen.io/geraldopcf/pen/zYjEMVL"
+            target="_blank"
+            >CodePen</a
+          >
+        </details>
+
+        <details>
+          <summary>Metaview Port</summary>
+          <pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </pre
+          >
+          <a
+            class="links"
+            href="https://www.w3schools.com/css/css_rwd_viewport.asp
+                  "
+            target="_blank"
+            >About this</a
+          >
+        </details>
+        <details>
+          <summary>CSS External</summary>
+          <pre> &lt;link rel="stylesheet" href="css/style.css"></pre>
+        </details>
+        <details>
+          <summary>Properties</summary>
+
+          <div class="img">
+            <img src="./assets/img/css-main.jpg" alt="" />
+          </div>
+          <pre class="coral">
             body, background-color: gray or background-image, 
             background-position, background-repeat
             color: yellow;
@@ -158,219 +259,374 @@
             user-select: none; //desativa o cursor             
           </pre>
           <p>
-            :target {
-              scroll-margin-top: 50px;
-            } // <a  href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top">https://developer.mozilla</a> 
-            <a href="https://stackoverflow.com/questions/11386807/adding-an-automatic-offset-to-the-scroll-position-for-all-hash-links-calls" >stackoverflow</a> 
+            :target { scroll-margin-top: 50px; } //
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top"
+              >https://developer.mozilla</a
+            >
+            <a
+              href="https://stackoverflow.com/questions/11386807/adding-an-automatic-offset-to-the-scroll-position-for-all-hash-links-calls"
+              >stackoverflow</a
+            >
             <a href="./pages/scroll-margin-top/">Demo By gmap</a>
-            <a href="https://codepen.io/geraldopcf/pen/GRwMGJW?editors=1100" target="_blank">Demo 2 By gmap</a>
+            <a
+              href="https://codepen.io/geraldopcf/pen/GRwMGJW?editors=1100"
+              target="_blank"
+              >Demo 2 By gmap</a
+            >
           </p>
-  <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter" target="_blank">backdrop-filter</a>
-  <a class="links" href="https://codepen.io/geraldopcf/pen/QWJMbyz" target="_blank">backdrop-filter [codepen]</a>
-  <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow" target="_blank">drop-shadow</a>
-  <a href="https://codepen.io/geraldopcf/pen/WNzOeXL" class="links">width fit-content, max-content && display: table</a>
-  <a href="./pages/fonts.html" class="links">fonts</a>
-  <a href="./pages/font-face.html" class="links">font-face</a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-stroke" class="links" target="_blank">-webkit-text-stroke</a>
-  <a href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/Background.md" class="links" target="_blank">Background.md</a>
-</details>  
-<details>
-<summary>Colors - Tabela Cores</summary>
-<p class="coral">CORAL</p>
+          <a
+            class="links"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter"
+            target="_blank"
+            >backdrop-filter</a
+          >
+          <a
+            class="links"
+            href="https://codepen.io/geraldopcf/pen/QWJMbyz"
+            target="_blank"
+            >backdrop-filter [codepen]</a
+          >
+          <a
+            class="links"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow"
+            target="_blank"
+            >drop-shadow</a
+          >
+          <a href="https://codepen.io/geraldopcf/pen/WNzOeXL" class="links"
+            >width fit-content, max-content && display: table</a
+          >
+          <a href="./pages/fonts.html" class="links">fonts</a>
+          <a href="./pages/font-face.html" class="links">font-face</a>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-stroke"
+            class="links"
+            target="_blank"
+            >-webkit-text-stroke</a
+          >
+          <a
+            href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/Background.md"
+            class="links"
+            target="_blank"
+            >Background.md</a
+          >
+        </details>
+        <details>
+          <summary>Colors - Tabela Cores</summary>
+          <p class="coral">CORAL</p>
 
-  <a class="links" href="./pages/Tabela-Cores-Web.htm">Tabela-Cores-Web</a>
-  <a class="links" href="./pages/Web-colors.html">Web-Colors</a>
-  <a href="./pages/linear_gradient/index.html" class="links">Linear Gradient</a>
-  <a href="./pages/curso_em_video/Gradiente.html" class="links">Gradiente</a>
-  <a href="./pages/curso_em_video/Representando_cores-com-CSS3.html" class="links">Representando_cores-com-CSS3 - Adobe Colors</a>
-</details>                  
-<details>
-<summary>Margin and Padding</summary>
+          <a class="links" href="./pages/Tabela-Cores-Web.htm"
+            >Tabela-Cores-Web</a
+          >
+          <a class="links" href="./pages/Web-colors.html">Web-Colors</a>
+          <a href="./pages/linear_gradient/index.html" class="links"
+            >Linear Gradient</a
+          >
+          <a href="./pages/curso_em_video/Gradiente.html" class="links"
+            >Gradiente</a
+          >
+          <a
+            href="./pages/curso_em_video/Representando_cores-com-CSS3.html"
+            class="links"
+            >Representando_cores-com-CSS3 - Adobe Colors</a
+          >
+        </details>
+        <details>
+          <summary>Margin and Padding</summary>
 
-<p class="lead">Use sempre o DevTools, este será a melhor ferramenta, margin é laranja e padding é verde</p>
-<pre class="coral">
+          <p class="lead">
+            Use sempre o DevTools, este será a melhor ferramenta, margin é
+            laranja e padding é verde
+          </p>
+          <pre class="coral">
   padding: 60px 10px;
   max-width: 960px;
   margin: auto;
-</pre>
+</pre
+          >
 
+          <div class="img">
+            <img class="img" src="./assets/img/padding_margin.jpg" alt="" />
+          </div>
+          <a class="links" href="./pages/margin-padding-elements.html"
+            >margin-padding-css+element.html</a
+          >
+          <a
+            class="links"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_intro"
+            target="_blank"
+            >W3 margin intro</a
+          >
 
-<div class="img">
-  <img class="img" src="./assets/img/padding_margin.jpg" alt="">
-</div>
-<a class="links" href="./pages/margin-padding-elements.html">margin-padding-css+element.html</a>
-<a class="links" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_intro" target="_blank">W3 margin intro</a>
-
-<ul>
-<pre>
+          <ul>
+            <pre>
 margin-top
 margin-right
 margin-bottom
 margin-left
-</pre>
-</ul>
-             
-<p class="lead">Shorthand property sets the margin area for all four sides</p>
-<pre>margin: 20px 5px 10px 4px</pre>
-<div class="img">
-  <img src="./assets/img/margin.gif" />
-</div>
+</pre
+            >
+          </ul>
 
-<p class="lead">Exemplo top: 20px, right-left: auto e bottom:10px</p>
-<pre>margin: 20px auto 10px;</pre>
-<p class="lead">O mesmo se aplica para padding:</p>
-<div class="img">
-  <img src="./assets/img/padding-margni-sides.jpg" />
-</div>
-<hr><br>
-<p class="lead">Praticar em <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin" class="links">https://developer.mozilla.org</a> ou <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_intro">W3 schools</a></p>              
-            </details>
-            <details>
-              <summary>:root (variables)</summary>
-             
-                <h5>e.g use :root</h5>
-                <p class="lead">--minhavar: propriedade;</p>                
-                <pre>
+          <p class="lead">
+            Shorthand property sets the margin area for all four sides
+          </p>
+          <pre>margin: 20px 5px 10px 4px</pre>
+          <div class="img">
+            <img src="./assets/img/margin.gif" />
+          </div>
+
+          <p class="lead">Exemplo top: 20px, right-left: auto e bottom:10px</p>
+          <pre>margin: 20px auto 10px;</pre>
+          <p class="lead">O mesmo se aplica para padding:</p>
+          <div class="img">
+            <img src="./assets/img/padding-margni-sides.jpg" />
+          </div>
+          <hr />
+          <br />
+          <p class="lead">
+            Praticar em
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+              class="links"
+              >https://developer.mozilla.org</a
+            >
+            ou
+            <a
+              href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_intro"
+              >W3 schools</a
+            >
+          </p>
+        </details>
+        <details>
+          <summary>:root (variables)</summary>
+
+          <h5>e.g use :root</h5>
+          <p class="lead">--minhavar: propriedade;</p>
+          <pre>
                   :root {
                     --text-color: black;
                     --bg: rgb(144, 144, 144);
                     --z: 150%;
                   }
-                </pre>
-            <p class="lead">call variables</p>
-            <pre class="coral">
+                </pre
+          >
+          <p class="lead">call variables</p>
+          <pre class="coral">
               body {               
                 zoom:var(--z); 
                 background: var(--bg);
                 color: var(--txt-color);
               }          
-            </pre>
-            </details>
-          <details>
-            <summary>Hack center sem display flex</summary>
-            <pre class="coral">
+            </pre
+          >
+        </details>
+        <details>
+          <summary>Hack center sem display flex</summary>
+          <pre class="coral">
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%,-50%)
-            </pre>
-          </details>
-          <details>
-            <summary>Center a Div display:grid</summary>
-            <pre class="coral">
+            </pre
+          >
+        </details>
+        <details>
+          <summary>Center a Div display:grid</summary>
+          <pre class="coral">
               div {
                 width: 100vw;
                 height: 100vh;
                 display: grid;
                 place-items: center;
               }
-             </pre>
-              <a class="links" href="https://codepen.io/felippe-moraes_pismo/pen/qBoOrBJ">demo</a>
-          </details>
-          
-          <details> <!--start-->
-            <summary>Dark Mode</summary>
-            <pre>
+             </pre
+          >
+          <a
+            class="links"
+            href="https://codepen.io/felippe-moraes_pismo/pen/qBoOrBJ"
+            >demo</a
+          >
+        </details>
+
+        <details>
+          <!--start-->
+          <summary>Dark Mode</summary>
+          <pre>
               #181818
               #121212
-            </pre>
-            <p class="lead">Best option so far:</p>
-            <pre>
+            </pre
+          >
+          <p class="lead">Best option so far:</p>
+          <pre>
               :root{
                 color-scheme: dark;
             }
-            </pre>
-          </details> <!--end-->
-          <details> <!--start-->
-            <summary>Image 100% inside div</summary>
-            <p class="lead">Adicionar a imagem dentro de uma div</p>
-            <pre>
+            </pre
+          >
+        </details>
+        <!--end-->
+        <details>
+          <!--start-->
+          <summary>Image 100% inside div</summary>
+          <p class="lead">Adicionar a imagem dentro de uma div</p>
+          <pre>
               &lt;div> &lt;img src=" <%- noticia.imagem %>" alt="" style="max-width: 100%;">&lt;/div>
-            </pre>
-          </details> <!--end-->
-          <details> <!--start-->
-            <summary>Button disabled</summary>
-            <p class="lead">Adicionar a imagem dentro de uma div</p>
+            </pre
+          >
+        </details>
+        <!--end-->
+        <details>
+          <!--start-->
+          <summary>Button disabled</summary>
+          <p class="lead">Adicionar a imagem dentro de uma div</p>
+
+          <button disabled id="play">Play Now</button>
+          <pre>
             
-            <button disabled  id="play">Play Now</button>
-            <pre>            
               &lt;button&gt; disabled  id="play">Play Now&lt;/button&gt;
-            </pre>             
-          </details> <!--end-->
-          <details> <!--start-->
-            <summary>Animation</summary>
-           <section class="links lead">
-            <a href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/Animations.md" target="_blank">Animation.md</a> 
-           </section>         
-          </details> <!--end-->
-          <details> <!--start-->
-            <summary>CSS__BEM</summary>
-         <section class="links lead">  <a href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/BEM.md" target="_blank">BEM.md</a>     </section>     
-          </details> <!--end-->       
-          <details> <!--start-->
-            <summary>Pseudo</summary>
-         <section class="links lead">  <a href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/pseudos.md" target="_blank">Pseudo-elements / Pseudo-classes</a>     
-        </section>     
-          </details> <!--end-->
-          <details> <!--start-->
-            <summary>clear - float</summary>
-            <p class="lead">Entendendo float e clear</p>         
-             <a href="https://www.figma.com/file/cHGgKC32AUyVWiOoAwmuNG/float_clear" target="_blank" class="links">Figma here</a>  
-          <a class="links" href="https://www.w3schools.com/cssref/pr_class_clear.asp">https://www.w3schools.com/cssref/pr_class_clear.asp</a>   
-        
-          </details> <!--end-->
+            </pre
+          >
+        </details>
+        <!--end-->
+        <details>
+          <!--start-->
+          <summary>Animation</summary>
+          <section class="links lead">
+            <a
+              href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/Animations.md"
+              target="_blank"
+              >Animation.md</a
+            >
+          </section>
+        </details>
+        <!--end-->
+        <details>
+          <!--start-->
+          <summary>CSS__BEM</summary>
+          <section class="links lead">
+            <a
+              href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/BEM.md"
+              target="_blank"
+              >BEM.md</a
+            >
+          </section>
+        </details>
+        <!--end-->
+        <details>
+          <!--start-->
+          <summary>Pseudo</summary>
+          <section class="links lead">
+            <a
+              href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/pseudos.md"
+              target="_blank"
+              >Pseudo-elements / Pseudo-classes</a
+            >
+          </section>
+        </details>
+        <!--end-->
+        <details>
+          <!--start-->
+          <summary>clear - float</summary>
+          <p class="lead">Entendendo float e clear</p>
+          <a
+            href="https://www.figma.com/file/cHGgKC32AUyVWiOoAwmuNG/float_clear"
+            target="_blank"
+            class="links"
+            >Figma here</a
+          >
+          <a
+            class="links"
+            href="https://www.w3schools.com/cssref/pr_class_clear.asp"
+            >https://www.w3schools.com/cssref/pr_class_clear.asp</a
+          >
+        </details>
+        <!--end-->
         <section>
-          <h2>Threads</h2>          
-          <a href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/media_queries/README.md" class="links">Media Queries</a>
+          <h2>Threads</h2>
+          <a
+            href="https://github.com/geraldotech/DevMap/blob/main/CSS/pages/media_queries/README.md"
+            class="links"
+            >Media Queries</a
+          >
           <a href="./pages/Line_hovers/index.html" class="links">Line Hovers</a>
           <a href="./pages/inherit.html" class="links">inherit</a>
-          <a href="./pages/label-padding.html" class="links">label-padding.html</a>
-          <a href="./pages/has/from-scratch-align-ele-and-has.html" class="links">From Stach align elements and has()</a>
-          <a href="./pages/attr_fun_pseudo-class-after-button.html" class="links">attr()_fun_pseudo-class-after-button</a>
+          <a href="./pages/label-padding.html" class="links"
+            >label-padding.html</a
+          >
+          <a
+            href="./pages/has/from-scratch-align-ele-and-has.html"
+            class="links"
+            >From Stach align elements and has()</a
+          >
+          <a
+            href="./pages/attr_fun_pseudo-class-after-button.html"
+            class="links"
+            >attr()_fun_pseudo-class-after-button</a
+          >
           <a href="./pages/contains/" class="links">[style*="color:...."]</a>
           <a href="./pages/prism/index.html" class="links">Prism [plugin]</a>
         </section>
 
         <section>
           <h2>Links</h2>
-          <a href="https://www.w3schools.com/css/css_specificity.asp" class="links" target="_blank">higher priority css_specificity.asp</a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-block-end" class="links" target="_blank">margin-block-end</a>
-          <a href="https://www.linkedin.com/posts/iuricode_css-inset-o-atalho-que-voc%C3%AA-n%C3%A3o-conhecia-activity-7018283773158957056-DwoV/?utm_source=share&utm_medium=member_android" class="links" target="_blank">CSS inset: o atalho que você não conhecia</a>
-          
+          <a
+            href="https://www.w3schools.com/css/css_specificity.asp"
+            class="links"
+            target="_blank"
+            >higher priority css_specificity.asp</a
+          >
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-block-end"
+            class="links"
+            target="_blank"
+            >margin-block-end</a
+          >
+          <a
+            href="https://www.linkedin.com/posts/iuricode_css-inset-o-atalho-que-voc%C3%AA-n%C3%A3o-conhecia-activity-7018283773158957056-DwoV/?utm_source=share&utm_medium=member_android"
+            class="links"
+            target="_blank"
+            >CSS inset: o atalho que você não conhecia</a
+          >
         </section>
-          </article>
-          <!-- sidebar -->
-          <aside>          
-            <h5>Tips!</h5>
-            <pre><samp>pre</samp>
+      </article>
+      <!-- sidebar -->
+      <aside>
+        <h5>Tips!</h5>
+        <pre><samp>pre</samp>
               <p class="tip_color"><samp>pre => .coral</samp></p> 
-            </pre>     
-            <section class="tips">
-              <ul>
-                <li>padding é uma margin interna e o margin é uma margin externa</li>
-                <li>Entender o que você está fazendo e a onde você quer chegar</li>
-                <li>Abrir o Box Model</li>
-                <li>CSS tem muita coisa que é relativo a parent, root, inherit</li>
-                <li>As vezes é falta de div, estruturar bem o DOM</li>
-              </ul>              
-            </section>            
-  
-           
-            <ol>
-              <li>style - inline</li>
-              <li>#ID</li>
-              <li>.class</li>
-              <li>&lt;tag&gt;</li>
-            </ol>
-            <p class="lead">usar <mark>!important</mark> para forçar o style</p>
-     </aside> 
-    </div><!--container-->
-  </main>
-</body>
+            </pre>
+        <section class="tips">
+          <ul>
+            <li>
+              padding é uma margin interna e o margin é uma margin externa
+            </li>
+            <li>Entender o que você está fazendo e a onde você quer chegar</li>
+            <li>Abrir o Box Model</li>
+            <li>CSS tem muita coisa que é relativo a parent, root, inherit</li>
+            <li>As vezes é falta de div, estruturar bem o DOM</li>
+          </ul>
+        </section>
 
+        <ol>
+          <li>style - inline</li>
+          <li>#ID</li>
+          <li>.class</li>
+          <li>&lt;tag&gt;</li>
+        </ol>
+        <p class="lead">usar <mark>!important</mark> para forçar o style</p>
+      </aside>
+
+      <!--container-->
+    </main>
     <footer>
-      <p>Feito orgulhosamente com CSS puro by <a href="https://github.com/geraldotech/" target="_blank">gmapdev</a> - 2022</p>   
+      <p>
+        Feito orgulhosamente com CSS puro by
+        <a href="https://github.com/geraldotech/" target="_blank">gmapdev</a> -
+        2022
+      </p>
       <p>Mobile First</p>
     </footer>
     <div class="header_line"></div>
+  </body>
 </html>

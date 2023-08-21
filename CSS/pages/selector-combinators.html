@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      body {
+        max-width: 80rem;
+        margin: 0 auto;
+      }
+      /*  global - all spans  */
+      span {
+        color: dodgerblue;
+      }
+
+      /* selector selects all elements that are the children of a specified element. */
+      div > span {
+        background: red;
+        color: black;
+      }
+
+      /* Seleciona o próximo irmão adjacente / adjacent sibling selector  */
+      div + span {
+        color: palevioletred;
+      }
+
+      /* sel3ciona todas as ul preceded by p  */
+      p ~ ul {
+        color: mediumvioletred;
+      }
+
+      p ~ code {
+        color: seagreen;
+        font-size: 2rem;
+        display: block;
+      }
+      /* adjacent sibling selector -  next adjacent sibling */
+      p + h1 {
+        color: coral;
+      }
+      /*mesma classe com diferentes tags*/
+      .demo {
+        text-decoration: underline blue;
+      }
+
+      div.demo {
+        font-size: 2rem;
+        font-style: bold;
+      }
+
+      .lead {
+        background: red;
+      }
+
+      h1.lead {
+        color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>
+      Curiosidade: É possível usar a mesma classe e depois custom with:
+      <code>tag.class</code> contudo deve ser mais prático usar duas classes
+    </h2>
+
+    <p class="demo">I am `p` class demo</p>
+    <div class="demo">I am `div` class demo</div>
+
+    <p class="lead">p lead</p>
+
+    <h1 class="lead">h1 lead</h1>
+
+    <hr />
+    <h1>Child Selector (>)</h1>
+    <ul>
+      <li>A</li>
+      <li>B</li>
+    </ul>
+
+    <p>one</p>
+
+    <div>
+      div
+      <span>span div</span>
+    </div>
+
+    <span>span</span>
+
+    <h2>h2</h2>
+
+    <span>Global span style</span>
+
+    <hr />
+
+    <h1>General Sibling Selector (~)</h1>
+    <p>paragrafo</p>
+    <ul>
+      <li>A</li>
+      <li>B</li>
+    </ul>
+    <ul>
+      <li>A</li>
+      <li>B</li>
+    </ul>
+    <ul>
+      <li>A</li>
+      <li>B</li>
+    </ul>
+
+    <article>
+      <h2>Hello article</h2>
+      <span>span</span>
+      <span>Global span style</span>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+        officia.
+      </p>
+      <code
+        >todos os codes after `p` will be selected | sudo apt get install</code
+      >
+      <code
+        >todos os codes after `p` will be selected | sudo apt get install</code
+      >
+    </article>
+
+    <hr />
+    <h1>Adjacent Sibling Selector (+)</h1>
+    <p>classes globais ou tag + class</p>
+    <h1>Eu</h1>
+  </body>
+</html>

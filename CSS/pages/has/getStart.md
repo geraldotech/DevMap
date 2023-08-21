@@ -7,28 +7,21 @@
 
 # fromScratch
 
-section que tiver span como filho então section =>
+## single :has()
+
+section tem span de modo geral
+Se `true` e não tiver mais nada como `+ #` o próprio block é selecionado
+
+```css
+section:has(span) {
+  color: red;
+}
+```
+
+Child Selector: Apenas se span for child de section:
 
 ```css
 section:has(> span) {
-  background: violet;
-}
-```
-
-section que has span como child entao => p
-obs: caso a span estive entre divs isso não vai funcionar como já foi visto em CSS Combinators
-
-```css
-section:has(> span) p {
-  font-size: 1.5rem;
-  color: coral;
-}
-```
-
-section que tiver span como Descendant então => button
-
-```css
-section:has(span) button {
   background: violet;
 }
 ```
@@ -46,6 +39,35 @@ h1:has(+ p) {
 ```css
 article:has(h2, ul) {
   background: red;
+}
+```
+
+## :has() + select
+
+section que `has` span como child então => p
+
+> dobs: caso a span estivesse entre divs isso não vai funcionar como já foi visto em CSS Combinators
+
+```css
+section:has(> span) p {
+  font-size: 1.5rem;
+  color: coral;
+}
+```
+
+section que tiver span como Descendant então => button
+
+```css
+section:has(span) button {
+  background: violet;
+}
+```
+
+`true` ? então => #home
+
+```css
+section:has(> span) #home {
+  color: red;
 }
 ```
 
