@@ -160,12 +160,6 @@ html:has([type="checkbox"][name="b"]:checked) {
 }
 ```
 
-# links
-
-Usando has() em radio, checkbox e select manipulando as var do CSS fiz esse exemplo com muita dedicação 🙂
-
-- [Radio, select and checkbox](https://geraldotech.github.io/DevMap/CSS/pages/has/radio-select.html)
-
 ### select:
 
 ```css
@@ -195,12 +189,14 @@ body:has(#scratch option[value="1"]:checked) {
 }
 ```
 
+# links
+
+Usando has() em radio, checkbox e select manipulando as var do CSS fiz esse exemplo com muita dedicação 🙂
+
+- [Radio, select and checkbox](https://geraldotech.github.io/DevMap/CSS/pages/has/radio-select.html)
+
 O princípio para alinhar elementos e como aplicar o has() nessas situações:
 
 - [from-scratch-align-ele-and-has.html](https://github.com/geraldotech/DevMap/blob/main/CSS/pages/has/from-scratch-align-ele-and-has.html) | [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/from-scratch-align-ele-and-has.html)
 
 Veja também como usar o `[type="checkbox"]:checked + label` [https://codepen.io/geraldopcf/pen/ZERvQBZ](https://codepen.io/geraldopcf/pen/ZERvQBZ)
-
-```
-
-```
