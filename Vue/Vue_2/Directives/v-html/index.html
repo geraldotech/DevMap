@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./src/main.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #app {
+        display: flex;
+        justify-content: space-between;
+      }
+      textarea {
+        background: black;
+        padding: 10px;
+        box-sizing: border-box;
+        display: block;
+        height: 600px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: -webkit-linear-gradient(#f71e1e, #26ff00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .htmlcode {
+        width: 30%;
+      }
+      .renderhtml {
+        width: 60%;
+        border: 1px solid;
+        min-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="htmlcode">
+        <textarea name="" id="" cols="45" v-model="htmlcode"></textarea>
+      </div>
+      <hr />
+      <div class="renderhtml">
+        <p v-html="htmlcode"></p>
+      </div>
+    </div>
+    <button>Salve to Local</button>
+  </body>
+</html>

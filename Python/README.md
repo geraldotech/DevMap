@@ -215,11 +215,11 @@ for k, v in mydicionario.items():
 
 ## Ordem de precedência:
 
-- ()
-- \*\*
-- - / // % "multiplicação, divisão, divisão inteira, resto da divisão"
+- `()`
+- `**`
+- `* / // %` "multiplicação, divisão, divisão inteira, resto da divisão"
 
----
+- potência pow(2,3) or 2\*\*3
 
 ### Links:
 
