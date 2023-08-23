@@ -184,7 +184,14 @@
 
     <section id="general-sibling">
       <h2>👉General Sibling Selector (~)</h2>
-      <p>paragrafo</p>
+
+      <xmp
+>
+    p ~ ul {
+      color: mediumvioletred;
+    }
+      </xmp>
+      <p>Just a paragraph...</p>
       <ul>
         <li>A</li>
         <li>B</li>
@@ -199,7 +206,15 @@
       </ul>
 
       <article>
-        <h2>Hello article</h2>
+        <xmp
+>
+    p ~ code {
+      color: seagreen;
+      font-size: 2rem;
+      display: block;
+    }
+        </xmp>
+        <h2>Hello article > h2</h2>
         <span>span</span>
         <span>Global span style</span>
         <p>
