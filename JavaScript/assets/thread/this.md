@@ -10,6 +10,7 @@ e.target === this;
 // object window
 function doSomething() {
   console.log(this);
+  console.log(this === window); // True
 }
 doSomething();
 
