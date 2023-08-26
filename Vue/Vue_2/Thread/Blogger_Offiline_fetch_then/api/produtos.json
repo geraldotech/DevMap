@@ -1,6 +1,6 @@
 [
-    {"id": 1, "name": "notebook", "price": 1500},
-    {"id": 2, "name": "monitor", "price": 1200},
-    {"id": 3, "name": "smartphone", "price": 1100},
-    {"id": 4, "name": "keyboard", "price": 300}
+  { "id": 1, "name": "notebook", "price": 1500 },
+  { "id": 2, "name": "monitor", "price": 1200 },
+  { "id": 3, "name": "smartphone", "price": 1100 },
+  { "id": 4, "name": "keyboard", "price": 300 }
 ]

@@ -21,7 +21,7 @@
     <p>{{ posts }}</p>
 
     <hr />
-
+    <h1>posts.id</h1>
     <ul>
       <li v-for="itens in posts" :key="itens.id">
         <a :href="itens.slug" @click.prevent="fetchPost(itens.id)">{{
@@ -95,5 +95,4 @@ module.exports = {
 };
 </script>
 
-<style>
-</style>
+<style></style>
