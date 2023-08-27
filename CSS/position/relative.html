@@ -1,32 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-       div{
-           border: 1px solid blue;
-           width: 200px;
-           height: 200px;
-       }   
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position: Relative</title>
+    <link rel="stylesheet" href="../assets/position_relative.css" />
+  </head>
+  <body>
+    <h1>Relative</h1>
+    <ul>
+      <li><code>top, left, bottom, right</code></li>
+    </ul>
+    <h2>e.g: 1</h2>
 
-       #teste{         
-        background: red;
-        position: relative;
-        top: 100px;
-        left: 50px;
-       }
-    </style>
-</head>
-<body>
+    <hr />
+    <section class="para">
+      <h2>
+        ➡️ `right: 50%;` works, but tentar evitar a menos que queira o elemento
+        saindo fora do fluxo, vai ser jogado para direita.
+      </h2>
+      <p class="aa">
+        geraldo Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Explicabo dicta, eum error suscipit sai fora do limite da page usando
+        right: 50% obcaecati atqued, voluptatum a laborum molestias excepturi
+        nostrum quod adipisci architecto repellendus culpa soluta minima ipsum
+        ad!
+      </p>
+      <h2>
+        ➡️ usar width para controlar a largura caso contrário vai sair muito do
+        fluxo `width: 50%; left: 50%;`
+      </h2>
+      <p class="bb">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        dicta, eum error suscipit obcaecati atque, voluptatum a laborum
+        molestias excepturi nostrum quod adipisci architecto repellendus culpa
+        soluta minima ipsum ad!
+      </p>
 
+      <h2>
+        ➡️ se tem 10% sobrando na tela, usando com left`left: 10%; width: 90%;`
+      </h2>
+      <p class="cc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        dicta, eum error suscipit obcaecati atque, voluptatum a laborum
+        molestias excepturi nostrum quod adipisci architecto repellendus culpa
+        soluta minima ipsum ad!
+      </p>
+      <h2>➡️ Centralizando`left: 20%; width: 60%;`</h2>
+      <code>100% - 60% sobra 40%, left: 20% </code>
+      <figure>
+        <img src="../assets/img/relative_css.jpeg" alt="" />
+        <figcaption>Calculando medidas</figcaption>
+      </figure>
+      <p class="dd">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        dicta, eum error suscipit obcaecati atque, voluptatum a laborum
+        molestias excepturi nostrum quod adipisci architecto repellendus culpa
+        soluta minima ipsum ad!
+      </p>
+
+      <h1>➡️ `width: 77%; margin: 0 auto;`</h1>
+      <p class="ee">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        dicta, eum error suscipit obcaecati atque, voluptatum a laborum
+        molestias excepturi nostrum quod adipisci architecto repellendus culpa
+        soluta minima ipsum ad!
+      </p>
+    </section>
+    <hr />
+    <h2>eg: 2</h2>
     <div class="container">
-        <div>primeira div</div>
-        <div id="teste">Segunda div</div>
-        <div>Terceira div</div>
+      <div>primeira div</div>
+      <div id="teste">Segunda div</div>
+      <div>Terceira div</div>
     </div>
-    
-</body>
+  </body>
 </html>

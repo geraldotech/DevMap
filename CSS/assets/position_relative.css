@@ -1,0 +1,93 @@
+* {
+  /*   margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 150%;
+  color: black;
+}
+
+body {
+  margin: 60rem;
+  margin: 0 auto;
+}
+code {
+  color: rgb(115, 100, 208);
+}
+
+p {
+  color: white;
+}
+
+figure:has(img) {
+  text-align: center;
+}
+
+figure:has(img) img {
+  max-width: 40%;
+}
+@media screen and (381px <= width <= 767px) {
+  figure:has(img) img {
+    max-width: 100%;
+    border: 4px solid rebeccapurple;
+    border-radius: 10px 10px;
+  }
+  figure:has(figcaption) {
+    font-size: 15px;
+  }
+}
+
+.parax {
+  position: fixed;
+  top: 600px;
+}
+
+.container,
+.container div {
+  border: 1px solid blue;
+  width: 150px;
+  height: 150px;
+}
+
+#teste {
+  background: red;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.aa {
+  background: hsl(98 100% 62%);
+  position: relative;
+  right: 50%;
+
+  color: #f9265e;
+}
+.bb {
+  position: relative;
+  background: coral;
+  width: 50%;
+  left: 50%;
+}
+
+.para .cc {
+  position: relative;
+  left: 10%;
+  width: 90%;
+  background: purple;
+}
+
+.dd {
+  background: blue;
+  position: relative;
+  left: 25%;
+  width: 50%;
+}
+.ee {
+  background: pink;
+  position: relative;
+  width: 77%;
+  margin: 0 auto;
+}
