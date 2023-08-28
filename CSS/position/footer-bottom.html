@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>context footer position</title>
+    <style>
+      * {
+        color-scheme: dark;
+      }
+      xmp {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      xmp.css {
+        color: green;
+      }
+
+      xmp.html {
+        color: rgb(1, 27, 53);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>modos de manter footer to the bottom:</h1>
+    <a
+      href="https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b"
+      >stackoverflow</a
+    >
+    <h2>eg: using min-height</h2>
+    <p>footer's height, that I already knew was 40px.</p>
+
+    <xmp class="css">
+        <article class="allButFooter">
+            <!-- Your page's content goes here, including header, nav, aside, everything -->
+        </article>
+        <footer>
+            <!-- Footer content -->
+            footer
+        </footer>
+    </xmp>
+
+    <xmp class="html"
+>
+        .allButFooter {
+        min-height: calc(100vh - 40px);
+        }
+
+        footer {
+        background: gray;
+        height: 40px;
+        }
+    </xmp>
+
+    <h2>e.g: <del>absolute</del></h2>
+    <p>
+      It's not very responsive, because if you have a device with a smaller
+      height (e.g. a mobile device) and the content will naturally overflow the
+      viewer height, the footer will overlay on your content because of its
+      absolute positioning
+    </p>
+    <p>se o conteúdo for maior que o footer, o footer vai ficar por cima</p>
+    <xmp class="css"
+>
+        footer {
+        position: absolute;
+        bottom: 0;
+        background: gray;
+        width: 100%;
+        }
+    </xmp>
+
+    <h2>eg: position fixed</h2>
+    <p>
+      se o conteudo for maior que o footer, footer fica fixed, pode ser indicado
+      para menu bottom fixed
+    </p>
+
+    <xmp class="html">
+        <article>
+            <p>ssLorem ipsum dolor, sit amet consectetur adipisicing elit. Libero assumenda officia autem quisquam amet
+                iste
+                voluptatibus natus praesentium in
+                doloremque dicta quo iste. Fugit esse eius, ad unde quae aliquam voluptate optio ullam. Voluptates
+                sapiente
+                esse architecto delectus labore asperiores, laborum nam voluptate itaque. Voluptatum dolores </p>
+            <h1>23232</h1>
+
+        </article>
+        <footer>
+            <h1>footer</h1>
+        </footer>
+    </xmp>
+
+    <xmp class="css"
+>
+        footer {
+        position: fixed;
+        width: 100%;
+        background: gray;
+        bottom: 0;
+        }
+    </xmp>
+
+    <h2>eg: flex column</h2>
+    <p>to updated or remove <strong>flex_container_main.html</strong></p>
+    <xmp class="css"
+>
+        main {
+        display: flex;
+        flex-flow: column;
+        min-height: 100dvh;
+        }
+
+        article {
+        flex: 1;
+        }
+    </xmp>
+
+    <xmp class="html">
+        <main>
+            <header>header</header>
+            <article>
+                <p>article</p>
+
+            </article>
+            <footer>
+                footer
+            </footer>
+        </main>
+
+    </xmp>
+
+    <h2>eg: grid:</h2>
+
+    <xmp class="css"
+>
+        #grid-container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 100%;
+
+        min-height: 100vh;
+
+        min-height: 100svh;
+        }
+    </xmp>
+
+    <xmp class="html">
+        <div id="grid-container">
+            <header>
+                Header
+            </header>
+            <article>
+                Main content
+                <p>lorem1000</p>
+            </article>
+            <footer>
+                Footer
+            </footer>
+        </div>
+    </xmp>
+  </body>
+</html>
