@@ -62,8 +62,7 @@ figure:has(img) img {
   background: hsl(98 100% 62%);
   position: relative;
   right: 50%;
-
-  color: #f9265e;
+  color: black;
 }
 .bb {
   position: relative;
@@ -90,4 +89,5 @@ figure:has(img) img {
   position: relative;
   width: 77%;
   margin: 0 auto;
+  color: black;
 }
