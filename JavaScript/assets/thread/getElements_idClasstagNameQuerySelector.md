@@ -70,7 +70,7 @@ console.log(menu);  menu[0].innerHTML = "Hello World!";
 Dica: Array.from convert HTML Collection and NodeList to Array
 */
 
-//👉querySelector - the Super Selector!! class, id, attributes, tags, subclasses, subtags...
+//👉 querySelector - the Super Selector!! class, id, attributes, tags, subclasses, subtags...
 console.log(document.querySelector(".oi")); //return class
 console.log(document.querySelector("#hello").innerHTML); //return id
 
@@ -82,7 +82,7 @@ console.log(document.querySelector("#hello").innerHTML); //return id
 const input = document.querySelector("input[name='one']");
 console.log(input.placeholder); // ola
 
-//👉 querySelector selecionando button inside tags
+//🟢 querySelector selecionando button inside tags
 <section>
   <button>btn inside section</button>
   <button data="btn2">btn number 2 inside section</button>
@@ -91,23 +91,32 @@ console.log(input.placeholder); // ola
 const btnSection = document.querySelector("section button");
 console.log(btnSection.innerHTML); //"btn inside section"
 
-//👉 querySelector selecionando um segundo button inside tags, adicionar um "name" ou "data"
+//🟢 querySelector selecionando um segundo button inside tags, adicionar um "name" ou "data"
 const sbtn = document.querySelector("section button[data='btn2']");
 const Calc = document.querySelector("dialog button[name='ok']");
 
-//👉 querySelector selecionando class e tag dentro dessa classe
+//🟢 querySelector selecionando class e tag dentro dessa classe
 const el = document.querySelector(".secao span");
 el.textContent = "novo";
 
-//👉 querySelector and nth-child
+//🟢 querySelector and nth-child
  const p = document.querySelector("p:nth-child(3)"); //lembrando regras de CSS se não existir o tipo tipo p `3` vai retornar `null`
  const p = document.querySelector("p:nth-of-type(2)");
 
-//👉 querySelector and placeholder
+//🟢 querySelector and placeholder
 document.querySelector("input[placeholder='Full_URL'];
 
+//🟢 select by Attribute
+<p data>Data</p>
+const p = document.querySelector("[data]");
 
-//🟢 querySelectorAll - support forEach
+//🟢 select the span with attr : data-forca="1"
+ <span data-forca="1">Bye 1</span>
+ <span data-forca="2">Bye 2</span>
+const attr = document.querySelector("span[data-forca='1']");
+
+
+//👉 querySelectorAll - support forEach
 console.log(document.querySelectorAll(".menu")); //return a NodeList()
 
 const link = document.querySelectorAll("a"); //return all tags
@@ -120,7 +129,31 @@ link.forEach(el => {
   el.setAttribute("title","open new tab");
 });
 
-//👉 - 👉Alterando vários elements
+// 🟢 querySelectorAll Tags
+<a href="#">link 1</a>
+<a href="#">link 2</a>
+<a href="#">link 3</a>
+<a href="#">link 4</a>
+
+const pp = document.querySelectorAll("a");
+
+console.log(pp.length);
+ pp.forEach(el => {
+  el.classList.add("linkr");
+  el.href = "http://technotesbr.blogspot.com";
+  el.setAttribute("target","_blank");
+  el.setAttribute("title","open new tab");
+});
+
+//css
+   .linkr{
+      color: rgb(216, 115, 0);
+      font-size: 2rem;
+      text-decoration: none;
+      display: block;
+    }
+
+//🟢 Alterando multielements
 const todos = document.querySelectorAll("div, section");
 
 todos.forEach((item) => {
@@ -128,7 +161,28 @@ todos.forEach((item) => {
   item.style.color = "pink";
 });
 
-//👉 querySelectorAll - selecionando by index
+
+//🟢 select multiples elements and change values.
+  document.querySelectorAll("#demo, #demo2").forEach((item) => {
+    item.innerHTML = `DOM Loaded!`;
+  });
+
+
+//🟢 multi Attributes
+<p data>Data</p>
+<p attr2>net</p>
+const p = document.querySelectorAll("[data], [attr2]");
+
+//🟢 querySelectorAll - selecionando by index
+<p>lorem 1</p>
+<p>lorem 2</p>
+<p>lorem 3</p>
+<p>lorem 4</p>
+<p>lorem 5</p>
+const p = document.querySelectorAll("p")[2];
+console.log(p.textContent); // lorem 3
+
+//🟢
 <section>
   <span>[0]</span>
 </section>
@@ -136,24 +190,29 @@ todos.forEach((item) => {
 <section>
   <span>[1]</span>
 </section>
-document.querySelectorAll("section span")[1];
+ console.log(document.querySelectorAll("section span")[1]); // span[1]span
 
-//👉 select multiples elements and change values.
-  document.querySelectorAll("#demo, #demo2").forEach((item) => {
-    item.innerHTML = `DOM Loaded!`;
-  });
 
-//👉 select by Attribute
-<p data>Data</p>
-const p = document.querySelector("[data]");
 
-//👉 select the span with attr : data-forca="1"
- <span data-forca="1">Bye 1</span>
- <span data-forca="2">Bye 2</span>
-const attr = document.querySelector("span[data-forca='1']");
+// 🟢 querySelectorAll Classes
+<div>
+  <a class="li" href="#">link _blank </a>
+  <a class="li" href="#">link  _blank</a>
+</div>
 
-//👉 multi Attributes
-<p data>Data</p>
-<p attr2>net</p>
-const p = document.querySelectorAll("[data], [attr2]");
+.li{
+  display: block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: red;
+}
+
+
+const links = document.querySelectorAll("a.li");
+console.log(links);
+links.forEach((el,event) => {
+  el.setAttribute("target","_blank");
+  el.setAttribute("class","li");
+});
+
 ```
