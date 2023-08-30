@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contexting PopOver</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 300vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        height: 60px;
+        width: 100%;
+        background: rgb(40, 1, 92);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      nav a {
+        padding: 5px 10px;
+        border-radius: 5px 5px;
+      }
+
+      nav a:hover {
+        background: black;
+      }
+
+      .menu a {
+        color: white;
+        /*   font-size: 1.5rem; */
+        text-decoration: none;
+      }
+
+      header {
+        min-height: calc(100vh - 60px);
+        position: relative;
+      }
+
+      /*  #mypopover {
+            position: absolute;
+            top: 6rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 50%;
+        } */
+      :popover-open {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        inset: unset;
+        bottom: 100px;
+        right: 5px;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <article>
+        <h1>PopOver API</h1>
+        <p>
+          <a
+            href="https://mdn.github.io/dom-examples/popover-api/"
+            target="_blank"
+            >https://mdn.github.io/dom-examples/popover-api/</a
+          >
+        </p>
+
+        <div id="mypopover" popover>
+          <h1>CSS new feature</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate
+            voluptatem totam accusantium eaque. Alias rerum dolor sit inventore?
+            Temporibus amet, cumque beatae, aut, magni maiores ex ullam nulla
+            similique voluptatibus animi possimus. Exercitationem saepe sed
+            expedita voluptatum libero incidunt sunt?
+          </p>
+        </div>
+      </article>
+    </header>
+    <nav class="menu">
+      <a href="">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <button popovertarget="mypopover">Toggle the popover</button>
+    </nav>
+  </body>
+</html>

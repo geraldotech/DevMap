@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anchor</title>
+    <style>
+      html {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .information {
+        anchor-name: --i-btn;
+      }
+
+      [popover] {
+        inset: unset; /* remove default styles */
+        bottom: anchor(--i-btn top);
+        left: anchor(--i-btn center);
+        translate: -50%;
+        margin: 0.25rem 0;
+      }
+      section {
+        margin: 2rem 0;
+      }
+      code {
+        border: 1px solid;
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>
+        Microsoft Edge go to <code>edge://flags/</code> => active Experimental
+        Web Platform features
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia blanditiis
+        debitis animi officiis aliquam saepe ad nihil placeat, dolore, ratione
+        minima libero modi accusantium cum ut quidem. Corrupti, nulla
+        exercitationem.
+        <button type="button" class="information" popovertarget="info">
+          click me
+        </button>
+      </p>
+
+      <div id="info" popover anchor="btn">Extra content</div>
+    </section>
+  </body>
+</html>
