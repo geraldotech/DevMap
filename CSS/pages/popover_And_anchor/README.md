@@ -1,4 +1,4 @@
-PopOver API
+# PopOver API
 
 ### Basic:
 
@@ -52,7 +52,7 @@ or instead anchor-default
 
 ```css
 [popover] {
-  inset: unset; /* remove default styles */
+  inset: unset;
   bottom: anchor(--i-btn top);
   left: anchor(--i-btn center);
 }
