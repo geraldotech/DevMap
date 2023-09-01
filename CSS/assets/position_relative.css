@@ -15,10 +15,21 @@ body {
 }
 code {
   color: rgb(115, 100, 208);
+  border: 1px solid;
+  background: #181818;
+}
+
+code::after {
+  content: "`";
+  color: green;
+}
+code::before {
+  content: "`";
+  color: green;
 }
 
 p {
-  color: white;
+  color: whxite;
 }
 
 figure:has(img) {
@@ -51,7 +62,11 @@ figure:has(img) img {
   height: 150px;
 }
 
-#teste {
+.container {
+  margin-top: 10px;
+}
+
+#segundadiv {
   background: red;
   position: relative;
   top: 50px;
@@ -88,6 +103,30 @@ figure:has(img) img {
   background: pink;
   position: relative;
   width: 77%;
-  margin: 0 auto;
+  margin: 10px auto;
   color: black;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin: 0;
+  padding: 0;
+}
+
+.relative {
+  position: relative;
+  top: 100px;
+}
+
+.relative2 {
+  position: relative;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%); /* //ajustar o center */
+}
+
+.eg2 {
+  margin-top: 500px;
 }
