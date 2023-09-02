@@ -2,47 +2,35 @@
 
 Become a Flexbox ninja now!
 
+### Best links:
+
 - [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 - [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- CheckFolder `DevMap\CSS\pages\FlexBox`
+- [origamid(https://origamid.com/projetos/flexbox-guia-completo/)]
+- [https://flexbox.malven.co/](https://flexbox.malven.co/)
+- checkFolder »» `DevMap\CSS\pages\FlexBox`
 
 # Properties
 
-| Parent                     | Child       |
-| -------------------------- | ----------- |
-| display                    | flex        |
-| flex-direction             | flex-grow   |
-| flex-wrap                  | flex-shrink |
-| flex-flow                  | flex-basis  |
-| justify-content            | order       |
-| align-items                | align-self  |
-| gap > row-gap > column-gap |             |
-| align-content              |             |
+| Parent / Container          | Child / Item |
+| --------------------------- | ------------ |
+| display                     | flex         |
+| [flex-direction](#flexdire) | flex-grow    |
+| flex-wrap                   | flex-shrink  |
+| flex-flow                   | flex-basis   |
+| justify-content             | order        |
+| align-items                 | align-self   |
+| align-content               |              |
+| gap > row-gap > column-gap  |              |
 
-<!-- # Properties
-
-<ol>
-<li>display</li>
-<li>flex-direction</li>
-<li>flex-wrap</li>
-<li>flex-flow</li>
-<li>justify-content</li>
-<li>align-items</li>
-<li>gap > row-gap > column-gap</li>
-<li>align-content</li>
-</ol>
-
-## Child
+<p id="flexdire">flexdirection</p>
 
 <ol>
-<li>flex</li>
-<li>flex-grow</li>
-<li>flex-shrink</li>
-<li>flex-basis</li>
-<li>order</li>
-<li>align-self</li>
+<li>row</li>
+<li>row-reverse</li>
+<li>column</li>
+<li>column-reverse</li>
 </ol>
- -->
 
 ## Constituent properties
 
