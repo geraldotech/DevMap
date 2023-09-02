@@ -2,32 +2,315 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <style>
+      :root {
+        color-scheme: dark;
+      }
+      html {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      h1 {
+        border-bottom: 2px solid;
+      }
       div {
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
         background: purple;
       }
+
+      .wrap {
+        flex-wrap: wrap;
+      }
+      .nowrap {
+        flex-wrap: nowrap;
+      }
+      .wraprr {
+        flex-wrap: wrap-reverse;
+      }
+      .justcenter {
+        justify-content: center;
+      }
+      .juststart {
+        justify-content: flex-start;
+      }
+      .justend {
+        justify-content: flex-end;
+      }
+      .justbetween {
+        justify-content: space-between;
+      }
+      .justaround {
+        justify-content: space-around;
+      }
+      .justevenly {
+        justify-content: space-evenly;
+      }
+      .row-reverse {
+        flex-direction: row-reverse;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .column-reverse {
+        flex-direction: column-reverse;
+      }
+
       .container {
         display: flex;
+        gap: 10px;
+        background: gray;
+        max-width: 950px;
+        height: 320px;
+      }
+      .alignstart {
+        align-items: flex-start;
+      }
+
+      .central {
+        align-items: center;
+      }
+      .start {
+        align-items: flex-start;
+      }
+      .end {
+        align-items: flex-end;
+        border: 2px solid;
+      }
+      .baseline {
+        align-items: baseline;
+      }
+
+      .align-content-center {
+        align-content: center;
+        flex-wrap: wrap;
+      }
+      .align-content-start {
+        align-content: start;
+        flex-wrap: wrap;
+      }
+      .align-content-end {
+        align-content: end;
+        flex-wrap: wrap;
+      }
+      .align-content-spacebetween {
+        align-content: space-between;
+        flex-wrap: wrap;
+      }
+      .align-content-spacearound {
+        align-content: space-around;
+        flex-wrap: wrap;
+      }
+      .title {
+        font-size: 2rem;
+        color: coral;
       }
     </style>
   </head>
   <body>
-    <h4>no Flex</h4>
-    <section class="noflex">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </section>
-    <h4>Flex</h4>
+    <h1 class="title">Flex-direction</h1>
+    <h1>row</h1>
     <section class="container">
       <div>1</div>
       <div>2</div>
       <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>row-reverse</h1>
+    <section class="container row-reverse">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>column</h1>
+    <section class="container column">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>column-reverse</h1>
+    <section class="container column-reverse">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1 class="title">Flex-wrap</h1>
+    <h1>nowrap</h1>
+    <section class="container nowrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>wrap</h1>
+    <section class="container wrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>wrap-reverse</h1>
+    <section class="container wraprr">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1 class="title">justify-content</h1>
+    <h1>justify-content: start;</h1>
+    <section class="container juststart">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>justify-content: center;</h1>
+    <section class="container justcenter">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>justify-content: end;</h1>
+    <section class="container justend">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>justify-content: space-between</h1>
+    <section class="container justbetween">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>justify-content: space-evenly</h1>
+    <section class="container justevenly">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>justify-content: space-around</h1>
+    <section class="container justaround">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1 class="title">align-items</h1>
+    <h1>align-items: start</h1>
+    <section class="container alignstart start">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>align-items: center</h1>
+    <section class="container central">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>align-items: end</h1>
+    <section class="container end">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>align-items: baseline</h1>
+    <section class="container baseline">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1 class="title" id="aligncontent">align-content</h1>
+    <h1>align-content: start</h1>
+    <section class="container align-content-start">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>align-content: center</h1>
+    <section class="container align-content-center">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>align-content: end</h1>
+    <section class="container align-content-end">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>align-content: spacebetween</h1>
+    <section class="container align-content-spacebetween">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <h1>align-content: spacearound</h1>
+    <section class="container align-content-spacearound">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
     </section>
   </body>
 </html>
