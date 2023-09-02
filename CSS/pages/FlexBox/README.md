@@ -23,14 +23,16 @@ Become a Flexbox ninja now!
 | align-content               |              |
 | gap > row-gap > column-gap  |              |
 
-<p id="flexdire">flexdirection</p>
+<details>
 
+<summary> <a id="flexdire">flex-direction</a></summary>
 <ol>
 <li>row</li>
 <li>row-reverse</li>
 <li>column</li>
 <li>column-reverse</li>
 </ol>
+</details>
 
 ## Constituent properties
 
