@@ -6,13 +6,20 @@ Become a Flexbox ninja now!
 - [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - CheckFolder `DevMap\CSS\pages\FlexBox`
 
-| Parent         | Child |
-| -------------- | ----- |
-| display        | Ttiel |
-| flex-direction |       |
-| flex-wrap      |       |
-
 # Properties
+
+| Parent                     | Child       |
+| -------------------------- | ----------- |
+| display                    | flex        |
+| flex-direction             | flex-grow   |
+| flex-wrap                  | flex-shrink |
+| flex-flow                  | flex-basis  |
+| justify-content            | order       |
+| align-items                | align-self  |
+| gap > row-gap > column-gap |             |
+| align-content              |             |
+
+<!-- # Properties
 
 <ol>
 <li>display</li>
@@ -35,6 +42,7 @@ Become a Flexbox ninja now!
 <li>order</li>
 <li>align-self</li>
 </ol>
+ -->
 
 ## Constituent properties
 
