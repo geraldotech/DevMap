@@ -6,14 +6,13 @@ Become a Flexbox ninja now!
 - [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - CheckFolder `DevMap\CSS\pages\FlexBox`
 
+| Parent         | Child |
+| -------------- | ----- |
+| display        | Ttiel |
+| flex-direction |       |
+| flex-wrap      |       |
+
 # Properties
-
-| Syntax    | Description |
-| --------- | ----------- |
-| Header    | Title       |
-| Paragraph | Text        |
-
-## Parent
 
 <ol>
 <li>display</li>
