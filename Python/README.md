@@ -5,16 +5,41 @@
 Python3 e o IDLE
 [https://www.python.org/ftp/python/3.11.4/python-3.11.4-amd64.exe](https://www.python.org/ftp/python/3.11.4/python-3.11.4-amd64.exe)
 
+- select option: **`Add Python to environment variables`**
+
+run `python` in cmd:
+
+Open cmd with : `C:\Users\geral\AppData\Local\Programs\Python\Python311`
+
+run files:
+`C:\Users\geral\AppData\Local\Programs\Python\Python311\python.exe myscript.py`
+
+### Python extension for Visual Studio Code
+
+[https://marketplace.visualstudio.com/items?itemName=ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
 ```py
 zen Python:
 import this
 ```
 
+### comments:
+
+```py
+# single
+
+'''
+How is today ?
+multiple lines
+'''
+
+```
+
 ### Tipos Primitivos e Saída de Dados
 
-- int | 7 -4 0 9875
+- int | 7 -4 0 9875 `números inteiros`
   - n1 = int(input("n1"))
-- float | 4.5 0.076 -15.223 7.0 `real`
+- float | 4.5 0.076 -15.223 7.0 `números reais`
 - bool | True / False
 - str "Hello" "7.5" ''
 
@@ -57,6 +82,8 @@ Estou apredendo Python,
  Lets break some limes
 """
 
+#print five
+print("Hello"*5) # print("Hello"*5)
 ```
 
 ### Save to file.txt
@@ -160,8 +187,8 @@ REF: https://www.youtube.com/watch?v=Kp_41haOVQk&ab_channel=WalissonSilva
 > usando mask
 
 ```py
-str = 'O Blog do {0} is very good merece {1}'
-txt = str.format('Geraldo', 5)
+msn = str('O Blog do {0} is very good merece {1}')
+txt = msn.format('Geraldo', 5)
 print(txt)
 
 
@@ -178,9 +205,31 @@ n1 = int(input("n1: "))
 n2 = int(input("n2: "))
 s = n1 + n2
 print("A soma entre {} e {} = {}".format(n1, n2, s))
+# se quiser pode adicionar a ordem, não obrigatórioÇ
+print("A soma entre {0} e {1} = {2}".format(n1, n2, s))
 
 
 # NEW version
+nome = "Geraldo"
+idade = 31
+print(f'Como vai {nome} sua idade menos 10 seria {idade - 10}')
+
+name = input('Enter a value: ')
+
+print("Numerico: ",name.isnumeric())
+
+
+# old
+print("Value digitado: {}".format(name))
+print("Alpha: {}".format(name).isalpha())
+
+#adiciona 50 iguais =
+print(f'{"":=^50}')
+
+# new
+print(f'Valor digitado {name.isalpha()}')
+print(f"isCapitalize: {name.istitle()}")
+
 
 ```
 
@@ -240,7 +289,3 @@ https://stackoverflow.com/questions/57536995/how-to-change-font-size-of-all-docx
 [Remove an item from a dictionary in Python (clear, pop, popitem, del) | note.nkmk.me](https://note.nkmk.me/en/python-dict-clear-pop-popitem-del/)
 
 https://stackoverflow.com/questions/34779724/python-docx-replace-string-in-paragraph-while-keeping-style
-
-```
-
-```

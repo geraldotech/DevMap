@@ -62,6 +62,17 @@ section:not([class="home"]) {
 
 - element sem irmão será estilizado
 
+### :empty
+
+- usado para selecionar elementos que não contêm nenhum elemento filho ou conteúdo de texto
+
+```css
+div:empty {
+  border: 1px solid;
+  padding: 4rem;
+}
+```
+
 # pseudo-elements
 
 <hr>

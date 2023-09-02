@@ -1,6 +1,39 @@
 # FlexBox
 
-CheckFolder `DevMap\CSS\pages\FlexBox`
+Become a Flexbox ninja now!
+
+- [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- CheckFolder `DevMap\CSS\pages\FlexBox`
+
+# Properties
+
+<div style="display:flex">
+
+## Parent
+
+<ol>
+<li>display</li>
+<li>flex-direction</li>
+<li>flex-wrap</li>
+<li>flex-flow</li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>gap > row-gap > column-gap</li>
+<li>align-content</li>
+</ol>
+
+## Child
+
+<ol>
+<li>flex</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+<li>flex-basis</li>
+<li>order</li>
+<li>align-self</li>
+</ol>
+</div>
 
 ## Constituent properties
 
