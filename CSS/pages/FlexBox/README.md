@@ -8,7 +8,10 @@ Become a Flexbox ninja now!
 
 # Properties
 
-<div style="display:flex">
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
 
 ## Parent
 
@@ -33,7 +36,6 @@ Become a Flexbox ninja now!
 <li>order</li>
 <li>align-self</li>
 </ol>
-</div>
 
 ## Constituent properties
 
