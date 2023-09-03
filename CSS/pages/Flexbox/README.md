@@ -1,15 +1,15 @@
 <h1 align="center">Flexbox
 </h1>
 
-Become a Flexbox ninja now!
+## Become a **Flexbox ninja** now!
 
-### Best links:
+#### Best links:
 
 - [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 - [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [origamid](https://origamid.com/projetos/flexbox-guia-completo/)
 - [https://flexbox.malven.co/](https://flexbox.malven.co/)
-- checkFolder »» `DevMap\CSS\pages\FlexBox`
+- [more check folder] »» `DevMap\CSS\pages\FlexBox`
 
 # Properties
 
@@ -24,7 +24,7 @@ Become a Flexbox ninja now!
 | [align-content](#aligncontent)                          |              |
 | [gap](https://css-tricks.com/almanac/properties/g/gap/) |              |
 
-Explicações visitar os links acima.
+Explicações a fundo visitar os **bests links**.
 
 <details>
 <summary> <a id="flexdire">flex-direction</a></summary>
@@ -100,13 +100,21 @@ sobrepoe o align-self <a href="https://www.w3schools.com/cssref/tryit.asp?filena
 </ol>
 </details>
 
-### Constituent properties
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
-- [Grow, Shrink, Basis by gmap](https://geraldotech.github.io/DevMap/CSS/pages/FlexBox/flex_gsb.html)
-- [Flex-context by gmap](https://www.notion.so/geraldodev/Flexbox-contex-4ef64b877ac84aba97bd731428be7b17)
+- <a href="https://geraldotech.github.io/DevMap/CSS/pages/Flexbox/flexbox_contex.html#aligncontent">Flexbox_contex.html</a>
+
+# Child / Item
+
+- Constituent properties
   - Grow: 0 1 2
   - Shrink: 1 0 2
-  - Basics: px...
+  - Basis: px %
+  - [Grow, Shrink, Basis by gmap](https://geraldotech.github.io/DevMap/CSS/pages/Flexbox/flex_gsb.html)
+  - [this constituent-context flex: by gmap](https://www.notion.so/geraldodev/flex-contex-4ef64b877ac84aba97bd731428be7b17)
 
 #### Refs:
 
