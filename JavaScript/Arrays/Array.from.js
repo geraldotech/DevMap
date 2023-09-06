@@ -91,8 +91,8 @@ function test() {
 test();
 
 // declare a function
-function message(_, id) {
-  console.log(`Sunday`, id + 1); // Sunday 1 2 3 4 5
+function message(_, index) {
+  console.log(`Sunday`, index + 1); // Sunday 1 2 3 4 5
 }
 // and with Array.from
 Array.from({ length: 5 }, message);
