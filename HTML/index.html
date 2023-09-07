@@ -1,202 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Fast Guide</title>    
-    <link href="./assets/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-        <script src="./assets/script.js" defer></script>
-    <link rel="stylesheet" href="./assets/style.css"> 
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Fast Guide</title>
+    <link href="./assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/script.js" defer></script>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
     <div class="jumbotron jumbotron-fluid text-center bg-dark text-white">
-        <h1>HTML FAST</h1>
-        <p class="lead">Hyper Text Markup Language</p>
-        <p style="text-align:center;color:violet;font-size:20px">Do youself your website in html</p>
+      <h1>HTML FAST</h1>
+      <p class="lead">Hyper Text Markup Language</p>
+      <p style="text-align: center; color: violet; font-size: 20px">
+        Do youself your website in html
+      </p>
     </div>
     <div class="container bg-dark text-white">
-        <p class="text-center"><u>HTML Is Not Case Sensitive</u> HTML tags are not case sensitive: P means the same as p</p>
-        <p class="lead"><a href="./pages/aula-html.html">Aula HTML</a></p>
-        <p>Encapsulation / englobar / encapsular elementos</p>
-        <time class="time" id="modified"></time>
+      <p class="text-center">
+        <u>HTML Is Not Case Sensitive</u> HTML tags are not case sensitive: P
+        means the same as p
+      </p>
+      <p class="lead"><a href="./pages/aula-html.html">Aula HTML</a></p>
+      <p>Encapsulation / englobar / encapsular elementos</p>
+      <time class="time" id="modified"></time>
 
-       <details>
-            <summary>Comments</summary>
-            <code>
-           &lt;!-- my comment --&gt;
-       </code>
-        </details>
-        <details>
-            <summary>Display Codes</summary>
-           <section>
-            <h5>code</h5>
-            <code>&lt;code&gt;</code>
-            <h6>Define text as computer <code>code</code> in a document</h6>
-           </section>
+      <details>
+        <summary>Comments</summary>
+        <code> &lt;!-- my comment --&gt; </code>
+      </details>
+      <details>
+        <summary>Display Codes</summary>
+        <section>
+          <h5>code</h5>
+          <code>&lt;code&gt;</code>
+          <h6>Define text as computer <code>code</code> in a document</h6>
+        </section>
 
-            <section>
-                <h5>pre</h5>
-                <h6><code>&lt;pre&gt;</code> Preformatted text - for multiple lines of code</h6>
-                <p class="lead">preserves both spaces and
-                    line breaks. Para usar não precisa do BootStrap, porém será adicionado sem pre-scrollable. Mais sobre
-                    pre em <a
-                        href="https://stackoverflow.com/questions/8919776/html-justify-text-align-with-pre-tag">LINK1</a> |
-                    <a href="https://www.freecodecamp.org/news/pre-tag-in-html-example-code/">LINK 2</a></p>
-                <p class="lead">Para usar o &lt;pre&gt; não precisa do BootStrap, porém será adicionado sem pre-scrollable
-                </p>
-            </section>
-            <section>
-                <h5>samp</h5>
-            <h6> <code>&lt;samp&gt;</code>Output from
-                computer program</h6>
-            <a href="https://www.w3schools.com/tags/tag_samp.asp" target="_blank">samp</a>
-            </section>
-            
-            <h5>Tags HTML as TEXT</h5>
-            <p class="lead"> For example: <code>&lt;h1&gt;GERALDO&lt;/h&gt;</code>
-                <xmp>&lt;h1&gt;GERALDO&lt;/h&gt;</xmp>
-            </p>
-            <div>
-                <img src="assets/img/other-html-entities.png" class="img-fluid" />
-            </div>
-            <a href="https://devpractical.com/display-html-tags-as-plain-text/" target="_blank">REF</a>
-            <p class="lead">Replace quickly: Usar o recurso search and replace de qualquer editor de texto</p>
-            <h5>XMP</h5>
-            <p class="lead">renders text between the start and end tags without interpreting the HTML in between and
-                using a monospaced font.</p>
-            <code>&lt;xmp&gt;code goes here&lt;/xmp&gt;</code>
-        </details>
-        <details>
-            <summary>Tags</summary>
-            <p class="lead">Para consultar todas as tags <a href="https://www.w3schools.com/TAGS/default.asp" target="_blank">TAGS/default.asp</a></p>
-            <h5>p</h5>
-            <p class="lead"><code>&lt;p&gt;</code> - Default margin-top & bottom: 16px, &lt;br&gt; adiciona quebra de linhas, e.g with break row</p>
-            <code>&lt;p&gt;This is a &lt;br&gt;<br>with a line break &lt;/p&gt;</code>
-            <br>
-            <br>
-            <h6>Style:</h6>
-            <code>&lt;p style="background-color:Tomato;"> Lorem ipsum dolor sit ametsdsd&lt;/p&gt;</code>
-            <div class="output">
-                <p style="background-color:Tomato;"> Lorem ipsum dolor sit ametsdsd</p>
-            </div>
-            <br>
-            <h6>Style 2:</h6>
-            <pre><code>&lt;p style="text-align:center;"&gt;&lt;a href="index2323.html"&gt; Exemplo href Center with P &lt;/a&gt;&lt;/p&gt;</code></pre>
-            <div class="output">
-                <p style="text-align:center;"><a href="index2323.html">Exemplo href Center with p </a></p>
-            </div>
-            <h6>p custom class HTML:</h6>
-<code>&lt;p class="gerab">Lastupdate: Today&lt;/p></code>
-<h6>p custom class CSS:</h6>
-<pre>
+        <section>
+          <h5>pre</h5>
+          <h6>
+            <code>&lt;pre&gt;</code> Preformatted text - for multiple lines of
+            code
+          </h6>
+          <p class="lead">
+            preserves both spaces and line breaks. Para usar não precisa do
+            BootStrap, porém será adicionado sem pre-scrollable. Mais sobre pre
+            em
+            <a
+              href="https://stackoverflow.com/questions/8919776/html-justify-text-align-with-pre-tag"
+              >LINK1</a
+            >
+            |
+            <a
+              href="https://www.freecodecamp.org/news/pre-tag-in-html-example-code/"
+              >LINK 2</a
+            >
+          </p>
+          <p class="lead">
+            Para usar o &lt;pre&gt; não precisa do BootStrap, porém será
+            adicionado sem pre-scrollable
+          </p>
+        </section>
+        <section>
+          <h5>samp</h5>
+          <h6><code>&lt;samp&gt;</code>Output from computer program</h6>
+          <a href="https://www.w3schools.com/tags/tag_samp.asp" target="_blank"
+            >samp</a
+          >
+        </section>
+
+        <h5>Tags HTML as TEXT</h5>
+        <p class="lead">
+          For example: <code>&lt;h1&gt;GERALDO&lt;/h&gt;</code>
+          <xmp>&lt;h1&gt;GERALDO&lt;/h&gt;</xmp>
+        </p>
+        <div>
+          <img src="assets/img/other-html-entities.png" class="img-fluid" />
+        </div>
+        <a
+          href="https://devpractical.com/display-html-tags-as-plain-text/"
+          target="_blank"
+          >REF</a
+        >
+        <p class="lead">
+          Replace quickly: Usar o recurso search and replace de qualquer editor
+          de texto
+        </p>
+        <h5>XMP</h5>
+        <p class="lead">
+          renders text between the start and end tags without interpreting the
+          HTML in between and using a monospaced font.
+        </p>
+        <code>&lt;xmp&gt;code goes here&lt;/xmp&gt;</code>
+      </details>
+      <details>
+        <summary>Tags</summary>
+        <p class="lead">
+          Para consultar todas as tags
+          <a href="https://www.w3schools.com/TAGS/default.asp" target="_blank"
+            >TAGS/default.asp</a
+          >
+        </p>
+        <h5>p</h5>
+        <p class="lead">
+          <code>&lt;p&gt;</code> - Default margin-top & bottom: 16px, &lt;br&gt;
+          adiciona quebra de linhas, e.g with break row
+        </p>
+        <code
+          >&lt;p&gt;This is a &lt;br&gt;<br />with a line break &lt;/p&gt;</code
+        >
+        <br />
+        <br />
+        <h6>Style:</h6>
+        <code
+          >&lt;p style="background-color:Tomato;"> Lorem ipsum dolor sit
+          ametsdsd&lt;/p&gt;</code
+        >
+        <div class="output">
+          <p style="background-color: Tomato">Lorem ipsum dolor sit ametsdsd</p>
+        </div>
+        <br />
+        <h6>Style 2:</h6>
+        <pre><code>&lt;p style="text-align:center;"&gt;&lt;a href="index2323.html"&gt; Exemplo href Center with P &lt;/a&gt;&lt;/p&gt;</code></pre>
+        <div class="output">
+          <p style="text-align: center">
+            <a href="index2323.html">Exemplo href Center with p </a>
+          </p>
+        </div>
+        <h6>p custom class HTML:</h6>
+        <code>&lt;p class="gerab">Lastupdate: Today&lt;/p></code>
+        <h6>p custom class CSS:</h6>
+        <pre>
     p.gerab {
         text-align: center;
         color: mediumseagreen;
         font-size: 20px;
     }
- </pre>
- <div class="output">
-    <p class="gerab">Lastupdate: Today</p>                            
- </div>
- 
- <h5>ul ol</h5>
- <p class="lead">default padding-left: 40px</p>
- 
- <section>
-    <h5>div</h5>
-    <p class="lead">Default margin/padding: 0</p>
-    <pre>
+ </pre
+        >
+        <div class="output">
+          <p class="gerab">Lastupdate: Today</p>
+        </div>
+
+        <h5>ul ol</h5>
+        <p class="lead">default padding-left: 40px</p>
+
+        <section>
+          <h5>div</h5>
+          <p class="lead">Default margin/padding: 0</p>
+          <pre>
         <code>&lt;div style="font-size:20px;color:green;background-color:pink;text-align:center;"&gt;&lt;a href="http://speedtest-nyc3.digitalocean.com/" /&gt; http://speedtest-nyc3.digitalocean.com/&lt;/a&gt;&lt;/div&gt;</code>
         </pre>
-        <div class="output">
-            <div style="font-size:20px;color:green;background-color:pink;text-align:center;"><a
-                    href="http://speedtest-nyc3.digitalocean.com/">
-                http://speedtest-nyc3.digitalocean.com/</a>
+          <div class="output">
+            <div
+              style="
+                font-size: 20px;
+                color: green;
+                background-color: pink;
+                text-align: center;
+              "
+            >
+              <a href="http://speedtest-nyc3.digitalocean.com/">
+                http://speedtest-nyc3.digitalocean.com/</a
+              >
             </div>
+          </div>
+        </section>
+        <h5>abbr</h5>
+        <p class="lead">
+          <code>&lt;abbr&gt;</code> for <abbr title="Abreviation">Abbr</abbr>
+        </p>
+        <div class="output">
+          &lt;abbr title="Cascading Style Sheets">CSS&lt;/abbr>
         </div>
- </section>
-<h5>abbr</h5>
-<p class="lead"><code>&lt;abbr&gt;</code> for <abbr title="Abreviation">Abbr</abbr></p>
-<div class="output">
-        &lt;abbr title="Cascading Style Sheets">CSS&lt;/abbr>
-</div>
 
-<h5>picture</h5>
-<p class="lead"><code>&lt;picture&gt;</code> for specifying image resources. <a href="./pages/picture_flex.html">picture_source_media_imagem_flexivel</a></p>
+        <h5>picture</h5>
+        <p class="lead">
+          <code>&lt;picture&gt;</code> for specifying image resources.
+          <a href="./pages/picture_flex.html"
+            >picture_source_media_imagem_flexivel</a
+          >
+        </p>
 
-     <h5>HTML Formating</h5>
-            <ul>
-                <li><code>&amp;nbsp;</code> - non-breaking-   &nbsp;&nbsp;&nbsp;&nbsp; Space</li>
-                <li><code>&lt;br&gt;</code> - break row</li>
-                <li><code>&lt;mark&gt;</code> - <mark>Marked text</mark></li>
-                <li><code>&lt;del&gt;</code> - Deleted text  Eu moro na cidade de <del>Palmeira</del></li>
-                <li><code>&lt;hr&gt;</code> - defines a thematic break in a HTMl Page <code>&lt;hr&gt;</code></li>
-                <li><code>&lt;ins&gt;</code> inserted text |  <ins>Rio</ins> <u>GERALDO</u></li>
-                <li><code>&lt;u&gt;</code> - <u>Underline</u> </li>
-                <li>&#128204; Italic and Bold
-                    <dl>
-                        <dt>Decrecated:</dt>
-                        <dd><code>&lt;b&gt;</code> - <b>Bold text</b></dd>
-                        <dd><code>&lt;i&gt;</code> - <i>Italic</i></dd>
-                    </dl>
-                    <dt>New:</dt>
-                    <dd><code>&lt;strong&gt;</code> - <strong>Important text</strong></dd>
-                    <dd><code>&lt;em&gt;</code> - <em>Italic</em></dd>
-                </li>
-                <li><b>See more REF in => </b><a href="https://www.w3schools.com/html/html_formatting.asp"
-                        target="_blank">w3schools</a> </li>
-            </ul>
-        </details>
-        <details>
-            <summary>Images</summary>
-            <a href="https://www.w3schools.com/tags/tag_figcaption.asp">Veja figure e figure caption</a>
-            <p class="lead">The source (src), alternative text (alt), width and height are provided as attibutes:</p>
-            <code>&lt;img src="img/howimg.jpg" alt="exemplo html imagens"&gt;
-       </code>
-            <p class="lead">width and height</p>
-            <code>&lt;img src="/assetsimg/howimg.jpg" alt="logo tipo" width="250px" height="300px"&gt;</code>
+        <h5>HTML Formating</h5>
+        <ul>
+          <li>
+            <code>&amp;nbsp;</code> - non-breaking- &nbsp;&nbsp;&nbsp;&nbsp;
+            Space
+          </li>
+          <li><code>&lt;br&gt;</code> - break row</li>
+          <li><code>&lt;mark&gt;</code> - <mark>Marked text</mark></li>
+          <li>
+            <code>&lt;del&gt;</code> - Deleted text Eu moro na cidade de
+            <del>Palmeira</del>
+          </li>
+          <li>
+            <code>&lt;hr&gt;</code> - defines a thematic break in a HTMl Page
+            <code>&lt;hr&gt;</code>
+          </li>
+          <li>
+            <code>&lt;ins&gt;</code> inserted text | <ins>Rio</ins>
+            <u>GERALDO</u>
+          </li>
+          <li><code>&lt;u&gt;</code> - <u>Underline</u></li>
+          <li>
+            &#128204; Italic and Bold
+            <dl>
+              <dt>Decrecated:</dt>
+              <dd><code>&lt;b&gt;</code> - <b>Bold text</b></dd>
+              <dd><code>&lt;i&gt;</code> - <i>Italic</i></dd>
+            </dl>
+            <dt>New:</dt>
+            <dd>
+              <code>&lt;strong&gt;</code> - <strong>Important text</strong>
+            </dd>
+            <dd><code>&lt;em&gt;</code> - <em>Italic</em></dd>
+          </li>
+          <li>
+            <b>See more REF in => </b
+            ><a
+              href="https://www.w3schools.com/html/html_formatting.asp"
+              target="_blank"
+              >w3schools</a
+            >
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>Images</summary>
+        <a href="https://www.w3schools.com/tags/tag_figcaption.asp"
+          >Veja figure e figure caption</a
+        >
+        <p class="lead">
+          The source (src), alternative text (alt), width and height are
+          provided as attibutes:
+        </p>
+        <code
+          >&lt;img src="img/howimg.jpg" alt="exemplo html imagens"&gt;
+        </code>
+        <p class="lead">width and height</p>
+        <code
+          >&lt;img src="/assetsimg/howimg.jpg" alt="logo tipo" width="250px"
+          height="300px"&gt;</code
+        >
 
-            <h5>IMG with links</h5>
-            <pre>&lt;a href="http://blog.com"target="_blank"&gt; 
+        <h5>IMG with links</h5>
+        <pre>
+&lt;a href="http://blog.com"target="_blank"&gt; 
             &lt;img src="https:///2018/01/images.png" 
-            alt="ChalkArtes logo" /&gt;&lt;/a&gt;</pre>
-            <a href="http://blog.com" target="_blank"> 
-        <img src="https://technotesbr.files.wordpress.com/2018/01/images.png" width="150" height="150" alt="ChalkArtes logo" /></a>
+            alt="ChalkArtes logo" /&gt;&lt;/a&gt;</pre
+        >
+        <a href="http://blog.com" target="_blank">
+          <img
+            src="https://technotesbr.files.wordpress.com/2018/01/images.png"
+            width="150"
+            height="150"
+            alt="ChalkArtes logo"
+        /></a>
 
         <h5>Evitar images quebradas</h5>
-            
-                <figure>
-                 <img src="assets/img/insta_post.jpg" alt="insta_post" class="img-fluid" />
-                 <figcaption>by papodev</figcaption>
-                </figure>
-            
-              <a href="./pages/img-error.html">img-error-gmap</a>
-              <h5>Placeholder generador</h5>
-              <pre>
+
+        <figure>
+          <img
+            src="assets/img/insta_post.jpg"
+            alt="insta_post"
+            class="img-fluid"
+          />
+          <figcaption>by papodev</figcaption>
+        </figure>
+
+        <a href="./pages/img-error.html">img-error-gmap</a>
+        <h5>Placeholder generador</h5>
+        <pre>
                 https://placehold.jp/350x160.jpg
                 https://via.placeholder.com/280x650
-              </pre>
-        </details>
-        <details>
-            <summary>Semantic + Basic CSS</summary>
-            <p class="lead">Alguns exemplos:</p>
-            <code><pre>
+              </pre
+        >
+      </details>
+      <details>
+        <summary>Semantic + Basic CSS</summary>
+        <p class="lead">Alguns exemplos:</p>
+        <code>
+          <pre>
 main
 header
 nav
 section
 article
 aside
-footer</pre>   </code>
-<br>
-         <details>
-             <summary class="child">HTML Code</summary>
-             <pre style="color: white;">
+footer</pre
+          >
+        </code>
+        <br />
+        <details>
+          <summary class="child">HTML Code</summary>
+          <pre style="color: white">
                 &lt;main&gt;
             &lt;header&gt;
                 &lt;strong&gt;Header&lt;/strong&gt; - Geraldo Website
@@ -229,15 +334,15 @@ footer</pre>   </code>
             &lt;/footer&gt;
  
         &lt;/main&gt;
-            </pre>
-         
-         </details>
-         <div class="output">
-            <img src="assets/img/semantic.png" class="img-fluid">
+            </pre
+          >
+        </details>
+        <div class="output">
+          <img src="assets/img/semantic.png" class="img-fluid" />
         </div>
-         <details>
-             <summary class="child">CSS code</summary>
-             <pre><code>
+        <details>
+          <summary class="child">CSS code</summary>
+          <pre><code>
                 *{
                     box-sizing: border-box;
                     margin: 0;
@@ -277,62 +382,89 @@ footer</pre>   </code>
                     background: #616161;
                 }
              </code></pre>
-         </details>
-         <div class="output">
-             <img src="assets/img/html-css-read.png" class="img-fluid">
-         </div>
-         <br>
-        
-         <section class="links">             
-                 <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics" target="_blank">Lists mais usados:</a>
-                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">All elements </a>
-                 <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">W3</a>
-         </section>
-         
-         </details>
-        
-        <details>
-            <summary>Video</summary>
-            <h5>Direct Link</h5>
-            <pre
-                class="pres"><codex>&lt;video controls src="https://s3.eu-central-1.amazonaws.com/pipe.public.content/short.mp4" class="video" poster="https://s3.eu-central-1.amazonaws.com/pipe.public.content/poster.png" preload="none"&gt; &lt;/video&gt;</code></pre>
-            <div class="output"><video controls
-                    src="https://s3.eu-central-1.amazonaws.com/pipe.public.content/short.mp4" class="video"
-                    poster="https://s3.eu-central-1.amazonaws.com/pipe.public.content/poster.png" preload="none">
-                </video></div>
-            <br>
-            <h5>Youtube Video</h5>
-            <pre><code>&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"&gt; &lt;/iframe&gt;</code></pre>
         </details>
-        <details>
-            <summary>Attributes
-            </summary>
-            <h5>http-equiv - refresh</h5>
-            
-            <pre class="pres">
-        &lt;head&gt;
+        <div class="output">
+          <img src="assets/img/html-css-read.png" class="img-fluid" />
+        </div>
+        <br />
+
+        <section class="links">
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+            target="_blank"
+            >Lists mais usados:</a
+          >
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+            target="_blank"
+            >All elements
+          </a>
+          <a
+            href="https://www.w3schools.com/html/html5_semantic_elements.asp"
+            target="_blank"
+            >W3</a
+          >
+        </section>
+      </details>
+
+      <details>
+        <summary>Video</summary>
+        <h5>Direct Link</h5>
+        <pre
+          class="pres"
+        ><code>&lt;video controls src="https://s3.eu-central-1.amazonaws.com/pipe.public.content/short.mp4" class="video" poster="https://s3.eu-central-1.amazonaws.com/pipe.public.content/poster.png" preload="none"&gt; &lt;/video&gt;</code></pre>
+        <div class="output">
+          <video
+            controls
+            src="https://s3.eu-central-1.amazonaws.com/pipe.public.content/short.mp4"
+            class="video"
+            poster="https://s3.eu-central-1.amazonaws.com/pipe.public.content/poster.png"
+            preload="none"
+          ></video>
+        </div>
+        <br />
+        <h5>Youtube Video</h5>
+        <pre><code>&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"&gt; &lt;/iframe&gt;</code></pre>
+      </details>
+      <details>
+        <summary>Attributes</summary>
+        <h5>http-equiv - refresh</h5>
+
+        <pre class="pres">
+            &lt;head&gt;
             &lt;title&gt;dl.smartdicas.com&lt;/title&gt;
             &lt;meta http-equiv="refresh" content="5;URL=http://www.smartdicas.com"&gt;
-        &lt;/head&gt;
-            <h5>Refresh in 15 seconds, add in <code>head</code>tag</h5>          
-            <pre class="pres">
+            &lt;/head&gt;
+            </pre
+        >
+        <h5>Refresh in 15 seconds, add in <code>head</code>tag</h5>
+        <pre class="pres">
                 &lt;meta http-equiv="refresh" content="15"&gt;
-            </pre>
-            <a href="https://stackoverflow.com/questions/32913226/auto-refresh-page-every-30-seconds" target="_blank">Referencia</a>
-            
-            <h5>Force download file</h5>
-            <pre class="pres">
-                &lt;a> href="./Old_Nike_logo.jpg" download>img</a>
-            </pre>
-        </details>
+            </pre
+        >
+        <a
+          href="https://stackoverflow.com/questions/32913226/auto-refresh-page-every-30-seconds"
+          target="_blank"
+          >Referencia</a
+        >
+
+        <h5>Force download file</h5>
+        <pre class="pres">
+                &lt;a> href="./Old_Nike_logo.jpg" download>img&lt;/a&gt;
+            </pre
+        >
+      </details>
+      <details>
+        <summary>HTML Styles - CSS Inline</summary>
+        <p>
+          REF:
+          <a href="https://www.w3schools.com/tags/tag_style.asp" target="_blank"
+            >https://www.w3schools.com/tags/tag_style.asp</a
+          >
+        </p>
         <details>
-            <summary>HTML Styles - CSS Inline</summary>
-            <p>REF: <a
-                    href="https://www.w3schools.com/tags/tag_style.asp" target="_blank">https://www.w3schools.com/tags/tag_style.asp</a>
-            </p>
-            <details>
-                <summary class="child">See code</summary>
-                <pre class="pres">
+          <summary class="child">See code</summary>
+          <pre class="pres">
                     &lt;!DOCTYPE html&gt;
                     &lt;html&gt;
                      &lt;head&gt;
@@ -355,15 +487,16 @@ footer</pre>   </code>
                     &lt;p&gt;This is a paragraph.&lt;/p&gt;
                     &lt;g&gt;TEstetet&lt;/g&gt;
                     &lt;/body&gt;
-                    &lt;/html&gt;</pre>
-            </details>
+                    &lt;/html&gt;</pre
+          >
         </details>
-        <details>
-            <summary>HTML button + CSS</summary>
-            <h5>Exemplo</h5>
-            <img src="assets/img/html-button.jpg" class="img-fluid" />
-            <p class="lead">Adicionar ao CSS:</p>
-            <pre>
+      </details>
+      <details>
+        <summary>HTML button + CSS</summary>
+        <h5>Exemplo</h5>
+        <img src="assets/img/html-button.jpg" class="img-fluid" />
+        <p class="lead">Adicionar ao CSS:</p>
+        <pre>
                 p {
                     background-color: #f44336;
                     display: inline-block;
@@ -386,41 +519,49 @@ footer</pre>   </code>
                 a:active {
                     background-color: green;
                 }
-            </pre>
-            <p class="lead">Adicionar ao HTML:</p>
-            <pre>
+            </pre
+        >
+        <p class="lead">Adicionar ao HTML:</p>
+        <pre>
                 &lt;body&gt;
-&lt;h2&gt;Novidade:&lt;/h2&gt;
-&lt;p&gt;Ganhe até 40% de Cashback&lt;/p&gt;
-&lt;a href="default.asp" target="_blank"&gt;SAIBA MAIS&lt;/a&gt;
+                &lt;h2&gt;Novidade:&lt;/h2&gt;
+                &lt;p&gt;Ganhe até 40% de Cashback&lt;/p&gt;
+                &lt;a href="default.asp" target="_blank"&gt;SAIBA MAIS&lt;/a&gt;
+                            
+                &lt;/body&gt;                            
+                &lt;/html&gt;
+            </pre
+        >
+      </details>
+      <details>
+        <summary>Charset pt-br</summary>
+        <code>&lt;meta charset="utf-8"&gt; </code>
+      </details>
+      <details>
+        <summary>Forms menu select and go</summary>
+        <figure>
+          <img
+            src="https://mermaid.ink/img/pako:eNpFT7tuwzAM_BWBUwIo_QAPBZoa3jq1U6MMjMUkQi1RoCgkgeN_r_pCOd2DB9zNMLIn6OA48WU8o6h561162g0ssezNZvNotvMQaPKFdHFp-6U87yY6UfL7X34PKVe9m36ldFVrUo0HEmsylnJh8daUeoihOYI-8EO7tfnLFppobOFhxVkDpzVYiCQRg2-9ZpeMcaBniuSga9CjfDhwaWl_WJVfb2mETqWShZo9KvUBT4IRuiNOpakZ0zvzPycflOXlZ_j3_uUTA4lZJg?type=png"
+            alt=""
+          />
+        </figure>
+        <h5>Links:</h5>
+        <ul>
+          <li>
+            <a href="https://codepen.io/geraldopcf/pen/OJzqRKJ" target="_blank"
+              >Form Estacio [codepen]</a
+            >
+          </li>
+          <li>
+            <a href="https://codepen.io/geraldopcf/pen/oNpVzPy" target="_blank"
+              >[Estacio] Lista e Tabelas</a
+            >
+          </li>
+        </ul>
 
-&lt;/body&gt;
-
-&lt;/html&gt;
-            </pre>
-        </details>
-        <details>
-            <summary>Charset pt-br</summary>
-            <code>&lt;meta charset="utf-8"&gt;
-            </code>
-        </details>
-        <details>
-            <summary>Forms menu select and go</summary>
-            <figure>
-                <img
-                  src="https://mermaid.ink/img/pako:eNpFT7tuwzAM_BWBUwIo_QAPBZoa3jq1U6MMjMUkQi1RoCgkgeN_r_pCOd2DB9zNMLIn6OA48WU8o6h561162g0ssezNZvNotvMQaPKFdHFp-6U87yY6UfL7X34PKVe9m36ldFVrUo0HEmsylnJh8daUeoihOYI-8EO7tfnLFppobOFhxVkDpzVYiCQRg2-9ZpeMcaBniuSga9CjfDhwaWl_WJVfb2mETqWShZo9KvUBT4IRuiNOpakZ0zvzPycflOXlZ_j3_uUTA4lZJg?type=png"
-                  alt=""
-                />
-              </figure>
-              <h5>Links:</h5>
-            <ul>
-                <li><a href="https://codepen.io/geraldopcf/pen/OJzqRKJ" target="_blank">Form Estacio [codepen]</a></li>
-                <li> <a href="https://codepen.io/geraldopcf/pen/oNpVzPy" target="_blank">[Estacio] Lista e Tabelas</a></li>
-            </ul>
-            
-           
-            <p class="lead">HTML</p>
-            <pre>&lt;form action="#"&gt;
+        <p class="lead">HTML</p>
+        <pre>
+&lt;form action="#"&gt;
                 &lt;label for="lang"&gt;Language&lt;/label&gt;
                 &lt;select name="languages" id="lang"&gt;
                 &lt;option value="javascript"&gt;JavaScript&lt;/option&gt;
@@ -433,9 +574,10 @@ footer</pre>   </code>
                 &lt;option value="erlang"&gt;Erlang&lt;/option&gt;
                 &lt;/select&gt;
                 &lt;input type="submit" value="Submit" /&gt;
-                &lt;/form&gt;</pre>
-                <p class="lead">CSS</p>
-                <pre>
+                &lt;/form&gt;</pre
+        >
+        <p class="lead">CSS</p>
+        <pre>
                     body {
                         display: flex;
                         align-items: center;
@@ -451,24 +593,24 @@ footer</pre>   </code>
                         justify-content: center;
                         margin: 0 auto;
                         }
-                </pre>
-                <html>
-                <form action="#">
-                    <label for="lang">Language</label>
-                    <select name="languages" id="lang">
-                        <option value="javascript">JavaScript</option>
-                        <option value="php">PHP</option>
-                        <option value="java">Java</option>
-                        <option value="golang">Golang</option>
-                        <option value="python">Python</option>
-                        <option value="c#">C#</option>
-                        <option value="C++">C++</option>
-                        <option value="erlang">Erlang</option>
-                    </select>
-                    <input type="submit" value="Submit" />
-                </form>
-                <h5>Menu suspenso click and go</h5>
-                <pre>
+                </pre
+        >
+        <form action="#">
+          <label for="lang">Language</label>
+          <select name="languages" id="lang">
+            <option value="javascript">JavaScript</option>
+            <option value="php">PHP</option>
+            <option value="java">Java</option>
+            <option value="golang">Golang</option>
+            <option value="python">Python</option>
+            <option value="c#">C#</option>
+            <option value="C++">C++</option>
+            <option value="erlang">Erlang</option>
+          </select>
+          <input type="submit" value="Submit" />
+        </form>
+        <h5>Menu suspenso click and go</h5>
+        <pre>
                     &lt;form&gt;
                     &lt;select
                       onchange="top.location.href=this.form.links.options [this.form.links.selectedIndex].value"
@@ -482,78 +624,90 @@ footer</pre>   </code>
                       &lt;option value="http://javascript.net"&gt;Link Dois&lt;/option&gt;
                     &lt;/select&gt;
                   &lt;/form&gt;
-                </pre>
-                <div class="output">
-                    <form>
-                        <select onchange="top.location.href=this.form.links.options [this.form.links.selectedIndex].value"
-                            name="links">
-                            <option selected />Selecione um servidor
-                            <option value="http://link1" />Link Um
-                            <option value="http://link2" />Link Dois
-                        </select>
-                    </form>
-                </div>
-               
-        </details>
-        <details>
-            <summary>Table</summary>
-            <h5>Propriedades</h5>
-            <ul>
-                <li>Caption</li>
-                <li>TR - Table Row Element</li>
-                <li>TH - Table Row</li>
-                <li>TD - Table Data</li>
-            </ul>
-            <table>
-                <caption>Titulo</caption>
-                <tr>
-                <th>BANK</th>
-                <th>VALOR</th>
-                </tr>
-                <tr>
-                <td>SANTANDER</td>
-                <td>R$ 100</td>
-                </tr>
-                <tr>
-                <td>BB</td>
-                <td>R$ 50</td>
-                </tr>
-                </table>
-            <pre>
+                </pre
+        >
+        <div class="output">
+          <form>
+            <select
+              onchange="top.location.href=this.form.links.options [this.form.links.selectedIndex].value"
+              name="links"
+            >
+              <option selected />
+              Selecione um servidor
+              <option value="http://link1" />
+              Link Um
+              <option value="http://link2" />
+              Link Dois
+            </select>
+          </form>
+        </div>
+      </details>
+
+      <details>
+        <summary>Table</summary>
+        <h5>Propriedades</h5>
+        <ul>
+          <li>Caption</li>
+          <li>TR - Table Row Element</li>
+          <li>TH - Table Row</li>
+          <li>TD - Table Data</li>
+        </ul>
+        <table>
+          <caption>
+            Titulo
+          </caption>
+          <tr>
+            <th>BANK</th>
+            <th>VALOR</th>
+          </tr>
+          <tr>
+            <td>SANTANDER</td>
+            <td>R$ 100</td>
+          </tr>
+          <tr>
+            <td>BB</td>
+            <td>R$ 50</td>
+          </tr>
+        </table>
+        <pre>
                 &lt;table&gt;
-&lt;caption&gt;Titulo&lt;/caption&gt;
-&lt;tr&gt;
-&lt;th&gt;BANK&lt;/th&gt;
-&lt;th&gt;VALOR&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;SANTANDER&lt;/td&gt;
-&lt;td&gt;R$ 100&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;BB&lt;/td&gt;
-&lt;td&gt;R$ 50&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-            </pre>
-            <h5>Table com border <strong>inline</strong>(em desuso) variar o número:</h5>
- <pre>
-    &lt;table border="4"&gt;
-    &lt;tr&gt;
-    &lt;th&gt;NOME&lt;/th&gt;
-    &lt;th&gt;NOME&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;GERALDO&lt;/td&gt;
-      &lt;td&gt;FILHO&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-            </pre>
-        </details>
-        <details>
-            <summary>Description / Detail List</summary>
-            <h5>Lista de descrição</h5>
-            <pre>
+                &lt;caption&gt;Titulo&lt;/caption&gt;
+                &lt;tr&gt;
+                &lt;th&gt;BANK&lt;/th&gt;
+                &lt;th&gt;VALOR&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                &lt;td&gt;SANTANDER&lt;/td&gt;
+                &lt;td&gt;R$ 100&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                &lt;td&gt;BB&lt;/td&gt;
+                &lt;td&gt;R$ 50&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/table&gt;
+            </pre
+        >
+        <h5>
+          Table com border <strong>inline</strong>(em desuso) variar o número:
+        </h5>
+        <pre>
+               &lt;table border="4"&gt;
+               &lt;tr&gt;
+               &lt;th&gt;NOME&lt;/th&gt;
+               &lt;th&gt;NOME&lt;/th&gt;
+               &lt;/tr&gt;
+               &lt;tr&gt;
+                 &lt;td&gt;GERALDO&lt;/td&gt;
+                 &lt;td&gt;FILHO&lt;/td&gt;
+               &lt;/tr&gt;
+             &lt;/table&gt;
+            </pre
+        >
+      </details>
+      <details>
+        <summary>Description / Detail List</summary>
+        <h5>Lista de descrição</h5>
+        <pre>
                 &lt;dl&gt;
                 &lt;dt&gt;MG:&lt;/dt&gt;
                 &lt;dd&gt;MAGIC GLADIATOR&lt;/dd&gt;
@@ -564,110 +718,161 @@ footer</pre>   </code>
                 &lt;dt&gt;BK:&lt;/dt&gt;
                 &lt;dd&gt;BLACK KNIGHT&lt;/dd&gt;
             &lt;/dl&gt;
-            </pre>
-            <p class="lead">Com Bootstrap o alinhamento padrão não funciona, caso queira definir uma <code>margin-left</code></p>
-            
-            <div class="output">
-            <dl>
-                <dt>MG:</dt>
-                <dd>MAGIC GLADIATOR</dd>
-        
-                <dt>SM:</dt>
-                <dd>SOUL MASTER</dd>
-        
-                <dt>BK:</dt>
-                <dd>BLACK KNIGHT</dd>
-            </dl>
+            </pre
+        >
+        <p class="lead">
+          Com Bootstrap o alinhamento padrão não funciona, caso queira definir
+          uma <code>margin-left</code>
+        </p>
+
+        <div class="output">
+          <dl>
+            <dt>MG:</dt>
+            <dd>MAGIC GLADIATOR</dd>
+
+            <dt>SM:</dt>
+            <dd>SOUL MASTER</dd>
+
+            <dt>BK:</dt>
+            <dd>BLACK KNIGHT</dd>
+          </dl>
         </div>
-        </details>
-        <details>
-            <summary>How click and go by ID</summary>
-            <h5>Set a DIV #id tag in content</h5>
-            <code>&lt;div id="goyoutube">Youtube&lt;/div&gt;</code>
-            </code>
-            <h5>Callback ID</h5>
-            <code>="#goyoutube">Youtube</a></li>
-            </code>
-        </details>
-        <details>
-            <summary>Music</summary>
-            <code>
-&lt;body&gt;
-&lt;embed src="50.mp3" loop="true" autostart="true" width="2"
-height="0"&gt;
-&lt;/body&gt;
-            </code>
-        </details>
-        <details>
-            <summary>inputs</summary>
-            <p class="lead">Existem vários tipos de inputs <a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">W3 Schools</a></p>
-            <p class="lead">Modo correto</p>
-            <div class="output">
-                <img src="assets/img/input_label.jpg" class="img-fluid">
-            </div>
-            <p class="lead">Contudo um truque para alinhamento vertical, englobe tudo dentro da label, não é precisa adicionar o atributo <code>for</code>, no CSS apenas definir que label tem <code>display: block</code> e o alinhamento vai acontecer!</p>
-            <div class="output">
-                <img src="./assets/img/input_label_eng.jpg" alt="" class="img-fluid">
-            </div>
-            <pre>
+        <a href="./pages/dd-lists.html">Positions List and borders example</a>
+      </details>
+      <details>
+        <summary>How click and go by ID</summary>
+        <h5>Set a DIV #id tag in content</h5>
+        <code>&lt;div id="goyoutube">Youtube&lt;/div&gt;</code>
+        <h5>Callback ID</h5>
+        <code>="#goyoutube">Youtube&lt;/a&gt;</code>
+      </details>
+      <details>
+        <summary>Music</summary>
+        <code>
+          &lt;body&gt; &lt;embed src="50.mp3" loop="true" autostart="true"
+          width="2" height="0"&gt; &lt;/body&gt;
+        </code>
+      </details>
+      <details>
+        <summary>inputs</summary>
+        <p class="lead">
+          Existem vários tipos de inputs
+          <a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank"
+            >W3 Schools</a
+          >
+        </p>
+        <p class="lead">Modo correto</p>
+        <div class="output">
+          <img src="assets/img/input_label.jpg" class="img-fluid" />
+        </div>
+        <p class="lead">
+          Contudo um truque para alinhamento vertical, englobe tudo dentro da
+          label, não é precisa adicionar o atributo <code>for</code>, no CSS
+          apenas definir que label tem <code>display: block</code> e o
+          alinhamento vai acontecer!
+        </p>
+        <div class="output">
+          <img
+            src="./assets/img/input_label_eng.jpg"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <pre>
                 label {
                     display: block;
                     margin: 10px 0;
                     background: royalblue;
                 }  
-            </pre>
-            <p class="lead">Caso não queira englobar as labels, pode englobar cada input em um elemento que seja display: block como <code>p</code> ou usar o <code>ul li</code>que por padrão tem display: list-item</p>
+            </pre
+        >
+        <p class="lead">
+          Caso não queira englobar as labels, pode englobar cada input em um
+          elemento que seja display: block como <code>p</code> ou usar o
+          <code>ul li</code>que por padrão tem display: list-item
+        </p>
 
-            <h5>Boas práticas</h5>
-            <p class="lead">Uma boa pratica seja fazer o input dentro da label, dispensando o uso de for e evitando grosh clicks entre os elementos</p>
+        <h5>Boas práticas</h5>
+        <p class="lead">
+          Uma boa pratica seja fazer o input dentro da label, dispensando o uso
+          de for e evitando grosh clicks entre os elementos
+        </p>
 
-            <pre>
+        <pre>
                 &lt;label>
                    &lt;input type="checkbox">
                   <code>  option</code>
                 &lt;/label>
             </pre>
-        </details>
-        <details>
-            <summary>More [+]</summary>
-           <section class="links">
-          <div>           
+      </details>
+      <details>
+        <summary>More [+]</summary>
+        <section class="links">
+          <div>
             <a name="object"></a>
-              <h5>Object tag</h5>
-              <a href="./pages/object/eg1/index.html">object e.g 1</a>
-              <a href="./pages/object/eg2_menu-CSS/index.html">object e.g 2 menu CSS</a>
-              <a href="./pages/object/eg3_js/index.html">object e.g 3 JS Router</a>
+            <h5>Object tag</h5>
+            <a href="./pages/object/eg1/index.html">object e.g 1</a>
+            <a href="./pages/object/eg2_menu-CSS/index.html"
+              >object e.g 2 menu CSS</a
+            >
+            <a href="./pages/object/eg3_js/index.html"
+              >object e.g 3 JS Router</a
+            >
           </div>
         </section>
-           <section class="links">
-            <h5>Links:</h5>
-            <a href="./pages/cool-things-justhtml.html">cool things justhtml</a>
-            <a href="./pages/Learn-HTML-and-CSS-with-w3schools.html"> Learn-HTML-and-CSS-with-w3schools</a>
-            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element" target="_blank">whatwg Standard</a>
-            <a href="https://www.w3schools.com/charsets/ref_emoji.asp" target="_blank" rel="noopener noreferrer" >ref_emoji</a>
-            <a href="https://www.textfixer.com/html/compress-html-compression.php" target="_blank" rel="noopener noreferrer" >compress  HTML/CSS/JS</a>
-            <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">validator w3.org</a>
-            <a href="http://html5doctor.com/nav-element/" target="_blank">http://html5doctor.com/nav-element/</a>
-            <a href="./pages/tabindex.html">Tabindex</a>
-           </section>
-        
-        </details>
-       
-        <div class="container pt-5 pb-5">
-            <h5>Boas praticas dessa página</h5>
+        <section class="links">
+          <h5>Links:</h5>
+          <a href="./pages/cool-things-justhtml.html">cool things justhtml</a>
+          <a href="./pages/Learn-HTML-and-CSS-with-w3schools.html">
+            Learn-HTML-and-CSS-with-w3schools</a
+          >
+          <a
+            href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element"
+            target="_blank"
+            >whatwg Standard</a
+          >
+          <a
+            href="https://www.w3schools.com/charsets/ref_emoji.asp"
+            target="_blank"
+            rel="noopener noreferrer"
+            >ref_emoji</a
+          >
+          <a
+            href="https://www.textfixer.com/html/compress-html-compression.php"
+            target="_blank"
+            rel="noopener noreferrer"
+            >compress HTML/CSS/JS</a
+          >
+          <a
+            href="https://validator.w3.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >validator w3.org</a
+          >
+          <a href="http://html5doctor.com/nav-element/" target="_blank"
+            >http://html5doctor.com/nav-element/</a
+          >
+          <a href="./pages/tabindex.html">Tabindex</a>
+        </section>
+      </details>
+
+      <div class="container pt-5 pb-5">
+        <h5>Boas praticas dessa página</h5>
         <p class="lead">For short codes - green:</p>
         <code>code</code>
         <p class="lead">For full codes - pink:</p>
         <pre>pre</pre>
         <p class="lead">Output:</p>
         <pre>class="output"</pre>
-        </div>
-        </div><!--container-->
-        <footer class="pt-m3 mt-4 text-muted text-center border-top">
-            Built with Bootstrap 5 and custom CSS by  Geraldo Filho &copy; <span id="year"></span> 
-        <nav>
+      </div>
+    </div>
+    <!--container-->
+    <footer class="pt-m3 mt-4 text-muted text-center border-top">
+      Built with Bootstrap 5 and custom CSS by Geraldo Filho &copy;
+      <span id="year"></span>
+      <nav>
         <a href="#top">Go TOP</a>
-        </nav>
-        </footer>       
-</body>
+      </nav>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training</title>
+    <style>
+      main {
+        max-width: 600px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      dl {
+        font-weight: bold;
+      }
+      dt {
+        color: blue;
+        font-size: 1.5rem;
+        margin: 10px 0;
+      }
+      dd {
+        border-bottom: 3px solid dodgerblue;
+        border-left: 3px solid dodgerblue;
+        padding: 10px;
+      }
+      code {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <dl>
+        <dt>Static</dt>
+        <dd>renderiza os elementos na ordem que aparece no documento</dd>
+        <dt>Relative</dt>
+        <dd>
+          Pode ser posicionado relativamente a sua posição original, pode usar
+          <code>top, bottom, left, right</code>
+        </dd>
+        <dt>Absolute</dt>
+        <dd>
+          Posiciona relativamente ao último elemento que for `Relative` caso
+          contrário será relativo ao body
+        </dd>
+        <dt>Fixed</dt>
+        <dd>Posicionado relativamente a janela do browser</dd>
+        <dt>Sticky</dt>
+        <dd>Posicionado em relação ao scroll do usuário</dd>
+      </dl>
+    </main>
+  </body>
+</html>
