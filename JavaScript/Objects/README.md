@@ -15,9 +15,12 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [Object.Values, keys, entries](#allitens)
 - [Object.fromEntries](#objectfromentries)
 - [Constructor](#constructor)
+- [Object.create](#objectcreate)
 - [ObjectMethods](#object-methods)
 - [Object.Freeze](#objectfreeze)
   - [Object.isFrozen](#objectisFrozen)
+  - [Object.is()](#objectis)
+- [Object.assign](#objectassign)
 
 ### add
 
@@ -211,11 +214,78 @@ delete obj.prop;
 console.log(obj);
 ```
 
-### Object.isFrozen()
+#### Object.isFrozen()
 
-console.log(Object.isFrozen(obj));
+`console.log(Object.isFrozen(obj));`
 
-!important :arrow_right: LEITURA
+#### Object.is()
+
+```js
+const geraldo = {
+  name: "Geraldo Filho",
+  age: 30,
+  idade: 30,
+  Developer: true,
+};
+
+console.log(Object.is(geraldo.age, geraldo.idade));
+//same
+console.log(geraldo.age == geraldo.idade);
+```
+
+#### Object.create()
+
+```js
+// Using this for undeclared keys eg: `this.name` and `this.valor`[corresponde a um valor para uma function nesse obj]
+const register = {
+  humano: false,
+  age: 10,
+  Estado: "RJ",
+  info: function () {
+    //arrow function here returns "undefined" in this.name
+    console.log(
+      `My name is ${this.name}, tenho ${this.age} e moro no ${this.Estado}`
+    );
+    console.log(this.gnn(this.valor));
+  },
+  gnn: function (val) {
+    return 2 ** val;
+  },
+};
+
+const eu = Object.create(register);
+eu.name = "Geraldo";
+eu.age = 31;
+eu.Estado = "Maceio";
+eu.humano = true;
+eu.valor = 7;
+eu.info();
+```
+
+### Object.assign
+
+```js
+const o = { name: "Geraldo" };
+const o2 = { age: 30 };
+const o3 = { city: "Duque de Caxias - RJ" };
+
+const obj = Object.assign(o, o2, o3);
+console.log(obj);
+```
+
+### obj.hasOwnProperty("prop")
+
+```js
+console.log(obj.hasOwnProperty("name")); // true
+console.log(obj.hasOwnProperty("nome")); // false
+```
+
+### Object.Own(obj, "prop")
+
+```js
+console.log(Object.hasOwn(obj, "name")); // true
+console.log(Object.hasOwn(obj, "idade")); // false
+```
 
 ### for in
 
@@ -328,6 +398,8 @@ console.log(post);
 // voltar a ser obj
 console.log(JSON.parse(post));
 ```
+
+!important :arrow_right: LEITURA
 
 ### constructor
 

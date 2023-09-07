@@ -17,18 +17,6 @@ console.log(styles[1].href);
 console.log(styles[1].cssRules[0].cssText);
 ```
 
-# style
-
-Using style in this manner will completely overwrite all inline styles on the element.
-
-- [HTMLElement.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
-- [DOM_obj_style-for-CSS](https://www.w3schools.com/jsref/dom_obj_style.asp)
-
-# setProperty
-
-- [Change theme by GI](https://codepen.io/geraldopcf/pen/GRxyZMg?)
-- [setProperty.html](setProperty.html)
-
 #### Apply dark mode:
 
 ```js
@@ -52,3 +40,23 @@ Estude também o `window.getComputedStyles` returns an object containing the val
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getcomputedstyle">W3</a>
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle)
 - [CodePen](https://codepen.io/geraldopcf/pen/VwBvyPw)
+
+# CSSStyleDeclaration
+
+## setProperty
+
+- MDN:
+  [https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration)
+
+## style
+
+- From Scratch `.style.cssProperyName = "value"` [https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty#alternative_usage](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty#alternative_usage)
+  Using style in this manner will completely overwrite all inline styles on the element.
+
+- [HTMLElement.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
+- [DOM_obj_style-for-CSS](https://www.w3schools.com/jsref/dom_obj_style.asp)
+
+#### Links:
+
+- [Change theme by GI](https://codepen.io/geraldopcf/pen/GRxyZMg?)
+- [setProperty.html](setProperty.html)
