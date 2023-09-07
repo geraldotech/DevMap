@@ -12,11 +12,12 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [New property](#property)
 - [remove](#remove)
 - [Concatenar](#concatenar)
-- [Object.Values, keys, entries](#objectvalueskeysentriesobj)
+- [Object.Values, keys, entries](#allitens)
 - [Object.fromEntries](#objectfromentries)
 - [Constructor](#constructor)
-
 - [ObjectMethods](#object-methods)
+- [Object.Freeze](#objectfreeze)
+  - [Object.isFrozen](#objectisFrozen)
 
 ### add
 
@@ -32,21 +33,6 @@ const geraldo = {
   age: 30,
   Developer: true,
 };
-
-//Simulate a JavaScript Object
-const windowx = {
-  document: {
-    getElemenyById: function (id) {
-      console.log(`getElemenyById:`, id);
-    },
-    querySelector: (val) => {
-      console.log(`querySelector:`, val);
-    },
-  },
-};
-
-windowx.document.getElemenyById("ElementId");
-windowx.document.querySelector("#id");
 ```
 
 ### access
@@ -116,7 +102,9 @@ console.log(nome);
 console.log(surname);
 ```
 
-### Object.'values','keys','entries'(obj)
+### Object.keys(), Objects.values(), Object.entries()
+
+<a name="allitens"></a>
 
 ```js
 const obj = {
@@ -175,7 +163,59 @@ const smart = {
 };
 smart.open();
 smart.close();
+
+//eg2
+const numero = {
+  par: function (v) {
+    console.log(v % 2 === 0);
+  },
+  impar: (v) => console.log(v % 2 != 0),
+  potencia: (v) => {
+    console.log(2 ** v);
+  },
+};
+
+numero.par(2);
+numero.impar(2);
+numero.potencia(2);
+
+//Simulate a JavaScript Object
+const windowx = {
+  document: {
+    getElemenyById: function (id) {
+      console.log(`getElemenyById:`, id);
+    },
+    querySelector: (val) => {
+      console.log(`querySelector:`, val);
+    },
+  },
+};
+
+windowx.document.getElemenyById("ElementId");
+windowx.document.querySelector("#id");
 ```
+
+### Object.Freeze
+
+```js
+const obj = {
+  prop() {},
+  foo: "footer",
+};
+
+Object.freeze(obj);
+obj.foo = "<rodape/>";
+obj.article = "<article/>";
+delete obj.prop;
+
+console.log(obj);
+```
+
+### Object.isFrozen()
+
+console.log(Object.isFrozen(obj));
+
+!important :arrow_right: LEITURA
 
 ### for in
 
@@ -194,7 +234,7 @@ for (let key in pessoas) {
   console.log(key);
 }
 
-// Se perform `pessoas` vai retonar todos os values duplicados, por isso devemos chamar junto com a chave
+// If perform `pessoas` vai retonar todos os values duplicados, por isso devemos chamar junto com a chave
 
 for (const key in pessoas) {
   console.log(pessoas); //👉 ❌
@@ -289,11 +329,10 @@ console.log(post);
 console.log(JSON.parse(post));
 ```
 
-!important :arrow_right: LEITURA
-
 ### constructor
 
-[https://www.w3schools.com/js/js_object_constructors.asp](https://www.w3schools.com/js/js_object_constructors.asp);
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- [https://www.w3schools.com/js/js_object_constructors.asp](https://www.w3schools.com/js/js_object_constructors.asp);
 
 - [difference-between-array-and-array-of-objects-in-javascript/](https://www.geeksforgeeks.org/difference-between-array-and-array-of-objects-in-javascript/);
 

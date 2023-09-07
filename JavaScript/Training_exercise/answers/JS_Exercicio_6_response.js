@@ -84,7 +84,7 @@ document.querySelector("input").oninput = function () {
 //DOM
 
 <input type="text" />
-<div id="res"></div>
+<div id="root"></div>
 
 
 const input = document.querySelector("input");
@@ -101,6 +101,36 @@ input.addEventListener("input", function () {
     return written[val] || "other";
   };
   const root = document.querySelector(`#root`);
+
   root.innerHTML = getn(str);
+    //clean html input
   if (str.length === 0) return (root.innerHTML = ``);
 });
+
+/* 
+e.g: 2
+Resumindo fazer objetos e na function retornar o key[value] contudo se nao conter na lista será undefined 
+ */
+
+function verificar(val){
+  const base = {
+   1: "One",
+   2: "two",
+   3: "three"
+  };
+  return base[val] || "nao encontrado"
+}
+
+console.log(verificar(2));
+
+//e.g: 3
+const obj = {
+  chaveone: 1,
+  chavedois: 2,
+};
+
+function veri(v) {
+  return obj[v] || "404";
+}
+
+console.log(veri("chaveone"));

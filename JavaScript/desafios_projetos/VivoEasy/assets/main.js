@@ -2,7 +2,7 @@ const btn = document.querySelectorAll("span");
 const p = document.querySelector("p");
 const gb = document.querySelector("#gb");
 
-let valor = 0;
+let valor = 9;
 //btn[0].onclick =
 function mais() {
   valor = valor + 1;
@@ -76,3 +76,7 @@ function valores() {
     p.innerHTML = g + "179.99";
   }
 }
+
+document.querySelector("nav button").onclick = function () {
+  alert("Adicionado!");
+};

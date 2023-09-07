@@ -79,6 +79,26 @@ function bnt() {
 //one condition
 curre.checked ? arr.push(curre.id) : curre.checked;
 
+/*
+You only need to do this:  `return a === 0;`
+the result of this is actually a boolean.
+- https://www.linkedin.com/feed/update/urn:li:activity:7102330577072091136?utm_source=share&utm_medium=member_desktop
+*/
+
+//arrow function, tbm poderia ser function obvious
+const isEven = (value) => {
+  return value % 2 === 0;
+};
+
+console.log(isEven(3)); //false
+
+//arrow function inline: by gmap
+const isEven = (v) => v % 2 === 0;
+
+
+console.log(isEven(2)); //true
+
+
 ```
 
 # if-return
