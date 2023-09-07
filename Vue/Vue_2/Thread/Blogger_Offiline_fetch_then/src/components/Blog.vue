@@ -1,13 +1,15 @@
 <template>
   <div>
-    <button @click="all = !all">Show</button>
+    <button @click="all = !all">Show - all Fetch Files</button>
     <section v-show="all">
-      {{ produtos }}
+      <p>{{ allProdutos }}</p>
     </section>
 
+    <h1>Nav by names:</h1>
     <section>
+      <!--   do a loop button for each item -->
       <button
-        v-for="itens in produtos"
+        v-for="itens in allProdutos"
         :key="itens.id"
         @click="fetchProduto(itens.name)"
       >
@@ -33,6 +35,7 @@
     <ul>
       <li>Title: {{ post.title }}</li>
       <li>Cat: {{ post.category }}</li>
+      <li>Slug: {{ post.slug }}</li>
       <li>Article: <span v-html="post.article"></span></li>
     </ul>
 
@@ -42,6 +45,10 @@
       </option>
     </select>
     <p>{{ selecionado }}</p>
+    <router-link
+      :to="{ name: 'threads', params: { id: 1, slug: 'post-vue-js' } }"
+      >post-vue-js</router-link
+    >
   </div>
 </template>
 
@@ -54,7 +61,7 @@ module.exports = {
   },
   data() {
     return {
-      produtos: [],
+      allProdutos: [],
       produto: [],
       all: false,
       posts: [],
@@ -67,16 +74,17 @@ module.exports = {
       fetch("./api/produtos.json")
         .then((r) => r.json())
         .then((r) => {
-          this.produtos = r;
+          this.allProdutos = r;
         });
     },
-    fetchProduto(id) {
-      fetch(`./api/produtos/${id}/dados.json`)
+    fetchProduto(itemName) {
+      fetch(`./api/produtos/${itemName}/dados.json`)
         .then((r) => r.json())
         .then((r) => {
           this.produto = r;
         });
     },
+    /* List de posts */
     fetchPosts() {
       fetch("./api/posts.json")
         .then((r) => r.json())
@@ -84,6 +92,7 @@ module.exports = {
           this.posts = r;
         });
     },
+    /*  Fetch Post by Id */
     fetchPost(id) {
       fetch(`./api/blog/${id}/post.json`)
         .then((r) => r.json())
@@ -95,4 +104,8 @@ module.exports = {
 };
 </script>
 
-<style></style>
+<style>
+section {
+  margin: 15px 0;
+}
+</style>

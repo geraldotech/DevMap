@@ -447,6 +447,7 @@ document.head.insertAdjacentHTML(
 - <a href="https://www.base64encode.org/">base64encode.org</a>
 - <a href="https://twitter.com/ATechAjay/status/1606115109842976768">XOX operator</a>
 - [Nice articles: https://bobbyhadz.com/blog/](https://bobbyhadz.com/blog/)
+- [Sobre map](https://www.freecodecamp.org/portuguese/news/como-usar-colecoes-em-javascript-map-e-set/)
 
 ## Videos
 

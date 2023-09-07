@@ -1,1 +1,7 @@
-{"category": "zeta", "title": "Post three", "article": "<h1>title</h1>I Believe In Miracles · Jackson Sisters" }
+{
+  "id": 1,
+  "category": "zeta",
+  "title": "Post One",
+  "article": "I Believe In Miracles · Jackson Sisters Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolore pariatur atque minus est ab nihil, repellendus quas sequi a eos perspiciatis veritatis temporibus dolorum optio et distinctio autem explicabo asperiores aut rem praesentium earum iste? Sunt numquam laborum vitae nesciunt excepturi obcaecati repellendus voluptas, laudantium, dolor aperiam, quisquam earum!",
+  "slug": "post-vue-js"
+}

@@ -1,7 +1,11 @@
 <template>
   <div>
     <h2>Blog Posts</h2>
-
+    <p>
+      não é o jeito mais indicado, pq primeiro é feito um fetch de todos os
+      posts e depois no click get os posts by index local[comecando um 0] que
+      está no href
+    </p>
     <!--   <select v-model="selecionado">
       <option value=""></option>
       <option v-for="posx in posts" :key="posx.id" :value="posx.description">
@@ -17,16 +21,33 @@
           v-for="(links, index) in posts"
           :key="links.name"
           :href="index"
-          @click.prevent="RenderPost($event)"
-          >{{ links.name }}</a
-        >
+          @click.prevent="RenderPostbyIndex($event)"
+          >{{ links.name }}
+        </a>
       </nav>
     </div>
 
     <hr />
-    <h3>{{ post.id }}</h3>
-    <h3>{{ post.name }}</h3>
-    <h3>{{ post.description }}</h3>
+    <h3>{{ singlepost.id }}</h3>
+    <h3>{{ singlepost.name }}</h3>
+    <h3>{{ singlepost.description }}</h3>
+
+    <hr />
+    <div class="menu">
+      <nav>
+        <a
+          v-for="single in posts"
+          :key="single.name"
+          :href="single.slug"
+          @click.prevent="RenderPostbySlug($event)"
+          >{{ single.name }}
+        </a>
+      </nav>
+    </div>
+    <p>{{ slugPost.id }}</p>
+    <p>{{ slugPost.name }}</p>
+    <p>{{ slugPost.slug }}</p>
+    <p>{{ slugPost.description }}</p>
   </div>
 </template>
 
@@ -34,12 +55,12 @@
 module.exports = {
   created() {
     this.fetchblog();
-    console.log(this.posts);
   },
   data() {
     return {
       posts: {},
-      post: {},
+      singlepost: {},
+      slugPost: {},
       currentIndex: [],
     };
   },
@@ -48,15 +69,29 @@ module.exports = {
       fetch("./api/posts.json")
         .then((r) => r.json())
         .then((r) => {
-          console.log(r[0]);
           this.posts = r;
+          console.log(this.posts);
         });
     },
-    RenderPost: function (e) {
+    RenderPostbyIndex: function (e) {
+      //console.log(e.target.getAttribute("href"));
+
       //get current index of selected button
       this.currentIndex = e.target.getAttribute("href");
+
       //post recebe all posts[index]
-      this.post = this.posts[this.currentIndex];
+      this.singlepost = this.posts[this.currentIndex];
+    },
+    RenderPostbySlug: function (e) {
+      //console.log(e.target.getAttribute("href"));
+
+      //get current index of selected button
+      this.currenthrefVal = e.target.getAttribute("href");
+
+      // find the post
+      const find = this.posts.find((v) => v.slug == this.currenthrefVal);
+
+      find ? (this.slugPost = find) : (this.slugPost = "vazio");
     },
   },
 };
@@ -65,9 +100,11 @@ module.exports = {
 <style>
 nav {
   display: flex;
-  width: 350px;
-  max-width: 400px;
-  justify-content: space-around;
+  max-width: 550px;
+  justify-content: space-evenly;
   margin: 0 auto;
+}
+nav a {
+  font-size: 20px;
 }
 </style>

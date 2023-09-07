@@ -116,7 +116,8 @@ const obj = {
   systemKey: "WindowsVal",
 };
 
-//✨ display the `keys` (3) ['nameKey', 'ageKey', 'systemKey']
+//✨ display the `keys` string-keyed property names: (also called a “property name”)
+//(3) ['nameKey', 'ageKey', 'systemKey']
 Object.keys(person);
 
 //✨ display `values` (3) ['pessoaVal', 30, 'WindowsVal']
