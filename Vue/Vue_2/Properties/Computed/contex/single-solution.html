@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-size: 120%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>VueJS - select - computed</h1>
+
+    <a href="https://www.youtube.com/watch?v=PuxdMnk-u5k"
+      >https://www.youtube.com/watch?v=PuxdMnk-u5k</a
+    >
+
+    <div id="app">
+      <input type="text" v-model="first" placeholder="first" />
+      <input type="text" v-model="last" placeholder="last" />
+
+      <hr />
+      <input type="text" v-model="fullname" />
+
+      <p>Name: {{first}}</p>
+      <p>Last: {{last}}</p>
+
+      <h1>{{fullname}}</h1>
+    </div>
+    <script>
+      const vm = new Vue({
+        data() {
+          return {
+            first: "",
+            last: "",
+          };
+        },
+        computed: {
+          fullname: {
+            // getter function
+            get: function () {
+              //return this.first + " " + this.last;
+              return this.first + (this.last ? " " + this.last : "");
+            },
+            // setter
+            set(value) {
+              // value get the get funcion return values
+              console.log(`Alterando by setter`, value);
+              const name = value.split(" ");
+              this.name = name[0];
+              //this.last = name[name.length - 1];
+              this.last = name.length > 1 ? name[name.length - 1] : "";
+            },
+          },
+        },
+      }).$mount("#app");
+    </script>
+  </body>
+</html>

@@ -854,6 +854,8 @@ https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-nu
 🟢 18 - #splice  index ? + delete ? + add elements? | emendar
 - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 - https://gmapdev.netlify.app/demo/indexof_and_splice
+- slice the original array will not be modified. but in `splice` originai is
+
 */
 
 //e.g 1

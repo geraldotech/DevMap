@@ -6,6 +6,9 @@
     <title>VueJS2</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
+      html {
+        font-size: 130%;
+      }
       input {
         display: inline-block;
       }
@@ -24,14 +27,20 @@
         create one by providing both a getter and a setter:
       </p>
       <input type="text" v-model="firstName" />
+      <input type="text" v-model="lastName" />
       <p>{{fullName}}</p>
+
+      <hr />
+      <input type="text" v-model="rtx" />
+      <p>{{padrao}}</p>
     </div>
     <script>
       const vm = new Vue({
         el: "#app",
         data: {
-          firstName: "Geraldo",
-          lastName: "Filho",
+          firstName: "",
+          lastName: "",
+          rtx: "",
         },
         //https://vuejs.org/guide/essentials/computed.html
         computed: {
@@ -39,8 +48,8 @@
             // getter
             get() {
               //return this.firstName + ' ' + this.lastName
-              if (this.firstName == `gera`) {
-                return (this.lastName = "novo");
+              if (this.firstName == `Gera`) {
+                return (this.lastName = "Filho");
               }
             },
             // setter
@@ -48,6 +57,12 @@
               // Note: we are using destructuring assignment syntax here.
               [this.firstName, this.lastName] = newValue.split(" ");
             },
+          },
+          padrao() {
+            if (this.rtx.length == 0) {
+              return "";
+            }
+            return 2 ** this.rtx;
           },
         },
       });

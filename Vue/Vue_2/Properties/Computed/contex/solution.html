@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-size: 120%;
+      }
+      input {
+        position: absolute;
+        height: 20px;
+      }
+      label {
+        display: block;
+        padding-left: 25px;
+        line-height: 1.5;
+      }
+      div img {
+        width: 100%;
+        max-width: 30%;
+      }
+      code {
+        color: seagreen;
+      }
+      .warning {
+        color: red;
+      }
+      .template {
+        min-height: 240px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>VueJS - select - computed</h1>
+
+    <div id="app">
+      <select name="" id="select" v-model="selected">
+        <option value="">Selecionar</option>
+        <option value="1">NetFlix</option>
+        <option value="2">Amazon Prime</option>
+      </select>
+
+      <!--  templates -->
+      <section class="template">
+        <p>{{selected}}</p>
+        <template v-if="netflix">
+          <div>
+            <p>NetFlix</p>
+            <div>
+              <img
+                src="https://classic.exame.com/wp-content/uploads/2022/04/GettyImages-1238168471.jpg?quality=70&strip=info&w=1024"
+                alt=""
+              />
+            </div>
+          </div>
+        </template>
+        <template class="template" v-if="amazon">
+          <p>Amazon</p>
+          <div>
+            <img
+              src="http://store-images.s-microsoft.com/image/apps.32357.14618985536919905.4b30e4f3-f7a1-4421-840c-2cc97b10e8e0.6e7a96f1-33ad-4447-8e2b-7de730f9a05e"
+              alt=""
+            />
+          </div>
+        </template>
+      </section>
+
+      <hr />
+
+      <h2>Como tratar o erro abaixo com getter and setters</h2>
+      <code class="warning">
+        [Vue warn]: Computed property "netflix" was assigned to but it has no
+        setter. (found in Root)
+      </code>
+
+      <p>After change:</p>
+
+      <pre>
+        <code>computed: netflix(){ }</code>
+
+        to
+
+        <code>netflit: { // empty // }</code>
+      </pre>
+      <p>and still get a warning</p>
+      <code class="warning"
+        >[Vue warn]: Getter is missing for computed property "netflix".</code
+      >
+
+      <p>Add only a getter, erro is gone</p>
+      <pre>
+      <code> 
+        netflix: {
+          // getter
+          get() {},
+        },
+      </code>
+     </pre>
+      <p>
+        Percebi que apenas getter resolve o problema, o setter nem é chamado,
+        Computed properties are by default getter-only
+      </p>
+
+      <nav>
+        <a
+          href="https://vuejs.org/guide/essentials/computed.html#writable-computed"
+          >https://vuejs.org/guide/essentials/computed.html#writable-computed</a
+        >
+      </nav>
+    </div>
+    <script>
+      const vm = new Vue({
+        data() {
+          return {
+            selected: "",
+          };
+        },
+        computed: {
+          netflix: {
+            // getter
+            get() {
+              console.log(`I am getter`);
+              return this.selected == "4";
+            },
+            set() {
+              console.log(`I am setter`);
+            },
+          },
+          amazon() {
+            if (this.selected == "2") {
+              return (this.amazon = true);
+            }
+          },
+        },
+      }).$mount("#app");
+    </script>
+  </body>
+</html>

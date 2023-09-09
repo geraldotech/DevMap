@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      input {
+        position: absolute;
+        height: 20px;
+      }
+      label {
+        display: block;
+        padding-left: 25px;
+        line-height: 1.5;
+      }
+      div img {
+        width: 100%;
+        max-width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>VueJS - select - computed</h1>
+
+    <p>
+      The problem: vue.js:5108 [Vue warn]: Computed property "netflix" was
+      assigned to but it has no setter.
+    </p>
+
+    <div id="app">
+      <select name="" id="select" v-model="selected">
+        <option value="">Selecionar</option>
+        <option value="1">NetFlix</option>
+        <option value="2">Amazon Prime</option>
+      </select>
+      <p>{{selected}}</p>
+
+      <template v-if="netflix">
+        <p>NetFlix</p>
+        <div>
+          <img
+            src="https://classic.exame.com/wp-content/uploads/2022/04/GettyImages-1238168471.jpg?quality=70&strip=info&w=1024"
+            alt=""
+          />
+        </div>
+      </template>
+      <template v-if="amazon">
+        <p>Amazon</p>
+        <div>
+          <img
+            src="http://store-images.s-microsoft.com/image/apps.32357.14618985536919905.4b30e4f3-f7a1-4421-840c-2cc97b10e8e0.6e7a96f1-33ad-4447-8e2b-7de730f9a05e"
+            alt=""
+          />
+        </div>
+      </template>
+    </div>
+    <script>
+      const vm = new Vue({
+        data() {
+          return {
+            selected: "",
+          };
+        },
+        computed: {
+          netflix() {
+            if (this.selected == "1") {
+              return (this.netflix = true);
+            }
+          },
+          amazon() {
+            if (this.selected == "2") {
+              return (this.amazon = true);
+            }
+          },
+        },
+      }).$mount(app);
+    </script>
+  </body>
+</html>
