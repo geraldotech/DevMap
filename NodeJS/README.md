@@ -2,10 +2,10 @@
 
 > > O Node.js é um ambiente de execução Javascript server-side
 
-Instalar o NodeJS na sua máquina [https://nodejs.org/pt-br/download/](https://nodejs.org/pt-br/download/)
+Instalar o `NodeJS` na sua máquina [https://nodejs.org/pt-br/download/](https://nodejs.org/pt-br/download/)
 
 ```js
-checkout version
+checkout version node and node package manager
 $ node -v
 
 $ npm -v
@@ -20,18 +20,18 @@ $ npm -v
 > chooice your port!
 
 ```js
-const http = require("http");
-const hostname = "127.0.0.1";
-const port = 3000;
+const http = require('http')
+const hostname = '127.0.0.1'
+const port = 3000
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello Dev"); //simples texto
-});
+  res.statusCode = 200
+  res.setHeader('Content-Type', 'text/plain')
+  res.end('Hello Dev') //simples texto
+})
 
 server.listen(port, hostname, () => {
-  console.log("server is running!");
-});
+  console.log('server is running!')
+})
 ```
 
 ### create sample server v2:
@@ -39,17 +39,17 @@ server.listen(port, hostname, () => {
 > > > versão sem Content-Type lite
 
 ```js
-const http = require("http");
+const http = require('http')
 
-const hostname = "127.0.0.1";
-const port = 4000;
+const hostname = '127.0.0.1'
+const port = 4000
 const server = http.createServer((req, res) => {
-  res.end("Hello Dev"); //simples texto
-});
+  res.end('Hello Dev') //simples texto
+})
 
 server.listen(port, hostname, () => {
-  console.log("server running in port :4000");
-});
+  console.log('server running in port :4000')
+})
 ```
 
 Now call in cmd: `node index.js`
@@ -78,21 +78,21 @@ Open browser: `http://localhost:3000`
 Arquivo final:
 
 ```js
-const http = require("http");
-const fs = require("fs"); //new permite manipular arquivos usando node
-const hostname = "127.0.0.1";
-const port = 3000;
+const http = require('http')
+const fs = require('fs') //new permite manipular arquivos usando node
+const hostname = '127.0.0.1'
+const port = 3000
 const server = http.createServer((req, res) => {
-  fs.readFile("index.html", function (err, data) {
-    res.writeHead(200, { "Content-type": "text-html" });
-    res.write(data);
-    return res.end();
-  });
-});
+  fs.readFile('index.html', function (err, data) {
+    res.writeHead(200, { 'Content-type': 'text-html' })
+    res.write(data)
+    return res.end()
+  })
+})
 
 server.listen(port, hostname, () => {
-  console.log("server is running!");
-});
+  console.log('server is running!')
+})
 ```
 
 ## About req
@@ -140,30 +140,30 @@ adicionar else para parar o carregamento infitinto, vai retornar uma página em 
 <summary>code</summary>
 
 ```js
-const http = require("http");
-const fs = require("fs");
-const hostname = "127.0.0.1";
-const port = 4000;
+const http = require('http')
+const fs = require('fs')
+const hostname = '127.0.0.1'
+const port = 4000
 
 const server = http.createServer((req, res) => {
-  if (req.url == "/smart") {
-    fs.readFile("index.html", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      return res.end();
-    });
+  if (req.url == '/smart') {
+    fs.readFile('index.html', function (err, data) {
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.write(data)
+      return res.end()
+    })
   } else {
-    fs.readFile("404.html", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      return res.end();
-    });
+    fs.readFile('404.html', function (err, data) {
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.write(data)
+      return res.end()
+    })
   }
-});
+})
 
 server.listen(port, hostname, () => {
-  console.log("server running in port :4000");
-});
+  console.log('server running in port :4000')
+})
 ```
 
 </details>
@@ -174,42 +174,42 @@ server.listen(port, hostname, () => {
 <summary>code</summary>
 
 ```js
-const http = require("http");
-const fs = require("fs");
-const hostname = "127.0.0.1";
-const port = 4000;
+const http = require('http')
+const fs = require('fs')
+const hostname = '127.0.0.1'
+const port = 4000
 
 const server = http.createServer((req, res) => {
-  if (req.url == "/") {
-    fs.readFile("index.html", function (err, data) {
-      fs.appendFile("file.txt", "\n novo access from url", (err) => {
-        if (err) throw err;
-        console.log("novo acesso! ");
-      });
+  if (req.url == '/') {
+    fs.readFile('index.html', function (err, data) {
+      fs.appendFile('file.txt', '\n novo access from url', (err) => {
+        if (err) throw err
+        console.log('novo acesso! ')
+      })
 
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      return res.end();
-    });
-  } else if (req.url == "/read") {
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.write(data)
+      return res.end()
+    })
+  } else if (req.url == '/read') {
     //    res.end('ok');
 
-    fs.readFile("geraldo.txt", function (err, data) {
-      res.end(data.toString());
+    fs.readFile('geraldo.txt', function (err, data) {
+      res.end(data.toString())
       //toString() buffer converte para String
-    });
+    })
   } else {
-    fs.readFile("404.html", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      return res.end();
-    });
+    fs.readFile('404.html', function (err, data) {
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.write(data)
+      return res.end()
+    })
   }
-});
+})
 
 server.listen(port, hostname, () => {
-  console.log("server running in port :4000");
-});
+  console.log('server running in port :4000')
+})
 ```
 
 </details>
@@ -220,27 +220,27 @@ server.listen(port, hostname, () => {
 <summary>code</summary>
 
 ```js
-const http = require("http");
-const fs = require("fs"); //new permite manipular arquivos usando node
+const http = require('http')
+const fs = require('fs') //new permite manipular arquivos usando node
 
-const hostname = "127.0.0.1";
-const port = 3000;
+const hostname = '127.0.0.1'
+const port = 3000
 
 const server = http.createServer((req, res) => {
-  if (req.url == "/") {
-    fs.readFile("index.html", function (err, data) {
-      res.writeHead(200, { "Content-type": "text-html" });
-      res.write(data);
-      return res.end();
-    });
+  if (req.url == '/') {
+    fs.readFile('index.html', function (err, data) {
+      res.writeHead(200, { 'Content-type': 'text-html' })
+      res.write(data)
+      return res.end()
+    })
   } else {
-    return res.end();
+    return res.end()
   }
-});
+})
 
 server.listen(port, hostname, () => {
-  console.log("server is running!");
-});
+  console.log('server is running!')
+})
 ```
 
 </details>
@@ -251,44 +251,44 @@ server.listen(port, hostname, () => {
 <summary>Display</summary>
 
 ```js
-const http = require("http");
-const fs = require("fs");
-const hostname = "127.0.0.1";
-const port = 4000;
+const http = require('http')
+const fs = require('fs')
+const hostname = '127.0.0.1'
+const port = 4000
 
 const server = http.createServer((req, res) => {
-  if (req.url == "/") {
-    fs.readFile("index.html", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      return res.end();
-    });
-  } else if (req.url == "/page") {
-    fs.readFile("oi.html", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      return res.end();
-    });
-  } else if (req.url == "/work") {
-    fs.readFile("work.html", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      return res.end();
-    });
-  } else if (req.url == "/msn") {
-    res.end("Hello Dev");
+  if (req.url == '/') {
+    fs.readFile('index.html', function (err, data) {
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.write(data)
+      return res.end()
+    })
+  } else if (req.url == '/page') {
+    fs.readFile('oi.html', function (err, data) {
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.write(data)
+      return res.end()
+    })
+  } else if (req.url == '/work') {
+    fs.readFile('work.html', function (err, data) {
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.write(data)
+      return res.end()
+    })
+  } else if (req.url == '/msn') {
+    res.end('Hello Dev')
   } else {
-    fs.readFile("404.html", function (err, data) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      return res.end();
-    });
+    fs.readFile('404.html', function (err, data) {
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.write(data)
+      return res.end()
+    })
   }
-});
+})
 
 server.listen(port, hostname, () => {
-  console.log("server running in port :4000");
-});
+  console.log('server running in port :4000')
+})
 ```
 
 </details>
@@ -299,11 +299,11 @@ server.listen(port, hostname, () => {
 
 ```js
 function somar(n1, n2) {
-  console.log(n1 + n2);
+  console.log(n1 + n2)
 }
 setInterval(function () {
-  somar(5, 6);
-}, 2000);
+  somar(5, 6)
+}, 2000)
 ```
 
 # Nodemon
@@ -323,3 +323,106 @@ run live watch:
 ```js
 $ nodemon .\index.js
 ```
+
+# Saindo do Zero em Node.JS
+
+- mkdir create a directory:
+- cd <directory>
+- Use `code .` to open this `<directory in VSCODE>`
+
+## extentions
+
+`min Theme` theme
+`symbols` icones
+`ESLint` - busca por padrão no code eg: pontoVirgula
+
+Apenas o code abaixo vai gerar um erro de **import statement outside a module**
+
+```js
+import { createServer } from 'node:http'
+
+const server = createServer(() => {
+  console.log(`Hello`)
+})
+
+server.listen(3333)
+```
+
+Create a package.json: `npm init -y` and add: `"type": "module",`
+
+- Now run: `node server.js`
+  no browser não vai carregar nada, porém observer a mensagem do console no terminal
+
+```js
+import { createServer } from 'node:http'
+
+const server = createServer((resquest, response) => {
+  console.log(`Hello`)
+
+  response.write('Oi') //escreve a msn na tela
+  return response.end() //finaliza a requisicao, evitando o loop
+})
+
+server.listen(3333)
+```
+
+## watch a file:
+
+`node --watch .\server.js`
+
+Disable ExperimentalWarning: `node --watch --no-warnings .\server.js`
+
+## Custom commando
+
+Open package.json > scripts and add:
+` "dev": "node --watch --no-warnings server.js"`
+
+Final package file:
+
+```js
+{
+...
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node --watch --no-warnings server.js"
+  },
+....
+}
+```
+
+Now just run: `npm run dev` e concluimos a criação do servidor http nativo sem framework
+
+# Framework: fastify
+
+`npm install fastify`
+
+```js
+import { fastify } from 'fastify'
+
+const server = fastify()
+
+server.get('/', () => {
+  return 'Hello World'
+})
+
+server.get('/hello', () => {
+  return 'Hello gmapdev'
+})
+
+server.get('/node', () => {
+  return 'Hello gmapdev'
+})
+
+//works but is out of date: server.listen(3333)
+
+//new way:
+server.listen({
+  port: 3333,
+})
+```
+
+- `npm install postgres`
+  - https://github.com/porsager/postgres
+- create a Neon acc
+- `npm i dotenv -D`
