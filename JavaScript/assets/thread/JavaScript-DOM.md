@@ -142,6 +142,7 @@ console.log(document); //#document
 - document.documentElement // #rootElement #html
 - document.head);
 - document.body);
+- document.body.style.zoom="150%"
 - document.URL);
 - document.lastModified);
 - document.title; // currently value

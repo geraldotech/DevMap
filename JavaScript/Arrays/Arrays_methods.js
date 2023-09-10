@@ -5,13 +5,36 @@ Table of JavaScript String and Array Methods
 https://geraldodev.notion.site/Arrays-Strings-Methods-21cd45a06d6a4b1e83478c01d590ad26?pvs=4
 */
 
+/*
+Delcare a Array
+eg:1
+new Array(element1, element2)
+
+
+eg: 2
+const meuarr2 = new Array(5);
+meuarr2[0] = 1;
+console.log(meuarr2);
+
+const zeros = new Array(0, 0, 0, 0);
+console.log(zeros);
+
+
+eg: 3
+Array(....)
+
+eg: 4
+[]
+
+*/
+
 //🟢 1 - #Strings #Arrays #Length 
 const x = ['BMW','GOL','LATAM','AMERICAN','BRAZIL','RAPPI'];
 
-//📌display #length of Array direct
+//📌 display #length of Array direct
 console.log(x.length);
 
-//📌ou declando varivel
+//📌 declando varivel
 let tamanho = x.length;
 console.log(tamanho);
 
@@ -27,10 +50,10 @@ function check(){
 //👉 Ternary
     console.log(["12345678"].length > 8 ? 'maior que 8' : 'menor que 8');
 
-//📌size if a Array string
+//📌 size if a Array string
     console.log('Array 0 tem ', x[0].length);
 
-//📌mostrando index de um determinado value
+//📌 mostrando index de um determinado value
 const arr = ["A","B","A","C","B","Z"];
 for(let i = 0; i < arr.length; i++){
   if(arr[i] == "A"){
@@ -44,7 +67,6 @@ for(let i = 0; i < arr.length; i++){
     console.log(arr[i], i);    // Brava 1, Bravo 2
   }
 }
-
 
 //🔰Strings in JavaScript is that we can access the characters in a string using its index
 // https://www.freecodecamp.org/news/javascript-split-how-to-split-a-string-into-an-array-in-js/
@@ -65,12 +87,12 @@ console.log(str[str.length -1]);
 
 var text = 'uololooo';
 
-//📌With ES6 - Destructing
+//📌 ES6 - Destructing
 [...text].forEach((c) => {
   console.log(c)
 });
 
-//📌With of operator
+//📌 of operator
 for(const d of text){
   console.log(d);
 }
@@ -82,51 +104,11 @@ for (var x = 0, c=''; c = text.charAt(x); x++) {
 // https://stackoverflow.com/questions/1966476/how-can-i-process-each-letter-of-text-using-javascript
 
 /* [=============================================================================]
-🟢 2 - #substring  extrair uma sequência de caracteres de uma string. returns the substring.
+🟢 2 - 
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries alternative to forEach in Exercicio_3.md Question: 5
 
-substring(indexStart, indexEnd);
 */
-
-//📌e.g usando o indexOf para auxiliar no parametro do substring
-
-let str = "finding substring in string";
-let ind = str.indexOf("sub");
-console.log(ind); //8
-console.log(str.substring(8)) //  substring in string
-
-//📌e.g usando o lastIndexOf para auxiliar no parametro do substring
-
-const mystr = "Did you hear my covert";
-console.log(mystr.lastIndexOf("co")); //16
-
-//📌já notando as direnças entre substring e substr começando em 0 mesmo resultado
-console.log(mystr.substring(0, 15)); // Did you hear my 
-console.log(mystr.substr(0, 15)); // Did you hear my 
-
-/*
-The difference is in the second argument
-
-📌 substring - second argument is the index to stop at (but not include),  
-aceita apenas o end negativo contudo definindo 0 start positivo
-
-📌 substr - second argument  is the maximum length to return, accepts a negative starting position or 
-
-🚩 MDN considers substr legacy. This feature is no longer recommended.
-https://tinyurl.com/mzp65jky
-*/
-
-console.log(`/blog`.substr(2)); // log   - Get A partir desse ponto
-console.log(`/blog`.substring(2)); // log   - Get A partir desse ponto
-console.log("Geraldo".substring(1, 5)); //eral
-console.log("Geraldo".substr(1, 5)); //erald
-console.log("Geraldo".substring(0, 5)); //eral
-console.log("Geraldo".substr(-4)); //Geraldo -4 letras da direita para esquerda => aldo
-console.log("JavaScript".substr(-6)); // Script
-console.log("Feriado".substr(-2)); // /do
-console.log("JavaScript".substr(-5, 1)); // c
-console.log("JavaScript".substr(-3, 2)); // ip
-console.log("JavaScript".substring(2 ,-1)); // Ja
-
 //🟢 3 - Display all array using for
 for(i = 0; i < x.length; i++){
     console.log(x[i]);
@@ -161,8 +143,6 @@ function ordem(a, b){
 console.log(arr.sort(ordem));
 
 
-
-
 //🟢 5 - The #shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
 const x = ['A', ' B', ' C',' D',' E'];
 const first = x.shift();
@@ -195,7 +175,7 @@ console.log(n);
  fruits.reverse();
  
 /* [=============================================================================]
- 10🟢 - #includes - boolean returning true or false as appropriate - Case-sensitivity
+ 🟢 10 -  #includes - boolean returning true or false as appropriate - Case-sensitivity
 
  - funciona com arrays syntax: includes(searchElement, fromIndex)
 
@@ -345,10 +325,7 @@ console.log(ranks.findIndex((val, ind) => {
 // shorthand 
 console.log(ranks.findIndex((val, ind) => ind > 2 && val === 7)); //5
 
-
-/*
-indexOf and FindIndex
-*/
+/* indexOf and FindIndex */
 
 const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
 console.log(fruits.indexOf("blueberries"));// 3
@@ -363,7 +340,7 @@ function bb(val){
 }
 
 /*[=============================================================================]
-🟢13 - #filter
+🟢13 - # filter
 Doesn’t change the original array. Faz uma shallow copy do que é encontrado
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 Como o nome já diz é um filtro e assim se faz, filtrando todos os elementos, requer  função
@@ -950,8 +927,6 @@ console.log("".split()); // [ '' ]
 
 // 🌐usar regex e Destructuring? https://www.freecodecamp.org/news/javascript-split-how-to-split-a-string-into-an-array-in-js/
 
-
-
 /* [=============================================================================]
 🟢 20 - #slice  - slice(start, end not included);
 🔰 fatiar - extracts a section returns it as a new string
@@ -1015,64 +990,18 @@ arr_all = arr.concat(arr2);
 console.log(arr_all);
 
 /* [=============================================================================]
-🟢 //23 - #search()
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
-
-
-/* [=============================================================================]
-🟢 24 - #repeat
-*/ 
-const lt = "Geraldo";
-console.log("hello", lt.repeat(10));
-
-/* [=============================================================================]
-🟢 25 - #startsWith() #endsWith() - for Strings
-*/ 
-console.log("Geraldo".startsWith("G")); //true
-console.log("Geraldo".endsWith("G")); //false
-//📌não apenas 1 letra
-console.log("Geraldo".startsWith("Ger")); //true
-console.log("Geraldo".endsWith("aldo")); //true
-
-//📌todas as letras
-console.log("Geraldo".startsWith("Geraldo")); //true
-console.log("Geraldo".endsWith("Geraldo")); //true
-
-/* [=============================================================================]
-🟢 26 - #forEach
+🟢 23 - #forEach
 */ 
 //checkout in https://github.com/geraldotech/DevMap/blob/main/JavaScript/forEach.js
 
-/*______________________________["RESUMO"]__________________________________*/
-// #filter, #includes, #some, #every, #indexOf, #find, #forEach
-
-const person = [
-  { nome: "GERALDO", idade: 29, Estado: "RJ" },
-  { nome: "FELIPE", idade: 25, Estado: "AL" },
-  { nome: "ISABELLA", idade: 5, Estado: "RJ" },
-  { nome: "CAMILLY", idade: 10, Estado: "SP" },
-  { nome: "ISA", idade: 28, Estado: "RS" },
-  { nome: "Philips", idade: 28, Estado: "RS" },
-];
-
-console.log('some',person.some(el => el.nome == "GERALDO"));// existe alguém chamado GERALDO? true
-console.log('some',person.some(el => el.Estado === "SP")); // existe/alguém de SP? true
-console.log('filter',person.filter(el => el.Estado === "RJ")); //(2) [{…}, {…}]
-console.log('find', person.find(value => value.Estado === "RJ")); // get only 1 results even tiver mais
-console.log('every',person.every(el => el.Estado === "SP")); // todos são de SP? false
-const busca = person.filter(val => val.idade == 28);
-console.log(busca); // ISA , Philips
-person.forEach((el, ind) => console.log(ind)); // 1,2,3,4
-
 /*-*[=============================================================================]
-🟢 27 #toString, toFixed, toPrecision, toUpperCase, toLowerCase 
+🟢 24 #toString, toFixed, toPrecision, toUpperCase, toLowerCase 
 
 📌checkout README https://github.com/geraldotech/DevMap/tree/main/JavaScript
 *-*/
 
 /* [=============================================================================]
-🟢 28 - #lastIndexOf
+🟢 25 - #lastIndexOf
  returns the index of the last occurrence of the specified substring
 */ 
 
@@ -1088,42 +1017,41 @@ console.log(paragraph.lastIndexOf("lazy?")); // 78
 console.log(paragraph.indexOf("lazy?")); // 78
 
 /* [=============================================================================]
-🟢 29 - #match() 
+🟢 26 - #match() 
 https://ricardo-reis.medium.com/o-tipo-string-no-javascript-e3fb621856d1
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match
 */
+
 /* [=============================================================================]
-🟢 30 - #trim() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+Modificar Array sem alterar o original
+Novos methods #with, #toSpliced e ainda tem reversed and sorted
+Via https://www.youtube.com/watch?v=3CBD5JZJJKw&ab_channel=WebDevSimplified 
+🟢 27 - #with - faz um novo Array com modificacoes no index indicado, sem alterar o original */
 
-/* 🟢 31 - #charAt() 
-Get the first character in a string:
- */
+const people = ["Geraldo", "Filho", "Felipe"];
+const copy = people.with(0, "Novo");
+console.log(people);
+console.log(`copy`, copy);
 
-// 📌Pegar uma stringe deixar UpperCase()
+const keys = [1, 2, 3, 4, 5];
+const copy2 = people.with([0, 1], "Dell");
+console.log(`copy2`, copy2);
 
-const x = `/blog`;
-/* charAt(1) = B 
-.toLocaleUpperCase() = Maiusculo
-+ concatenar com x.substr(2) 
-*/
-console.log(x.charAt(1).toLocaleUpperCase() + x.substr(2)); // Blog
+const arr4 = [1, 2, 3, 4, 5];
+console.log(arr4.with(2, 32).map((v) => v ** 2)); //  [1, 4, 1024, 16, 25]
+console.log(arr4); // [1, 2, 3, 4, 5]
 
-//👉First Letter Capitalize
-//https://flexiple.com/javascript/javascript-capitalize-first-letter/
+with (10) {
+  console.log(`toString`, toString());
+}
 
-
-//📌Map a Array
-const cat = ["Developer", "amazon", "google", "android"];
-const cat2 = cat.map((el) => el.charAt(0).toLocaleUpperCase() + el.slice(1));
-
-console.log(`cat2`, cat2); // ['Developer', 'Amazon', 'Google', 'Android']
-//📌String
-const str = `geraldo`;
-const str2 = str.charAt(0).toLocaleUpperCase() + str.slice(1);
-
-console.log(`str2`, str2); //Geraldo
 /* [=============================================================================]
-*/
-
+🟢 28 - #toSpliced
+splited modificao original quando toSpliced returns a new array with some elements */
+const num = [1, 2, 3, 4, 5];
+const copySpliced = num.toSpliced(0, 2, "2023");
+console.log(`original`, num);
+console.log(`copySpliced`, copySpliced);
 
 
 /*-*[===========================MIX EXAMPLES======================================]*-*/
@@ -1233,7 +1161,26 @@ console.log(chars.reduce((acc, char) => acc.includes(char) ? acc : [...acc, char
 const estados = ["GO","AL","AL","ES", "RJ","SP","RJ"];
 console.log(estados.reduce((val, ind) => val.includes(ind) ? val: [...val, ind], []));
 
+/*______________________________["RESUMO"]__________________________________*/
+// #filter, #includes, #some, #every, #indexOf, #find, #forEach
 
+const person = [
+  { nome: "GERALDO", idade: 29, Estado: "RJ" },
+  { nome: "FELIPE", idade: 25, Estado: "AL" },
+  { nome: "ISABELLA", idade: 5, Estado: "RJ" },
+  { nome: "CAMILLY", idade: 10, Estado: "SP" },
+  { nome: "ISA", idade: 28, Estado: "RS" },
+  { nome: "Philips", idade: 28, Estado: "RS" },
+];
+
+console.log('some',person.some(el => el.nome == "GERALDO"));// existe alguém chamado GERALDO? true
+console.log('some',person.some(el => el.Estado === "SP")); // existe/alguém de SP? true
+console.log('filter',person.filter(el => el.Estado === "RJ")); //(2) [{…}, {…}]
+console.log('find', person.find(value => value.Estado === "RJ")); // get only 1 results even tiver mais
+console.log('every',person.every(el => el.Estado === "SP")); // todos são de SP? false
+const busca = person.filter(val => val.idade == 28);
+console.log(busca); // ISA , Philips
+person.forEach((el, ind) => console.log(ind)); // 1,2,3,4
 
 /*
 _______________________🟢EXERCICIOS🟢_____________________________
@@ -1284,13 +1231,13 @@ console.log(api.filter(function(val, index){
     }
 }));
 
-// 🔰alternative arrow
+// 🔰 alternative arrow
 console.log(api.filter((el, ind) => { if(ind > 0 ) return el.endsWith("o")}));
 
-// 🔰alternative &&
+// 🔰 alternative &&
 console.log(api.filter((val,index) => index > 0 && val.endsWith("o")))
 /*-*[=============================================================================]*-*/
-// 👉SUPER DICA: alternative indicando o own value
+// 👉 SUPER DICA: alternative indicando o own value
 console.log(api.filter(val => {
   if(val != "Geraldo") return val.endsWith("o");
 }));
