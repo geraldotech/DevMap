@@ -9,7 +9,7 @@
 - [Pointer Events](#pointerevents)
   - [target custom attr data](#target-custom-attr-data)
   - [target vs currenttarget](#target-vs-currenttarget)
-  - [Contains (e.target)](#contains "e.target")
+  - [Contains (e.target)](#contains 'e.target')
   - [currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
 - <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">Hoisting</a>
 - [Web Components](./Web-Components)
@@ -26,7 +26,7 @@
     - 1 [createAttr,getAttr,removeAttr](./create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
     - 2 [hasAttribute_setAttribute](./hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
     - 3 [setAttribute_vs_classList](./setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
-    - 4 [createElements_add_delete-App- TodoList](./createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript//assets/thread/createElements_add_delete.html)
+    - 4 [createElements_add_delete-App- TodoList](./createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
     - 5 [createElements_add_delete_template_literal_add_assigment](./createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/createElements_add_delete_template_literal_add_assigment.html)
 
     </details>
@@ -58,30 +58,30 @@
   - ### onclick
 
 ```js
-<form name="credito">credito</form>;
+;<form name="credito">credito</form>
 
 document.credito.onclick = function (event) {
-  console.log(event);
-};
+  console.log(event)
+}
 
 //onclick Event and target
 document.credito.onclick = function (event) {
-  console.log(event.target); // <form name="credito">credito</form>
-};
+  console.log(event.target) // <form name="credito">credito</form>
+}
 // call fun with addEvent...
-input.addEventListener("click", handler);
+input.addEventListener('click', handler)
 
 // call fun with on[event]...
-input.onclick = handler;
+input.onclick = handler
 
 // call fun and get Obj event[e]
-btn.onclick = headerx;
+btn.onclick = headerx
 
 function headerx() {
-  console.log(`click`, event);
+  console.log(`click`, event)
 }
 function headerx(e) {
-  console.log(`click`, e);
+  console.log(`click`, e)
 }
 ```
 
@@ -169,27 +169,27 @@ document.addEventListener("mousemove", function(event){
 - ### addEventListener with target
 
 ```js
-<p id="bar">TypeScript</p>;
+;<p id="bar">TypeScript</p>
 
 //👉addEventListener: click -  target
-document.getElementById("bar").addEventListener("click", function (event) {
-  console.log(event.target); //  <p id="bar">TypeScript</p>
-});
+document.getElementById('bar').addEventListener('click', function (event) {
+  console.log(event.target) //  <p id="bar">TypeScript</p>
+})
 
 //👉addEventListener: input - captura o input em realtime
-document.querySelector("input").addEventListener("input", function (e) {
-  console.log(e);
-});
+document.querySelector('input').addEventListener('input', function (e) {
+  console.log(e)
+})
 //👉addEventListener: change
 document
   .querySelector("input[type='checkbox']")
-  .addEventListener("change", function (e) {
-    console.log(e);
-  });
+  .addEventListener('change', function (e) {
+    console.log(e)
+  })
 
-console.log(event.target.id); //bar
-console.log(event.target.getAttribute("data")); //eu
-console.log(event.target.value); //only for input radio/checkbox
+console.log(event.target.id) //bar
+console.log(event.target.getAttribute('data')) //eu
+console.log(event.target.value) //only for input radio/checkbox
 ```
 
 ## [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
@@ -199,13 +199,13 @@ A documentação diz que o event `fires` when o HTML foi completamente loaded an
 - Basic usage
 
 ```js
-window.addEventListener("DOMContentLoaded", function () {
-  console.log(this);
-});
+window.addEventListener('DOMContentLoaded', function () {
+  console.log(this)
+})
 
-document.addEventListener("DOMContentLoaded", function () {
-  console.log(this);
-});
+document.addEventListener('DOMContentLoaded', function () {
+  console.log(this)
+})
 ```
 
 - Então usando DOMContentLoaded podemos add um conteúdo na DOM que sem defer retornaria um erro. [live example](https://gmapdev.netlify.app/docs_demo/DOMContentLoaded/eg1/ContentLoaded.html)
@@ -231,37 +231,36 @@ content não precisa de defer pq estamos usando `document.addEventListener("DOMC
 
 //3
 window.onload = function () {
-  console.warn("window loaded");
-};
+  console.warn('window loaded')
+}
 
 //2
 document.onreadystatechange = function (e) {
-  console.warn("document.onready", document.readyState);
-  console.log(document.readyState == "complete");
-};
+  console.warn('document.onready', document.readyState)
+  console.log(document.readyState == 'complete')
+}
 
 //1
-document.addEventListener("DOMContentLoaded", () => {
-  console.warn("DOM Loaded");
-});
+document.addEventListener('DOMContentLoaded', () => {
+  console.warn('DOM Loaded')
+})
 ```
 
 # PointerEvents
 
 ```js
-<p id="bar">TypeScript</p>;
+;<p id="bar">TypeScript</p>
 
-document.getElementById("bar").addEventListener("click", function (event) {
-  console.log(event); //check output on console
-});
+document.getElementById('bar').addEventListener('click', function (event) {
+  console.log(event) //check output on console
+})
 
 //👉PointerEvent usando `var` não precisa do event(e).target pode chamar a const direto
-
-<p id="bar">TypeScript</p>;
-const p = document.getElementById("bar");
-p.addEventListener("click", function (e) {
-  console.log(p.id); //bar
-});
+;<p id="bar">TypeScript</p>
+const p = document.getElementById('bar')
+p.addEventListener('click', function (e) {
+  console.log(p.id) //bar
+})
 ```
 
 - Target custom Attr
@@ -273,40 +272,40 @@ p.addEventListener("click", function (e) {
 
 ```js
 //👉 Target "data";
-<p id="bar" data="eu">
+;<p id="bar" data="eu">
   TypeScript
-</p>;
+</p>
 
 //js
-const p = document.querySelector("p");
+const p = document.querySelector('p')
 
-console.log(p.getAttribute("data")); //eu
-console.log(e.target.getAttribute("data")); //eu
-console.log(e.target.attributes.data.value); //get value of Attr data
+console.log(p.getAttribute('data')) //eu
+console.log(e.target.getAttribute('data')) //eu
+console.log(e.target.attributes.data.value) //get value of Attr data
 
 //👉 e.Target "itemtype";
-<li class="menu" itemtype="tip">
+;<li class="menu" itemtype="tip">
   Steak
-</li>;
-console.log(e.target.attributes.itemtype.value); //tip
+</li>
+console.log(e.target.attributes.itemtype.value) //tip
 ```
 
 - Target vs currentTarget
   <a id="target-vs-currenttarget"></a>
 
 ```js
-<ul>
+;<ul>
   <li>A</li>
   <li>B</li>
   <li>C</li>
   <li>Z</li>
-</ul>;
+</ul>
 
-const el = document.querySelector("ul");
-el.addEventListener("click", function (e) {
-  console.log(e.currentTarget); // <ul>
-  console.log(e.target); // <li>
-});
+const el = document.querySelector('ul')
+el.addEventListener('click', function (e) {
+  console.log(e.currentTarget) // <ul>
+  console.log(e.target) // <li>
+})
 ```
 
 - Contains
@@ -328,16 +327,16 @@ el.addEventListener("click", function (e) {
   ```
 
   ```js
-  var mydiv = document.getElementById("mydiv");
+  var mydiv = document.getElementById('mydiv')
 
-  document.addEventListener("click", function (e) {
-    var inside = mydiv.contains(e.target);
+  document.addEventListener('click', function (e) {
+    var inside = mydiv.contains(e.target)
     if (inside) {
-      alert("click inside");
+      alert('click inside')
     } else {
-      alert("click outsite");
+      alert('click outsite')
     }
-  });
+  })
   ```
 
 # Learn DOM Manipulation
@@ -347,10 +346,10 @@ el.addEventListener("click", function (e) {
 Todo ID declarado no document é elevado ao scopo global, então é possível chamar diretamente:
 
 ```js
-<div id="fibra">Speed</div>;
+;<div id="fibra">Speed</div>
 
-console.log(window.fibra); // div#fibra
-console.log(fibra); // div#fibra - todos os outros objetos acessíveis pelo espaço global
+console.log(window.fibra) // div#fibra
+console.log(fibra) // div#fibra - todos os outros objetos acessíveis pelo espaço global
 ```
 
 apesar de funcionar prefira a boa pratica na page README em <ins>getElements and querySelector</ins>
@@ -358,51 +357,63 @@ apesar de funcionar prefira a boa pratica na page README em <ins>getElements and
 //👉 Get html content
 
 ```js
-<p id="foo">JavaScript</p>;
-const p = document.getElementById("foo");
-console.log(p); //check output on console
+;<p id="foo">JavaScript</p>
+const p = document.getElementById('foo')
+console.log(p) //check output on console
 ```
 
 - ### createElement, createTextNode, textContent, append vs appendChild
 
   <a id="domcreateel"></a>
 
-  ```js
-  //Images
-  //createElements
-  div = document.createElement("div");
-  img = document.createElement("img");
-  img.setAttribute("src", "http://smartdicastutorial.appspot.com/images/6d88733c461.jpg");
-  img.setAttribute("alt", "img test")
-  //appendChild
-  div.appendChild(img)
-  //appendChild body
-  document.body.appendChild(div)
-  # Images 2 Template Alternativ
-  const btn = document.querySelector("button");
-  btn.onclick = function(){
-  re.innerHTML += `<img src="http://smartdicastutorial.appspot.com/images/6d88733c461.jpg"/>`
+```js
+// [createElement] - create div and img
 
-  //onclick classList
-  document.addEventListener('click', function(){
-  img.classList.add('meuimg');
-  })
-  # Images
-  //create img -loop-img-button-click
-  //html
-  <button onclick=
+
+const div = document.createElement('div')
+const img = document.createElement('img')
+img.setAttribute(
+'src',
+'http://smartdicastutorial.appspot.com/images/6d88733c461.jpg'
+)
+img.setAttribute('alt', 'img test')
+// [appendChild]
+div.appendChild(img)
+
+// appendChild body
+document.body.append(div)
+
+// Images 2 Template Alternative click to create
+const btn = document.querySelector('button')
+btn.onclick = function () {
+root.innerHTML += `<img src="http://smartdicastutorial.appspot.com/images/6d88733c461.jpg"/>`
+}
+
+//onclick classList
+document.addEventListener('click', function(){
+img.classList.add('meuimg');
+})
+
+# Images
+
+//create img -loop-img-button-click
+//html
+<button onclick=
     "show_image('https://www.w3schools.com/jsref/klematis.jpg',
                 500,
                 500,
                 'Google Logo');">Add Google Logo</button
-  //js
-  function show_image(src, width, height, alt) {
-  var img = document.createElement("img");
-  img.src = src;
-  img.width = width;
-  img.height = height;
-  img.alt = alt
-        // This next line will just add it to the <body> tag
-        document.body.appendChild(img)
-  }
-  ```
+//js
+function show_image(src, width, height, alt) {
+var img = document.createElement("img");
+img.src = src;
+img.width = width;
+img.height = height;
+img.alt = alt
+// This next line will just add it to the <body> tag
+document.body.appendChild(img)
+}
+
+```
+
+[MORE in Learn-DOM-Manipulation](https://github.com/geraldotech/DevMap/blob/main/JavaScript/assets/thread/Learn-DOM-Manipulation/main.js)
