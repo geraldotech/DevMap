@@ -367,8 +367,24 @@ console.log(p) //check output on console
   <a id="domcreateel"></a>
 
 ```js
-// [createElement] - create div and img
+https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment
+// const fragment = new DocumentFragment()
 
+// fragment
+const ul = document.getElementById("ul"); // assuming ul exists
+
+const fragment = document.createDocumentFragment();
+const browsers = ["Firefox", "Chrome", "Opera", "Safari"];
+
+browsers.forEach((val) => {
+    const li = document.createElement('li')
+    li.textContent = val
+    fragment.appendChild(li)
+})
+
+ul.appendChild(fragment)
+
+// [createElement] - create div and img
 
 const div = document.createElement('div')
 const img = document.createElement('img')
@@ -402,7 +418,7 @@ img.classList.add('meuimg');
     "show_image('https://www.w3schools.com/jsref/klematis.jpg',
                 500,
                 500,
-                'Google Logo');">Add Google Logo</button
+                'Google Logo');">Add Google Logo</button>
 //js
 function show_image(src, width, height, alt) {
 var img = document.createElement("img");
@@ -413,6 +429,43 @@ img.alt = alt
 // This next line will just add it to the <body> tag
 document.body.appendChild(img)
 }
+
+
+// Using cloneNode
+const parent = document.createElement('div')
+
+const p = document.createElement('p')
+p.textContent = 'one'
+const p2 = p.cloneNode(true)
+const p3 = p.cloneNode(true)
+
+p2.textContent = 'Hey soul'
+p3.textContent = 'Hey soul 2'
+
+parent.append(p, p2, p3)
+document.body.appendChild(parent)
+
+
+// function to append
+//https://dev.to/kiumad/can-you-appendchild-same-element-multiple-times-in-js-probably-not-4j
+const parent = document.createElement('div')
+const txt = '<p></p>'
+
+function appendChildMultiple(parent){
+    const ptag2 = document.createElement('p')
+    ptag2.innerText = 'Adicionado'
+    return parent.appendChild(ptag2)
+}
+
+function appendChildMultiple2(parent){
+    const ptag = document.createElement('p')
+    ptag.textContent = parent.textContent
+    return parent.appendChild(ptag)
+}
+
+appendChildMultiple(parent)
+appendChildMultiple2(parent)
+document.body.append(parent)
 
 ```
 
