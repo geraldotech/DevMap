@@ -3,11 +3,11 @@
 - [DOM events](#dom---events)
   - [onclick](#onclick)
   - [addEventListener](#addeventlistener)
-  - [addEventListener-with-target](#addeventlistener-with-target)
+  - [addEventListener and event.target](#addeventlistener-with-target)
   - [DOMContentLoaded](#domcontentloaded)
-  - [onload-vs-onreadystatechange-vs-domcontentloaded](#onload-vs-onreadystatechange-vs-domcontentloaded)
+  - [onload vs onreadystatechange vs domcontentloaded](#onload-vs-onreadystatechange-vs-domcontentloaded)
 - [Pointer Events](#pointerevents)
-  - [target custom attr data](#target-custom-attr-data)
+  - [target custom attribute data](#target-custom-attr-data)
   - [target vs currenttarget](#target-vs-currenttarget)
   - [Contains (e.target)](#contains 'e.target')
   - [currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
@@ -21,13 +21,13 @@
   - [getElement[id,class,tagName,byName] and QuerySelector](getElements_idClasstagNameQuerySelector.md)
 
     <details>
-    <summary>getAttributes,createElement ,set ,has ,remove...classList.add.contains</summary>
+    <summary>getAttributes, createElement ,set ,has ,remove...classList.add.contains</summary>
 
-    - 1 [createAttr,getAttr,removeAttr](./create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
-    - 2 [hasAttribute_setAttribute](./hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
+    - 1 [createAttribute, getAttribute, removeAttribute](./create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
+    - 2 [hasAttribute / setAttribute](./hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
     - 3 [setAttribute_vs_classList](./setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
-    - 4 [createElements_add_delete-App- TodoList](./createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
-    - 5 [createElements_add_delete_template_literal_add_assigment](./createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/createElements_add_delete_template_literal_add_assigment.html)
+    - 4 [createElements_add_delete-App - TodoList](./createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
+    - 5 [createElements add delete template literal add assigment](./createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/createElements_add_delete_template_literal_add_assigment.html)
 
     </details>
 
@@ -166,7 +166,7 @@ document.addEventListener("mousemove", function(event){
 });
 ```
 
-- ### addEventListener with target
+- ### addEventListener with event.target
 
 ```js
 ;<p id="bar">TypeScript</p>

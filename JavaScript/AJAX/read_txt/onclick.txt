@@ -1,1 +1,1 @@
-Ajax text
+<h1>Ajax text</h1>

@@ -11,17 +11,17 @@ is not a programming language. AJAX is a technique for accessing web servers fro
 - responseText
 - responseXML
 
-# Minimalist Ajax request
+# Minimalist request
 
 ```js
 const ajax = new XMLHttpRequest()
 ajax.open('GET', '../db.json')
-ajax.send()
 ajax.onload = function () {
   console.log(this) //returns a object check consome
   console.log(this.response)
   console.log(this.responseText)
 }
+ajax.send()
 ```
 
 # onreadystatechange()
@@ -33,7 +33,6 @@ ajax.onload = function () {
 ```js
 const httpRequest = new XMLHttpRequest()
 httpRequest.open('GET', '../src/ajax_info.txt')
-httpRequest.send()
 httpRequest.onreadystatechange = function () {
   console.log('ready', this.readyState)
   console.log('status', this.status)
@@ -43,6 +42,7 @@ httpRequest.onreadystatechange = function () {
     }
   }
 }
+httpRequest.send()
 
 // only status
 const ajax = new XMLHttpRequest()
