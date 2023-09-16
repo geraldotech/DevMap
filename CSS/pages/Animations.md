@@ -87,6 +87,21 @@ h1 {
     </p>
 ```
 
+- 0% to 100%
+
+```css
+@keyframes animacao {
+  0% {
+    opacity: 0;
+    /* font-size: 3rem; */
+  }
+  100% {
+    opacity: 1;
+    font-size: 1rem;
+  }
+}
+```
+
 </details>
 
 ## transition :hover
