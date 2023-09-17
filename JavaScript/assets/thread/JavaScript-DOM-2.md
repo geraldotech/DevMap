@@ -25,7 +25,7 @@
 
     - 1 [createAttribute, getAttribute, removeAttribute](./create_get_remove_Attribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/create_get_remove_Attribute.html)
     - 2 [hasAttribute / setAttribute](./hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
-    - 3 [setAttribute_vs_classList](./setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
+    - 3 [setAttribute_vs_classList and toggle()](./setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
     - 4 [createElements_add_delete-App - TodoList](./createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
     - 5 [createElements add delete template literal add assigment](./createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/createElements_add_delete_template_literal_add_assigment.html)
 
