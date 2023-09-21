@@ -16,35 +16,35 @@
 <div id="app">{{ greeting }}</div>
 ```
 
-- **basic script**
+- **basic script, but prefer the import default** - [https://vuejs.org/guide/quick-start.html#using-vue-from-cdn](https://vuejs.org/guide/quick-start.html#using-vue-from-cdn)
 
 ```js
 Vue.createApp({
   data() {
     return {
-      greeting: "Hello, World!",
-    };
+      greeting: 'Hello, World!',
+    }
   },
-}).mount("#app");
+}).mount('#app')
 // .mount(app); //works too
 // .mount(document.body); works too tks VueLoader
 
 //👉 v2 https://vuejs.org/guide/essentials/application.html
-const { createApp } = Vue;
+const { createApp } = Vue
 const app = createApp({
   data() {
-    return {};
+    return {}
   },
-}).mount("#app");
+}).mount('#app')
 //👉 v3
 const vm = Vue.createApp({
   data() {
     return {
-      greeting: "Bem Vindo",
-    };
+      greeting: 'Bem Vindo',
+    }
   },
-  template: "{{greeting}}",
-}).mount("#root");
+  template: '{{greeting}}',
+}).mount('#root')
 ```
 
 Error: production build (\*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
@@ -202,17 +202,17 @@ Você pode ou não declarar uma const, o resultado foi o mesmo:
 const meuApp = {
   data() {
     return {
-      name: "gmapdev",
-      input_name: "",
-    };
+      name: 'gmapdev',
+      input_name: '',
+    }
   },
   methods: {
     meuFormulario() {
-      this.name = this.input_name;
+      this.name = this.input_name
     },
   },
-};
-Vue.createApp(meuApp).mount(app);
+}
+Vue.createApp(meuApp).mount(app)
 
 /* Vue.createApp({
   data(){
