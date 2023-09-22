@@ -16,7 +16,7 @@
 <div id="app">{{ greeting }}</div>
 ```
 
-- **basic script, but prefer the import default** - [https://vuejs.org/guide/quick-start.html#using-vue-from-cdn](https://vuejs.org/guide/quick-start.html#using-vue-from-cdn)
+- examples basic script
 
 ```js
 Vue.createApp({
@@ -36,6 +36,7 @@ const app = createApp({
     return {}
   },
 }).mount('#app')
+
 //👉 v3
 const vm = Vue.createApp({
   data() {
@@ -45,6 +46,62 @@ const vm = Vue.createApp({
   },
   template: '{{greeting}}',
 }).mount('#root')
+```
+
+## 👉 v4 import default - [https://vuejs.org/guide/quick-start.html#using-vue-from-cdn](https://vuejs.org/guide/quick-start.html#using-vue-from-cdn)
+
+```js
+<script type="module">
+      import {
+        createApp,
+        ref,
+      } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+      createApp({
+        setup() {
+          const message = ref('Hello Vue!')
+          return {
+            message,
+          }
+        },
+        template: '<p>Hello</p>',
+      }).mount('#app')
+    </script>
+```
+
+### const e Vue.createApp
+
+Você pode ou não declarar uma const, o resultado será o mesmo:
+
+```js
+const meuApp = {
+  data() {
+    return {
+      name: 'gmapdev',
+      input_name: '',
+    }
+  },
+  methods: {
+    meuFormulario() {
+      this.name = this.input_name
+    },
+  },
+}
+Vue.createApp(meuApp).mount(app)
+
+Vue.createApp({
+  data() {
+    return {
+      name: 'Geraldo',
+      input_name: '',
+    }
+  },
+  methods: {
+    meuForm() {
+      this.name = this.input_name
+    },
+  },
+}).mount('#app')
 ```
 
 Error: production build (\*.prod.js) when deploying for production?: `https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js`
@@ -194,42 +251,6 @@ depois fazer o form com v-model e um output
 </form>
 ```
 
-Você pode ou não declarar uma const, o resultado foi o mesmo:
-
-- const e Vue.createApp
-
-```js
-const meuApp = {
-  data() {
-    return {
-      name: 'gmapdev',
-      input_name: '',
-    }
-  },
-  methods: {
-    meuFormulario() {
-      this.name = this.input_name
-    },
-  },
-}
-Vue.createApp(meuApp).mount(app)
-
-/* Vue.createApp({
-  data(){
-    return {
-      name: "Geraldo",
-      input_name: "",
-    }
-  },
-  methods: {
-    meuForm(){
-      this.name = this.input_name;     
-    }
-}
-  }).mount('#app');
- */
-```
-
 submitForm é referente ao v-on:click
 ` <input type="submit" value="Enviar" v-on:click="submitForm">`
 
@@ -246,7 +267,7 @@ methods: {
       this.name = this.input_name;
     }
 
-//direct in form
+// direct in form
    <form action="" @submit.prevent="enviar">
 
  methods: {
@@ -255,7 +276,7 @@ methods: {
     }
     }
 
-//more complex
+// more complex
   <form action="" @submit="enviar($event)">
 
    methods: {
