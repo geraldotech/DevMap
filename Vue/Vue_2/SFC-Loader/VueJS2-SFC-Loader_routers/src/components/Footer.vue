@@ -1,11 +1,6 @@
 <template>
   <div class="parent">
-    <section class="child">
-      <h1>Welcome to my Website</h1>
-    </section>
-    <section>
-      <h1>An other section</h1>
-    </section>
+    <p>Footer</p>
   </div>
 </template>
 <script>
@@ -21,7 +16,7 @@ module.exports = {
 html {
   font-size: 150%;
 }
-.parent .child {
+.parent ::v-deep .child {
   color: rgb(197, 0, 0);
 }
 

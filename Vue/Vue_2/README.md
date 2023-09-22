@@ -25,7 +25,7 @@ https://cdn.jsdelivr.net/npm/vue/dist/vue.js
 esm.browser - defina type module e use direto no main.js
 
 ```js
-import Vue from "https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.esm.browser.js";
+import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.esm.browser.js'
 ```
 
 ### Prodution:
@@ -40,36 +40,36 @@ import Vue from "https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.esm.browser.js
 
 ```js
 const app = new Vue({
-  el: "#app",
+  el: '#app',
   data: {
-    message: "Geraldo",
+    message: 'Geraldo',
   },
-});
+})
 
 //v1 simpler usando el
 new Vue({
-  el: "#app",
-});
+  el: '#app',
+})
 
 //v2 usando $mount
 new Vue({
   data: {},
-}).$mount("#app");
+}).$mount('#app')
 
 //v3 using templates to show simple Hello, sem usar data()
 const vm = new Vue({
-  el: "#app",
-  template: "<p>Hello</p>",
-});
+  el: '#app',
+  template: '<p>Hello</p>',
+})
 
 //v4 template, data
 const vm = new Vue({
   el: root,
   data: {
-    greeting: "Welcome",
+    greeting: 'Welcome',
   },
   template: `<div><h1>{{greeting}}</h1></div>`,
-});
+})
 ```
 
 ### this.root and this.{obj}
@@ -131,23 +131,23 @@ Vue.mixin({
 
 ```js
 const vm = new Vue({
-  el: "#app",
+  el: '#app',
   data: {
-    a: "sd",
+    a: 'sd',
   },
-});
+})
 
 setTimeout(() => {
-  vm.a = "ok";
-}, 2000);
+  vm.a = 'ok'
+}, 2000)
 
 // no console variable
-vm.a; //"ok"
+vm.a //"ok"
 
-console.log(app.a); //"ok"
+console.log(app.a) //"ok"
 ```
 
-### e.g Methods in Vue
+### Methods in Vue
 
 ```js
 myfunc() {...}
@@ -222,21 +222,21 @@ data:() => {...}
 
 ```js
 // Our data object
-var data = { a: 1 };
+var data = { a: 1 }
 
 // The object is added to a Vue instance
 var vm = new Vue({
   data: data,
-});
-console.log(data.a); //1
+})
+console.log(data.a) //1
 
-console.log(vm.a == data.a); // 1 true
-vm.a = 2; // changing the data affects the original data
-console.log(data.a); //2
+console.log(vm.a == data.a) // 1 true
+vm.a = 2 // changing the data affects the original data
+console.log(data.a) //2
 
 //and vice-versa
-data.a = 5;
-console.log(vm.a); //5
+data.a = 5
+console.log(vm.a) //5
 
 //https://v2.vuejs.org/v2/guide/instance.html
 ```
