@@ -87,10 +87,26 @@ function sincrona() {}
 sincrona() //undefined
 ```
 
-### Ambos baixo funcionam direto no console:
+### Test direto no console:
 
-    fetch('https://api.github.com/users/geraldotech') //promisse
-    await fetch('https://api.github.com/users/geraldotech') //return data
+    fetch('https://api.github.com/users/geraldotech') // promisse
+    await fetch('https://api.github.com/users/geraldotech') // return data
+
+- Functions
+
+```js
+/// get only request status
+fetch('https://node-do-zerp.onrender.com/videos').then((res) => {
+  console.log(res.status)
+})
+
+// request + response
+fetch('https://node-do-zerp.onrender.com/videos')
+  .then((req) => req.json())
+  .then((res) => {
+    console.log(res)
+  })
+```
 
 # Modo console e IDE 2.json `.then`
 
@@ -118,6 +134,8 @@ const promise = new Promise((resolve, reject) => {
 })
 ```
 
+</details>
+
 Modo console e IDE 1
 
 ```js
@@ -142,8 +160,6 @@ fetch('https://api.github.com/users/geraldotech')
   .then((res) => res.json())
   .then((resFinal) => console.log(resFinal))
 ```
-
-</details>
 
 ## await and then
 
