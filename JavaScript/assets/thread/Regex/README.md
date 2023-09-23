@@ -3,8 +3,8 @@
 ## Expressões Regulares
 
 - [x] replace()
-- [x] match() - retornará nulo se não encontrar nenhuma correspondência
-- [x] search() - aceita uma expressão regular e retorna a posição da. string em que a primeira correspondência foi encontrada. Caso nenhuma correspondência seja encontrada, ele retornará -1.
+- [x] match() - retorna um array de correspondências ou nulo se não encontrar nada.
+- [x] search() - aceita uma expressão regular e retorna a posição da string em que a primeira correspondência foi encontrada. Caso nenhuma correspondência seja encontrada, ele retornará -1.
 
 Uma expressão regular é uma string (sequência de caracteres) que possui um padrão... [leia mais aqui](https://ricardo-reis.medium.com/express%C3%B5es-regulares-javascript-295da6deaee7)
 
@@ -20,8 +20,7 @@ let re = new RegExp(/hi/)
 
 ### Testar se existe correspôndencia:
 
-o objeto `RegExp` possui muitos métodos úteis. Um deles é o método test(), que permite testar se uma string contém uma correspondência do padrão da expressão regular.
-O método `test()` retorna true se o argumento da string contiver uma correspondência.
+o objeto `RegExp` possui muitos métodos úteis. Um deles é o método `test()`, que permite testar se uma string contém uma correspondência do padrão da expressão regular e retorna true se o argumento da string contiver uma correspondência.
 
 ```js
 let rex = /hi/gi
@@ -50,8 +49,9 @@ Quando o marcador g está presente, o objeto RegExp procura por todas as corresp
 
 ### exec()
 
-- direct text on console
-  `console.log(rex.test(/how is oging hi/))` // true
+- direct text on console  
+  `console.log(regexp.test(/how is oging hi/))` // true  
+  `console.log(/Blue/.test('Sky is Blue'))` // true
 
 O método `exec()` do RegExp realiza uma pesquisa por uma correspondência em uma string e retorna um array que contém informações detalhadas sobre a correspondência.
 
@@ -78,7 +78,7 @@ console.warn(message[23]) //H
 
 // eg 2
 let txt = 'Jealousy, turning sea saints into the sea'
-let tem = /sea/gi
+let myregexTem = /sea/gi
 //console.log(tem.exec(txt)) // sea index: 18  // contudo temos mais de um sea
 
 // arr empty
@@ -86,7 +86,7 @@ let ocorrencias = []
 let condicao
 
 do {
-  condicao = tem.exec(txt)
+  condicao = myregexTem.exec(txt)
 
   if (condicao) {
     ocorrencias.push(condicao)
@@ -95,6 +95,17 @@ do {
 
 console.log(ocorrencias)
 console.log(ocorrencias.map((i) => i.index))
+
+// eg 3
+const targetStr = 'It was only a kiss, it was only a kiss'
+const search = /kiss/gi
+
+let match
+
+while ((match = search.exec(targetStr)) !== null) {
+  console.log(match.index)
+  console.log(match)
+}
 ```
 
 ### Get onlyBarras with loop
@@ -121,6 +132,21 @@ console.log(
 ) // get only index
 ```
 
+# match
+
+- sem marcador global retona primeiro item com propriedades igual ao RexExp.exec()
+
+```js
+const targetStr = 'It was only a kiss, it was only a kiss'
+const myregex = /kiss/i
+console.log(targetStr.match(myregex)) // (2) ['kiss', 'kiss']
+
+// marcador global
+targetStr.match(myregex).forEach((elemenet, ind) => {
+  console.log(ind, elemenet) // 0 'kiss' 1 'kiss'
+})
+```
+
 ### Get words procedido por /barra
 
 ```js
@@ -134,6 +160,17 @@ const userName = results[1] //const get index[1]
 
 //getUserName only
 console.log(userName.charAt(1) + userName.substr(2)) //geraldotech
+```
+
+# search
+
+> Similar ao findIndex que retorna o primeiro index and encerra
+
+```js
+const targetStr = 'i like Blue color palette, isso pq o blue color'
+const regexp = /[A-Z]/ // encontra a primeira letra maiuscula
+let index = targetStr.search(regexp)
+console.log(index) // 7
 ```
 
 ### Links:
