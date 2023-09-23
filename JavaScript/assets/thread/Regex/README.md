@@ -50,7 +50,12 @@ Quando o marcador g está presente, o objeto RegExp procura por todas as corresp
 
 ### exec()
 
-O método exec() do RegExp realiza uma pesquisa por uma correspondência em uma string e retorna um array que contém informações detalhadas sobre a correspondência.
+- direct text on console
+  `console.log(rex.test(/how is oging hi/))` // true
+
+O método `exec()` do RegExp realiza uma pesquisa por uma correspondência em uma string e retorna um array que contém informações detalhadas sobre a correspondência.
+
+retorna `null` caso não puder encontrar nenhuma correspondência. No entanto, ele retorna uma única correspondência de uma vez, é necessário executar várias vezes.
 
 ```js
 let message = 'Hi, are you there? hi, HI...'
@@ -70,6 +75,26 @@ console.dir(matches) // Array(3)
 console.warn(message[0]) //H
 console.warn(message[19]) //h
 console.warn(message[23]) //H
+
+// eg 2
+let txt = 'Jealousy, turning sea saints into the sea'
+let tem = /sea/gi
+//console.log(tem.exec(txt)) // sea index: 18  // contudo temos mais de um sea
+
+// arr empty
+let ocorrencias = []
+let condicao
+
+do {
+  condicao = tem.exec(txt)
+
+  if (condicao) {
+    ocorrencias.push(condicao)
+  }
+} while (condicao != null)
+
+console.log(ocorrencias)
+console.log(ocorrencias.map((i) => i.index))
 ```
 
 ### Get onlyBarras with loop
