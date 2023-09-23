@@ -1,4 +1,5 @@
 ```js
+//vue + vite
 npm init vue@latest
 
 //install Global
@@ -454,21 +455,21 @@ props: ["esta_logado", "esta_logado2"],
 # Button Props with default value
 
 ```js
-<template>
+;<template>
   <div>
     <button>{{ title }}</button>
   </div>
-</template>;
+</template>
 
 export default {
-  name: "AppButton",
+  name: 'AppButton',
   props: {
     title: {
       type: String,
-      default: "Botao",
+      default: 'Botao',
     },
   },
-};
+}
 ```
 
 parent

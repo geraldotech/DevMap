@@ -27,22 +27,22 @@ Objects are used to represent a “thing” in your code. That could be a person
 ```js
 // Basic object syntax
 const object = {
-  keys: "values",
-};
+  keys: 'values',
+}
 
 // my example
 const geraldo = {
-  name: "Geraldo Filho",
+  name: 'Geraldo Filho',
   age: 30,
   Developer: true,
-};
+}
 ```
 
 ### access
 
 ```js
-console.log(geraldo.age);
-console.log(geraldo["age"]);
+console.log(geraldo.age)
+console.log(geraldo['age'])
 ```
 
 ### change
@@ -50,13 +50,13 @@ console.log(geraldo["age"]);
 - Dot notation
 
 ```js
-geraldo.age = 20;
+geraldo.age = 20
 ```
 
 - Bracket notation
 
 ```js
-geraldo["age"] = 20;
+geraldo['age'] = 20
 ```
 
 ### property
@@ -64,45 +64,45 @@ geraldo["age"] = 20;
 - Adicionando novas propriedades
 
 ```js
-geraldo.travel = ["Maceio", "Rio"];
+geraldo.travel = ['Maceio', 'Rio']
 ```
 
 ### remove
 
 ```js
-delete geraldo.name;
+delete geraldo.name
 ```
 
 ### concatenar
 
 ```js
 const person = {
-  name: "Geraldo",
+  name: 'Geraldo',
   age: 29,
-  city: "Maceio",
-};
-console.log(person);
+  city: 'Maceio',
+}
+console.log(person)
 
 // concatenar
-document.write(person.name + " mora na cidade de " + person.city);
+document.write(person.name + ' mora na cidade de ' + person.city)
 
 // concatenar
-document.getElementById("objeto2").innerHTML =
-  person.name + " idade atual: " + person.age;
+document.getElementById('objeto2').innerHTML =
+  person.name + ' idade atual: ' + person.age
 
 // multiple variables in one line
 const persons = {
-  nome: "Geraldo",
-  surname: "Filho",
-};
+  nome: 'Geraldo',
+  surname: 'Filho',
+}
 
-console.log(persons.nome);
-console.log(persons.surname);
+console.log(persons.nome)
+console.log(persons.surname)
 
 // shorthand atribuir a uma const
-const { nome, surname } = persons;
-console.log(nome);
-console.log(surname);
+const { nome, surname } = persons
+console.log(nome)
+console.log(surname)
 ```
 
 ### Object.keys(), Objects.values(), Object.entries()
@@ -111,21 +111,21 @@ console.log(surname);
 
 ```js
 const obj = {
-  nameKey: "pessoaVal",
+  nameKey: 'pessoaVal',
   ageKey: 30,
-  systemKey: "WindowsVal",
-};
+  systemKey: 'WindowsVal',
+}
 
+Object.keys(person)
 //✨ display the `keys` string-keyed property names: (also called a “property name”)
 //(3) ['nameKey', 'ageKey', 'systemKey']
-Object.keys(person);
 
+Object.values(person)
 //✨ display `values` (3) ['pessoaVal', 30, 'WindowsVal']
-Object.values(person);
 
+Object.entries(person)
 //✨ returns an Array of a given object's own enumerable string-keyed property [key, value]
 
-Object.entries(person);
 // (3) [Array(2), Array(2), Array(2)]
 // 0: (2) ['nameKey', 'pessoaVal']
 // 1: (2) ['ageKey', 30]
@@ -133,20 +133,20 @@ Object.entries(person);
 
 //✨ JS Objects try:
 
-console.log(Object.keys(window)); // document
-console.log(Object.values(window)[2]); //#document
+console.log(Object.keys(window)) // document
+console.log(Object.values(window)[2]) //#document
 ```
 
-### Object.fromEntries()
+#### Object.fromEntries()
 
 ```js
 // ES2019 introduced the Object.fromEntries() method that allows you to easily convert a list of key-value pairs into an object.
 
 let arr2 = [
-  ["color", "red"],
-  ["borderWidth", "1px"],
-];
-console.log(Object.fromEntries(arr2)); // {color: 'red', borderWidth: '1px'
+  ['color', 'red'],
+  ['borderWidth', '1px'],
+]
+console.log(Object.fromEntries(arr2)) // {color: 'red', borderWidth: '1px'
 
 /*
 ✔ The Object.fromEntries() performs the reverse of Object.entries().
@@ -159,44 +159,44 @@ console.log(Object.fromEntries(arr2)); // {color: 'red', borderWidth: '1px'
 ```js
 const smart = {
   open: function () {
-    console.log("open conexao");
+    console.log('open conexao')
   },
   close: function () {
-    console.log("fechar conexao");
+    console.log('fechar conexao')
   },
-};
-smart.open();
-smart.close();
+}
+smart.open()
+smart.close()
 
 //eg2
 const numero = {
   par: function (v) {
-    console.log(v % 2 === 0);
+    console.log(v % 2 === 0)
   },
   impar: (v) => console.log(v % 2 != 0),
   potencia: (v) => {
-    console.log(2 ** v);
+    console.log(2 ** v)
   },
-};
+}
 
-numero.par(2);
-numero.impar(2);
-numero.potencia(2);
+numero.par(2)
+numero.impar(2)
+numero.potencia(2)
 
 //Simulate a JavaScript Object
 const windowx = {
   document: {
     getElemenyById: function (id) {
-      console.log(`getElemenyById:`, id);
+      console.log(`getElemenyById:`, id)
     },
     querySelector: (val) => {
-      console.log(`querySelector:`, val);
+      console.log(`querySelector:`, val)
     },
   },
-};
+}
 
-windowx.document.getElemenyById("ElementId");
-windowx.document.querySelector("#id");
+windowx.document.getElemenyById('ElementId')
+windowx.document.querySelector('#id')
 ```
 
 ### Object.Freeze
@@ -204,15 +204,15 @@ windowx.document.querySelector("#id");
 ```js
 const obj = {
   prop() {},
-  foo: "footer",
-};
+  foo: 'footer',
+}
 
-Object.freeze(obj);
-obj.foo = "<rodape/>";
-obj.article = "<article/>";
-delete obj.prop;
+Object.freeze(obj)
+obj.foo = '<rodape/>'
+obj.article = '<article/>'
+delete obj.prop
 
-console.log(obj);
+console.log(obj)
 ```
 
 #### Object.isFrozen()
@@ -223,15 +223,15 @@ console.log(obj);
 
 ```js
 const geraldo = {
-  name: "Geraldo Filho",
+  name: 'Geraldo Filho',
   age: 30,
   idade: 30,
   Developer: true,
-};
+}
 
-console.log(Object.is(geraldo.age, geraldo.idade));
+console.log(Object.is(geraldo.age, geraldo.idade))
 //same
-console.log(geraldo.age == geraldo.idade);
+console.log(geraldo.age == geraldo.idade)
 ```
 
 #### Object.create()
@@ -241,51 +241,51 @@ console.log(geraldo.age == geraldo.idade);
 const register = {
   humano: false,
   age: 10,
-  Estado: "RJ",
+  Estado: 'RJ',
   info: function () {
     //arrow function here returns "undefined" in this.name
     console.log(
       `My name is ${this.name}, tenho ${this.age} e moro no ${this.Estado}`
-    );
-    console.log(this.gnn(this.valor));
+    )
+    console.log(this.gnn(this.valor))
   },
   gnn: function (val) {
-    return 2 ** val;
+    return 2 ** val
   },
-};
+}
 
-const eu = Object.create(register);
-eu.name = "Geraldo";
-eu.age = 31;
-eu.Estado = "Maceio";
-eu.humano = true;
-eu.valor = 7;
-eu.info();
+const eu = Object.create(register)
+eu.name = 'Geraldo'
+eu.age = 31
+eu.Estado = 'Maceio'
+eu.humano = true
+eu.valor = 7
+eu.info()
 ```
 
 ### Object.assign
 
 ```js
-const o = { name: "Geraldo" };
-const o2 = { age: 30 };
-const o3 = { city: "Duque de Caxias - RJ" };
+const o = { name: 'Geraldo' }
+const o2 = { age: 30 }
+const o3 = { city: 'Duque de Caxias - RJ' }
 
-const obj = Object.assign(o, o2, o3);
-console.log(obj);
+const obj = Object.assign(o, o2, o3)
+console.log(obj)
 ```
 
 ### obj.hasOwnProperty("prop")
 
 ```js
-console.log(obj.hasOwnProperty("name")); // true
-console.log(obj.hasOwnProperty("nome")); // false
+console.log(obj.hasOwnProperty('name')) // true
+console.log(obj.hasOwnProperty('nome')) // false
 ```
 
 ### Object.Own(obj, "prop")
 
 ```js
-console.log(Object.hasOwn(obj, "name")); // true
-console.log(Object.hasOwn(obj, "idade")); // false
+console.log(Object.hasOwn(obj, 'name')) // true
+console.log(Object.hasOwn(obj, 'idade')) // false
 ```
 
 ### for in
@@ -294,49 +294,49 @@ console.log(Object.hasOwn(obj, "idade")); // false
 // for in is a method for iterating over "enumerable" properties of an object.
 
 const pessoas = {
-  01: "Geraldo",
-  02: "Felipe",
-  03: "Bella",
-  04: "Milly",
-};
+  01: 'Geraldo',
+  02: 'Felipe',
+  03: 'Bella',
+  04: 'Milly',
+}
 
 // Scratch: getting the keys
 for (let key in pessoas) {
-  console.log(key);
+  console.log(key)
 }
 
 // If perform `pessoas` vai retonar todos os values duplicados, por isso devemos chamar junto com a chave
 
 for (const key in pessoas) {
-  console.log(pessoas); //👉 ❌
+  console.log(pessoas) //👉 ❌
 }
 
 //👉 o que fazer passar a key na chamada👍
 for (let key in pessoas) {
-  console.log(pessoas[key]);
+  console.log(pessoas[key])
 }
 //🔰 key+key simples só chamar a key de forma independente.
 for (let key in pessoas) {
-  console.log(key, pessoas[key]);
+  console.log(key, pessoas[key])
 }
 //👉 print no HTML:
 for (const key in pessoas) {
-  p.innerHTML += key + ": " + pessoas[key];
+  p.innerHTML += key + ': ' + pessoas[key]
 }
 //👉👉 beautiful string literal:
-p.innerHTML += `${key} - ${pessoas[key]} `;
+p.innerHTML += `${key} - ${pessoas[key]} `
 
 // for in key:value + document.createElement...
 
 // ol ficar dentro do for-in vai repetir várias vezes sem necessidade.
-let ol = document.createElement("ol");
+let ol = document.createElement('ol')
 
 for (let [keys] in pessoas) {
-  let li = document.createElement("li");
+  let li = document.createElement('li')
 
-  li.innerHTML += pessoas[keys] + "<br>";
-  ol.appendChild(li);
-  document.body.appendChild(ol);
+  li.innerHTML += pessoas[keys] + '<br>'
+  ol.appendChild(li)
+  document.body.appendChild(ol)
 
   //  <ol id="a"></ol>
   // a.innerHTML += "<li>" + keys + "/li>";
@@ -348,56 +348,56 @@ for (let [keys] in pessoas) {
 //👉 iterating over Array to get Index
 function getIndex(arr) {
   for (const tem in arr) {
-    console.log(tem);
+    console.log(tem)
   }
 }
 
-getIndex(["A", "B", "C"]);
+getIndex(['A', 'B', 'C'])
 ```
 
 ### iterate object with: forEach / of of
 
 ```js
 const pessoas = {
-  01: "Geraldo",
-  02: "Felipe",
-  03: "Bella",
-  04: "Milly",
-};
+  01: 'Geraldo',
+  02: 'Felipe',
+  03: 'Bella',
+  04: 'Milly',
+}
 
 Object.keys(pessoas).forEach((item) => {
-  console.log(item + " - " + pessoas[item]);
-});
+  console.log(item + ' - ' + pessoas[item])
+})
 
 // HTML não esquecer do +=
 
 Object.keys(pessoas).forEach((val) => {
-  res.innerHTML += val + ":" + pessoas[val];
-});
+  res.innerHTML += val + ':' + pessoas[val]
+})
 
 for (const p of Object.keys(pessoas)) {
-  console.log(p, pessoas[p]);
+  console.log(p, pessoas[p])
 }
 // returns an array of a given object's own enumerable string-keyed property key-value pairs. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
 
 for (const [key, val] of Object.entries(pessoas)) {
-  console.log(key, val);
+  console.log(key, val)
 }
 ```
 
 ```js
 const obj = {
-  name: "Jon Doe",
-  username: "jon-doe",
-  email: "jon-doe@unknown.com",
-};
+  name: 'Jon Doe',
+  username: 'jon-doe',
+  email: 'jon-doe@unknown.com',
+}
 
 // obj to JSON geralmente em Post/PUT Resquests
-const post = JSON.stringify(obj);
-console.log(post);
+const post = JSON.stringify(obj)
+console.log(post)
 
 // voltar a ser obj
-console.log(JSON.parse(post));
+console.log(JSON.parse(post))
 ```
 
 !important :arrow_right: LEITURA
