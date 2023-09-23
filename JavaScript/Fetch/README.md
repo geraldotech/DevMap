@@ -87,10 +87,12 @@ function sincrona() {}
 sincrona() //undefined
 ```
 
-### Test direto no console:
+- Test on console:
 
-    fetch('https://api.github.com/users/geraldotech') // promisse
-    await fetch('https://api.github.com/users/geraldotech') // return data
+```js
+fetch('https://api.github.com/users/geraldotech') // promisse
+await fetch('https://api.github.com/users/geraldotech') // return data
+```
 
 - Functions
 
@@ -106,9 +108,23 @@ fetch('https://node-do-zerp.onrender.com/videos')
   .then((res) => {
     console.log(res)
   })
-```
 
-# Modo console e IDE 2.json `.then`
+// arrow no {}
+fetch('https://node-do-zerp.onrender.com/videos')
+  .then((req) => req.json())
+  .then((res) => console.log(res))
+
+// v3 if by gmap
+
+fetch('https://node-do-zerp.onrender.com/videos')
+  .then((req, er) => {
+    if (req.status == 200) {
+      console.log(req)
+      return req.json()
+    }
+  })
+  .then((res) => console.log(res))
+```
 
 ### Promises - setTimeout
 
@@ -153,14 +169,6 @@ assincrona().then(() => {
 })
 ```
 
-direct
-
-```js
-fetch('https://api.github.com/users/geraldotech')
-  .then((res) => res.json())
-  .then((resFinal) => console.log(resFinal))
-```
-
 ## await and then
 
 Fazer a function, depois chamar com os .then
@@ -173,18 +181,6 @@ console.log('[teste]', pegardadosgit())
 pegardadosgit()
   .then((val) => val.json())
   .then((ref) => console.log(ref))
-```
-
-direct fetch and then
-
-```js
-fetch('https://api.github.com/users/geraldotech')
-  .then((retornoAPI) => {
-    return retornoAPI.json()
-  })
-  .then((dados) => {
-    console.log(dados)
-  })
 ```
 
 .then {try catch} and .text()
