@@ -1,11 +1,11 @@
-import router from "../src/routers.js";
+import router from '../src/router/index.js'
 
 const vm = new Vue({
-  el: "#app",
+  el: '#app',
   data: {},
   components: {
-    App: httpVueLoader("./src/App.vue"),
+    App: httpVueLoader('./src/App.vue'),
   },
-  template: "<App/>",
+  template: '<App/>',
   router,
-});
+})

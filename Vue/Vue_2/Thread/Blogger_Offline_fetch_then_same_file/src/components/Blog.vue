@@ -80,19 +80,19 @@ module.exports = {
       //console.log(e.target.getAttribute("href"));
 
       //get current index of selected button
-      this.currentIndex = e.target.getAttribute('href')
+      const currentIndex = e.target.getAttribute('href')
 
       //post recebe all posts[index]
-      this.singlepost = this.posts[this.currentIndex]
+      this.singlepost = this.posts[currentIndex]
     },
     RenderPostbySlug: function (e) {
       //console.log(e.target.getAttribute("href"));
 
       //get current index of selected button
-      this.currenthrefVal = e.target.getAttribute('href')
+      const currenthrefVal = e.target.getAttribute('href')
 
       // find the post
-      const find = this.posts.find((v) => v.slug == this.currenthrefVal)
+      const find = this.posts.find((v) => v.slug == currenthrefVal)
 
       find ? (this.slugPost = find) : (this.slugPost = 'vazio')
     },
