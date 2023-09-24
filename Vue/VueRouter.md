@@ -229,8 +229,11 @@ Rotas nomeadas, identificar a rota com um objeto name, em caso de mudar o `path`
 //inves de definir assim
 <router-link to="/msongs">Songs</router-link>
 
-// bing the :to e passar um objecto com o nome do name
+// bind the :to e passar um object com o nome da Named Router
   <router-link :to="{name: 'songs'}">Songs</router-link>
+
+// v-for add a path
+ <router-link :to="{ path: post.slug }">{{ post.title }}</router-link>
 
 // no routes path ficará assim
 { path: "/msongs", name: "songs", component: Songs },

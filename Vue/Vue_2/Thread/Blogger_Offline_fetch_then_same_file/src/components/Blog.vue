@@ -1,11 +1,7 @@
 <template>
   <div>
     <h2>Blog Posts</h2>
-    <p>
-      não é o jeito mais indicado, pq primeiro é feito um fetch de todos os
-      posts e depois no click get os posts by index local[comecando um 0] que
-      está no href
-    </p>
+
     <!--   <select v-model="selecionado">
       <option value=""></option>
       <option v-for="posx in posts" :key="posx.id" :value="posx.description">
@@ -16,6 +12,12 @@
 
     <hr />
     <div class="menu">
+      <h1>RenderPostbyIndex()</h1>
+      <p>
+        não é o jeito mais indicado, pq primeiro é feito um fetch de todos os
+        posts e depois no click get os posts by index local[comecando 0] que
+        está no href, passe o mouse sobre os links
+      </p>
       <nav>
         <a
           v-for="(links, index) in posts"
@@ -33,6 +35,7 @@
     <h3>{{ singlepost.description }}</h3>
 
     <hr />
+    <h1>RenderPostbySlug()</h1>
     <div class="menu">
       <nav>
         <a
@@ -54,7 +57,7 @@
 <script>
 module.exports = {
   created() {
-    this.fetchblog();
+    this.fetchblog()
   },
   data() {
     return {
@@ -62,39 +65,39 @@ module.exports = {
       singlepost: {},
       slugPost: {},
       currentIndex: [],
-    };
+    }
   },
   methods: {
     fetchblog() {
-      fetch("./api/posts.json")
+      fetch('./api/posts.json')
         .then((r) => r.json())
         .then((r) => {
-          this.posts = r;
-          console.log(this.posts);
-        });
+          this.posts = r
+          console.log(this.posts)
+        })
     },
     RenderPostbyIndex: function (e) {
       //console.log(e.target.getAttribute("href"));
 
       //get current index of selected button
-      this.currentIndex = e.target.getAttribute("href");
+      this.currentIndex = e.target.getAttribute('href')
 
       //post recebe all posts[index]
-      this.singlepost = this.posts[this.currentIndex];
+      this.singlepost = this.posts[this.currentIndex]
     },
     RenderPostbySlug: function (e) {
       //console.log(e.target.getAttribute("href"));
 
       //get current index of selected button
-      this.currenthrefVal = e.target.getAttribute("href");
+      this.currenthrefVal = e.target.getAttribute('href')
 
       // find the post
-      const find = this.posts.find((v) => v.slug == this.currenthrefVal);
+      const find = this.posts.find((v) => v.slug == this.currenthrefVal)
 
-      find ? (this.slugPost = find) : (this.slugPost = "vazio");
+      find ? (this.slugPost = find) : (this.slugPost = 'vazio')
     },
   },
-};
+}
 </script>
 
 <style>

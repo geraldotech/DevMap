@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS2 Router Nested</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <div id="app">
+      <p>Filters are removed from Vue 3.0 and no longer supported.</p>
+      <input type="text" v-model="dolar" />
+      <p>{{ dolar | currencyUSD}}</p>
+      <p>{{ 12 | Par}}</p>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        data: {
+          dolar: '',
+        },
+        filters: {
+          currencyUSD(value) {
+            return '$' + value
+          },
+          Par(arr) {
+            return arr % 2 == 0
+          },
+        },
+      }).$mount('#app')
+    </script>
+  </body>
+</html>
