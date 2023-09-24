@@ -45,19 +45,28 @@
       </option>
     </select>
     <p>{{ selecionado }}</p>
-    <router-link
-      :to="{ name: 'threads', params: { id: 1, slug: 'post-vue-js' } }"
-      >post-vue-js</router-link
-    >
+
+    <h1>Router params with id</h1>
+    <ul>
+      <li v-for="render in posts" :key="render.id">
+        <router-link
+          :to="{
+            name: 'threads',
+            params: { id: render.id, slug: render.slug },
+          }"
+          >{{ render.slug }}</router-link
+        >
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 module.exports = {
   created() {
-    this.fetchProdutos();
+    this.fetchProdutos()
     // this.fetchProduto(`notebook`);
-    this.fetchPosts();
+    this.fetchPosts()
   },
   data() {
     return {
@@ -67,41 +76,41 @@ module.exports = {
       posts: [],
       post: [],
       selecionado: ``,
-    };
+    }
   },
   methods: {
     fetchProdutos() {
-      fetch("./api/produtos.json")
+      fetch('./api/produtos.json')
         .then((r) => r.json())
         .then((r) => {
-          this.allProdutos = r;
-        });
+          this.allProdutos = r
+        })
     },
     fetchProduto(itemName) {
       fetch(`./api/produtos/${itemName}/dados.json`)
         .then((r) => r.json())
         .then((r) => {
-          this.produto = r;
-        });
+          this.produto = r
+        })
     },
     /* List de posts */
     fetchPosts() {
-      fetch("./api/posts.json")
+      fetch('./api/posts.json')
         .then((r) => r.json())
         .then((r) => {
-          this.posts = r;
-        });
+          this.posts = r
+        })
     },
     /*  Fetch Post by Id */
     fetchPost(id) {
       fetch(`./api/blog/${id}/post.json`)
         .then((r) => r.json())
         .then((r) => {
-          this.post = r;
-        });
+          this.post = r
+        })
     },
   },
-};
+}
 </script>
 
 <style>
