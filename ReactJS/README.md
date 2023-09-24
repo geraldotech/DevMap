@@ -106,6 +106,14 @@ return (
 )
 }
 export default HelloWord;   // fazer o export
+
+// v4 para components pouco conteudo return direct
+function Button(pros) {
+  return <button>{pros.text}</button>
+}
+
+export default Button
+
 ```
 
 import `App.js`
@@ -330,7 +338,7 @@ export default Evento
 <Evento numero={2} />
 ```
 
-### prevent.default
+### onSubmit and prevent.default
 
 ```jsx
 function cadastrarUsuario(e) {
@@ -339,7 +347,7 @@ function cadastrarUsuario(e) {
 }
 ```
 
-##### extra adicionando form.name by gmap and get values
+### extra adicionando form.name by gmap and get values
 
 ```jsx
 function Form() {
@@ -351,14 +359,15 @@ function Form() {
 
   return (
     <div>
-      <h1>Meu Cadastro</h1>
+      <h1>Somando</h1>
       <form onSubmit={cadastrarUsuario}>
-        <div>
-          <input type="text" name="nome" placeholder="your name" />
+       <div>
+          <input type="text" name="x" placeholder="n1" />
+          <input type="text" name="y" placeholder="n2" />
         </div>
 
         <div>
-          <input type="submit" value="Cadastrar" />
+          <input type="submit" value="Somar" />
         </div>
       </form>
     </div>
@@ -376,7 +385,89 @@ function Form() {
   }
 ```
 
-# How get Input Value in React?
+# useState
+
+é um hook do React, consegue manusear o estado do um componente de forma simples, funciona muito bem com eventos
+
+1 - No form em vez de `for` deve usar `htmlFor`
+
+> Did you mean `htmlFor`?
+
+```jsx
+<form onSubmit={registerUser}>
+  <div>
+    <label htmlFor="user">User:</label>
+    <input type="text" id="user" placeholder="user" />
+  </div>
+  <div>
+    <label htmlFor="pass">Password:</label>
+    <input type="password" id="pass" placeholder="password" />
+  </div>
+  <div>
+    <input type="submit" value="Cadastrar" />
+  </div>
+</form>
+```
+
+2 - import `import {useState} from 'react'`
+
+3 - Nao precisou adicionar o attr name no input
+
+4 -
+
+```jsx
+// definir a function que é chamada no  <form onSubmit={registerUser}>
+function Form() {
+  function registerUser(e) {
+    e.preventDefault()
+    console.log(name)
+  }
+ // const com o set`${yourvalue}State`
+  const [name, setName] = useState()
+
+
+// adiciona na input onChange...
+
+<input type="text" id="user" placeholder="user" onChange={(e) => setName(e.target.value)} />
+
+// default values
+const [name, setName] = useState('admin')
+
+// input add a a value
+value={name}
+
+// multiple values
+const [name, setName] = useState()
+const [password, setPassword] = useState()
+// do the same in password
+
+<input type="password" id="pass" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
+```
+
+# Tips:
+
+```jsx
+//inline alert/console function
+$ <button onClick={() => { alert('como vai')}}> ALERT</button>
+```
+
+# Passar eventos por props
+
+```jsx
+//define no component filho Button.js
+function Button(props) {
+  return <button onClick={props.event}>{props.text}</button>
+}
+
+// import no pai e faca as respectivas functions
+  <Button event={meuEvento} text="Primeiro Evento" />
+  <Button event={segundoEvento} text="Segundo Evento" />
+
+// pass params
+ <Button event={(e) => segundoEvento(e, 20)} text="Segundo Evento" />
+```
+
+### How get Input Value in React?
 
 ```jsx
 // add useRef
