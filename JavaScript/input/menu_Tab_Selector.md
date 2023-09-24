@@ -1,7 +1,9 @@
-#### [CodePen](https://codepen.io/geraldopcf/pen/ZExLmbX)
+#### [CodePen by Isadora](https://codepen.io/geraldopcf/pen/ZExLmbX)
+
 #### [CodePen_projeto_v2_gmap](https://codepen.io/geraldopcf/pen/WNJpPOG)
 
 html
+
 ```html
 <ul>
   <li class="item active" data="service">Serviços</li>
@@ -22,14 +24,15 @@ html
 ```
 
 css
+
 ```css
-ul { 
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    width: 400px;
-    margin: 100px auto 20px;
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  margin: 100px auto 20px;
 }
 
 div {
@@ -38,69 +41,69 @@ div {
 }
 
 ul li {
-    height: 25px;
-    padding: 0 10px;
-    cursor:pointer;
+  height: 25px;
+  padding: 0 10px;
+  cursor: pointer;
 }
 
 .active {
-    color: blue;
-    font-weight: bolder;
-    border-bottom: 1px solid red;
+  color: blue;
+  font-weight: bolder;
+  border-bottom: 1px solid red;
 }
 ```
 
 js
 
 ```js
-const serviceText = document.getElementById("serviceText");
-const contactText = document.getElementById("contactText");
-const infoText = document.getElementById("infoText");
-const items = Array.from(document.getElementsByClassName("item"));
+const serviceText = document.getElementById('serviceText')
+const contactText = document.getElementById('contactText')
+const infoText = document.getElementById('infoText')
+const items = Array.from(document.getElementsByClassName('item'))
 
-hideOrShowTextDiv("service");
+hideOrShowTextDiv('service')
 
 items.forEach((item) => {
-  item.addEventListener("click", onItemClick);
-});
+  item.addEventListener('click', onItemClick)
+})
 
 function onItemClick(event) {
-  const selectedAttribute = event.target.getAttribute("data");
-  addOrRemoveActive(selectedAttribute);
-  hideOrShowTextDiv(selectedAttribute);
+  const selectedAttribute = event.target.getAttribute('data')
+  addOrRemoveActive(selectedAttribute)
+  hideOrShowTextDiv(selectedAttribute)
 }
 
 function hideOrShowTextDiv(selectedAttribute) {
-  hideTextElements();
+  hideTextElements()
 
-  if (selectedAttribute === "contact") {
-    contactText.style.display = "block";
+  if (selectedAttribute === 'contact') {
+    contactText.style.display = 'block'
   }
 
-  if (selectedAttribute === "service") {
-    serviceText.style.display = "block";
+  if (selectedAttribute === 'service') {
+    serviceText.style.display = 'block'
   }
 
-  if (selectedAttribute === "info") {
-    infoText.style.display = "block";
+  if (selectedAttribute === 'info') {
+    infoText.style.display = 'block'
   }
 }
 
 function addOrRemoveActive(selectedAttribute) {
   items.forEach((item) => {
-    const itemAttribute = item.getAttribute("data");
+    const itemAttribute = item.getAttribute('data')
     if (itemAttribute === selectedAttribute) {
-      item.classList.add("active");
-      return;
+      item.classList.add('active')
+      return
     }
 
-    item.classList.remove("active");
-  });
+    item.classList.remove('active')
+  })
 }
 
 function hideTextElements() {
-  serviceText.style.display = "none";
-  contactText.style.display = "none";
-  infoText.style.display = "none";
+  serviceText.style.display = 'none'
+  contactText.style.display = 'none'
+  infoText.style.display = 'none'
 }
 ```

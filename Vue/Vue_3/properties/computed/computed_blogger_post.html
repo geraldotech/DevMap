@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Document</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Exemplo de BlogPosts usando computed()</h1>
+      <ul>
+        <li v-for="posts in BlogPosts">{{posts.title}}</li>
+      </ul>
+    </div>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            posts: [
+              { id: 1, title: 'lorem' },
+              { id: 2, title: 'lorem 2' },
+            ],
+          }
+        },
+        computed: {
+          BlogPosts() {
+            return this.posts
+          },
+        },
+      }).mount('#app')
+    </script>
+  </body>
+</html>

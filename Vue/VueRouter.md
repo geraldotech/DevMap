@@ -51,29 +51,29 @@ Contextualizando Rotas:
 ```
 
 ```js
-const Home = { template: `<p>Home Page</p>` };
-const youtube = { template: `<p>About Page</p>` };
-const NotFound = { template: `<h1>404</h1>` };
+const Home = { template: `<p>Home Page</p>` }
+const youtube = { template: `<p>About Page</p>` }
+const NotFound = { template: `<h1>404</h1>` }
 
 //maping the path
 
 const routes = [
-  { path: "/", component: Home },
-  { path: "/youtube", component: youtube },
+  { path: '/', component: Home },
+  { path: '/youtube', component: youtube },
   //{ path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
-  { path: "*", name: "NotFound", component: NotFound },
-];
+  { path: '*', name: 'NotFound', component: NotFound },
+]
 
 // * works too { path: "*", name: "NotFound", component: NotFound },
 
 const router = new VueRouter({
   routes, // short for `routes: routes`
-});
+})
 
 new Vue({
-  el: "#app",
+  el: '#app',
   router,
-});
+})
 ```
 
 # Tips
@@ -90,25 +90,25 @@ var router = new VueRouter({
 remove o hash
 
 ```js
-mode: "history";
+mode: 'history'
 ```
 
 if add + mode history o hash permanece nada muda
 
 ```js
-base: "#";
+base: '#'
 ```
 
 only this = hash direct ok
 
 ```js
-base: "#";
+base: '#'
 ```
 
 e se remove mode: history o hash volta open direct
 
 ```js
-base: window.location.origin;
+base: window.location.origin
 ```
 
 outras:
@@ -175,27 +175,27 @@ Terá que importar todo os components em App.vue. [ref](https://vueschool.io/art
 Básico para criar rota usando `component string template` na documentação oficial visitar [https://router.vuejs.org/guide/](https://router.vuejs.org/guide/)
 
 ```js
-const { createRouter, createWebHashHistory, createWebHistory } = VueRouter;
-const { createApp } = Vue;
+const { createRouter, createWebHashHistory, createWebHistory } = VueRouter
+const { createApp } = Vue
 
 // String templates
-const Home = { template: `<p>Home Page</p>` };
-const Youtube = { template: `<p>Youtube Page</p>` };
+const Home = { template: `<p>Home Page</p>` }
+const Youtube = { template: `<p>Youtube Page</p>` }
 
 //map the component
 // We'll talk about nested routes later.
 const routes = [
-  { path: "/", component: Home },
-  { path: "/youtube", component: Youtube },
-];
+  { path: '/', component: Home },
+  { path: '/youtube', component: Youtube },
+]
 
 const router = createRouter({
   history: createWebHashHistory(location.pathname),
   routes: routes,
-});
+})
 //create and mount the root instance
-const app = createApp({});
-app.use(router).mount("#app");
+const app = createApp({})
+app.use(router).mount('#app')
 ```
 
 HTML:
@@ -286,6 +286,36 @@ funcionalidades },
         name: "threads",
         params: { category: "android", slug: "post-one" },
       });
+```
+
+## Vue change url but not change router-view:
+
+After months using a `button solution` to fucntion force a hot reload:
+
+`<button @click="ClicktoRouterPush(autosearch.category, autosearch.slug)">{{ autosearch.title }}</button>`
+
+```js
+
+ClicktoRouterPush(ca, sl) {
+this.$router.push({name: 'threads', params: { category: ca, slug: sl }, })
+this.$router.go({name: 'threads', params: { category: ca, slug: sl }, })
+}
+
+```
+
+Finally you can solve this issue using the default `router-link` add a attribute in `router-view`:
+
+```js
+<router-view :key="$route.path"></router-view>
+```
+
+A new version of button was is a href with _@click.prevent_ not bad showing user the link when mouse is hover, better than `button solution`
+
+```js
+<a :href="`/blog/` + relac.category + '/' + relac.slug"
+          @click.prevent="ClicktoRouterPush(relac.category, relac.slug)">
+          {{ relac.title.substring(0, 20) }}... - {{ relac.data }}
+</a>
 ```
 
 ## Catch 404
