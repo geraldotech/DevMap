@@ -7,12 +7,12 @@
 ```js
 class TodoItem extends HTMLElement {
   constructor() {
-    super(); //vai puxar tudo do HTMLElement tudo da DOM
-    this.innerHTML = "Hi, I am custom";
+    super() //vai puxar tudo do HTMLElement tudo da DOM
+    this.innerHTML = 'Hi, I am custom'
   }
 }
 //nome precisa ser name-item
-customElements.define("todo-item", TodoItem);
+customElements.define('todo-item', TodoItem)
 ```
 
 - on html call: `<todo-item></todo-item>`
@@ -22,11 +22,11 @@ customElements.define("todo-item", TodoItem);
   ```js
   class TodoItem extends HTMLElement {
     constructor() {
-      super();
-      this.innerHTML = `<h3>${this.innerText}</h3>`;
+      super()
+      this.innerHTML = `<h3>${this.innerText}</h3>`
     }
   }
-  customElements.define("todo-item", TodoItem);
+  customElements.define('todo-item', TodoItem)
   ```
 
 ### ShadowDOM
@@ -36,11 +36,11 @@ customElements.define("todo-item", TodoItem);
 ```js
 class TodoItem extends HTMLElement {
   constructor() {
-    super();
-    const shadow = this.attachShadow({ mode: "open" });
+    super()
+    const shadow = this.attachShadow({ mode: 'open' })
 
-    console.warn(shadow); // get shadowRoot #document-fragment
-    console.log(this); //open the component discovery-item structure
+    console.warn(shadow) // get shadowRoot #document-fragment
+    console.log(this) //open the component discovery-item structure
 
     shadow.innerHTML = `
       <style> 
@@ -48,10 +48,10 @@ class TodoItem extends HTMLElement {
         color: orange; 
         } 
       </style> 
-      <p>shadow</p>`;
+      <p>shadow</p>`
   }
 }
-customElements.define("todo-item", TodoItem);
+customElements.define('todo-item', TodoItem)
 ```
 
 - Using `this`: precisa chamar `attachShadow` and `shadowRoot`:
@@ -59,8 +59,8 @@ customElements.define("todo-item", TodoItem);
 ```js
 class Discovery extends HTMLElement {
   constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
+    super()
+    this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
         <style>
             h1{
@@ -68,20 +68,20 @@ class Discovery extends HTMLElement {
             }
         </style>
         <h1>Hello from Discovery</h1>
-        `;
+        `
 
-    console.log(this); //open the component discovery-item structure
-    console.warn(this.shadowRoot); // get shadowRoot #document-fragmenttree.
+    console.log(this) //open the component discovery-item structure
+    console.warn(this.shadowRoot) // get shadowRoot #document-fragmenttree.
   }
 }
-customElements.define("discovery-item", Discovery);
+customElements.define('discovery-item', Discovery)
 ```
 
 - Using querySelector[select DOM elements] to change text:
 
 ```js
 // inside constructor(){... }
-this.shadowRoot.querySelector("h1").innerText = `new text here`;
+this.shadowRoot.querySelector('h1').innerText = `new text here`
 ```
 
 - Using `templates.content`:
@@ -89,28 +89,28 @@ this.shadowRoot.querySelector("h1").innerText = `new text here`;
 ```js
 class TodoItem extends HTMLElement {
   constructor() {
-    super();
+    super()
     //create a template
-    const template = document.createElement("template");
+    const template = document.createElement('template')
     template.innerHTML = `
     <style> 
     p { 
       color: orange; 
     } 
     </style> 
-    <p>shadow</p>`;
+    <p>shadow</p>`
 
-    const shadow = this.attachShadow({ mode: "open" });
-    shadow.append(template.content);
+    const shadow = this.attachShadow({ mode: 'open' })
+    shadow.append(template.content)
   }
 }
-customElements.define("todo-item", TodoItem);
+customElements.define('todo-item', TodoItem)
 ```
 
 - template outsite of class...
 
 ```js
-const template = document.createElement("template");
+const template = document.createElement('template')
 template.innerHTML = `
   <style>
   h1{
@@ -122,15 +122,15 @@ template.innerHTML = `
   <h1>Hello from Template Web Components</h1>
   <h2>interno</h2>
   </section>
-`;
+`
 class BlogArticle extends HTMLElement {
   constructor() {
-    super();
-    const shadow = this.attachShadow({ mode: "open" });
-    shadow.append(template.content);
+    super()
+    const shadow = this.attachShadow({ mode: 'open' })
+    shadow.append(template.content)
   }
 }
-customElements.define("article-1", BlogArticle);
+customElements.define('article-1', BlogArticle)
 ```
 
 - this.onclick... and this...
@@ -138,8 +138,8 @@ customElements.define("article-1", BlogArticle);
 ```js
 class TodoItem extends HTMLElement {
   constructor() {
-    super();
-    const template = document.createElement("template");
+    super()
+    const template = document.createElement('template')
     template.innerHTML = `
     <style>
     p {
@@ -147,20 +147,20 @@ class TodoItem extends HTMLElement {
     }
     </style>
     <p>Using shadowDOM and templates</p>
-    `;
+    `
     //this ref the component `TodoItem`
-    console.log(this);
-    console.log(this.innerText == "A"); //ref a TodoItem
+    console.log(this)
+    console.log(this.innerText == 'A') //ref a TodoItem
 
     this.onclick = function () {
-      console.log(`click`);
-    };
+      console.log(`click`)
+    }
 
-    const shadow = this.attachShadow({ mode: "open" });
-    shadow.append(template.content); //.cloneNode(true)
+    const shadow = this.attachShadow({ mode: 'open' })
+    shadow.append(template.content) //.cloneNode(true)
   }
 }
-customElements.define("todo-item", TodoItem);
+customElements.define('todo-item', TodoItem)
 ```
 
 # Methods:
@@ -170,21 +170,21 @@ customElements.define("todo-item", TodoItem);
 ```js
 class StartRater extends HTMLElement {
   constructor() {
-    super();
+    super()
 
-    const shadow = this.attachShadow({ mode: "open" });
+    const shadow = this.attachShadow({ mode: 'open' })
     //adiciona os styles and o conteudo
-    shadow.append(this.styles(), this.conteudo());
+    shadow.append(this.styles(), this.conteudo())
   }
 
   styles() {
-    const style = document.createElement("style");
+    const style = document.createElement('style')
     style.textContent = `
         h1 {
             color: coral;
         }
-    `;
-    return style;
+    `
+    return style
   }
   conteudo() {
     //mode 1 direct
@@ -196,17 +196,17 @@ class StartRater extends HTMLElement {
     return h1; */
 
     //mode 3 templates or div
-    const template = document.createElement(`template`);
+    const template = document.createElement(`template`)
     template.innerHTML = `
     <div>
       <h1>Hello from templates</h1>    
     </div>
-    `;
-    return template.content;
+    `
+    return template.content
   }
 }
 
-customElements.define("mycomp-1", StartRater);
+customElements.define('mycomp-1', StartRater)
 ```
 
 - Using a `build` in constructor:
@@ -214,35 +214,35 @@ customElements.define("mycomp-1", StartRater);
 ```js
 class BlogPost extends HTMLElement {
   constructor() {
-    super();
-    this.build();
+    super()
+    this.build()
   }
 
   build() {
-    console.log(`build importada`);
-    const shadow = this.attachShadow({ mode: "open" });
-    shadow.appendChild(this.styles());
-    shadow.append(this.conteudo());
+    console.log(`build importada`)
+    const shadow = this.attachShadow({ mode: 'open' })
+    shadow.appendChild(this.styles())
+    shadow.append(this.conteudo())
   }
 
   styles() {
-    const style = document.createElement("style");
+    const style = document.createElement('style')
     style.textContent = `
        h1 {
            color: coral;
         }
-   `;
-    return style;
+   `
+    return style
   }
   conteudo() {
     //mode 3 templates or div
-    const template = document.createElement(`template`);
-    template.innerHTML = `<h1>Hello from templates</h1>`;
-    return template.content;
+    const template = document.createElement(`template`)
+    template.innerHTML = `<h1>Hello from templates</h1>`
+    return template.content
   }
 }
 
-customElements.define("mycomp-1", BlogPost);
+customElements.define('mycomp-1', BlogPost)
 ```
 
 - Using custom `methods and bind(this)` [REF](https://youtu.be/fZZAt0Sbz5k?t=2335)
@@ -250,16 +250,18 @@ customElements.define("mycomp-1", BlogPost);
 ```js
 class StartRater extends HTMLElement {
   constructor() {
-    super();
+    super()
 
-    const shadow = this.attachShadow({ mode: "open" });
-    //adiciona os styles and o conteudo
-    shadow.append(this.styles(), this.conteudo(), this.myinput());
-    this.funcoes();
+    const shadow = this.attachShadow({ mode: 'open' })
+    // adiciona os styles and o conteudo
+    shadow.append(this.styles(), this.conteudo(), this.myinput())
+
+    // let fun available
+    this.funcoes()
   }
 
   styles() {
-    const style = document.createElement("style");
+    const style = document.createElement('style')
     style.textContent = `
         h1 {
             color: coral;
@@ -270,11 +272,11 @@ class StartRater extends HTMLElement {
         .container{
           border: 1px solid;
         }
-    `;
-    return style;
+    `
+    return style
   }
   conteudo() {
-    const template = document.createElement(`template`);
+    const template = document.createElement(`template`)
     template.innerHTML = `
     <div>
       <h1>Hello from templates</h1>    
@@ -296,74 +298,74 @@ class StartRater extends HTMLElement {
 
     
     </div>
-    `;
-    return template.content;
+    `
+    return template.content
   }
   funcoes() {
-    const h1 = this.shadowRoot.querySelector("h1");
-    h1.textContent = "Hello from methods";
+    const h1 = this.shadowRoot.querySelector('h1')
+    h1.textContent = 'Hello from methods'
     h1.onclick = function () {
-      console.log(`click no h1`);
-    };
-    this.shadowRoot.querySelector("button").onclick = () => {
-      alert(`button click`);
-    };
-    this.shadowRoot.querySelector("footer").onclick = this.footer.bind(this);
+      console.log(`click no h1`)
+    }
+    this.shadowRoot.querySelector('button').onclick = () => {
+      alert(`button click`)
+    }
+    this.shadowRoot.querySelector('footer').onclick = this.footer.bind(this)
 
-    this.shadowRoot.querySelector("aside").onclick = this.faside;
-    this.shadowRoot.querySelector("article").onclick = this.faside.bind(this);
+    this.shadowRoot.querySelector('aside').onclick = this.faside
+    this.shadowRoot.querySelector('article').onclick = this.faside.bind(this)
   }
 
   footer() {
-    return (this.shadowRoot.querySelector("footer").innerHTML = "foox");
+    return (this.shadowRoot.querySelector('footer').innerHTML = 'foox')
   }
 
   //context this
 
   faside() {
-    console.log(this); // <aside></aside>
+    console.log(this) // <aside></aside>
   }
   //mais se quiser o this do parent component, chamada acionar this.myfun.bind()
   farticle() {
-    console.log(this);
+    console.log(this)
   }
   myinput() {
-    const div = document.createElement("div");
-    const h1 = document.createElement("h1");
-    const p = document.createElement("p");
-    const input = document.createElement("input");
+    const div = document.createElement('div')
+    const h1 = document.createElement('h1')
+    const p = document.createElement('p')
+    const input = document.createElement('input')
 
-    input.setAttribute("type", "text");
-    input.placeholder = "text here";
-    input.value = "";
+    input.setAttribute('type', 'text')
+    input.placeholder = 'text here'
+    input.value = ''
     input.oninput = () => {
-      p.textContent = input.value;
+      p.textContent = input.value
       if (input.value == 1) {
-        console.log(`one`);
+        console.log(`one`)
       }
 
-      this.verificainput(input.value); //externo method
-    };
+      this.verificainput(input.value) //externo method
+    }
 
-    div.classList.add("container");
+    div.classList.add('container')
 
-    h1.classList.add("web");
-    h1.textContent = "input Component";
+    h1.classList.add('web')
+    h1.textContent = 'input Component'
 
-    div.appendChild(h1);
-    div.appendChild(input);
-    div.appendChild(p);
-    return div;
+    div.appendChild(h1)
+    div.appendChild(input)
+    div.appendChild(p)
+    return div
   }
   //externo method
   verificainput(val) {
     if (val == 2) {
-      console.log(`two`);
+      console.log(`two`)
     }
   }
 }
 
-customElements.define("maceio-al", StartRater);
+customElements.define('maceio-al', StartRater)
 ```
 
 # Lifecycle Hooks
@@ -371,13 +373,20 @@ customElements.define("maceio-al", StartRater);
 > connectedCallback() lifecycle hook fires when a component is inserted into the DOM
 
 ```js
+  connectedCallback() {
+    // call functions here - void duplicate console.logs
+    this.anyfunction()
+  }
+```
+
+```js
 class BlogPost extends HTMLElement {
   constructor() {
-    super();
+    super()
   }
   connectedCallback() {
-    console.log(`connected Hook`);
-    this.attachShadow({ mode: "open" });
+    console.log(`connected Hook`)
+    this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
     <style> 
         h1{
@@ -385,11 +394,11 @@ class BlogPost extends HTMLElement {
         }
     </style>
     <h1>Hello using connectedCallback()</h1>
-    `;
+    `
   }
 }
 
-customElements.define("mycomp-1", BlogPost);
+customElements.define('mycomp-1', BlogPost)
 ```
 
 - call methods:
@@ -397,20 +406,20 @@ customElements.define("mycomp-1", BlogPost);
 ```js
 class BlogPost extends HTMLElement {
   constructor() {
-    super();
+    super()
   }
   connectedCallback() {
-    console.log(`connected Hook`);
+    console.log(`connected Hook`)
     //✨ Using this and const
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.append(this.conteudo(), this.styles());
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.append(this.conteudo(), this.styles())
 
     // const shadow = this.attachShadow({ mode: "open" });
     // shadow.append(this.styles(), this.conteudo());
   }
 
   styles() {
-    const style = document.createElement("style");
+    const style = document.createElement('style')
     style.textContent = `
           .start-rater {
               background-color: #f00;
@@ -418,17 +427,17 @@ class BlogPost extends HTMLElement {
           h1{
               color: coral;
           }
-      `;
-    return style;
+      `
+    return style
   }
   conteudo() {
-    const template = document.createElement(`template`);
-    template.innerHTML = `<h1>Hello from templates</h1>`;
-    return template.content;
+    const template = document.createElement(`template`)
+    template.innerHTML = `<h1>Hello from templates</h1>`
+    return template.content
   }
 }
 
-customElements.define("mycomp-1", BlogPost);
+customElements.define('mycomp-1', BlogPost)
 ```
 
 This case como se trata de um `Hook` o mesmo será chamado novamente, evitar isso...

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --bk: #b10e0e;
+        }
+        input, label {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+<input type="checkbox" name="mark" id="mark">
+<label for="mark">Check</label>
+
+    <script>
+const input = document.querySelector('input[type="checkbox"]')
+const root = document.documentElement
+
+
+input.onclick = function(){
+    const checked = input.checked
+    checked ? themepros(dark) : themepros(lite)
+}
+
+// theme
+const darktheme = {'color-scheme':'dark'}
+const lite = {'color-scheme':'lite'}
+
+
+// manualmente keys+values work from scratch
+const v1key = Object.keys(darktheme)
+console.log(...v1key)
+
+const v1val = Object.values(darktheme)
+console.log(...v1val)
+
+changeTheme(...v1key, ...v1val)
+
+
+// func pega o key/value separados e chama o fun que tem setProperty onde espera receber o valores separados
+function themepros(theme){
+    console.log(theme)
+    for(prop in theme){
+        changeTheme(prop, theme[prop])
+    }
+}
+
+
+
+function changeTheme(pro, val){
+    root.style.setProperty(pro, val)
+}
+
+
+
+
+    </script>
+</body>
+</html>

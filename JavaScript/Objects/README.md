@@ -21,6 +21,7 @@ Objects are used to represent a “thing” in your code. That could be a person
   - [Object.isFrozen](#objectisFrozen)
   - [Object.is()](#objectis)
 - [Object.assign](#objectassign)
+- [For in ](#for-in)
 
 ### add
 
@@ -290,6 +291,8 @@ console.log(Object.hasOwn(obj, 'idade')) // false
 
 ### for in
 
+for in - work in Array but não deve ser usado [MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in#itera%C3%A7%C3%A3o_em_arrays_e_for...in)
+
 ```js
 // for in is a method for iterating over "enumerable" properties of an object.
 
@@ -315,14 +318,17 @@ for (const key in pessoas) {
 for (let key in pessoas) {
   console.log(pessoas[key])
 }
+
 //🔰 key+key simples só chamar a key de forma independente.
 for (let key in pessoas) {
   console.log(key, pessoas[key])
 }
+
 //👉 print no HTML:
 for (const key in pessoas) {
   p.innerHTML += key + ': ' + pessoas[key]
 }
+
 //👉👉 beautiful string literal:
 p.innerHTML += `${key} - ${pessoas[key]} `
 
@@ -353,6 +359,69 @@ function getIndex(arr) {
 }
 
 getIndex(['A', 'B', 'C'])
+
+//# contex for in and for of
+const arr = ['a', 'b', 'c']
+
+//
+for (let i in arr) {
+  console.log(i) // 0,1,2
+}
+
+for (let i of arr) {
+  console.log(i) // a,b,c
+}
+
+for (let [i, v] of arr.entries()) {
+  console.log(i) // 0,1,2
+}
+
+//
+for (let i in arr) {
+  if (arr[i].includes('a')) {
+    console.log(arr[i]) // a
+  }
+}
+
+for (let i of arr) {
+  if (i.includes('a')) {
+    console.log(i) // a
+  }
+}
+
+//
+for (let i in arr) {
+  if (i == 2) {
+    console.log(arr[i]) // c
+  }
+}
+
+for (let [i, v] of arr.entries()) {
+  if (i == 2) {
+    console.log(v) // c
+  }
+}
+
+//#
+const obj = [
+  { id: 1, name: 'Geraldo' },
+  { id: 2, name: 'Costa' },
+]
+
+// remove zeros from
+const pessoas = {
+  1: 'Geraldo',
+  2: 'Felipe',
+  3: 'Bella',
+  4: 'Milly',
+}
+
+// get obj has id
+for (let i in obj) {
+  if (Object.hasOwn(obj[i], 'id')) {
+    console.log(obj[i]) // {id: 1, name: "Geraldo"}, {id: 2, name: "Filho"},
+  }
+}
 ```
 
 ### iterate object with: forEach / of of

@@ -444,6 +444,23 @@ const [password, setPassword] = useState()
 <input type="password" id="pass" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
 ```
 
+useState on input;
+
+```jsx
+import {useState} from 'react'
+
+const [idade, setidade] = useState('')
+
+
+function Idadefun(e){
+  console.log(e)
+setidade(e.target.value)
+}
+
+<input type='text' onInput={Idadefun} />
+<p>{idade}</p>
+```
+
 # Tips:
 
 ```jsx
@@ -465,6 +482,24 @@ function Button(props) {
 
 // pass params
  <Button event={(e) => segundoEvento(e, 20)} text="Segundo Evento" />
+```
+
+### Function por props
+
+```js
+<button onClick={props.myfun}>{props.text}</button>
+
+<Buttonx myfun={Makesomething} text="Download" />
+
+```
+
+# INLINE STYLES:
+
+`marginTop` = `margin-top` evitando o uso de hífen
+
+```jsx
+<div style={{marginTop: '10px'}}> <Button event={(e) => segundoEvento(e, 20)} text="Segundo Evento" /></div>
+<h1 style={{color: "red"}}>Hello Style!</h1>
 ```
 
 ### How get Input Value in React?

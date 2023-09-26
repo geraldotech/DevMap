@@ -688,3 +688,12 @@ Alterar o loading do button usando o slot:name
       </template>
     </AppButton>
 ```
+
+# Router 3
+
+> add Vue Router 3 as plugin Vue 2 CLI [https://v3.router.vuejs.](https://v3.router.vuejs.org/installation.html#vue-cli)
+
+```js
+add Vue Router 3 as plugin Vue 2 CLI: via
+vue add router
+```
