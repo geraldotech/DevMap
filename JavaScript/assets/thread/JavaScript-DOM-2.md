@@ -438,11 +438,12 @@ const p = document.createElement('p')
 p.textContent = 'one'
 const p2 = p.cloneNode(true)
 const p3 = p.cloneNode(true)
+const p4 = p.cloneNode(true).textContent = 'Four'
 
 p2.textContent = 'Hey soul'
 p3.textContent = 'Hey soul 2'
 
-parent.append(p, p2, p3)
+parent.append(p, p2, p3, p4)
 document.body.appendChild(parent)
 
 
