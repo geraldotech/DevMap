@@ -29,6 +29,19 @@ const findpropown = posts.filter((post) => post.hasOwnProperty('pinned'))
 console.log(findpropown)
 console.log(Object.keys(findpropown).length)
 
+let a = { id: 1, title: 'Super Nintendo Games', published: true, pinned: true }
+
+console.log('pinned' in a) // true
+
+for (const i of posts) {
+  if (i.title.includes('Foo')) {
+    console.log(i) // id 3....
+  }
+  if (i.pinned) {
+    console.log(i) // id 1...
+  }
+}
+
 /* 
 only show if pinned has lenght
 Object.keys turn to Array and get length
