@@ -4,6 +4,10 @@
 // creating app after installed Node:
 $ npx create-react-app <myappname>
 
+// npx create-react-app error enoent ?
+$ npm uninstall -g create-react-app
+$ npm install -g create-react-app
+
 // Start Server
 $ npm run start
 
@@ -11,6 +15,7 @@ $ npm run start
 $ npm install -g create-react-app
 
 //Inside directory:
+
 $ npx create-react-app@5.0.0 my-app
 $ npx clear-npx-cache
 
@@ -76,7 +81,8 @@ Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd3
 
 `src/componentes > create a HelloWord.js`
 
-- assim como no Vue wrapper - embrulhar, enrolar usando uma div, main... porém geralmente é uma div
+- assim como no Vue wrapper - embrulhar, enrolar usando uma div
+- Quando for footer wrapper em `<footer>`, `main`, `nav` ...
 
 ```js
 // v1
