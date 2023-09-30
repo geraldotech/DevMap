@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  color-scheme: dark;
+}
+
+body {
+  margin: 50px;
+  padding-bottom: 200px;
+}
+img {
+  max-width: 50%;
+  border-radius: 50%;
+}
+h1 {
+  color: #333;
+}
+p {
+  background: #999;
+  padding: 10px;
+}
+
+div form {
+  text-align: left;
+  width: 100%;
+}
