@@ -4,15 +4,15 @@
 // creating app after installed Node:
 $ npx create-react-app <myappname>
 
+// Start Server
+$ npm run start
+
 
 $ npm install -g create-react-app
 
 //Inside directory:
 $ npx create-react-app@5.0.0 my-app
 $ npx clear-npx-cache
-
-//Command terminal VScode iniciar server:
-$ npm run start
 
 ```
 
@@ -47,14 +47,12 @@ function App() {
 export default App
 ```
 
-1 - Button on click change text, tudo na page App.js
+### Button on click change text, tudo na page App.js
 
-#import:
-`import { useState } from "react";`
-
-#in App.js
+- import: `import { useState } from "react";`
 
 ```js
+// App.js
 
 //::before return
 function handleClick() {
@@ -78,7 +76,7 @@ Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd3
 
 `src/componentes > create a HelloWord.js`
 
-assim como no Vue wrapper - embrulhar, enrolar usando uma div, main... porém geralmente é uma div
+- assim como no Vue wrapper - embrulhar, enrolar usando uma div, main... porém geralmente é uma div
 
 ```js
 // v1
@@ -137,13 +135,12 @@ export default App
 
 # Props
 
-> propriedades
+> shorthand for propriedades
 
-passado como atribudo como um tag, comparando com html: `<img src="" alt="" />`
+- passado como atribudo como um tag, comparando com html: `<img src="" alt="" />`
+- Create a file `SayMyName.js`
 
-Create a file `SayMyName.js`
-
-```js
+```jsx
 function SayMyName(props) {
   return (
     <div>
@@ -153,7 +150,7 @@ function SayMyName(props) {
 }
 ```
 
-App.js
+- App.js
 
 ```jsx
 import SayMyName from './components/SayMyName'
@@ -190,7 +187,6 @@ function Pessoa(props) {
 }
 
 // v2 alternative [better]
-
 function Pessoa({ foto, nome, idade, profissao }) {
   return (
     <div>
@@ -203,13 +199,7 @@ function Pessoa({ foto, nome, idade, profissao }) {
 }
 
 // App.js import and use it:
-
-;<Pessoa
-  nome="Geraldo"
-  idade="30"
-  profissao="Sistemas"
-  foto="https://via.placeholder.com/50"
-/>
+<Pessoa  nome="Geraldo"  idade="30" profissao="Sistemas"  foto="https://via.placeholder.com/50" />
 
 //When for passar numero add between {}
 <Item marca="Ferrari" lacamento={1985} />
@@ -227,9 +217,10 @@ function App() {
 
 # CSS Modules
 
-pode ser adicionado de modo global por meio do index.css, porém é possível estializar a nível de components facilitando a manutenção.
+- Pode ser adicionado de modo global por meio do <ins>index.css</ins>,
+- porém é possível estializar a nível de components facilitando a manutenção.
 
-- e.g: create a `Frase.module.css` and define styles
+- create a `Frase.module.css` and define styles, instead **class-myclass** use **class_myclass**
 - on component `import styles from './Frase.module.css'`
 
   - ```jsx
@@ -247,8 +238,9 @@ pode ser adicionado de modo global por meio do index.css, porém é possível es
 
 # React Fragmentos
 
-Permite a criação de um component sem elemento pai: `<> </>`
-com isso ao inves de retornar uma <div> renderiza o elemento puro, a menos que tenha necessidade _e.g_ em um card o uso de <div> seria necessário.
+- Permite a criação de um component sem elemento pai: `<> </>`
+- inves de retornar uma `<div>` renderiza o elemento puro,
+- a menos que tenha necessidade _e.g_ em um card o uso de `<div>` seria necessário.
 
 ```jsx
 function List() {
@@ -380,7 +372,9 @@ function cadastrarUsuario(e) {
 }
 ```
 
-### Adicionando form.name by gmap and get values
+### Adicionando form.name and get values
+
+> by gmap
 
 ```jsx
 function Form() {
@@ -420,9 +414,9 @@ function Form() {
 
 # useState
 
-é um hook do React, consegue manusear o estado do um componente de forma simples, funciona muito bem com eventos
-
-1 - No local para inputs instead `for` deve usar `htmlFor`
+- é um hook do React, consegue manusear o estado do um componente de forma simples,
+- funciona muito bem com eventos
+- No local para inputs instead `for` deve usar `htmlFor`
 
 > Did you mean `htmlFor`?
 
@@ -446,10 +440,9 @@ function Form() {
 
 3 - Nao precisou adicionar o attr name no input
 
-4 -
+4 - efinir a function que é chamada no `<form onSubmit={registerUser}>`
 
 ```jsx
-// definir a function que é chamada no  <form onSubmit={registerUser}>
 function Form() {
   function registerUser(e) {
     e.preventDefault()
@@ -477,7 +470,7 @@ const [password, setPassword] = useState()
 <input type="password" id="pass" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
 ```
 
-useState on input;
+# useState on input;
 
 ```jsx
 import {useState} from 'react'
@@ -498,7 +491,7 @@ setIdade(e.target.value)
 
 ```jsx
 //inline alert/console function
-$ <button onClick={() => { alert('como vai')}}> ALERT</button>
+$ <button onClick={() => { alert('como vai')}}>ALERT</button>
 ```
 
 # Passar eventos por props
@@ -544,24 +537,25 @@ function Button(props) {
 
 # Renderizar listas
 
-> Criar um Array
-> Using map
+- Criar um Array
+- Using map
+- Using map destructuing objects [react-loop-through-array-of-objects](https://bobbyhadz.com/blog/react-loop-through-array-of-objects)
 
 [Full Code](React-Aulas/src/components/Listaarr.js)
 
 # State Lift
 
-> Tecnica usada para compartilhar o state
-> é normal vários components dependerem do mesmo estado
-> Centralizar o state no pai, e definor quem usa e quem define (setState)
-> Entender para aplicar nos projetos
+- Tecnica usada para compartilhar o state
+- é normal vários components dependerem do mesmo estado
+- Centralizar o state no pai, e definor quem usa e quem define (setState)
+- Entender para aplicar nos projetos
 
-[Full Code 1](React-Aulas/src/components/Satelift.js)
-[Full Code 2](React-Aulas/src/components/Saudacao.js)
-
-App.js
+- [Full Code 1](React-Aulas/src/components/Satelift.js)
+- [Full Code 2](React-Aulas/src/components/Saudacao.js)
 
 ```jsx
+// App.js
+
 function App() {
   const [nome, setNome] = useState()
   return (
@@ -578,8 +572,7 @@ function App() {
 
 # React Router
 
-> Precisa instalar esse pacote no projeto
-
+- Precisa instalar esse pacote no projeto
 - `npm install react-router-dom`
 - import: `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
 
@@ -605,9 +598,29 @@ function App() {
 </Router>
 ```
 
-Fazer os respectivos components e importar
+- Fazer os respectivos components e importar
 
-### How get Input Value in React?
+# React Icons
+
+- Pacote externo de icones
+- precisa adicionar via npm
+- permite usar com a sintaze parecida com a de components
+- `npm install react-icons`
+- no component: `import { nomeIcon } from 'react-icons/Bibioteca'`
+
+## Font Awesome:
+
+- [Icons LIST](https://react-icons.github.io/react-icons/icons?name=fa)
+- `import { FaCentos } from 'react-icons/fa'`
+- Multi import: `import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'`
+- Apenas chamar o icon: `<FaCentos/>`
+
+## Dev Icons:
+
+- `import { IconName } from "react-icons/di";`
+
+<hr>
+### How get Input Value using useRef
 
 ```jsx
 // add useRef

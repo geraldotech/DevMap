@@ -716,72 +716,7 @@ console.log(numbers.every(maior)); // false pq nem todos são >10
 console.log(numbers.some(maior)); //true pq existe valores > 10
 
 /* [=============================================================================]
-🟢 17 - #map - percorrer um array e obter um novo vetor cujo itens são resultados de uma função de callback
-*/
-//way 1
-const arr = [1,2,3,4,5];
-
-arrn = arr.map(x => 2** x);
-console.log(arrn); //(5) [2, 4, 8, 16, 32]
-//way 2
-
-const arr2 = [1,2,3,4,5];
-arr2n = arr2.map((item) => {
-  return item ** 2;
-})
-console.log(arr2n); //(5) [1, 4, 9, 16, 25]
-
-//way 3 - get
-var mercado = new Map();
-mercado.set('Bebidas','cerveja, refrigerates, vinhos');
-mercado.set('higiene','papel toalha, sabonete');
-
-console.log(mercado.get('Bebidas'));
-console.log(mercado.get('higiene'));
-console.log(mercado.keys);
-
-//get first letters
-console.log(['BMW','GOL','LATAM','AMERICAN','BRAZIL','RAPPI'].map(el => el[0]));
-
-//Getting index
-console.log(arr.map((val, index) => [index,val]));
-
-//https://stackoverflow.com/questions/1144705/best-way-to-store-a-key-value-array-in-javascript
-
-//MAP add values in obj
-const pessoa = [{
-  name:"Geraldo",
-  cidade:"Palmeira",
-}];
-
-let x = pessoa.map((value) => {
-  return {
-    value, "Active":true,
-  }
-})
-
-//contador com #mapcontador
-let contador = 0
-let mapa = [1,2,3,4,5,1,2,2,2,2].map(val => {
-  return val == 2 ? contador++ : contador 
-})
-console.log(contador); // 5
-
-/*
-Contextualizando #map vs #flapMap
-*/
-
-let arr = [1, 3, 5, 7];
-
-console.log(arr.map(val => val + 1)); //2,4,6,8
-//Nested subArrways
-console.log(arr.map(val => [val, val + 1])); // [[1, 2], [3, 4], [5, 6], [7, 8]] ❌
-
-console.log(arr.map(val => [val, val + 1]).reduce((acc,curr) => acc.concat(curr))); // // [1, 2, 3, 4, 5, 6, 7, 8] ✅
-
-console.log(arr.flatMap(val => [val, val + 1])); //1,2,3,4,5,6,7,8
-//ou seja contém os valures do oldvalue concatenados
-//https://blog.travismclarke.com/post/flatmap-vs-map/
+🟢 17 - #map moved to Map.md
 
 /* [=============================================================================]
 🟢 17.1 #replace  
@@ -792,15 +727,6 @@ console.log(newtxt);
 
 console.log("Geraldo Filho".replace(" ", "-")); // Geraldo-Filho
   
-//map and replace and transformar string em number
-  const n = ["a 199","a 200","a 300"];
-  const num = n.map(function(int){
-      return +int.replace("a ",""); // ou  return Number(int.replace("a ",""));
-  });
-  console.log(num);
-
-// Map.set https://stackoverflow.com/questions/63595841/find-element-in-map-by-its-property-value
-
 
 //📌replace
 let name = "gg";
