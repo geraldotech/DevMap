@@ -16,7 +16,7 @@ $ npm run start
 
 ```
 
-JSX interpolation strings, import CSS Styles and functions
+# JSX interpolation strings, import CSS Styles and functions
 
 ```jsx
 import './App.css'
@@ -66,6 +66,8 @@ const [str, setSrt] = useState("Ola Mundo");
 //::inside return
 <h1>{str}</h1>
 <button onClick={() => handleClick()}>click here</button>
+
+<button onClick={function () {console.log(`hello`)}}>arrow functions are more beautiful</button>
 ```
 
 Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd36112d591f391397a20a#file-app-js)
@@ -243,7 +245,7 @@ pode ser adicionado de modo global por meio do index.css, porém é possível es
     export default Frase
     ```
 
-# React Fragmmentos
+# React Fragmentos
 
 Permite a criação de um component sem elemento pai: `<> </>`
 com isso ao inves de retornar uma <div> renderiza o elemento puro, a menos que tenha necessidade _e.g_ em um card o uso de <div> seria necessário.
@@ -265,7 +267,7 @@ export default List
 - Definir tipos para as props
 - Possibilidade de definir um valor padrão: usar o obj `default Props`
 
-- import: `import PropTypes from 'prop-types'`
+- Deve fazer o import: `import PropTypes from 'prop-types'`
 - Acima de exports adicionar:
 
   > Item = ComponentName
@@ -283,6 +285,37 @@ Item.propTypes = {
   marca: PropTypes.string.isRequired,
 }
 ```
+
+<details>
+<summary>Full Example</summary>
+
+```jsx
+import PropTypes from 'prop-types'
+
+function Item({ marca, lacamento }) {
+  return (
+    <>
+      <li>
+        {marca} - {lacamento}
+      </li>
+    </>
+  )
+}
+
+Item.propTypes = {
+  marca: PropTypes.string.isRequired,
+  lacamento: PropTypes.number,
+}
+
+Item.defaultProps = {
+  marca: 'Faltou a marca',
+  lacamento: 0,
+}
+
+export default Item
+```
+
+</details>
 
 - Default values
 
@@ -338,7 +371,7 @@ export default Evento
 <Evento numero={2} />
 ```
 
-### onSubmit and prevent.default
+### onSubmit and prevent.default()
 
 ```jsx
 function cadastrarUsuario(e) {
@@ -347,7 +380,7 @@ function cadastrarUsuario(e) {
 }
 ```
 
-### extra adicionando form.name by gmap and get values
+### Adicionando form.name by gmap and get values
 
 ```jsx
 function Form() {
@@ -389,7 +422,7 @@ function Form() {
 
 é um hook do React, consegue manusear o estado do um componente de forma simples, funciona muito bem com eventos
 
-1 - No form em vez de `for` deve usar `htmlFor`
+1 - No local para inputs instead `for` deve usar `htmlFor`
 
 > Did you mean `htmlFor`?
 
@@ -449,12 +482,12 @@ useState on input;
 ```jsx
 import {useState} from 'react'
 
-const [idade, setidade] = useState('')
+const [idade, setIdade] = useState('')
 
 
 function Idadefun(e){
   console.log(e)
-setidade(e.target.value)
+setIdade(e.target.value)
 }
 
 <input type='text' onInput={Idadefun} />
@@ -501,6 +534,53 @@ function Button(props) {
 <div style={{marginTop: '10px'}}> <Button event={(e) => segundoEvento(e, 20)} text="Segundo Evento" /></div>
 <h1 style={{color: "red"}}>Hello Style!</h1>
 ```
+
+# Render by condition - renderização condicional if
+
+> É possível usar o state para criar as condições
+> não é bom criar lógicas muito complexas nos templates, por não ser o local ideal para lógicas
+
+[Full Code](React-Aulas/src/components/Conditional.js)
+
+# Renderizar listas
+
+> Criar um Array
+> Using map
+
+[Full Code](React-Aulas/src/components/Listaarr.js)
+
+# State Lift
+
+> Tecnica usada para compartilhar o state
+> é normal vários components dependerem do mesmo estado
+> Centralizar o state no pai, e definor quem usa e quem define (setState)
+> Entender para aplicar nos projetos
+
+[Full Code 1](React-Aulas/src/components/Satelift.js)
+[Full Code 2](React-Aulas/src/components/Saudacao.js)
+
+App.js
+
+```jsx
+function App() {
+  const [nome, setNome] = useState()
+  return (
+    <div className="App">
+      <h1>State Lift</h1>
+      <StateLift setNome={setNome} />
+      {nome}
+
+      <Saudacao nome={nome} />
+    </div>
+  )
+}`
+```
+
+# React Router
+
+> Precisa instalar esse pacote no projeto
+
+- `npm install react-router-dom`
 
 ### How get Input Value in React?
 
