@@ -1009,6 +1009,7 @@ console.log(array.fill(0,2)) // (value, start, end) [1 ,2 , 0, 0, 0]
 console.log("tem B",["A","B","C"].some(val => val == "B")); // tem B ? // true
 console.log("vazio",array.filter(el => [].includes(el))); // se true filtra e display ou vazio se for false
 console.log([1,2,3].some(el => array.includes(el))); // tem algum elemento assim no array? true
+
 //convert string to array use map to get number and sum with reduce
 console.log("2+3+2".split("+").map(el => +el).reduce((val, ind) => val+= ind)); // 7
 
@@ -1026,19 +1027,25 @@ const keyz = [2008,1992,"2003"];
 console.log(notas.every(el => keyz.includes(el))); //false
 console.log(notas.some(el => keyz.includes(el))); // true
 /*
-Devo chamar primeiro o array ou keys?
-Depende do objetivo! no caso de every/some quando vai verificar se aquela lista de keys existe no Array, então chamar primeiro as keys.
+✅ Devo chamar primeiro o Array ou keys?
+➡️ Depende do objetivo! 
+👉 every/some para verificar se aquela lista de keys existe no Array, então chamar primeiro as keys.
+👉 para verificar se no Array tem aquela lista de keys [o que é mais comum de fazer], então chamar primeiro o Array
 
-* caso que whatever
+* caso que Whatever
 console.log(["Geraldo", "Barra", "Georgeo"].filter(el => api.includes(el))); // Geraldo, Georgeo
 console.log(api.filter(val => ["Geraldo", "Barra", "Georgeo"].includes(val))); // Geraldo, Georgeo
 
-* outro e.g
-//todos da key tem no arr ? // true
-console.log(["Geraldo", "CostAo"].every(val => api.includes(val)));
+* caso que whatever
+console.log(["Aomeo", 'geraldoX'].some(val => api.includes(val))) // true
+console.log(api.some(val => ["Aomeo", 'geraldoX'].includes(val))) // true
 
-//todos do arr tem na key ? // false
-console.log(api.every(val => ["Geraldo", "CostAo"].includes(val)));
+* caso que faz diferença: 
+// todos da key tem no arr ? 
+console.log(["Geraldo", "CostAo"].every(val => api.includes(val))); // true
+
+// mas todos do arr tem na key ? 
+console.log(api.every(val => ["Geraldo", "CostAo"].includes(val))); // false
 
 */
 console.log(notas.some(a => keyz.includes(a))); // true
@@ -1124,8 +1131,22 @@ console.log(api.filter(val => val.endsWith("o")));;
 // 3 - filter todos que começam com a letra G e B
 console.log(api.filter(val => ["G","B"].some(sum => val.startsWith(sum))));
 
+//standalone
+function comecaGB(val){
+  return ['G','B'].some((ele) => { // cada um com seu return
+     return val.startsWith(ele) ///cada umcom seu return
+   })
+ }
+
 // 4 - filtrar a letra maiuscula A e l
 console.log(api.filter(val => ["A","l"].some(b => val.includes(b))));
+
+// standalone
+function incluidos(callbackdoFilter){
+  return ['A', 'l'].some((ele) => {
+    return callbackdoFilter.includes(ele)
+  })
+}
 
 // 5 - todos inclui "o"?
 console.log(api.every(el => el.includes("o")));
@@ -1175,19 +1196,19 @@ console.log(api.filter(val => val != "Geraldo" && val.endsWith("o")));
 /*-*[=============================================================================]*-*/
 /* getting auto index 
 
-**duas alternativas** neste caso onde é passado uma condição 
+** duas alternativas** neste caso onde é passado uma condição 
 */
 const pegain = api.findIndex(val => val.endsWith("o"));
 // e o quando sabemos o nome exato
-//const pegain = api.indexOf("Geraldo");
+// const pegain = api.indexOf("Geraldo");
 console.log(pegain);
 console.log(api.filter((val, ind) => {
   if(ind != pegain) return val.endsWith("o");
 }));
 
-//mesmo resultado arrow shorthand
+// mesmo resultado arrow shorthand
 console.log(api.filter((val, ind) => val.endsWith("o") && ind != pegain));
-//mesmo resultado condicoes invertidas
+// mesmo resultado condicoes invertidas
 console.log(api.filter((val,index) => index != pegaInde && val.endsWith("o")))
 
 // 12 - Todos esses itens existe no array ? ["Geraldo", "CostAo"]
@@ -1209,23 +1230,49 @@ function vogais(el){
 console.log(api.filter(val => val.includes("A")));
 
 // 16 - Get all names.length
+
+// forEach
 api.forEach((el, ind)=> {
   console.log(el.length)
 });
+
+  // map
+  console.log(api.map(val => val.length))
+
+  // for of
+  for(const i of api){
+    console.log(i.length)
+  }
+
+  // reduce
+api.reduce((acc, curVal) => {
+  console.log(curVal.length)
+})
+// arr push
+let index = []
+let filtro = api.filter((val, ind) => {
+  index.push(val.length)
+})
+console.log(index)
+
+// for
+for(let i = 0; i< api.length; i++){
+  console.log(api[i].length)
+}
 
 // 17 - find primeiro ele == 6
 console.log(api.find(el => el.length == 6)); //CostAo
 
 // 18 - encontrar o element.length == 6 porém pulando o primeiro que foi encontrado
 
-//informe o index manualmente
+// informe o index manualmente
 console.log(api.find((el, ind) => { // em vez de: "CostAo", pega: "Barrao"
   if(ind > 1){
     return el.length = 6
   }
 }));
 
-//Alone function encontra o index do primeiro.length automaticamente
+// Alone function encontra o index do primeiro.length automaticamente
 function primeiro(el){
   return api.findIndex(val => val.length == 6);
 }
@@ -1238,10 +1285,11 @@ console.log(api.find((val, ind) => { //Barrao
  if(ind > primeiro()) return val.length == 6
 }));
 
-//alternative shorthand inline
+// alternative shorthand inline
 console.log(api.find((val, ind) => val.length == 6 && ind != primeiro()));
+console.log(api.find((val, ind) => val.length == 6 && ind > getFirstValue()))
 
-//alternative declarando string manualmente
+// alternative declarando string manualmente
 console.log(api.find((item) => item != "CostAo" && item.length == 6));
 
 //tudo em uma linha
@@ -1250,10 +1298,12 @@ console.log(api.filter((val,index, ArrAtual) => {
     return val.length == 6
   }
 }));
+
 //inline
 const pula2 = api.find((val, ind, arr) => val.length == 6 && ind > arr.findIndex(val => val.length == 6))
 
 console.log(pula2); // Barrao
+
 
 //19 - Dado o Array abaixo remover os valores duplicados
 
@@ -1264,10 +1314,10 @@ console.log(arr.filter((val, ind) => {
   return arr.indexOf(val) === ind; 
 }));
 
-//shorthand
+// shorthand
 const unique = arr.filter((val,ind) => arr.indexOf(val) == ind);
 
-//alternativa podemos usar 3 parametros no filter, value, index, ArrayAtual, então o indexOf chama esse parametros ao inves do Array original diretamente
+// alternativa podemos usar 3 parametros no filter, value, index, ArrayAtual, então o indexOf chama esse parametros ao inves do Array original diretamente
 console.log(arr.filter((val, ind, arrAtual) => {
   return arrAtual.indexOf(val) == ind
 }));
@@ -1335,7 +1385,7 @@ _______________________EXERCICIOS 2_____________________________
 const itens = ["home.html","downloads.html","index.html","main.js","index.js"];
 console.log(itens.filter(val => val.includes("html"))); //home, downloads, index
 
-//filtre todos com .html exceto o index.html, quando você sabe o determinado index
+// filtre todos com .html exceto o index.html, quando você sabe o determinado index
 console.log(itens.filter((val, ind) => { //home e downloads
   if(ind != 2) return val.includes("html"); // qual index não deve filtrar, no caso o index.html
 }));
