@@ -13,16 +13,16 @@
 
 # Properties
 
-| Parent / Container                                      | Child / Item |
-| ------------------------------------------------------- | ------------ |
-| display                                                 | flex         |
-| [flex-direction](#flexdire)                             | flex-grow    |
-| [flex-wrap](#flexwrap)                                  | flex-shrink  |
-| [flex-flow](#flexflow)                                  | flex-basis   |
-| [justify-content](#justifycontent)                      | order        |
-| [align-items](#alignitems)                              | align-self   |
-| [align-content](#aligncontent)                          |              |
-| [gap](https://css-tricks.com/almanac/properties/g/gap/) |              |
+| Parent / Container                                      | Child / Item                                                              |
+| ------------------------------------------------------- | ------------------------------------------------------------------------- |
+| display                                                 | flex                                                                      |
+| [flex-direction](#flexdire)                             | flex-grow                                                                 |
+| [flex-wrap](#flexwrap)                                  | flex-shrink                                                               |
+| [flex-flow](#flexflow)                                  | flex-basis                                                                |
+| [justify-content](#justifycontent)                      | [order](https://developer.mozilla.org/en-US/docs/Web/CSS/order)           |
+| [align-items](#alignitems)                              | [align-self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self) |
+| [align-content](#aligncontent)                          |                                                                           |
+| [gap](https://css-tricks.com/almanac/properties/g/gap/) |                                                                           |
 
 Explicações a fundo visitar os **bests links**.
 
