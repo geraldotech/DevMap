@@ -1,0 +1,70 @@
+{
+  "projects": [
+    {
+      "name": "ReacjJS",
+      "budget": "100",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 100,
+      "services": [
+        {
+          "name": "net",
+          "cost": "50",
+          "description": "netnet",
+          "id": "1899156e-7111-44a3-8c48-4f699a589660"
+        },
+        {
+          "name": "outro",
+          "cost": "50",
+          "description": "novo",
+          "id": "47626e5a-dc69-463e-9e4e-80471923258e"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "vuejs",
+      "budget": "400",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 400,
+      "services": [
+        {
+          "name": "test",
+          "cost": "399",
+          "description": "test",
+          "id": "b29ab4f6-4c32-4bc5-9e95-99341ae9e40d"
+        },
+        {
+          "name": "test2",
+          "cost": "1",
+          "description": "test",
+          "id": "366f0014-5961-4c0e-9375-2921f6f9f992"
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
+}
