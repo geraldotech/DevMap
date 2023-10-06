@@ -12,12 +12,12 @@ console.log(arrn); //(5) [2, 4, 8, 16, 32]
 
 const arr2 = [1,2,3,4,5];
 arr2n = arr2.map((item) => {
-return item \*\* 2;
+return item ** 2;
 })
 console.log(arr2n); //(5) [1, 4, 9, 16, 25]
 
 // way 3 - get
-var mercado = new Map();
+const  mercado = new Map();
 mercado.set('Bebidas','cerveja, refrigerates, vinhos');
 mercado.set('higiene','papel toalha, sabonete');
 
@@ -99,6 +99,8 @@ const map = api.map((val, ind) => {
 
 ### Map loop Destructuring the object's properties
 
+- instead call: `val.name` just call `name`
+
 - https://bobbyhadz.com/blog/react-loop-through-array-of-objects
 
 ```js
@@ -109,42 +111,18 @@ const mapDestructuring = api.map(({ id, name, city }) => {
 
 # Map Links Index
 
-## [CodePen](https://codepen.io/geraldopcf/pen/QWmYrrR)
-
 ```html
-<h4>Array display index e seu href baseado no index + custom name</h4>
+<h4>Array href index + value</h4>
 
 <a id="root"></a>
 ```
 
 ```js
 let names = ['Geraldo', 'Delta', 'Quebrec', 'Bravo', 'Charlie']
-let names2 = []
 
-function getx() {
-  arr = []
-  arr.push('Geraldo')
-  return arr
-}
-
-function indexs(arr) {
-  get = []
-  for (index of arr.keys()) {
-    get.push(index)
-  }
-  return get
-}
-// chama os index arr.keys or index
-ind = indexs(names)
-console.log(ind)
-
-h1 = names
-  .map((value, ind) => {
-    return `<ul><a href="${'item' + ind + value}">${value}</a> ${ind}</ul>`
-  })
-  .join('')
-
-document.getElementById('root').innerHTML = `<ol>${h1}</ol>`
+document.getElementById('root').innerHTML = names.map((val, ind) => {
+  return `<a href="${ind}${val}">${val}</a>`
+})
 
 // mostra todos exceto o elemento Geraldo
 g = names.filter((values) => {
