@@ -21,6 +21,8 @@ Objects are used to represent a “thing” in your code. That could be a person
   - [Object.isFrozen](#objectisFrozen)
   - [Object.is()](#objectis)
 - [Object.assign](#objectassign)
+- [Object.hasOwnProperty("prop") and 'in'](#objhasownpropertyprop)
+- [Object.hasOwn(obj, "prop")](#objectownobj-prop)
 - [For in ](#for-in)
 
 ### add
@@ -278,15 +280,46 @@ console.log(obj)
 ### obj.hasOwnProperty("prop")
 
 ```js
-console.log(obj.hasOwnProperty('name')) // true
-console.log(obj.hasOwnProperty('nome')) // false
+const geraldo = {
+  name: 'Geraldo Filho',
+  age: 30,
+  idade: 30,
+  Developer: true,
+  city: true,
+}
+geraldo.city = 'Maceio' // inherited
+
+console.log('city' in geraldo) // true
+
+console.log(Object.hasOwnProperty(geraldo, 'city')) // inherited => property is herdada //  false
+console.log(geraldo.hasOwnProperty('city')) // nao considera inherited // true
 ```
 
 ### Object.Own(obj, "prop")
 
 ```js
-console.log(Object.hasOwn(obj, 'name')) // true
-console.log(Object.hasOwn(obj, 'idade')) // false
+console.log(Object.hasOwn(geraldo, 'age')) // true
+console.log(Object.hasOwn(geraldo, 'cityx')) // false
+
+// #################
+const obj = {
+  name: 'boxxx',
+  age: 30,
+  city: 'Maceio',
+  stack: 'Front-End',
+}
+
+if (Object.hasOwn(obj, 'name')) {
+  // true
+  delete obj.name
+}
+console.log(obj)
+
+if (Object.hasOwn(obj, 'city')) {
+  obj.city = 'SP'
+}
+
+console.log(obj) // { age: 30, city: 'SP', stack: 'Front-End' }
 ```
 
 ### for in
