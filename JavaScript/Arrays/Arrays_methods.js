@@ -340,7 +340,7 @@ function bb(val){
 }
 
 /*[=============================================================================]
-🟢13 - # filter
+🟢13 - #filter
 Doesn’t change the original array. Faz uma shallow copy do que é encontrado
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 Como o nome já diz é um filtro e assim se faz, filtrando todos os elementos, requer  função
@@ -563,6 +563,18 @@ console.log(busca[0]); // Z
 //📌até podemos modificar
 busca[0] = "H"; 
 console.log(busca[4]); // B
+
+//📌 filter with toLowerCase()
+const shoppingList = ['Alpha', 'Bravo', 'Bravo 2', 'Charlie', 'Delta', 'Echo', 'foxtrot', 'Foxtrot', 'Gold', 'Golf', 'India']
+
+const input = {value: 'B'} // user Input
+
+const FilterItens = shoppingList.filter(val => {
+  const shopList = val.toLocaleLowerCase()
+ return shopList.includes(input.value.toLowerCase())
+})
+
+console.log(FilterItens) // [ 'Bravo', 'Bravo 2' ]
 
 /* [=============================================================================]
 🟢 14 - #find -  method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
