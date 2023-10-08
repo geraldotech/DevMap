@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script>
+  </head>
+  <body>
+    <div id="root">
+      <p>{{Single}}</p>
+      <hr />
+      <h2>FetchFilter</h2>
+      <p>{{FetchFilter}}</p>
+      <p>{{FetchFilter.id}}</p>
+
+      <h2>Fetch Find</h2>
+      <p>
+        <mark>
+          Works but console:
+          <span style="background: red; padding-inline: 50px">
+            Cannot read properties of undefined (reading 'id')
+          </span>
+        </mark>
+      </p>
+      <p>{{FetchFind}}</p>
+      <p>{{FetchFind.id}}</p>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: '#root',
+        created() {
+          this.GetPost()
+        },
+        data() {
+          return {
+            posts: [
+              { id: 1, title: 'lorem' },
+              { id: 2, title: 'lorem 2' },
+            ],
+            fetchsingle: [],
+          }
+        },
+        methods: {
+          GetPost() {
+            fetch('./db.json')
+              .then((req) => req.json())
+              .then((data) => {
+                this.fetchsingle = data.blog.posts
+              })
+          },
+        },
+        computed: {
+          Single() {
+            return this.posts.find((v) => v.id == 2)
+          },
+          FetchFilter() {
+            const single = this.fetchsingle.filter((v) => v.id == 2)
+            return Object.assign({}, ...single)
+          },
+          FetchFind() {
+            const single = this.fetchsingle.find((v) => v.id == 2)
+            return single
+          },
+        },
+      })
+    </script>
+  </body>
+</html>

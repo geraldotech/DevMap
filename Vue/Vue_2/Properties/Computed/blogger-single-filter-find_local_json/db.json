@@ -1,0 +1,46 @@
+{
+  "blog": {
+    "posts": [
+      {
+        "id": 1,
+        "title": "Post one lorem ip sum is a text",
+        "slug": "post-one",
+        "author": "geraldox",
+        "data": "22/02/2023",
+        "article": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, rerum, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <div><img src='https://via.placeholder.com/300x50' alt='img'  /><div> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <h2> e.g load img from local <div><img src='./src/assets/1.jpg' alt='' /></div>"
+      },
+      {
+        "id": 2,
+        "title": "Burnout Revenge is Alive after 17 years",
+        "slug": "post-two",
+        "author": "geraldox",
+        "data": "23/02/2023",
+        "article": "JavaScript VueJS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, rerum <div><figure><img src='https://upload.wikimedia.org/wikipedia/en/c/cb/Revenge_boxart.jpg' alt='game' /><figcaption>Burnout 2005</figcaption></figure></div>"
+      },
+      {
+        "id": 3,
+        "title": "The Progressive JavaScript Framework | Vue",
+        "slug": "vue-js",
+        "author": "geraldox",
+        "data": "23/02/2023",
+        "article": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptate, quos, veniam, voluptates voluptatibus eaque ipsum animi necessitatibus exercitationem deserunt repudiandae. Incidunt similique nihil eum nam saepe non, quis ullam! <img src='https://via.placeholder.com/340x50'/>"
+      },
+      {
+        "id": 4,
+        "title": "Android Root",
+        "slug": "android-root",
+        "author": "geraldox",
+        "data": "May, 31, 2021",
+        "article": "Melhores apps para o Android com Root Access <ul><li>Adway - <a href='https://f-droid.org/packages/org.adaway/' target='_blank'>Download</a></li></ul>"
+      },
+      {
+        "id": 5,
+        "title": "Youtube Downloader",
+        "slug": "android-root-sig",
+        "author": "geraldox",
+        "data": "May, 31, 2021",
+        "article": "Melhores apps para o Android com Root Access <ul><li>Adway - <a href='https://f-droid.org/packages/org.adaway/' target='_blank'>Download</a></li></ul>"
+      }
+    ]
+  }
+}

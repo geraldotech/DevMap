@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{Single}}</p>
+      <hr />
+      <h2>FetchFilter</h2>
+      <p>{{FetchFilter}}</p>
+      <p>{{FetchFilter.id}}</p>
+
+      <h2>Fetch Find</h2>
+      <p>
+        <mark>
+          Works but console:
+          <span style="background: red; padding-inline: 50px">
+            Cannot read properties of undefined (reading 'id')
+          </span>
+        </mark>
+      </p>
+      <hr />
+      <p>{{FetchFind}}</p>
+      <p>{{fetchsingle.id}}</p>
+      <h2>
+        Find using methods:with <mark>beforeUpdate</mark>and
+        <mark>updated</mark>
+      </h2>
+      <p>{{fetchsingle2}}</p>
+      <p>{{fetchsingle2.id}}</p>
+    </div>
+
+    <script>
+      Vue.createApp({
+        el: '#root',
+        created() {
+          this.GetPost()
+        },
+        beforeUpdate() {
+          /* or updated hooks*/
+          this.FetchFindFun()
+        },
+        data() {
+          return {
+            posts: [
+              { id: 1, title: 'lorem' },
+              { id: 2, title: 'lorem 2' },
+            ],
+            fechAllPosts: [],
+            fetchsingle: {},
+            fetchsingle2: {},
+          }
+        },
+        methods: {
+          GetPost() {
+            fetch('./db.json')
+              .then((req) => req.json())
+              .then((data) => {
+                console.log(data.blog.posts)
+                this.fechAllPosts = data.blog.posts
+              })
+          },
+          FetchFindFun() {
+            return (this.fetchsingle2 = this.fechAllPosts.find(
+              (v) => v.id == 2
+            ))
+          },
+        },
+        computed: {
+          Single() {
+            return this.posts.find((v) => v.id == 2)
+          },
+          FetchFilter() {
+            const single = this.fechAllPosts.filter((v) => v.id == 2)
+            return Object.assign({}, ...single)
+          },
+          FetchFind() {
+            return (this.fetchsingle = this.fechAllPosts.find((v) => v.id == 2))
+          },
+        },
+      }).mount('#app')
+    </script>
+  </body>
+</html>
