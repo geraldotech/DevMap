@@ -69,6 +69,12 @@ const qualquernome = cursos.front
 console.log(qualquernome) // VueJS
 
 //https://www.freecodecamp.org/news/destructuring-patterns-javascript-arrays-and-objects/
+
+const arr = [{ id: 1, title: 'loremipsum', slug: 'lorem-ip' }]
+
+const { id, title, slug } = arr[0]
+
+console.log(id, title, slug)
 ```
 
 # Map
