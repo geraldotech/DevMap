@@ -1,0 +1,46 @@
+{
+  "blog": [
+    {
+      "id": 1,
+      "title": "Speed Test",
+      "slug": "speed-test",
+      "author": "geraldox",
+      "published": true,
+      "data": "22, Fev, 2023",
+      "article": "File to test your Network Speed ehenderit fugit animi ipsam ipsa qui saepe, perspiciatis voluptatibus aliquam vel assumenda earum accusantium laboriosam. Labore, et ipsa! Ratione vero delectus voluptatem exercitationem voluptatibus repellat dicta eos magni dolore placeat quos accusamus odio veritatis sed dolores assumenda, aut, hic esse, facere eius. Ipsam recusandae at laboriosam in ea dolore cum consequuntur facere dolores voluptatem, quisquam laudantium! Dicta quas ea dolorem minima, labor",
+      "category": "network",
+      "component": "Speedtest"
+    },
+    {
+      "id": 2,
+      "title": "Burnout Revenge is Alive after 17 years",
+      "slug": "burnout-revenge-is-alive",
+      "author": "geraldox",
+      "published": true,
+      "data": "23, Fev, 2023",
+      "article": "JavaScript VueJS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, rerum <div><figure><img class='img-flex' src='https://upload.wikimedia.org/wikipedia/en/c/cb/Revenge_boxart.jpg' alt='game' /><figcaption>Burnout 2005</figcaption></figure></div> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi, facere voluptatum non id atque temporibus hic fuga? Voluptas laudantium quisquam adipisci iure sint quam reprehenderit fugit animi ipsam ipsa qui saepe, perspiciatis voluptatibus aliquam vel assumenda earum accusantium laboriosam. Labore, et ipsa! Ratione vero delectus voluptatem exercitationem voluptatibus repellat dicta eos magni dolore placeat quos accusamus odio veritatis sed dolores assumenda, aut, hic esse, facere eius. Ipsam recusandae at laboriosam in ea dolore cum consequuntur facere dolores voluptatem, quisquam laudantium! Dicta quas ea dolorem minima, labore, beatae, consequuntur porro sed quia sapiente debitis aperiam esse doloremque voluptate assumenda rem.</p>",
+      "category": "games"
+    },
+    {
+      "id": 3,
+      "title": "Vue The Progressive JavaScript Framework ",
+      "slug": "vue-js",
+      "author": "geraldox",
+      "published": true,
+      "data": "23, Fev, 2023",
+      "article": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptate, quos, veniam, voluptates voluptatibus eaque ipsum animi necessitatibus exercitationem deserunt repudiandae. Incidunt similique nihil eum nam saepe non, quis ullam! <figure><img src='https://via.placeholder.com/340x50'/></figure> ",
+      "category": "uncategorized"
+    },
+    {
+      "id": 4,
+      "title": "Android Apps",
+      "slug": "android-apps",
+      "author": "geraldox",
+      "published": true,
+      "data": "May, 31, 2021",
+      "article": "<h1 style='text-align:center; margin: 10px 0; color: red'>Listando Android Apps</h1>",
+      "component": "Android",
+      "category": "android"
+    }
+  ]
+}
