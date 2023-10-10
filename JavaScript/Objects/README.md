@@ -22,8 +22,8 @@ Objects are used to represent a “thing” in your code. That could be a person
   - [Object.is()](#objectis)
 - [Object.assign](#objectassign)
 - [Object.hasOwnProperty("prop") and 'in'](#objhasownpropertyprop)
-- [Object.hasOwn(obj, "prop")](#objectownobj-prop)
-- [For in ](#for-in)
+- [Object.hasOwn(obj, "prop")](#objecthasownobj-prop)
+- [For in and in](#for-in)
 
 ### add
 
@@ -140,7 +140,7 @@ console.log(Object.keys(window)) // document
 console.log(Object.values(window)[2]) //#document
 ```
 
-#### Object.fromEntries()
+### Object.fromEntries()
 
 ```js
 // ES2019 introduced the Object.fromEntries() method that allows you to easily convert a list of key-value pairs into an object.
@@ -218,11 +218,11 @@ delete obj.prop
 console.log(obj)
 ```
 
-#### Object.isFrozen()
+### Object.isFrozen()
 
 `console.log(Object.isFrozen(obj));`
 
-#### Object.is()
+### Object.is()
 
 ```js
 const geraldo = {
@@ -237,7 +237,7 @@ console.log(Object.is(geraldo.age, geraldo.idade))
 console.log(geraldo.age == geraldo.idade)
 ```
 
-#### Object.create()
+### Object.create()
 
 ```js
 // Using this for undeclared keys eg: `this.name` and `this.valor`[corresponde a um valor para uma function nesse obj]
@@ -285,17 +285,19 @@ const geraldo = {
   age: 30,
   idade: 30,
   Developer: true,
-  city: true,
 }
 geraldo.city = 'Maceio' // inherited
 
-console.log('city' in geraldo) // true
+// Verificar props + inherited
+console.log(Object.hasOwnProperty(geraldo, 'city')) //  false
 
-console.log(Object.hasOwnProperty(geraldo, 'city')) // inherited => property is herdada //  false
-console.log(geraldo.hasOwnProperty('city')) // nao considera inherited // true
+// Verificar prop no inherited
+console.log(geraldo.hasOwnProperty('city')) // true
 ```
 
-### Object.Own(obj, "prop")
+### Object.hasOwn(obj, "prop")
+
+The method returns false if the property is inherited, or has not been declared at all
 
 ```js
 console.log(Object.hasOwn(geraldo, 'age')) // true
@@ -323,6 +325,12 @@ console.log(obj) // { age: 30, city: 'SP', stack: 'Front-End' }
 ```
 
 ### for in
+
+### in
+
+```js
+console.log('city' in geraldo) // true
+```
 
 for in - work in Array but não deve ser usado [MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in#itera%C3%A7%C3%A3o_em_arrays_e_for...in)
 
