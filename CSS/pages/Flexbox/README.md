@@ -63,7 +63,7 @@ E quando mudamos o flex-wrap para wrap, mantemos o padrão do flex-direction que
 </ol>
 </details>
 <details>
-<summary> <a id="justifycontent">justify-content</a></summary>
+<summary> <a id="justifycontent">◀️justify-content▶️</a></summary>
 <ol>
 <li>flex-start</li>
 <li>flex-end</li>
@@ -74,7 +74,7 @@ E quando mudamos o flex-wrap para wrap, mantemos o padrão do flex-direction que
 </details>
 <!-- new details -->
 <details>
-<summary> <a id="alignitems">align-items</a></summary>
+<summary> <a id="alignitems">🔽align-items🔼</a></summary>
 <ol>
 <li>stretch ➡️default</li>
 <li>flex-start</li>
