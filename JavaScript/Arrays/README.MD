@@ -11,6 +11,9 @@ for (const i of iterator) {
 }
 
 // entries
+/* 
+The loop does not offer any syntax to do this, but you can combine the destructuring syntax introduced in ES6 with calling the entries() method on the array
+*/
 
 for (const [i, v] of array1.entries()) {
   console.log(i, v) // 0 1, 2 b, 3 c

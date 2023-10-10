@@ -31,6 +31,9 @@
 
     </details>
 
+- WebAPIs
+  - Element: [nextElementSibling](#nextelementsibling)
+
 <hr>
 
 &nbsp;
@@ -341,6 +344,8 @@ el.addEventListener('click', function (e) {
 
 # Learn DOM Manipulation
 
+- [MORE in Learn-DOM-Manipulation](https://github.com/geraldotech/DevMap/blob/main/JavaScript/assets/thread/Learn-DOM-Manipulation/main.js)
+
 - ### Get a Element by ID direct way:
 
 Todo ID declarado no document é elevado ao scopo global, então é possível chamar diretamente:
@@ -470,4 +475,27 @@ document.body.append(parent)
 
 ```
 
-[MORE in Learn-DOM-Manipulation](https://github.com/geraldotech/DevMap/blob/main/JavaScript/assets/thread/Learn-DOM-Manipulation/main.js)
+# nextElementSibling
+
+```html
+<div>
+  <h1>Hello</h1>
+  <p>lorem</p>
+</div>
+<p>Its me</p>
+
+<ul>
+  <li>1</li>
+  <li class="target">2</li>
+  <li>Anti Hero</li>
+  <li>4</li>
+</ul>
+```
+
+```js
+const div = document.querySelector('div')
+console.log(div.nextElementSibling) // <p>Its me</p>
+
+const target = document.querySelector('ul .target') // <p>This me</p>
+console.log(target.nextElementSibling) // <li>Anti Hero</li>
+```
