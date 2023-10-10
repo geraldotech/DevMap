@@ -13,12 +13,12 @@ Display infos from pinned Git
 ```js
 async function getgit(info) {
   const repos = await fetch(
-    "https://gh-pinned-repos.egoist.dev/?username=geraldotech"
+    'https://gh-pinned-repos.egoist.dev/?username=geraldotech'
   )
     .then((res) => res.json())
-    .then((resff) => console.log(resff));
+    .then((resff) => console.log(resff))
 }
-getgit();
+getgit()
 ```
 
 </details>
@@ -26,7 +26,7 @@ getgit();
 Fetch all repos
 
 ```js
-`https://api.github.com/users/geraldotech/repos`;
+;`https://api.github.com/users/geraldotech/repos`
 ```
 
 A resposta será um array de todos os repos, para pegar um repo especifico só chamar por repo[index]
@@ -72,5 +72,25 @@ Fetch tree
 
 ```js
 const api =
-  "https://api.github.com/repos/geraldotech/DevMap/git/trees/daf1cd30f89ad0ea0d48f34855c5706d023c4f21";
+  'https://api.github.com/repos/geraldotech/DevMap/git/trees/daf1cd30f89ad0ea0d48f34855c5706d023c4f21'
+```
+
+Get Avatar
+
+```js
+api = 'https://api.github.com/users/geraldotech'
+
+async function get(url) {
+  const response = await fetch(url)
+  const data = await response.json()
+  console.log(data.login)
+  if (response) {
+    show(data)
+  }
+}
+get(api)
+function show(data) {
+  document.getElementById('avatar').src = data.avatar_url
+  document.getElementById('ava').innerHTML = `<img src="${data.avatar_url}" />`
+}
 ```

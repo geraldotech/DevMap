@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Tahoma;
+      }
+      .menu__item {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 50vh;
+        width: 200px;
+        background: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <p>◀️ justify-content ▶️</p>
+    <p>🔽 align-items 🔼</p>
+    <p>align-content: space-between; <strong>works width flex-wrap</strong></p>
+    <nav class="menu">
+      <ul class="menu__item" id="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Down</a>
+      </ul>
+    </nav>
+
+    <button onclick="getx('50px')">Size 50px</button>
+    <button onclick="getx('200px')">Size 200px</button>
+
+    <script>
+      function getx(s) {
+        document.querySelector('#menu').style.width = s
+      }
+    </script>
+  </body>
+</html>
