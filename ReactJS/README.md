@@ -18,7 +18,14 @@ $ npm install -g create-react-app
 
 $ npx create-react-app@5.0.0 my-app
 $ npx clear-npx-cache
+```
 
+## CreateApp with Vite + TypeScript
+
+- Vanilla, Vue, React, Lite, others
+
+```shell
+npm create vite@latest
 ```
 
 # JSX interpolation strings, import CSS Styles and functions
