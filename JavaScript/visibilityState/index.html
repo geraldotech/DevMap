@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #msn {
+        color: red;
+        font-size: 2em;
+        background: #fff;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>User deixou a página: <span id="out"></span></p>
+    <div id="msn"></div>
+    <script>
+      let saida = 0
+      const out = document.querySelector('#out')
+
+      const verificar = () => {
+        if (document.visibilityState === 'visible') {
+          console.log(`usuario na pagina`)
+        } else {
+          out.textContent = saida++
+          console.log('usuario nao esta na pagina', saida)
+        }
+
+        if (document.visibilityState !== 'visible') {
+          msn.textContent = 'Evite sair da página'
+          setTimeout(() => {
+            msn.textContent = ''
+          }, 2500)
+        }
+      }
+
+      document.addEventListener('visibilitychange', verificar)
+    </script>
+  </body>
+</html>

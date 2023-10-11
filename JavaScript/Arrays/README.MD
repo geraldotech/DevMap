@@ -73,3 +73,39 @@ console.log(['Geraldo', 'Filho'].slice().pop()) //Filho
 
 console.log(n[n.length - 1]) // o
 ```
+
+### copyWithin
+
+```js
+// copyWithin(target)
+//Make a new arr when get the target start over, not includes target.value
+
+console.log([1, 2, 3, 4].copyWithin(1))
+/*
+Array: [1, 2, 3, 4]
+index: [0, 1, 2, 3]
+output:   [1, 1, 2, 3]
+*/
+console.log([1, 2, 3, 4].copyWithin(2))
+/*
+Array: [1,2,3,4]
+index: [ 0, 1, 2 ,3 ]
+output:       [1, 2, 1, 2]
+*/
+
+console.log([1, 2, 3, 4].copyWithin(3)) // [1,2,3,1]
+console.log(['a', 'b', 'c', 'd', 'e', 'f'].copyWithin(2)) // [a, b, a, b, c, d]
+console.log(['a', 'b', 'c', 'd', 'e', 'f'].copyWithin(3)) // [a,b,c,a,b,c]
+
+/* 
+Array ['a','b', 'c', 'd', 'e', 'f'] 
+index [0 ,  1,   2,   3,   4,   5 ] 
+output:        ['a', 'b', 'a', 'b', 'c', 'd' ]
+*/
+// x == target
+console.log([1, 2, 3, 4, 5, 6, 7, 8].copyWithin(5)) // [1,2,3,4,5,x,1,2,3]
+console.log([1, 2, 3, 4, 5, 6, 7, 8].copyWithin(4)) // [1,2,3,4,x,1,2,3,4]
+console.log([1, 2, 3, 4, 5, 6, 7, 8].copyWithin(7)) //[1,2,3,4,5,6,7,x,1]
+
+console.log([1, 2, 3, 4].copyWithin(3)) // [1,2,3,1]
+```

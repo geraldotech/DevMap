@@ -21,17 +21,17 @@
 From scratch aspas 'simples' ou "dupla" tanto faz, contudo dependendo do cenário há algunas peculiaridades
 
 ```js
-console.log("I'm Geraldo");
-console.log("I'm Geraldo"); // precisa usar a barra invertida \
+console.log("I'm Geraldo")
+console.log("I'm Geraldo") // precisa usar a barra invertida \
 
 //📌descatar palavra
-console.log('TypeScript é uma "linguagem" de programação');
-console.log('TypeScript é uma "linguagem" de programação');
+console.log('TypeScript é uma "linguagem" de programação')
+console.log('TypeScript é uma "linguagem" de programação')
 
-console.log("It's a new game");
+console.log("It's a new game")
 //📌usando barra
-console.log("It's a new game");
-console.log("TypeScript é uma 'linguagem' de programação");
+console.log("It's a new game")
+console.log("TypeScript é uma 'linguagem' de programação")
 
 //alguns e.g via https://blog.matheuscastiglioni.com.br/string-em-javascript-com-aspas-simples-ou-duplas/
 ```
@@ -76,23 +76,23 @@ backtick `
 
 ```js
 //ES6
-let [cont, start] = [0, 10];
-let = [name, age] = ["Geraldo", 30];
+let [cont, start] = [0, 10]
+let = [name, age] = ['Geraldo', 30]
 
-let a, b;
-a = 4;
-b = 3;
-console.log(a + b);
+let a, b
+a = 4
+b = 3
+console.log(a + b)
 
-const rua = "a",
-  cidade = "b",
-  sim = "sd";
+const rua = 'a',
+  cidade = 'b',
+  sim = 'sd'
 
 // old
-var eu = "Ge",
-  filho = "a",
-  agr = "now";
-console.log(eu, filho, agr);
+var eu = 'Ge',
+  filho = 'a',
+  agr = 'now'
+console.log(eu, filho, agr)
 ```
 
 </details>
@@ -134,6 +134,24 @@ document.querySelector("p").onclick = function () {
   this.innerHTML = +this.innerHTML + 1;
 };
 
+// eg2
+<button onclick="UpOrDown(false)">Down</button>
+<button onclick="UpOrDown(true)">Up</button>
+<div id="res"></div>
+
+const res = document.querySelector('#res')
+let counter = 0
+
+function UpOrDown(val) {
+  if (counter > 9) {
+    return false
+  }
+  val ? counter++ : counter--
+  res.textContent = counter
+}
+
+// start showing var numer
+res.textContent = counter
 
 ```
 
@@ -153,47 +171,47 @@ document.querySelector("p").onclick = function () {
 ```js
 //shorhand
 const get = function (id) {
-  return document.getElementById(id);
-};
+  return document.getElementById(id)
+}
 const query = function (id) {
-  return document.querySelector(id);
-};
+  return document.querySelector(id)
+}
 
 //
 const log = function (...id) {
-  console.log(id);
-};
+  console.log(id)
+}
 //
-const l = (...a) => console.log(a);
+const l = (...a) => console.log(a)
 //
-const log = console.log.bind(document);
-log(5 + 5, "hello");
+const log = console.log.bind(document)
+log(5 + 5, 'hello')
 
-input = query("input");
-input.addEventListener("input", function () {
-  const str = +this.value;
-  console.log(str.toString(16));
-  get("res").innerText = str.toString(2);
-  get("hex").innerText = str.toString(16);
-});
+input = query('input')
+input.addEventListener('input', function () {
+  const str = +this.value
+  console.log(str.toString(16))
+  get('res').innerText = str.toString(2)
+  get('hex').innerText = str.toString(16)
+})
 
 // Shorhand for getElementById
 
 //function
 const get = function (id) {
-  return document.getElementById(id);
-};
-get("root").textContent = "Hello World!";
+  return document.getElementById(id)
+}
+get('root').textContent = 'Hello World!'
 
 //arrow function
 const get2 = (a) => {
-  return document.getElementById(a);
-};
-get2("root");
+  return document.getElementById(a)
+}
+get2('root')
 
 const log = (x) => {
-  console.log(x);
-};
+  console.log(x)
+}
 ```
 
 </details>
@@ -234,9 +252,9 @@ dependendo da posição pode herdar os attributes!
 <!-- afterend -->
 */
 
-const foo = document.getElementById("foo");
-foo.insertAdjacentHTML("beforebegin", "<b>Hiii</b>");
-foo.insertAdjacentHTML("beforeend", "<b>Hiii</b>");
+const foo = document.getElementById('foo')
+foo.insertAdjacentHTML('beforebegin', '<b>Hiii</b>')
+foo.insertAdjacentHTML('beforeend', '<b>Hiii</b>')
 
 /*
 insertAdjacentElement() is used to insert an element which is already in the DOM. You can get this element with getElementById() for example.
@@ -244,8 +262,8 @@ insertAdjacentElement() is used to insert an element which is already in the DOM
 //move footer to
 
 function moveel() {
-  const vue = document.getElementById("vue");
-  document.getElementById("el").insertAdjacentElement("afterbegin", vue);
+  const vue = document.getElementById('vue')
+  document.getElementById('el').insertAdjacentElement('afterbegin', vue)
 }
 ```
 
@@ -264,18 +282,18 @@ document.head.innerHTML += `
        flex-direction: column;
       }
     </style>
-    `;
+    `
 
 //2.0
-const style = document.createElement("style");
-style.textContent = "h1 { background-color: red; }";
-document.head.appendChild(style);
+const style = document.createElement('style')
+style.textContent = 'h1 { background-color: red; }'
+document.head.appendChild(style)
 
 //3.0 - external
 document.head.insertAdjacentHTML(
-  "beforeend",
-  "<link rel=stylesheet href=/foo.css>"
-);
+  'beforeend',
+  '<link rel=stylesheet href=/foo.css>'
+)
 ```
 
 </details>
