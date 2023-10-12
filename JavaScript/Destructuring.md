@@ -37,18 +37,17 @@ const [a, b] = lista
 console.log(a)
 console.log(b)
 
-//📌swap the values of array
-const edibles = ['food', 'fruits']
+//📌 swap the values of array
+const meuarr = [1, 2]
 
 // Mutate Arrays with Destructuring
-//[edibles[0], edibles[1]] = [edibles[1], edibles[0]];
+;[meuarr[0], meuarr[1]] = [meuarr[1], meuarr[0]]
+console.log(meuarr) // 2, 1
 
-//  doesn't mutate the original array
-let [p1, p2] = (edibles[(p2, p1)] = [p1, p2])
-console.log(p1, p2)
+// doesn't mutate the original array
 
-//alternar para ver a Mutate
-console.log(edibles)
+let st = ([meuarr[0], meuarr[1]] = [meuarr[1], meuarr[0]])
+console.log(st) // 1 2
 
 //🟢 Objects
 const cursos = {
@@ -64,24 +63,31 @@ console.log(cursos.backend) // e etc...
 const { front: curso1, backend: curso2, database: curso3 } = cursos
 console.log(curso3) // MongoDB
 
-//atribuindo uma const a um determinado obj
+// exact name
+const { front, backend, database } = cursos
+console.log(front, backend, database) // VueJs Node MongoDB
+
+// atribuindo uma const a um determinado obj
 const qualquernome = cursos.front
 console.log(qualquernome) // VueJS
 
+// Destructuring a Array
 //https://www.freecodecamp.org/news/destructuring-patterns-javascript-arrays-and-objects/
 
 const arr = [{ id: 1, title: 'loremipsum', slug: 'lorem-ip' }]
 
 const { id, title, slug } = arr[0]
-
 console.log(id, title, slug)
+
+// obj assign
+const obj = Object.assign({}, ...arr)
+console.log(obj)
 ```
 
 # Map
 
 ```js
 // instead
-
 blog.map((post) => {
   return `<li>${post.id} - ${post.slug} - ${post.author}</li>`
 */
@@ -91,13 +97,13 @@ blog.map((post) => {
   return `<li>${id} - ${slug} - ${author}</li>`
 }).join(' ')
 
-// tbm é possivel pegar apenas alguns itens
-const onlySomeItens = blog.map(({id, slug}) => {
+// get only some obj:
+blog.map(({id, slug}) => {
   console.log(id, slug)
 })
 
 // same que - todos os object = const que tem os obj, nesse data o callback do map
-const onlySomeItens = blog.map((data) => {
+blog.map((data) => {
   const {id, slug} = data
  console.log(id)
  console.log(slug)
