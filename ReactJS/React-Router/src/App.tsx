@@ -1,7 +1,7 @@
 import './App.css'
 import Navbar from './components/NavBar'
 
-//reaproveitamente de estrutura
+// reaproveitamento de estrutura
 import { Outlet } from 'react-router-dom'
 
 function App() {
