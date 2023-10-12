@@ -1,0 +1,10 @@
+.links a {
+  display: block;
+  margin: rem 0;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: aquamarine;
+}

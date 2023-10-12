@@ -91,6 +91,19 @@ blog.map((post) => {
   return `<li>${id} - ${slug} - ${author}</li>`
 }).join(' ')
 
+// tbm é possivel pegar apenas alguns itens
+const onlySomeItens = blog.map(({id, slug}) => {
+  console.log(id, slug)
+})
+
+// same que - todos os object = const que tem os obj, nesse data o callback do map
+const onlySomeItens = blog.map((data) => {
+  const {id, slug} = data
+ console.log(id)
+ console.log(slug)
+
+})
+
 
 ```
 
