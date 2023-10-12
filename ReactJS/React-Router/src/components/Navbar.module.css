@@ -1,0 +1,5 @@
+.menu {
+  display: flex;
+  max-width: 600px;
+  justify-content: space-around;
+}
