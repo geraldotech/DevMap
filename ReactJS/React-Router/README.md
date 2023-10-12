@@ -1,5 +1,7 @@
 # React Router 2023
 
+- install dependencias and router: `npm i react-router-dom`
+
 `main.jsx`
 
 ```jsx
@@ -142,12 +144,17 @@ children: [
 - Getting the id
 - add this hook in ContactsDetails
 - set a const and use it
+- [Check video](https://youtu.be/Yey6nTwqUok?t=368)
 
 ```js
 import { useParams } from 'react-router-dom'
 
 const ContactDetails = () => {
+  // destructuring
   const { id } = useParams()
+
+  // get all data
+  const params = useParams
 
   return (
     <div>

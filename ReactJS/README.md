@@ -591,6 +591,8 @@ function App() {
 
 - Precisa instalar esse pacote no projeto
 - `npm install react-router-dom`
+- `npm install react-router-dom@6`
+
 - import: `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
 
 ```jsx
