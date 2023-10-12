@@ -555,7 +555,7 @@ function Button(props) {
 - Using map destructuing objects [react-loop-through-array-of-objects](https://bobbyhadz.com/blog/react-loop-through-array-of-objects)
 
 [Example 1](React-Aulas/src/components/Listaarr.js)
-[Example 2](\api-filmes\src\pages\Home\index_eg.map.js)
+[Example 2](\API-themovieDB\src\pages\Home\index_eg.map.js)
 
 # State Lift
 

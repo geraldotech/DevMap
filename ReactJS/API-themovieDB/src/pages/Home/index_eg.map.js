@@ -39,6 +39,7 @@ const Home = () => {
           </Movie>
         ))} */}
 
+        {/* eg2 */}
         {movies.map((movie) => {
           return (
             <Movie key={movie.id}>
