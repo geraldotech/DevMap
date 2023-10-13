@@ -70,3 +70,11 @@ secao("none");
 function secao(el){
   document.querySelector("section").style.display = el;
 }
+
+// e.g 5
+function handler() {
+
+  let txt = res.innerText
+  console.log(txt)
+  res.innerText = txt === 'true' ? 'false' : 'true'
+}
