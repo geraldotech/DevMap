@@ -45,6 +45,13 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 - that do not match a list of selectors
 
+```css
+/* a not has a class */
+a:not([class]) {
+  text-decoration: none;
+}
+```
+
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)
 
 ```css
@@ -53,7 +60,7 @@ div:not([lang]) {
   font-style: italic;
 }
 /* Select All sections except with a class=home */
-section:not([class="home"]) {
+section:not([class='home']) {
   margin-top: 10px;
 }
 ```
