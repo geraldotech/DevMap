@@ -104,7 +104,9 @@ h1 {
 
 </details>
 
-## transition :hover
+## transition
+
+- `:hover`
 
 <details>
 <summary>show code</summary>
@@ -125,6 +127,44 @@ h1 {
   color: yellow;
   padding: 15px;
 }
+
+/* eg: 2 */
+h1 {
+  color: coral;
+  transition: 00.3s;
+}
+
+h1:hover {
+  color: blue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* eg: 3 */
+input:checked + h1 {
+  color: blue;
+  transition: 3s;
+  font-family: Arial, Helvetica, sans-serif;
+}
 ```
 
 </details>
+
+- `:hover` animation img + links
+
+```css
+<a href="#">  <img src="https://placehold.co/850x1000" alt="" /></a>
+
+
+a,
+img {
+  display: block;
+  max-width: 50%;
+}
+
+a {
+  transition: all 0.3s;
+}
+a:hover {
+  transform: scale(1.1);
+}
+```
