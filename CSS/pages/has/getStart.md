@@ -1,5 +1,7 @@
 # pseudo-class has()
 
+Before read about Adjacend Sibling and General Sibling Seletor `[type="checkbox"]:checked + label` [https://codepen.io/geraldopcf/pen/ZERvQBZ](https://codepen.io/geraldopcf/pen/ZERvQBZ)
+
 > return booelan
 
 - [fromScratch](#fromscratch)
@@ -140,7 +142,7 @@ body:has([type="checkbox"]) {
   --bkbody: rgb(33, 188, 199);
 }
 
-body:has([type="checkbox"]:checked) {
+body:has([type='checkbox']:checked) {
   --bkbody: rgb(170, 30, 30);
 }
 label {
@@ -153,7 +155,7 @@ label {
   > by gmap se no body tem esse #id com checkbox: checked então mude a var mesmo que os elements não esteja encapsulado no respectivo #id
 
 ```css
-body:has(#test [type="checkbox"]:checked) {
+body:has(#test [type='checkbox']:checked) {
   --bkbody: rgb(170, 30, 30);
 }
 ```
@@ -199,15 +201,15 @@ label:has([type="checkbox"]:checked) {
 A beautiful exemplo de como usar vários checkbox em section/div com mesmo #id passando um nome na input, necessário chamar body,html
 
 ```css
-body:has(#menu [type="checkbox"][name="del"]:checked) {
+body:has(#menu [type='checkbox'][name='del']:checked) {
   --txtDe: none;
 }
 
-body:has(#menu [type="checkbox"][name="font"]:checked) {
+body:has(#menu [type='checkbox'][name='font']:checked) {
   --bodyFS: 1.2rem;
 }
 
-html:has(#menu [type="checkbox"][name="fontFamily"]:checked) {
+html:has(#menu [type='checkbox'][name='fontFamily']:checked) {
   --family: cursive;
 }
 ```
@@ -215,11 +217,11 @@ html:has(#menu [type="checkbox"][name="fontFamily"]:checked) {
 Selecionando vários checkbox globalmente, náo querer #id porém precisa indiciar o name
 
 ```css
-body:has([type="checkbox"][name="a"]:checked) {
+body:has([type='checkbox'][name='a']:checked) {
   --bkbody: red;
 }
 
-html:has([type="checkbox"][name="b"]:checked) {
+html:has([type='checkbox'][name='b']:checked) {
   --bkbody: dodgerblue;
 }
 ```
@@ -251,7 +253,7 @@ html:has([type="checkbox"][name="b"]:checked) {
 }
 
 /* define has */
-body:has(#scratch option[value="1"]:checked) {
+body:has(#scratch option[value='1']:checked) {
   --html: block;
 }
 ```
@@ -265,5 +267,3 @@ Usando has() em radio, checkbox e select manipulando as var do CSS fiz esse exem
 O princípio para alinhar elementos e como aplicar o has() nessas situações:
 
 - [from-scratch-align-ele-and-has.html](https://github.com/geraldotech/DevMap/blob/main/CSS/pages/has/from-scratch-align-ele-and-has.html) | [Demo](https://geraldotech.github.io/DevMap/CSS/pages/has/from-scratch-align-ele-and-has.html)
-
-Veja também como usar o `[type="checkbox"]:checked + label` [https://codepen.io/geraldopcf/pen/ZERvQBZ](https://codepen.io/geraldopcf/pen/ZERvQBZ)

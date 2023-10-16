@@ -1,4 +1,4 @@
-# CSS
+# Animation
 
 [Animations Library](https://animista.net/)
 
@@ -104,9 +104,12 @@ h1 {
 
 </details>
 
-## transition
+# Transition
 
-- `:hover`
+- [READ MORE, Transition + transform](https://www.w3schools.com/css/css3_transitions.asp)
+
+- `transition: all` - all props
+- `transition: width 2s, height 4s ` - Change specificProperty Values
 
 <details>
 <summary>show code</summary>
