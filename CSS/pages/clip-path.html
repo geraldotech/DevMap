@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="../assets/clip-path.css" />
+  </head>
+
+  <body>
+    <h1>clip-path + inset</h1>
+
+    <p>
+      <code>clip-path: inset(10%);</code> | hide all:
+      <code>clip-path: inset(100%);</code>
+    </p>
+    <figure class="a">
+      <img
+        src="https://interactive-examples.mdn.mozilla.net/media/examples/balloon-small.jpg"
+        alt="msn ballon"
+      />
+    </figure>
+
+    <p>
+      Funciona como margin/padding
+
+      <code>clip-path: inset(100px 10px 5px 0);</code>
+    </p>
+
+    <figure class="b">
+      <img
+        src="https://interactive-examples.mdn.mozilla.net/media/examples/balloon-small.jpg"
+        alt="msn ballon"
+      />
+    </figure>
+
+    <p>circle</p>
+    <figure class="c">
+      <img
+        src="https://interactive-examples.mdn.mozilla.net/media/examples/balloon-small.jpg"
+        alt="msn ballon"
+      />
+    </figure>
+    <p>20%</p>
+    <figure class="d">
+      <img
+        src="https://interactive-examples.mdn.mozilla.net/media/examples/balloon-small.jpg"
+        alt="msn ballon"
+      />
+
+      <p></p>
+    </figure>
+
+    <p>circle(px at % %) <code> clip-path: circle(50px at 50% 100px);</code></p>
+    <figure class="e">
+      <img
+        src="https://interactive-examples.mdn.mozilla.net/media/examples/balloon-small.jpg"
+        alt="msn ballon"
+      />
+    </figure>
+
+    <p>
+      SVG defs:
+      <a href="https://youtu.be/Q-7bVgZQsjk?t=664"
+        >https://youtu.be/Q-7bVgZQsjk?t=664</a
+      >
+    </p>
+
+    <svg>
+      <defs>
+        <clipPath id="custom">
+          <circle
+            cx="50"
+            cy="50"
+            r="70"
+            stroke="green"
+            stroke-width="4"
+          ></circle>
+        </clipPath>
+      </defs>
+    </svg>
+
+    <figure>
+      <img class="clip" src="http://placehold.co/300" alt="" />
+    </figure>
+  </body>
+</html>

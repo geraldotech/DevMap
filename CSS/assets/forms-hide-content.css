@@ -1,0 +1,56 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  margin-bottom: 50px;
+}
+h2:hover + .box {
+  height: 50px;
+}
+
+.box {
+  height: 0;
+  overflow: hidden;
+}
+
+.box2 {
+  visibility: hidden;
+}
+
+h2:hover + .box2 {
+  visibility: visible;
+}
+
+.box3 {
+  opacity: 0;
+}
+
+h2:hover + .box3 {
+  opacity: 1;
+}
+
+.box4 {
+  translate: -200%; /* -100 with max-width: 50rem no body will show this content */
+}
+
+h2:hover + .box4 {
+  translate: 0;
+}
+
+.box5 {
+  clip-path: circle(0);
+}
+
+h2:hover + .box5 {
+  clip-path: none;
+}

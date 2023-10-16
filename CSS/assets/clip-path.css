@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+p{
+  font-size: 1.5rem;
+  text-align: center;
+}
+:root{
+  color-scheme: dark;
+}
+
+.a img{
+ clip-path: inset(10px);
+}
+.b img{
+ clip-path: inset(100px 10px 5px 0);
+}
+.c img{
+ clip-path: circle();
+}
+.d :where(img ,p ){
+ clip-path: circle(20%);
+}
+.e img{
+ clip-path: circle(50px at 50% 100px);
+}
+
+.clip {
+  clip-path: url(#custom);
+}
