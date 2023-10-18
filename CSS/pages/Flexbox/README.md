@@ -105,8 +105,7 @@ sobrepoe o align-self <a href="https://www.w3schools.com/cssref/tryit.asp?filena
 &nbsp;
 &nbsp;
 
-- <a href="https://geraldotech.github.io/DevMap/CSS/pages/Flexbox/flexbox_contex.html#aligncontent">Flexbox_contex.html</a>
-- [./by_gmap/flexbox_contex.html](flexbox_contex.html)
+- [Flexbox contex.html](./by_gmap/flexbox_contex.html)
 
 # Child / Item
 
