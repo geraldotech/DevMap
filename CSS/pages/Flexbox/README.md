@@ -9,6 +9,7 @@
 - [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [origamid](https://origamid.com/projetos/flexbox-guia-completo/)
 - [https://flexbox.malven.co/](https://flexbox.malven.co/)
+- [Flexbox contex by gmap](./by_gmap/flexbox_contex.html) | [Live](https://geraldotech.github.io/DevMap/CSS/pages/Flexbox/by_gmap/flexbox_contex.html)
 - [more check folder] »» `DevMap\CSS\pages\FlexBox`
 
 # Properties
@@ -104,8 +105,6 @@ sobrepoe o align-self <a href="https://www.w3schools.com/cssref/tryit.asp?filena
 &nbsp;
 &nbsp;
 &nbsp;
-
-- [Flexbox contex.html](./by_gmap/flexbox_contex.html)
 
 # Child / Item
 

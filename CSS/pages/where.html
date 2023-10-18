@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>where()</title>
     <style>
-      *{color-scheme:dark;}
-      body{
+      * {
+        color-scheme: dark;
+      }
+      body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         max-width: 50rem;
         margin: 0 auto;
@@ -19,48 +20,43 @@
       👉 where() - specificity is always zero (0)
 
         */
-      :is(#a, #b){
+      :is(#a, #b) {
         color: coral;
       }
-    /*
+      /*
       👉nesse caso :where is most specific
-    */
-        section :where(h1, p) {
+      */
+      section :where(h1, p) {
         color: rgb(122, 190, 11);
-      } 
+      }
 
       /*
       contudo se especificar uma tag o is() override
-
        :is(#a, #b) p{
         color: coral;
       }
       */
- 
 
-     
-    /*
+      /*
     🟢 specificity is() override all
     */
-      :is(.header, .footer) p{
-          color: red;
+      :is(.header, .footer) p {
+        color: red;
       }
       /* não override */
-      header p, footer p{
-          color: orange;
+      header p,
+      footer p {
+        color: orange;
       }
       /* não override */
       :where(.header, .footer) p {
-          color: orchid;
-      }   
+        color: orchid;
+      }
 
-     
       a {
         position: absolute;
         bottom: 0;
       }
-
-
     </style>
   </head>
   <body>
@@ -76,14 +72,13 @@
     <hr />
 
     <header class="header" id="header"><p>header</p></header>
-    <main class="main"><p>main</p></header>
+    <main class="main"><p>main</p></main>
     <aside class="aside"><p>aside</p></aside>
     <footer class="footer"><p>footer</p></footer>
 
-        <section id="title">
-            <h2>Title</h2>
-        </section>
-
+    <section id="title">
+      <h2>Title</h2>
+    </section>
 
     <a href="https://css-tricks.com/almanac/selectors/w/where/"
       >https://css-tricks.com/almanac/selectors/w/where/</a
