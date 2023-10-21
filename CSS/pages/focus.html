@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foucs</title>
+    <link rel="stylesheet" href="../assets/focus.css" />
+  </head>
+  <body>
+    <h1>:focus</h1>
+    <p><code>inputs, select, a, button, button</code></p>
+    <section>
+      <input type="text" />
+    </section>
+
+    <section>
+      <nav>
+        <ul class="nav">
+          <li>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Free</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <section>
+      <select>
+        <option value="" disabled selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </section>
+
+    <section>
+      <a href="#" class="menu">Click to style my Adjacent Sibling</a>
+      <p class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, labore
+        at numquam culpa, porro, cum sed laboriosam repudiandae animi
+        repellendus quam inventore quia libero sapiente odit eaque vero quidem
+        vel.
+      </p>
+    </section>
+
+    <section>
+      <a href="#" class="changeVisibility">Click to display</a>
+      <p class="view">view content</p>
+    </section>
+
+    <section>
+      <h2>
+        Tab Selector | Adjacent/General Sibling Selector only work with same
+        parent nav,
+      </h2>
+      <h2>JS Link show como mudar isso com o :has()</h2>
+      <nav class="tab-selector">
+        <a href="#" class="changeVisibility">CSS</a>
+        <a href="#" class="js">JavaScript</a>
+        <p class="css">CSS</p>
+      </nav>
+      <p class="jsContent"><b>JavaScript</b></p>
+    </section>
+
+    <section>
+      <button>Click me</button>
+    </section>
+
+    <section>
+      <details>
+        <summary>open</summary>
+        <p>hello content</p>
+      </details>
+      <details>
+        <summary>open</summary>
+        <p>hello content</p>
+      </details>
+    </section>
+  </body>
+</html>

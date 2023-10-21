@@ -9,6 +9,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 ### :active
 
+- onclick see effects
+
+### :focus
+
+- [Focus](./focus.html)
+
 ### :first-child
 
 - [Notion](https://geraldodev.notion.site/first-child-abe5a885838a4500a62277b7c89184db)

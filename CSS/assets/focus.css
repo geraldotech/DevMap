@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color-scheme: dark;
+  box-sizing: border-box;
+}
+
+h1:focus {
+  color: aqua;
+}
+
+body {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+section {
+  border: 1px solid;
+  margin-block: 20px;
+  padding: 15px;
+  min-height: 70px;
+}
+
+input {
+  outline: none;
+  border: none;
+  height: 20px;
+  width: 50%;
+}
+
+input:focus {
+  outline: 1px solid red;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+/* active example, click seguro por alguns sseungods */
+a:active {
+  text-decoration: none;
+  color: #00ffff;
+  font-size: 2rem;
+}
+
+.nav a:focus {
+  color: pink;
+  font-size: 1.5rem;
+}
+nav a {
+  margin: 0 20px;
+}
+
+select {
+  width: 100px;
+  padding: 0.1rem;
+}
+
+select:focus {
+  background: rgb(18, 199, 93);
+}
+
+.menu {
+  margin-block: 10px;
+  display: block;
+}
+
+.menu:focus + .content {
+  background: rgb(207, 221, 12);
+  color: #181818;
+}
+
+.view {
+  display: none;
+}
+
+.changeVisibility:focus + .view {
+  display: block;
+}
+
+.css,
+.jsContent {
+  display: none;
+}
+
+.changeVisibility:focus ~ .css {
+  display: block;
+}
+:has([class='js']:focus) [class='jsContent'] {
+  display: block;
+}
+
+button {
+  border: none;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+  border: 1px solid seagreen;
+}
+
+summary:focus {
+  color: rebeccapurple;
+}
