@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:target with tab selector</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        color-scheme: dark;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        height: 50px;
+      }
+
+      nav a {
+        margin: 0 20px;
+        font-size: 2rem;
+        text-decoration: none;
+      }
+
+      nav a:active {
+        color: seagreen;
+      }
+
+      body {
+        max-width: 50rem;
+        margin: 0 auto;
+        padding: 5vh;
+      }
+
+      #a,
+      #b {
+        display: none;
+      }
+
+      /* home show by default, by when select an other slect hide #home */
+      :has(:target) #home {
+        display: none;
+      }
+
+      :target {
+        color: pink;
+        font-size: 1rem;
+        scroll-margin-top: 50px;
+        text-decoration: underline;
+      }
+      /* select each id:target */
+      #home:target {
+        display: block;
+      }
+      #a:target {
+        display: block;
+        transition: 1s ease-in-out;
+      }
+
+      #b:target {
+        display: block;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      section {
+        min-height: calc(10vh);
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Tab Selector with :target</h3>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#a">A</a>
+      <a href="#b">B</a>
+    </nav>
+
+    <section id="home">
+      <h1>Home Page</h1>
+    </section>
+    <section id="a">
+      <h1>
+        A Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
+        dignissimos vero ut reiciendis illo iusto ad rerum quidem, labore error
+      </h1>
+    </section>
+    <section id="b">
+      <h1>
+        B Illo soluta, consequatur error, iste fugit enim deleniti ipsam eveniet
+        repudiandae, voluptate accusantium!
+      </h1>
+    </section>
+  </body>
+</html>
