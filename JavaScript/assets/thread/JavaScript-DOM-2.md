@@ -453,7 +453,7 @@ document.body.appendChild(parent)
 
 
 // function to append
-//https://dev.to/kiumad/can-you-appendchild-same-element-multiple-times-in-js-probably-not-4j
+// https://dev.to/kiumad/can-you-appendchild-same-element-multiple-times-in-js-probably-not-4j
 const parent = document.createElement('div')
 const txt = '<p></p>'
 
@@ -476,6 +476,8 @@ document.body.append(parent)
 ```
 
 # nextElementSibling
+
+- [Example using nextElementSibling](https://codepen.io/gmapdev/pen/wvRNLeL)
 
 ```html
 <div>
