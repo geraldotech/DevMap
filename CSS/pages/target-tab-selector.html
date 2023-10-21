@@ -27,8 +27,11 @@
         text-decoration: none;
       }
 
-      nav a:active {
+      /*   nav a:active {
         color: seagreen;
+      } */
+      nav a:focus {
+        text-decoration: dotted;
       }
 
       body {
@@ -47,6 +50,10 @@
         display: none;
       }
 
+      #a:target:focus {
+        color: red;
+      }
+
       :target {
         color: pink;
         font-size: 1rem;
@@ -57,6 +64,7 @@
       #home:target {
         display: block;
       }
+
       #a:target {
         display: block;
         transition: 1s ease-in-out;
