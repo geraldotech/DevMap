@@ -9,10 +9,15 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        color-scheme: dark;
       }
 
-      :root {
-        color-scheme: dark;
+      html {
+        scroll-behavior: smooth;
+      }
+
+      section {
+        min-height: calc(10vh);
       }
 
       nav {
@@ -27,10 +32,10 @@
         text-decoration: none;
       }
 
-      /*   nav a:active {
+      nav a:active {
         color: seagreen;
-      } */
-      nav a:focus {
+      }
+      a:focus {
         text-decoration: dotted;
       }
 
@@ -48,10 +53,6 @@
       /* home show by default, by when select an other slect hide #home */
       :has(:target) #home {
         display: none;
-      }
-
-      #a:target:focus {
-        color: red;
       }
 
       :target {
@@ -72,14 +73,6 @@
 
       #b:target {
         display: block;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      section {
-        min-height: calc(10vh);
       }
     </style>
   </head>

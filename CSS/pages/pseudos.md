@@ -13,7 +13,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 ### :focus
 
-- [Focus](./focus.html) - [Demo](<(https://geraldotech.github.io/DevMap/CSS/pages/focus.html)>)
+- [Focus](./focus.html) - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/focus.html)
 
 ### :first-child
 
