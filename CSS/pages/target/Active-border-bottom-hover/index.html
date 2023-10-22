@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New document</title>
+    <style>
+      :root {
+        font-family: Arial, Helvetica, sans-serif;
+        color-scheme: dark;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        --active: white;
+        --borderSettings: 2px solid #47cf73;
+      }
+
+      a {
+        text-decoration: none;
+        color: #717790;
+        padding-inline: 10px;
+      }
+
+      a:hover {
+        border-bottom: 2px solid #47cf73;
+        color: white;
+        transition: color 1s ease-in-out;
+      }
+
+      nav {
+        border-bottom: 2px solid #717790;
+        padding: 0;
+        margin: 0;
+      }
+
+      :has(#a:target) a:nth-child(1) {
+        color: var(--active);
+        border-bottom: var(--borderSettings);
+      }
+      :has(#b:target) a:nth-child(2) {
+        color: var(--active);
+        border-bottom: var(--borderSettings);
+      }
+      :has(#c:target) a:nth-child(3) {
+        color: var(--active);
+        border-bottom: var(--borderSettings);
+      }
+      p {
+        color: #717790;
+      }
+
+      :target {
+        border: 1px solid;
+        color: var(--active);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Active example</h1>
+
+    <nav>
+      <a href="#a">lorem</a>
+      <a href="#b">lorem</a>
+      <a href="#c">lorem</a>
+    </nav>
+
+    <p id="a">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est modi aut,
+    </p>
+    <p id="b">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est modi aut,
+    </p>
+    <p id="c">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est modi aut,
+    </p>
+  </body>
+</html>
