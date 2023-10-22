@@ -10,6 +10,7 @@
         padding: 0;
         box-sizing: border-box;
         color-scheme: dark;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
       html {
         scroll-behavior: smooth;
@@ -18,34 +19,51 @@
       body {
         max-width: 50rem;
         margin: 0 auto;
-        padding: 5vh;
+        padding: 2vh;
       }
 
       nav {
         position: fixed;
         top: 0;
-        height: 50px;
+        height: ;
+        border-bottom: 1px solid #717790;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav a:hover {
+        /*  border-bottom: 2px solid #47cf73;  se quiser mostrar a border*/
+        color: white;
+      }
+
+      .active {
+        border-bottom: 2px solid #47cf73;
+        border-width: fit-content;
+        color: white;
       }
 
       a {
-        margin: 0 20px;
         font-size: 2rem;
+        text-decoration: none;
+        padding-inline: 20px;
+        color: #717790;
       }
       a[href*='#a']:focus {
         color: red;
       }
 
       nav a:active {
-        color: seagreen;
+        color: #47cf73;
       }
 
       /* target props */
       :target {
-        color: pink;
+        color: white;
         font-size: 1rem;
         scroll-margin-top: 50px;
-        text-decoration: underline;
+        text-decoration: underline 2px solid #47cf73;
         width: 100%;
+        transition: all 1s ease-in-out;
       }
 
       /* ou especificar a cor de cada target */
@@ -55,10 +73,9 @@
 
       section {
         min-height: calc(10vh);
-      }
-
-      .active {
-        color: red;
+        color: #717790;
+        margin: 20px 0;
+        text-align: justify;
       }
     </style>
   </head>
@@ -68,10 +85,11 @@
       <a href="#a">A</a>
       <a href="#b">B</a>
       <a href="#c">C</a>
+      <span class="border"></span>
     </nav>
 
     <section id="home">
-      <h1>home Page</h1>
+      <h1>Home Page</h1>
     </section>
     <section id="a">
       <h1>

@@ -28,7 +28,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 - <a  class="links" href="./target.html">:target.html</a> - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/target.html)
 
-- <a  href="./target-tab-selector.html" target="" class="links">:Target with Tab-Selector</a> - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/target-tab-selector.html)
+- <a  href="./target-tab-selector.html" target="" class="links">:Target Tab-Selector Only CSS</a> - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/target-tab-selector.html)
 
 - [:target SPA by gmap](./target-SPA/index.html) - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/target-SPA/index.html)
 
