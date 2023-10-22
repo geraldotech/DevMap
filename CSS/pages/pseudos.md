@@ -27,7 +27,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 - <a class="links" href="https://stackoverflow.com/questions/11386807/adding-an-automatic-offset-to-the-scroll-position-for-all-hash-links-calls">stackoverflow</a>
 
 - [Active-border-bottom-hover 1 - Demo](https://geraldotech.github.io/DevMap/CSS/pages/target/Active-border-bottom-hover/index.html)
-- <a  class="links" href="https://geraldotech.github.io/DevMap/CSS/pages/Active-border-bottom-hover/index-2.html">Active-border-bottom-hover 2 - Demo</a>
+- <a  class="links" href="https://geraldotech.github.io/DevMap/CSS/pages/target/Active-border-bottom-hover/index-2.html">Active-border-bottom-hover 2 - Demo</a>
 
 - [:target SPA by gmap](./target/SPA/index.html) - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/target/SPA/index.html)
 
