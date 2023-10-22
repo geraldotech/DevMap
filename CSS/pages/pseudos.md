@@ -15,6 +15,21 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 - [Focus](./focus.html) - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/focus.html)
 
+### :target
+
+```css
+:target {
+  scroll-margin-top: 50px;
+}
+```
+
+- <a  class="links" href="./pages/target.html">:target.html</a>
+- <a  href="./pages/target-tab-selector.html" target="" class="links">:target with Tab-Selector</a>
+- <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top">MDN</a>
+- <a class="links" href="https://stackoverflow.com/questions/11386807/adding-an-automatic-offset-to-the-scroll-position-for-all-hash-links-calls">stackoverflow</a>
+- <a class="links" href="./pages/scroll-margin-top/">Demo By gmap</a>
+- <a class="links" href="https://codepen.io/geraldopcf/pen/GRwMGJW?editors=1100" target="_blank">Demo 2 By gmap</a>
+
 ### :first-child
 
 - [Notion](https://geraldodev.notion.site/first-child-abe5a885838a4500a62277b7c89184db)

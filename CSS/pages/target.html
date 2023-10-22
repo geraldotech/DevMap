@@ -9,26 +9,10 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      }
-
-      :root {
         color-scheme: dark;
       }
-
-      nav {
-        position: fixed;
-        top: 0;
-        height: 50px;
-      }
-
-      nav a {
-        margin: 0 20px;
-        font-size: 2rem;
-        text-decoration: none;
-      }
-
-      nav a:active {
-        color: seagreen;
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
@@ -37,6 +21,25 @@
         padding: 5vh;
       }
 
+      nav {
+        position: fixed;
+        top: 0;
+        height: 50px;
+      }
+
+      a {
+        margin: 0 20px;
+        font-size: 2rem;
+      }
+      a[href*='#a']:focus {
+        color: red;
+      }
+
+      nav a:active {
+        color: seagreen;
+      }
+
+      /* target props */
       :target {
         color: pink;
         font-size: 1rem;
@@ -45,12 +48,17 @@
         width: 100%;
       }
 
-      html {
-        scroll-behavior: smooth;
+      /* ou especificar a cor de cada target */
+      #c:target {
+        color: aqua;
       }
 
       section {
         min-height: calc(10vh);
+      }
+
+      .active {
+        color: red;
       }
     </style>
   </head>
@@ -59,6 +67,7 @@
       <a href="#home">Home</a>
       <a href="#a">A</a>
       <a href="#b">B</a>
+      <a href="#c">C</a>
     </nav>
 
     <section id="home">
@@ -76,5 +85,31 @@
         dignissimos vero ut reiciendis illo iusto ad rerum quidem, labore error
       </h1>
     </section>
+    <section id="c">
+      <h1>
+        C Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
+        dignissimos vero ut reiciendis illo iusto ad rerum quidem, labore error
+      </h1>
+    </section>
+    <script>
+      /* Conclusão como o :focus ocorren quando o item foi clicado, contudo quando atribuidos um ID o mesmo receber e perde o focus ao mesmo tempo, uma alternativa de manter uma customClass foi adicionar JavaScript */
+      const links = document.querySelectorAll('nav a')
+      for (let link of links) {
+        link.addEventListener('click', handler)
+      }
+      // compara se contains o currentTarget
+      function handler(e) {
+        // get event
+        let event = e.currentTarget
+        for (let iten of links) {
+          let atual = iten.contains(event)
+          if (atual) {
+            iten.classList.add('active')
+          } else {
+            iten.classList.remove('active')
+          }
+        }
+      }
+    </script>
   </body>
 </html>

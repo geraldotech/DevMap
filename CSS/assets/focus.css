@@ -79,8 +79,11 @@ select:focus {
   display: block;
 }
 
+/* 
+hide all content */
 .css,
-.jsContent {
+.jsContent,
+.tsContent {
   display: none;
 }
 
@@ -88,6 +91,9 @@ select:focus {
   display: block;
 }
 :has([class='js']:focus) [class='jsContent'] {
+  display: block;
+}
+:has([class='ts']:focus) .tsContent {
   display: block;
 }
 

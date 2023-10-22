@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, init// Place your key bindings in this file to override the defaultsial-scale=1.0"
-    />
+      content="width=device-width, init// Place your key bindings in this file to override the defaultsial-scale=1.0" />
     <title>Combinator Selectors 2023</title>
     <link rel="stylesheet" href="../assets/selector-combinators.css" />
   </head>
@@ -172,6 +171,11 @@
 
     <section id="adjacent">
       <h2>👉Adjacent Sibling (+)</h2>
+      <p>
+        used to select an element that is directly after another specific
+        element. Sibling elements must have the <b>same parent element</b>, and
+        "adjacent" means "immediately following".
+      </p>
       <xmp
 >
         p + h1 {
@@ -184,7 +188,7 @@
 
     <section id="general-sibling">
       <h2>👉General Sibling Selector (~)</h2>
-
+      <p>selects all elements that are next siblings of a specified element.</p>
       <xmp
 >
     p ~ ul {
@@ -233,7 +237,7 @@
     </section>
     <footer>
       <nav>
-        <span>By :</span><a href="#">gmapdev &copy; 2022</a> |
+        <span>By:</span><a href="#">gmapdev &copy; 2022</a> |
         <a href="#">Go Top</a>
       </nav>
     </footer>

@@ -45,16 +45,17 @@
         padding: 5vh;
       }
 
+      /* hide all itens, except #home */
       #a,
       #b {
         display: none;
       }
 
-      /* home show by default, by when select an other slect hide #home */
+      /*when select an other item hide #home */
       :has(:target) #home {
         display: none;
       }
-
+      /* General Styles */
       :target {
         color: pink;
         font-size: 1rem;
@@ -68,7 +69,7 @@
 
       #a:target {
         display: block;
-        transition: 1s ease-in-out;
+        color: dodgerblue;
       }
 
       #b:target {

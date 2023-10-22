@@ -84,3 +84,15 @@ p ~ code {
   font-size: 2rem;
   display: block;
 }
+
+ul li {
+  padding-block: 5px;
+  font-size: 1.3rem;
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
