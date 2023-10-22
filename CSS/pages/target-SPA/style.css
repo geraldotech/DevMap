@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color-scheme: dark;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+img {
+  width: 100%;
+  max-width: 50%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  height: 40px;
+  background: #333;
+  width: 100%;
+}
+nav a {
+  margin: 0 30px;
+}
+.tab-selector {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  margin-top: 40px;
+}
+h1,
+p {
+  text-align: center;
+}
+section {
+  margin: 5px 0;
+  padding: 10px;
+  text-align: center;
+}
+
+#css,
+#js {
+  /* v1 */
+  display: none;
+  /* v2 */
+  /* height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; */
+}
+
+:has(:target) #home {
+  display: none;
+  /*   height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; */
+}
+
+#home:target {
+  display: block;
+}
+
+/* set block itens */
+#css:target {
+  display: flex;
+  scroll-margin-block: 150px; /* adjust mobile view */
+  justify-content: space-evenly;
+  max-width: 900px;
+  margin: 40px auto;
+  gap: 20px;
+  /*  height: auto; */
+}
+#js:target {
+  display: block;
+  /* height: auto; */
+}
+
+#css {
+  /* para heigth e overflow definir os styles de flex aqui */
+}
+#css figure {
+  flex: 1 100px;
+}
+@media (max-width: 640px) {
+  #css {
+    flex-direction: column;
+  }
+}
+
+footer {
+  background: #333;
+  height: 50px;
+}

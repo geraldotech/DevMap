@@ -23,9 +23,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 }
 ```
 
-- <a  class="links" href="./target.html">:target.html</a> [target Demo](https://geraldotech.github.io/DevMap/CSS/pages/target.html)
+- <a  class="links" href="./target.html">:target.html</a> - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/target.html)
 
-- <a  href="./target-tab-selector.html" target="" class="links">:target with Tab-Selector</a> [target-tab-Demo](https://geraldotech.github.io/DevMap/CSS/pages/target-tab-selector.html)
+- <a  href="./target-tab-selector.html" target="" class="links">:Target with Tab-Selector</a> - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/target-tab-selector.html)
+
+- [:target SPA by gmap](./target-SPA/index.html) - [Demo](https://geraldotech.github.io/DevMap/CSS/pages/target-SPA/index.html)
+
 - <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top">MDN</a>
 - <a class="links" href="https://stackoverflow.com/questions/11386807/adding-an-automatic-offset-to-the-scroll-position-for-all-hash-links-calls">stackoverflow</a>
 - <a class="links" href="./scroll-margin-top/">Demo By gmap</a>
