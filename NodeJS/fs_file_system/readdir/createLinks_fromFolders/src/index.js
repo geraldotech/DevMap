@@ -1,5 +1,5 @@
 
-const links = ["about.html","foo.html","home.html","index.html","projects.html"]
+const links = ["folder1","folder2"]
 
  document.querySelector('#root').innerHTML = links.map((val) => {
    return `<a href="${val}">${val}</a>`
