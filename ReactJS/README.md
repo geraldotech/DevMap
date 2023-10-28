@@ -16,7 +16,7 @@ $ npm run start
 
 $ npm install -g create-react-app
 
-//Inside directory:
+// Inside directory
 
 $ npx create-react-app@5.0.0 my-app
 $ npx clear-npx-cache

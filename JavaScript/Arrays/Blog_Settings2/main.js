@@ -136,4 +136,4 @@ console.log(acha)
   published: true,
   article: 'my article one',
   slug: 'one',
-  author: 'geraldox' } */
+  author: 'geraldox' }*/

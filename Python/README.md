@@ -1,6 +1,6 @@
 # Python
 
-### Instalação Windows:
+### Install Windows
 
 Python3 e o IDLE
 [https://www.python.org/ftp/python/3.11.4/python-3.11.4-amd64.exe](https://www.python.org/ftp/python/3.11.4/python-3.11.4-amd64.exe)
