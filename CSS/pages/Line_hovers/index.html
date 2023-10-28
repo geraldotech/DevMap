@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-<p>simples :hover line</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Line Hovers</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1>Get Started:</h1>
+    <pre>
+<xmp>
+  p {
+    background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom /
+      0 var(--bg-h); /*joga tudo para uma variavel*/
+    transition: background-size 350ms; /* velocidade */
+    --bg-h: 100%; /*para full-background change to 100% ou use .under class */
+  }
+  
+  p:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left; /*direção */
+    
+  }
+  p {
+    --bg-h: 2px;
+  }
+</xmp>
+
+
+</pre>
+
+    <p>simples :hover line</p>
     <nav class="menu">
-        <a href="" class="under">Home</a>
-        <a href="">Downloads</a>
-        <a href="">About <br/>effect about this example</a>
+      <a href="" class="under">Home</a>
+      <a href="">Downloads</a>
+      <a href="">About <br />effect about this example</a>
     </nav>
-    <hr>
-   
+    <hr />
+
     <form action="">
       <div class="inputField">
-        <input type="text" placeholder="user_name">
+        <input type="text" placeholder="user_name" />
         <div class="underline"></div>
       </div>
     </form>
 
-    <hr>
+    <hr />
     <p>mais examples neste repo</p>
-<a href="https://github.com/codrops/LineHoverStyles" target="_blank">https://github.com/codrops/LineHoverStyles</a>
-   
-<hr>
+    <a href="https://github.com/codrops/LineHoverStyles" target="_blank"
+      >https://github.com/codrops/LineHoverStyles</a
+    >
 
-  <ul class="menu3">
-    <li>
-      <a href="#">Home Page</a>
-    </li>
-    <li>
-      <a href="#">Home Page</a>
-    </li>
-  </ul>
+    <hr />
 
-
-</body>
+    <ul class="menu3">
+      <li>
+        <a href="#">Home Page</a>
+      </li>
+      <li>
+        <a href="#">Home Page</a>
+      </li>
+    </ul>
+  </body>
 </html>

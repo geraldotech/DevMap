@@ -14,6 +14,14 @@ Open cmd with : `C:\Users\geral\AppData\Local\Programs\Python\Python311`
 run files:
 `C:\Users\geral\AppData\Local\Programs\Python\Python311\python.exe myscript.py`
 
+### Modo iterativo:
+
+abrir o IDLE Shell e testar comando direto
+
+### Modo script:
+
+abrir o `**IDLE Shell File > New File > fazer o script >**` save and run F5
+
 ### Python extension for Visual Studio Code
 
 [https://marketplace.visualstudio.com/items?itemName=ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
@@ -134,11 +142,11 @@ for para in documento.paragraphs:
 ```
 
 ```jsx
-word = "Dictionary";
-p = documento.add_paragraph();
-runner = p.add_run(word);
-runner.bold = True;
-runner.italic = True;
+word = 'Dictionary'
+p = documento.add_paragraph()
+runner = p.add_run(word)
+runner.bold = True
+runner.italic = True
 ```
 
 for in obj

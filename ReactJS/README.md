@@ -1,5 +1,7 @@
 # ReactJS
 
+- {interpolation}
+
 ```js
 // creating app after installed Node:
 $ npx create-react-app <myappname>
