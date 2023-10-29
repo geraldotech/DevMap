@@ -106,7 +106,7 @@ h1 {
 
 </details>
 
-# Scroll-driven Animations
+# Scroll Driven Animations
 
 - [scroll-driven-animations.style](https://scroll-driven-animations.style/tools/view-timeline/ranges/#range-start-name=cover&range-start-percentage=0&range-end-name=cover&range-end-percentage=50&view-timeline-axis=block&view-timeline-inset=0&subject-size=smaller&subject-animation=reveal&interactivity=clicktodrag&show-areas=yes&show-fromto=yes&show-labels=yes)
 - scroll()
