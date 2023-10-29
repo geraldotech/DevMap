@@ -1,6 +1,8 @@
 # Animation
 
-[Animations Library](https://animista.net/)
+- [Animation {name} {duration}{timing function}{etc...}](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
+
+- [Animations Library](https://animista.net/)
 
 ## Animation + keyframes
 
@@ -103,6 +105,14 @@ h1 {
 ```
 
 </details>
+
+# Scroll-driven Animations
+
+- [scroll-driven-animations.style](https://scroll-driven-animations.style/tools/view-timeline/ranges/#range-start-name=cover&range-start-percentage=0&range-end-name=cover&range-end-percentage=50&view-timeline-axis=block&view-timeline-inset=0&subject-size=smaller&subject-animation=reveal&interactivity=clicktodrag&show-areas=yes&show-fromto=yes&show-labels=yes)
+- scroll()
+- view() - quando o elemento começa a aparecer na tela
+
+- checkout folder `vanilla-scroll-driven-animations`
 
 # Transition
 
