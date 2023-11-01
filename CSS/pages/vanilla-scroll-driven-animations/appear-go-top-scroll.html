@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New document</title>
+    <style>
+      :root {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color-scheme: dark;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+
+      body {
+        min-height: 200vh;
+        display: flex;
+        flex-direction: column;
+      }
+      section {
+        flex: 1;
+      }
+
+      footer {
+        background: tomato;
+      }
+
+      footer p {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        animation: appear 1ms ease-in-out both;
+        animation-timeline: scroll();
+      }
+
+      @keyframes appear {
+        from {
+          visibility: hidden;
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
+        voluptatem debitis molestiae quibusdam laudantium, aliquid quod
+        consequatur in officia, exercitationem reprehenderit libero nisi cumque
+        fugiat facilis perferendis provident incidunt. Et qui voluptates dicta
+        eius /p>
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        <a href="#top" class="backtop"
+          ><svg
+            class="with-icon_icon__MHUeb"
+            data-testid="geist-icon"
+            fill="none"
+            height="24"
+            width="24"
+            shape-rendering="geometricPrecision"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            style="color: currentcolor; width: 60px; height: 60px">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M16 12l-4-4-4 4"></path>
+            <path d="M12 16V8"></path></svg
+        ></a>
+      </p>
+    </footer>
+  </body>
+</html>
