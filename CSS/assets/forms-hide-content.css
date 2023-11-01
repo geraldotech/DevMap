@@ -1,56 +1,83 @@
-:root {
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  background: #181818;
+  line-height: 1.5;
 }
-
 body {
+  color: #cecece;
+  background: #222;
   max-width: 80rem;
   margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-h1 {
+h2 {
+  font-size: 2em;
   text-align: center;
 }
 
-div {
-  margin-bottom: 50px;
-}
-h2:hover + .box {
-  height: 50px;
+h1::before {
+  content: '✔';
+  color: seagreen;
 }
 
-.box {
+div {
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+/* heigth / overflow */
+div:nth-of-type(1) {
   height: 0;
   overflow: hidden;
 }
 
-.box2 {
+h1:nth-of-type(1):hover + div {
+  height: auto;
+}
+
+/* visibility */
+
+div:nth-of-type(2) {
   visibility: hidden;
 }
 
-h2:hover + .box2 {
+h1:nth-of-type(2):hover + div {
   visibility: visible;
 }
-
-.box3 {
+/* opacity */
+div:nth-of-type(3) {
   opacity: 0;
 }
 
-h2:hover + .box3 {
+h1:nth-of-type(3):hover + div {
   opacity: 1;
 }
 
-.box4 {
-  translate: -200%; /* -100 with max-width: 50rem no body will show this content */
+/* display */
+
+div:nth-of-type(4) {
+  display: none;
 }
 
-h2:hover + .box4 {
+h1:nth-of-type(4):hover + div {
+  display: block;
+}
+
+/* translate */
+
+div:nth-of-type(5) {
+  translate: -200%;
+}
+
+h1:nth-of-type(5):hover + div {
   translate: 0;
 }
 
-.box5 {
+/* clip-path */
+div:nth-of-type(6) {
   clip-path: circle(0);
 }
 
-h2:hover + .box5 {
+h1:nth-of-type(6):hover + div {
   clip-path: none;
 }

@@ -3,8 +3,26 @@
 - [Animation {name} {duration}{timing function}{etc...}](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
 
 - [Animations Library](https://animista.net/)
+- [https://cubic-bezier.com/#.17,.67,.83,.67](https://cubic-bezier.com/#.17,.67,.83,.67)
+- [https://easings.net/](https://easings.net/)
+
+## @keyframes Sliders
+
+- [https://codepen.io/nucliweb/pen/OJXYwm](https://codepen.io/nucliweb/pen/OJXYwm)
+- Examples in folder: ./animation-keyframes
+- Minicurso in folder: ./Minicurso_CSS_animations
 
 ## Animation + keyframes
+
+- animation[name]:
+- animation[duration]:
+- animation[timing-function]: ease-in / ease-out / ease-in-out / cubic-bezier()
+- animation[delay]:
+- animation[iteration-count]: <2s> infinite
+- animation[direction]: alternate
+- animation[fill-mode]: forwards
+- animation: fly 1s infinite alternate; <!-- infinite go and back -->
+- animation: fly 1s ease-in-out forwards; <!-- go and not back to from -->
 
 <details>
 <summary>show code</summary>
@@ -21,7 +39,6 @@
     text-align: center;
     animation-name: meubanner;
     animation-duration: 5s;
-
 }
 
 @keyframes meubanner{
@@ -118,8 +135,16 @@ h1 {
 
 - [READ MORE, Transition + transform](https://www.w3schools.com/css/css3_transitions.asp)
 
-- `transition: all` - all props
-- `transition: width 2s, height 4s ` - Change specificProperty Values
+```css
+/* specifific props and time values */
+transition-property: background, border-radius;
+transition-duration: 2s, 1.5s;
+/* shorthand */
+transition: background 2s, border-radius 1.5s;
+
+/* all props */
+transition: all;
+```
 
 <details>
 <summary>show code</summary>

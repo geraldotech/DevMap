@@ -27,6 +27,8 @@
       <span style="background: #1f242a"> #1f242a</span>
       <span style="background: #74c0fc"> #74c0fc</span>
       <span style="background: #adb5bd"> #adb5bd</span>
+      <span style="background: #150bad"> #150bad</span>
+      <span style="background: #ffbb33"> #ffbb33</span>
     </section>
     <footer>
       <div>
@@ -34,16 +36,16 @@
       </div>
     </footer>
     <script>
-      const span = document.querySelectorAll("span");
+      const span = document.querySelectorAll('span')
       span.forEach((el) => {
-        el.addEventListener("click", function (e) {
-          const copytxt = e.target.innerHTML; //copy currently element click HTML Text
-          console.log("click test");
+        el.addEventListener('click', function (e) {
+          const copytxt = e.target.innerHTML //copy currently element click HTML Text
+          console.log('click test')
           navigator.clipboard.writeText(copytxt).then(() => {
-            alert("copiado!");
-          });
-        });
-      });
+            alert('copiado!')
+          })
+        })
+      })
     </script>
   </body>
 </html>

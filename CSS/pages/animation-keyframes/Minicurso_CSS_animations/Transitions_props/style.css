@@ -1,0 +1,31 @@
+body {
+  margin: 0 auto;
+  max-width: 70rem;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  font-family: sans-serif;
+  justify-content: space-between;
+  max-width: 60rem;
+  width: 100%;
+}
+
+.box {
+  margin-block: 100px;
+  outline: 5px solid red;
+  width: fit-content;
+}
+
+code {
+  color: seagreen;
+}
+
+img {
+  transform: translateX(100px) scale(1.3) rotate(-15deg);
+}
+img:hover {
+  transform: rotate(0deg);
+}

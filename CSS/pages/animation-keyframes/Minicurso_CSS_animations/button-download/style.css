@@ -1,0 +1,16 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+img {
+  width: 200px;
+  animation: is-bouncing 1s ease-out alternate infinite;
+}
+
+@keyframes is-bouncing {
+  to {
+    transform: translateY(30px); /* eixo vertical */
+  }
+}
