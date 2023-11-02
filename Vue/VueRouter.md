@@ -364,6 +364,11 @@ Seguindo a doc [https://docs.netlify.com/routing/redirects/rewrites-proxies/#his
 
 **Settings :arrow_right: App :arrow_right: Spec :arrow_right:**: `catchall_document: index.html` [thanks John Dave Deploy Your ReactJS](https://www.linkedin.com/pulse/deploy-reactjs-application-digitalocean-john-dave-decano/)
 
+# CSS default styles
+
+- router-link-exact-active - thanks GP
+- router-link-active
+
 # Links
 
 - [Getting Started](https://router.vuejs.org/guide/)

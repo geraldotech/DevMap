@@ -16,7 +16,7 @@
 
 - animation[name]:
 - animation[duration]:
-- animation[timing-function]: ease-in / ease-out / ease-in-out / cubic-bezier()
+- animation[timing-function]: ease-in / ease-out / ease-in-out / linear / cubic-bezier()
 - animation[delay]:
 - animation[iteration-count]: <2s> infinite
 - animation[direction]: alternate

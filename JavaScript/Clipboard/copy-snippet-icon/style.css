@@ -1,0 +1,32 @@
+:root {
+  color-scheme: dark;
+}
+
+.clipboard {
+  display: flex;
+  margin-block: 10px;
+}
+
+.clipboard svg {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.clipboard input {
+  width: 80%;
+  color: seagreen;
+}
+.svgcopyActive {
+  color: dodgerblue;
+}
+
+nav {
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 650px) {
+  svg {
+    width: 50%;
+  }
+}
