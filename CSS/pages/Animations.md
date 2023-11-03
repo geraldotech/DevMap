@@ -15,14 +15,18 @@
 ## Animation + keyframes
 
 - animation[name]:
-- animation[duration]:
+- animation[duration]: 500ms 0.5s 1s etc...
 - animation[timing-function]: ease-in / ease-out / ease-in-out / linear / cubic-bezier()
 - animation[delay]:
 - animation[iteration-count]: <2s> infinite
-- animation[direction]: alternate
-- animation[fill-mode]: forwards
-- animation: fly 1s infinite alternate; <!-- infinite go and back -->
-- animation: fly 1s ease-in-out forwards; <!-- go and not back to from -->
+- animation[direction]: alternate, reverse, alternatve-reverse
+- animation[fill-mode]: forwards, backwards, both
+- animation[fill-mode]: running - can add a :hover with state paused
+
+## Shorthand:
+
+- animation: fly 1s infinite alternate; infinite go and back
+- animation: fly 1s ease-in-out forwards; go and not back to start
 
 <details>
 <summary>show code</summary>
