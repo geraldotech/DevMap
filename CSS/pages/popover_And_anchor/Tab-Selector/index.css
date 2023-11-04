@@ -1,38 +1,90 @@
 html {
   background: #181818;
+  color: white;
   line-height: 1.5;
+  font-family: sans-serif;
 }
 
-nav{
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
   min-height: 50px;
 }
-button {
+button,
+nav a {
   cursor: pointer;
   outline: none;
   background: #59114d;
   color: #ece5f0;
   border: 2px solid #ece5f0;
- padding: 5px 15px;
+  padding: 5px 15px;
   border-radius: 8px;
 }
 
-button:active{
-  background: wheat;
+code {
+  background: black;
+  color: seagreen;
 }
-#make3{
+
+:is(button, a):hover {
+  background: #a7088c;
+}
+
+button:focus {
+  background: #a7088c;
+}
+
+/* all popover get this template style */
+/* :popover-open {
+  position: absolute;
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+ 
+  inset: unset;
+  left: 0;
+  top: 250px;
+  margin: 0;
+  bottom: 70%;
+} */
+
+/* by default popover open is center */
+:popover-open {
+  background: #e98a15;
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+}
+
+@media (max-width: 600px) {
+  :popover-open {
+    max-width: 300px;
+  }
+}
+/* specific styles by id */
+#make3 {
   background: #003b36;
 }
 
- :popover-open {
-        position: absolute;
-        max-width: 500px;
-        width: 100%;
-        height:300px;
-        background: #e98a15;      
-        inset: unset;
-        left: 0;
-        top: 50px;
-        margin: 0;
-        bottom: 70%;      
+#homepage {
+  background: dodgerblue;
+  color: #181818;
 }
 
+#about {
+  flex-direction: column;
+}
+/* adicionar um container para mexer com o flex */
+#about .container {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+}
+
+#about .container h1 {
+  flex: 1;
+}

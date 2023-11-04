@@ -1,37 +1,66 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <script type="text/javascript" src="./index.js" defer=""></script>
-    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popover examples by gmap.dev</title>
+    <link rel="stylesheet" href="./index.css" />
   </head>
 
   <body>
+    <h2>
+      Context:
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using"
+        >Popover API</a
+      >
+    </h2>
     <nav>
-      <button popovertarget="make">Check</button>
-      <button popovertarget="make2">Check 2</button>
-      <button popovertarget="make3">Check 3</button>
-
+      <button popovertarget="make">Menu</button>
+      <button popovertarget="make2">Menu 2</button>
+      <button popovertarget="make3">Menu 3</button>
     </nav>
 
-    <div id="make" popover="">
+    <nav class="menu_a">
+      <a href="#" onclick="homepage.showPopover()">Home</a>
+      <a href="#" onclick="about.showPopover()">About</a>
+    </nav>
 
+    <!-- components by button -->
+    <div id="make" popover>
       <h1>Title</h1>
-
-
+      <p>popovertarget using button</p>
     </div>
-    <div id="make2" popover="">
-
+    <div id="make2" popover>
       <h1>Popover_API</h1>
-      <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta dolorem alias dolore repellat incidunt ducimus consequuntur eius illum dolorum culpa, ullam error necessitatibus suscipit mollitia quae ipsa et praesentium distinctio.</p>
-
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta dolorem
+        alias dolore repellat incidunt ducimus consequuntur eius illum dolorum
+        culpa, ullam error necessitatibus suscipit mollitia quae ipsa et
+        praesentium distinctio.
+      </p>
     </div>
-    <div id="make3" popover="">
+    <div id="make3" popover>
       <div class="three">
         <h1>Popover_API 3</h1>
-        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta dolorem alias dolore repellat incidunt ducimus consequuntur eius illum dolorum culpa, ullam error necessitatibus suscipit mollitia quae ipsa et praesentium distinctio.</p>
+        <p>/* specific styles by id */</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta</p>
       </div>
     </div>
+    <!-- components by href -->
+    <section id="homepage" popover>
+      <h1>Home</h1>
+      <p>
+        popovertarget using tag a:href too, just add a
+        <code> onclick="[id].hidePopover()</code> method
+      </p>
+      <p>specific styles by id</p>
+    </section>
+    <section id="about" popover>
+      <div class="container">
+        <h1>About</h1>
+        <button onclick="about.hidePopover()">Close Popover</button>
+      </div>
+    </section>
   </body>
-
 </html>
