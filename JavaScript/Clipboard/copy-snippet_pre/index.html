@@ -11,17 +11,18 @@
   <body>
     <h1>Snippet copy by gmapdev</h1>
 
-    <h2>eg 1: inline</h2>
-    <div class="clipboard">
-      <pre inline>
+    <h2>eg 1 pre inline</h2>
+    <section class="snipped">
+      <p>shellscript.sh</p>
+      <div class="clipboard">
+        <pre inline>
 shell:::{ED834ED6-4B5A-4bfe-8F11-A626DCB6A921} -Microsoft. Personalization\pageWallpaper shell:::{ED834ED6-4B5A-4bfe-8F11-A626DCB6A921} -Microsoft. Personalization\pageWallpaper shell:::{ED834ED6-4B5A-4bfe-8F11-A626DCB6A921} -Microsoft. Personalization\pageWallpaper
-        </pre
-      >
-      <button id="btncopy">Copy</button>
-    </div>
-
-    <h2>eg 2: block</h2>
-    <section>
+        </pre>
+        <button id="btncopy">Copy</button>
+      </div>
+    </section>
+    <h2>eg 2 pre block</h2>
+    <section class="snipped">
       <p>main.js</p>
       <div class="clipboard">
         <pre block>
@@ -29,6 +30,25 @@ shell:::{ED834ED6-4B5A-4bfe-8F11-A626DCB6A921} -Microsoft. Personalization\pageW
           width: 80%;
           color: seagreen;
         }
+      </pre
+        >
+        <button id="btncopy">Copy</button>
+      </div>
+    </section>
+    <section class="snipped">
+      <p>src/components/Modal.vue</p>
+      <div class="clipboard">
+        <pre block>
+      &lt;script>
+            export default {
+              name: 'Modal',
+              methods: {
+                close() {
+                  this.$emit('close');
+                },
+              },
+            };
+      &lt;/script &gt;
       </pre
         >
         <button id="btncopy">Copy</button>
