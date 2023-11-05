@@ -45,4 +45,4 @@
       </snippet-x>`
 - custom inline color `<pre coral> $ npx @vue/cli create <b>--default </b> vue-modal-component-example</pre>`
 
-- You can some color [here](https://design.volvocars.com/colour/brand-colours/)
+- You can some color [here](https://design.volvocars.com/colour/brand-colours/) ou [here](https://git.geraldox.com/CSS/pages/Web-colors.html)

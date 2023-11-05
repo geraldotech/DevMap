@@ -13,13 +13,8 @@ class snipped extends HTMLElement {
   styles() {
     const style = document.createElement('style')
     style.textContent = `
-    xmp {
-      margin: 0;
-    }
+  
     .clipboard {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       background: #0e1425;
       position: relative;  
       border-bottom-left-radius: 10px;
@@ -40,28 +35,27 @@ class snipped extends HTMLElement {
       padding: 5px 0;
       text-align: center;
     }
-   pre {
+   xmp {
       overflow: auto;
       /*  white-space: nowrap; */
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
         'Lucida Sans', Arial, sans-serif;
-      margin: 0;
-     
     }
 
-   pre[block] {
-      white-space: break-spaces;
-      line-height: 1.5;
+   :is(xmp, pre)[block] {
+      white-space: break-spaces;     
       color: #2c70ff;
-      padding: 0; 
+      margin: 0;
     }
 
-    pre{
+    xmp{
       overflow: auto;
       color: hsl(204 100% 59%);
-      padding-block: 15px;
+      padding-block: 10px;
       white-space: no-wrap;
-      padding-left: 8px;
+      padding-left: 10px;
+      margin: 0;
+      line-height: 1.5;
     }
     button {
       outline: none;
@@ -91,7 +85,7 @@ class snipped extends HTMLElement {
     <section>
     <p>${attr ? attr : 'Snippet'}</p>
     <div class="clipboard">
-  ${this.innerHTML}
+${this.innerHTML} 
     <button id="btncopy">Copy</button>      
     </div>
     </section>
@@ -100,7 +94,7 @@ class snipped extends HTMLElement {
   }
   copySnipped() {
     /* pre custom colors starts */
-    const ElementAttr = this.shadowRoot.querySelector('.clipboard pre')
+    const ElementAttr = this.shadowRoot.querySelector('.clipboard xmp')
     const colorName = ElementAttr.getAttributeNames()
 
     /*  v1 index[1] because i[0] is name attr */
@@ -115,7 +109,7 @@ class snipped extends HTMLElement {
     const button = this.shadowRoot.querySelector('#btncopy')
     button.onclick = function (e) {
       const codeAtual =
-        e.currentTarget.parentElement.querySelector('pre').textContent
+        e.currentTarget.parentElement.querySelector('xmp').textContent
       navigator.clipboard.writeText(codeAtual).then(() => {
         button.textContent = 'Copied!'
         /* return previous button text */
