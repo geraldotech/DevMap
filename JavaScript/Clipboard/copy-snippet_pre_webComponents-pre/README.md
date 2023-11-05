@@ -1,4 +1,4 @@
-# snippet-x component
+# Library snippet-x component
 
 ### CDN
 

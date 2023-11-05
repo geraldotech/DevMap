@@ -1,4 +1,4 @@
-# snippet-x component xmp version
+## Library snippet-x component [xmp version]
 
 - xmp for <ins>not render html code</ins>, no need scape `'<'` character as `&lt` but xmp is deprecated [LINK](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/xmp), is recommended use `<pre>`
 

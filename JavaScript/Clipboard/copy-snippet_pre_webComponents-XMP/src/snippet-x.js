@@ -1,3 +1,7 @@
+/* created by geraldox.com #gmapdev
+November 2023
+*/
+
 class snipped extends HTMLElement {
   constructor() {
     super()
