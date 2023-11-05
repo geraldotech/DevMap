@@ -1,0 +1,76 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  max-width: 50rem;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+section {
+  background: rgb(68, 71, 77);
+  border-radius: 8px;
+}
+
+section p {
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.clipboard {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  background: #0e1425;
+  position: relative;
+}
+
+.clipboard img {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.clipboard input {
+  width: 80%;
+  color: seagreen;
+}
+
+.clipboard button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: #41467b;
+  font-size: 0.7em;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+.clipboard button:hover {
+  background: rgb(0, 84, 204);
+}
+
+.clipboard pre {
+  color: seagreen;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.clipboard pre[inline] {
+  overflow: auto;
+  color: red;
+  padding-block: 4px;
+}
+.clipboard pre[block] {
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+footer {
+  min-height: 100px;
+}
