@@ -2,7 +2,7 @@
 
 ### CDN
 
-` <script src="../src/webcomponent.js" defer></script>`
+` <script src="../src/snippet-x.js" defer></script>`
 
 ### Basic Usage:
 
