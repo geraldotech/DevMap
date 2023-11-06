@@ -223,30 +223,28 @@ Ordem de declaração:
 <script src="content.js"></script>
 ```
 
-content não precisa de defer pq estamos usando `document.addEventListener("DOMContentLoaded"` que vai chamar a func que vai sobreescrever os valores do primeiro script.
+`content` não precisa de <ins>defer</ins> porque está definido com `document.addEventListener("DOMContentLoaded"` que vai chamar a func que vai sobreescrever os valores do `main.js`
 
-- Considerações se o content.js não tivese o DOMContentLoaded e fosse atribuído o defer, matendo a ordem dos scripts, obviamente o resultado seria o mesmo.
+- Considerações se o `content.js` não tivese o <ins>DOMContentLoaded</ins> e fosse atribuído o defer, matendo a ordem dos scripts, obviamente o resultado seria o mesmo.
 
 # onload vs onreadystatechange vs DOMContentLoaded
 
+> who is faster ?
+
 ```js
-//who is faster ?
-
-//3
-window.onload = function () {
-  console.warn('window loaded')
-}
-
+//1
+document.addEventListener('DOMContentLoaded', () => {
+  console.warn('DOM Loaded')
+})
 //2
 document.onreadystatechange = function (e) {
   console.warn('document.onready', document.readyState)
   console.log(document.readyState == 'complete')
 }
-
-//1
-document.addEventListener('DOMContentLoaded', () => {
-  console.warn('DOM Loaded')
-})
+//3
+window.onload = function () {
+  console.warn('window loaded')
+}
 ```
 
 # PointerEvents
@@ -322,8 +320,7 @@ el.addEventListener('click', function (e) {
   ```html
   <div
     id="mydiv"
-    style="width: 100px;height: 100px;background-color: blue;"
-  ></div>
+    style="width: 100px;height: 100px;background-color: blue;"></div>
 
   div { margin: auto; padding: 1em; max-width: 6em; background: rgba(0, 0, 0,
   .2); text-align: center; }
@@ -348,7 +345,7 @@ el.addEventListener('click', function (e) {
 
 - ### Get a Element by ID direct way:
 
-Todo ID declarado no document é elevado ao scopo global, então é possível chamar diretamente:
+Todo ID declarado no <ins>document</ins> é elevado ao scopo global, então é possível chamar diretamente:
 
 ```js
 ;<div id="fibra">Speed</div>
@@ -359,7 +356,7 @@ console.log(fibra) // div#fibra - todos os outros objetos acessíveis pelo espa�
 
 apesar de funcionar prefira a boa pratica na page README em <ins>getElements and querySelector</ins>
 
-//👉 Get html content
+- 👉 Get html content
 
 ```js
 ;<p id="foo">JavaScript</p>

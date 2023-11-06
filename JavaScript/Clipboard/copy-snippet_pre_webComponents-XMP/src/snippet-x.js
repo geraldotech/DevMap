@@ -39,17 +39,13 @@ class snipped extends HTMLElement {
       padding: 5px 0;
       text-align: center;
     }
-   xmp {
-      overflow: auto;
-      /*  white-space: nowrap; */
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-        'Lucida Sans', Arial, sans-serif;
-    }
-
    :is(xmp, pre)[block] {
       white-space: break-spaces;     
       color: #2c70ff;
       margin: 0;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+      line-height: 1.5;
     }
 
     xmp{
@@ -59,7 +55,6 @@ class snipped extends HTMLElement {
       white-space: no-wrap;
       padding-left: 10px;
       margin: 0;
-      line-height: 1.5;
     }
     button {
       outline: none;
@@ -79,8 +74,9 @@ class snipped extends HTMLElement {
   conteudo() {
     /* HeaderColor */
     const HeaderColor = this.getAttributeNames()
+    const AttColorName = HeaderColor.filter((val) => val != 'name')
     const AttrHeader = (this.style.color =
-      HeaderColor[1]) /* setColor in index[1] */
+      AttColorName) /* setColor in index[1] */
     this.style.color = AttrHeader ? AttrHeader : '#CED9E5'
     /* Header Color */
     const template = document.createElement(`template`)

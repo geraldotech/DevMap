@@ -46,9 +46,6 @@ class snipped extends HTMLElement {
     }
    pre {
       overflow: auto;
-      /*  white-space: nowrap; */
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-        'Lucida Sans', Arial, sans-serif;
       margin: 0;
      
     }
@@ -58,6 +55,8 @@ class snipped extends HTMLElement {
       line-height: 1.5;
       color: #2c70ff;
       padding: 0; 
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
     }
 
     pre{
@@ -85,8 +84,9 @@ class snipped extends HTMLElement {
   conteudo() {
     /* HeaderColor */
     const HeaderColor = this.getAttributeNames()
+    const AttColorName = HeaderColor.filter((val) => val != 'name')
     const AttrHeader = (this.style.color =
-      HeaderColor[1]) /* setColor in index[1] */
+      AttColorName) /* setColor in index[1] */
     this.style.color = AttrHeader ? AttrHeader : '#CED9E5'
     /* Header Color */
     const template = document.createElement(`template`)
