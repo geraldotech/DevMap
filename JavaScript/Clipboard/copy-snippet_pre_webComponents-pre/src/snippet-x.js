@@ -1,4 +1,6 @@
-/* created by geraldox.com #gmapdev
+/* 
+Snippet-x pre version 1.0
+created by geraldox.com #gmapdev
 November 2023
 */
 
@@ -46,8 +48,7 @@ class snipped extends HTMLElement {
     }
    pre {
       overflow: auto;
-      margin: 0;
-     
+      margin: 0;     
     }
 
    pre[block] {
@@ -78,6 +79,13 @@ class snipped extends HTMLElement {
       top: 5px;
       right: 5px;
     }
+
+    @media (min-width: 650px){
+      section{
+         max-width: 75%;
+        margin-left: right;
+      }
+    }
     `
     return style
   }
@@ -93,7 +101,7 @@ class snipped extends HTMLElement {
     const attr = this.getAttribute('name')
     template.innerHTML = `      
     <section>
-    <p>${attr ? attr : 'Snippet'}</p>
+    <p>${attr ? attr : ''}</p>
     <div class="clipboard">
    
     ${this.innerHTML}
@@ -115,7 +123,6 @@ class snipped extends HTMLElement {
 
     //➡️  when not have block att? so filter attr color [New method]filter attr name
     const FilterGetColor = colorName.filter((val) => val != 'block')
-    console.log(FilterGetColor)
     ElementAttr.style.color = FilterGetColor ? FilterGetColor : null
 
     const button = this.shadowRoot.querySelector('#btncopy')
