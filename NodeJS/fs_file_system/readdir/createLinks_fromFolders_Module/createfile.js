@@ -4,7 +4,9 @@ const path = require('path')
 fs.readdir(path.join(__dirname)).then((files) => {
   //exclude from links
   const keys = ['js', 'html', 'src']
-  const folders = files.filter((val) => !keys.some((sum) => val.endsWith(sum)))
+  const folders = files.filter(
+    (val) => !keys.some((exclui) => val.endsWith(exclui))
+  )
 
   const template = `const links = ${Array.from(JSON.stringify(folders)).join(
     ''
