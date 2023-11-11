@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>img error handle</title>
+    <title>img error handler</title>
     <style>
       * {
         color-scheme: dark;
@@ -19,6 +19,7 @@
 
       img {
         width: 20%;
+        margin: 5px 0;
       }
     </style>
   </head>
@@ -32,18 +33,20 @@
       <img src="https://gpnotes.droppages.com/img/1.jpg" alt="img" />
 
       <img src="https://gpnotes.droppages.com/img/12.jpg" alt="img" />
+      <img src="https://gpnotes.droppages.com/img/505.jpg" alt="img" />
     </main>
 
     <script>
-      const img = document.querySelectorAll("img");
-      console.log(img);
+      /* get all imgs */
+      const img = document.querySelectorAll('img')
+      /* for each img, if error event */
       img.forEach((val) =>
-        val.addEventListener("error", function () {
+        val.addEventListener('error', function () {
           // para remover a imagem this.remove();
           // para substituir
-          this.src = `https://via.placeholder.com/400x100`;
+          this.src = '../assets/img/404.jpg'
         })
-      );
+      )
     </script>
   </body>
 </html>
