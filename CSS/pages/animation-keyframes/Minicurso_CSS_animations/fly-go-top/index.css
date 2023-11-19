@@ -1,12 +1,12 @@
-:root{
+:root {
   color-scheme: dark;
 }
 
-img{
-   max-width: 20%;
+img {
+  max-width: 20%;
 }
 
-figure:has(img) img{ 
+figure:has(img) img {
   animation: gotop 5s ease-in-out forwards;
   position: absolute;
   right: 0;
@@ -14,20 +14,20 @@ figure:has(img) img{
 }
 
 @keyframes gotop {
- 0%{
-   transform: translateY(0);
- }
- 100%{
-   transform: translateY(-500px);
- }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-500px);
+  }
 }
 
-.fly{
+.fly {
   animation: fly 5s ease-in-out forwards; /* forwards go and stay */
 }
 
 @keyframes fly {
-  to{
+  to {
     transform: translateX(calc(100vw - 200px));
   }
 }
