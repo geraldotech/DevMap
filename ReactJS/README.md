@@ -417,7 +417,7 @@ function Form() {
 }
 
 
-// Using destruction and somando values
+// Using destructuring and somando values
 
 function Form() {
   function cadastrarUsuario(e) {
