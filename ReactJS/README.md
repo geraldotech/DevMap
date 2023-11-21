@@ -588,7 +588,10 @@ function App() {
 
 ## Snippets
 
-`rafce` install [this extenstion](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+Install [this extenstion](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+
+- `rafce` - arrow function
+- `rfce` - function..
 
 # React Router
 
