@@ -1,20 +1,11 @@
-### How deploy NextJS on Vercel
-
-- push project to GitHub
-- new project > import
-- before change `http://localhost:3000/api/cars` to `process.env.NEXT_PUBLIC_API_URL + '/api/cars'`
-- make deploy
-- Now set this Environment Variables
-  - Name: `NEXT_PUBLIC_API_URL`
-  - Value: `https://random-vercel-url.vercel.app/`
-- Make a redeploy
-
-# NextJS 13.5.6
-
-## Install NextJS 13
+## create NextJS 13 app
 
 - `npx create-next-app@13 myappname`
 - alias: `@/*`
+
+## create NextJS latest app
+
+- `npx create-next-app@latest`
 
 ### create NextJS endpoint
 
@@ -62,7 +53,7 @@ export async function GET(request: Request) {
 }
 ```
 
-- [https://nextjs.org/docs/pages/building-your-application/routing/api-routes](API route returns a JSON response)
+- [https://nextjs.org/docs/pages/building-your-application/routing/api-routes](docs/pages/building-your-application/routing)
 
 ```jsx
 import { NextResponse } from 'next/server'
@@ -92,3 +83,14 @@ export async function GET(request: Request) {
   redirect('https://nextjs.org/')
 }
 ```
+
+### How deploy NextJS on Vercel
+
+- push project to GitHub
+- new project > import
+- before change `http://localhost:3000/api/cars` to `process.env.NEXT_PUBLIC_API_URL + '/api/cars'`
+- make deploy
+- Now set this Environment Variables
+  - Name: `NEXT_PUBLIC_API_URL`
+  - Value: `https://random-vercel-url.vercel.app/`
+- Make a redeploy
