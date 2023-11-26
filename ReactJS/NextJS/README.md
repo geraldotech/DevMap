@@ -8,3 +8,87 @@
   - Name: `NEXT_PUBLIC_API_URL`
   - Value: `https://random-vercel-url.vercel.app/`
 - Make a redeploy
+
+# NextJS 13.5.6
+
+## Install NextJS 13
+
+- `npx create-next-app@13 myappname`
+- alias: `@/*`
+
+### create NextJS endpoint
+
+- create `./public/api/cars.json`
+- create `./src/hooks/useCars.tsx`
+  - use Axios, fetch
+- Na page where want use this `import { useCars } from '../hooks/useCars'`
+
+### Routers
+
+- [https://nextjs.org/docs/app/building-your-application/routing/route-handlers](https://nextjs.org/docs/app/building-your-application/routing/route-handlers)
+
+### Server Component:
+
+create a folder `/src/app/about/page.tsx` so access in `http://127.0.0.1:3000/about`
+
+> page.tsx works like a index
+
+```js
+export default function Hello() {
+  return <>Hello Router</>
+}
+```
+
+### Async Component:
+
+create a `/src/app/api/test/route.ts`
+
+```jsx
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url)
+  const id = searchParams.get('id')
+  const res = await fetch(
+    `https://god-frontend-code-test-lime.vercel.app/api/cars`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'API-Key': process.env.DATA_API_KEY,
+      },
+    }
+  )
+  const product = await res.json()
+
+  return Response.json({ product })
+}
+```
+
+- [https://nextjs.org/docs/pages/building-your-application/routing/api-routes](API route returns a JSON response)
+
+```jsx
+import { NextResponse } from 'next/server'
+
+export async function GET(request: Request) {
+  return NextResponse.json({ messsage: 'Hello World' })
+}
+```
+
+import from local api and server
+
+```jsx
+import { NextResponse } from 'next/server'
+import * as dados from '../api/cars.json'
+
+export async function GET(request: Request) {
+  return NextResponse.json({ messsage: dados })
+}
+```
+
+### Redirect
+
+```jsx
+import { redirect } from 'next/navigation'
+
+export async function GET(request: Request) {
+  redirect('https://nextjs.org/')
+}
+```
