@@ -53,7 +53,7 @@ export async function GET(request: Request) {
 }
 ```
 
-- [https://nextjs.org/docs/pages/building-your-application/routing/api-routes](docs/pages/building-your-application/routing)
+- [pages/building-your-application/routing/api-routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)
 
 ```jsx
 import { NextResponse } from 'next/server'
@@ -87,10 +87,23 @@ export async function GET(request: Request) {
 ### How deploy NextJS on Vercel
 
 - push project to GitHub
-- new project > import
+- New project > import
 - before change `http://localhost:3000/api/cars` to `process.env.NEXT_PUBLIC_API_URL + '/api/cars'`
 - make deploy
 - Now set this Environment Variables
   - Name: `NEXT_PUBLIC_API_URL`
   - Value: `https://random-vercel-url.vercel.app/`
 - Make a redeploy
+
+### two ways to get URL id
+
+```js
+const url = 'http://localhost:3000/api/blogs/20202023'
+
+const id = url.split('blogs/')[1]
+console.log(id) // 20202023
+
+// https://youtu.be/-MFiza7ZRzs?t=1692
+const onlyid = url.slice(url.lastIndexOf('/') + 1)
+console.log(onlyid) // 20202023
+```
