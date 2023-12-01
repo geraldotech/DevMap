@@ -45,12 +45,12 @@ Permite executar `snippets of code` no navegador, muito usado para testar a saí
 e.g básico
 
 ```js
-const person = [{ nome: "Geraldo", age: 30 }];
+const person = [{ nome: 'Geraldo', age: 30 }]
 
-console.warn(person); //warning
-console.log(person); //log
-console.dir(person); //disclosure direto ao ponto, melhor para leitura
-console.table(person); // beatiful way to show tables
+console.warn(person) //warning
+console.log(person) //log
+console.dir(person) //disclosure direto ao ponto, melhor para leitura
+console.table(person) // beautiful way to render tables
 ```
 
 ## window and document
@@ -111,11 +111,11 @@ window.onresize = function(){...}
 > > e.g Using window.location to get current url
 
 ```js
-<a id="link"></a>;
+;<a id="link"></a>
 
 /* using attr */
-link.href = `${window.location}/img/2022/#/file.zip`;
-link.innerHTML = `${window.location}/img/2022/download-now`;
+link.href = `${window.location}/img/2022/#/file.zip`
+link.innerHTML = `${window.location}/img/2022/download-now`
 ```
 
 ## document
@@ -125,8 +125,8 @@ link.innerHTML = `${window.location}/img/2022/download-now`;
 - document - contains the DOM represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
 
 ```js
-console.dir(document); //#document Why .dir ? https://developer.mozilla.org/en-US/docs/Web/API/console/dir
-console.log(document); //#document
+console.dir(document) //#document Why .dir ? https://developer.mozilla.org/en-US/docs/Web/API/console/dir
+console.log(document) //#document
 ```
 
 - Para manipular o DOM, precisamos "falar" com os elementos, pegando o valor atual ou definindo um novo valor começamos por:
@@ -163,7 +163,7 @@ Aqui o uso de da palavra <span style="color:red">document é required</span>, ex
 
 ```js
 function abrenovaJanela() {
-  open().document.write("oi");
+  open().document.write('oi')
 }
 ```
 
@@ -204,22 +204,22 @@ function abrenovaJanela() {
 Evita o reload da página e chama uma function caso houver
 
 ```js
-<a href="javascript:void(0)" onclick="openInNewTab(`http://google.com`)">
+;<a href="javascript:void(0)" onclick="openInNewTab(`http://google.com`)">
   Google
-</a>;
+</a>
 
 function openInNewTab(url) {
-  open(url, "", "width=500, height=300");
+  open(url, '', 'width=500, height=300')
 }
 
 //by geraldoX null works too
-<a href="javascript:null" onclick="openInNewTab()">
+;<a href="javascript:null" onclick="openInNewTab()">
   Link
-</a>;
+</a>
 //works but add a hash on url This is bad!
-<a href="#" onclick="openInNewTab(`http://google.com`)">
+;<a href="#" onclick="openInNewTab(`http://google.com`)">
   G
-</a>;
+</a>
 ```
 
 ### Useful links:

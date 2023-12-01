@@ -1,3 +1,10 @@
+## examples
+
+- ./next-app-mosh
+- ./next-crud-blogger
+- [/geraldotech/react-nextjs-api](https://github.com/geraldotech/react-nextjs-api)
+- [/geraldotech/god-frontend-code-test](https://github.com/geraldotech/god-frontend-code-test)
+
 ## create NextJS 13 app
 
 - `npx create-next-app@13 myappname`
