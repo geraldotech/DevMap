@@ -24,7 +24,7 @@ $ npx clear-npx-cache
 
 ## CreateApp with Vite + TypeScript
 
-- Vanilla, Vue, React, Lite, others
+- Vanilla, Vue, React, Preact, Lit, Svelte, Solid, Qwik, Others
 
 ```shell
 npm create vite@latest
@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="notion">Ola React</h1>
-      {/*  using this CSS clas */}
+      {/*  using this CSS class */}
 
       <p>Hello {name.toUpperCase()}</p>
 
