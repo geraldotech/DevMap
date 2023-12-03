@@ -107,6 +107,12 @@ const map = api.map((val, ind) => {
 const mapDestructuring = api.map(({ id, name, city }) => {
   console.log(id, name, city)
 })
+
+//v2
+const mapdestructuring2 = api.map((val) => {
+  const { id, name, city } = val
+  console.log(id, name, city)
+})
 ```
 
 # Map Links Index

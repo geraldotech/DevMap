@@ -11,7 +11,10 @@ export default function PostsPage() {
       {post.posts?.map((val: any, ind: any) => (
         <nav key={ind}>
           {
-            <Link href={'/posts/' + val.id}>
+            /* by ID   <Link href={'/posts/' + val.id}>
+              {val.id} - {val.title}
+            </Link> */
+            <Link href={'/posts/blog/' + val.slug}>
               {val.id} - {val.title}
             </Link>
           }

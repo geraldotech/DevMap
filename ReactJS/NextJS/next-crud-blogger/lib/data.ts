@@ -2,12 +2,23 @@ type Post = {
   id: string
   title: string
   desc: string
+  slug: string
   //date: Date
 }
 
 let posts: Post[] = [
-  { id: '1', title: 'Lorem Ipsum', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s' },
-  { id: '2', title: 'NASA ', desc: 'brings you the latest news, images and videos from America\'s space agency pioneering the future in space exploration, scientific discovery and' },
+  {
+    id: '1',
+    title: 'Lorem Ipsum',
+    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
+    slug: 'one',
+  },
+  {
+    id: '2',
+    title: 'NASA ',
+    desc: "brings you the latest news, images and videos from America's space agency pioneering the future in space exploration, scientific discovery and",
+    slug: 'two',
+  },
 ]
 //let posts: Post[] = []
 
