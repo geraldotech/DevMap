@@ -16,14 +16,21 @@
 
 ### create NextJS endpoint
 
+- [Example using endpoint](https://github.com/geraldotech/god-frontend-code-test/tree/master/src)
+
 - create `./public/api/cars.json`
 - create `./src/hooks/useCars.tsx`
   - use Axios, fetch
-- Na page where want use this `import { useCars } from '../hooks/useCars'`
+- Na page where want to use this `import { useCars } from '../hooks/useCars'`
 
 ### Routers
 
 - [https://nextjs.org/docs/app/building-your-application/routing/route-handlers](https://nextjs.org/docs/app/building-your-application/routing/route-handlers)
+
+  - Criando multirotas: eg: `/shop/roupas/camisas`
+
+  - Adicionar:`[..slug]`
+  - `[[...slug]]` entre dois `[[]]` == params de rota é opcional [Such as](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/next-crud-blogger/app/shopping/%5B...slug%5D/page.js) o que evitaria um erro de 404 como pode ser visto em [example](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/next-crud-blogger/app/shop/%5B...slug%5D/page.js)
 
 ### Server Component:
 
