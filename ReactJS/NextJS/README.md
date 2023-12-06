@@ -1,4 +1,4 @@
-### examples
+### Examples:
 
 - ./next-app-mosh
 - ./next-crud-blogger
