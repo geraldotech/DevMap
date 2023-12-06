@@ -1,16 +1,16 @@
-## examples
+### examples
 
 - ./next-app-mosh
 - ./next-crud-blogger
 - [/geraldotech/react-nextjs-api](https://github.com/geraldotech/react-nextjs-api)
 - [/geraldotech/god-frontend-code-test](https://github.com/geraldotech/god-frontend-code-test)
 
-## create NextJS 13 app
+### create NextJS 13 app
 
 - `npx create-next-app@13 myappname`
 - alias: `@/*`
 
-## create NextJS latest app
+### create NextJS latest app
 
 - `npx create-next-app@latest`
 
@@ -30,7 +30,11 @@
   - Criando multirotas: eg: `/shop/roupas/camisas`
 
   - Adicionar:`[..slug]`
-  - `[[...slug]]` entre dois `[[]]` == params de rota é opcional [Such as](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/next-crud-blogger/app/shopping/%5B...slug%5D/page.js) o que evitaria um erro de 404 como pode ser visto em [example](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/next-crud-blogger/app/shop/%5B...slug%5D/page.js)
+  - Duplo colchetes `[[...slug]]` == params de rota é opcional [Such as](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/next-crud-blogger/app/shopping/%5B...slug%5D/page.js) o que evitaria um erro de 404 como pode ser visto em [example](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/next-crud-blogger/app/shop/%5B...slug%5D/page.js)
+
+### SEO
+
+generateMetadata [ like in](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/next-crud-blogger/app/shop/%5B...slug%5D/page.js#L8)
 
 ### Server Component:
 
@@ -121,3 +125,10 @@ console.log(id) // 20202023
 const onlyid = url.slice(url.lastIndexOf('/') + 1)
 console.log(onlyid) // 20202023
 ```
+
+### Gerar statics pages
+
+- check [next-crud-blogger_static-pages](next-crud-blogger_static-pages)
+
+- `npm run build`
+- `npm run start` test

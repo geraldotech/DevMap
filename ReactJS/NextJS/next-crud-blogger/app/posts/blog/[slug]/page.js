@@ -21,3 +21,10 @@ export default async function Page({ params }) {
     </div>
   )
 }
+/* generateMetadata for this posts */
+export async function generateMetadata({ params }) {
+  return {
+    title: `Post: ${params.slug}`,
+    description: `Pagina do Post: ${params.slug}`,
+  }
+}
