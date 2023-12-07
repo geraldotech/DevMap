@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <h1>
-          I am from <code>/app/layout.tsx</code>
+          Hello from <code>/app/layout.tsx</code>
         </h1>
         <header>
           <Link href="/">Home</Link>

@@ -131,4 +131,9 @@ console.log(onlyid) // 20202023
 - check [next-crud-blogger_static-pages](next-crud-blogger_static-pages)
 
 - `npm run build`
+
+<div align='center'>
+<img src="./src/npm-run-build.png" width="50%">
+</div>
+
 - `npm run start` test
