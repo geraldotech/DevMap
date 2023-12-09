@@ -1,4 +1,24 @@
+# How to test API in memory:
+
+- open HTTPie or other API Client test
+- npm run dev
+- Using _POST_ `http://localhost:3001/api/blogs`
+- Send a post data
+
+```js
+{
+  "title":"one",
+  "desc": "sample"
+}
+```
+
+- Check post in browser in `HTTPie[GET]`
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+### REF
+
+- [https://www.youtube.com/watch?v=O-NGENb6LNg&t=1470s](https://www.youtube.com/watch?v=O-NGENb6LNg&t=1470s)
 
 ## Getting Started
 
@@ -34,7 +54,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-### REF
-
-- [https://www.youtube.com/watch?v=O-NGENb6LNg&t=1470s](https://www.youtube.com/watch?v=O-NGENb6LNg&t=1470s)

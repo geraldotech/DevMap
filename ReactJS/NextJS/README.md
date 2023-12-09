@@ -30,11 +30,11 @@
   - Criando multirotas: eg: `/shop/roupas/camisas`
 
   - Adicionar:`[..slug]`
-  - Duplo colchetes `[[...slug]]` == params de rota é opcional [Such as](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/next-crud-blogger/app/shopping/%5B%5B...slug%5D%5D/page.js) o que evitaria um erro de 404 como pode ser visto em [example](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/next-crud-blogger/app/shop/%5B...slug%5D/page.js)
+  - Duplo colchetes `[[...slug]]` == params de rota é opcional [Such as](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/curso-Deck101/next-crud-blogger/app/shopping/%5B%5B...slug%5D%5D/page.js) o que evitaria um erro de 404 como pode ser visto em [example](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/curso-Deck101/next-crud-blogger/app/shop/%5B...slug%5D/page.js)
 
 ### SEO
 
-generateMetadata [ like in](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/next-crud-blogger/app/shop/%5B...slug%5D/page.js#L8)
+generateMetadata [ like in](https://github.com/geraldotech/DevMap/blob/main/ReactJS/NextJS/curso-Deck101/next-crud-blogger/app/shop/%5B...slug%5D/page.js#L8)
 
 ### Server Component:
 
@@ -128,7 +128,7 @@ console.log(onlyid) // 20202023
 
 ### Gerar statics pages
 
-- check [next-crud-blogger_static-pages](next-crud-blogger_static-pages)
+- check [next-crud-blogger_static-pages](next-crud-blogger_static-pages) how to? thanks [DeveloperDeck101](https://youtu.be/g7q0RG1fhLk?t=1409)
 
 - `npm run build`
 
