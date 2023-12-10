@@ -1,0 +1,2 @@
+- ao criar um layout nao precisa mais do body apenas `{children}` e o conteudo extra a ser compartilhado, somente o layout raiz precisa do html e body
+- diference template and layout [https://youtu.be/kf1NbJgGbFA?list=PLR8OzKI52ppWoTRvAmB_FQPPlHS0otV7V&t=1657](https://youtu.be/kf1NbJgGbFA?list=PLR8OzKI52ppWoTRvAmB_FQPPlHS0otV7V&t=1657)
