@@ -128,7 +128,7 @@ console.log(onlyid) // 20202023
 
 ### Gerar statics pages
 
-- check [next-crud-blogger_static-pages](next-crud-blogger_static-pages) how to? thanks [DeveloperDeck101](https://youtu.be/g7q0RG1fhLk?t=1409)
+- check [next-crud-dynamic-routes](next-crud-dynamic-routes) how to? thanks [DeveloperDeck101](https://youtu.be/g7q0RG1fhLk?t=1409)
 
 - `npm run build`
 

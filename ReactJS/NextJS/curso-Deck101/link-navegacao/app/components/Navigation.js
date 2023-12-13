@@ -1,18 +1,24 @@
 'use client'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import {
+  usePathname,
+  useRouter,
+  useSelectedLayoutSegment,
+} from 'next/navigation'
 
 const Navigation = ({ navLinks }) => {
   const pathname = usePathname()
 
   const router = useRouter()
   console.log(router)
+  //const segmento = useSelectedLayoutSegment()
+  //console.log(`segmento`, segmento)
 
   return (
     <nav className="bg-slate-500">
       <ul>
         {navLinks.map((link) => {
-            const isActive = pathname.startsWith(link.href)
+          const isActive = pathname.endsWith(link.href)
           //const isActive = pathname === link.href
           //console.log('path', link.href.split('')[1])
           return (
