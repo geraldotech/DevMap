@@ -18,7 +18,8 @@ export default async function Home() {
       </Suspense> */}
 
       {/* desse modo é preciso que todos os components emcapsulados carreguem para mostrar */}
-      <Suspense fallback={<h1>Carregando em grupo</h1>}>
+      <Suspense
+        fallback={<h1 className="bg-indigo-500">Carregando em grupo</h1>}>
         <Produto />
         <Review />
       </Suspense>

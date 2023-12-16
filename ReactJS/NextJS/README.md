@@ -136,4 +136,4 @@ console.log(onlyid) // 20202023
 <img src="./src/npm-run-build.png" width="50%">
 </div>
 
-- `npm run start` test
+- `npm run start` test build
