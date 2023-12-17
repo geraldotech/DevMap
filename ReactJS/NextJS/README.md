@@ -1,3 +1,12 @@
+# NextJS
+
+Baseando em convenção de nomes de arquivos e pastas para que as capacidades sejam executadas
+
+- **underscode == privado**
+
+`\_componentes`
+`\_files`
+
 ### Examples:
 
 - ./next-app-mosh
@@ -128,7 +137,7 @@ console.log(onlyid) // 20202023
 
 ### Gerar statics pages
 
-- check [next-crud-dynamic-routes](next-crud-dynamic-routes) how to? thanks [DeveloperDeck101](https://youtu.be/g7q0RG1fhLk?t=1409)
+- check [next-crud-dynamic-routes](./curso-Deck101/next-crud-dynamic-routes) how to? thanks [DeveloperDeck101](https://youtu.be/g7q0RG1fhLk?t=1409)
 
 - `npm run build`
 
