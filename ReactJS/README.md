@@ -1,36 +1,37 @@
-# ReactJS
+<h1 align=center>ReactJS</h1>
 
-- {interpolation}
+> Library
+> Requerements: NodeJS
 
 ```js
-// creating app after installed Node:
-$ npx create-react-app <myappname>
-
-// npx create-react-app error enoent ?
-$ npm uninstall -g create-react-app
+// npx create-react-app
 $ npm install -g create-react-app
+$ npm uninstall -g create-react-app
+
+
+// create-react-app npm
+$ npm install -g create-react-app
+
+// create-react-app npx
+$ npx create-react-app@5.0.0 <my-app>
+$ cd <my-app>
+$ npx clear-npx-cache
 
 // Start Server
 $ npm run start
-
-
-//# create-react-app
-$ npm install -g create-react-app
-
-// Inside directory
-$ npx create-react-app@5.0.0 my-app
-$ npx clear-npx-cache
 ```
 
-## CreateApp with Vite + TypeScript
+## CreateApp with Vite
 
 - Vanilla, Vue, React, Preact, Lit, Svelte, Solid, Qwik, Others
 
-```shell
-npm create vite@latest
-```
+  ```shell
+  $ npm create vite@latest
+  ```
 
-# JSX interpolation strings, import CSS Styles and functions
+# JSX {interpolation}
+
+## strings, import CSS Styles and functions
 
 ```jsx
 import './App.css'
@@ -63,12 +64,12 @@ export default App
 
 ## Components
 
-> primeira letra maiuscula
+> start with Capital letter
 
-`src/componentes > create a HelloWord.js`
+Geralmente criar uma pasta `src/componentes > create a HelloWord.js`
 
-- assim como no Vue wrapper - embrulhar, enrolar usando uma div
-- Quando for footer wrapper em `<footer>`, `main`, `nav` ...
+- Like in VueJS wrapper - embrulhar return with div or fragment
+- Can use semantic html wrapper `<footer>`, `main`, `nav`...
 
 ```js
 // v1
@@ -99,16 +100,15 @@ return (
 }
 export default HelloWord;   // fazer o export
 
-// v4 para components pouco conteudo return direct
+// v4 para components pouco conteudo return inline direct
 function Button(pros) {
   return <button>{pros.text}</button>
 }
 
 export default Button
-
 ```
 
-import `App.js`
+On **App.js** import `HelloWord.js` and call this attribute
 
 ```jsx
 import './App.css'
@@ -142,7 +142,7 @@ function SayMyName(props) {
 }
 ```
 
-- App.js
+- **App.js**
 
 ```jsx
 import SayMyName from './components/SayMyName'
@@ -395,7 +395,6 @@ function Form() {
 
 
 // Using destructuring and somando values
-
 function Form() {
   function cadastrarUsuario(e) {
     e.preventDefault()
@@ -412,11 +411,11 @@ function Form() {
 
 Alguns:
 
-- `useState`
-- `useEffect`
-- `useContext`
+- `useState()`
+- `useEffect()`
+- `useContext()`
 
-### useState
+  - ### useState
 
 - é um hook do React, consegue manusear o estado do um componente de forma simples,
 - funciona muito bem com eventos
@@ -509,52 +508,54 @@ const [str, setSrt] = useState("Ola Mundo");
 <button onClick={() => handleClick()}>click here</button>
 
 <button onClick={function () {console.log(`hello`)}}>arrow functions are more beautiful</button>
+
+
+// inline change state
+<button onClick={() => setHello('Hiiii')}>Click me</button>
 ```
 
 Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd36112d591f391397a20a#file-app-js)
 
-// inline change state
-<button onClick={() => setHello('Hiiii')}>Click me</button>
-
 <hr>
 
-# useEffect
+- # useEffect
 
-> means: useEfeito colateral
+  > means: useEfeito colateral
 
-- useEffect multiple consoles:
-  - porque o React está rodando em `StrictMode` que é o modo de desenvolvimento, no worries, em produção isso não vai ocorrer.
-- reagir as etapas do ciclo de vida do component que são: crição, atualização e destruição, example ir em [useEffectexample.jsx](./ReactHooks/src/components/useEffectexample.jsxuseEffectexample.jsx) e para logs de destruição + toggle boolean ir em [/about.jsx](./ReactHooks/src/components/about.jsx/about.jsx)
-- Criar os próprios hooks
-  - extrair lógicas e transformar em hooks
-  - declarar funçöes seguindo o padrão `use` e.g:
-    - useCounter
-    - useContador
-      Check [CounterCustomHook.jsx](./ReactHooks/src/components/CounterCustomHook.jsx) e [/hooks/useCounter.jsx](./ReactHooks/src/hooks/useCounter.jsx)
+  - useEffect multiple consoles:
+    - porque o React está rodando em `StrictMode` que é o modo de desenvolvimento, no worries, em produção isso não vai ocorrer.
+  - reagir as etapas do ciclo de vida do component que são: crição, atualização e destruição, example ir em [useEffectexample.jsx](./ReactHooks/src/components/useEffectexample.jsxuseEffectexample.jsx) e para logs de destruição + toggle boolean ir em [/about.jsx](./ReactHooks/src/components/about.jsx/about.jsx)
+  - Criar os próprios hooks
 
-### useRef - get Input Value using
+    - extrair lógicas e transformar em hooks
+    - declarar funçöes seguindo o padrão `use` e.g:
+      - `useCounter`
+      - `useContador`
+        Check [CounterCustomHook.jsx](./ReactHooks/src/components/CounterCustomHook.jsx) e [/hooks/useCounter.jsx](./ReactHooks/src/hooks/useCounter.jsx)
 
-```jsx
-// add useRef
-import React, { useState, useRef } from 'react'
+- # useRef - get Input Value using
 
-//define const
-const todoNameRef = useRef()
+  ```jsx
+  // add useRef
+  import React, { useState, useRef } from 'react'
 
-//function get value
-function handleAddTodo(e) {
-  const name = todoNameRef.current.value
-  //if name empty return
-  if (name === '') return
-  console.warn(name)
-  //clean input after click
-  todoNameRef.current.value = null
-}
+  //define const
+  const todoNameRef = useRef()
 
-//App.html
-<input ref={todoNameRef} type="text" />
-<button onClick={handleAddTodo}>Add Todo</button>
-```
+  //function get value
+  function handleAddTodo(e) {
+    const name = todoNameRef.current.value
+    //if name empty return
+    if (name === '') return
+    console.warn(name)
+    //clean input after click
+    todoNameRef.current.value = null
+  }
+
+  //App.html
+  <input ref={todoNameRef} type="text" />
+  <button onClick={handleAddTodo}>Add Todo</button>
+  ```
 
 # Tips:
 
@@ -602,7 +603,7 @@ function Button(props) {
 > É possível usar o state para criar as condições
 > não é bom criar lógicas muito complexas nos templates, por não ser o local ideal para lógicas
 
-[Full Code](React-Aulas/src/components/Conditional.js)
+[ReactAulas Full Code](React-Aulas/src/components/Conditional.js)
 
 # Renderizar listas
 
@@ -642,7 +643,7 @@ function App() {
 
 ## Snippets
 
-Install [this extenstion](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+- VSCode [extenstion](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 
 - `rafce` - arrow function
 - `rfce` - function..
@@ -650,32 +651,32 @@ Install [this extenstion](https://marketplace.visualstudio.com/items?itemName=ds
 # React Router
 
 - Precisa instalar esse pacote no projeto
-- `npm install react-router-dom`
-- `npm install react-router-dom@6`
 
-- import: `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
+  - `npm install react-router-dom`
+  - `npm install react-router-dom@6`
+  - import: `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
 
-```jsx
-<Router>
-  <ul>
-    <li>
-      <Link to="/">Home</Link>
-    </li>
-    <li>
-      <Link to="/empresa">Empresa</Link>
-    </li>
-    <li>
-      <Link to="/contato">Contato</Link>
-    </li>
-  </ul>
+  ```jsx
+  <Router>
+    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/empresa">Empresa</Link>
+      </li>
+      <li>
+        <Link to="/contato">Contato</Link>
+      </li>
+    </ul>
 
-  <Routes>
-    <Route exact path="/" element={<Home />}></Route>
-    <Route path="/empresa" element={<Empresa />}></Route>
-    <Route path="/contato" element={<Contato />}></Route>
-  </Routes>
-</Router>
-```
+    <Routes>
+      <Route exact path="/" element={<Home />}></Route>
+      <Route path="/empresa" element={<Empresa />}></Route>
+      <Route path="/contato" element={<Contato />}></Route>
+    </Routes>
+  </Router>
+  ```
 
 - Fazer os respectivos components e importar
 
