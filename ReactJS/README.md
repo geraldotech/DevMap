@@ -420,6 +420,7 @@ Alguns:
 - é um hook do React, consegue manusear o estado do um componente de forma simples,
 - funciona muito bem com eventos
 - No local para inputs instead `for` deve usar `htmlFor`
+- Check useState() + prevstate [counter.jsx](./ReactHooks/src/components/counter.jsx)
 
 > Did you mean `htmlFor`?
 
@@ -524,7 +525,7 @@ Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd3
 
   - useEffect multiple consoles:
     - porque o React está rodando em `StrictMode` que é o modo de desenvolvimento, no worries, em produção isso não vai ocorrer.
-  - reagir as etapas do ciclo de vida do component que são: crição, atualização e destruição, example ir em [useEffectexample.jsx](./ReactHooks/src/components/useEffectexample.jsxuseEffectexample.jsx) e para logs de destruição + toggle boolean ir em [/about.jsx](./ReactHooks/src/components/about.jsx/about.jsx)
+  - reagir as etapas do ciclo de vida do component que são: crição, atualização e destruição, example ir em [useEffectexample.jsx](./ReactHooks/src/components/useEffectexample.jsx) e para logs de destruição + toggle boolean ir em [/about.jsx](./ReactHooks/src/components/about.jsx/about.jsx)
   - Criar os próprios hooks
 
     - extrair lógicas e transformar em hooks

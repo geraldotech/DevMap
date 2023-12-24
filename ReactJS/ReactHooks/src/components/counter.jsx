@@ -15,7 +15,6 @@ const counter = () => {
   return (
     <div>
       <h3>
-        Counter with{' '}
         <a href="https://medium.com/geekculture/using-prevstate-with-react-basic-and-complex-f7f8ab4ce1b6">
           preState
         </a>
