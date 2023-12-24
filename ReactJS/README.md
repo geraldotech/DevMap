@@ -684,7 +684,7 @@ function App() {
 
 - Pacote externo de icones
 - precisa adicionar via npm
-- permite usar com a sintaze parecida com a de components
+- permite usar com a sintaxe parecida com a de components
 - `npm install react-icons`
 - no component: `import { nomeIcon } from 'react-icons/Bibioteca'`
 
