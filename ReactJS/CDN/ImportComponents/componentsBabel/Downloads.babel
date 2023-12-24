@@ -6,16 +6,7 @@ const template = `
 <h2>{os}</h2>
 </div>`
 
-const { useState } = React
-const { useEffect } = React
-
 const About = (props) => {
-  const [os, setOs] = useState('Estado')
-
-  useEffect(() => {
-    return changeState()
-  }, [])
-
   function changeState() {
     setOs((prevOs) => prevOs + 'Atual')
   }
