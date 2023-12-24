@@ -8,7 +8,6 @@
 - [Defer](#defer)
 - [Hoisting](#hoisting)
 - [Types](#types)
-- [Terminais e comandos](#terminais)
 
 <hr>
 <a name="what-is-ts">O que é o TS?:</a>
@@ -31,13 +30,13 @@ npm install -g typescript
 check ts version:
 
 ```js
-tsc - v;
+tsc - v
 ```
 
 check node and npm version:
 
 ```js
-node - v && npm - v;
+node - v && npm - v
 ```
 
 ## simples Hello Word
@@ -46,8 +45,8 @@ node - v && npm - v;
 Fazendo um simples Hello Word, fazer um arquivo vou chamar o meu de `primeiro.ts`:
 
 ```ts
-const a: string = "Hello World!";
-console.log(a);
+const a: string = 'Hello World!'
+console.log(a)
 ```
 
 Transpilar: `tsc primeiro.ts`
@@ -93,8 +92,8 @@ tsc --init
 `$ mkdir src && touch src/index.ts`
 
 ```ts
-const myname: string = "Hello TypeScripts works! by gmapdev";
-console.log(myname);
+const myname: string = 'Hello TypeScripts works! by gmapdev'
+console.log(myname)
 ```
 
 3 - criar o `index.html` e adicionando o `./dist/js/index.js`
@@ -125,9 +124,9 @@ Modo apontando um arquivo: tsc -w index.ts
 - Create novo arquivo like index.ts respeitar a converção que os Dev JS utilizam hoje, a utilização do camelCase. e.g? myControls.ts
 
 ```js
-var languages: Array<string> = [];
-languages.push("TypeScript");
-languages.push(3);
+var languages: Array<string> = []
+languages.push('TypeScript')
+languages.push(3)
 ```
 
 transpilar esse código => `tsc index.ts`
@@ -186,33 +185,33 @@ Um escopo no JavaScript é dado por funções e não por blocos, e a palavra res
 - initialized as `undefined`
 
 ```js
-var a = "a";
+var a = 'a'
 if (5 > 4) {
-  var aa = "AA";
+  var aa = 'AA'
 }
-console.log(a, aa); // a, AA
+console.log(a, aa) // a, AA
 ```
 
 acessar variável antes de ser inicializada
 
 ```js
-console.log(age); // undefined
-age = 8;
-console.log(age); // 8 - age foi inicializado
-var age;
+console.log(age) // undefined
+age = 8
+console.log(age) // 8 - age foi inicializado
+var age
 ```
 
 ```js
 if (true) {
-  var global = 2; // vaza de dentro do bloco
+  var global = 2 // vaza de dentro do bloco
 }
 
 function teste() {
-  var global = 4;
-  console.log(global); //4
+  var global = 4
+  console.log(global) //4
 }
 
-console.log(global); //2 -> acessa a que vazou do if
+console.log(global) //2 -> acessa a que vazou do if
 ```
 
 # Let
@@ -226,24 +225,24 @@ console.log(global); //2 -> acessa a que vazou do if
 ```js
 // will work
 
-let greeting = "say Hi";
-greeting = "say Hello instead";
+let greeting = 'say Hi'
+greeting = 'say Hello instead'
 
 // return an error
-let sam = "samsung";
-let sam = "samsung"; // 'sam' has already been declared
+let sam = 'samsung'
+let sam = 'samsung' // 'sam' has already been declared
 ```
 
 - However, if the same variable is defined in different scopes, there will be no error:
 
 ```js
 if (true) {
-  let hey = "hello";
-  console.log(hey); // hello
+  let hey = 'hello'
+  console.log(hey) // hello
 }
 
-let hey = "how";
-console.log(hey); // how
+let hey = 'how'
+console.log(hey) // how
 ```
 
 Why is there no error? This is because both instances are treated as different variables since they have different scopes. [https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/#:~:text=Hoisting%20of%20const&text=var%20variables%20can%20be%20updated,the%20top%20of%20their%20scope.)
@@ -251,13 +250,13 @@ Why is there no error? This is because both instances are treated as different v
 - variable declared in a block with let is only available for use within that block, entretando fora do block scoped é acessível globalmente igual ao var
 
 ```js
-let b = "b";
+let b = 'b'
 if (20 > 30) {
-  let bb = "BB";
+  let bb = 'BB'
 }
 
-console.log(b);
-console.error(bb); // Uncaught ReferenceError: bb is not defined
+console.log(b)
+console.error(bb) // Uncaught ReferenceError: bb is not defined
 ```
 
 # Const
@@ -268,9 +267,9 @@ A palavra reservada `const` é usada para declarar variáveis read-only, isto é
 - const object cannot be updated
 
 ```js
-const mensagem = "MSG 1";
-console.log(mensagem); // MSG 1
-mensagem = "MSG 2"; // TypeError: Assignment to constant variable. Resultado:
+const mensagem = 'MSG 1'
+console.log(mensagem) // MSG 1
+mensagem = 'MSG 2' // TypeError: Assignment to constant variable. Resultado:
 
 //RESULTADO
 // MSG 1
@@ -288,54 +287,54 @@ Quando declaramos um variável ou função em JS, sua declaração é "elevada" 
 ```js
 // var
 const person = {
-  name: "Geraldo",
+  name: 'Geraldo',
   age: 29,
   children: true,
-};
+}
 
 if (person.age == 29) {
-  var msn = "var dentro do if";
+  var msn = 'var dentro do if'
 }
-console.log(msn); // => var dentro do if
+console.log(msn) // => var dentro do if
 
 //let && const = o que acontece aqui fica aqui!
 
 if (person.children === true) {
-  let add = "dependentes";
+  let add = 'dependentes'
 }
 
-console.log(ads); // => Uncaught ReferenceError:
+console.log(ads) // => Uncaught ReferenceError:
 
-if (person.name != "Geraldo") {
-  const ads = "try again!";
+if (person.name != 'Geraldo') {
+  const ads = 'try again!'
 }
 
-console.log(add); // => Uncaught ReferenceError: add is not defined
+console.log(add) // => Uncaught ReferenceError: add is not defined
 ```
 
 ### içamento:
 
 ```js
 //içamento
-console.log(city); //undefined
-city = "Maceió";
-var city;
+console.log(city) //undefined
+city = 'Maceió'
+var city
 
 //console.log(opt); //Cannot access 'opt' before initialization
 //opt = "crédito";
-let opt;
+let opt
 
 //const  é somente leitura, não pode ser reatribuida!
-var x = 9;
-let y = 10;
-const z = 11;
-console.log(x); // 9
-console.log(y); // 10
-console.log(z); /// 11
-x = 8;
-z = 5;
-console.log(x); // 8
-console.log(z); /// Uncaught TypeError:
+var x = 9
+let y = 10
+const z = 11
+console.log(x) // 9
+console.log(y) // 10
+console.log(z) /// 11
+x = 8
+z = 5
+console.log(x) // 8
+console.log(z) /// Uncaught TypeError:
 ```
 
 ## Types:
@@ -347,15 +346,15 @@ console.log(z); /// Uncaught TypeError:
 Agora entrando nos types, iniciaremos com os tipos booleanos. Como em outras linguagens tipadas, o Boolean suporta dois tipos de valores: true ou false .
 
 ```ts
-let ativo: boolean;
-ativo = false;
-ativo = true;
+let ativo: boolean
+ativo = false
+ativo = true
 ```
 
 Nós também podemos declarar uma variável sem o seu type, basta passar o seu valor inicial:
 
 ```ts
-let ativo: boolean = true;
+let ativo: boolean = true
 ```
 
 ### Number:
@@ -364,10 +363,10 @@ valores como floating, decimal, hex, octal deve ser tipados como number
 A seguir você tem um exemplo com os tipos numéricos suportados:
 
 ```ts
-let octal: number = 0o745;
-let binary: number = 0b1111;
-let decimal: number = 34;
-let hex: number = 0xf34d;
+let octal: number = 0o745
+let binary: number = 0b1111
+let decimal: number = 34
+let hex: number = 0xf34d
 ```
 
 ### String:
@@ -375,8 +374,8 @@ let hex: number = 0xf34d;
 As strings armazenam valores do tipo texto. Diferente de outras linguagens de programação, no JavaScript/TypeScript nós podemos declarar uma string em aspas simples e aspas duplas.
 
 ```ts
-let cor: string = "verde";
-cor = "azul";
+let cor: string = 'verde'
+cor = 'azul'
 ```
 
 Nós também podemos declarar uma variável do tipo string utilizando template strings, dessa forma nós podemos concatenar valores:
@@ -392,19 +391,19 @@ let sentence: string = `Olá, meu nome é ${ nome }, eu tenho ${idade} anos.
 adicionar ao final de um string para obter o tamanho dela.
 
 ```ts
-var nome: string = "Geraldo";
-let sentence: string = `Olá, meu nome ${nome}`;
-console.log(sentence.length);
+var nome: string = 'Geraldo'
+let sentence: string = `Olá, meu nome ${nome}`
+console.log(sentence.length)
 ```
 
 run tsd file.ts para gerar o .js e depois node file.js
 
 ```ts
-var nome: string = "Geraldo";
-var idade: number = 29;
-let sentence: string = `Olá, meu nome ${nome} eu tenhjo ${idade} anos`;
-console.log(sentence);
-console.log(sentence.length);
+var nome: string = 'Geraldo'
+var idade: number = 29
+let sentence: string = `Olá, meu nome ${nome} eu tenhjo ${idade} anos`
+console.log(sentence)
+console.log(sentence.length)
 ```
 
 ### IndexOf:
@@ -415,16 +414,16 @@ Para ficar mais claro, vamos utilizar esse método no nosso exemplo anterior, pa
 
 ```ts
 //outras variáveis
-let sentence: string = `Olá, meu nome é ${nome}, eu tenho ${idade} anos.`;
-console.log(sentence.indexOf("nome")); //posição 9
+let sentence: string = `Olá, meu nome é ${nome}, eu tenho ${idade} anos.`
+console.log(sentence.indexOf('nome')) //posição 9
 ```
 
 ```ts
-let sentence: string = `Olá, meu nome ${nome} eu ${surname} tenho ${idade} anos`;
-console.log(sentence);
-console.log(sentence.length); //44
-console.log(sentence.indexOf("nome")); //9
-console.log(sentence.indexOf("idade")); //-1
+let sentence: string = `Olá, meu nome ${nome} eu ${surname} tenho ${idade} anos`
+console.log(sentence)
+console.log(sentence.length) //44
+console.log(sentence.indexOf('nome')) //9
+console.log(sentence.indexOf('idade')) //-1
 ```
 
 Note que ele retornou -1 para idade . Isso aconteceu porque essa palavra é uma variável e não um valor dentro da string.
@@ -434,14 +433,14 @@ Note que ele retornou -1 para idade . Isso aconteceu porque essa palavra é uma 
 Como em outras linguagens de programação, nós declaramos um array no TypeScript utilizando as chaves [] .
 
 ```ts
-let numeros: number[] = [1, 2, 3];
-let textos: string[] = ["exemplo 1", "exemplo 2", "exemplo 3"];
+let numeros: number[] = [1, 2, 3]
+let textos: string[] = ['exemplo 1', 'exemplo 2', 'exemplo 3']
 ```
 
 Ou nós podemos utilizar a palavra reservada Array<> , como no exemplo a seguir:
 
 ```ts
-const arr: Array<number> = [100, 5, 23, 5];
+const arr: Array<number> = [100, 5, 23, 5]
 ```
 
 REPL stands for **Read Evaluate Print Loop**
@@ -451,21 +450,3 @@ REPL stands for **Read Evaluate Print Loop**
 
 - Type Inference:
   é quando o TS identifica e define o tipo de dados para nós.
-
-### Terminais
-
-<a name="terminais"></a>
-
-<img src="./assets/cmder.png" style="width:50%">
-<img src="./assets/git-bash.png" style="width:50%">
-
-Comandos úteis para produtividade:
-
-```
-mkdir | create folders
-touch | create files
-rm -rd | delete folders
-rm | delete files
-echo "# oi" >> style.css | create file and write
-cat | read file content
-```

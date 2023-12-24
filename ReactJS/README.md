@@ -14,10 +14,10 @@ $ npm install -g create-react-app
 $ npm run start
 
 
+//# create-react-app
 $ npm install -g create-react-app
 
 // Inside directory
-
 $ npx create-react-app@5.0.0 my-app
 $ npx clear-npx-cache
 ```
@@ -60,29 +60,6 @@ function App() {
 
 export default App
 ```
-
-### Button on click change text, tudo na page App.js
-
-- import: `import { useState } from "react";`
-
-```js
-// App.js
-
-//::before return
-function handleClick() {
-  setSrt("olá pessoas");
-  console.log("hii");
-}
-const [str, setSrt] = useState("Ola Mundo");
-
-//::inside return
-<h1>{str}</h1>
-<button onClick={() => handleClick()}>click here</button>
-
-<button onClick={function () {console.log(`hello`)}}>arrow functions are more beautiful</button>
-```
-
-Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd36112d591f391397a20a#file-app-js)
 
 ## Components
 
@@ -427,7 +404,19 @@ function Form() {
   }
 ```
 
-# useState
+# React Hooks
+
+- gerenciamento de estados - State
+- gerenciamento do ciclo de vida - Life Cycle
+- Criar lógicas reutilizaveis entre os componentes
+
+Alguns:
+
+- `useState`
+- `useEffect`
+- `useContext`
+
+### useState
 
 - é um hook do React, consegue manusear o estado do um componente de forma simples,
 - funciona muito bem com eventos
@@ -453,9 +442,9 @@ function Form() {
 
 2 - import `import {useState} from 'react'`
 
-3 - Nao precisou adicionar o attr name no input
+3 - Não precisou adicionar o `attr name` na input
 
-4 - efinir a function que é chamada no `<form onSubmit={registerUser}>`
+4 - define a function que é chamada no `<form onSubmit={registerUser}>`
 
 ```jsx
 function Form() {
@@ -468,7 +457,6 @@ function Form() {
 
 
 // adiciona na input onChange...
-
 <input type="text" id="user" placeholder="user" onChange={(e) => setName(e.target.value)} />
 
 // default values
@@ -485,7 +473,7 @@ const [password, setPassword] = useState()
 <input type="password" id="pass" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
 ```
 
-# useState on input;
+### useState on input;
 
 ```jsx
 import {useState} from 'react'
@@ -500,6 +488,72 @@ setIdade(e.target.value)
 
 <input type='text' onInput={Idadefun} />
 <p>{idade}</p>
+```
+
+### useState with strings
+
+- import: `import { useState } from "react";`
+
+```js
+// App.js
+
+//::before return
+function handleClick() {
+  setSrt("olá pessoas");
+  console.log("hii");
+}
+const [str, setSrt] = useState("Ola Mundo");
+
+//::inside return
+<h1>{str}</h1>
+<button onClick={() => handleClick()}>click here</button>
+
+<button onClick={function () {console.log(`hello`)}}>arrow functions are more beautiful</button>
+```
+
+Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd36112d591f391397a20a#file-app-js)
+
+// inline change state
+<button onClick={() => setHello('Hiiii')}>Click me</button>
+
+<hr>
+
+# useEffect
+
+> means: useEfeito colateral
+
+- useEffect multiple consoles:
+  - porque o React está rodando em `StrictMode` que é o modo de desenvolvimento, no worries, em produção isso não vai ocorrer.
+- reagir as etapas do ciclo de vida do component que são: crição, atualização e destruição, example ir em [useEffectexample.jsx](./ReactHooks/src/components/useEffectexample.jsxuseEffectexample.jsx) e para logs de destruição + toggle boolean ir em [/about.jsx](./ReactHooks/src/components/about.jsx/about.jsx)
+- Criar os próprios hooks
+  - extrair lógicas e transformar em hooks
+  - declarar funçöes seguindo o padrão `use` e.g:
+    - useCounter
+    - useContador
+      Check [CounterCustomHook.jsx](./ReactHooks/src/components/CounterCustomHook.jsx) e [/hooks/useCounter.jsx](./ReactHooks/src/hooks/useCounter.jsx)
+
+### useRef - get Input Value using
+
+```jsx
+// add useRef
+import React, { useState, useRef } from 'react'
+
+//define const
+const todoNameRef = useRef()
+
+//function get value
+function handleAddTodo(e) {
+  const name = todoNameRef.current.value
+  //if name empty return
+  if (name === '') return
+  console.warn(name)
+  //clean input after click
+  todoNameRef.current.value = null
+}
+
+//App.html
+<input ref={todoNameRef} type="text" />
+<button onClick={handleAddTodo}>Add Todo</button>
 ```
 
 # Tips:
@@ -563,11 +617,11 @@ function Button(props) {
 
 - Tecnica usada para compartilhar o state
 - é normal vários components dependerem do mesmo estado
-- Centralizar o state no pai, e definor quem usa e quem define (setState)
+- Centralizar o state no pai, e definir quem usa e quem define `(setState)`
 - Entender para aplicar nos projetos
 
-- [Full Code 1](React-Aulas/src/components/Satelift.js)
-- [Full Code 2](React-Aulas/src/components/Saudacao.js)
+- [Full Code Statelift.js](React-Aulas/src/components/Statelift.js)
+- [Full Code Saudacao.js](React-Aulas/src/components/Saudacao.js)
 
 ```jsx
 // App.js
@@ -645,26 +699,3 @@ Install [this extenstion](https://marketplace.visualstudio.com/items?itemName=ds
 - `import { IconName } from "react-icons/di";`
 
 <hr>
-### How get Input Value using useRef
-
-```jsx
-// add useRef
-import React, { useState, useRef } from 'react'
-
-//define const
-const todoNameRef = useRef()
-
-//function get value
-function handleAddTodo(e) {
-  const name = todoNameRef.current.value
-  //if name empty return
-  if (name === '') return
-  console.warn(name)
-  //clean input after click
-  todoNameRef.current.value = null
-}
-
-//App.html
-<input ref={todoNameRef} type="text" />
-<button onClick={handleAddTodo}>Add Todo</button>
-```
