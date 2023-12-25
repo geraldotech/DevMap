@@ -1,5 +1,5 @@
 const template = `
-<div>
+<div className="">
     <h2>Components</h2>
     <h2>Feliz {props.msg}</h2>
 </div>`

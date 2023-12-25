@@ -1,6 +1,6 @@
 const template = `
 <div>
-    <h2>Home Component</h2>
+    <h2 className="bg-blue-400 text-4xl mt-5">Home Component</h2>
 </div>`
 
 const Home = (props) => {
