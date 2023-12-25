@@ -655,8 +655,27 @@ function App() {
 
   - `npm install react-router-dom`
   - `npm install react-router-dom@6`
-  - import: `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
-    - Example => [/costs_project/src/App.js](/costs_project/src/App.js)
+  - import: `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'` - Example 1 [Hard] => [/costs_project/src/App.js](./React-Router) - Example 2 [set router views](./costs_project/src/App.js) and set [Router Link](./costs_project/src/components/layout/Navbar.js)
+
+<details>
+<summary>Check full code</summary>
+
+```js
+<Router>
+  <Link to="/">Home</Link>
+  <Link to="/company">Company</Link>
+  <Routes>
+    <Route exact path="/" element={<Home />}>
+      Home
+    </Route>
+    <Route exact path="/company" element={<Company />}>
+      Company
+    </Route>
+  </Routes>
+</Router>
+```
+
+</details>
 
 # React Icons
 
