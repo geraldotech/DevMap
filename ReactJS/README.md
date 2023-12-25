@@ -656,30 +656,7 @@ function App() {
   - `npm install react-router-dom`
   - `npm install react-router-dom@6`
   - import: `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
-
-  ```jsx
-  <Router>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/empresa">Empresa</Link>
-      </li>
-      <li>
-        <Link to="/contato">Contato</Link>
-      </li>
-    </ul>
-
-    <Routes>
-      <Route exact path="/" element={<Home />}></Route>
-      <Route path="/empresa" element={<Empresa />}></Route>
-      <Route path="/contato" element={<Contato />}></Route>
-    </Routes>
-  </Router>
-  ```
-
-- Fazer os respectivos components e importar
+    - Example => [/costs_project/src/App.js](/costs_project/src/App.js)
 
 # React Icons
 
