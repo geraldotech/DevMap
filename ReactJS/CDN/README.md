@@ -13,19 +13,6 @@
     ></script>
 ```
 
-### v17 production
-
-```js
- <script
-      crossorigin
-      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
-    ></script>
-```
-
 ### v18 development
 
 ```js
@@ -36,6 +23,19 @@
     <script
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+```
+
+### v17 production
+
+```js
+ <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
     ></script>
 ```
 
@@ -59,7 +59,7 @@ then to version 17 e 18 pro `Hello Wordl!`
 
 ```js
 <script type="text/babel">
-  const container = document.getElementById("root"); ReactDOM.render({" "}
+  const container = document.getElementById("root"); ReactDOM.render({' '}
   <h1>Ola</h1>, container);
 </script>
 ```
@@ -67,17 +67,25 @@ then to version 17 e 18 pro `Hello Wordl!`
 then to version 18 development `Hello Word` includes createRoot, 18 production version não mostra avisos de desenvolvimento.
 
 ```js
-<script type="text/babel">
+//  ReactDOM.render is no longer supported in React 18. Use createRoot instead.
+;<script type="text/babel">
   const container = document.getElementById("root"); const root =
   ReactDOM.createRoot(container); root.render(<h1>Hello React 18</h1>);
 </script>
+
+// new
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <>
+    <p>Hello</p>
+  </>
+)
 ```
 
 Direct
 
 ```js
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<h1>Hello</h1>);
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<h1>Hello</h1>)
 ```
 
 External File
@@ -90,8 +98,8 @@ External File
 > Então nosso return ficaria assim:
 
 ```js
-const container = document.getElementById("root");
-ReactDOM.render(<h1>Ola</h1>, container);
+const container = document.getElementById('root')
+ReactDOM.render(<h1>Ola</h1>, container)
 ```
 
 # 🎉Components
@@ -101,7 +109,7 @@ ReactDOM.render(<h1>Ola</h1>, container);
 ```js
 class App extends React.Component {
   render() {
-    return <p>Hello</p>;
+    return <p>Hello</p>
   }
 }
 ```
@@ -118,7 +126,7 @@ class App extends React.Component {
         <h2>Hello</h2>
         <p>React</p>
       </div>
-    );
+    )
   }
 }
 ```
@@ -132,7 +140,7 @@ ReactDOM.render(
     <Mobile />
   </div>,
   container
-);
+)
 ```
 
 # Function nativas + var + onClick
@@ -146,13 +154,13 @@ ReactDOM.render(
 class App extends React.Component {
   render() {
     function msn() {
-      console.log("aaa");
+      console.log('aaa')
     }
     function PrintName() {
-      return `Geraldo`;
+      return `Geraldo`
     }
 
-    const name = "gmapdev";
+    const name = 'gmapdev'
 
     return (
       <div>
@@ -161,7 +169,7 @@ class App extends React.Component {
         <p>{PrintName()}</p>
         <button onClick={msn}>Click</button>
       </div>
-    );
+    )
   }
 }
 ```
@@ -173,44 +181,44 @@ class App extends React.Component {
 ```js
 class App extends React.Component {
   printName() {
-    return <h1>Welcome gmapdev</h1>;
+    return <h1>Welcome gmapdev</h1>
   }
   render() {
-    return this.printName();
+    return this.printName()
   }
 }
 
 //outro modo
 class App extends React.Component {
   printName() {
-    return <p>Welcome gmapdev</p>;
+    return <p>Welcome gmapdev</p>
   }
   render() {
-    return <h1>{this.printName()}</h1>;
+    return <h1>{this.printName()}</h1>
   }
 }
 
 //method chamando outro
 class App extends React.Component {
   getBrand() {
-    return "SmartUpdate";
+    return 'SmartUpdate'
   }
 
   printName() {
-    return <p>{this.getBrand()}</p>;
+    return <p>{this.getBrand()}</p>
   }
   render() {
-    return <h1>{this.printName()}</h1>;
+    return <h1>{this.printName()}</h1>
   }
 }
 //button click
 
 class App extends React.Component {
   getName() {
-    console.log("click");
+    console.log('click')
   }
   render() {
-    return <button onClick={this.getName}>Click</button>;
+    return <button onClick={this.getName}>Click</button>
   }
 }
 ```

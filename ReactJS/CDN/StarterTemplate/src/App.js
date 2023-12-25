@@ -1,6 +1,26 @@
 const { useState } = React
 
-function Home() {
+import Natal from './src/components/Natal.js'
+import About from './src/components/About.js'
+
+/* class component */
+class Form extends React.Component {
+  render() {
+    const age = () => {
+      return 31
+    }
+
+    const msn = 'Form Page'
+    return (
+      <h1>
+        {msn} - {age()}
+      </h1>
+    )
+  }
+}
+/* class component */
+
+function App() {
   const [counter, setCounter] = useState(0)
 
   function Increment() {
@@ -23,32 +43,13 @@ function Home() {
       <button onClick={Decrement}>Increase Value</button>
       <button onClick={Increment}>Increase Value</button>
       <h1>{counter}</h1>
+
+      <Form />
+      <Natal msg="Natal" />
+      <About />
     </>
   )
 }
 
-class Form extends React.Component {
-  render() {
-    const age = () => {
-      return 31
-    }
-
-    const msn = 'Form Page'
-    return (
-      <h1>
-        {msn} - {age()}
-      </h1>
-    )
-  }
-}
-
-import About from './componentsBabel/Downloads.babel'
-
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <>
-    <Home />
-    <Form />
-    <About msg="Natal" />
-  </>
-)
+root.render(<App />)

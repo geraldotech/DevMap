@@ -1,6 +1,6 @@
 const template = `
 <div>
-    <h2>Home</h2>
+    <h2>Home Component</h2>
 </div>`
 
 const Home = (props) => {
