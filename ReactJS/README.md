@@ -1,13 +1,13 @@
 <h1 align=center>ReactJS</h1>
 
 > Library
-> Requerements: NodeJS
+> Requirements: NodeJS
 
 - [JSX-interpolation](#jsx-interpolation)
 - [Props](#props)
 - [React Fragmentos](#react-fragmentos)
 - [Router Hooks](#react-#react-hooks)
-- [Renderizar-listas](#renderizar-listas)
+- [Renderizar Listas](#renderizar-listas)
 - [Router](#react-router)
 - [Icons](#react-icons)
 
@@ -607,13 +607,6 @@ function Button(props) {
 <h1 style={{color: "red"}}>Hello Style!</h1>
 ```
 
-# Render by condition - renderização condicional if
-
-> É possível usar o state para criar as condições
-> não é bom criar lógicas muito complexas nos templates, por não ser o local ideal para lógicas
-
-[ReactAulas Full Code](React-Aulas/src/components/Conditional.js)
-
 # Renderizar listas
 
 - Criar um Array
@@ -623,9 +616,16 @@ function Button(props) {
 - [Example 1](React-Aulas/src/components/Listaarr.js)
 - [Example 2](API-themovieDB/src/pages/Home/index_eg.map.js)
 
+  - ## Render by condition - renderização condicional if
+
+  > É possível usar o state para criar as condições
+  > não é bom criar lógicas muito complexas nos templates, por não ser o local ideal para lógicas
+
+  [ReactAulas Full Code](React-Aulas/src/components/Conditional.js)
+
 # State Lift
 
-- Tecnica usada para compartilhar o state
+- Técnica usada para compartilhar o state
 - é normal vários components dependerem do mesmo estado
 - Centralizar o state no pai, e definir quem usa e quem define `(setState)`
 - Entender para aplicar nos projetos
