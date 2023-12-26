@@ -3,18 +3,18 @@
 👉HTMLCollection and NodeList and Array
 
 ```js
-const tag = document.getElementsByTagName("p");
-console.log(tag);
+const tag = document.getElementsByTagName('p')
+console.log(tag)
 
 //forEach works in Nodelist e Array
-const p = document.querySelectorAll("p");
-console.log(p);
+const p = document.querySelectorAll('p')
+console.log(p)
 
-p.forEach((ele) => console.warn(ele.innerText));
+p.forEach((ele) => console.warn(ele.innerText))
 
-const toAr = Array.from(p);
-console.log(toAr);
-toAr.forEach((ele) => console.warn(ele.innerText));
+const toAr = Array.from(p)
+console.log(toAr)
+toAr.forEach((ele) => console.warn(ele.innerText))
 ```
 
 <a href="https://www.w3schools.com/js/js_htmldom_nodelist.asp" target="_blank">HTML Collection vs NodeList</a>
@@ -81,6 +81,12 @@ console.log(document.querySelector("#hello").innerHTML); //return id
 
 const input = document.querySelector("input[name='one']");
 console.log(input.placeholder); // ola
+
+
+//🟢 querySelector - selecionando qualquer tags by name
+<p name="ter">Tuesday</p>
+document.querySelector("[name='ter']")
+
 
 //🟢 querySelector selecionando button inside tags
 <section>
