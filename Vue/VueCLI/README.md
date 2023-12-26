@@ -1,6 +1,15 @@
+<h1 align=center>VueJS</h1>
+
+# Start Project
+
+- ## Vite
+
 ```js
 //vue + vite
 npm init vue@latest
+
+// vite
+npm create vite@latest
 
 //install Global
 npm install -g @vue/cli
@@ -11,25 +20,24 @@ vue -V
 Digite o comando `vue` para verificar às opções:
 ```
 
-## create app
+- ## create app
 
-`vue create 2_projeto_vue`
+  - `vue create 2_projeto_vue`
+  - Manually select features > select Babel > choose version Vue 3.x > dedicated files > Save this preset ? N
 
-- Manually select features > select Babel > choose version Vue 3.x > dedicated files > Save this preset ? N
+  - run server:
 
-run server:
-
-```js
-cd <project>
-npm run serve
-npm run server
-```
+  ```js
+  cd <project>
+  npm run serve
+  npm run server
+  ```
 
 ## Components:
 
 [https://vuejs.org/guide/essentials/component-basics.html](https://vuejs.org/guide/essentials/component-basics.html)
 
-- instalar a extensão Vetur para sugestões, formatar code, identificar erros, dividir nosso layout em partes, cada um pode ter seu CSS
+- instalar a extensão `Vetur` para sugestões, formatar code, identificar erros, dividir nosso layout em partes
 - deletar o conteudo de App.vue e deletar o HelloWord.vue
 
 `App.vue` criar:
@@ -40,7 +48,7 @@ npm run server
 </template>
 ```
 
-Necessário export default, também vai encapsular tudo do data():
+Necessário export default, também vai encapsular tudo do `data()`:
 
 ```js
 <script>
@@ -52,7 +60,7 @@ export default {
 
 ## criando um componente:
 
-- ir na pasta de Componentes > MeuPrimeiro.vue
+- ir na pasta de `Componentes > MeuPrimeiro.vue`
 
 - Fast template+script+style: start typing: `vue`
 
@@ -82,7 +90,7 @@ export default {
 </script>
 ```
 
-Depois alterar o h1 do App.vue para
+Depois alterar o h1 do `App.vue` para
 
 ```html
 <template>
@@ -137,11 +145,9 @@ export default {
 </script>
 ```
 
-No App.vue
+- No **App.vue** `import LifeCycle from './components/LifeCycle.vue'`
 
-- importar `import LifeCycle from './components/LifeCycle.vue'` além de chamar no component
-
-- declarar na lista de:
+- além de chamar no component declarar na lista de:
 
 ```js
 components: {
@@ -609,8 +615,7 @@ Podemos adicionar um spinner dentro do botão que está sendo chamado ou definir
   <span
     class="spinner-border spinner-border-sm"
     role="status"
-    aria-hidden="true"
-  ></span>
+    aria-hidden="true"></span>
   <slot>{{ title }} </slot>
 </button>
 ```
