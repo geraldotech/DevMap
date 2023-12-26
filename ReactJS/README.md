@@ -6,7 +6,7 @@
 - [JSX-interpolation](#jsx-interpolation)
 - [Props](#props)
 - [React Fragmentos](#react-fragmentos)
-- [Router Hooks](#react-#react-hooks)
+- [Router Hooks](#react-hooks)
 - [Renderizar Listas](#renderizar-listas)
 - [Router](#react-router)
 - [Icons](#react-icons)
