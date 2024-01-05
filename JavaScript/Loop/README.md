@@ -54,6 +54,14 @@ while (n < 10) {
   n++ //
 }
 document.getElementById('res').innerHTML = `${txt}`
+
+let y = 10
+while (y > 1) {
+  // y > 10 ? false // y < 10 true infinity()... sempre sera menor, qual condicao de saida???
+
+  console.log(y)
+  y--
+}
 ```
 
 ### recursividade = function que chama ela mesma
