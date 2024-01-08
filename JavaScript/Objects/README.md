@@ -493,6 +493,17 @@ for (const p of Object.keys(pessoas)) {
 for (const [key, val] of Object.entries(pessoas)) {
   console.log(key, val)
 }
+// forEach and if
+let uses = [
+  { name: 'Geraldo', age: 30, login: true },
+  { name: 'Costa', age: 15, login: true },
+  { name: 'Felipe', age: 12, login: true },
+]
+uses.forEach((use) => {
+  if (use.age <= 18) {
+    use.login = false
+  }
+})
 ```
 
 ```js
