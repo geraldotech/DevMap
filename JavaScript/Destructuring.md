@@ -74,10 +74,24 @@ console.log(qualquernome) // VueJS
 // Destructuring a Array
 //https://www.freecodecamp.org/news/destructuring-patterns-javascript-arrays-and-objects/
 
-const arr = [{ id: 1, title: 'loremipsum', slug: 'lorem-ip' }]
+const list = [
+  { id: 1, title: 'loremipsum', slug: 'lorem-ip' },
+  { id: 2, title: 'two', slug: 'lorem-ip222' },
+]
 
-const { id, title, slug } = arr[0]
-console.log(id, title, slug)
+// objets - apontar o index
+const { id, title, slug } = list[0]
+console.log(id) // 1
+
+// array - unpack apenas o primeiro objeto inteiro do array
+const [single] = list
+console.log(single) // { id: 1, title: 'loremipsum', slug: 'lorem-ip' }
+
+//  Destructuring - apenas o primeiro objeto inteiro do array
+const [{ id, title }] = list
+
+console.log(id) // 1
+console.log(title) // loremipsum
 
 // obj assign
 const obj = Object.assign({}, ...arr)
