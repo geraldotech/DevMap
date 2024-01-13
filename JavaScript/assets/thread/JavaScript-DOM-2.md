@@ -498,3 +498,27 @@ console.log(div.nextElementSibling) // <p>Its me</p>
 const target = document.querySelector('ul .target') // <p>This me</p>
 console.log(target.nextElementSibling) // <li>Anti Hero</li>
 ```
+
+# parentElement
+
+```js
+<div>
+  <h1>Hello</h1>
+
+  <button>button one</button>
+  <p>foo</p>
+</div>
+<div>
+  <h1>Hello 2</h1>
+
+  <button>button two</button>
+  <p>foo</p>
+</div>
+
+const btn = document.querySelectorAll('div') btn.forEach((val) =>
+val.addEventListener('click', function (e) { console.log(e.target.parentElement)
+
+const btn = e.target.parentElement.querySelector('button') // <div> </div>
+console.log(btn.nextElementSibling) // <p>foo</p>
+}) )
+```
