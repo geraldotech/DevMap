@@ -77,12 +77,14 @@ console.table(person) // beautiful way to render tables
 - É incomum chamar o window, basta chamar o nome do object ou função, exemplos são apenas para contextualizar o conceito do window e suas propriedades.
 
 ```js
-console.log(window); //same input ou digite `window` diretamente no console do browser
-console.log(window.window); //same input
+window;
 console.log(window.document) // #document
+console.log(window.window); //same input
 console.log("height",window.innerHeight, "Width",window.innerWidth);
 console.log(window) - display all objects in window
-window;
+console.log(fetch === window.fetch) // true
+window.onclick === onclick // true
+console.log(window); //same input ou digite `window` diretamente no console do browser
 window.localStorage;
 window.console.log same | console.log
 window.screen.height
@@ -139,12 +141,13 @@ console.log(document) //#document
 ```js
  //  HTML objects
 - document; // #document
-- document.documentElement // #rootElement #html
-- document.head);
-- document.body);
+- document.documentElement // #rootElement
+- document.querySelector(':root') // #rootElement
+- document.head;
+- document.body;
 - document.body.style.zoom="150%"
-- document.URL);
-- document.lastModified);
+- document.URL;
+- document.lastModified;
 - document.title; // currently value
 - document.title = "new title"; // set new value for title
 - document.write("gmap"); // write text in DOM
@@ -152,7 +155,9 @@ console.log(document) //#document
 - document.URL
 - document.all
 - document.styleSheets //return a list of stylesheets
-- ❌document.onload 👉 document.body.onload ✔
+- document.querySelector === window.document.querySelector // true
+
+- ❌document.onload 👉 document.body.onload ✔ {with defer}
 ```
 
 Mais propriedades e a versão do DOM em que foram adicionadas:
