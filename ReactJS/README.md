@@ -372,45 +372,6 @@ function cadastrarUsuario(e) {
 }
 ```
 
-### Adicionando form.name and get values
-
-> by gmap
-
-```jsx
-function Form() {
-  function cadastrarUsuario(e) {
-    e.preventDefault()
-    console.log(`Cadastrou usuario`)
-    console.log(e.target.nome.value)
-  }
-
-  return (
-    <div>
-      <h1>Somando</h1>
-      <form onSubmit={cadastrarUsuario}>
-       <div>
-          <input type="text" name="x" placeholder="n1" />
-          <input type="text" name="y" placeholder="n2" />
-        </div>
-
-        <div>
-          <input type="submit" value="Somar" />
-        </div>
-      </form>
-    </div>
-  )
-}
-
-
-// Using destructuring and somando values
-function Form() {
-  function cadastrarUsuario(e) {
-    e.preventDefault()
-    const { x, y } = e.target
-    console.log(+x.value + +y.value)
-  }
-```
-
 # React Hooks
 
 - gerenciamento de estados - State
@@ -481,13 +442,11 @@ const [password, setPassword] = useState()
 <input type="password" id="pass" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
 ```
 
-### useState on input;
+### useState onInput;
 
 ```jsx
 import {useState} from 'react'
-
 const [idade, setIdade] = useState('')
-
 
 function Idadefun(e){
   console.log(e)
@@ -526,6 +485,62 @@ const [str, setSrt] = useState("Ola Mundo");
 Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd36112d591f391397a20a#file-app-js)
 
 <hr>
+- # useRef - get Input Value using
+
+```jsx
+import { useState, useRef } from 'react'
+import './App.css'
+
+function App() {
+  const nameinput = useRef()
+  const [getnome, setGetnome] = useState()
+
+  function getmyname() {
+    setGetnome(nameinput.current.value)
+  }
+
+  return (
+    <>
+      <h1>{getnome}</h1>
+      <input ref={nameinput} type="text" />
+      <button onClick={getmyname}>get My name</button>
+    </>
+  )
+}
+```
+
+- Get Value from inpout [onClick using two functions](https://www.codingbeautydev.com/blog/react-get-input-value-on-button-click)
+
+### Form names get values
+
+> by gmap
+
+```jsx
+function App() {
+  function cadastrarUsuario(e) {
+    e.preventDefault()
+    console.log(e.target.x.value)
+    console.log(e.target.y.value)
+    const { x, y } = e.target
+    console.log(parseInt(x.value) + parseInt(y.value))
+  }
+  return (
+    <div>
+      <h1>Somando</h1>
+      <form onSubmit={cadastrarUsuario}>
+        <div>
+          <input type="text" name="x" placeholder="n1" />
+          <input type="text" name="y" placeholder="n2" />
+        </div>
+
+        <div>
+          <input type="submit" value="Somar" />
+        </div>
+      </form>
+    </div>
+  )
+}
+```
 
 - # useEffect
 
@@ -541,30 +556,6 @@ Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd3
       - `useCounter`
       - `useContador`
         Check [CounterCustomHook.jsx](./ReactHooks/src/components/CounterCustomHook.jsx) e [/hooks/useCounter.jsx](./ReactHooks/src/hooks/useCounter.jsx)
-
-- # useRef - get Input Value using
-
-  ```jsx
-  // add useRef
-  import React, { useState, useRef } from 'react'
-
-  //define const
-  const todoNameRef = useRef()
-
-  //function get value
-  function handleAddTodo(e) {
-    const name = todoNameRef.current.value
-    //if name empty return
-    if (name === '') return
-    console.warn(name)
-    //clean input after click
-    todoNameRef.current.value = null
-  }
-
-  //App.html
-  <input ref={todoNameRef} type="text" />
-  <button onClick={handleAddTodo}>Add Todo</button>
-  ```
 
 # Tips:
 
