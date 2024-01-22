@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colors</title>
+    <title>Paleta de Colors</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
       * {
@@ -16,8 +16,7 @@
       }
       a {
         display: block;
-        width: fit-content;
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-decoration: none;
         margin-block: 5px;
       }
@@ -26,10 +25,24 @@
       }
       pre {
         color: green;
-        font-size: 1.4rem;
+        font-size: 1rem;
       }
       pre span {
         color: rgb(183, 0, 176);
+      }
+      section {
+        min-height: 70vh;
+        background: #121200;
+        padding: 10px;
+        max-width: fit-content;
+        margin: 0 auto;
+      }
+      section h1 {
+        text-align: center;
+      }
+
+      :target {
+        color: coral;
       }
     </style>
   </head>
@@ -95,27 +108,31 @@
     <h1>cores secundárias - laranha, violeta e verde</h1>
     <h1>cores terciárias - misturas de cores primárias e secundárias</h1>
 
-    <h1>Site para gerar paleta de Cores</h1>
-    <h2>Recomendação</h2>
-    <pre>
-    <span>body</span> {
-    background-color: <span>#suaCorPrincipal</span>;
-    }
-    <span>h1</span> {
-        color: <span>#suaCorSecundária1</span>;
-    }
-    <span>p</span> {
-        color: <span>#suaCorSecundária2</span>;
-    }
-    </pre>
+    <section>
+      <h1 id="sites">Sites para gerar paleta de Cores</h1>
 
-    <a href="https://color.adobe.com/create/color-wheel"
-      >https://color.adobe.com/create/color-wheel</a
-    >
-    <a href="https://coolors.co/086375-685155-4f772d-90a955-ecf39e"
-      >https://coolors.co/086375-685155-4f772d-90a955-ecf39e</a
-    >
+      <nav>
+        <a href="https://color.adobe.com/create/color-wheel"
+          >https://color.adobe.com/create/color-wheel</a
+        >
+        <a href="https://coolors.co/086375-685155-4f772d-90a955-ecf39e"
+          >https://coolors.co/086375-685155-4f772d-90a955-ecf39e</a
+        >
 
-    <a href="https://colorhunt.co/">https://colorhunt.co/</a>
+        <a href="https://colorhunt.co/">https://colorhunt.co/</a>
+      </nav>
+      <h2>Recomendação criar variables com as paletas</h2>
+      <pre>
+        <span>body</span> {
+          background-color: <span>#suaCorPrincipal</span>;
+        }
+        <span>h1</span> {
+          color: <span>#suaCorSecundária1</span>;
+        }
+        <span>p</span> {
+          color: <span>#suaCorSecundária2</span>;
+        }
+      </pre>
+    </section>
   </body>
 </html>
