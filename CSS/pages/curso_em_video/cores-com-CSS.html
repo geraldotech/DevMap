@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paleta de Colors</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+      * {
+        color-scheme: dark;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Krona One', sans-serif;
+      }
+      a {
+        display: block;
+        font-size: 1rem;
+        text-decoration: none;
+        margin-block: 5px;
+      }
+      a::before {
+        content: '>';
+      }
+      pre {
+        color: green;
+        font-size: 1rem;
+      }
+      pre span {
+        color: rgb(183, 0, 176);
+      }
+      section {
+        min-height: 70vh;
+        background: #121200;
+        padding: 10px;
+        max-width: fit-content;
+        margin: 0 auto;
+      }
+      section h1 {
+        text-align: center;
+      }
+
+      :target {
+        color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      Por Nomes:
+    -->
+    <h2 style="background-color: blue; color: white">Exemplo de cores</h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+    </p>
+    <!--
+        Por Hexadecimais:
+        decinal 0 1 2 3 4 5 6 7 8 9
+        hexadecimal 0 1 2 3 4 5 6 7 8 9 A B C D E F
+        representados por: red, green, blue  ouy seja #0000FF máximo de azul
+         vai de 0 a F
+    -->
+    <h2 style="background-color: #0000ff; color: #ffffff">Exemplo de cores</h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+    </p>
+    <!--
+        Por RGB é a abreviatura de um sistema de cores aditivas em que o Vermelho (Red), o Verde (Green) e o Azul (Blue) são combinados de várias formas de modo a reproduzir um largo espectro cromático.
+        vai de 0 a 255       
+    -->
+    <h2 style="background-color: rgb(0, 0, 255); color: #ffffff">
+      Exemplo de cores
+    </h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+    </p>
+    <!--
+      Por HSL -  matiz, saturação e luminosidade
+      hsl - hue saturation  lightness
+    -->
+    <h2 style="background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%)">
+      Exemplo de cores
+    </h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+    </p>
+    <!--
+      Alternar entre hexa, rgb e hsl: defina uma cor e toggle 
+    -->
+    <h2
+      style="
+        background-color: hsl(180, 44%, 13%);
+        color: rgba(34, 255, 137, 0.938);
+      ">
+      Exemplo de cores
+    </h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+    </p>
+    <h1>cores primárias - amarelo, vermelho e azul</h1>
+    <p>Procurar por circulo cromático</p>
+    <h1>cores secundárias - laranja, violeta e verde</h1>
+    <h1>cores terciárias - misturas de cores primárias e secundárias</h1>
+
+    <section>
+      <h1 id="sites">Sites para gerar paleta de Cores</h1>
+
+      <nav>
+        <a href="https://color.adobe.com/create/color-wheel"
+          >https://color.adobe.com/create/color-wheel</a
+        >
+        <a href="https://coolors.co/086375-685155-4f772d-90a955-ecf39e"
+          >https://coolors.co/086375-685155-4f772d-90a955-ecf39e</a
+        >
+
+        <a href="https://colorhunt.co/">https://colorhunt.co/</a>
+      </nav>
+      <h2>Recomendação criar variables com as paletas</h2>
+      <pre>
+        <span>body</span> {
+          background-color: <span>#suaCorPrincipal</span>;
+        }
+        <span>h1</span> {
+          color: <span>#suaCorSecundária1</span>;
+        }
+        <span>p</span> {
+          color: <span>#suaCorSecundária2</span>;
+        }
+      </pre>
+    </section>
+  </body>
+</html>
