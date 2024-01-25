@@ -5,6 +5,8 @@
 Python3 e o IDLE
 [https://www.python.org/ftp/python/3.11.4/python-3.11.4-amd64.exe](https://www.python.org/ftp/python/3.11.4/python-3.11.4-amd64.exe)
 
+- check version: `python --version`
+
 - select option: **`Add Python to environment variables`**
 
 run `python` in cmd:
@@ -246,17 +248,20 @@ print(f"isCapitalize: {name.istitle()}")
 
 # Data Types
 
-int
+int, str, float
 
 ```py
 number = int(input("Enter a positive number: "))
 
-//transform in int
+# convert str to int
 opt = input("Digite um numero")
 x = int(opt)
 print(type(opt))
 print(type(x))
 
+# convert int to str
+age = 32
+str(age)
 ```
 
 ### Dictionary how run:
@@ -280,20 +285,20 @@ for k, v in mydicionario.items():
 
 ### Links:
 
-https://bobbyhadz.com/blog/python-syntaxerror-invalid-syntax-pip-install
+- https://bobbyhadz.com/blog/python-syntaxerror-invalid-syntax-pip-install
 
-https://bobbyhadz.com/blog/python-save-user-input-to-file
+- https://bobbyhadz.com/blog/python-save-user-input-to-file
 
-https://stackoverflow.com/questions/57536995/how-to-change-font-size-of-all-docx-document-with-python-docx
+- https://stackoverflow.com/questions/57536995/how-to-change-font-size-of-all-docx-document-with-python-docx
 
-[AttributeError: 'str' object has no attribute 'X in Python | bobbyhadz](https://bobbyhadz.com/blog/python-attributeerror-str-object-has-no-attribute)
+- [AttributeError: 'str' object has no attribute 'X in Python | bobbyhadz](https://bobbyhadz.com/blog/python-attributeerror-str-object-has-no-attribute)
 
-[5. Data Structures — Python 3.11.4 documentation](https://docs.python.org/3/tutorial/datastructures.html)
+- [5. Data Structures — Python 3.11.4 documentation](https://docs.python.org/3/tutorial/datastructures.html)
 
-[How To Use Python-docx – vegibit](https://vegibit.com/how-to-use-python-docx/)
+- [How To Use Python-docx – vegibit](https://vegibit.com/how-to-use-python-docx/)
 
-[Change dictionary key in Python | note.nkmk.me](https://note.nkmk.me/en/python-dict-change-key/)
+- [Change dictionary key in Python | note.nkmk.me](https://note.nkmk.me/en/python-dict-change-key/)
 
-[Remove an item from a dictionary in Python (clear, pop, popitem, del) | note.nkmk.me](https://note.nkmk.me/en/python-dict-clear-pop-popitem-del/)
+- [Remove an item from a dictionary in Python (clear, pop, popitem, del) | note.nkmk.me](https://note.nkmk.me/en/python-dict-clear-pop-popitem-del/)
 
-https://stackoverflow.com/questions/34779724/python-docx-replace-string-in-paragraph-while-keeping-style
+- https://stackoverflow.com/questions/34779724/python-docx-replace-string-in-paragraph-while-keeping-style
