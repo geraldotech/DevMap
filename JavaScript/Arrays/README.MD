@@ -48,13 +48,15 @@ console.log(['Gera', 'dsd'].toString()) //Gera, dsd
 console.log(['Gera', 'dsd']) //Gera, dsd
 ```
 
-### getLastValue
+### get Last Value
 
 ```js
 const n = 'Geraldo'
 const a = ['Geraldo', 'Filho']
 
-console.log(a[a.length - 1]) //Filh
+console.log(a[a.length - 1]) // Filho
+console.log(a[a.length - 2]) // Geraldo
+
 console.log(n.slice(0, 2)) //Ge
 
 //at string e arr
