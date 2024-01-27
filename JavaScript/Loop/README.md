@@ -41,6 +41,19 @@ for (let i = 0; i < shoppingList.length; i++) {
   item.innerHTML = shoppingList[i]
   listWords.appendChild(item)
 }
+
+// given a extra var to filme[i]
+const filmes = [
+  { titulo: 'The Aventers', nota: 10 },
+  { titulo: 'American Pie', nota: 1 },
+]
+
+for (let i = 0; i < filmes.length; i++) {
+  let filme = filmes[i]
+  console.log(filme.titulo, filme.nota)
+  /* 'The Aventers 10' 
+'American Pie 1' */
+}
 ```
 
 ### 👉while statemet
