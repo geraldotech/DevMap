@@ -621,7 +621,7 @@ function Button(props) {
 - Centralizar o state no pai, e definir quem usa e quem define `(setState)`
 - Entender para aplicar nos projetos
 
-- [Full Code Statelift.js](React-Aulas/src/components/Statelift.js)
+- [Full Code na rota React-Aulas/src/pages/Contato.js](React-Aulas/src/pages/Contato.js)
 - [Full Code Saudacao.js](React-Aulas/src/components/Saudacao.js)
 
 ```jsx
@@ -696,3 +696,27 @@ function App() {
 - `import { IconName } from "react-icons/di";`
 
 <hr>
+
+## Load image local, public, remote, import
+
+- [https://bobbyhadz.com/blog/react-display-image-from-url](https://bobbyhadz.com/blog/react-display-image-from-url)
+
+```jsx
+   <img src={require('./2.png')}
+
+// get public folder fiels
+   <img src="/logo192.png" alt="" />
+```
+
+## .env file for ReactAPP only
+
+- create .env file in root
+- set your variables"
+
+```js
+    REACT_APP_API_KEY=your-development-api-key
+    REACT_APP_DATABASE_URL=https://your-development-database.com
+```
+
+- use variable: `{process.env.REACT_APP_API_KEY}`
+- restart server

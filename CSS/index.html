@@ -474,7 +474,7 @@
                     --bg: rgb(144, 144, 144);
                     --z: 150%;
                   }
-                </pre
+            </pre
           >
           <p class="lead">call variables</p>
           <pre class="coral">
@@ -485,6 +485,24 @@
               }          
             </pre
           >
+
+          <pre>
+            /* TIP USE variables for unique tags/class */
+            aside{
+              width: 260px;
+              height: 260px;
+              padding: .5rem;
+              margin: 20px auto;
+              --onlythistag: red;
+              outline: 2px solid var(--onlythistag);
+            }
+            aside > :nth-child(2){
+             text-decoration: 1px underline var(--onlythistag);
+             text-align: center;
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+          </pre>
         </details>
         <details>
           <summary>Center a Div display:grid</summary>

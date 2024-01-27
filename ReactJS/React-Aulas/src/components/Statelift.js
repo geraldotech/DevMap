@@ -1,3 +1,7 @@
+/*
+component A
+setNome sem o use state
+*/
 function StateLift({ setNome }) {
   return (
     <div>
