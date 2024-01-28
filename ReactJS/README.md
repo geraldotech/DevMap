@@ -11,6 +11,8 @@
 - [Router](#react-router)
 - [Icons](#react-icons)
 
+### CRA - Create React App
+
 ```js
 // npx create-react-app
 $ npm install -g create-react-app
@@ -25,8 +27,16 @@ $ npx create-react-app@5.0.0 <my-app>
 $ cd <my-app>
 $ npx clear-npx-cache
 
+
 // Start Server
-$ npm run start
+$ npm start
+
+// Build
+$ npm run build
+
+// Start Build prevoew
+$ serve -s build
+
 ```
 
 ## CreateApp with Vite
@@ -622,7 +632,6 @@ function Button(props) {
 - Entender para aplicar nos projetos
 
 - [Full Code na rota React-Aulas/src/pages/Contato.js](React-Aulas/src/pages/Contato.js)
-- [Full Code Saudacao.js](React-Aulas/src/components/Saudacao.js)
 
 ```jsx
 // App.js
@@ -684,7 +693,7 @@ function App() {
 - `npm install react-icons`
 - no component: `import { nomeIcon } from 'react-icons/Bibioteca'`
 
-## Font Awesome:
+## Font Awesome do React-Icons:
 
 - [Icons LIST](https://react-icons.github.io/react-icons/icons?name=fa)
 - `import { FaCentos } from 'react-icons/fa'`
@@ -696,6 +705,21 @@ function App() {
 - `import { IconName } from "react-icons/di";`
 
 <hr>
+
+## Font Awersome
+
+```js
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+
+// on component
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faSearch, faGlobe } from '@fortawesome/free-solid-svg-icons';
+
+// usage:
+<span><FontAwesomeIcon icon={faSearch} /></span>
+```
 
 ## Load image local, public, remote, import
 

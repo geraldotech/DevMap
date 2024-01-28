@@ -3,9 +3,9 @@ import Statelift from '../components/Statelift'
 import Saudacao from '../components/Saudacao'
 
 function Contato() {
-  // page Contato component pai
-  // Statelift component X
-  // Saudacao component Y
+  // Contato component pai gerencia o state
+  // Statelift component X com input
+  // Saudacao component Y recebe o valor da input
   const [nome, setNome] = useState()
 
   return (
