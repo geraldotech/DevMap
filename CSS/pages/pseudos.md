@@ -10,7 +10,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 ### :active
 
 - onclick see effects
-- [Example](https://www.w3schools.com/cssref/tryit.php?filename=trycss_sel_active)
+- [Example w3 schools](https://www.w3schools.com/cssref/tryit.php?filename=trycss_sel_active)
+- [Examples codepen]()
 
 ### :focus
 

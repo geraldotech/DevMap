@@ -25,7 +25,7 @@ console.log(itera.next().value) // 0 a
 console.log(itera.next().value) // 1 b
 ```
 
-### Converter-Arr-Str
+### Converter Array to string - slipt and toString
 
 👉String to Arr
 
@@ -42,7 +42,7 @@ let itens = ''
 ;['Gera', 'dsd'].forEach((item) => {
   itens += item
 })
-console.log(itens) //Geradsd
+console.log(itens) // Geradsd
 
 console.log(['Gera', 'dsd'].toString()) //Gera, dsd
 console.log(['Gera', 'dsd']) //Gera, dsd
@@ -59,12 +59,12 @@ console.log(a[a.length - 2]) // Geraldo
 
 console.log(n.slice(0, 2)) //Ge
 
-//at string e arr
+// at string e arr
 console.log('Gege'.at(-1)) //e
 console.log(a.at(-1)) //Filho
 console.log('Geraldo'.slice(-1)) // o
 
-//spread para nao alterar o arr original
+// Spread para nao alterar o arr original
 console.log([...a].pop()) //Filho
 
 console.log(a.splice(-1)) //["Filho"]
