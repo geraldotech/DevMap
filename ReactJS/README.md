@@ -391,7 +391,7 @@ function cadastrarUsuario(e) {
 Alguns:
 
 - `useState()`
-- `useEffect()`
+- `useEffect([])`
 - `useContext()`
 
   - ### useState
@@ -616,13 +616,21 @@ function Button(props) {
 
 - [Example 1](React-Aulas/src/components/Listaarr.js)
 - [Example 2](API-themovieDB/src/pages/Home/index_eg.map.js)
+- `Cannot read properties of undefined (reading 'map'): verificar se adicionou um []` no useEffect
+- `Warning: Each child in a list should have a unique "key" prop. key prop to fragment?` [https://stackoverflow.com/questions/59390955/can-i-add-a-key-prop-to-a-react-fragment](https://stackoverflow.com/questions/59390955/can-i-add-a-key-prop-to-a-react-fragment)
 
-  - ## Render by condition - renderização condicional if
+  ```js
+  <React.Fragment key={your key}>
+  ...
+  </React.Fragment>
+  ```
 
-  > É possível usar o state para criar as condições
-  > não é bom criar lógicas muito complexas nos templates, por não ser o local ideal para lógicas
+- ## Render by condition - renderização condicional if
 
-  [ReactAulas Full Code](React-Aulas/src/components/Conditional.js)
+> É possível usar o state para criar as condições
+> não é bom criar lógicas muito complexas nos templates, por não ser o local ideal para lógicas
+
+[ReactAulas Full Code](React-Aulas/src/components/Conditional.js)
 
 # State Lift
 
@@ -706,7 +714,7 @@ function App() {
 
 <hr>
 
-## Font Awersome
+## Font Awesome:
 
 ```js
 npm i --save @fortawesome/fontawesome-svg-core
