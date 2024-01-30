@@ -1,8 +1,8 @@
 import React from 'react'
-import { useState, useRef } from 'react'
-import styles from './Exer4.module.css'
+import { useState } from 'react'
+import styles from './Exe4.module.css'
 
-const Exer3 = () => {
+const Exe4 = () => {
   const [x, setX] = useState('')
   const [y, setY] = useState('')
 
@@ -31,4 +31,4 @@ const Exer3 = () => {
   )
 }
 
-export default Exer3
+export default Exe4

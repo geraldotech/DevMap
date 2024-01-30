@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 
-const Aside = () => {
+const Exe1 = () => {
   const [name, setName] = useState('')
   const myname = useRef()
 
@@ -22,4 +22,4 @@ const Aside = () => {
   )
 }
 
-export default Aside
+export default Exe1
