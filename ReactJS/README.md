@@ -380,7 +380,22 @@ function cadastrarUsuario(e) {
   e.preventDefault()
   console.log(`Cadastrou usuario`)
 }
+// or
+;<form onSubmit={(e) => e.preventDefault()}>
+  <input type="submit" value="send" onClick={handler} />
+  ....
+</form>
+
+// or single inline
+ <input
+          type="submit"
+          value="send"
+          onClick={(event) => (event.preventDefault(), handler())}
+ />
 ```
+
+- or
+  [set a useState with prevent Default](https://github.com/geraldotech/DevMap/blob/main/ReactJS/React-Aulas/src/components/Conditional.js)
 
 # React Hooks
 
@@ -495,7 +510,8 @@ const [str, setSrt] = useState("Ola Mundo");
 Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd36112d591f391397a20a#file-app-js)
 
 <hr>
-- # useRef - get Input Value using
+
+### useRef - get Input Value using
 
 ```jsx
 import { useState, useRef } from 'react'
