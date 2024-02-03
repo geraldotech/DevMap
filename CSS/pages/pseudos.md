@@ -11,7 +11,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
 - onclick see effects
 - [Example w3 schools](https://www.w3schools.com/cssref/tryit.php?filename=trycss_sel_active)
-- [Examples codepen]()
+- [Examples codepen](https://codepen.io/gmapdev/pen/BabmGjv)
 
 ### :focus
 
