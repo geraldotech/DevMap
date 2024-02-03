@@ -133,6 +133,10 @@ Se a condição for true a alteração será realizada mesmo sem :checked
 body:has([type="checkbox"]) {
   --bkbody: red;
 }
+
+html:has([type="checkbox"]:checked) body   {
+  background: dodgerblue;
+}
 ```
 
 - Scopo Global, se no `body` tem algum checkbox checked then...
