@@ -205,15 +205,15 @@ label:has([type="checkbox"]:checked) {
 A beautiful exemplo de como usar vários checkbox em section/div com mesmo #id passando um nome na input, necessário chamar body,html
 
 ```css
-body:has(#menu [type='checkbox'][name='del']:checked) {
+body:has(#menu[type='checkbox'][name='del']:checked) {
   --txtDe: none;
 }
 
-body:has(#menu [type='checkbox'][name='font']:checked) {
+body:has(#menu[type='checkbox'][name='font']:checked) {
   --bodyFS: 1.2rem;
 }
 
-html:has(#menu [type='checkbox'][name='fontFamily']:checked) {
+html:has(#menu[type='checkbox'][name='fontFamily']:checked) {
   --family: cursive;
 }
 ```
@@ -259,6 +259,11 @@ html:has([type='checkbox'][name='b']:checked) {
 /* define has */
 body:has(#scratch option[value='1']:checked) {
   --html: block;
+}
+
+/* define has */
+body:has(#scratch option[value='2']:checked) {
+  --css: block;
 }
 ```
 
