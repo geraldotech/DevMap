@@ -8,8 +8,10 @@
 - [React Fragmentos](#react-fragmentos)
 - [Router Hooks](#react-hooks)
 - [Renderizar Listas](#renderizar-listas)
+- [Render by condition](#render-by-condition)
 - [Router](#react-router)
 - [Icons](#react-icons)
+- [Events and Forms](#eventos)
 
 ### CRA - Create React App
 
@@ -179,6 +181,30 @@ function App() {
 }
 ```
 
+## Default props value
+
+```js
+// nullish
+;<div>{props.nome ?? 'default'}</div>
+
+// set a new value
+let nome
+if (props.nome === undefined) {
+  nome = 'default'
+}
+
+;<div>{nome}</div>
+
+// after function before export default
+...
+SayHello.defaultProps = {
+  nome: 'Default',
+}
+
+export default SayHello
+
+```
+
 ## Multi Props
 
 <del>Pay for Attention AGORA PRECISA ENCAPSULAR COM `<div>` e return ()</del>
@@ -223,6 +249,31 @@ function App() {
     </>
   )
 }
+```
+
+# Passar eventos por props
+
+```jsx
+//define no component filho Button.js
+function Button(props) {
+  return <button onClick={props.event}>{props.text}</button>
+}
+
+// import no pai e faca as respectivas functions
+  <Button event={meuEvento} text="Primeiro Evento" />
+  <Button event={segundoEvento} text="Segundo Evento" />
+
+// pass params
+ <Button event={(e) => segundoEvento(e, 20)} text="Segundo Evento" />
+```
+
+### Function por props
+
+```js
+<button onClick={props.myfun}>{props.text}</button>
+
+<Buttonx myfun={Makesomething} text="Download" />
+
 ```
 
 # CSS Modules
@@ -373,7 +424,7 @@ export default Evento
 <Evento numero={2} />
 ```
 
-### onSubmit and prevent.default()
+- ### Forms onSubmit and prevent.default()
 
 ```jsx
 function cadastrarUsuario(e) {
@@ -394,8 +445,38 @@ function cadastrarUsuario(e) {
  />
 ```
 
-- or
-  [set a useState with prevent Default](https://github.com/geraldotech/DevMap/blob/main/ReactJS/React-Aulas/src/components/Conditional.js)
+- or [set a useState with prevent Default](https://github.com/geraldotech/DevMap/blob/main/ReactJS/React-Aulas/src/components/Conditional.js)
+
+- ### Form names get values
+
+> by gmap
+
+```jsx
+function App() {
+  function cadastrarUsuario(e) {
+    e.preventDefault()
+    console.log(e.target.x.value)
+    console.log(e.target.y.value)
+    const { x, y } = e.target
+    console.log(parseInt(x.value) + parseInt(y.value))
+  }
+  return (
+    <div>
+      <h1>Somando</h1>
+      <form onSubmit={cadastrarUsuario}>
+        <div>
+          <input type="text" name="x" placeholder="n1" />
+          <input type="text" name="y" placeholder="n2" />
+        </div>
+
+        <div>
+          <input type="submit" value="Somar" />
+        </div>
+      </form>
+    </div>
+  )
+}
+```
 
 # React Hooks
 
@@ -535,84 +616,28 @@ function App() {
 }
 ```
 
-- Get Value from inpout [onClick using two functions](https://www.codingbeautydev.com/blog/react-get-input-value-on-button-click)
+- Get Value from input [onClick using two functions](https://www.codingbeautydev.com/blog/react-get-input-value-on-button-click)
 
-### Form names get values
+### useEffect
 
-> by gmap
+> means: useEfeito colateral
 
-```jsx
-function App() {
-  function cadastrarUsuario(e) {
-    e.preventDefault()
-    console.log(e.target.x.value)
-    console.log(e.target.y.value)
-    const { x, y } = e.target
-    console.log(parseInt(x.value) + parseInt(y.value))
-  }
-  return (
-    <div>
-      <h1>Somando</h1>
-      <form onSubmit={cadastrarUsuario}>
-        <div>
-          <input type="text" name="x" placeholder="n1" />
-          <input type="text" name="y" placeholder="n2" />
-        </div>
+- useEffect multiple consoles:
+  - porque o React está rodando em `StrictMode` que é o modo de desenvolvimento, no worries, em produção isso não vai ocorrer.
+- reagir as etapas do ciclo de vida do component que são: crição, atualização e destruição, example ir em [useEffectexample.jsx](./ReactHooks/src/components/useEffectexample.jsx) e para logs de destruição + toggle boolean ir em [/about.jsx](./ReactHooks/src/components/about.jsx/about.jsx)
+- Criar os próprios hooks
 
-        <div>
-          <input type="submit" value="Somar" />
-        </div>
-      </form>
-    </div>
-  )
-}
-```
-
-- # useEffect
-
-  > means: useEfeito colateral
-
-  - useEffect multiple consoles:
-    - porque o React está rodando em `StrictMode` que é o modo de desenvolvimento, no worries, em produção isso não vai ocorrer.
-  - reagir as etapas do ciclo de vida do component que são: crição, atualização e destruição, example ir em [useEffectexample.jsx](./ReactHooks/src/components/useEffectexample.jsx) e para logs de destruição + toggle boolean ir em [/about.jsx](./ReactHooks/src/components/about.jsx/about.jsx)
-  - Criar os próprios hooks
-
-    - extrair lógicas e transformar em hooks
-    - declarar funçöes seguindo o padrão `use` e.g:
-      - `useCounter`
-      - `useContador`
-        Check [CounterCustomHook.jsx](./ReactHooks/src/components/CounterCustomHook.jsx) e [/hooks/useCounter.jsx](./ReactHooks/src/hooks/useCounter.jsx)
+  - extrair lógicas e transformar em hooks
+  - declarar funçöes seguindo o padrão `use` e.g:
+    - `useCounter`
+    - `useContador`
+      Check [CounterCustomHook.jsx](./ReactHooks/src/components/CounterCustomHook.jsx) e [/hooks/useCounter.jsx](./ReactHooks/src/hooks/useCounter.jsx)
 
 # Tips:
 
 ```jsx
 //inline alert/console function
 $ <button onClick={() => { alert('como vai')}}>ALERT</button>
-```
-
-# Passar eventos por props
-
-```jsx
-//define no component filho Button.js
-function Button(props) {
-  return <button onClick={props.event}>{props.text}</button>
-}
-
-// import no pai e faca as respectivas functions
-  <Button event={meuEvento} text="Primeiro Evento" />
-  <Button event={segundoEvento} text="Segundo Evento" />
-
-// pass params
- <Button event={(e) => segundoEvento(e, 20)} text="Segundo Evento" />
-```
-
-### Function por props
-
-```js
-<button onClick={props.myfun}>{props.text}</button>
-
-<Buttonx myfun={Makesomething} text="Download" />
-
 ```
 
 # INLINE STYLES:
@@ -641,7 +666,9 @@ function Button(props) {
   </React.Fragment>
   ```
 
-- ## Render by condition - renderização condicional if
+# Render by condition
+
+> renderização condicional if
 
 > É possível usar o state para criar as condições
 > não é bom criar lógicas muito complexas nos templates, por não ser o local ideal para lógicas
