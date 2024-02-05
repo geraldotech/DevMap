@@ -4,7 +4,7 @@
 > Requirements: NodeJS
 
 - [JSX-interpolation](#jsx-interpolation)
-- [Props](#props)
+- [React Props](#props)
 - [React Fragmentos](#react-fragmentos)
 - [Router Hooks](#react-hooks)
 - [Renderizar Listas](#renderizar-listas)
@@ -148,6 +148,7 @@ export default App
 # Props
 
 > shorthand for propriedades
+> React Props are read-only! You will get an erro if you try to change their value
 
 - passado como atribudo como um tag, comparando com html: `<img src="" alt="" />`
 - Create a file `SayMyName.js`
@@ -181,6 +182,8 @@ function App() {
 }
 ```
 
+- Full Example [SayMyName.js](ReactJS/React-Aulas/src/components/SayMyName.js)
+
 ## Default props value
 
 ```js
@@ -204,6 +207,8 @@ SayHello.defaultProps = {
 export default SayHello
 
 ```
+
+- More about [propTypes and defaultProps](https://github.com/geraldotech/DevMap/blob/main/ReactJS/React-Aulas/src/components/Item.js)
 
 ## Multi Props
 
@@ -673,7 +678,8 @@ $ <button onClick={() => { alert('como vai')}}>ALERT</button>
 > É possível usar o state para criar as condições
 > não é bom criar lógicas muito complexas nos templates, por não ser o local ideal para lógicas
 
-[ReactAulas Full Code](React-Aulas/src/components/Conditional.js)
+- [ReactAulas Full Code](React-Aulas/src/components/Conditional.js)
+- [Ternary](React-Aulas/src/components/Listaarr.js)
 
 # State Lift
 
