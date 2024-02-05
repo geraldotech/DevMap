@@ -687,10 +687,12 @@ function App() {
 
   - `npm install react-router-dom`
   - `npm install react-router-dom@6`
-  - import: `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'` - Example 1 [Hard] => [/costs_project/src/App.js](./React-Router) - Example 2 [set router views](./costs_project/src/App.js) and set [Router Link](./costs_project/src/components/layout/Navbar.js)
+  - Now: `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
+  - Example 1 [Hard] => [/costs_project/src/App.js](./React-Router)
+  - Example 2 [set router views](./costs_project/src/App.js) and set [Router Link](./costs_project/src/components/layout/Navbar.js)
 
 <details>
-<summary>Check full code</summary>
+<summary>Get Full code</summary>
 
 ```js
 <Router>

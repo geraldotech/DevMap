@@ -66,8 +66,8 @@ console.log("a" < "A"); //false
 ```js
 semicolon ;
 comma ,
-parentheses()
-braces {} - chaves
+parentheses ()
+curly braces {} - chaves
 square brackets [] - colchetes
 backtick `
 ```
@@ -230,8 +230,7 @@ const log = (x) => {
   <p>footer</p>
 </footer>
 <button
-  onclick="document.getElementById('el').insertAdjacentElement('afterbegin', document.getElementById('vue'))"
->
+  onclick="document.getElementById('el').insertAdjacentElement('afterbegin', document.getElementById('vue'))">
   Move
 </button>
 <!--inline hardcore-->

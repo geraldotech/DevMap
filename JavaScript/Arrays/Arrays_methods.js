@@ -867,6 +867,7 @@ console.log("".split()); // [ '' ]
 
 /* [=============================================================================]
 🟢 20 - #slice  - slice(start, end not included);
+
 🔰 fatiar - extracts a section returns it as a new string
 🔰 retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é necessário) de um array original. 
 🔰 O Array original não é modificado.
@@ -879,12 +880,19 @@ const arr2 = [0,1,2,3,4,5];
 let b = arr2.slice(1,3); //get itens between 1 e 2
 console.log(b);
 
-//📌pegar o ultimo item
+//📌 Get Last item
 console.log(["A","Geraldo","Z"].slice(-1));
+
+//📌 Get from
+let value = 'dark';
+console.log(value[0].toUpperCase() + value.slice(1)) // Dark
 
 
 //📌Strings
 console.log("Geraldo".slice(0,3)); // Ger 0,1,2 > die não inclui o ultimo
+
+let value = 'dark';
+console.log(value[0].toUpperCase() + value.slice(1)) // Dark
 
 const txt = "method extracts a section of a string and returns";
 console.log(txt.slice(6, 25))// extracts a section
