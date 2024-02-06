@@ -134,3 +134,30 @@ function veri(v) {
 }
 
 console.log(veri("chaveone"));
+
+// eg 4 Objects return a function
+
+const actions = {
+  'opcao1': () => {
+    return 1
+  },
+  'opcao2': () => {
+    return 2
+  },
+  'padrao': () => {
+   return `default`
+  }
+}
+
+
+console.log(actions['padrao'])
+
+
+function verificar(input){
+  const selectedAction = actions[input] || actions['padrao'];
+  return selectedAction()
+}
+
+console.log(verificar('pa')) // default
+console.log(verificar('opcao1')) // 1
+console.log(verificar('opcao2')) // 2
