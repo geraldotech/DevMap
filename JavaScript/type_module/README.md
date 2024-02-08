@@ -5,7 +5,9 @@
 - `main.js` must be type `module`
 
 ```js
-<script type="module" src="./src/main.js"></script>
+<script
+  type="module"
+  src="./src/main.js"></script>
 ```
 
 # export default inicio
@@ -21,6 +23,19 @@ export default function techs() {
 
 import tecnologias from './tech.js'
 console.log(tecnologias())
+
+// export default with Array functions
+export default () => {
+  return `<header>
+  <h2>Header</h2>
+  </header>`
+}
+
+// export default varaibles ❌
+export default const Header = `<header>
+<h2>Header</h2>
+</header>`
+
 ```
 
 Multiples ? não funciona, return:
@@ -78,7 +93,7 @@ import { listaA } from './list.js'
 console.log(listaA())
 ```
 
-To export multiple variables:
+To export and import multiple variables/objects:
 
 ```js
 // list.js
