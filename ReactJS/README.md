@@ -74,7 +74,10 @@ function App() {
 
       <p>{sum(5, 3)}</p>
 
-      <img src={url} alt="my img  " />
+      <img
+        src={url}
+        alt="my img  "
+      />
     </div>
   )
 }
@@ -470,12 +473,23 @@ function App() {
       <h1>Somando</h1>
       <form onSubmit={cadastrarUsuario}>
         <div>
-          <input type="text" name="x" placeholder="n1" />
-          <input type="text" name="y" placeholder="n2" />
+          <input
+            type="text"
+            name="x"
+            placeholder="n1"
+          />
+          <input
+            type="text"
+            name="y"
+            placeholder="n2"
+          />
         </div>
 
         <div>
-          <input type="submit" value="Somar" />
+          <input
+            type="submit"
+            value="Somar"
+          />
         </div>
       </form>
     </div>
@@ -492,10 +506,13 @@ function App() {
 Alguns:
 
 - `useState()`
+- `useRef()`
 - `useEffect([])`
-- `useContext()`
 
-  - ### useState
+- `useContext()` - soon
+- `useCallback()` - soon
+
+- ## useState
 
 - é um hook do React, consegue manusear o estado do um componente de forma simples,
 - funciona muito bem com eventos
@@ -508,14 +525,25 @@ Alguns:
 <form onSubmit={registerUser}>
   <div>
     <label htmlFor="user">User:</label>
-    <input type="text" id="user" placeholder="user" />
+    <input
+      type="text"
+      id="user"
+      placeholder="user"
+    />
   </div>
   <div>
     <label htmlFor="pass">Password:</label>
-    <input type="password" id="pass" placeholder="password" />
+    <input
+      type="password"
+      id="pass"
+      placeholder="password"
+    />
   </div>
   <div>
-    <input type="submit" value="Cadastrar" />
+    <input
+      type="submit"
+      value="Cadastrar"
+    />
   </div>
 </form>
 ```
@@ -553,7 +581,7 @@ const [password, setPassword] = useState()
 <input type="password" id="pass" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
 ```
 
-### useState onInput;
+- **useState onInput**
 
 ```jsx
 import {useState} from 'react'
@@ -568,7 +596,7 @@ setIdade(e.target.value)
 <p>{idade}</p>
 ```
 
-### useState with strings
+- **useState with strings**
 
 - import: `import { useState } from "react";`
 
@@ -597,7 +625,9 @@ Full code => [gist.github.com](https://gist.github.com/geraldotech/041a1ab161bd3
 
 <hr>
 
-### useRef - get Input Value using
+- ## useRef - get Input Value using
+
+Are just like state, except changing them doens't cause a re-render. They're frequently used for manual DOM manipulation.
 
 ```jsx
 import { useState, useRef } from 'react'
@@ -614,7 +644,10 @@ function App() {
   return (
     <>
       <h1>{getnome}</h1>
-      <input ref={nameinput} type="text" />
+      <input
+        ref={nameinput}
+        type="text"
+      />
       <button onClick={getmyname}>get My name</button>
     </>
   )
@@ -623,7 +656,7 @@ function App() {
 
 - Get Value from input [onClick using two functions](https://www.codingbeautydev.com/blog/react-get-input-value-on-button-click)
 
-### useEffect
+## useEffect
 
 > means: useEfeito colateral
 
@@ -732,10 +765,16 @@ function App() {
   <Link to="/">Home</Link>
   <Link to="/company">Company</Link>
   <Routes>
-    <Route exact path="/" element={<Home />}>
+    <Route
+      exact
+      path="/"
+      element={<Home />}>
       Home
     </Route>
-    <Route exact path="/company" element={<Company />}>
+    <Route
+      exact
+      path="/company"
+      element={<Company />}>
       Company
     </Route>
   </Routes>
