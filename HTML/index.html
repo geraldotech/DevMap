@@ -2,39 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>HTML Fast Guide</title>
-    <link href="./assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="./assets/bootstrap/bootstrap.min.css"
+      rel="stylesheet" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
-    <script src="./assets/script.js" defer></script>
-    <link rel="stylesheet" href="./assets/style.css" />
+    <script
+      src="./assets/script.js"
+      defer></script>
+    <link
+      rel="stylesheet"
+      href="./assets/style.css" />
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid text-center bg-dark text-white">
       <h1>HTML FAST</h1>
       <p class="lead">Hyper Text Markup Language</p>
-      <p style="text-align: center; color: violet; font-size: 20px">
-        Do youself your website in html
-      </p>
+      <p style="text-align: center; color: violet; font-size: 20px">Do youself your website in html</p>
     </div>
     <div class="container bg-dark text-white">
-      <p class="text-center">
-        <u>HTML Is Not Case Sensitive</u> HTML tags are not case sensitive: P
-        means the same as p
-      </p>
+      <p class="text-center"><u>HTML Is Not Case Sensitive</u> HTML tags are not case sensitive: P means the same as p</p>
       <p class="lead"><a href="./pages/aula-html.html">Aula HTML</a></p>
       <p>Encapsulation / englobar / encapsular elementos</p>
-      <time class="time" id="modified"></time>
+      <time
+        class="time"
+        id="modified"></time>
 
       <details>
         <summary>Comments</summary>
         <code> &lt;!-- my comment --&gt; </code>
       </details>
-      <details>
+      <details id="showcodes">
         <summary>Display Codes</summary>
         <section>
           <h5>code</h5>
@@ -44,91 +51,77 @@
 
         <section>
           <h5>pre</h5>
-          <h6>
-            <code>&lt;pre&gt;</code> Preformatted text - for multiple lines of
-            code
-          </h6>
+          <h6><code>&lt;pre&gt;</code> Preformatted text - for multiple lines of code</h6>
           <p class="lead">
-            preserves both spaces and line breaks. Para usar não precisa do
-            BootStrap, porém será adicionado sem pre-scrollable. Mais sobre pre
-            em
-            <a
-              href="https://stackoverflow.com/questions/8919776/html-justify-text-align-with-pre-tag"
-              >LINK1</a
-            >
+            preserves both spaces and line breaks. Para usar não precisa do BootStrap, porém será adicionado sem pre-scrollable. Mais sobre pre em
+            <a href="https://stackoverflow.com/questions/8919776/html-justify-text-align-with-pre-tag">LINK1</a>
             |
-            <a
-              href="https://www.freecodecamp.org/news/pre-tag-in-html-example-code/"
-              >LINK 2</a
-            >
+            <a href="https://www.freecodecamp.org/news/pre-tag-in-html-example-code/">LINK 2</a>
           </p>
-          <p class="lead">
-            Para usar o &lt;pre&gt; não precisa do BootStrap, porém será
-            adicionado sem pre-scrollable
-          </p>
+          <p class="lead">Para usar o &lt;pre&gt; não precisa do BootStrap, porém será adicionado sem pre-scrollable</p>
         </section>
         <section>
           <h5>samp</h5>
           <h6><code>&lt;samp&gt;</code>Output from computer program</h6>
-          <a href="https://www.w3schools.com/tags/tag_samp.asp" target="_blank"
+          <a
+            href="https://www.w3schools.com/tags/tag_samp.asp"
+            target="_blank"
             >samp</a
           >
         </section>
 
         <h5 id="tagshtml">Tags HTML as TEXT</h5>
-        <p class="lead">
-          <code>&lt;h1&gt; GERALDO &lt;/h&gt;</code>
-          <xmp>&lt;h1&gt; GERALDO &lt;/h&gt;</xmp>
-        </p>
-        <p>
-          <code> &#10100; ThemeContext &#10101;</code>
-          <xmp>&#10100; ThemeContext &#10101;</xmp>
-        </p>
+        <ul>
+          <li>
+            <code>&lt;h1&gt; GERALDO &lt;/h&gt;</code>
+            <xmp>&lt;h1&gt; GERALDO &lt;/h&gt;</xmp>
+          </li>
+          <li>
+            <code>&lcub; HTML Entity &rcub;</code>
+            <xmp>&lcub; HTML Entity &rcub;</xmp>
+          </li>
+          <li>
+            <code> &#10100; ThemeContext &#10101;</code>
+            <xmp>&#10100; ThemeContext &#10101;</xmp>
+          </li>
+        </ul>
         <div>
-          <img src="assets/img/other-html-entities.png" class="img-fluid" />
+          <img
+            src="assets/img/other-html-entities.png"
+            class="img-fluid" />
         </div>
         <a
           href="https://devpractical.com/display-html-tags-as-plain-text/"
           target="_blank"
           >REF</a
         >
-        <a href="https://www.toptal.com/designers/htmlarrows/" target="_blank"
+        <a
+          href="https://www.toptal.com/designers/htmlarrows/"
+          target="_blank"
           >REF 2</a
         >
-        <p class="lead">
-          Replace quickly: Usar o recurso search and replace de qualquer editor
-          de texto
-        </p>
+        <p class="lead">Replace quickly: Usar o recurso search and replace de qualquer editor de texto</p>
         <h5>XMP</h5>
-        <p class="lead">
-          renders text between the start and end tags without interpreting the
-          HTML in between and using a monospaced font.
-        </p>
+        <p class="lead">renders text between the start and end tags without interpreting the HTML in between and using a monospaced font.</p>
         <code>&lt;xmp&gt;code goes here&lt;/xmp&gt;</code>
       </details>
       <details>
         <summary>Tags</summary>
         <p class="lead">
           Para consultar todas as tags
-          <a href="https://www.w3schools.com/TAGS/default.asp" target="_blank"
+          <a
+            href="https://www.w3schools.com/TAGS/default.asp"
+            target="_blank"
             >TAGS/default.asp</a
           >
         </p>
         <h5>p</h5>
-        <p class="lead">
-          <code>&lt;p&gt;</code> - Default margin-top & bottom: 16px, &lt;br&gt;
-          adiciona quebra de linhas, e.g with break row
-        </p>
-        <code
-          >&lt;p&gt;This is a &lt;br&gt;<br />with a line break &lt;/p&gt;</code
-        >
+        <p class="lead"><code>&lt;p&gt;</code> - Default margin-top & bottom: 16px, &lt;br&gt; adiciona quebra de linhas, e.g with break row</p>
+        <code>&lt;p&gt;This is a &lt;br&gt;<br />with a line break &lt;/p&gt;</code>
         <br />
         <br />
         <h6>Style:</h6>
-        <code
-          >&lt;p style="background-color:Tomato;"> Lorem ipsum dolor sit
-          ametsdsd&lt;/p&gt;</code
-        >
+        <code>&lt;p style="background-color:Tomato;"> Lorem ipsum dolor sit ametsdsd&lt;/p&gt;</code>
         <div class="output">
           <p style="background-color: Tomato">Lorem ipsum dolor sit ametsdsd</p>
         </div>
@@ -165,33 +158,18 @@
         <code>&lt;div style="font-size:20px;color:green;background-color:pink;text-align:center;"&gt;&lt;a href="http://speedtest-nyc3.digitalocean.com/" /&gt; http://speedtest-nyc3.digitalocean.com/&lt;/a&gt;&lt;/div&gt;</code>
         </pre>
           <div class="output">
-            <div
-              style="
-                font-size: 20px;
-                color: green;
-                background-color: pink;
-                text-align: center;
-              ">
-              <a href="http://speedtest-nyc3.digitalocean.com/">
-                http://speedtest-nyc3.digitalocean.com/</a
-              >
+            <div style="font-size: 20px; color: green; background-color: pink; text-align: center">
+              <a href="http://speedtest-nyc3.digitalocean.com/"> http://speedtest-nyc3.digitalocean.com/</a>
             </div>
           </div>
         </section>
         <h5>abbr</h5>
-        <p class="lead">
-          <code>&lt;abbr&gt;</code> for <abbr title="Abreviation">Abbr</abbr>
-        </p>
-        <div class="output">
-          &lt;abbr title="Cascading Style Sheets">CSS&lt;/abbr>
-        </div>
+        <p class="lead"><code>&lt;abbr&gt;</code> for <abbr title="Abreviation">Abbr</abbr></p>
+        <div class="output">&lt;abbr title="Cascading Style Sheets">CSS&lt;/abbr></div>
 
         <h5>HTML Formating</h5>
         <ul>
-          <li>
-            <code>&amp;nbsp;</code> - non-breaking- &nbsp;&nbsp;&nbsp;&nbsp;
-            Space
-          </li>
+          <li><code>&amp;nbsp;</code> - non-breaking- &nbsp;&nbsp;&nbsp;&nbsp; Space</li>
           <li><code>&lt;br&gt;</code> - break row</li>
           <li><code>&lt;mark&gt;</code> - <mark>Marked text</mark></li>
           <li>
@@ -215,9 +193,7 @@
               <dd><code>&lt;i&gt;</code> - <i>Italic</i></dd>
             </dl>
             <dt>New:</dt>
-            <dd>
-              <code>&lt;strong&gt;</code> - <strong>Important text</strong>
-            </dd>
+            <dd><code>&lt;strong&gt;</code> - <strong>Important text</strong></dd>
             <dd><code>&lt;em&gt;</code> - <em>Italic</em></dd>
             <dd>
               <code>&lt;center&gt;</code> -
@@ -236,21 +212,11 @@
       </details>
       <details>
         <summary>Images</summary>
-        <a href="https://www.w3schools.com/tags/tag_figcaption.asp"
-          >Veja figure e figure caption</a
-        >
-        <p class="lead">
-          The source (src), alternative text (alt), width and height are
-          provided as attibutes:
-        </p>
-        <code
-          >&lt;img src="img/howimg.jpg" alt="exemplo html imagens"&gt;
-        </code>
+        <a href="https://www.w3schools.com/tags/tag_figcaption.asp">Veja figure e figure caption</a>
+        <p class="lead">The source (src), alternative text (alt), width and height are provided as attibutes:</p>
+        <code>&lt;img src="img/howimg.jpg" alt="exemplo html imagens"&gt; </code>
         <p class="lead">width and height</p>
-        <code
-          >&lt;img src="/assetsimg/howimg.jpg" alt="logo tipo" width="250px"
-          height="300px"&gt;</code
-        >
+        <code>&lt;img src="/assetsimg/howimg.jpg" alt="logo tipo" width="250px" height="300px"&gt;</code>
 
         <h5>IMG with links</h5>
         <pre>
@@ -258,7 +224,9 @@
             &lt;img src="https:///2018/01/images.png" 
             alt="ChalkArtes logo" /&gt;&lt;/a&gt;</pre
         >
-        <a href="http://blog.com" target="_blank">
+        <a
+          href="http://blog.com"
+          target="_blank">
           <img
             src="https://technotesbr.files.wordpress.com/2018/01/images.png"
             width="150"
@@ -286,9 +254,7 @@
         <h5>picture</h5>
         <p class="lead">
           <code>&lt;picture&gt;</code> for specifying image resources.
-          <a href="./pages/picture_flex.html"
-            >picture_source_media_imagem_flexivel</a
-          >
+          <a href="./pages/picture_flex.html">picture_source_media_imagem_flexivel</a>
         </p>
       </details>
 
@@ -347,7 +313,9 @@ footer</pre
           >
         </details>
         <div class="output">
-          <img src="assets/img/semantic.png" class="img-fluid" />
+          <img
+            src="assets/img/semantic.png"
+            class="img-fluid" />
         </div>
         <details>
           <summary class="child">CSS code</summary>
@@ -393,7 +361,9 @@ footer</pre
              </code></pre>
         </details>
         <div class="output">
-          <img src="assets/img/html-css-read.png" class="img-fluid" />
+          <img
+            src="assets/img/html-css-read.png"
+            class="img-fluid" />
         </div>
         <br />
 
@@ -470,7 +440,9 @@ footer</pre
         <summary>HTML Styles - CSS Inline</summary>
         <p>
           REF:
-          <a href="https://www.w3schools.com/tags/tag_style.asp" target="_blank"
+          <a
+            href="https://www.w3schools.com/tags/tag_style.asp"
+            target="_blank"
             >https://www.w3schools.com/tags/tag_style.asp</a
           >
         </p>
@@ -506,7 +478,9 @@ footer</pre
       <details>
         <summary>HTML button + CSS</summary>
         <h5>Exemplo</h5>
-        <img src="assets/img/html-button.jpg" class="img-fluid" />
+        <img
+          src="assets/img/html-button.jpg"
+          class="img-fluid" />
         <p class="lead">Adicionar ao CSS:</p>
         <pre>
                 p {
@@ -559,12 +533,16 @@ footer</pre
         <h5>Links:</h5>
         <ul>
           <li>
-            <a href="https://codepen.io/geraldopcf/pen/OJzqRKJ" target="_blank"
+            <a
+              href="https://codepen.io/geraldopcf/pen/OJzqRKJ"
+              target="_blank"
               >Form Estacio [codepen]</a
             >
           </li>
           <li>
-            <a href="https://codepen.io/geraldopcf/pen/oNpVzPy" target="_blank"
+            <a
+              href="https://codepen.io/geraldopcf/pen/oNpVzPy"
+              target="_blank"
               >[Estacio] Lista e Tabelas</a
             >
           </li>
@@ -608,7 +586,9 @@ footer</pre
         >
         <form action="#">
           <label for="lang">Language</label>
-          <select name="languages" id="lang">
+          <select
+            name="languages"
+            id="lang">
             <option value="javascript">JavaScript</option>
             <option value="php">PHP</option>
             <option value="java">Java</option>
@@ -618,7 +598,9 @@ footer</pre
             <option value="C++">C++</option>
             <option value="erlang">Erlang</option>
           </select>
-          <input type="submit" value="Submit" />
+          <input
+            type="submit"
+            value="Submit" />
         </form>
         <h5>Menu suspenso click and go</h5>
         <pre>
@@ -697,9 +679,7 @@ footer</pre
                 &lt;/table&gt;
             </pre
         >
-        <h5>
-          Table com border <strong>inline</strong>(em desuso) variar o número:
-        </h5>
+        <h5>Table com border <strong>inline</strong>(em desuso) variar o número:</h5>
         <pre>
                &lt;table border="4"&gt;
                &lt;tr&gt;
@@ -730,10 +710,7 @@ footer</pre
             &lt;/dl&gt;
             </pre
         >
-        <p class="lead">
-          Com Bootstrap o alinhamento padrão não funciona, caso queira definir
-          uma <code>margin-left</code>
-        </p>
+        <p class="lead">Com Bootstrap o alinhamento padrão não funciona, caso queira definir uma <code>margin-left</code></p>
 
         <div class="output">
           <dl>
@@ -758,28 +735,27 @@ footer</pre
       </details>
       <details>
         <summary>Music</summary>
-        <code>
-          &lt;body&gt; &lt;embed src="50.mp3" loop="true" autostart="true"
-          width="2" height="0"&gt; &lt;/body&gt;
-        </code>
+        <code> &lt;body&gt; &lt;embed src="50.mp3" loop="true" autostart="true" width="2" height="0"&gt; &lt;/body&gt; </code>
       </details>
       <details>
         <summary>inputs</summary>
         <p class="lead">
           Existem vários tipos de inputs
-          <a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank"
+          <a
+            href="https://www.w3schools.com/tags/tag_input.asp"
+            target="_blank"
             >W3 Schools</a
           >
         </p>
         <p class="lead">Modo correto</p>
         <div class="output">
-          <img src="assets/img/input_label.jpg" class="img-fluid" />
+          <img
+            src="assets/img/input_label.jpg"
+            class="img-fluid" />
         </div>
         <p class="lead">
-          Contudo um truque para alinhamento vertical, englobe tudo dentro da
-          label, não é precisa adicionar o atributo <code>for</code>, no CSS
-          apenas definir que label tem <code>display: block</code> e o
-          alinhamento vai acontecer!
+          Contudo um truque para alinhamento vertical, englobe tudo dentro da label, não é precisa adicionar o atributo <code>for</code>, no CSS apenas definir que label tem
+          <code>display: block</code> e o alinhamento vai acontecer!
         </p>
         <div class="output">
           <img
@@ -795,16 +771,11 @@ footer</pre
                 }  
         </pre>
         <p class="lead">
-          Caso não queira englobar as labels, pode englobar cada input em um
-          elemento que seja display: block como <code>p</code> ou usar o
-          <code>ul li</code>que por padrão tem display: list-item
+          Caso não queira englobar as labels, pode englobar cada input em um elemento que seja display: block como <code>p</code> ou usar o <code>ul li</code>que por padrão tem display: list-item
         </p>
 
         <h5>Boas práticas</h5>
-        <p class="lead">
-          Uma boa pratica seja fazer o input dentro da label, dispensando o uso
-          de for e evitando grosh clicks entre os elementos
-        </p>
+        <p class="lead">Uma boa pratica seja fazer o input dentro da label, dispensando o uso de for e evitando grosh clicks entre os elementos</p>
 
         <pre>
                 &lt;label>
@@ -820,20 +791,14 @@ footer</pre
             <a name="object"></a>
             <h5>Object tag</h5>
             <a href="./pages/object/eg1/index.html">object e.g 1</a>
-            <a href="./pages/object/eg2_menu-CSS/index.html"
-              >object e.g 2 menu CSS</a
-            >
-            <a href="./pages/object/eg3_js/index.html"
-              >object e.g 3 JS Router</a
-            >
+            <a href="./pages/object/eg2_menu-CSS/index.html">object e.g 2 menu CSS</a>
+            <a href="./pages/object/eg3_js/index.html">object e.g 3 JS Router</a>
           </div>
         </section>
         <section class="links">
           <h5>Links:</h5>
           <a href="./pages/cool-things-justhtml.html">cool things justhtml</a>
-          <a href="./pages/Learn-HTML-and-CSS-with-w3schools.html">
-            Learn-HTML-and-CSS-with-w3schools</a
-          >
+          <a href="./pages/Learn-HTML-and-CSS-with-w3schools.html"> Learn-HTML-and-CSS-with-w3schools</a>
           <a
             href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element"
             target="_blank"
@@ -857,7 +822,9 @@ footer</pre
             rel="noopener noreferrer"
             >validator w3.org</a
           >
-          <a href="http://html5doctor.com/nav-element/" target="_blank"
+          <a
+            href="http://html5doctor.com/nav-element/"
+            target="_blank"
             >http://html5doctor.com/nav-element/</a
           >
           <a href="./pages/tabindex.html">Tabindex</a>

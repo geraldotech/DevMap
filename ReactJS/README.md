@@ -503,14 +503,14 @@ function App() {
 - gerenciamento do ciclo de vida - Life Cycle
 - Criar lógicas reutilizaveis entre os componentes
 
-Alguns:
+Built-in:
 
 - `useState()`
 - `useRef()`
 - `useEffect([])`
-
 - `useContext()` - soon
 - `useCallback()` - soon
+- `Custom` - combine existing hooks intro custom, reusable pieces of logic
 
 - ## useState
 
@@ -656,7 +656,7 @@ function App() {
 
 - Get Value from input [onClick using two functions](https://www.codingbeautydev.com/blog/react-get-input-value-on-button-click)
 
-## useEffect
+- ## useEffect
 
 > means: useEfeito colateral
 
