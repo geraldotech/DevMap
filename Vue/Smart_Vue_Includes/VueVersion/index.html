@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <script
+      src="./src/main.js"
+      type="module"
+      defer></script>
+    <link
+      rel="stylesheet"
+      href="./src/style.css" />
+    <title>VueJS example includes html files</title>
+  </head>
+  <body>
+    <div id="app">
+      {{wel}} <br />
+      <input
+        type="checkbox"
+        v-model="x"
+        id="opt" />
+      <label for="opt">Check</label>
+
+      <p>como vc deve saber v-show is like `visibility` e v-if like display:none</p>
+      <article v-show="x">
+        <div include="./src/partials/hello.html"></div>
+      </article>
+      <p v-show="!x">Marque o checkbox!</p>
+
+      <hr />
+
+      <h2>Not found example</h2>
+      <div include="test.txt"></div>
+      <div
+        include="./src/partials/footer.html"
+        class="footer"></div>
+    </div>
+  </body>
+</html>

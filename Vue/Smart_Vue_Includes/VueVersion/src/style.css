@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html {
+  line-height: 1.5;
+}
+
+/* FOOTER */
+.footer {
+  font-weight: bold;
+}
+
+.footer footer {
+  margin-top: 300px;
+  color: coral;
+  text-align: center;
+}
+
+.footer span {
+  color: rebeccapurple;
+}
+/* FOOTER ENDS */

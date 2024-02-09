@@ -259,7 +259,7 @@ function App() {
 }
 ```
 
-# Passar eventos por props
+## Passar eventos por props
 
 ```jsx
 //define no component filho Button.js
