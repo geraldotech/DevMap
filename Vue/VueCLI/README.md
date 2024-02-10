@@ -2,36 +2,51 @@
 
 # Start Project
 
-- ## Vite
+You can use VueCLI or Vite
+
+## VueCLI
 
 ```js
-//vue + vite
-npm init vue@latest
+- install Global
+$ npm install -g @vue/cli
 
-// vite
-npm create vite@latest
+- comando `$ vue` para verificar às opções
 
-//install Global
-npm install -g @vue/cli
+- check version
+$ vue -V
 
-//check version
-vue -V
+- create app
 
-Digite o comando `vue` para verificar às opções:
+$ vue create <projectName>
+
+- Manually select features > select Babel > choose version Vue 3.x > dedicated files > Save this preset ? N
+
+- run server:
+
+$ cd <project>
+$ npm run serve
+$ npm run server
+
 ```
 
-- ## create app
+## Vite
 
-  - `vue create 2_projeto_vue`
-  - Manually select features > select Babel > choose version Vue 3.x > dedicated files > Save this preset ? N
+```js
+- Vite create Vue direct
+$ npm init vue@latest
 
-  - run server:
+- Vite  Vanilla, Vue, React, Preact, Lit, Svelte, Solid, Qwik, Other
+$ npm create vite@latest
+  - Done now run:
+    - npm install
+    - npm run dev
 
-  ```js
-  cd <project>
-  npm run serve
-  npm run server
-  ```
+- Comandos para build / preview check `package.json` but is:
+$ npm run build
+$ npm run preview
+
+
+```
 
 ## Components:
 

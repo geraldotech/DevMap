@@ -90,8 +90,7 @@ console.log(person)
 document.write(person.name + ' mora na cidade de ' + person.city)
 
 // concatenar
-document.getElementById('objeto2').innerHTML =
-  person.name + ' idade atual: ' + person.age
+document.getElementById('objeto2').innerHTML = person.name + ' idade atual: ' + person.age
 
 // multiple variables in one line
 const persons = {
@@ -247,9 +246,7 @@ const register = {
   Estado: 'RJ',
   info: function () {
     //arrow function here returns "undefined" in this.name
-    console.log(
-      `My name is ${this.name}, tenho ${this.age} e moro no ${this.Estado}`
-    )
+    console.log(`My name is ${this.name}, tenho ${this.age} e moro no ${this.Estado}`)
     console.log(this.gnn(this.valor))
   },
   gnn: function (val) {
@@ -325,6 +322,8 @@ console.log(obj) // { age: 30, city: 'SP', stack: 'Front-End' }
 ```
 
 ### for in
+
+The in operator returns true
 
 ### in
 

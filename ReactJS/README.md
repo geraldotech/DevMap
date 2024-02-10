@@ -43,11 +43,7 @@ $ serve -s build
 
 ## CreateApp with Vite
 
-- Vanilla, Vue, React, Preact, Lit, Svelte, Solid, Qwik, Others
-
-  ```shell
-  $ npm create vite@latest
-  ```
+- Please [click here](../Vue/VueCLI/README.md#vite)
 
 # JSX {interpolation}
 
@@ -389,8 +385,22 @@ Item.defaultProps = {
 
 # Eventos
 
-- onClick
-- criar evento no component e import and call no elemento pai
+> declare o event e deixe o mouse em cima para pegar as referências
+
+- onChange= React.ChangeEventHandler
+- onClick = React.MouseEventHandler
+- onSubmit = React.FormEventHandler
+- ...
+
+```js
+// example get input value
+function handleSearch(event: ChangeEvent<HTMLInputElement>) {}
+
+// get text area
+function handleSearch(event: ChangeEvent<HTMLTextAreaElement>) {}
+```
+
+criar evento no component e import and call no elemento pai
 
 ```jsx
 function Evento() {
