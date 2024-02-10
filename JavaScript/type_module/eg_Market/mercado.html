@@ -5,15 +5,32 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>Mercado</title>
-  </head>
-  <body>
-    <a href="./index.html">Home</a>
+    <title>Market</title>
     <script
       type="module"
       src="./src/mercado/index.js"
       defer></script>
+    <link
+      rel="stylesheet"
+      href="./src/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./mercado.html">Mercado</a>
+      </nav>
+    </header>
 
+    <h2>Estoque</h2>
+    <ul id="estoque"></ul>
+
+    <h2>Estoque Responsável</h2>
+    <ul id="estoqueDados"></ul>
+
+    <hr />
+
+    <h2>Empresa Dados</h2>
     <ul>
       <li>Empresa: <span id="empresa"></span></li>
       <li>CPNJ: <span id="cnpj"></span></li>
@@ -21,5 +38,9 @@
     </ul>
 
     <ul id="Company"></ul>
+
+    <ul>
+      <li id="empresax"></li>
+    </ul>
   </body>
 </html>

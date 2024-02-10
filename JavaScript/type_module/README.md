@@ -58,7 +58,7 @@ import estados from './estados.js'
 console.log('log', estados)
 ```
 
-- Multiple values
+### Multiples default exports
 
 ```js
 const brazilStates = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará']
@@ -143,7 +143,7 @@ console.log(Aircrafts)
 - `Alpha`
 - `A320 Airbus A380, Boeing 747, Airbus A340, Boeing 777`
 
-## Using both default and named exports and imports
+## Using default and named exports
 
 ```js
 list.js // 👇️ default and named imports
@@ -154,7 +154,7 @@ export default function ext() {
   return '.dev'
 }
 
-main.js
+- **imports:** `main.js`
 
 import ext, { domain } from './list.js'
 

@@ -6,7 +6,8 @@ import tecnologias from './tech.js'
 console.log(tecnologias())
 
 import { listaA, Aircrafts } from './list.js'
+
 console.log(listaA())
 console.log(Aircrafts)
 
-console.log(cidades)
+console.log(cidades['default'].cities) //  [ 'RJ', 'Maceio', 'SP' ]
