@@ -1,0 +1,25 @@
+{
+  "name": "server-node-minicurso",
+  "version": "1.0.0",
+  "description": "- start project: `npm init -y`",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch ./src/server.ts",
+    "lint": "eslint src --ext .ts --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "prisma": "^5.5.2",
+    "tsx": "^4.1.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.4.2",
+    "@prisma/client": "^5.7.0",
+    "fastify": "^4.24.3",
+    "zod": "^3.22.4"
+  }
+}
