@@ -9,7 +9,7 @@
 - [Router Hooks](#react-hooks)
 - [Renderizar Listas](#renderizar-listas)
 - [Render by condition](#render-by-condition)
-- [Router](#react-router)
+- [Rect Router](#react-router)
 - [Icons](#react-icons)
 - [Events and Forms](#eventos)
 
@@ -763,9 +763,19 @@ function App() {
 
   - `npm install react-router-dom`
   - `npm install react-router-dom@6`
-  - Now: `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
-  - Example 1 [Hard] => [/costs_project/src/App.js](./React-Router)
-  - Example 2 [set router views](./costs_project/src/App.js) and set [Router Link](./costs_project/src/components/layout/Navbar.js)
+  - Now:
+
+    - `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
+    - `<BrowserRouter || as❓>  ... </BrowserRouter  || as❓>`
+
+  - Example 1 [Hard com App and main com RouterProvider]: [/costs_project/src/App.js](./React-Router)
+
+  - Example 2 [set router views]: (./costs_project/src/App.js) and set [Router Link](./costs_project/src/components/layout/Navbar.js)
+
+  - Example 3 srimba [???](./projects/????)
+    - install router-dom and router-dom@6
+    - go To index.js / main.js: `import { BrowserRouter } -from 'react-router-dom'`
+    - Now wrapper the ` <App />`
 
 <details>
 <summary>Get Full code</summary>
