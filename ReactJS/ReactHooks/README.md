@@ -1,5 +1,8 @@
 ## React Routers, useEffect, useState, custom Hooks
 
+Exemple de Toggle direct in useState check about.jsx
+Prev Count, increment, decrement values
+
 Run: `npm install && npm run dev`
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
