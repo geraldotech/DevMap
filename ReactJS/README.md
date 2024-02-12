@@ -774,17 +774,19 @@ function App() {
     - `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
     - `<BrowserRouter || as❓>  ... </BrowserRouter  || as❓>`
 
-  - Example 1 [Hard App and main com Outlet and RouterProvider, children, 404 page]:
+***
 
-    - [React-Router/src/main.tsx](./projects/React-Router/src/main.tsx)
-    - [React-Router-Blogger same example](./projects/React-Router_blogger/)
+- Example 1 [Hard criando um Arr de Objs no main contendo [children, 404 page] que será usado no `RouterProvider` e o App goes to render `Outlet` e os Links estão em um component **NabBar**]:
 
-  - Example 2 [set router views ](./projects/costs_project/src/App.js) and set `<Link/>` in `<NavComponent/>` [Router Link](./project/costs_project/src/components/layout/Navbar.js)
+  - [React-Router/src/main.tsx](./projects/React-Router/src/main.tsx)
+  - [React-Router-Blogger same example](./projects/React-Router_blogger/src/main.tsx)
 
-  - Example 3 srimba [???](./projects/????)
-    - install router-dom and router-dom@6
-    - go To index.js / main.js: `import { BrowserRouter } -from 'react-router-dom'`
-    - Now wrapper the ` <App />`
+- Example 2 [set router views ](./projects/costs_project/src/App.js) and set `<Link/>` in `<NavComponent/>` [Router Link](./project/costs_project/src/components/layout/Navbar.js)
+
+- Example 3 srimba [???](./projects/????)
+  - install router-dom and router-dom@6
+  - go To index.js / main.js: `import { BrowserRouter } from 'react-router-dom'`
+  - Now wrapper the ` <App />`
 
 <details>
 <summary>Get Full code</summary>
