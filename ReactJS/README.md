@@ -3,13 +3,18 @@
 > Library
 > Requirements: NodeJS
 
+- [Playground codeesandbox](https://codesandbox.io/s/6xkys7?file=%2Fsrc%2FApp.js&utm_medium=sandpack)
+
 - [JSX-interpolation](#jsx-interpolation)
 - [React Props](#props)
 - [React Fragmentos](#react-fragmentos)
 - [Router Hooks](#react-hooks)
 - [Renderizar Listas](#renderizar-listas)
 - [Render by condition](#render-by-condition)
-- [Rect Router](#react-router)
+- [React Router Basic](#react-router)
+- [React Router Advanced](#react-router)
+  move some projetos to /projects
+  create this page
 - [Icons](#react-icons)
 - [Events and Forms](#eventos)
 
@@ -515,16 +520,17 @@ function App() {
 
 Built-in:
 
-- `useState()`
-- `useRef()`
-- `useEffect([])`
 - `useContext()` - soon
 - `useCallback()` - soon
 - `Custom` - combine existing hooks intro custom, reusable pieces of logic
 
+<hr>
+
 - ## useState
 
 - é um hook do React, consegue manusear o estado do um componente de forma simples,
+- `useState(initialState)` initialState pode ser, 'string' {}, [], null, boolean, number READ MORE in [examples-basic react/useState](https://react.dev/reference/react/useState#examples-basic)
+
 - funciona muito bem com eventos
 - No local para inputs instead `for` deve usar `htmlFor`
 - Check useState() + prevstate [counter.jsx](./ReactHooks/src/components/counter.jsx)

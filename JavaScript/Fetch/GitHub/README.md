@@ -12,11 +12,9 @@ Display infos from pinned Git
 
 ```js
 async function getgit(info) {
-  const repos = await fetch(
-    'https://gh-pinned-repos.egoist.dev/?username=geraldotech'
-  )
+  const repos = await fetch('https://gh-pinned-repos.egoist.dev/?username=geraldotech')
     .then((res) => res.json())
-    .then((resff) => console.log(resff))
+    .then((data) => console.log(data))
 }
 getgit()
 ```
@@ -71,8 +69,7 @@ cosole.log(data.tree[0].sha);
 Fetch tree
 
 ```js
-const api =
-  'https://api.github.com/repos/geraldotech/DevMap/git/trees/daf1cd30f89ad0ea0d48f34855c5706d023c4f21'
+const api = 'https://api.github.com/repos/geraldotech/DevMap/git/trees/daf1cd30f89ad0ea0d48f34855c5706d023c4f21'
 ```
 
 Get Avatar
