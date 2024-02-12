@@ -1,19 +1,15 @@
 const tag = Array.from(document.querySelectorAll("div"));
-//fun filter
-function attri(arr, val) {
-  return arr
-    .filter((el) => el.hasAttribute(val))
-    .map((a) => a.getAttribute(val));
-}
 
-const filterFun = attri(tag, "include");
-
-for (let i = 0; i < filterFun.length; i++) {
+for (let i = 0; i < tag.length; i++) {
   //console.log(filter[i]);
-  inclui(filterFun[i], tag[i]);
+  let getAttr = tag[i].getAttribute('include')
+  let hasAttr = tag[i].hasAttribute('include')
+  if(hasAttr && getAttr){
+    SmartIncludes(hasAttr[i], tag[i]);
+  }
 }
 
-async function inclui(path, el) {
+async function SmartIncludes(path, el) {
   try {
     const req = await fetch(path);
     //console.log(req);
