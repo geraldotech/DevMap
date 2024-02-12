@@ -2,6 +2,8 @@
 
 Live Preview of buld [https://react-blogger-build-test.netlify.app/](https://react-blogger-build-test.netlify.app/)
 
+check `main.tsx` for children and 404 page
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
