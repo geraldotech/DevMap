@@ -186,7 +186,7 @@ function App() {
 }
 ```
 
-- Full Example [SayMyName.js](ReactJS/React-Aulas/src/components/SayMyName.js)
+- Full Example [SayMyName.js](./projects/React-Aulas/src/components/SayMyName.js)
 
 ## Default props value
 
@@ -212,7 +212,7 @@ export default SayHello
 
 ```
 
-- More about [propTypes and defaultProps](https://github.com/geraldotech/DevMap/blob/main/ReactJS/React-Aulas/src/components/Item.js)
+- More about [propTypes and defaultProps](./projects/React-Aulas/src/components/Item.js)
 
 ## Multi Props
 
@@ -468,7 +468,7 @@ function cadastrarUsuario(e) {
  />
 ```
 
-- or [set a useState with prevent Default](https://github.com/geraldotech/DevMap/blob/main/ReactJS/React-Aulas/src/components/Conditional.js)
+- or [set a useState with prevent Default](./projects/React-Aulas/src/components/Conditional.js)
 
 - ### Form names get values
 
@@ -709,8 +709,8 @@ $ <button onClick={() => { alert('como vai')}}>ALERT</button>
 - Using map
 - Using map destructuing objects [react-loop-through-array-of-objects](https://bobbyhadz.com/blog/react-loop-through-array-of-objects)
 
-- [Example 1](React-Aulas/src/components/Listaarr.js)
-- [Example 2](API-themovieDB/src/pages/Home/index_eg.map.js)
+- [Example 1](./projects/React-Aulas/src/components/Listaarr.js)
+- [Example 2](./projects/API-themovieDB/src/pages/Home/index_eg.map.js)
 - `Cannot read properties of undefined (reading 'map'): verificar se adicionou um []` no useEffect
 - `Warning: Each child in a list should have a unique "key" prop. key prop to fragment?` [https://stackoverflow.com/questions/59390955/can-i-add-a-key-prop-to-a-react-fragment](https://stackoverflow.com/questions/59390955/can-i-add-a-key-prop-to-a-react-fragment)
 
@@ -727,8 +727,8 @@ $ <button onClick={() => { alert('como vai')}}>ALERT</button>
 > É possível usar o state para criar as condições
 > não é bom criar lógicas muito complexas nos templates, por não ser o local ideal para lógicas
 
-- [ReactAulas Full Code](React-Aulas/src/components/Conditional.js)
-- [Ternary](React-Aulas/src/components/Listaarr.js)
+- [ReactAulas Full Code](./projects/React-Aulas/src/components/Conditional.js)
+- [Ternary](./projects/React-Aulas/src/components/Listaarr.js)
 
 # State Lift
 
@@ -774,12 +774,9 @@ function App() {
     - `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
     - `<BrowserRouter || as❓>  ... </BrowserRouter  || as❓>`
 
-  - Example 1 [Hard com App and main com RouterProvider]: [./project/costs_project
-    /src/App.js](./React-Router)
+  - Example 1 [Hard com App and main com RouterProvider]: [./project/React-Router/src/App.js](./React-Router)
 
-  - Example 2 [set router views]: (./project/costs_project
-    /src/App.js) and set [Router Link](./project/costs_project
-    /src/components/layout/Navbar.js)
+  - Example 2 [set router views](./project/costs_project/src/App.js) and set [Router Link](./project/costs_project/src/components/layout/Navbar.js)
 
   - Example 3 srimba [???](./projects/????)
     - install router-dom and router-dom@6
