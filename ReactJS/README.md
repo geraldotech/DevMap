@@ -774,9 +774,12 @@ function App() {
     - `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
     - `<BrowserRouter || as❓>  ... </BrowserRouter  || as❓>`
 
-  - Example 1 [Hard com App and main com RouterProvider]: [/costs_project/src/App.js](./React-Router)
+  - Example 1 [Hard com App and main com RouterProvider]: [./project/costs_project
+    /src/App.js](./React-Router)
 
-  - Example 2 [set router views]: (./costs_project/src/App.js) and set [Router Link](./costs_project/src/components/layout/Navbar.js)
+  - Example 2 [set router views]: (./project/costs_project
+    /src/App.js) and set [Router Link](./project/costs_project
+    /src/components/layout/Navbar.js)
 
   - Example 3 srimba [???](./projects/????)
     - install router-dom and router-dom@6
