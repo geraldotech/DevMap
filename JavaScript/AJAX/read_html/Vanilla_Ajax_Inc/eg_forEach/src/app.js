@@ -1,21 +1,20 @@
-const div = document.querySelectorAll("div");
-const DOMAttr = "include";
-let n = 0;
+const div = document.querySelectorAll('div[include]')
+
+let n = 0
 //var que armazena o path
-let Path = "";
+let Path = ''
 div.forEach((item, ind) => {
-  const has = item.hasAttribute(DOMAttr);
-  const path = item.getAttribute(DOMAttr);
-  if (has) {
-    loadSmartHTML(path, item);
+  const path = item.getAttribute('include')
+  if (path) {
+    loadSmartHTML(path, item)
   }
-});
+})
 
 function loadSmartHTML(path, val) {
-  const smarthttp = new XMLHttpRequest();
+  const smarthttp = new XMLHttpRequest()
   smarthttp.onload = function () {
-    val.innerHTML = this.responseText;
-  };
-  smarthttp.open("GET", path);
-  smarthttp.send();
+    val.innerHTML = this.responseText
+  }
+  smarthttp.open('GET', path)
+  smarthttp.send()
 }

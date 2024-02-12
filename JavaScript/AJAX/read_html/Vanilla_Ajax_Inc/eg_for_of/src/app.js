@@ -1,20 +1,18 @@
-const div = document.querySelectorAll("div");
-const DOMAttr = "include";
+const div = document.querySelectorAll('div[include]')
 
-let Path = "";
+let Path = ''
 for (let tem of div) {
-  if (tem.hasAttribute(DOMAttr)) {
-    Path = tem.getAttribute(DOMAttr);
-    loadItem(Path, tem);
-    console.log(`Path`, Path, tem);
+  Path = tem.getAttribute('include')
+  if (Path) {
+    loadItem(Path, tem)
   }
 }
 
 function loadItem(path, val) {
-  const smarthttp = new XMLHttpRequest();
+  const smarthttp = new XMLHttpRequest()
   smarthttp.onload = function () {
-    val.innerHTML = this.responseText;
-  };
-  smarthttp.open("GET", path);
-  smarthttp.send();
+    val.innerHTML = this.responseText
+  }
+  smarthttp.open('GET', path)
+  smarthttp.send()
 }

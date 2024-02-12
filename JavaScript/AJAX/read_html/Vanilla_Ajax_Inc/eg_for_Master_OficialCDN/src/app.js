@@ -1,10 +1,15 @@
-const div = document.querySelectorAll('div[include]')
+/* 
+- DEVELOPER BY GERALDO FILHO - 2023
+- CATCH ALL DIVS WITH 'include' attribute and make a Ajax
+*/
+
 const DOMAttr = 'include'
+const div = document.querySelectorAll(`div[${DOMAttr}]`)
 
 for (let i = 0; i < div.length; i++) {
   const HasAttr = div[i].hasAttribute(DOMAttr)
   const path = div[i].getAttribute(DOMAttr)
-console.log(HasAttr, path)
+  console.log(HasAttr, path)
 
   // if hasAttr and path call function
   if (HasAttr && path) {
