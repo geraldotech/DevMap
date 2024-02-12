@@ -1,3 +1,1 @@
-function html() {
-  return <p>Lorem</p>
-}
+;<h2>Footer</h2>

@@ -3,7 +3,7 @@
 > Library
 > Requirements: NodeJS
 
-- [Playground codeesandbox](https://codesandbox.io/s/6xkys7?file=%2Fsrc%2FApp.js&utm_medium=sandpack)
+- [Playground codesandbox](https://codesandbox.io/s/6xkys7?file=%2Fsrc%2FApp.js&utm_medium=sandpack)
 
 - [JSX-interpolation](#jsx-interpolation)
 - [React Props](#props)
@@ -12,7 +12,7 @@
 - [Renderizar Listas](#renderizar-listas)
 - [Render by condition](#render-by-condition)
 - [React Router Basic](#react-router)
-- [React Router Advanced](#react-router)
+- [React Router Advanced](./project/scrimba/???)
   move some projetos to /projects
   create this page
 - [Icons](#react-icons)
@@ -676,8 +676,9 @@ function App() {
 
 > means: useEfeito colateral
 
-- useEffect multiple consoles:
+- useEffect multiple consoles?
   - porque o React está rodando em `StrictMode` que é o modo de desenvolvimento, no worries, em produção isso não vai ocorrer.
+  - remover o `React.StrictMode` wrapping the `<App/>`
 - reagir as etapas do ciclo de vida do component que são: crição, atualização e destruição, example ir em [useEffectexample.jsx](./ReactHooks/src/components/useEffectexample.jsx) e para logs de destruição + toggle boolean ir em [/about.jsx](./ReactHooks/src/components/about.jsx/about.jsx)
 - Criar os próprios hooks
 
@@ -774,7 +775,7 @@ function App() {
     - `import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'`
     - `<BrowserRouter || as❓>  ... </BrowserRouter  || as❓>`
 
-***
+---
 
 - Example 1 [Hard criando um Arr de Objs no main contendo [children, 404 page] que será usado no `RouterProvider` e o App goes to render `Outlet` e os Links estão em um component **NabBar**]:
 
@@ -787,6 +788,7 @@ function App() {
   - install router-dom and router-dom@6
   - go To index.js / main.js: `import { BrowserRouter } from 'react-router-dom'`
   - Now wrapper the ` <App />`
+  - so many changes basead in Layout routers https://reactrouter.com/en/main/start/concepts#layout-routes
 
 <details>
 <summary>Get Full code</summary>
