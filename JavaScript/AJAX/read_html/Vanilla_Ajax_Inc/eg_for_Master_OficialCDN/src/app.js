@@ -8,7 +8,7 @@ const div = document.querySelectorAll(`div[${DOMAttr}]`)
 
 for (let i = 0; i < div.length; i++) {
   const HasAttr = div[i].hasAttribute(DOMAttr)
-  const path = div[i].getAttribute(DOMAttr)
+  const path = div[i].attributes.include.value
   console.log(HasAttr, path)
 
   // if hasAttr and path call function

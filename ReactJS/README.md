@@ -782,7 +782,7 @@ function App() {
   - [React-Router/src/main.tsx](./projects/React-Router/src/main.tsx)
   - [React-Router-Blogger same example](./projects/React-Router_blogger/src/main.tsx)
 
-- Example 2 [set router views ](./projects/costs_project/src/App.js) and set `<Link/>` in `<NavComponent/>` [Router Link](./project/costs_project/src/components/layout/Navbar.js)
+- Example 2 [set router views ](./projects/costs_project/src/App.js) and set `<Link/>` in `<NavComponent/>` [Router Link](./projects/costs_project/src/components/layout/Navbar.js)
 
 - Example 3 srimba [???](./projects/????)
   - install router-dom and router-dom@6
