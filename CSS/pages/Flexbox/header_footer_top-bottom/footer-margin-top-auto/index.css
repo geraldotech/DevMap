@@ -1,0 +1,38 @@
+:root {
+  --html: none;
+  --css: none;
+}
+
+/* set var */
+.html {
+  display: var(--html);
+}
+.css {
+  display: var(--css);
+}
+
+/* define has */
+body:has(#scratch option[value='1']:checked) {
+  --html: block;
+}
+/* define has */
+body:has(#scratch option[value='2']:checked) {
+  --css: block;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+select{
+  width: 100px;
+  margin: 0 auto;
+
+}
+
+footer{
+  margin-top: auto;
+  background: #333;
+}

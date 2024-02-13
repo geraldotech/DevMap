@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VueJS2 Router Nested</title>
+    <style>
+      .router-link-exact-active {
+        color: seagreen;
+      }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
   </head>
@@ -25,9 +30,7 @@
 
         <ul>
           <li v-for="(item, index) in list" :key="item.nome">
-            <router-link :to="{ name: 'ListAll', params: {name: item.slug}}"
-              >{{item.nome}}</router-link
-            >
+            <router-link :to="{ name: 'ListAll', params: {name: item.slug}}">{{item.nome}}</router-link>
           </li>
         </ul>
         <p>{{$route.params.name}}</p>
@@ -41,43 +44,43 @@
     </template>
 
     <script>
-      Vue.component("myd-content", {
-        template: "#baixar",
+      Vue.component('myd-content', {
+        template: '#baixar',
         data() {
           return {
             list: [
-              { nome: "one opt", slug: "link-one" },
-              { nome: "two opt", slug: "link-two" },
+              { nome: 'one opt', slug: 'link-one' },
+              { nome: 'two opt', slug: 'link-two' },
             ],
-            titulo: "All",
-          };
+            titulo: 'All',
+          }
         },
-      });
-      const Home = { template: `<h1>Home</h1>` };
-      const About = { template: `<p>About</p>` };
+      })
+      const Home = { template: `<h1>Home</h1>` }
+      const About = { template: `<p>About</p>` }
       //works dois modos
       //const downl = Vue.component("myd-content");
-      const downl = { template: "<myd-content></myd-content>" };
+      const downl = { template: '<myd-content></myd-content>' }
 
       var routes = [
-        { path: "/", component: Home },
-        { path: "/about", name: "abt", component: About },
+        { path: '/', component: Home },
+        { path: '/about', name: 'abt', component: About },
         {
-          path: "/download",
+          path: '/download',
           component: downl,
-          children: [{ path: ":name", name: "ListAll", component: downl }],
+          children: [{ path: ':name', name: 'ListAll', component: downl }],
         },
-      ];
+      ]
 
       var router = new VueRouter({
         routes: routes,
-        mode: "history",
-        base: "/#",
-      });
+        mode: 'history',
+        base: '/#',
+      })
       var app = new Vue({
-        el: "#app",
+        el: '#app',
         router: router,
-      });
+      })
     </script>
   </body>
 </html>
