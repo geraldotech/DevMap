@@ -75,10 +75,7 @@ function App() {
 
       <p>{sum(5, 3)}</p>
 
-      <img
-        src={url}
-        alt="my img  "
-      />
+      <img src={url} alt="my img  " />
     </div>
   )
 }
@@ -488,23 +485,12 @@ function App() {
       <h1>Somando</h1>
       <form onSubmit={cadastrarUsuario}>
         <div>
-          <input
-            type="text"
-            name="x"
-            placeholder="n1"
-          />
-          <input
-            type="text"
-            name="y"
-            placeholder="n2"
-          />
+          <input type="text" name="x" placeholder="n1" />
+          <input type="text" name="y" placeholder="n2" />
         </div>
 
         <div>
-          <input
-            type="submit"
-            value="Somar"
-          />
+          <input type="submit" value="Somar" />
         </div>
       </form>
     </div>
@@ -541,25 +527,14 @@ Built-in:
 <form onSubmit={registerUser}>
   <div>
     <label htmlFor="user">User:</label>
-    <input
-      type="text"
-      id="user"
-      placeholder="user"
-    />
+    <input type="text" id="user" placeholder="user" />
   </div>
   <div>
     <label htmlFor="pass">Password:</label>
-    <input
-      type="password"
-      id="pass"
-      placeholder="password"
-    />
+    <input type="password" id="pass" placeholder="password" />
   </div>
   <div>
-    <input
-      type="submit"
-      value="Cadastrar"
-    />
+    <input type="submit" value="Cadastrar" />
   </div>
 </form>
 ```
@@ -660,10 +635,7 @@ function App() {
   return (
     <>
       <h1>{getnome}</h1>
-      <input
-        ref={nameinput}
-        type="text"
-      />
+      <input ref={nameinput} type="text" />
       <button onClick={getmyname}>get My name</button>
     </>
   )
@@ -780,7 +752,7 @@ function App() {
 - Example 1 [Hard criando um Arr de Objs no main contendo [children, 404 page] que será usado no `RouterProvider` e o App goes to render `Outlet` e os Links estão em um component **NabBar**]:
 
   - [React-Router/src/main.tsx](./projects/React-Router/src/main.tsx)
-  - [React-Router-Blogger same example](./projects/React-Router_blogger/src/main.tsx)
+  - [React-Router-Blogger same example + ](./projects/React-Router_blogger/src/main.tsx)
 
 - Example 2 [set router views ](./projects/costs_project/src/App.js) and set `<Link/>` in `<NavComponent/>` [Router Link](./projects/costs_project/src/components/layout/Navbar.js)
 
@@ -799,16 +771,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
   <Link to="/">Home</Link>
   <Link to="/company">Company</Link>
   <Routes>
-    <Route
-      exact
-      path="/"
-      element={<Home />}>
+    <Route exact path="/" element={<Home />}>
       Home
     </Route>
-    <Route
-      exact
-      path="/company"
-      element={<Company />}>
+    <Route exact path="/company" element={<Company />}>
       Company
     </Route>
   </Routes>
@@ -816,6 +782,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 ```
 
 </details>
+
+### React useParams()
+
+[React-Router_blogger/src/routes/Template.jsx](./projects/React-Router_blogger/src/routes/Template.jsx)
+[scrimba ???] check README.md Advanced Router
 
 # React Icons
 

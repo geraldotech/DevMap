@@ -18,4 +18,9 @@ console.log(list)
 for (const i of list.keys()) {
   console.log(i)
 }
+
+console.log(list.size) // 4
 ```
+
+Set Methods
+https://www.w3schools.com/js/js_object_sets.asp
