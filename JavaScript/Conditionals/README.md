@@ -1,12 +1,14 @@
-## if if, else, ternary else if
+## Conditionals Examples
 
-- [if && AND]()
-- [if if else](#ifif-else)
+- [if && AND](#-and)
+- [if if else](#if-if-else)
 - [Terary](#ternary)
 - [if else if](#if-else-if)
 - [if return](#if-return)
 
 # && AND
+
+> inline if
 
 ```js
 let conditition = 'Geraldo'.length >= 7 && 'SIM'
