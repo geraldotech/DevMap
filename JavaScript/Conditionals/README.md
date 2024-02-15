@@ -1,47 +1,58 @@
 ## if if, else, ternary else if
 
+- [if && AND]()
 - [if if else](#ifif-else)
 - [Terary](#ternary)
 - [if else if](#if-else-if)
 - [if return](#if-return)
 
-# ifif-else
+# && AND
+
+```js
+let conditition = 'Geraldo'.length >= 7 && 'SIM'
+
+console.log(conditition) // SIM
+
+console.log(10 > 5 && 'Yes') // Yes
+```
+
+# if if-else
 
 ```js
 function calcula(m) {
   if (m >= 7)
     if (m == 10) {
-      console.log("APROVADO MAX");
+      console.log('APROVADO MAX')
     } else {
-      console.log("APROVADO");
+      console.log('APROVADO')
     }
   else {
-    console.log("REPROVADO");
+    console.log('REPROVADO')
   }
 }
-calcula();
+calcula()
 ```
 
 # if-else-if
 
 ```js
-let dia = 9;
-let mes = 3;
+let dia = 9
+let mes = 3
 
 if (dia == 8 && mes == 3) {
-  console.log("8 e 3 hoje");
+  console.log('8 e 3 hoje')
 } else if ((dia = !9 || mes == 3)) {
-  console.log("apenas dia 3");
+  console.log('apenas dia 3')
 } else {
-  console.log("NOT FOUND!");
+  console.log('NOT FOUND!')
 }
 
 //inline clean code!
 
-const a = 21;
-if (a == 82) console.log("mcz");
-else if (a == 21) console.log("rio");
-else console.log("not found!");
+const a = 21
+if (a == 82) console.log('mcz')
+else if (a == 21) console.log('rio')
+else console.log('not found!')
 ```
 
 # Ternary
@@ -105,41 +116,41 @@ console.log(isEven(2)); //true
 
 ```js
 //so funciona com functions
-check(21);
+check(21)
 
 function check(x) {
   if (x === 82) {
-    return console.log("AL");
+    return console.log('AL')
   }
   if (x === 21) {
-    return console.log("RJ");
+    return console.log('RJ')
   }
   if (x === 11) {
-    return console.log("SP");
+    return console.log('SP')
   }
-  return console.log("register now!");
+  return console.log('register now!')
 }
 
 //if return
 
 function idade(a) {
   if (a === 30) {
-    console.log("trinta");
-    return;
+    console.log('trinta')
+    return
   }
   if (a > 30) {
-    console.log("maior trinta");
-    return;
+    console.log('maior trinta')
+    return
   }
-  console.log("not condicional");
+  console.log('not condicional')
 }
 
-idade(31);
+idade(31)
 
 // single
 if (5 > 1) {
-  console.log("maior");
-  return;
+  console.log('maior')
+  return
 }
-console.log("menor");
+console.log('menor')
 ```
