@@ -7,19 +7,19 @@
 código inicial sem `try` and `catch`
 
 ```js
-const tag = document.querySelectorAll("p");
+const tag = document.querySelectorAll('p')
 for (let i = 0; i < tag.length; i++) {
-  let file = tag[i].getAttribute("ing");
-  console.log("file", file);
+  let file = tag[i].getAttribute('ing')
+  console.log('file', file)
 
-  inclui(file, tag[i]);
+  inclui(file, tag[i])
 }
 
 async function inclui(file, el) {
-  const req = await fetch(file);
-  const res = await req.text();
+  const req = await fetch(file)
+  const res = await req.text()
 
-  el.innerHTML = res;
+  el.innerHTML = res
 }
 ```
 
@@ -31,26 +31,26 @@ Vamos analisar o código:
 - Podemos atribuir o attr a uma string
 
 ```js
-const tag = document.querySelectorAll("div");
-const toArr = Array.from(tag);
+const tag = document.querySelectorAll('div')
+const toArr = Array.from(tag)
 for (let i = 0; i < toArr.length; i++) {
-  let path = toArr[i].getAttribute("include");
-  let fileHas = toArr[i].hasAttribute("include");
-  console.log("attrValue", path, fileHas);
+  let path = toArr[i].getAttribute('include')
+  let fileHas = toArr[i].hasAttribute('include')
+  console.log('attrValue', path, fileHas)
 
-  inclui(path, toArr[i]);
+  inclui(path, toArr[i])
 }
 
 async function inclui(path, el) {
   try {
-    const req = await fetch(path);
-    console.log(req);
+    const req = await fetch(path)
+    console.log(req)
     if (req.status == 200) {
-      const res = await req.text();
-      el.innerHTML = res;
+      const res = await req.text()
+      el.innerHTML = res
     }
   } catch (err) {
-    console.log(err);
+    console.log(err)
   }
 }
 ```
@@ -62,101 +62,28 @@ async function inclui(path, el) {
 Final code:
 
 ```js
-const tag = document.querySelectorAll("div");
-const DOMatt = "include";
+const tag = document.querySelectorAll('div')
+const DOMatt = 'include'
 for (let i = 0; i < tag.length; i++) {
-  let path = tag[i].getAttribute(DOMatt);
-  let fileHas = tag[i].hasAttribute(DOMatt);
+  let path = tag[i].getAttribute(DOMatt)
+  let fileHas = tag[i].hasAttribute(DOMatt)
   //linha para log de arquivos
   //console.log("attrValue", path, fileHas);
   if (fileHas) {
-    inclui(path, tag[i]);
+    inclui(path, tag[i])
   }
 }
 
 async function inclui(path, el) {
   try {
-    const req = await fetch(path);
+    const req = await fetch(path)
     //console.log(req);
     if (req.status == 200) {
-      const res = await req.text();
-      el.innerHTML = res;
+      const res = await req.text()
+      el.innerHTML = res
     }
   } catch (err) {
-    console.log(err);
-  }
-}
-```
-
-### Usando Array filter [my favorite]
-
-- Depois do querySelectorAll vamos usar o Array.from;
-
-```js
-//Faz um filter dos elements que tem o attribute, logo em seguida get o value desses attributes
-const filter = toArr
-  .filter((val) => val.hasAttribute("include"))
-  .map((a) => a.getAttribute("include"));
-//code final
-
-const tag = document.querySelectorAll("div");
-const toArr = Array.from(tag);
-const filter = toArr
-  .filter((val) => val.hasAttribute("include"))
-  .map((a) => a.getAttribute("include"));
-
-console.log(filter);
-for (let i = 0; i < filter.length; i++) {
-  //console.log(filter[i]);
-  inclui(filter[i], toArr[i]);
-}
-
-async function inclui(path, el) {
-  try {
-    const req = await fetch(path);
-    //console.log(req);
-    if (req.status == 200) {
-      const res = await req.text();
-      el.innerHTML = res;
-    }
-  } catch (err) {
-    console.log(err);
-  }
-}
-```
-
-Sim podemos melhorar fazendo uma function para esse filter e map e jogando o Array.from direto no selector
-
-para nosso code ficar melhor vamos attribuir o resultado dessa função a uma const, sim se vc jogar no loop attri(toArr, "include").length funciona assim como attri(toArr, "include")[i]
-
-Final code:
-
-```js
-const tag = Array.from(document.querySelectorAll("div"));
-//fun filter
-function attri(arr, val) {
-  return arr
-    .filter((el) => el.hasAttribute(val))
-    .map((a) => a.getAttribute(val));
-}
-
-const filterFun = attri(tag, "include");
-
-for (let i = 0; i < filterFun.length; i++) {
-  //console.log(filter[i]);
-  inclui(filterFun[i], tag[i]);
-}
-
-async function inclui(path, el) {
-  try {
-    const req = await fetch(path);
-    //console.log(req);
-    if (req.status == 200) {
-      const res = await req.text();
-      el.innerHTML = res;
-    }
-  } catch (err) {
-    console.log(err);
+    console.log(err)
   }
 }
 ```
@@ -168,26 +95,26 @@ async function inclui(path, el) {
 Final code:
 
 ```js
-const div = document.querySelectorAll("div");
-let [path, domAttr] = ["", "include"];
+const div = document.querySelectorAll('div')
+let [path, domAttr] = ['', 'include']
 for (attr of div) {
   if (attr.hasAttribute(domAttr)) {
-    path = attr.getAttribute(domAttr);
-    console.log(`path:`, path, `attr:`, attr);
-    inclui(attr, path); //fun fica dentro da condicao if
+    path = attr.getAttribute(domAttr)
+    console.log(`path:`, path, `attr:`, attr)
+    inclui(attr, path) //fun fica dentro da condicao if
   }
 }
 
 async function inclui(el, path) {
   try {
-    const req = await fetch(path);
+    const req = await fetch(path)
     //console.log(req);
     if (req.status == 200) {
-      const res = await req.text();
-      el.innerHTML = res;
+      const res = await req.text()
+      el.innerHTML = res
     }
   } catch (err) {
-    console.log(err);
+    console.log(err)
   }
 }
 ```
@@ -209,29 +136,29 @@ Formar de resolver esse `bug`:
 Final code:
 
 ```js
-const div = document.querySelectorAll("div");
+const div = document.querySelectorAll('div')
 //Array vazio e string do atribudo
-const [arrPath, domAttr] = [[], "include"];
+const [arrPath, domAttr] = [[], 'include']
 for (attr of div) {
   if (attr.hasAttribute(domAttr)) {
-    arrPath.push(attr.getAttribute(domAttr));
-    console.log(`path:`, arrPath);
-    console.log(`attr:`, attr);
-    inclui(attr, arrPath);
+    arrPath.push(attr.getAttribute(domAttr))
+    console.log(`path:`, arrPath)
+    console.log(`attr:`, attr)
+    inclui(attr, arrPath)
     //arrPath.pop();
   }
 }
 
 async function inclui(el, path) {
   try {
-    const req = await fetch(path);
+    const req = await fetch(path)
     //console.log(req);
     if (req.status == 200) {
-      const res = await req.text();
-      el.innerHTML = res;
+      const res = await req.text()
+      el.innerHTML = res
     }
   } catch (err) {
-    console.log(err);
+    console.log(err)
   }
 }
 ```
@@ -241,15 +168,15 @@ async function inclui(el, path) {
 Final Code:
 
 ```js
-const div = document.querySelectorAll("div");
+const div = document.querySelectorAll('div')
 //Array vazio e string do atribudo
-const [arrPath, domAttr] = [[], "include"];
+const [arrPath, domAttr] = [[], 'include']
 for (attr of div) {
   if (attr.hasAttribute(domAttr)) {
-    arrPath.unshift(attr.getAttribute(domAttr));
-    console.log(`path:`, arrPath);
-    console.log(`attr:`, attr);
-    inclui(attr, arrPath[0]);
+    arrPath.unshift(attr.getAttribute(domAttr))
+    console.log(`path:`, arrPath)
+    console.log(`attr:`, attr)
+    inclui(attr, arrPath[0])
   }
 }
 ```
