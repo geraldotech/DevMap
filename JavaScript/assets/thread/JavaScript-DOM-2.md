@@ -2,15 +2,18 @@
 
 - [DOM events](#dom---events)
   - [onclick](#onclick)
+  - [onload](./onload_goTop.js)
   - [addEventListener](#addeventlistener)
   - [addEventListener and event.target](#addeventlistener-with-target)
   - [DOMContentLoaded](#domcontentloaded)
   - [onload vs onreadystatechange vs domcontentloaded](#onload-vs-onreadystatechange-vs-domcontentloaded)
 - [Pointer Events](#pointerevents)
+  - [this](this.md)
   - [target custom attribute data](#target-custom-attr-data)
   - [target vs currenttarget](#target-vs-currenttarget)
   - [Contains (e.target)](#contains 'e.target')
   - [currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
+  - [visibilityState](./visibilityState/index.html)
 - <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">Hoisting</a>
 - [Web Components](./Web-Components)
 - [Regex - Expressões Regulares](./Regex/README.md)
@@ -184,11 +187,9 @@ document.querySelector('input').addEventListener('input', function (e) {
   console.log(e)
 })
 //👉addEventListener: change
-document
-  .querySelector("input[type='checkbox']")
-  .addEventListener('change', function (e) {
-    console.log(e)
-  })
+document.querySelector("input[type='checkbox']").addEventListener('change', function (e) {
+  console.log(e)
+})
 
 console.log(event.target.id) //bar
 console.log(event.target.getAttribute('data')) //eu
@@ -289,6 +290,16 @@ console.log(e.target.attributes.data.value) //get value of Attr data
   Steak
 </li>
 console.log(e.target.attributes.itemtype.value) //tip
+
+//👉 attributes
+<div>normal div</div>
+<div include='valor'>div attribute</div>
+
+
+const div = document.querySelectorAll('div')
+console.log(div[0].attributes.length) // 0
+console.log(div[1].attributes.include.value) // valor
+
 ```
 
 - Target vs currentTarget
@@ -318,12 +329,9 @@ el.addEventListener('click', function (e) {
   - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/contains-e-target.html)
 
   ```html
-  <div
-    id="mydiv"
-    style="width: 100px;height: 100px;background-color: blue;"></div>
+  <div id="mydiv" style="width: 100px;height: 100px;background-color: blue;"></div>
 
-  div { margin: auto; padding: 1em; max-width: 6em; background: rgba(0, 0, 0,
-  .2); text-align: center; }
+  div { margin: auto; padding: 1em; max-width: 6em; background: rgba(0, 0, 0, .2); text-align: center; }
   ```
 
   ```js

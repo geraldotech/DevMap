@@ -2,7 +2,6 @@
 
 - [O que é JS](#what-is-javascript)
 - [console.log](#consolelog)
-- [this](this.md)
 - [window-and-document](#window-and-document)
   - [window](#window)
     - [onbeforeunload.html](./onbeforeunload.html)
