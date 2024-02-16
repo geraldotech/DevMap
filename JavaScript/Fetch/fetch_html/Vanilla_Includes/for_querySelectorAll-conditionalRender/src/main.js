@@ -1,23 +1,32 @@
-const tag = Array.from(document.querySelectorAll("div"));
+const tag = Array.from(document.querySelectorAll('div'))
+
+const DEVMODE = false
 
 for (let i = 0; i < tag.length; i++) {
-  //console.log(filter[i]);
   let getAttr = tag[i].getAttribute('include')
   let hasAttr = tag[i].hasAttribute('include')
-  if(hasAttr && getAttr){
-    SmartIncludes(hasAttr[i], tag[i]);
+
+  if (hasAttr && getAttr) {
+    SmartIncludes(getAttr, tag[i])
   }
 }
 
 async function SmartIncludes(path, el) {
   try {
-    const req = await fetch(path);
-    //console.log(req);
-    if (req.status == 200) {
-      const res = await req.text();
-      el.innerHTML = res;
+    const res = await fetch(path)
+
+    if (!res.ok) {
+      throw {
+        message: 'Fail to fetch path: ' + path,
+        statusText: res.statusText,
+        status: res.status,
+      }
     }
+    const data = await res.text()
+    el.innerHTML = data
   } catch (err) {
-    console.log(err);
+    console.error(err)
+    console.error(err.message)
+    console.error(err.statusText)
   }
 }

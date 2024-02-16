@@ -25,9 +25,7 @@ pegar(api)
 const load = document.querySelector('#load')
 async function pegar() {
   try {
-    const req = await fetch('https://api.github.com/users/geraldotech').then(
-      (req) => req.json()
-    )
+    const req = await fetch('https://api.github.com/users/geraldotech').then((req) => req.json())
 
     console.log(req)
     load.classList.add('hide')
@@ -145,7 +143,7 @@ const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     fetch('https://api.github.com/users/geraldotech')
       .then((res) => res.json())
-      .then((resf) => console.log(resf))
+      .then((data) => console.log(data))
   }, 5000)
 })
 ```
@@ -179,8 +177,8 @@ async function pegardadosgit() {
 }
 console.log('[teste]', pegardadosgit())
 pegardadosgit()
-  .then((val) => val.json())
-  .then((ref) => console.log(ref))
+  .then((req) => req.json())
+  .then((data) => console.log(data))
 ```
 
 .then {try catch} and .text()
