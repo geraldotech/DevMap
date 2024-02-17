@@ -41,3 +41,9 @@ Agora nao quebra o site não vai ficar em branco carregando um script que talvez
 # useMemo()
 
 Hook to remember calculated values between renders
+
+
+
+![image](https://github.com/geraldotech/DevMap/assets/92253544/afd4728f-4b96-43d0-8757-0132325236b2)
+
+
