@@ -1,4 +1,4 @@
-### Code Splippting, lazy, Suspsense
+
 
 ![Screenshot 2024-02-17 075415](https://github.com/geraldotech/DevMap/assets/92253544/1512e3eb-cd08-465b-a324-501efd8c7b81)
 
@@ -6,6 +6,7 @@
 
 
 
+# Code Splippting, lazy, Suspsense
 - Users 'dynamic import' function import()
 - Combinte import() with React.lazy() to only load a 'heavy' component if needed
 
