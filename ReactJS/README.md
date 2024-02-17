@@ -4,6 +4,9 @@
 > Requirements: NodeJS
 
 - [Playground codesandbox](https://codesandbox.io/s/6xkys7?file=%2Fsrc%2FApp.js&utm_medium=sandpack)
+- Browsers extensions to help
+  see props, and more
+  https://react.dev/learn/react-developer-tools
 
 - [JSX-interpolation](#jsx-interpolation)
 - [React Props](#props)

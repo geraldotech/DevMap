@@ -1,0 +1,21 @@
+.menu {
+  text-align: center;
+  padding-block: 10px;
+  width: 200px;
+  margin: 0 auto;
+} 
+
+.menu .button {
+  background: red;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.menu nav li {
+  text-align: left;
+  padding: 1vh;
+  max-width: 100px;
+  margin: 5px auto;
+  text-align: center;
+  background: #222;
+}

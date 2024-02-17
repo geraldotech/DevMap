@@ -1,0 +1,188 @@
+#root {
+  max-width: 1280px;
+  text-align: center;
+  margin: 0 auto;
+}
+footer {
+  margin-top: 400px;
+}
+
+.green {
+  color: green;
+}
+
+.lg {
+  font-size: 20px;
+  padding: 13px 25px;
+}
+
+.small {
+  font-size: 10px;
+}
+
+.button,
+button {
+  border: none;
+  cursor: pointer;
+  padding: 7px 20px;
+  border-radius: 8px;
+  margin: 0 5px;
+  background-color: #e5e7eb;
+  color: #000;
+}
+
+.button,
+button:hover {
+  border: 1px solid #fff;
+  transition: all 1s;
+}
+
+.danger {
+  border: 3px solid red;
+  color: red;
+}
+.success {
+  border: 3px solid green;
+  color: green;
+}
+
+.warning {
+  border: 3px solid coral;
+  color: coral;
+}
+
+hr {
+  background: dodgerblue;
+  height: 2px;
+  border: none;
+  margin-block: 30px;
+}
+.hidden {
+  display: block;
+}
+ul li {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+p {
+  max-width: 70%;
+  margin: auto;
+}
+code {
+  font-size: 1.2rem;
+}
+
+.top-menu {
+  background: #333;
+  padding: 0.2rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.top-menu a {
+  margin: 0 20px;
+  padding-inline: 20px;
+  border-radius: 8px;
+  display: inline-block;
+  background: #888;
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  background: #000;
+  padding-top: 10px;
+  min-height: 100vh;
+}
+/* header page2 */
+
+header {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+header.light-theme {
+  background-color: #e0f2fe;
+  color: #0c4a6e;
+}
+
+header.dark-theme {
+  background-color: #075985;
+  color: #e0f2fe;
+}
+
+header > h1 {
+  margin: 0;
+}
+
+div.containerTheme.dark-theme {
+  background-color: #0c4a6e;
+  color: #f0f9ff;
+}
+
+div.containerTheme.light-theme {
+  background-color: #f0f9ff;
+  color: #0c4a6e;
+}
+
+button.Buttontheme {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  font-weight: 700;
+  padding: 9px 17px;
+  border-radius: 6px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.Buttontheme:focus {
+  outline: none;
+}
+
+.Buttontheme.dark-theme {
+  border: 1px solid #f0f9ff;
+  background-color: #0c4a6e;
+  color: #f0f9ff;
+}
+
+.Buttontheme.light-theme {
+  border: 1px solid #0c4a6e;
+  background-color: #f0f9ff;
+  color: #0c4a6e;
+}
+
+.star {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+  user-select: none;
+}
+
+.star.filled {
+  color: orange;
+}
+code {
+  color: green;
+}
+
+.box {
+  height: 100px;
+  margin: auto;
+  width: 100px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.box.filled {
+  background-color: blue;
+}
