@@ -15,7 +15,7 @@
 - [Renderizar Listas](#renderizar-listas)
 - [Render by condition](#render-by-condition)
 - [React Router Basic](#react-router)
-- [React Router Advanced](./project/scrimba/???)
+- [React Router Advanced](./projects/scrimba/Advanced-React/)
   move some projetos to /projects
   create this page
 - [Icons](#react-icons)
@@ -789,7 +789,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 ### React useParams()
 
 [React-Router_blogger/src/routes/Template.jsx](./projects/React-Router_blogger/src/routes/Template.jsx)
-[scrimba ???] check README.md Advanced Router
+[scrimba ???](./projects/scrimba/Router/Advanced-ReactRouter6/README.md) check README.md Advanced Router
 
 # React Icons
 

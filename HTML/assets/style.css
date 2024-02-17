@@ -1,5 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   background-color: grey;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 summary {
