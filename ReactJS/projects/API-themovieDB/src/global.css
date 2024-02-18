@@ -12,3 +12,17 @@ body {
   min-height: fit-content;
   min-height: 100vh;
 }
+.ChangeLanguage {
+  border: none;
+  padding: 0.5rem 0.8rem;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 5vh;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.ChangeLanguage:hover {
+  background: seagreen;
+  transition: all 1s ease;
+}

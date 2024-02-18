@@ -15,7 +15,7 @@
 - [Renderizar Listas](#renderizar-listas)
 - [Render by condition](#render-by-condition)
 - [React Router Basic](#react-router)
-- [React Router Advanced](./projects/scrimba/Advanced-React/)
+- [React Router Advanced](./projects/scrimba/Router/)
   move some projetos to /projects
   create this page
 - [Icons](#react-icons)
