@@ -39,9 +39,7 @@ function App() {
         </Button>
 
         <hr></hr>
-        <ButtonMultiEventProps
-          onMouseOver={() => console.log(`move over ok`)}
-          onClick={() => console.warn(`click me`)}>
+        <ButtonMultiEventProps onMouseOver={() => console.log(`move over ok`)} onClick={() => console.warn(`click me`)}>
           <span>Button props.event</span>
         </ButtonMultiEventProps>
         <hr></hr>
@@ -52,18 +50,11 @@ function App() {
         </Select>
 
         <hr></hr>
-        <ButtonSpread
-          style={{ color: 'green' }}
-          onClick={() => console.warn(`click ok`)}>
+        <ButtonSpread style={{ color: 'green' }} onClick={() => console.warn(`click ok`)}>
           USING SPREAD
         </ButtonSpread>
         <hr></hr>
-        <ButtonRest
-          variant
-          style={{ color: 'green' }}
-          onClick={() =>
-            console.warn('%cLogging in...', 'color:dodgerblue;font-size:1rem;')
-          }>
+        <ButtonRest variant style={{ color: 'green' }} onClick={() => console.warn('%cLogging in...', 'color:dodgerblue;font-size:1rem;')}>
           DESTRUCTING PROPS
         </ButtonRest>
         <hr></hr>
@@ -82,9 +73,7 @@ function App() {
       </section>
       <h2>2 - Avatar Component</h2>
       <section className="hidden">
-        <Avatar
-          src="https://pedrocarvh.netlify.app/images/KING.png"
-          alt="king photo"></Avatar>
+        <Avatar src="https://pedrocarvh.netlify.app/images/KING.png" alt="king photo"></Avatar>
         <hr></hr>
         <Avatar>
           <img src="https://cdn.dribbble.com/userupload/12773132/file/original-9d796f7c8ed830a769c673564bf20d47.jpg?resize=752x941" />
@@ -95,11 +84,7 @@ function App() {
 
       <h2>3 - Menu</h2>
       <section className="hidden">
-        <Menu
-          className="button"
-          buttonText="Sports List"
-          items={['Tenis', 'Racquetal', 'Pickball', 'Squash']}
-        />
+        <Menu className="button" buttonText="Sports List" items={['Tenis', 'Racquetal', 'Pickball', 'Squash']} />
 
         <hr></hr>
         <h2>What we'll learn</h2>
@@ -122,14 +107,10 @@ function App() {
         </ul>
 
         <p>
-          <strong>Prop drilling</strong> happends when a component down the
-          component tree needs access to data in a grandparent (or higher)
-          component, and that data is manually passed down to each child
-          component until it finally reaches the component thaht needs it.
+          <strong>Prop drilling</strong> happends when a component down the component tree needs access to data in a grandparent (or higher) component, and that data is manually passed down to each
+          child component until it finally reaches the component thaht needs it.
         </p>
-        <a href="https://www.alura.com.br/artigos/prop-drilling-no-react-js">
-          prop-drilling-no-react-js
-        </a>
+        <a href="https://www.alura.com.br/artigos/prop-drilling-no-react-js">prop-drilling-no-react-js</a>
 
         {/* * 1. MenuDropdown should render children instead of items
          * 2. MenuItem (new component you need to create) should also

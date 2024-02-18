@@ -509,10 +509,6 @@ function App() {
 
 Built-in:
 
-- `useContext()` - soon
-- `useCallback()` - soon
-- `Custom` - combine existing hooks intro custom, reusable pieces of logic
-
 <hr>
 
 - ## useState
@@ -662,6 +658,13 @@ function App() {
     - `useCounter`
     - `useContador`
       Check [CounterCustomHook.jsx](./ReactHooks/src/components/CounterCustomHook.jsx) e [/hooks/useCounter.jsx](./ReactHooks/src/hooks/useCounter.jsx)
+
+Checkout more hooks
+
+- `useContext()` - [checkout](./projects/scrimba/Advanced-React/src/Components/pages/Page2.jsx)
+- `useCallback()` -
+- `useRefs?` [checkout](./projects/scrimba/Advanced-React/src/Components/RefsPage3/)
+- `Custom` - combine existing hooks intro custom, reusable pieces of logic [checkout](./projects/scrimba/Advanced-React/src/Components/pages/Page3.jsx)
 
 # Tips:
 

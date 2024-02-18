@@ -1,0 +1,38 @@
+html,
+body {
+  margin: 0;
+  padding: 10px;
+  padding-top: 0;
+  background-color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  margin-right: 15px;
+  text-decoration: none;
+}
+img {
+  max-width: 100px;
+}
+
+.active {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+  box-shadow: 0 0 2px 2px rgb(12, 12, 12);
+}
+nav a {
+  background: #888;
+  color: rgb(229, 229, 229);
+  font-size: 1.1rem;
+  border-radius: 10px;
+  margin: 0 10px;
+  padding: 5px 15px;
+}
+
+a,
+button {
+  margin-right: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
