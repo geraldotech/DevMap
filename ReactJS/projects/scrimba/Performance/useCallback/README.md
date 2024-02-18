@@ -1,12 +1,21 @@
 React.useCallback()
 
-
 For caching functions
 
 ![image](https://github.com/geraldotech/DevMap/assets/92253544/492627bd-39c1-4cdb-8ec8-7639482e855f)
 
+```js
+// Before:
+function increment() {
+  setCount((prevCount) => prevCount + 1)
+}
 
+// now, move the setCount.. to useCallback and remove original functions increment
 
+const increment = React.useCallback(() => {
+  setCount((prevCount) => prevCount + 1)
+}, [])
+```
 
 Warning: Vite enforces using jsx syntax inside jsx/tsx files, so it will complain about that. Solution: rename `.js` files to `.jsx` :)
 
@@ -15,9 +24,10 @@ Quick start:
 ```
 $ npm install
 $ npm start
-````
+```
 
 Head over to https://vitejs.dev/ to learn more about using vite
+
 ## About Scrimba
 
 At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜

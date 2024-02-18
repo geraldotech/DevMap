@@ -5,9 +5,13 @@ export default function App() {
   const [count, setCount] = React.useState(0)
   const [darkMode, setDarkMode] = React.useState(false)
 
-  function increment() {
+  /* applying useCallback() */
+
+  const increment = React.useCallback(() => {
     setCount((prevCount) => prevCount + 1)
-  }
+  }, [])
+
+  // function increment() {}
 
   function decrement() {
     setCount((prevCount) => prevCount - 1)

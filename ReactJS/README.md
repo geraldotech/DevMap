@@ -661,10 +661,10 @@ function App() {
 
 Checkout more hooks
 
-- `useContext()` - [checkout](./projects/scrimba/Advanced-React/src/Components/pages/Page2.jsx)
-- `useCallback()` -
-- `useRefs?` [checkout](./projects/scrimba/Advanced-React/src/Components/RefsPage3/)
-- `Custom` - combine existing hooks intro custom, reusable pieces of logic [checkout](./projects/scrimba/Advanced-React/src/Components/pages/Page3.jsx)
+- `useContext()` - [Quick reference](./projects/scrimba/Advanced-React/src/Components/pages/Page2.jsx)
+- `useCallback()` -[Quick reference](./projects/scrimba/Performance/useCallback/)
+- `useRefs?` [Quick reference](./projects/scrimba/Advanced-React/src/Components/RefsPage3/)
+- `Custom` - combine existing hooks intro custom, reusable pieces of logic [Quick reference](./projects/scrimba/Advanced-React/src/Components/pages/Page3.jsx)
 
 # Tips:
 
