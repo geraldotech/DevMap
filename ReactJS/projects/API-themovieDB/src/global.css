@@ -13,16 +13,29 @@ body {
   min-height: 100vh;
 }
 .ChangeLanguage {
+  background: #6654da;
   border: none;
-  padding: 0.5rem 0.8rem;
-  margin: auto;
-  display: block;
-  border-radius: 10px;
-  margin-bottom: 5vh;
-  font-size: 1rem;
   cursor: pointer;
+  border-radius: 1rem;
+  color: white;
+  padding: 0.5rem 2rem;
+  margin-left: auto;
+  font-size: 100%;
+  transition: all 0.3s;
 }
 .ChangeLanguage:hover {
   background: seagreen;
   transition: all 1s ease;
+}
+.navButton {
+  background: #6654da;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  margin-right: 10px;
+  font-size: 100%;
+  transition: all 0.3s;
 }

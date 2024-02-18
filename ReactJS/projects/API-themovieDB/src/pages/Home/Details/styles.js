@@ -52,4 +52,11 @@ export const Container = styled.div`
   .release-date {
     opacity: 0.5;
   }
+  .average {
+    color: #6654da;
+    margin-block: 10px;
+  }
+  .genres b:not(:first-child) {
+    margin: 0 8px;
+  }
 `
