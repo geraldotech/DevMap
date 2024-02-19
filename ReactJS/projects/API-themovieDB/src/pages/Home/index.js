@@ -8,24 +8,51 @@ import { Link } from 'react-router-dom'
 const Home = ({ languagetype }) => {
   // useState var moveis start with empty Arr
   const [movies, setMovies] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
   const image_path = 'https://image.tmdb.org/t/p/w500'
+  const API = process.env.REACT_APP_API_KEY
+  const API2 = process.env.REACT_APP_URL
 
-  const currentLanguage = useOutletContext()
- 
+  console.log(API2)
 
   //ajuda com os efeitos colaterais, carregar dados fonte externa
   // aceita a func e um array de dependencias
   useEffect(() => {
-    // consumir a pi
-    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=${languagetype}&page=1&region=us
-    `)
-      .then((res) => res.json())
-      .then((data) => {
+    setLoading(true)
+
+    async function getMovies() {
+      try {
+        const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API}&language=${languagetype}&page=1&region=us
+        `
+        const res = await fetch(url)
+        if (!res.ok) {
+          throw {
+            message: 'Failed to fetch Movies',
+            status: res.ok,
+          }
+        }
+        const data = await res.json()
         setMovies(data.results)
-        // console.log(data.results)
-      })
+      } catch (err) {
+        //console.log(err.message)
+        console.log(err)
+        setError(err)
+      } finally {
+        setLoading(false)
+      }
+    }
+    getMovies()
   }, [languagetype])
+
+  if (loading) {
+    return (
+      <h1 aria-live="polite" className="loading">
+        Loading...
+      </h1>
+    )
+  }
 
   return (
     <Container>
@@ -34,17 +61,13 @@ const Home = ({ languagetype }) => {
       </Banner>
       <h1>20 mais populares</h1>
 
+      <h2>{error && error.message}</h2>
+
       <MovieList>
         {movies.map((movie) => {
           return (
             <Movie key={movie.id}>
-              {/*  <a href="">
-                <img
-                  src={`${image_path}/${movie.poster_path}`}
-                  alt={movie.title}
-                />
-              </a> */}
-              <Link to={`/details/${movie.id}`} state={{ language: currentLanguage }}>
+              <Link to={`/details/${movie.id}`}>
                 <img src={`${image_path}/${movie.poster_path}`} alt={movie.title} />
               </Link>
               <span>{movie.title}</span>

@@ -45,7 +45,9 @@ function Details({ languagetype }) {
         setLoading(false)
       })
       .catch((err) => {
+        console.log(`problemas erros`)
         console.log(err)
+        setLoading(false)
       })
   }, [languagetype])
 
