@@ -39,3 +39,7 @@ body {
   font-size: 100%;
   transition: all 0.3s;
 }
+
+.loading {
+  margin-top: 2rem;
+}

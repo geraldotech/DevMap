@@ -7,9 +7,11 @@ function Details({ languagetype }) {
   const { id } = useParams()
 
   const [movie, setMovie] = useState({})
+  const [loading, setLoading] = useState(false)
   const currentLanguage = useLocation()
 
   useEffect(() => {
+    setLoading(true)
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=${languagetype}&page=1&region=us
     `)
       .then((res) => res.json())
@@ -38,30 +40,22 @@ function Details({ languagetype }) {
           vote_average: vote_average,
           genres,
         }
-        console.log(movie)
+
         setMovie(movie)
+        setLoading(false)
+      })
+      .catch((err) => {
+        console.log(err)
       })
   }, [languagetype])
 
-  const template = movie.genres ? (
-    <div>
-      <img src={movie.image} alt={movie.sinopse} />
-      <div className="details">
-        <h1>{movie.title}</h1>
-        <p className="average">Nota: {movie.vote_average}</p>
-        <span>Sinopse: {movie.sinopse}</span>
-        <span className="release-date">Release data: {movie.releaseData}</span>
-
-        {/*  <div className='genres'>{movie.genres && movie.genres.map((val) => <b>{val.name}</b>)}</div> */}
-        {movie.genres.map((val) => (
-          <b key={val.name}>{val.name}</b>
-        ))}
-        <button>
-          <Link to="/">Go Back</Link>
-        </button>
-      </div>
-    </div>
-  ) : null
+  if (loading) {
+    return (
+      <h1 aria-live="polite" className="loading">
+        Loading...
+      </h1>
+    )
+  }
 
   return (
     <>
