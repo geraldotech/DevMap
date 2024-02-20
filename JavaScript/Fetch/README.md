@@ -148,6 +148,17 @@ const promise = new Promise((resolve, reject) => {
 })
 ```
 
+- eg: 2
+
+```js
+async function myfunction() {
+  await new Promise((resolve) => setTimeout(resolve, 2000))
+  fetch('http')
+    .then((res) => res.json())
+    .then((data) => setData(data))
+}
+```
+
 </details>
 
 Modo console e IDE 1
