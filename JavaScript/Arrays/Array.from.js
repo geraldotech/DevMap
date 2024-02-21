@@ -96,3 +96,12 @@ function message(_, index) {
 }
 // and with Array.from
 Array.from({ length: 5 }, message);
+
+
+// append in html
+function createElements(_, index){
+  const p = document.createElement('p')
+  p.textContent = 'Hello'
+  document.body.append(p)
+}
+Array.from({length: 10}, createElements)

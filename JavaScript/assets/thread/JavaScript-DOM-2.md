@@ -14,6 +14,7 @@
   - [Contains (e.target)](#contains 'e.target')
   - [currentTarget_background_SVG.html](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/currentTarget_background_SVG.html)
   - [visibilityState](./visibilityState/index.html)
+  - [e.currentTarget.parentElement.querySelector('code')... and firstChild](https://github.com/geraldotech/DevMap/blob/main/JavaScript/Clipboard/copy-snippet/src/main.js)
 - <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">Hoisting</a>
 - [Web Components](./Web-Components)
 - [Regex - Expressões Regulares](./Regex/README.md)
@@ -329,7 +330,9 @@ el.addEventListener('click', function (e) {
   - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/contains-e-target.html)
 
   ```html
-  <div id="mydiv" style="width: 100px;height: 100px;background-color: blue;"></div>
+  <div
+    id="mydiv"
+    style="width: 100px;height: 100px;background-color: blue;"></div>
 
   div { margin: auto; padding: 1em; max-width: 6em; background: rgba(0, 0, 0, .2); text-align: center; }
   ```
