@@ -14,14 +14,14 @@ import classNames from 'classnames'
  */
 
 function ButtonChallenge({ children, size, className, variant, ...rest }) {
-  /* ======= ✅VERSION 1 com ternary======== */
+  /* ======= ✅VERSION 1 com ternary ======== */
 
   let sizeClass = size ? `${size}` : ''
   // classNames é um library que joining classNames, fiz uso, mais penso que dependendo do cenário é muito desnecessário
   const allClass = classNames(sizeClass, className)
   console.log(allClass) // allClass recebe todas as classes so usar no ClassName={allClass}
 
-  /* ======= ✅VERSION  2 with ifs======== */
+  /* ======= ✅VERSION  2 with ifs  ======== */
 
   // let sizeClass
   // rest.className adiciona o valor extra além das predefinidas

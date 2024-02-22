@@ -25,7 +25,7 @@ function App() {
       <h1>Advanced React</h1>
       <p>Para relevar os módulos remover a classe hidden</p>
       <p>
-        vite host use:{' '}
+        vite host use:
         <strong>
           <code> npm run dev -- --host</code>
         </strong>
@@ -39,8 +39,11 @@ function App() {
         </Button>
 
         <hr></hr>
-        <ButtonMultiEventProps onMouseOver={() => console.log(`move over ok`)} onClick={() => console.warn(`click me`)}>
+        <ButtonMultiEventProps
+          onMouseOver={() => console.log(`move over ok`)}
+          onClick={() => console.warn(`click me`)}>
           <span>Button props.event</span>
+
         </ButtonMultiEventProps>
         <hr></hr>
         <Select text="Select a Number">
@@ -50,30 +53,46 @@ function App() {
         </Select>
 
         <hr></hr>
-        <ButtonSpread style={{ color: 'green' }} onClick={() => console.warn(`click ok`)}>
+        <ButtonSpread
+          style={{ color: 'green' }}
+          onClick={() => console.warn(`click ok`)}>
           USING SPREAD
         </ButtonSpread>
         <hr></hr>
-        <ButtonRest variant style={{ color: 'green' }} onClick={() => console.warn('%cLogging in...', 'color:dodgerblue;font-size:1rem;')}>
-          DESTRUCTING PROPS
+        <ButtonRest
+          variant
+          style={{ color: 'green' }}
+          onClick={() => console.warn('%cLogging in...', 'color:dodgerblue;font-size:1rem;')}>
+          DESTRUCTURING PROPS
         </ButtonRest>
         <hr></hr>
 
-        <ButtonClassChallenge size="lg" className="green" variant="warning">
+        <ButtonClassChallenge
+          size="lg"
+          className="green"
+          variant="warning">
           Button challenge
         </ButtonClassChallenge>
 
-        <ButtonClassChallenge size="sm" className="green" variant="danger">
+        <ButtonClassChallenge
+          size="sm"
+          className="green"
+          variant="danger">
           Button challenge
         </ButtonClassChallenge>
 
-        <ButtonClassChallenge size="lg" className="green" variant="success">
+        <ButtonClassChallenge
+          size="lg"
+          className="green"
+          variant="success">
           Button challenge
         </ButtonClassChallenge>
       </section>
       <h2>2 - Avatar Component</h2>
       <section className="hidden">
-        <Avatar src="https://pedrocarvh.netlify.app/images/KING.png" alt="king photo"></Avatar>
+        <Avatar
+          src="https://pedrocarvh.netlify.app/images/KING.png"
+          alt="king photo"></Avatar>
         <hr></hr>
         <Avatar>
           <img src="https://cdn.dribbble.com/userupload/12773132/file/original-9d796f7c8ed830a769c673564bf20d47.jpg?resize=752x941" />
@@ -84,7 +103,11 @@ function App() {
 
       <h2>3 - Menu</h2>
       <section className="hidden">
-        <Menu className="button" buttonText="Sports List" items={['Tenis', 'Racquetal', 'Pickball', 'Squash']} />
+        <Menu
+          className="button"
+          buttonText="Sports List"
+          items={['Tenis', 'Racquetal', 'Pickball', 'Squash']}
+        />
 
         <hr></hr>
         <h2>What we'll learn</h2>

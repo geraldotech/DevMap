@@ -78,7 +78,10 @@ function App() {
 
       <p>{sum(5, 3)}</p>
 
-      <img src={url} alt="my img  " />
+      <img
+        src={url}
+        alt="my img  "
+      />
     </div>
   )
 }
@@ -192,7 +195,7 @@ function App() {
 
 ```js
 // nullish
-;<div>{props.nome ?? 'default'}</div>
+<div>{props.nome ?? 'default'}</div>
 
 // set a new value
 let nome
@@ -200,7 +203,7 @@ if (props.nome === undefined) {
   nome = 'default'
 }
 
-;<div>{nome}</div>
+<div>{nome}</div>
 
 // after function before export default
 ...
@@ -210,8 +213,26 @@ SayHello.defaultProps = {
 
 export default SayHello
 
+
+// detructuring default props
+export function SmartButton({onClick, text = 'Default', age = 30}) {
+  return (
+   <button onClick={onClick}>{text}- {age}</button>
+  )
+}
+
+ChatGTP: Each of these approaches has its own advantages and use cases. Choose the one that fits best with your component structure and coding style.
+
+Bem se quiser forçar que idade seja um número?
+export function SmartButton({onClick, text = 'Default', age}) {
+  return (
+   <button onClick={onClick}>{text} - {typeof age === 'number' ? age : 'It Not a Number'}</button>
+  )
+}
+
 ```
 
+- Checkout propTypes... and `/ReactPractice/src/components/PropsClick/Button.jsx`
 - More about [propTypes and defaultProps](./projects/React-Aulas/src/components/Item.js)
 
 ## Multi Props
@@ -488,12 +509,23 @@ function App() {
       <h1>Somando</h1>
       <form onSubmit={cadastrarUsuario}>
         <div>
-          <input type="text" name="x" placeholder="n1" />
-          <input type="text" name="y" placeholder="n2" />
+          <input
+            type="text"
+            name="x"
+            placeholder="n1"
+          />
+          <input
+            type="text"
+            name="y"
+            placeholder="n2"
+          />
         </div>
 
         <div>
-          <input type="submit" value="Somar" />
+          <input
+            type="submit"
+            value="Somar"
+          />
         </div>
       </form>
     </div>
@@ -526,14 +558,25 @@ Built-in:
 <form onSubmit={registerUser}>
   <div>
     <label htmlFor="user">User:</label>
-    <input type="text" id="user" placeholder="user" />
+    <input
+      type="text"
+      id="user"
+      placeholder="user"
+    />
   </div>
   <div>
     <label htmlFor="pass">Password:</label>
-    <input type="password" id="pass" placeholder="password" />
+    <input
+      type="password"
+      id="pass"
+      placeholder="password"
+    />
   </div>
   <div>
-    <input type="submit" value="Cadastrar" />
+    <input
+      type="submit"
+      value="Cadastrar"
+    />
   </div>
 </form>
 ```
@@ -634,7 +677,10 @@ function App() {
   return (
     <>
       <h1>{getnome}</h1>
-      <input ref={nameinput} type="text" />
+      <input
+        ref={nameinput}
+        type="text"
+      />
       <button onClick={getmyname}>get My name</button>
     </>
   )
@@ -650,7 +696,7 @@ function App() {
 - useEffect multiple consoles?
   - porque o React está rodando em `StrictMode` que é o modo de desenvolvimento, no worries, em produção isso não vai ocorrer.
   - remover o `React.StrictMode` wrapping the `<App/>`
-- reagir as etapas do ciclo de vida do component que são: crição, atualização e destruição, example ir em [useEffectexample.jsx](./ReactHooks/src/components/useEffectexample.jsx) e para logs de destruição + toggle boolean ir em [/about.jsx](./ReactHooks/src/components/about.jsx/about.jsx)
+- reagir as etapas do ciclo de vida do component que são: crição, atualização e destruição, example ir em [useEffectexample.jsx](./ReactHooks/src/components/useEffectexample.jsx) e para logs de destruição + toggle boolean ir em [/about.jsx](./ReactHooks/src/components/about.jsx)
 - Criar os próprios hooks
 
   - extrair lógicas e transformar em hooks
@@ -777,10 +823,16 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
   <Link to="/">Home</Link>
   <Link to="/company">Company</Link>
   <Routes>
-    <Route exact path="/" element={<Home />}>
+    <Route
+      exact
+      path="/"
+      element={<Home />}>
       Home
     </Route>
-    <Route exact path="/company" element={<Company />}>
+    <Route
+      exact
+      path="/company"
+      element={<Company />}>
       Company
     </Route>
   </Routes>
