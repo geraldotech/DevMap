@@ -888,8 +888,10 @@ let value = 'dark';
 console.log(value[0].toUpperCase() + value.slice(1)) // Dark
 
 
-//📌Strings
-console.log("Geraldo".slice(0,3)); // Ger 0,1,2 > die não inclui o ultimo
+//📌 Strings
+console.log("Geraldo".slice(0,3)); // Ger 0,1,2  não inclui o ultimo
+
+'Geraldo'.slice(0,4) // Gera
 
 let value = 'dark';
 console.log(value[0].toUpperCase() + value.slice(1)) // Dark
