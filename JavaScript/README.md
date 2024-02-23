@@ -17,6 +17,16 @@
 - [List Directories](./assets/thread/List_directories)
 
 <details>
+<summary>Quick Tips</summary>
+
+```js
+isNaN('ge') // true
+isNaN(5) // false
+```
+
+</details>
+
+<details>
 <summary>Concatenação, Interpolação, Template-literals and syntax</summary>
 From scratch aspas 'simples' ou "dupla" tanto faz, contudo dependendo do cenário há algunas peculiaridades
 
@@ -226,13 +236,12 @@ const log = (x) => {
 <hr />
 <h1 id="el">Element</h1>
 <hr />
-<footer id="vue" style="color:red">
+<footer
+  id="vue"
+  style="color:red">
   <p>footer</p>
 </footer>
-<button
-  onclick="document.getElementById('el').insertAdjacentElement('afterbegin', document.getElementById('vue'))">
-  Move
-</button>
+<button onclick="document.getElementById('el').insertAdjacentElement('afterbegin', document.getElementById('vue'))">Move</button>
 <!--inline hardcore-->
 ```
 
@@ -289,10 +298,7 @@ style.textContent = 'h1 { background-color: red; }'
 document.head.appendChild(style)
 
 //3.0 - external
-document.head.insertAdjacentHTML(
-  'beforeend',
-  '<link rel=stylesheet href=/foo.css>'
-)
+document.head.insertAdjacentHTML('beforeend', '<link rel=stylesheet href=/foo.css>')
 ```
 
 </details>

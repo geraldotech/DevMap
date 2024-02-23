@@ -2,28 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>Vue</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="script.js" defer></script>
+    <script
+      src="script.js"
+      defer></script>
   </head>
   <body>
     <h1>v-for</h1>
     <div id="app">
       <ul>
-        <li v-for="(item, index) in list" :key="item.id">
+        <li
+          v-for="(item, index) in list"
+          :key="item.id">
           {{item.name}} - {{index}}
         </li>
       </ul>
-      <a style="display: block" v-for="item in list" :href="item.name"
+      <a
+        style="display: block"
+        v-for="item in list"
+        :href="item.name"
         >{{item.name}}.html</a
       >
       <hr />
       <p>v-for {object}</p>
       <p>{{categories}}</p>
 
-      <ul v-for="(ele, ind) in categories" :key="ind.id">
+      <ul
+        v-for="(ele, ind) in categories"
+        :key="ind.id">
         <li>{{ele}} - {{ind}}</li>
       </ul>
 
@@ -32,12 +45,18 @@
       <ol>
         <li v-for="n in evenNum">{{n}}</li>
       </ol>
+
+      <h2>v-if v-else for...</h2>
+      <div v-if="10 > 20">Hello</div>
+      <p
+        v-else
+        v-for="x in 10">
+        {{x}}
+      </p>
     </div>
 
     <p>
-      <a href="https://v2.vuejs.org/v2/guide/list.html#v-for-with-an-Object"
-        >https://v2.vuejs.org/v2/guide/list.html#v-for-with-an-Object</a
-      >
+      <a href="https://v2.vuejs.org/v2/guide/list.html#v-for-with-an-Object">https://v2.vuejs.org/v2/guide/list.html#v-for-with-an-Object</a>
     </p>
   </body>
 </html>
