@@ -20,15 +20,21 @@
     <ul id="messages"></ul>
     <form
       id="form"
+      onsubmit="event.preventDefault(); return myfunction()"
       action="">
       <input
         id="input"
-        autocomplete="off" /><button>Send</button>
+        autocomplete="off" />
+      <button>Send</button>
     </form>
 
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
+      function myfunction() {
+        console.log(`hello`)
+      }
+
       var socket = io()
       function user_name(val) {
         let nome = document.getElementById('name').value
