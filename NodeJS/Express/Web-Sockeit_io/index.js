@@ -16,10 +16,17 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/assets', express.static('assets')); // router for static files
 
 app.get('/', (req, res) => {
-
     res.sendFile(__dirname + '/public/index.html');
-
 });
+
+app.get('/about', (req, res) => {
+    res.sendFile(__dirname + '/public/about.html');
+});
+
+app.get('/socket.io', (req, res) => {
+    res.sendFile(__dirname + '/');
+});
+
 
 io.on('connection',(socket)=>{
 
