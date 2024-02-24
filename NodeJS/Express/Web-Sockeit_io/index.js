@@ -11,8 +11,9 @@ var usuarios = [];
 var socketIds = [];
 
 
-app.use('/assets', express.static('assets')); // router for static files
 app.use('/public', express.static(path.join(__dirname, 'public')));
+
+app.use('/assets', express.static('assets')); // router for static files
 
 app.get('/', (req, res) => {
 
