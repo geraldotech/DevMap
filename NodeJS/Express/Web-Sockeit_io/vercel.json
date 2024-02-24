@@ -4,16 +4,11 @@
   "routes": [{ "src": "/", "dest": "/index.js" }],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/assets/style.css",
       "headers": [
         {
-          "source": "/assets/style.css",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "text/css"
-            }
-          ]
+          "key": "Content-Security-Policy",
+          "value": "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval';"
         }
       ]
     }
