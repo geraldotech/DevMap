@@ -20,7 +20,6 @@
     <ul id="messages"></ul>
     <form
       id="form"
-      onsubmit="event.preventDefault(); return true"
       action="">
       <input
         id="input"
@@ -31,10 +30,6 @@
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
-      function myfunction() {
-        console.log(`hello`)
-      }
-
       var socket = io()
       function user_name(val) {
         let nome = document.getElementById('name').value
