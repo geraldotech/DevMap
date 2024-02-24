@@ -1,10 +1,19 @@
 {
   "version": 2,
   "builds": [{ "src": "index.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/", "dest": "/index.js" }],
+  "routes": [{ "src": "/(.*)", "dest": "" }],
   "headers": [
     {
-      "source": "/assets/style.css",
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
       "headers": [
         {
           "key": "Content-Security-Policy",
