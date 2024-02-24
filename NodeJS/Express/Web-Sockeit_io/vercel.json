@@ -1,15 +1,25 @@
 {
   "version": 2,
-  "builds": [
+  "builds": [{ "src": "package.json", "use": "@vercel/node" }],
+  "routes": [{ "src": "/api/(.*)", "dest": "/api/$1" }],
+  "headers": [
     {
-      "src": "index.js",
-      "use": "@now/node"
-    }
-  ],
-  "routes": [
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
     {
-      "src": "/(.*)",
-      "dest": "index.js"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval';"
+        }
+      ]
     }
   ]
 }
