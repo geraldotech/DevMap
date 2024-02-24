@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="/public/assets/style.css" />
   </head>
+  <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+
   <body>
     <input
       type="text"
@@ -27,7 +29,7 @@
       <button>Send</button>
     </form>
 
-    <script src="../socket.io/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
 
     <script>
       var socket = io()
