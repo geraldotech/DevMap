@@ -20,7 +20,7 @@
     <ul id="messages"></ul>
     <form
       id="form"
-      onsubmit="event.preventDefault(); return submitHandler()"
+      onsubmit="event.preventDefault(); return true"
       action="">
       <input
         id="input"
@@ -31,6 +31,10 @@
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
+      function myfunction() {
+        console.log(`hello`)
+      }
+
       var socket = io()
       function user_name(val) {
         let nome = document.getElementById('name').value
@@ -54,17 +58,14 @@
         var form = document.getElementById('form')
         var input = document.getElementById('input')
 
-        /*   form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', (e) => {
           e.preventDefault()
-        }) */
-
-        function submitHandler() {
           if (input.value) {
             socket.emit('chat message', { msg: input.value, nome: nome })
             input.value = ''
             //alert('Mensagem foi enviada com sucesso!');
           }
-        }
+        })
 
         socket.on('chat message', function (obj) {
           if (obj.nome == nome) {
