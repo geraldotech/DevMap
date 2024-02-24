@@ -1,77 +1,83 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Socket.IO chat</title>  
-<link rel="stylesheet" href="./assets/style.css">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Socket.IO chat</title>
+    <link
+      rel="stylesheet"
+      href="./assets/style.css" />
   </head>
   <body>
-   
-    <input type="text" id="name" placeholder="name">
+    <input
+      type="text"
+      id="name"
+      placeholder="name" />
     <button onclick="user_name()">Entrar</button>
     <div>User atual: <span id="nome_atual"></span></div>
 
     <ul id="messages"></ul>
-    <form id="form" action="">
-      <input id="input" autocomplete="off" /><button>Send</button>
-
+    <form
+      id="form"
+      action="">
+      <input
+        id="input"
+        autocomplete="off" /><button>Send</button>
     </form>
 
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
-      var socket = io();
-    function user_name(val){
-      let nome = document.getElementById("name").value;
-      document.querySelector("#nome_atual").innerHTML = nome;
-      socket.emit('new user', nome);    
+      var socket = io()
+      function user_name(val) {
+        let nome = document.getElementById('name').value
+        document.querySelector('#nome_atual').innerHTML = nome
+        socket.emit('new user', nome)
 
-socket.on('new user', function(data){
-  if(data.success){
-    alert("Bem vindo ao canal!")
-  } else {
-    alert("Já existe usuario com esse ano....")
-    window.location.href = '/';
-  }
-})
-
-// let nome = prompt("Qual seu nome?");   
-     
-        //alert(`Bem vindo ao chat ${nome}`);
-
-        var messages = document.getElementById("messages");
-        var form = document.getElementById("form");
-        var input = document.getElementById("input");
-
-
-        form.addEventListener('submit', (e)=>{
-            e.preventDefault();
-            if(input.value){
-                socket.emit('chat message',{msg:input.value,nome:nome});
-                input.value = '';
-                //alert('Mensagem foi enviada com sucesso!');
-            }
-        })
-
-        socket.on('chat message',function(obj){
-
-          if(obj.nome == nome){
-            //coloco uma mensagem com uma cor
-            var item = document.createElement("li");
-            item.style.backgroundColor = 'gray';
-            item.textContent = obj.nome+' disse: '+obj.msg;
-            messages.appendChild(item);
-            window.scrollTo(0, document.body.scrollHeight);
+        socket.on('new user', function (data) {
+          if (data.success) {
+            alert('Bem vindo ao canal!')
           } else {
-               //coloco uma mensagem outra cor
-            var item = document.createElement("li");
-            item.textContent = obj.nome+' disse:'+obj.msg;
-            messages.appendChild(item);
-            window.scrollTo(0, document.body.scrollHeight);
+            alert('Já existe usuario com esse ano....')
+            window.location.href = '/'
           }
         })
-    }
-     
-    
+
+        // let nome = prompt("Qual seu nome?");
+
+        //alert(`Bem vindo ao chat ${nome}`);
+
+        var messages = document.getElementById('messages')
+        var form = document.getElementById('form')
+        var input = document.getElementById('input')
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault()
+          if (input.value) {
+            socket.emit('chat message', { msg: input.value, nome: nome })
+            input.value = ''
+            //alert('Mensagem foi enviada com sucesso!');
+          }
+        })
+
+        socket.on('chat message', function (obj) {
+          if (obj.nome == nome) {
+            //coloco uma mensagem com uma cor
+            var item = document.createElement('li')
+            item.style.backgroundColor = 'gray'
+            item.textContent = obj.nome + ' disse: ' + obj.msg
+            messages.appendChild(item)
+            window.scrollTo(0, document.body.scrollHeight)
+          } else {
+            //coloco uma mensagem outra cor
+            var item = document.createElement('li')
+            item.textContent = obj.nome + ' disse:' + obj.msg
+            messages.appendChild(item)
+            window.scrollTo(0, document.body.scrollHeight)
+          }
+        })
+      }
     </script>
   </body>
 </html>
