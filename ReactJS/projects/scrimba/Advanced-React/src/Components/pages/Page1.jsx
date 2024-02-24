@@ -16,6 +16,7 @@ import MenuItem from './MenuChallengePage1/MenuItem'
 function App() {
   const sports = ['Tennis', 'Racquetal', 'Pickball', 'Squash']
   /* AUTO CLEAR CONSOLE FOR BETTER DEV EXPERIENCE */
+  
   setTimeout(() => {
     //console.clear()
   }, 2000)
@@ -145,8 +146,7 @@ function App() {
 
         <MenuChallenge>
           <MenuButton className="button">Sports List</MenuButton>
-
-          <MenuDropdown>
+            <MenuDropdown>
             {sports.map((sport) => (
               <MenuItem key={sport}>
                 {/*    <a href="#">{sport}</a> */}
