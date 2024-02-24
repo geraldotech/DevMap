@@ -12,9 +12,11 @@ var socketIds = [];
 
 
 app.use('/assets', express.static('assets')); // router for static files
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req, res) => {
 
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 
 });
 
