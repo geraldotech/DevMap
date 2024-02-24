@@ -23,9 +23,7 @@ app.get('/about', (req, res) => {
     res.sendFile(__dirname + '/public/about.html');
 });
 
-app.get('/socket.io', (req, res) => {
-    res.sendFile(__dirname + '/');
-});
+
 
 
 io.on('connection',(socket)=>{
