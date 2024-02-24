@@ -22,6 +22,10 @@
     {
       "src": "/(.+)",
       "dest": "public/$1"
+    },
+    {
+      "src": "/socke-io",
+      "dest": "/"
     }
   ]
 }
