@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script
+      src="./src/main.js"
+      defer></script>
+    <link
+      rel="stylesheet"
+      href="./src/styles.css"
+      type="text/css" />
+  </head>
+  <body>
+    <div id="renderPosts"></div>
+
+    <!-- template -->
+    <template>
+      <div class="post">
+        <div class="header">
+          <h3>${displayDate(postData.createAt)}</h3>
+          <img
+            src=""
+            alt="" />
+        </div>
+        <p>${postData.body}</p>
+      </div>
+    </template>
+  </body>
+</html>
