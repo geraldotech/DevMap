@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>JS</title>
     <style>
       * {
@@ -46,22 +50,29 @@
     </section>
     <a href="https://www.youtube.com/watch?v=fQJ2nezkUEA&t=1231s">REF</a>
     <script>
+      const item = document.querySelector('input')
+      const ul = document.querySelector('#demo')
 
-     function add() {
-        const item = document.querySelector("input"); 
-        const ul = document.querySelector("#demo");
-        const value = item.value;
+      function add() {
+        const value = item.value
+
+        const check = parent(value)
+        const IsNumber = 
+
+        if (!value && parseInt(!isNaN(value))) {
+          alert('ENTER A VALUE')
+          return
+        }
         //ul.innerHTML = ul.innerHTML + `<li>${value}</li>`;
-        ul.innerHTML += `<li><span>${value}</span><button class="delete">x</button></li>`;             
-        item.value = ""; // zera o input apos adicionar
+        ul.innerHTML += `<li><span>${value}</span><button class="delete">x</button></li>`
+        item.value = '' // zera o input apos adicionar
       }
 
-      demo.onclick = function(e){
-        if(e.target.classList.contains("delete")){
-            e.target.parentElement.remove();
-        };
-      };
-      
+      demo.onclick = function (e) {
+        if (e.target.classList.contains('delete')) {
+          e.target.parentElement.remove()
+        }
+      }
     </script>
   </body>
 </html>

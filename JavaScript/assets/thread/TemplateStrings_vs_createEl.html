@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html
-  lang="en"
-  style="color-scheme: dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -10,7 +8,7 @@
     <style>
       * {
         box-sizing: border-box;
-        font-size: 100%;
+        font-size: 120%;
         margin: 0;
         padding: 0;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -33,6 +31,9 @@
   <body>
     <div id="posts"></div>
 
+    <hr />
+    <div id="root"></div>
+
     <script>
       const posts = document.querySelector('#posts')
 
@@ -44,27 +45,73 @@
 
       function renderDocs(doc) {
         console.log(doc.name)
+
         const div = document.createElement('div')
         const name = document.createElement('p')
         const value = document.createElement('p')
+
         name.textContent = doc.name
         value.textContent = doc.value
         div.append(name, value)
 
         //posts.appendChild(div)
 
-        // OR JUST USE TEMPLATE STRINGS
+        /* === OR JUST USE TEMPLATE STRINGS === */
 
         posts.innerHTML += `
-  <div>
-    <p>${doc.name}</p>
-     <p>${doc.value}</p>
-  <div>
-  `
+        <div>
+          <p>${doc.name}</p>
+           <p>${doc.value}</p>
+        <div>
+        `
       }
       data.forEach((doc) => {
         console.log(renderDocs(doc))
       })
+
+      /* === CREATE FUNCTION FOR CREATE ELEMENTS === */
+      const root = document.querySelector('#root')
+
+      function Header(data) {
+        const h1 = document.createElement('h1')
+        h1.textContent = data
+        return h1
+      }
+
+      function postBody(data) {
+        console.log(data)
+        const p = document.createElement('p')
+        p.addEventListener('click', () => {
+          console.log(`p was clicked`)
+        })
+        p.textContent = data
+        return p
+      }
+
+      function postFooter(data) {
+        console.log(data)
+        const p = document.createElement('p')
+        p.textContent = data
+        return p
+      }
+
+      const post = {
+        id: 1,
+        title: 'Updating a document',
+        body: 'Lorem data',
+      }
+
+      const div = document.createElement('div')
+
+      div.append(
+        Header(post.title), 
+        postBody(post.body), 
+        postFooter('Just a Footer')
+        )
+
+      //root.appendChild(div)
+      // create a #root div or just
+      document.body.appendChild(div)
     </script>
   </body>
 </html>

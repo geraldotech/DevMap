@@ -20,8 +20,24 @@
 <summary>Quick Tips</summary>
 
 ```js
+parseInt('1') + // 1
+  '1' // 1
+
 isNaN('ge') // true
 isNaN(5) // false
+
+// Make a FN
+
+function isNumber(n) {
+  const toNumber = parseInt(n)
+  if (!isNaN(toNumber)) {
+    return 'Its a number'
+  }
+  return 'Not a number'
+}
+
+console.log(isNumber('213'))
+console.log(isNumber('whatever'))
 ```
 
 </details>
@@ -318,8 +334,6 @@ document.head.insertAdjacentHTML('beforeend', '<link rel=stylesheet href=/foo.cs
 
 - <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_clonenode2" target="_blank">\_cloneNode(true)</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math#arithmetic_operators" target="_blank">Arithmetic operators - Operadores matemáticos</a>
-  - parseInt("1") // 1
-  - +("1") // 1
 - <a href="https://devhints.io/es6" target="_blank">\_devhints.io/es6</a>
 - <a href="https://ricardo-reis.medium.com/try-catch-tratando-erros-no-javascript-91bcce0b93ae" target="_blank">Try catch - nice article</a>
 - <a href="https://www.base64encode.org/">base64encode.org</a>

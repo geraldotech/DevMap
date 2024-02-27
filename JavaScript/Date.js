@@ -24,3 +24,9 @@ const dd = new Date(document.lastModified);
 let hora = dd.getHours() +':'+ dd.getHours()+':'+dd.getMinutes()+':'+dd.getSeconds();
 document.write('Last Update:'+hora);
 </script>
+
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+const startOfWeek = new Date()
+const today = weekday[startOfWeek.getDay()]
+console.log(`Today is ${today}`)

@@ -18,7 +18,7 @@
 - <a href="https://github.com/geraldotech/DevMap/tree/main/TypeScript#hoisting" target="_blank">Hoisting</a>
 - [Web Components](./Web-Components)
 - [Regex - Expressões Regulares](./Regex/README.md)
-- [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
+
 
   - [getElementById {direct way}](#get-a-element-by-id-direct-way)
   - [createElement, createTextNode, textContent, append vs appendChild](#domcreateel)
@@ -31,11 +31,11 @@
     - 2 [hasAttribute / setAttribute](./hasAttribute_setAttribute.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/hasAttribute_setAttribute.html)
     - 3 [setAttribute_vs_classList and toggle()](./setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
     - 4 [createElements_add_delete-App - TodoList](./createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
-    - 5 [createElements add delete template literal add assigment](./createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/createElements_add_delete_template_literal_add_assigment.html)
-    - 6 [Template Strings vs createElement](./TemplateStrings_vs_createEl.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/TemplateStrings_vs_createEl.html)
+    - 5 [createElements add delete, template literal add assigment](./createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete_template_literal_add_assigment.html)
+    - 6 [Template Strings vs createElement](./TemplateStrings_vs_createEl.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/TemplateStrings_vs_createEl.html)
 
     </details>
-
+- [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
 - WebAPIs
   - Element: [nextElementSibling](#nextelementsibling)
 

@@ -114,7 +114,7 @@ el.textContent = "novo";
  const p = document.querySelector("p:nth-of-type(2)");
 
 //🟢 querySelector and placeholder
-document.querySelector("input[placeholder='Full_URL'];
+document.querySelector("input[placeholder='Full_URL'"];
 
 //🟢 select by Attribute
 
