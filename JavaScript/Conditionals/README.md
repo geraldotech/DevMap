@@ -155,4 +155,32 @@ if (5 > 1) {
   return
 }
 console.log('menor')
+
+// inline return
+
+function fetchPostFromPeriodo(period) {
+  if (period === 'today') return console.log('today')
+  if (period === 'week') return console.log('week')
+  if (period === 'month') return console.log('month')
+  console.log('get all')
+}
+
+fetchPostFromPeriodo('!today') // get all
+fetchPostFromPeriodo('today') // today
+
+// === VERSION if inline, thanks gp ====
+
+function fetchPostFromPeriodo(period) {
+  return (period === 'today' && 'OK!') || 'an other day'
+}
+console.log(fetchPostFromPeriodo('todayxx')) // 'an other day'
+console.log(fetchPostFromPeriodo('today')) // OK!
+
+function fetchPostFromPeriodTwo(period, day) {
+  return (period === 'today' && day === 10 && 'Ok!') || 'Not okay'
+}
+
+console.log(fetchPostFromPeriodTwo('todayxx', 5)) // 'an other day'
+
+console.log(fetchPostFromPeriodTwo('today', 10)) // OK!
 ```
