@@ -32,7 +32,7 @@
     - 3 [setAttribute_vs_classList and toggle()](./setAttribute_vs_classList.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/setAttribute_vs_classList.html)
     - 4 [createElements_add_delete-App - TodoList](./createElements_add_delete.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/createElements_add_delete.html)
     - 5 [createElements add delete template literal add assigment](./createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/createElements_add_delete_template_literal_add_assigment.html)
-    - 6 [Template Strings vs createElement](./createElements_add_delete_template_literal_add_assigment.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/TemplateStrings_vs_createEl.html)
+    - 6 [Template Strings vs createElement](./TemplateStrings_vs_createEl.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/TemplateStrings_vs_createEl.html)
 
     </details>
 

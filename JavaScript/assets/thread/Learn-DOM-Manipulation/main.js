@@ -99,7 +99,9 @@ Bye.style.color = "red";
 */
 //icon
 const icon = document.querySelector("link[rel='shortcut icon']");
-icon.href = null;
+
+console.log(`icon`, icon)
+//icon.href = null;
 
 //CSS
 const css = document.querySelector("link[rel='stylesheet']");
@@ -121,6 +123,7 @@ document.body.appendChild(
 
 const section = document.createElement("section");
 // section + p only
+const arr = [1,2,3,4]
 arr.forEach((item) => {
   const p = Object.assign(document.createElement("p"), {
     textContent: item,
@@ -129,3 +132,8 @@ arr.forEach((item) => {
 });
 
 document.body.appendChild(section);
+
+// element.className = ...
+const elementHTML = document.querySelector("[otherway]")
+
+elementHTML.className = 'testeClass'

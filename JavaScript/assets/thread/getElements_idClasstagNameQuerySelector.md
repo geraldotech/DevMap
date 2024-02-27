@@ -28,7 +28,11 @@ toAr.forEach((ele) => console.warn(ele.innerText))
 <ul>
   <li class="menu">A</li>
   <li class="menu">B</li>
-  <li class="menu" id="c">C</li>
+  <li
+    class="menu"
+    id="c">
+    C
+  </li>
   <span class="oi"></span>
   <span id="hello">New York</span>
 </ul>
@@ -113,8 +117,12 @@ el.textContent = "novo";
 document.querySelector("input[placeholder='Full_URL'];
 
 //🟢 select by Attribute
+
 <p data>Data</p>
 const p = document.querySelector("[data]");
+
+<h2 otherway>An other way to set class</h2>
+const otherway = document.querySelector("[otherway]")
 
 //🟢 select the span with attr : data-forca="1"
  <span data-forca="1">Bye 1</span>
