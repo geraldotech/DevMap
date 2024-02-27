@@ -882,6 +882,13 @@ import { faHome, faSearch, faGlobe } from '@fortawesome/free-solid-svg-icons';
 <span><FontAwesomeIcon icon={faSearch} /></span>
 ```
 
+# Lucide React
+
+https://lucide.dev/guide/packages/lucide-react
+
+- `npm install lucide-react`
+  - `import { Camera } from 'lucide-react';`
+
 ## Load image local, public, remote, import
 
 - [https://bobbyhadz.com/blog/react-display-image-from-url](https://bobbyhadz.com/blog/react-display-image-from-url)
@@ -895,7 +902,7 @@ import { faHome, faSearch, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 ## .env file for ReactAPP only
 
-- create .env file in root
+- create **.env** file in root
 - set your variables"
 
 ```js

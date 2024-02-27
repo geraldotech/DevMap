@@ -26,8 +26,6 @@
 
 - `npm i tailwind-variants tailwind-merge`
 
-Otimas dica. Array.from. lenght in App.tsx
-
 - npm -i json-server -D
 
 # React Query

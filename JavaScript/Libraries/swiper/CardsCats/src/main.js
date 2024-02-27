@@ -30,3 +30,4 @@ var swiper = new Swiper('.slide-content', {
   },
 })
 
+console.log(swiper.el)
