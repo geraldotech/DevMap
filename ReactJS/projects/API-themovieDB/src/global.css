@@ -8,7 +8,7 @@
 body {
   background-color: black;
   color: white;
-  padding: 2rem;
+  padding: 1rem;
   min-height: fit-content;
   min-height: 100vh;
 }
@@ -42,4 +42,13 @@ body {
 
 .loading {
   margin-top: 2rem;
+}
+
+.top-menu{
+  display: flex;
+  flex-direction: row;
+}
+.nav-back{
+  text-align: center;
+  margin-top: 2.5rem;
 }

@@ -13,9 +13,7 @@ const Home = ({ languagetype }) => {
 
   const image_path = 'https://image.tmdb.org/t/p/w500'
   const API = process.env.REACT_APP_API_KEY
-  const API2 = process.env.REACT_APP_URL
-
-  console.log(API2)
+  
 
   //ajuda com os efeitos colaterais, carregar dados fonte externa
   // aceita a func e um array de dependencias
@@ -57,10 +55,9 @@ const Home = ({ languagetype }) => {
   return (
     <Container>
       <Banner>
-        <h1>Welcome to Movies Data Base</h1>
+        <h1>{languagetype == "pt-BR" ? "Os 20 filmes mais populares" : "20 Most Popular Moveis"}</h1>
       </Banner>
-      <h1>20 mais populares</h1>
-
+    
       <h2>{error && error.message}</h2>
 
       <MovieList>

@@ -6,6 +6,9 @@ import { Container } from './styles'
 function Details({ languagetype }) {
   const { id } = useParams()
 
+  console.log(languagetype)
+  
+
   const [movie, setMovie] = useState({})
   const [loading, setLoading] = useState(false)
   const currentLanguage = useLocation()
@@ -28,7 +31,7 @@ function Details({ languagetype }) {
             image: `https://image.tmdb.org/t/p/w500${data.poster_path}`,
             releaseData: data.release_date,
           } */
-
+          
         const { title, overview, release_date, poster_path, vote_average, genres } = data
 
         const movie = {
@@ -43,6 +46,7 @@ function Details({ languagetype }) {
 
         setMovie(movie)
         setLoading(false)
+      
       })
       .catch((err) => {
         console.log(`problemas erros`)
@@ -67,12 +71,17 @@ function Details({ languagetype }) {
           <h1>{movie.title}</h1>
           <p className="average">Nota: {movie.vote_average}</p>
           <span>Sinopse: {movie.sinopse}</span>
-          <span className="release-date">Release data: {movie.releaseData}</span>
+          <span className="release-date">{languagetype == "pt-BR" ? "Lançamento: " : "Release Date: "}{movie.releaseData}</span>
 
-          <div className="genres">{movie.genres && movie.genres.map((val) => <b key={val.name}>{val.name}</b>)}</div>
-          <button>
-            <Link to="/">Go Back</Link>
+          <div className="genres">Categorias: {movie.genres && movie.genres.map((val) => (
+            <b key={val.name}>{val.name}</b>
+          ))}</div>
+       
+            <nav className='nav-back'>
+            <button>
+            <Link to="/">{languagetype == "pt-BR" ? "Voltar" : "Go Back"}</Link>
           </button>
+            </nav>
         </div>
       </Container>
     </>

@@ -4,23 +4,40 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
+  gap: 3rem;
+  padding: 2.5rem 0;  
+
+  @media screen and (max-width: 650px) {  
+      flex-direction: column;  
+     
+    .average + span {
+    }
+    .details {
+      max-width: 100%;        
+      }
+     
+  }
 
   h1 {
-    margin: 3rem 0;
+    margin: 0.5rem 0;
   }
 
   img {
     width: 300px;
     border-radius: 1rem;
+    @media screen and (max-width: 650px) {  
+      width: 200px;
+  }
   }
 
   .details {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 4rem;
+    flex-direction: column;   
+   
     max-width: 50%;
+    
+  @media screen and (max-width: 650px) {  
+    max-width: 100%;   
   }
 
   button {
@@ -56,7 +73,13 @@ export const Container = styled.div`
     color: #6654da;
     margin-block: 10px;
   }
-  .genres b:not(:first-child) {
+  .genres b {
     margin: 0 8px;
+    background: #6654da;
+    padding: .2rem;
+    border-radius: 5%;
   }
+
+ 
+
 `
