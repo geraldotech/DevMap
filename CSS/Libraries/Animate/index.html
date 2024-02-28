@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>New document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="./src/css/style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1>Toggle with Animation</h1>
+    <p>you can use Sweet Alert with animate.css checkout examples in JS Libraries</p>
+    <nav>
+      <label for="menu">
+        <input
+          type="checkbox"
+          name=""
+          id="mymenu" />
+        Menu
+      </label>
+    </nav>
+
+    <div class="animate__animated animate__bounceOut content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore excepturi odio aut necessitatibus veniam, perferendis animi totam nostrum? Fuga alias nam sed debitis similique, est ad quia quos
+      hic facilis.
+    </div>
+
+    <h1 class="animate__animated animate__lightSpeedInRight">animate__lightSpeedInRight</h1>
+
+    <p>Add stlye once this element</p>
+    <button
+      class="animate__animated"
+      onclick="this.classList.add('animate__bounceIn')">
+      Download
+    </button>
+
+    <button
+      type="button"
+      class="animate__animated inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-white bg-indigo-500 hover:bg-indigo-400 transition ease-in-out duration-150 cursor-not-allowed"
+      onclick="this.classList.add('animate__bounceIn')">
+      Processing...
+    </button>
+
+    <button
+      type="button"
+      class="animate__animated"
+      onclick="this.classList.add('animate__bounceInDown')">
+      Download
+    </button>
+
+    <script>
+      const content = document.querySelector('.content')
+      const menu = document.querySelector('#mymenu')
+
+      menu.onclick = function () {
+        const input = menu.checked
+        input && content.classList.remove('animate__bounceOut')
+        input ? content.classList.toggle('animate__bounceInLeft') : content.classList.toggle('animate__bounceOut')
+      }
+    </script>
+  </body>
+</html>

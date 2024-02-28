@@ -15,3 +15,7 @@ button:hover{
 a{
   display: block;
 }
+
+.red{
+  color: red;
+}

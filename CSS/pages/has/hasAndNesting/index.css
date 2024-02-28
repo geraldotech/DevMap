@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.5;
+}
+
+nav {
+  text-align: center;
+}
+
+.ph {
+  font-size: 2.5rem;
+}
+
+hr {
+  margin-block: 2rem;
+}
+
+button {
+  all: unset;
+}
+
+label {
+  cursor: pointer;
+}
+
+.header {
+  background: #333;
+  text-align: center;
+  padding: 1vh;
+  margin-bottom: 1rem;
+  /* IN DESKTOP */
+  @media (min-width: 500px) {
+    background: #888;
+    color: #fff;
+  }
+  h2 {
+    color: #000;
+  }
+}
+
+
+/* === NAV CHECKBOX MENU === */
+
+/* == NAV MENU GENERAL SETTINGS == */
+label input {
+  display: none;
+}
+
+/* == HIDDEN ELEMENTS == */
+.ph-toggle-right,
+.toggleContent,
+.optionOneContent,
+.toolContent,
+.ph-fill.ph-wrench {
+  display: none;
+}
+
+.ph-wrench.x {
+  color: yellow;
+}
+
+/* === MENU OPTION 1 === */
+
+body:has(#optionOne[type='checkbox']:checked) {
+  .optionOneContent {
+    display: block;
+    color: darkorange;
+    opacity: 1;
+    transition: all 2s ease-in-out;
+    --opacity: 1;
+    --transition: opacity 0.5s linear;
+  }
+}
+label:has(input[id='optionOne']:hover) {
+  color: blue;
+}
+/* === MENU OPTION 1 === */
+
+/* === MENU OPTION 2 === */
+/* Set a General selector */
+body:has(#tool[type='checkbox']:checked) {
+  .toolContent {
+    display: block;
+  }  
+  .ph-fill.ph-wrench {
+    display: inline; 
+  }
+  
+  .ph.ph-fill.ph-wrench { 
+    color: rebeccapurple;
+    display: inline;
+    font-family: "Phosphor-Fill" !important; /* EXTRACTED FROM Phosphor CSS */
+  }
+  .ph.ph-wrench{
+    display: none;
+  }
+  .ph-wrench{
+    color: rebeccapurple;
+    font-family: "Phosphor-Fill" !important; /* EXTRACTED FROM Phosphor CSS */
+  }
+}
+
+label:has(input[id='tool']:hover) {
+  .ph-wrench{
+    color: rebeccapurple;
+    font-family: "Phosphor-Fill" !important; /* EXTRACTED FROM Phosphor CSS */
+  }
+ 
+}
+
+/* === MENU OPTION 2 === */
+
+/* === MENU OPTION 3  === */
+/* can use height too */
+/* .toggleContent {
+  height: 0;
+  overflow: hidden;
+} */
+
+/* Using Nested selector, work even is not a direct children of body,  */
+body:has(#toggle[type='checkbox']:checked) {
+  .toggleContent {
+    display: block;
+    /* height: auto;
+    transition: height 2s ease-in-out; */
+  }
+  .ph-toggle-right {
+    display: inline;
+    color: seagreen;
+  }
+  .ph-toggle-left {
+    display: none;
+  }
+}
+
+/* === MENU OPTION 3 === */
+
+/* ARTICLE NESTING CSS */
+
+.article {
+  background: red;
+  a {
+    color: green;
+    text-decontion: none;
+  }
+}
+
+/* article p a works with & or not */
+/* GOOD BUT CAN DE CONFUSING SOMETIMES */
+article {
+  p {
+    a {
+      color: purple;
+    }
+  }
+}
+
+/* Nesting Media Queries */
+#articletwo {
+  background-color: green;
+  margin-top: 1rem;
+
+  /* DESKTOP */
+  @media (min-width: 500px) {
+    & {
+      background-color: blue;
+    }
+  }
+}
+
+/* ALL P SET COLOR BUT SECTION P */
+p {
+  color: blue;
+  section & {
+    /* LIKE => section p - & select the parent */
+    color: purple;
+  }
+}
+
+/* === LOCAL SCOPE and STYLE PARENT AND SET SON === */
+#parent:has(#rent[type='checkbox']:checked) {
+  background-color: #333;
+  color: aliceblue;
+  .son {
+    display: block;
+    color: red;
+    padding: 2vh;
+  }
+}
+
+.son {
+  display: none;
+}

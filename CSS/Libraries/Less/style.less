@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  border: 1px solid white;
+  margin-block: 15px;
+  padding: 2vh;
+  h1 {
+    color: royalblue;
+  }
+  p {
+    color: coral;
+  }
+}
+
+.card {
+  background: #333;
+  padding: 2.5vh;
+  &__lead {
+    color: aqua;
+  }
+  &__content {
+    color: yellow;
+  }
+  &::before {
+    content: 'antes>';
+  }
+  h4 {
+    color: darkgreen;
+    font-size: 2rem;
+  }
+}
+
+/* has */
+:root {
+  --bkbody: none;
+}
+
+body:has(#test[type='checkbox']:checked) {
+  --bkbody: red;
+}
+
+.test {
+  background: var(--bkbody);
+}
+
+body:has(#test input[type='checkbox']:checked) {
+  --bkbody: blue;
+}

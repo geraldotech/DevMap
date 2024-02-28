@@ -69,3 +69,22 @@ function addText(txt){
   document.getElementById('res').textContent = txt;
 }
 }
+
+
+function ToggleClassTest(){
+  Swal.fire({
+    title: "Custom animation with Animate.css",
+    showClass: {
+      popup: `
+        animate__animated
+        animate__fadeInDown
+      `
+    },
+    hideClass: {
+      popup: `
+        animate__animated
+        animate__bounceOutUp
+      `
+    }
+  });
+}

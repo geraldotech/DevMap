@@ -1,11 +1,14 @@
 # pseudo-class has()
 
-Before read about Adjacend Sibling and General Sibling Seletor `[type="checkbox"]:checked + label` [https://codepen.io/geraldopcf/pen/ZERvQBZ](https://codepen.io/geraldopcf/pen/ZERvQBZ)
+
+- <a href="https://geraldotech.github.io/DevMap/CSS/pages/selector-combinators.html#general-sibling" target="_blank">before :has I really recommend read this Adjacend Sibling and General Sibling Seletor type checkbox checked + label</a>
+
 
 > return booelan
 
 - [fromScratch](#fromscratch)
 - [Links - fazendo menu](#links)
+- [has and Nesting](./hasAndNesting/README.md)
 
 # fromScratch
 
@@ -159,7 +162,8 @@ label {
   > by gmap se no body tem esse #id com checkbox: checked então mude a var mesmo que os elements não esteja encapsulado no respectivo #id
 
 ```css
-body:has(#test [type='checkbox']:checked) {
+/* NO SPACE BETWEEN ID AND [] */
+body:has(#test[type='checkbox']:checked) {
   --bkbody: rgb(170, 30, 30);
 }
 ```
@@ -256,7 +260,7 @@ html:has([type='checkbox'][name='b']:checked) {
   display: var(--css);
 }
 
-/* define has */
+/* define has, space between id and option */
 body:has(#scratch option[value='1']:checked) {
   --html: block;
 }
