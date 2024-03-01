@@ -79,6 +79,14 @@ export const Container = styled.div`
     padding: .2rem;
     border-radius: 5%;
   }
+  .genres{
+    display: flex;
+    margin-top: .8rem;
+    flex-wrap: wrap;
+    gap: .9rem;
+  }
+
+  
 
  
 

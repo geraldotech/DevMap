@@ -73,8 +73,10 @@ function Details({ languagetype }) {
           <span>Sinopse: {movie.sinopse}</span>
           <span className="release-date">{languagetype == "pt-BR" ? "Lançamento: " : "Release Date: "}{movie.releaseData}</span>
 
-          <div className="genres">Categorias: {movie.genres && movie.genres.map((val) => (
-            <b key={val.name}>{val.name}</b>
+          Categorias:<div className="genres">{movie.genres && movie.genres.map((val) => (
+          
+             <b key={val.name}>{val.name}</b>
+           
           ))}</div>
        
             <nav className='nav-back'>
