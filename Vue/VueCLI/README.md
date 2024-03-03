@@ -44,9 +44,35 @@ $ npm create vite@latest
 - Comandos para build / preview check `package.json` but is:
 $ npm run build
 $ npm run preview
-
-
 ```
+
+
+## Vite Starter Project Manual
+
+create `package.json`
+
+```js
+{
+  "name": "project",
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.4.4"
+  },
+  "devDependencies": {
+    "vite": "latest",
+    "@vitejs/plugin-react": "*"
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
+```
+
+- now: npm i
 
 ## Components:
 

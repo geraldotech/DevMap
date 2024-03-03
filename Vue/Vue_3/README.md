@@ -66,7 +66,7 @@ const vm = Vue.createApp({
         },
         template: '<p>Hello</p>',
       }).mount('#app')
-    </script>
+</script>
 ```
 
 ### const e Vue.createApp
