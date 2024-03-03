@@ -43,11 +43,20 @@
       <p>{{senha == '123' ? 'certo' : ''}}</p>
       <p>{{senha == '12345' ? 'certo de novo' : ''}}</p>
       <p>{{senha == '12' ? link : ''}}</p>
+
+      <hr>
+
+      <input type="text" v-model="user" placeholder="username">
+      <input type="password" v-model="pass" placeholder="pass">
+
+      <p>{{user == 'admin' && pass == '123' ? link : ''}}</p>
     </div>
     <script>
       Vue.createApp({
         data() {
           return {
+          user:'',
+          pass: '',
             message: "gmapdev",
             senha: "",
             link: "https://github.com/geraldotech/DevMap",

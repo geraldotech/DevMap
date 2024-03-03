@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input
+        :value="xxx"
+        @input="xxx = $event.target.value" />
+
+      <p>{{xxx}}</p>
+    </div>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            xxx: '',
+          }
+        },
+        methods: {
+          mudar() {
+            app.element = 's'
+          },
+        },
+      }).mount('#app')
+    </script>
+  </body>
+</html>
