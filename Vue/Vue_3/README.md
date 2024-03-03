@@ -146,7 +146,7 @@ The v-model directive helps us simplify the above to:
 
 The v-model directive helps us simplify the above to:
 
-`<input v-model="text">`
+`<input v-model="text" />`
 
 ## v-bind
 

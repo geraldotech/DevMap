@@ -26,7 +26,6 @@ $ vue create <projectName>
 $ cd <project>
 $ npm run serve
 $ npm run server
-
 ```
 
 ## Vite
