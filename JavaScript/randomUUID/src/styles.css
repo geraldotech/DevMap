@@ -1,0 +1,8 @@
+h1 {
+  color: red;
+}
+.container {
+  margin: 10px auto;
+  max-width: 400px;
+  display: nonce;
+}

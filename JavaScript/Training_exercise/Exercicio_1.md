@@ -155,6 +155,18 @@ function texto2 () {
 }
 ```
 </details>
+<summary>res Alternative by gmap</summary>
+
+```js
+const p = document.querySelector('p')
+let x = true
+
+function toggle(){
+  x = !x
+  p.style.display = x ? 'block' : 'none'
+}
+```
+</details>
 
 11. Faça um exemplo de Arrays com 3 valores: 
 
@@ -206,6 +218,25 @@ function imgbnt() {
         } else {
             ximg.style.display = 'none';
     }
+}
+```
+</details>
+
+<details>
+<summary>res Alernative by GMAP</summary>
+
+
+```js
+const div = document.querySelector("div")
+
+/* STATES */
+let y = true
+/* SAVE current Text */
+let defaultText = div.innerText
+
+function swap(){
+y = !y
+div.innerText = y ? defaultText : 'newText'
 }
 ```
 </details>
