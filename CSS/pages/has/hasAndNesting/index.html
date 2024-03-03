@@ -1,65 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script type="text/javascript" src="./index.js" defer=""></script>
-    <link rel="stylesheet" href="./index.css">
+    <script
+      type="text/javascript"
+      src="./src/index.js"
+      defer=""></script>
+    <link
+      rel="stylesheet"
+      href="./src/index.css" />
   </head>
   <body>
     <header class="header">
       <h1>CSS Nesting</h1>
-     
-    </header>   
-    
-    
+    </header>
+
     <article class="article">
       <p>This is some dummy text <a href="#">DOWNLOAD</a></p>
       <a href="#">has the class red</a>
     </article>
 
     <div id="articletwo">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quisquam, sapiente hic iste itaque cupiditate assumenda fuga minima iure, asperiores illum ex non enim tempora tenetur a nostrum corrupti corporis.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quisquam, sapiente hic iste itaque cupiditate assumenda fuga minima iure, asperiores illum ex non enim tempora tenetur a nostrum
+        corrupti corporis.
+      </p>
     </div>
 
-
-
-    <p>are  `p` are read by default</p>
+    <p>are `p` are read by default</p>
     <section>
       <p>This is a dumb text</p>
     </section>
-    
-
 
     <!-- HAS WITH NESTEA -->
 
-  <section class="header">
-    <h1>:has with CSS Nesting</h1>
-    <h2>with variables</h2>
-  </section>
+    <section class="header">
+      <h1>:has with CSS Nesting</h1>
+      <h2>with variables</h2>
+    </section>
 
     <nav>
       <label for="optionOne">
-        <input type="checkbox" id="optionOne">
+        <input
+          type="checkbox"
+          id="optionOne" />
         <i class="ph ph-eye"></i>
       </label>
 
       <label for="tool">
-        <input type="checkbox" id="tool">
+        <input
+          type="checkbox"
+          id="tool" />
         <i class="ph ph-wrench"></i>
         <i class="ph ph-fill ph-wrench"></i>
       </label>
 
       <label for="toggle">
-        <i title="Toggle" class="ph ph-toggle-left"></i>
-        <i title="Toggle" class="ph ph-fill ph-toggle-right"></i>
-        <input type="checkbox" id="toggle">
+        <i
+          title="Toggle"
+          class="ph ph-toggle-left"></i>
+        <i
+          title="Toggle"
+          class="ph ph-fill ph-toggle-right"></i>
+        <input
+          type="checkbox"
+          id="toggle" />
       </label>
     </nav>
-    
-    <div class="optionOneContent">      
+
+    <div class="optionOneContent">
       <h1>Show content eye</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptate, nam sit tempore quibusdam quaerat? Eum blanditiis, eligendi rerum eveniet sequi, quisquam incidunt laborum sed rem, obcaecati ad numquam voluptatibus.   </p>   
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptate, nam sit tempore quibusdam quaerat? Eum blanditiis, eligendi rerum eveniet sequi, quisquam incidunt laborum sed rem,
+        obcaecati ad numquam voluptatibus.
+      </p>
     </div>
 
     <div class="toolContent">
@@ -72,43 +89,51 @@
         <li>4</li>
       </ul>
     </div>
-  
 
     <div>
       <h1>Toggle Content goes here</h1>
-      <h6> work even is not a direct children of body</h6>
+      <h6>work even is not a direct children of body</h6>
 
-      <p style="margin-block: 1rem;">You can toggle icons styles https://phosphoricons.com/ using display:inline </p>
+      <p style="margin-block: 1rem">You can toggle icons styles https://phosphoricons.com/ using display:inline</p>
       <div class="toggleContent">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquam officiis natus sunt tenetur nemo laboriosam, fuga hic architecto non? Voluptas dolore voluptatem error ducimus distinctio, reiciendis possimus ipsum nobis?
-       </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquam officiis natus sunt tenetur nemo laboriosam, fuga hic architecto non? Voluptas dolore voluptatem error ducimus
+        distinctio, reiciendis possimus ipsum nobis?
+      </div>
     </div>
 
-    <hr>
-
+    <hr />
 
     <div id="parent">
       <h2>LOCAL SCOPE</h2>
       <label for="rent">
-        <input type="checkbox" name="" id="rent">
+        <input
+          type="checkbox"
+          name=""
+          id="rent" />
         Rent
-      </label>    
+      </label>
       <div class="son">
         <p>son</p>
       </div>
-      
     </div>
 
-    
-    
+
+    <main>
+
+      <div>lorem</div>
+      <div>lorem</div>
+      <input type="text">
+      <button>button</button>
+
+    </main>
+
+
     <footer style="display: none">
-<h2>Refs</h2>
-<a href="https://caniuse.com/?search=nesting">https://caniuse.com/?search=nesting</a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector">https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector</a>
-<a href="https://tomaszs2.medium.com/css-nesting-without-ampersand-is-coming-208a138f569e">https://tomaszs2.medium.com/css-nesting-without-ampersand-is-coming-208a138f569e</a>
-<a href="https://blog.logrocket.com/native-css-nesting/">https://blog.logrocket.com/native-css-nesting/</a>
+      <h2>Refs</h2>
+      <a href="https://caniuse.com/?search=nesting">https://caniuse.com/?search=nesting</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector">https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector</a>
+      <a href="https://tomaszs2.medium.com/css-nesting-without-ampersand-is-coming-208a138f569e">https://tomaszs2.medium.com/css-nesting-without-ampersand-is-coming-208a138f569e</a>
+      <a href="https://blog.logrocket.com/native-css-nesting/">https://blog.logrocket.com/native-css-nesting/</a>
     </footer>
-
   </body>
-
 </html>

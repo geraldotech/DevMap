@@ -199,3 +199,21 @@ p {
 .son {
   display: none;
 }
+
+
+
+/* MAIN EXAMPLE */
+
+/* SET ALL ELEMENTS CHILDREN OF MAIN */
+main > * {
+  padding: 1.5rem;
+}
+
+/* OR USE NESTING */
+main {
+  background: #333;
+  padding: 1.5rem;  
+   *{
+   border: 1px solid coral;    
+  }
+}
