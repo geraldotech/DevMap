@@ -1,10 +1,15 @@
 const { createApp, ref, computed, watch } = Vue;
 
 const app = Vue.createApp({
+
+  
   setup(){
+    
+    const bar = ref('my bar')
     const message = ref('Hello')
+
     return {
-      message
+      message, bar
     }
   },
   data(){
