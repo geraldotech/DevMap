@@ -50,6 +50,16 @@
       <input type="password" v-model="pass" placeholder="pass">
 
       <p>{{user == 'admin' && pass == '123' ? link : ''}}</p>
+
+
+        <ul @click="handlerClick">
+          <li>a</li>
+          <li>b</li>
+          <li>
+            <a href="#" @click.native="console.log('link')">About</a>
+          </li>
+        </ul>
+
     </div>
     <script>
       Vue.createApp({
@@ -67,6 +77,9 @@
           oioi() {
             console.log("input click detected");
           },
+          handlerClick(){
+            console.log('oi')
+          }
         },
       }).mount(app);
     </script>

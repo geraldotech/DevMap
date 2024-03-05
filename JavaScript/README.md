@@ -90,12 +90,13 @@ console.log("a" < "A"); //false
 ### syntax / sintaxe
 
 ```js
-semicolon ;
-comma ,
-parentheses ()
+semicolon - ;
+comma - ,
+parentheses - ()
 curly braces {} - chaves
 square brackets [] - colchetes
-backtick `
+backtick - `
+ampersand - &
 ```
 
 ### multiple var/let/const

@@ -1,3 +1,14 @@
+<h1 align="center">The Progressive JavaScript Framework</h1>
+
+
+
+{{MVC 
+  - Vue is in View
+- [CursoVue3](https://github.com/tiagomatosweb/curso-gratuito-vue3)
+
+Tudo é component
+Tudo é reativo
+
 # Quick recap
 
 - Filter return a Array requires iterate:
