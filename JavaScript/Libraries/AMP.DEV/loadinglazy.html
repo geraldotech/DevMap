@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>lazy-loading attribute</title>
+    <script
+      async
+      src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- Import the carousel component in the header. -->
+    <script
+      async
+      custom-element="amp-carousel"
+      src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+
+    <style>
+      body {
+        font-size: 1.5rem;
+        height: 200vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      img {
+        max-width: 70%;
+      }
+
+      /* CREATE A CLASS TO DEFINE MAX-WIDTH */
+      .slides{
+        max-width: 500px;
+        text-align: center;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading">loading: lazy </a></code>
+    </h1>
+    <h2>Evitando um site lento attribute</h2>
+    <p>diz par ao navegador não esperar a imagem carregar</p>
+
+    <section>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum cum soluta voluptates suscipit laboriosam, error officia, maiores, illo assumenda perspiciatis accusamus tempore quasi voluptate
+      nam labore expedita eum nemo? Illo.
+    </section>
+
+    <img
+      loading="lazy"
+      src="https://assets.scrimba.com/advanced-react/react-router/the-cruiser.png"
+      alt="" />
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rem earum, et assumenda pariatur eos itaque beatae eligendi similique molestias veritatis ut libero aliquam, saepe delectus quia,
+      dignissimos ducimus temporibus.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, veritatis. Dicta necessitatibus expedita temporibus dolores itaque enim culpa ullam nam nihil exercitationem sit quos quia eos
+      iusto omnis, illum vero iste doloremque minus maiores. Quas nam est quibusdam fugiat, libero nemo distinctio blanditiis dicta iure aliquam deleniti ea architecto accusamus tempore asperiores
+      magni explicabo provident recusandae iusto necessitatibus eaque rerum officiis. Recusandae nesciunt voluptatem delectus. Error voluptates vitae aut natus asperiores omnis cum harum architecto,
+      sint quidem praesentium? Consectetur, ducimus repellat dicta alias, sunt ad eligendi fugiat necessitatibus maiores asperiores veniam distinctio nesciunt. Hic pariatur molestias magnam odit unde
+    </p>
+
+    <figure>
+      <img
+        loading="lazy"
+        src="https://firebasemood.netlify.app/assets/images/logo.svg"
+        alt="" />
+    </figure>
+
+    <h1>6 MB</h1>
+
+    <figure>
+      <img
+        alt=""
+        src="https://gpnotes.droppages.com/img/6MB.jpg" />
+    </figure>
+
+    <h2>Usando <a href="https://amp.dev/">https://amp.dev/</a> web component framework HTML/JS sugerido pelo <a href="https://pagespeed.web.dev/">https://pagespeed.web.dev/</a></h2>
+
+    <p>veja mais no <a href="https://amp.dev/documentation/components/amp-img">component de images</a></p>
+
+    <amp-img
+      width="500"
+      height="375"
+      layout="fixed"
+      src="https://gpnotes.droppages.com/img/6MB.jpg"></amp-img>
+
+    <amp-img
+      alt="Misty road"
+      width="550"
+      height="368"
+      src="image-does-not-exist.jpg">
+      <amp-img
+        alt="Misty road"
+        fallback
+        width="550"
+        height="368"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSAiaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmlld0JveD0iMSAxIDggNCI+PGltYWdlIGZpbHRlcj0idXJsKCNibHVyKSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjYiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQW9BQUFBR0NBWUFBQUQ2OEEvR0FBQUFBWE5TUjBJQXJzNGM2UUFBQUVSbFdFbG1UVTBBS2dBQUFBZ0FBWWRwQUFRQUFBQUJBQUFBR2dBQUFBQUFBNkFCQUFNQUFBQUJBQUVBQUtBQ0FBUUFBQUFCQUFBQUNxQURBQVFBQUFBQkFBQUFCZ0FBQUFEK2lGWDBBQUFBcjBsRVFWUUlIVDJQU1FxRlFBeEVYN2VpNG9BYkVRV3Y0TVlMZUhLdjQwSVV3UW5uL25ZdmZxQ29JcWxRaVVpU1JQbStqNVFTei9PNDd4dkhjUmlHZ2I3dnNTeUw2N3FRNy91YW9XNHN5L0kzYXYwOGp6SHlsZFNHZmQrcDY5cXcxbTNia21VWlFnalQweXlpS0ZKNlE4ZVdaVWxSRklSaGFLS2JwdUU4VCtaNVJyaXVxejZna2VjNVZWVXhqaVBUTkpremp1TmcyemJzN3htQ0lDQk5VK0k0cHVzNmxGS3M2NHB0MjBicnhCODZ4VmdkUHdJV2NRQUFBQUJKUlU1RXJrSmdnZz09Ii8+PGZpbHRlciBpZD0iYmx1ciI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iLjUiIC8+PC9maWx0ZXI+PC9zdmc+">
+      </amp-img>
+    </amp-img>
+
+    <!-- The `autoplay` attribute (`type="slides"` only) advances the slide to the next slide without user interaction, by default it will advance a slide in 5000 millisecond intervals (5 seconds) and can be overridden by the `delay` attribute.  -->
+   <div class="slides">
+    <amp-carousel
+    width="400"
+    height="300"
+    layout="responsive"
+    type="slides"
+    autoplay
+    delay="2000"
+    role="region"
+    aria-label="Carousel with autoplay">
+    <amp-img
+      src="https://images.dog.ceo/breeds/terrier-border/n02093754_875.jpg"
+      width="400"
+      height="300"
+      layout="responsive"
+      alt="a sample image"></amp-img>
+    <amp-img
+      src="https://images.dog.ceo/breeds/whippet/n02091134_9740.jpg"
+      width="400"
+      height="300"
+      layout="responsive"
+      alt="another sample image"></amp-img>
+    <amp-img
+      src="https://images.dog.ceo/breeds/shihtzu/n02086240_4346.jpg"
+      width="400"
+      height="300"
+      layout="responsive"
+      alt="and another sample image"></amp-img>
+  </amp-carousel>
+   </div>
+
+  </body>
+</html>
