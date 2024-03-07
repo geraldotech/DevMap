@@ -323,4 +323,5 @@ console.log(vm.a) //5
 ### Links
 
 - [Template Syntax](https://v2.vuejs.org/v2/guide/syntax.html)
+- [Keep Alive](https://v2.vuejs.org/v2/guide/components-dynamic-async#keep-alive-with-Dynamic-Components)
 - [Truncar String usando filtro](https://acervolima.com/truncar-uma-string-usando-filtro-em-vue-js/)

@@ -4,6 +4,9 @@ const vm = new Vue({
   created() {
     this.getpersons()
   },
+  mounted(){
+    this.getPerson3()
+  },
   el: '#app',
   data() {
     return {
@@ -35,7 +38,7 @@ const vm = new Vue({
     },
     async getPerson3() {
       this.loading  = !this.loading
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      //await new Promise((resolve) => setTimeout(resolve, 2000))
       fetch('./src/persons.json')
         .then((res) => res.json())
         .then((data) => 
@@ -44,6 +47,11 @@ const vm = new Vue({
         this.loading  = !this.loading
     },
   },
+  computed:{
+    onlyGeraldo(){
+      return this.chars.find(person => person.age == 31)
+    }
+  }
 })
 
 //dark theme

@@ -37,11 +37,13 @@
 
       <hr />
 
-      <button @click="getPerson3">Fetch Data</button>
+      <button @click="getPerson3" disabled>Fetch Data</button>
       <section v-if="loading"><i class="fa fa-spinner fa-spin"></i> Loading</section>
       <ul v-else>
         <li v-for="char in chars">{{char.name}} tem {{char.age}}</li>
       </ul>
+
+      <h2>{{onlyGeraldo}}</h2>
     </div>
   </body>
 </html>

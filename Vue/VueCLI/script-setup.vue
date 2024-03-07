@@ -23,11 +23,14 @@
 <script setup>
 // script setup https://vuejs.org/api/sfc-script-setup.html#script-setup
 
+// inline Handle https://vuejs.org/guide/essentials/event-handling
+
 import { ref } from 'vue'
 
 const selected = ref()
 const userInput = ref()
 const msg = 'Hello from Component'
+const son = ref('filho')
 
 function log() {
   console.log(msg)
@@ -35,6 +38,11 @@ function log() {
 
 function Savenow(e) {
   console.log(`Salvando`, e)
+}
+
+/* CHANGE VALUE */
+function change(){
+   son.value = 'filha'
 }
 
 /* normal syntax */
@@ -53,4 +61,3 @@ function Savenow(e) {
   },
 } */
 </script>
-<style></style>
