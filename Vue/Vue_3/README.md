@@ -19,6 +19,8 @@
 - examples basic script
 
 ```js
+// 👉v1 can instance direct Vue.object....
+
 Vue.createApp({
   data() {
     return {
@@ -30,7 +32,9 @@ Vue.createApp({
 // .mount(document.body); works too tks VueLoader
 
 //👉 v2 https://vuejs.org/guide/essentials/application.html
+
 const { createApp } = Vue
+
 const app = createApp({
   data() {
     return {}
@@ -46,11 +50,32 @@ const vm = Vue.createApp({
   },
   template: '{{greeting}}',
 }).mount('#root')
-```
 
-## 👉 v4 import default - [https://vuejs.org/guide/quick-start.html#using-vue-from-cdn](https://vuejs.org/guide/quick-start.html#using-vue-from-cdn)
+// 👉 v4 Global Build
+// https://vuejs.org/guide/quick-start.html#using-the-global-build
 
-```js
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">{{ message }}</div>
+
+<script>
+  const { createApp, ref } = Vue
+
+  createApp({
+    setup() {
+      const message = ref('Hello vue!')
+      return {
+        message
+      }
+    }
+  }).mount('#app')
+</script>
+
+
+
+// 👉 v5 ESM + Composition API
+//[https://vuejs.org/guide/quick-start.html#using-vue-from-cdn]
+
 <script type="module">
       import {
         createApp,
@@ -67,6 +92,9 @@ const vm = Vue.createApp({
         template: '<p>Hello</p>',
       }).mount('#app')
 </script>
+
+
+
 ```
 
 ### const e Vue.createApp

@@ -1,5 +1,5 @@
-
-const {  ref } = Vue
+//import { createApp,  ref, onMounted } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+import { ref } from '../vue.esm-browser.min.js'
 
 export default {
   template: `<div>count is {{ count }}</div> 
@@ -15,16 +15,9 @@ export default {
     }
 
     return { nota, count, increment }
-
-
   },
-  data(){
-    return{
-    
-    }
+  data() {
+    return {}
   },
-  methods:{
-   
-  }
- 
+  methods: {},
 }

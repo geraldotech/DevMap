@@ -1,20 +1,20 @@
-const { createApp, ref, computed, watch } = Vue;
+const { createApp, ref, computed, watch } = Vue
 
 const app = Vue.createApp({
-
-  
-  setup(){
-    
+  setup() {
     const bar = ref('my bar')
     const message = ref('Hello')
 
     return {
-      message, bar
+      message,
+      bar,
     }
   },
-  data(){
-   return {
-    foo: 'Vue !'
-   }
-  }
-}).mount("#app")
+  data() {
+    return {
+      foo: 'Vue !',
+    }
+  },
+}).mount('#app')
+
+// https://vuejs.org/guide/quick-start.html#splitting-up-the-modules

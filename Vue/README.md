@@ -9,12 +9,15 @@
 Tudo é component
 Tudo é reativo
 
-Look for Vue CDN files ?
-https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/
+- :pushpin: Look for Vue CDN files ?
+  - https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/
+  - https://cdnjs.com/libraries/vue
 
-Vue 2 Github https://github.com/vuejs/vue/blob/main/CHANGELOG.md
+- :pushpin: Vue 2 Oficial Github 
+    - https://github.com/vuejs/vue/blob/main/CHANGELOG.md
 
-Vue 3 Github https://github.com/vuejs/core
+- :pushpin: Vue 3 Oficial Github 
+    - https://github.com/vuejs/core
 
 
 # Quick recap

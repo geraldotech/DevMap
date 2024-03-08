@@ -1,4 +1,12 @@
-# Type module
+# ES Modules - ESM Modules
+
+
+before start, search commonjs vs es-modules in Node Projects.
+
+<img width=50% src="https://lenguajejs.com/automatizadores/introduccion/commonjs-vs-es-modules/commonjs-vs-esm.png" />
+
+
+<hr>
 
 - works only in web servers
 
