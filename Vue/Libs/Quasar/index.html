@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <!--
+    WARNING! Make sure that you match all Quasar related
+    tags to the same version! (Below it's "@2.14.7")
+  -->
+
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons"
+      rel="stylesheet"
+      type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/quasar@2.14.7/dist/quasar.prod.css"
+      rel="stylesheet"
+      type="text/css" />
+  </head>
+
+  <body>
+    <!-- example of injection point where you write your app template -->
+    <div id="q-app">
+      <q-btn label="Notify" color="primary" @click="notify"></q-btn>
+
+
+  
+
+     
+      <q-checkbox color="primary" v-model="right" @click="toggle" label="Label on Right" />
+
+    </div>
+
+    <!-- Add the following at the end of your body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2.14.7/dist/quasar.umd.prod.js"></script>
+
+    <script>
+      /*
+        Example kicking off the UI. Obviously, adapt this to your specific needs.
+        Assumes you have a <div id="q-app"></div> in your <body> above
+       */
+
+       const { useQuasar} = Quasar
+       const {createApp, ref} = Vue
+      const app = createApp({
+        setup() {
+
+          const $q = useQuasar()
+          const right = ref(true)
+
+          const notify = () => $q.notify('Running on...', $q.version)
+
+          const toggle = () => value.right = !right.value
+
+          return {
+            notify,
+            right,
+            toggle
+          }
+        },
+      })
+
+      app.use(Quasar, { config: {}})
+      app.mount('#q-app')
+    </script>
+  </body>
+</html>

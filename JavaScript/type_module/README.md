@@ -1,9 +1,10 @@
 # ES Modules - ESM Modules
 
 
-before start, search commonjs vs es-modules in Node Projects.
+before start, search commonjs `CJS` vs es-modules `EMS` vs  (Universal Module Definition) `UMD` 
 
-<img width=50% src="https://lenguajejs.com/automatizadores/introduccion/commonjs-vs-es-modules/commonjs-vs-esm.png" />
+<img width=40% src="https://lenguajejs.com/automatizadores/introduccion/commonjs-vs-es-modules/commonjs-vs-esm.png" />
+<img width=30% src="https://speckle.systems/content/images/2022/07/format_differences.png" />
 
 
 <hr>

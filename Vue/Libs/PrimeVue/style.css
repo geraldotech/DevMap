@@ -1,0 +1,18 @@
+ui-selectcheckboxmenu-header .ui-chkbox::after {
+  content: 'Select all';
+}
+.ui-selectcheckboxmenu-header .ui-chkbox {
+  width: fit-content;
+}
+
+
+label:hover{
+  color: aquamarine;
+  cursor: pointer;
+}
+label {
+  font-size: 1.5rem;
+ &:active {
+  color: rebeccapurple;
+ } 
+}

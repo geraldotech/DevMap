@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: dark">
+<html
+  lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@mdi/font@6.x/css/materialdesignicons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@vuetify/nightly@3.1.2-next-20230112.0/dist/vuetify.css"
-    />
-    <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://unpkg.com/@vuetify/nightly@3.1.2-next-20230112.0/dist/vuetify.js"></script>
+      <!-- Vue -->
+      <script src="https://unpkg.com/vue@3"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@mdi/font@6.x/css/materialdesignicons.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@vuetify/nightly@3.1.2-next-20230112.0/dist/vuetify.css" />
+
     <script src="https://unpkg.com/@vuetify/nightly@3.1.2-next-20230112.0/dist/vuetify.js"></script>
 
     <!--  component -->
-    <script type="text/x-template" id="app-template">
+    <!--   <script type="text/x-template" id="app-template">
       <v-app>
         <v-select
           v-model="select"
@@ -30,34 +33,53 @@
           return-object
         ></v-select>
       </v-app>
-    </script>
+    </script> -->
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <v-select
+      label="Select"
+      :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+    ></v-select>
+
+
+    </div>
+
+    <template id="app-template">
+      <v-select
+        v-model="select"
+        :hint="`${select.state}, ${select.abbr}`"
+        :items="items"
+        item-title="state"
+        item-value="abbr"
+        label="Select"
+        persistent-hint
+        return-object></v-select>
+    </template>
 
     <script>
-      const { createApp } = Vue;
-      const { createVuetify } = Vuetify;
+      const { createApp } = Vue
+      const { createVuetify } = Vuetify
 
-      const vuetify = createVuetify();
+      const vuetify = createVuetify()
 
       const app = createApp({
-        template: "#app-template",
+        template: '#app-template',
         data() {
           return {
-            select: { state: "Florida", abbr: "FL" },
+            select: { state: 'Florida', abbr: 'FL' },
             items: [
-              { state: "Florida", abbr: "FL" },
-              { state: "Georgia", abbr: "GA" },
-              { state: "Nebraska", abbr: "NE" },
-              { state: "California", abbr: "CA" },
-              { state: "New York", abbr: "NY" },
+              { state: 'Florida', abbr: 'FL' },
+              { state: 'Georgia', abbr: 'GA' },
+              { state: 'Nebraska', abbr: 'NE' },
+              { state: 'California', abbr: 'CA' },
+              { state: 'New York', abbr: 'NY' },
             ],
-          };
+          }
         },
       })
         .use(vuetify)
-        .mount("#app");
+        .mount('#app')
     </script>
   </body>
 </html>

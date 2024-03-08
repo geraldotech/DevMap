@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width" />
+
+    <!-- Prime themes -->
+
+    <!-- mdc-dark-deeppurple
+      saga-blue -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/primevue/resources/themes/mdc-dark-deeppurple/theme.css" />
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Prime vue -->
+    <!-- entire PrimeVue library and then register the components locally. -->
+    <script src="https://unpkg.com/primevue/core/core.min.js"></script>
+   
+    <!-- PrimeIcons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/primeicons/primeicons.css"
+      rel="stylesheet" />
+
+    <!-- Components -->
+    <script src="https://unpkg.com/primevue/calendar/calendar.min.js"></script>
+    <!--   <script src="https://unpkg.com/primevue@3.49.0/checkbox/checkbox.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="style.css" />
+    <title>PrimeVue + CDN</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1><a href="https://primevue.org/theming/">PrimeVue</a> examples</h1>
+
+      <div>
+        <h1>Calendar</h1>
+        <p-datepicker v-model="date"></p-datepicker>
+        <br /><br />
+        {{ date }}
+
+        <p-monthpicker v-model="date">calendar 2 </p-monthpicker>
+
+        <section>
+          <p>showWeek</p>
+          <Calendar
+            v-model="date"
+            inline
+            showWeek
+            showButtonBar />
+        </section>
+
+        <section>
+          <p>inline disabled</p>
+          <Calendar
+            v-model="date"
+            inline
+            showWeek
+            disabled />
+        </section>
+      </div>
+
+      <h1>{{button}}</h1>
+      <p-button>i am a button</p-button>
+      <p-button class="p-button-danger">i am a button</p-button>
+      <p-button class="p-button-success">Download pdf</p-button>
+      <p-button
+        severity="secondary"
+        rounded>
+        <a href="https://primevue.org/button/#severity">severity</a>
+      </p-button>
+
+      <p-button
+        icon="pi-user"
+        class="p-button-success">
+        <i
+          class="pi pi-user"
+          style="color: slateblue"></i
+      ></p-button>
+
+      <p>
+        button like checkbox repetir o attribute icon para ajustar o size
+        <p-buttoncheck
+          icon="pi pi-czheck"
+          @click="upper">
+          <i class="pi pi-check"></i>
+        </p-buttoncheck>
+      </p>
+
+      <p>
+        inputtext:
+        <p-inputtext
+          v-model="text"
+          type="text"
+          placeholder="input text"></p-inputtext>
+      </p>
+
+      <h1>Icons</h1>
+
+      <i
+        class="pi pi-check"
+        style="color: slateblue"></i>
+      <i
+        class="pi pi-times"
+        style="color: green"></i>
+      <i
+        class="pi pi-search"
+        style="color: 'var(--primary-color)'"></i>
+      <i
+        class="pi pi-user"
+        style="color: #708090"></i>
+
+      <i
+        class="pi pi-spin pi-spinner"
+        style="font-size: 2rem"></i>
+      <i
+        class="pi pi-spin pi-cog"
+        style="font-size: 2rem"></i>
+
+      <span class="pi pi-user"></span>
+
+      <h1>CheckBox</h1>
+
+      <p-checkbox
+        v-model="checkedx"
+        label="Checkbox Label"
+        :binary="true"
+        name="money"
+        inputId="money"></p-checkbox>
+      <label for="money">Money</label>
+
+      <p>{{ checkedx }}</p>
+
+      <section>
+        <p-checkbox
+          type="checkbox"
+          v-model="pizza"
+          inputId="ingredient1"
+          label="ingredient1"
+          name="pizza"
+          value="Cheese">
+        </p-checkbox>
+        <label
+          for="ingredient1"
+          for="Cheese">
+          ingredient1
+        </label>
+        <label
+          for="ingredient3"
+          class="ml-2">
+          Pepper
+        </label>
+
+        <label
+          for="ingredient1"
+          inputId="Cheese">
+          ingredient1
+        </label>
+
+        <br />
+
+        <label inputId="pizza">Escola 1</label>
+        <label for="ingredient1">school 2</label>
+        <label InputControlName="ingredient1">Escola 3</label>
+      </section>
+      <p>Your pizza: {{pizza}}</p>
+
+      <h1>Dropdown</h1>
+
+      <p-dropdown
+        v-model="selectedCity"
+        :options="cities"
+        optionLabel="name"
+        placeholder="Select a City"
+        class="w-full md:w-14rem"></p-dropdown>
+      <p>{{selectedCity}}</p>
+
+
+      <p-dropdown optionLabel="name"  v-model="selectedPerson" :options="brothers"></p-dropdown>
+
+      <p>{{selectedPerson}}</p>
+
+      <hr />
+
+      <label for="username">Username:</label>
+      <p-inputtext
+        id="username"
+        v-model="value4"
+        aria-describedby="username-help"
+        placeholder="Username" />
+      <small id="username-help">Enter your username to reset your password.</small>
+    </div>
+    <footer style="padding-top: 10rem"></footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
