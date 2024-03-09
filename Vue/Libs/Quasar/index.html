@@ -25,7 +25,11 @@
   
 
      
-      <q-checkbox color="primary" v-model="right" @click="toggle" label="Label on Right" />
+      <q-checkbox color="primary" v-model="right"  label="Label on Right" />
+
+      <q-btn @click="toggle" color="secondary">toggle</q-btn>
+
+      <p>{{right}}</p>
 
     </div>
 
@@ -49,7 +53,7 @@
 
           const notify = () => $q.notify('Running on...', $q.version)
 
-          const toggle = () => value.right = !right.value
+          const toggle = () => console.log(right.value)
 
           return {
             notify,

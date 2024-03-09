@@ -1,3 +1,4 @@
+# API styles
 
 
 - https://vuejs.org/guide/essentials/reactivity-fundamentals.html `export default set() vs <script script>`
@@ -7,7 +8,7 @@
 - [Example](./script-setup.vue)
 
 
-Existem 3 modos building Vue components
+Vue components can be authored in two different API styles [READ MORE](https://vuejs.org/guide/introduction.html#api-styles)
 
 - Options API `data()....`
 - Composition API  `Vue 3.0`
