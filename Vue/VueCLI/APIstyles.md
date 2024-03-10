@@ -1,26 +1,18 @@
 # API styles
 
-
 - https://vuejs.org/guide/essentials/reactivity-fundamentals.html `export default set() vs <script script>`
 
 - https://vuejsdevelopers.com/2022/06/01/ref-vs-reactive/
 
-- [Example](./script-setup.vue)
-
-
 Vue components can be authored in two different API styles [READ MORE](https://vuejs.org/guide/introduction.html#api-styles)
 
 - Options API `data()....`
-- Composition API  `Vue 3.0`
+- Composition API `Vue 3.0`
   - ref - define .value
-  - reactive 
+  - reactive
     - para usar Composition API pode ser por:
-    - [ x ] [export default setup() and return](./APIsetupExport.vue)
-    - [ x ] [script setup()](./APIscriptsetup.vue) - 
-
-
-
-
+    - [ x ] [export default setup() and return](./APIs/APIsetupExport.vue) `<APIsetupExportVue title="My Title Props" city="Rio de Janeiro" state="Alagoas"/>`
+    - [ x ] [script setup()](./APIs/APIscriptsetup.vue) - [Example](./APIs/script-setup.vue)
 
 ```js
 import {ref, reactive} from 'vue'
