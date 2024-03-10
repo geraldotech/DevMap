@@ -5,10 +5,14 @@
 - The Vue Instance
   [https://v2.vuejs.org/v2/guide/instance.html](https://v2.vuejs.org/v2/guide/instance.html)
 
+- 2.7.16 is the latest minor version of Vue 2 
+ - https://v2.vuejs.org/v2/guide/migration-vue-2-7 
+ - https://github.com/vuejs/vue/releases
+
 <details>
 <summary>CDN Links: </summary>
 
-Development Version: 2.7.14
+Development latest Version: 2.7.14
 
 ```js
 https://v2.vuejs.org/js/vue.js
@@ -32,6 +36,7 @@ import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.esm.browser.js
 
 ```js
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
 ```
 
 </details>
