@@ -1,27 +1,30 @@
 <template>
   <div>
-    <h4>Extra Vue</h4>
+    <h4>Extra Vue {{ name }}</h4>
   </div>
 </template>
 
 <script>
+const { ref } = Vue
 module.exports = {
+  setup() {
+    const name = ref('Geraldo')
+
+    return {
+      name,
+      
+    }
+  },
   data: function () {
     return {
-      who: "world",
-      gp: "Geraldo",
-    };
+      who: 'world',
+      gp: 'Geraldo',
+    }
   },
-};
-</script>
-<style>
-/*global */
-.hello {
-  background-color: rgb(31, 31, 13);
-  color: white;
 }
-
+</script>
+<style scoped>
 h4 {
-  color: orange;
+   color: coral;
 }
 </style>

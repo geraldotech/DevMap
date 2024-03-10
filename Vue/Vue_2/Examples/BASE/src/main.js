@@ -1,7 +1,9 @@
 const vm = new Vue({
   el: "#app",
-  data: {},
-  template: `<p>Hello</p>`,
+  data: {
+    isa: 'Isabella'
+  },
+ // template: `<p>Hello</p>`,
  
 })
 

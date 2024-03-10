@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>{{ ab }}</p>
+    <p v-bind:id=id>{{ ab }}</p>
   </footer>
 </template>
 
@@ -12,8 +12,15 @@ module.exports = {
   data: function () {
     return {
       ab: "by gmapdev - footer.vue",
+      id: 'cssid'
     };
   },
 };
 </script>
+<style scoped>
+#cssid{
+  color: aqua;
+}
+
+</style>
 
