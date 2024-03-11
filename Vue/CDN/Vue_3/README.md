@@ -376,7 +376,7 @@ Envia conteúdo extra para os componentes
 await
 
 ```js
-created() {
+mounted() {
     this.posts();
   },
 
@@ -389,7 +389,7 @@ created() {
 .then
 
 ```js
-created() {
+mounted() {
     this.getapi();
   },
 
@@ -397,8 +397,8 @@ methods: {
     getapi() {
       fetch("./src/db/data.json")
         .then((res) => res.json())
-        .then((f) => {
-          this.dados = f;
+        .then((data) => {
+          this.dados = data;
         });
     },
 ```

@@ -96,6 +96,25 @@ console.log(title) // loremipsum
 // obj assign
 const obj = Object.assign({}, ...arr)
 console.log(obj)
+
+
+// An other example
+const api = [
+  { name: 'Geraldo', age: 31, city: 'RJ' },
+  { name: 'Felipe', age: 28, city: 'AL' },
+]
+
+// newArr
+const novoArray = [...api]
+
+// assign new vaules
+novoArray[0].name = 'Geraldo Filho'
+
+// destructuring
+const [gg, felipe] = novoArray
+
+console.log(gg)
+console.log(felipe)
 ```
 
 # Map

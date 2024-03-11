@@ -75,9 +75,7 @@ console.log(arr.map((val) => val + 1)) //2,4,6,8
 // Nested subArrways
 console.log(arr.map((val) => [val, val + 1])) // [[1, 2], [3, 4], [5, 6], [7, 8]] ❌
 
-console.log(
-  arr.map((val) => [val, val + 1]).reduce((acc, curr) => acc.concat(curr))
-) // // [1, 2, 3, 4, 5, 6, 7, 8] ✅
+console.log(arr.map((val) => [val, val + 1]).reduce((acc, curr) => acc.concat(curr))) // // [1, 2, 3, 4, 5, 6, 7, 8] ✅
 
 console.log(arr.flatMap((val) => [val, val + 1])) //1,2,3,4,5,6,7,8
 // ou seja contém os valures do oldvalue concatenados
@@ -113,6 +111,24 @@ const mapdestructuring2 = api.map((val) => {
   const { id, name, city } = val
   console.log(id, name, city)
 })
+
+// v3
+const api = [
+  { name: 'Geraldo', age: 31, city: 'RJ' },
+  { name: 'Felipe', age: 28, city: 'AL' },
+]
+
+// get only some values
+const results = api.map((val) => {
+  const { name, city } = val
+  return { name, city }
+})
+
+console.log(results)
+
+// inline
+const novoRes = api.map(({ name, city }) => ({ name, city }))
+console.log(novoRes)
 ```
 
 # Map Links Index

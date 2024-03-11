@@ -1,6 +1,5 @@
 <h1 align=center>VueJS</h1>
 
-
 - Collection of Essential Vue Composition Utilities => https://vueuse.org/functions.html
 
 # Start Project
@@ -48,7 +47,6 @@ $ npm run build
 $ npm run preview
 ```
 
-
 ## Vite Starter Project Manual
 
 create `package.json`
@@ -75,6 +73,89 @@ create `package.json`
 ```
 
 - now: npm i
+
+
+- https://vuejs.org/api/built-in-directives.html
+  - https://vuejs.org/guide/essentials/event-handling.html
+
+## v-bind
+
+One-way data binding
+Two-way data binding - nice even in CDN
+
+- https://vuejs.org/api/built-in-directives.html#v-bind
+- https://vuejs.org/guide/essentials/forms.html#form-input-bindings
+
+```html
+<input
+  type="text"
+  v-bind:id="id"
+  placeholder="name" />
+<input
+  type="text"
+  :id="id"
+  placeholder="name" />
+<input
+  type="text"
+  :id="id"
+  placeholder="name" />
+<input
+  type="text"
+  :id
+  placeholder="name" />
+<!-- same-name shorthand (3.4+), expands to :src="src" -->
+```
+
+```js
+
+// checkbox
+
+  <select v-model="techs">
+    <option value="all">Todos</option>
+    <option value="js">Javascript</option>
+  </select>
+
+const techs = ref('all') <!-- all is auto selected -->
+
+// radio, name attribute is not required
+
+    <label for="sim">sim</label>
+    <input v-model="newsletter"  id="sim" type="radio" value="sim">
+    <br>
+    <label for="nao">nao</label>
+    <input v-model="newsletter" id="nao" type="radio" value="nao">
+
+
+// multiple checkbox, to get multiple values Data API / Composition API must be a Array
+
+
+<input v-model="favColor" type="checkbox" id="azul" value="azul" >
+<label for="azul">Azul</label>
+<input v-model="favColor" type="checkbox" id="amarelo" value="amarelo" >
+<label for="azul">Amarela</label>
+<input v-model="favColor" type="checkbox" id="red" value="red" >
+<label for="red">Red</label>
+
+const favColor = ref([])
+
+```
+
+# Events handlers
+
+- https://vuejs.org/guide/essentials/event-handling.html
+  - event-modifiers https://vuejs.org/guide/essentials/event-handling.html#event-modifiers `.prenvet .once ...`
+
+```js
+const onSumit = (e) => {
+ // e.preventDefault()
+  console.log(`form received!`)
+}
+
+<form action="" @submit.prevent="onSumit">
+  <input type="text">
+  <button>Submit</button>
+</form>
+```
 
 ## Components:
 
@@ -169,6 +250,8 @@ export default {
 
 ## Lifecycle hooks
 
+- lifecycle https://vuejs.org/guide/essentials/lifecycle.html
+
 - Criar um novo components `LifeCycle.vue`
 
 ```js
@@ -255,6 +338,7 @@ data =>  checkbox: false,
 
 ```js
 <button @click="showEmail">{{txtbtn}}</button>
+
 data =>  txtbtn: 'show'
 
  methods:{

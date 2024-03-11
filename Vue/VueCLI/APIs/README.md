@@ -50,5 +50,3 @@ console.log(data.name)
 
 
 ```
-
-- lifecycle https://vuejs.org/guide/essentials/lifecycle.html
