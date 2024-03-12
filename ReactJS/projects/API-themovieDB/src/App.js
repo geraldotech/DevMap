@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom/client'
 import './global.css'
 import Home from './pages/Home'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -10,7 +9,7 @@ export default function App() {
   const [idioma, setIdioma] = useState('en-US')
 
   function toggleLanguage() {
-    setIdioma((previdioma) => (previdioma == 'en-US' ? 'pt-BR' : 'en-US'))
+    setIdioma((previdioma) => (previdioma === 'en-US' ? 'pt-BR' : 'en-US'))
   }
   return (
     <>

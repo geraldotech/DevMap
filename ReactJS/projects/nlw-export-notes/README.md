@@ -1,5 +1,7 @@
 ## Links
 
+## Live: https://expertnote.vercel.app/
+
 - [https://tailwindcss.com/docs/guides/vite](https://tailwindcss.com/docs/guides/vite)
 - Radix Components e suas funcionalidades sem CSS, tras acessibilidade pelo taclado [tabidnex] muito recomendado[https://www.radix-ui.com/primitives/docs/components/dialog](https://www.radix-ui.com/primitives/docs/components/dialog)
 

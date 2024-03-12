@@ -1,5 +1,5 @@
 import { Container, MovieList, Movie } from './styles'
-import { useOutletContext } from 'react-router-dom'
+//import { useOutletContext } from 'react-router-dom'
 import { Banner } from './banner'
 import { useEffect, useState } from 'react'
 //import { APIKey } from '../../config/key'
