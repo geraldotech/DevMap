@@ -21,7 +21,6 @@ function Details({ languagetype }) {
       .then((data) => {
         //  console.log(data)
         // pegar somente informacoes que precisa
-
         /*  
         // intead this, you can destructuing avoid repeat data 
           const movie = {
