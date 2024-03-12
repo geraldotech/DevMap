@@ -1,6 +1,11 @@
 # Api Filmes
 
-- Using https://developer.themoviedb.org/reference/movie-popular-list
+- Using https://developer.themoviedb.org/reference/movie-popular-list\
+
+
+### Netlify deploy https://react-movie-apis.netlify.app/
+ - checkout netlify settings to checkout how deploy in a diff base directory `/ReactJS/projects/API-themovieDB`
+
 
 ### styled-components
 
