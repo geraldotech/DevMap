@@ -484,7 +484,7 @@ document.body.append(parent)
 
 ```
 
-# nextElementSibling
+## nextElementSibling
 
 - [Example using nextElementSibling](https://codepen.io/gmapdev/pen/wvRNLeL)
 
@@ -511,7 +511,7 @@ const target = document.querySelector('ul .target') // <p>This me</p>
 console.log(target.nextElementSibling) // <li>Anti Hero</li>
 ```
 
-# parentElement
+- ## parentElement
 
 ```js
 <div>
@@ -534,3 +534,7 @@ const btn = e.target.parentElement.querySelector('button') // <div> </div>
 console.log(btn.nextElementSibling) // <p>foo</p>
 }) )
 ```
+- ##  event.target.closest('class')
+
+https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+- quizItem has example
