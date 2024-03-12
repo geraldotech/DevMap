@@ -58,7 +58,7 @@ export function App() {
   const filteredNotes = search !== '' ? notes.filter((note) => note.content.toLocaleLowerCase().includes(search.toLocaleLowerCase())) : notes
 
   return (
-    <div className="mx-auto max-w-6xl my-12 space-y-6 px-5">
+    <div className="mx-auto max-w-6xl py-12 space-y-6 px-5">
       <img
         src={logo}
         alt="NLW Expert"
