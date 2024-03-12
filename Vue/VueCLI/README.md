@@ -45,11 +45,15 @@ $ npm create vite@latest
 - Comandos para build / preview check `package.json` but is:
 $ npm run build
 $ npm run preview
+
+$ npm i
+
 ```
 
 ## Vite Starter Project Manual
 
-create `package.json`
+<details>
+<summary>package.json</summary>
 
 ```js
 {
@@ -72,8 +76,7 @@ create `package.json`
 }
 ```
 
-- now: npm i
-
+</details>
 
 - https://vuejs.org/api/built-in-directives.html
   - https://vuejs.org/guide/essentials/event-handling.html
@@ -83,7 +86,9 @@ create `package.json`
 One-way data binding
 Two-way data binding - nice even in CDN
 
-- https://vuejs.org/api/built-in-directives.html#v-bind
+> Aprendar ou masterizar as diretivas
+
+- https://vuejs.org/api/built-in-directives.html#v-bind > consultar também VueJS3_CDN.
 - https://vuejs.org/guide/essentials/forms.html#form-input-bindings
 
 ```html
@@ -138,6 +143,15 @@ const techs = ref('all') <!-- all is auto selected -->
 
 const favColor = ref([])
 
+```
+
+## v-if
+
+```js
+
+<div v-if="accessLevel === 'admin'">Admin</div>
+<div v-else-if="accessLevel === 'marketing'">Marketing</div>
+<div v-else>User</div>
 ```
 
 # Events handlers
@@ -298,13 +312,6 @@ components: {
   }
 
 ```
-
-## Diretivas são muitas
-
-> Aprendar ou masterizar as diretivas
-> [https://vuejs.org/api/built-in-directives.html](https://vuejs.org/api/built-in-directives.html) consultar também VueJS3_CDN.
-
-- e.g: v-if
 
 ## Methods [yt](https://www.youtube.com/watch?v=745aPtV_W60&list=WL&index=2&t=94s)
 
