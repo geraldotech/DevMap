@@ -360,9 +360,40 @@ Seguindo a doc [https://docs.netlify.com/routing/redirects/rewrites-proxies/#his
 /* /index.html 200
 ```
 
-### DigitalOcean
+### DigitalOcean yaml
+
+- works to SPA tested with Vue Router and React Router
 
 **Settings :arrow_right: App :arrow_right: Spec :arrow_right:**: `catchall_document: index.html` [thanks John Dave Deploy Your ReactJS](https://www.linkedin.com/pulse/deploy-reactjs-application-digitalocean-john-dave-decano/)
+
+- Example Full file working
+
+```js
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+domains:
+- domain: vuejs.geraldox.com
+  type: PRIMARY
+ingress:
+  rules:
+  - component:
+      name: vuejs-2-cdn-loader-routers
+    match:
+      path:
+        prefix: /
+name: lobster-app
+region: nyc
+static_sites:
+- catchall_document: index.html
+  environment_slug: html
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: geraldotech/VueJS_2_CDN_Loader_routers
+  name: vuejs-2-cdn-loader-routers
+  source_dir: /
+```
 
 # CSS default styles
 
