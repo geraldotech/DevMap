@@ -61,6 +61,7 @@
       const NotFound = { template: `<p>404 error</p>` };
 
       const routes = [
+    
         { path: "/", component: Home },
         { path: "/about", name: "abo", component: About },
         {
@@ -85,6 +86,7 @@
       ];
 
       const router = new VueRouter({
+         mode: 'history',
         routes: routes,
       });
 
