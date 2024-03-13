@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "title": "First Blog Post",
+      "description": "Lorem ipsum dolor sit amet, consectetur adip.",
+      "slug": "first-blog-post"
+    },
+    {
+      "title": "Second Blog Post",
+      "description": "Hello React Router v6",
+      "slug": "second-blog-post"
+    }
+  ]
+}

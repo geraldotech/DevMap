@@ -1,8 +1,10 @@
 const { useState } = React
-const { Routes, BrowserRouter, Route, Link } = ReactRouterDOM
+const { Routes, BrowserRouter, Route, Link, HashRouter, Outlet } = ReactRouterDOM
+
 
 import Home from './src/components/Home.js'
 import About from './src/components/About.js'
+
 
 /* Gmap Component */
 const Gmap = () => <h1 className="bg-blue-400 text-4xl mt-5">GmapDev from strings</h1>
@@ -35,8 +37,9 @@ function App() {
 
   return (
     <div className="container mx-auto">
+      {/* to remove hash remove HasRouter parent by BrowserRouter */}
       <nav>
-        <BrowserRouter>
+        <HashRouter>
           <ul className="flex justify-between flex-wrap gap-5 max-w-150  text-white-500 p-4  m-auto bg-teal-400">
             <li className="hover:font-bold">
               <Link to="/">Home</Link>
@@ -53,12 +56,19 @@ function App() {
             <li className="hover:font-bold">
               <Link to="/chatgpt">ChatGTP</Link>
             </li>
+            <li className="hover:font-bold">
+              <Link to="/posts">Posts</Link>
+            </li>
           </ul>
           <Routes>
             <Route
               path="/"
               exact
               element={<Home />}></Route>
+              <Route path="posts" element={<Posts/>}>
+                <Route index element={<PostsList/>} /> 
+                <Route path=":slug" element={<Post/>}></Route>
+              </Route>
             <Route
               path="/about"
               element={<About />}></Route>
@@ -73,32 +83,29 @@ function App() {
               path="/chatgpt"
               element={<ChatGTP />}
             />
+              <Route path="*" element={<h1>404 page</h1>} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </nav>
 
       <Form />
 
-     <Example/>
 
       <section className="text-center bg-gray-500 p-5 mt-20">
         <button
-          className="bg-green-900 font-bold p-2 mx-5 rounded hover:bg-green-800 transition ease-in-out delay-150"
+          className="bg-gray-300 font-bold p-2 mx-5 rounded hover:bg-gray-400 transition ease-in-out delay-150"
           onClick={Decrement}>
           Decrement Value
         </button>
-        <br></br>
-        <br></br>
+
         <button
-          className="bg-green-900 font-bold p-2 mx-5 rounded hover:bg-green-800 transition"
+          className="bg-gray-300 font-bold p-2 mx-5 rounded hover:bg-gray-400 transition ease-in-out delay-150"
           onClick={Increment}>
           Increase Value
         </button>
 
-        <h1 className="text-4xl ">{counter}</h1>
+        <h1 className="text-4xl my-10">{counter}</h1>
       </section>
-
-     
     </div>
   )
 }

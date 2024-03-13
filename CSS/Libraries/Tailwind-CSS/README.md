@@ -13,10 +13,18 @@ Quero padding 20px; adicionar: p-5
 Dica parar o mouse sobre a class vai relevar o CSS original:
 
 ```css
+text-4xl - fontsize // https://tailwindcss.com/docs/font-size
+
+text-[4rem] - valor arbitrario - 4rem...
+
 mx-auto - margin eixo x/y auto
+
 max-w-6xl - mas so funciona se adicionar // 1152px
+
 outline - help debug
+
 w-full - width: 100%
+
 space-y-6 - adicionar no parent cada filho margin-top de 24px [nem no CSS nativo tem isso]
 h-px - altura de apenas 1px
 h-[20px] - valor arbitrario ou seja que nao existir adicionar entre [valuepx]

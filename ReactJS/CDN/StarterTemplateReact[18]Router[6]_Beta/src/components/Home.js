@@ -1,7 +1,12 @@
 const template = `
-<div className="bg-blue-400 mt-5 p-2">
-    <h2 className="text-4xl">Home</h2>
-    <Linkin name="Musics is good Home.js" />
+<div className="mt-5 p-2">
+<h2 className="bg-blue-400 text-4xl">Home</h2>
+
+<section  className="bg-gray-900 text-white">
+<h1 className="text-red-500 font-bold text-4xl p-3">handlingEvents: Events -  useState -  Props</h1>
+    <HandleEvents />
+</section>
+<Linkin name="Musics is good Home.js" />
 </div>`
 
 const Home = (props) => {
