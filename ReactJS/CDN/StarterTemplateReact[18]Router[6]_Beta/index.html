@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html
+  lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>React 18 - Router 6 - components++</title>
+
+    <!-- React / React DOM-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- React Router / React Router DOM / remix -->
+    <!-- <script src="https://unpkg.com/@remix-run/router@1.11.0/dist/router.umd.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@remix-run/router@1.11.0/dist/router.umd.min.js"></script>
+
+    <script src="https://unpkg.com/react-router@6.18.0/dist/umd/react-router.development.js"></script>
+    <script src="https://unpkg.com/react-router-dom@6.18.0/dist/umd/react-router-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <!-- Adicional Babel Components -->
+    <script
+      type="text/babel"
+      src="./src/components/Social.js"></script>
+    <script
+      type="text/babel"
+      src="./src/components/Linkin.js"></script>
+    <script
+      type="text/babel"
+      src="./src/components/ia.js"></script>
+    <script
+      type="text/babel"
+      src="./src/components/Aumentar.js"></script>
+  </head>
+  <body>
+    <div id="root">Reacting is loading...</div>
+
+    <div id="root2"></div>
+    <script
+      type="text/babel"
+      src="./src/App.js"
+      data-type="module"
+      type="module"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            },
+          },
+        },
+      }
+    </script>
+
+    <!-- v2 inline component or import it -->
+    <script type="text/babel">
+      class Hello1 extends React.Component {
+        render() {
+          return <h1>Hello direct component Babel</h1>
+        }
+      }
+
+      /* if want render diff id */
+      //const root2 = ReactDOM.createRoot(document.getElementById('root2'))
+      ///root2.render(React.createElement(Hello1, null))
+    </script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-## Starter Template 2
+## Starter Template
 
 - useEffect()
 - useState()
