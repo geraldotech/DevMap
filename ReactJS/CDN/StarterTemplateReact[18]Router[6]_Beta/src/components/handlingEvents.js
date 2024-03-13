@@ -19,12 +19,9 @@ class HandleEvents extends React.Component {
     // this.setState({ count: this.state.count + 1 })
     console.log(`click`)
   }
-  changeState(){
+  changeState() {
     this.setState({ count: this.state.count + 1 })
   }
-
-
-
 
   render() {
     return (
@@ -32,11 +29,8 @@ class HandleEvents extends React.Component {
         <p>
           Você clicou {this.state.count} vezes {this.state.name}
         </p>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>Clique aqui</button> | 
-        <button onClick={this.changeState}>Increment by FN</button>
-
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>Clique aqui</button> |<button onClick={this.changeState}>Increment by FN</button>
         <hr></hr>
-
         <button onClick={this.handleClick}>increment</button>
       </div>
     )

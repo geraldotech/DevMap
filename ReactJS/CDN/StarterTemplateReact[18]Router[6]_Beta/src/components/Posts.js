@@ -8,7 +8,7 @@ class Posts extends React.Component {
   render() {
     
     return (
-      <div style={{ padding: 20 }}>
+      <div>
         <h1 className="text-lg font-bold">Posts Page</h1>
         <Outlet />
       </div>

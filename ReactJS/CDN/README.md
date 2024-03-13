@@ -1,5 +1,11 @@
 # ReactJS CDN Babel
 
+
+To componend you need use React Component Class
+- https://www.w3schools.com/react/react_class.asp
+- Legacy docs has severals examples how use components classes https://pt-br.legacy.reactjs.org/docs/getting-started.html
+
+
 ### v18 production
 
 ```js

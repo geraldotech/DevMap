@@ -1,10 +1,8 @@
 const { useState } = React
 const { Routes, BrowserRouter, Route, Link, HashRouter, Outlet } = ReactRouterDOM
 
-
 import Home from './src/components/Home.js'
 import About from './src/components/About.js'
-
 
 /* Gmap Component */
 const Gmap = () => <h1 className="bg-blue-400 text-4xl mt-5">GmapDev from strings</h1>
@@ -16,7 +14,7 @@ class Form extends React.Component {
       return 31
     }
 
-    const msn = 'Form class Component'
+    const msn = 'Form Class Component'
     return (
       <h1>
         {msn} - {age()}
@@ -37,38 +35,27 @@ function App() {
 
   return (
     <div className="container mx-auto">
-      {/* to remove hash remove HasRouter parent by BrowserRouter */}
+      {/* to remove hash remove <HashRouter/> parent by <BrowserRouter/> */}
+
       <nav>
         <HashRouter>
-          <ul className="flex justify-between flex-wrap gap-5 max-w-150  text-white-500 p-4  m-auto bg-teal-400">
-            <li className="hover:font-bold">
-              <Link to="/">Home</Link>
-            </li>
-            <li className="hover:font-bold">
-              <Link to="/about">About</Link>
-            </li>
-            <li className="hover:font-bold">
-              <Link to="/gmap">GMAP</Link>
-            </li>
-            <li className="hover:font-bold">
-              <Link to="/test">Test</Link>
-            </li>
-            <li className="hover:font-bold">
-              <Link to="/chatgpt">ChatGTP</Link>
-            </li>
-            <li className="hover:font-bold">
-              <Link to="/posts">Posts</Link>
-            </li>
-          </ul>
+          <Navbar />
           <Routes>
             <Route
               path="/"
               exact
               element={<Home />}></Route>
-              <Route path="posts" element={<Posts/>}>
-                <Route index element={<PostsList/>} /> 
-                <Route path=":slug" element={<Post/>}></Route>
-              </Route>
+            <Route
+              path="posts"
+              element={<Posts />}>
+              <Route
+                index
+                element={<PostsList />}
+              />
+              <Route
+                path=":slug"
+                element={<Post />}></Route>
+            </Route>
             <Route
               path="/about"
               element={<About />}></Route>
@@ -83,13 +70,15 @@ function App() {
               path="/chatgpt"
               element={<ChatGTP />}
             />
-              <Route path="*" element={<h1>404 page</h1>} />
+            <Route
+              path="*"
+              element={<h1>404 page</h1>}
+            />
           </Routes>
         </HashRouter>
       </nav>
 
       <Form />
-
 
       <section className="text-center bg-gray-500 p-5 mt-20">
         <button
@@ -106,6 +95,58 @@ function App() {
 
         <h1 className="text-4xl my-10">{counter}</h1>
       </section>
+
+      <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <a
+              href="https://flowbite.com/"
+              className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">React Blogger</span>
+            </a>
+            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+              <li>
+                <a
+                  href="#"
+                  className="hover:underline me-4 md:me-6">
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:underline me-4 md:me-6">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:underline me-4 md:me-6">
+                  Licensing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:underline">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2023{' '}
+            <a
+              href="https://flowbite.com/"
+              className="hover:underline">
+              Flowbite™
+            </a>
+            . All Rights Reserved.
+          </span>
+        </div>
+      </footer>
     </div>
   )
 }

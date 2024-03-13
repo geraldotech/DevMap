@@ -9,5 +9,6 @@
 - Thanks  
   - https://blog.logrocket.com/react-router-v6-guide/
   - https://stackoverflow.com/questions/58548767/react-router-dom-useparams-inside-class-component
+  - https://www.robinwieruch.de/react-fetching-data/
 
 **by: gmapdev**
