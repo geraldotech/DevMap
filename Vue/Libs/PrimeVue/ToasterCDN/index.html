@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>New document</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   
+    <!-- Prime Vue -->
+    <script src="https://unpkg.com/primevue/core/core.min.js"></script>
+
+    <!-- PrimeIcons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/primeicons/primeicons.css"
+      rel="stylesheet" />
+
+      
+    <!-- Prime Vue theme -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/primevue/resources/themes/mdc-dark-deeppurple/theme.css" />
+
+   
+  </head>
+  <body>
+    <div id="app">
+      <p-toast position="bottom-right"></p-toast>
+      <button
+        type="button"
+        v-on:click="showToast">
+        Show Toast
+      </button>
+    </div>
+
+    <script src="https://unpkg.com/primevue/core/core.min.js"></script>
+    <script src="https://unpkg.com/primevue/toast/toast.min.js"></script>
+    <script src="https://unpkg.com/primevue/toastservice/toastservice.min.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
+</html>

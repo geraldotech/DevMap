@@ -3,10 +3,12 @@
 
 refs para tipos primitivos e para objs e trabalha sempre com `.value`
 
-reactive nao trabalha com tipos primitivos, recomenando mais para objetos, Arrays
+reactive não trabalha com tipos primitivos, recomendado para objetos e Arrays
 ```jsx
 const todos = reactive('') //  ❌value cannot be made reactive: 
-console.log(todos)```
+console.log(todos)
+
+```
 
 
 ```js
@@ -66,7 +68,6 @@ console.log(persons) // 1, 2, 2
 
 persons = null
 console.log(persons) // null
-
 
 ```
 

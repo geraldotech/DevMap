@@ -19,7 +19,7 @@
     <!-- Prime vue -->
     <!-- entire PrimeVue library and then register the components locally. -->
     <script src="https://unpkg.com/primevue/core/core.min.js"></script>
-   
+
     <!-- PrimeIcons -->
     <link
       href="https://cdn.jsdelivr.net/npm/primeicons/primeicons.css"
@@ -30,14 +30,17 @@
     <!--   <script src="https://unpkg.com/primevue@3.49.0/checkbox/checkbox.min.js"></script> -->
     <link
       rel="stylesheet"
-      href="style.css" />
+      href="./src/style.css" />
+<!-- UnoCSS used by primevue -->
+      <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+     
     <title>PrimeVue + CDN</title>
   </head>
   <body>
     <div id="app">
       <h1><a href="https://primevue.org/theming/">PrimeVue</a> examples</h1>
 
-      <div>
+      <div class="flex flex-col text-red">
         <h1>Calendar</h1>
         <p-datepicker v-model="date"></p-datepicker>
         <br /><br />
@@ -173,14 +176,18 @@
 
       <p-dropdown
         v-model="selectedCity"
-        :options="cities"
-        optionLabel="name"
+        :options="cities.code"
+        :optionLabel="cities"
+        :optionValue="cities"
         placeholder="Select a City"
         class="w-full md:w-14rem"></p-dropdown>
       <p>{{selectedCity}}</p>
 
-
-      <p-dropdown optionLabel="name"  v-model="selectedPerson" :options="brothers"></p-dropdown>
+      <p-dropdown
+        optionLabel="name"
+        v-model="selectedPerson"
+        optionValue="code"
+        :options="brothers"></p-dropdown>
 
       <p>{{selectedPerson}}</p>
 
@@ -196,6 +203,6 @@
     </div>
     <footer style="padding-top: 10rem"></footer>
 
-    <script src="app.js"></script>
+    <script src="./src/app.js"></script>
   </body>
 </html>
