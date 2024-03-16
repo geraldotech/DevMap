@@ -1,7 +1,5 @@
 <h1 align=center>VueJS</h1>
 
-- Collection of Essential Vue Composition Utilities => https://vueuse.org/functions.html
-
 # Start Project
 
 You can use VueCLI or Vite
