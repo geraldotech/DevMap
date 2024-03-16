@@ -8,10 +8,10 @@ Vue components can be authored in two different API styles [READ MORE](https://v
 
 - Options API `data()....`
 - Composition API `Vue 3.0`
-  - ref - define .value
+  - ref - define `.value`
   - reactive
     - para usar Composition API pode ser por:
     - [ x ] [export default setup() and return](./API_setup_Export_return.vue) `<APIsetupExportVue title="My Title Props" city="Rio de Janeiro" state="Alagoas"/>`
-    - [ x ] [script setup()](./APIscriptsetup.vue) - [Example 2 script-setup](./script-setup.vue)
+    - [ x ] [script setup()](./APIscriptsetup.vue) - [Example 2 script-setup](./script-setup.vue) - Example 2 Composition and DATA API in same file - go to `defineOptions.vue`
 
 ```js
