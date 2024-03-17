@@ -10,9 +10,13 @@
 
     <!-- mdc-dark-deeppurple
       saga-blue -->
-    <link
+    <!--  <link
       rel="stylesheet"
       href="https://unpkg.com/primevue/resources/themes/mdc-dark-deeppurple/theme.css" />
+ -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/primevue/resources/themes/luna-amber/theme.css" />
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -31,9 +35,9 @@
     <link
       rel="stylesheet"
       href="./src/style.css" />
-<!-- UnoCSS used by primevue -->
-      <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
-     
+    <!-- UnoCSS used by primevue -->
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+
     <title>PrimeVue + CDN</title>
   </head>
   <body>
@@ -133,7 +137,7 @@
         label="Checkbox Label"
         :binary="true"
         name="money"
-        inputId="money"></p-checkbox>
+        input-id="money"></p-checkbox>
       <label for="money">Money</label>
 
       <p>{{ checkedx }}</p>
@@ -142,7 +146,7 @@
         <p-checkbox
           type="checkbox"
           v-model="pizza"
-          inputId="ingredient1"
+          input-id="ingredient1"
           label="ingredient1"
           name="pizza"
           value="Cheese">
@@ -150,25 +154,17 @@
         <label
           for="ingredient1"
           for="Cheese">
-          ingredient1
+          Cheese
         </label>
-        <label
-          for="ingredient3"
-          class="ml-2">
-          Pepper
-        </label>
-
-        <label
-          for="ingredient1"
-          inputId="Cheese">
-          ingredient1
-        </label>
-
-        <br />
-
-        <label inputId="pizza">Escola 1</label>
-        <label for="ingredient1">school 2</label>
-        <label InputControlName="ingredient1">Escola 3</label>
+        <p-checkbox
+          type="checkbox"
+          v-model="pizza"
+          input-id="ingredient2"
+          label="ingredient2"
+          name="pizza"
+          value="Peperoni">
+        </p-checkbox>
+        <label for="ingredient2"> Peperoni </label>
       </section>
       <p>Your pizza: {{pizza}}</p>
 
@@ -176,17 +172,16 @@
 
       <p-dropdown
         v-model="selectedCity"
-        :options="cities.code"
-        :optionLabel="cities"
-        :optionValue="cities"
+        :options="cities"
+        option-label="name"
         placeholder="Select a City"
         class="w-full md:w-14rem"></p-dropdown>
       <p>{{selectedCity}}</p>
 
       <p-dropdown
-        optionLabel="name"
+        option-label="name"
         v-model="selectedPerson"
-        optionValue="code"
+        optional-value="code"
         :options="brothers"></p-dropdown>
 
       <p>{{selectedPerson}}</p>
