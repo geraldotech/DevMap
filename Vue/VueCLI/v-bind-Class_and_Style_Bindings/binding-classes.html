@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: dark">
+<html
+  lang="en"
+  style="color-scheme: dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>VueJS</title>
     <script src="https://unpkg.com/vue@3"></script>
     <style>
@@ -15,12 +19,26 @@
       .static {
         text-decoration: underline blue;
       }
+
+      .master {
+        color: dodgerblue;
+        text-decoration: line-through;
+      }
     </style>
   </head>
   <body>
     <div id="app">
       <h1 :class="css.ver">Binding classes</h1>
       <h2 :class="css.verm">Isabella</h2>
+      <input type="checkbox" v-model="checkedx" id="chs">
+      <input type="checkbox" v-model="checkedy" id="chs">
+      <label for="chs">check</label>
+     <p> {{checkedx}}</p>
+      <h1 :class="checkedx && 'master'">
+        GERALDO FILHO
+      </h1>
+
+      <h1 v-if="checkedx && checkedy">COSTA FILHO</h1>
     </div>
 
     <script>
@@ -28,12 +46,14 @@
         data() {
           return {
             css: {
-              ver: "verde",
-              verm: "red",
+              ver: 'verdex',
+              verm: 'red',             
             },
-          };
+            checkedx: false,
+            checkedy: false,
+          }
         },
-      }).mount("#app");
+      }).mount('#app')
     </script>
   </body>
 </html>

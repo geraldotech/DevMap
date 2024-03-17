@@ -26,3 +26,7 @@ mark {
 label{
   cursor: pointer;
 }
+
+.p-component-overlay {
+  position: unset;
+}
