@@ -11,6 +11,7 @@
     <h2>{{ $store.state.counter }}</h2>
 
     <router-view></router-view>
+   
   </div>
 </template>
 

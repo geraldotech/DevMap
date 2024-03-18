@@ -5,28 +5,37 @@
 </script>
 
 <template>
-<!--   <HelloWorld msg="Vite + Vue" /> -->
+  <!--   <HelloWorld msg="Vite + Vue" /> -->
+ 
+ <nav class="nav">
+  <RouterLink to="/">Home </RouterLink> | <RouterLink to="/about">About</RouterLink> |
+  <RouterLink :to="{name: 'services'}">Services</RouterLink> |
+  <RouterLink to="/usuarios/10">Users</RouterLink>
+  <!-- set a manul router params for test
+     <RouterLink to="/usuarios/10">Users</RouterLink>
 
-  <RouterLink to="/">Home </RouterLink> |
-  <RouterLink to="/about">About</RouterLink> | 
-  <RouterLink to="/files">Files</RouterLink>
+     query: http://localhost:5173/#/usuarios/?page=10
+     hash: http://localhost:5173/#/usuarios/?page=10#videos
+   -->
+ </nav>
 
+  <RouterView />
 
+  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
 
-  <RouterView></RouterView>
+  <!-- <p>{{ $route }}</p> -->
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.nav{
+  position: absolute;
+  top: 0;
+  height: 50px;
+  right: 0;
+  padding: 10px;
+ 
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.nav a {
+  font-size: 1.5rem;
 }
 </style>

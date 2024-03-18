@@ -1,11 +1,14 @@
 <template>
   <div>
     <!--    direct commit -->
+    <p>Increment.vue</p>
     <button @click="$store.commit('increment')">
       Increment Component direct commit
     </button>
     <!--   or call a function -->
-    <button @click="increment">Increment from Component</button>
+    <button @click="increment">Increment from Component</button>`
+    
+    <p>Data from input by VUEX{{ $store.state.aboutdata }}</p>`
   </div>
 </template>
 
@@ -18,3 +21,9 @@ module.exports = {
   },
 };
 </script>
+<style scoped>
+div{
+  border: 1px solid ;
+  height: 30vh;
+}
+</style>

@@ -14,6 +14,22 @@ repository for Vue Router
 
 <hr>
 
+# Router 4
+
+https://router.vuejs.org/installation.html
+```js
+// add vue router to a exists VueCLi project ?
+$ vue add router
+
+// existet vite?
+npm install vue-router@4
+
+// If you're starting a new project, 
+npm create vue@latest
+
+```
+
+
 # Router 3
 
 <a name="router3"></a>

@@ -18,19 +18,28 @@
 
   <body>
     <!-- example of injection point where you write your app template -->
+
+
+    <h1>Vue 3</h1>
+
     <div id="q-app">
-      <q-btn label="Notify" color="primary" @click="notify"></q-btn>
+      <q-btn
+        label="Notify"
+        color="primary"
+        @click="notify"></q-btn>
 
+      <q-checkbox
+        color="primary"
+        v-model="right"
+        label="Label on Right" />
 
-  
-
-     
-      <q-checkbox color="primary" v-model="right"  label="Label on Right" />
-
-      <q-btn @click="toggle" color="secondary">toggle</q-btn>
+      <q-btn
+        @click="toggle"
+        color="secondary"
+        >toggle</q-btn
+      >
 
       <p>{{right}}</p>
-
     </div>
 
     <!-- Add the following at the end of your body tag -->
@@ -43,11 +52,10 @@
         Assumes you have a <div id="q-app"></div> in your <body> above
        */
 
-       const { useQuasar} = Quasar
-       const {createApp, ref} = Vue
+      const { useQuasar } = Quasar
+      const { createApp, ref } = Vue
       const app = createApp({
         setup() {
-
           const $q = useQuasar()
           const right = ref(true)
 
@@ -58,12 +66,12 @@
           return {
             notify,
             right,
-            toggle
+            toggle,
           }
         },
       })
 
-      app.use(Quasar, { config: {}})
+      app.use(Quasar, { config: {} })
       app.mount('#q-app')
     </script>
   </body>
