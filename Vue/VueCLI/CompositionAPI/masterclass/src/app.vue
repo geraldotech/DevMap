@@ -38,46 +38,74 @@ onMounted(() => {
 
 <template>
   <h1>Have trust in the progress</h1>
-  <Xcomputed />
-  <Xwatch />
-  <XLifeCycle />
-  <RenderFN />
-  <Bar />
+  <section>
+    <p>computed</p>
+    <Xcomputed />
+  </section>
+  <section>
+    <p>watch</p>
+    <Xwatch />
+  </section>
+  <section>
+    <p>lifecycle</p>
+    <XLifeCycle />
+  </section>
 
-  <Slots>
-    <template #title> Geraldo </template>
-    <template v-slot:description>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae accusamus, perspiciatis corporis repellendus ex vitae tempore, hic consequuntur nulla ipsam quasi veniam, nostrum nam ut! Sit
-        amet asperiores voluptatem harum.
-      </p>
-    </template>
+  <section>
+    <p>RenderFN.vue</p>
+    <RenderFN />
+  </section>
 
-    <template #card> your card number </template>
+  <section>
+    <p>App.vue/bar.jsx</p>
+    <Bar />
+  </section>
 
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores a fuga ex ducimus deleniti nesciunt reiciendis consequuntur in. Aperiam mollitia error laboriosam numquam sed doloremque eos rerum
-    at quaerat delectus?
-  </Slots>
+  <section>
+    <p>Slots.vue</p>
 
-  <cssScopedModule />
+    <Slots>
+      <template #title> Geraldo </template>
+      <template v-slot:description>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae accusamus, perspiciatis corporis repellendus ex vitae tempore, hic consequuntur nulla ipsam quasi veniam, nostrum nam ut! Sit
+          amet asperiores voluptatem harum.
+        </p>
+      </template>
 
-  <PropsAlert variant="" />
-  <PropsAlert variant="success" />
-  <PropsAlert variant="danger" />
-  <h1>Props Computed</h1>
-  <PropsAlertaComputed />
-  <PropsAlertaComputed :variant="variant" /> -->
+      <template #card> your card number </template>
 
-  <PropsAlertaComputed
-    variant="success"
-    day="Saturday"
-    :filme="filmeList">
-    // pass a inline object props always warn Expected Object, got String
-    <h1>slots for content and props for behavior</h1>
-    <template #head>
-      <h1>Welcome</h1>
-    </template>
-  </PropsAlertaComputed>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores a fuga ex ducimus deleniti nesciunt reiciendis consequuntur in. Aperiam mollitia error laboriosam numquam sed doloremque eos
+      rerum at quaerat delectus?
+    </Slots>
+  </section>
+
+  <section>
+    <p>cssScopedModule.vue</p>
+    <cssScopedModule />
+  </section>
+
+  <section>
+    <p>Props...</p>
+
+    <PropsAlert variant="" />
+    <PropsAlert variant="success" />
+    <PropsAlert variant="danger" />
+    <h1>Props Computed</h1>
+    <PropsAlertaComputed />
+    <PropsAlertaComputed :variant="variant" /> -->
+
+    <PropsAlertaComputed
+      variant="success"
+      day="Saturday"
+      :filme="filmeList">
+      // pass a inline object props always warn Expected Object, got String
+      <h1>slots for content and props for behavior</h1>
+      <template #head>
+        <h1>Welcome</h1>
+      </template>
+    </PropsAlertaComputed>
+  </section>
 
   <h2>
     for script setup checkout...
@@ -97,30 +125,36 @@ onMounted(() => {
     v-if="showAlert"
     @close="handleClose" />
 
-  <h1>
-    <a
-      href="https://vuejs.org/api/sfc-script-setup.html#definemodel"
-      target="_blank"
-      >defineModel 3.4</a
-    >
-  </h1>
+  <section>
+    <h1>
+      <a
+        href="https://vuejs.org/api/sfc-script-setup.html#definemodel"
+        target="_blank"
+        >defineModel 3.4</a
+      >
+    </h1>
+    <DefineModelParent />
+  </section>
 
-  <DefineModelParent />
+  <section>
+    <h1>
+      <a
+        href="https://vuejs.org/api/sfc-script-setup.html#defineexpose"
+        target="_blank"
+        >defineExposed</a
+      >
+    </h1>
+    <p>
+      Components using scriptsetup are closed by default - i.e. the public instance of the component, which is retrieved via template refs or $parent chains, will not expose any of the bindings
+      declared inside scriptsetup
+    </p>
+    <DefineExposeX ref="instance" />
+    <p>{{ instance }}</p>
+  </section>
 
-  <h1>
-    <a
-      href="https://vuejs.org/api/sfc-script-setup.html#defineexpose"
-      target="_blank"
-      >defineExposed</a>
-  </h1>
-  <p>
-    Components using scriptsetup are closed by default - i.e. the public instance of the component, which is retrieved via template refs or $parent chains, will not expose any of the bindings declared
-    inside scriptsetup
-  </p>
-  <DefineExposeX ref="instance" />
-  <p>{{ instance }}</p>
-
-  <DefineOptions />
+  <section>
+    <DefineOptions />
+  </section>
 
   <header>
     <div class="wrapper">
@@ -141,13 +175,12 @@ header {
   max-height: 100vh;
 }
 
-h1{
+h1 {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
 }
-
 
 .logo {
   display: block;

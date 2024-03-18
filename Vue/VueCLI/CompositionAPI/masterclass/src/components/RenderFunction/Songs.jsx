@@ -1,12 +1,14 @@
-import { ref, watch } from 'vue'
 
-export default  {
- setup() {
-    const title = ref('JSX inside VueJS')
-    const clickMessage = ref('xx')
+
+<script setup>
+
+export default{
+
+const title = ref('JSX inside VueJS')
+    const clickMessage = ref('THAT does sound good?')
 
     function onClick() {
-      clickMessage.value = 'was clicked'
+      clickMessage.value = 'Sounds good!'
       console.log(`click`)
     }
 
@@ -19,5 +21,6 @@ export default  {
       clickMessage,
       onClick
     }
-  }
+
 }
+</script>

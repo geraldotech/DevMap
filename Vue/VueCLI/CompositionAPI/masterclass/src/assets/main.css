@@ -22,3 +22,17 @@ h1 {
   transition: 0.4s;
   padding: 3px;
 }
+
+section {
+  border: 1px solid;
+  padding: 0.5rem;
+  margin-block: .7rem;
+
+}
+
+section > p:first-child {
+  text-decoration: bold;
+  font-size: 1.4rem;
+  text-decoration: underline;
+  color: coral;
+}

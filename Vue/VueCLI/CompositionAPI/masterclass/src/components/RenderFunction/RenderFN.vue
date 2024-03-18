@@ -114,7 +114,7 @@ export default {
       'toggle'
     )
 
-    // return always need be a function
+    // return always need be a function () => ....
     return () => (ok.value ? [button, myform, h1, foos] : [button, barr])
   },
 }
@@ -138,43 +138,55 @@ export default {
   },
 } */
 
-// 👉 return a component in jsx pure h syntax to get props and slots
+// 👉 no setup() and return a component in pure jsx and reactive example working!!
+// Formslot/List h syntax to get props and slots
 
 import Form from './form.jsx'
 import Formslot from './formSlots.jsx'
 import List from './list.jsx'
 import barEventFront from './barEventFront.jsx'
+import {ref} from 'vue'
 
 
-function Footer(){
+const dia = ref('Segunda')
+
+function Footer() {
   return <h1>footer child</h1>
 }
 
+const changeDay = () => dia.value = 'Friday'
+
 const JsxNode = () => {
-    return(
-      <div>
+  return (
+    <div>
       <div> text </div>
+      <button onClick={changeDay}>click me to change day</button>
+      <p>{dia.value}</p>
       <h1>Hello</h1>
-      </div>
-    );
-  };
+    </div>
+  )
+}
 
-
-  function myapp() {
+function myapp() {
   return <div>Hello</div>
 }
 //console.log(myapp().children)
-
-
 </script>
 
 <template>
-  <List
+  <h1>Render FN</h1>
+  <section>
+    <p>RenderFN.vue/List.jsx</p>
+    <List
     seunome="Geraldo"
     yourname="yourname" />
-  <Form yourname="John" />
+  <Form yourname="John Snow" />
+  </section>
   <hr />
-  <Formslot
+ 
+  <section>
+    <p>Formslot.jsx</p>
+    <Formslot
     message="slots example"
     footer="my footer">
     <template #default>
@@ -186,16 +198,23 @@ const JsxNode = () => {
       <p>{{ exemploprops }}</p>
     </template>
   </Formslot>
+  </section>
   <hr />
 
-  <Footer/>
+ <section>
+  <Footer />
+ </section>
 
-    <JsxNode/>
+<section>
+  <JsxNode />
+</section>
 
-    <h1>Bar Event xxx</h1>
-     <barEventFront/>
-    <h1>Bar Event xxx</h1>
-   
+  <section>
+    <p>RenderFN.vue/barEventFront.jsx</p>
+    <h1>Bar Event RenderFN</h1>
+    <barEventFront />
+    <h1>Bar Event RenderFN</h1>
+  </section>
 </template>
 <style>
 .yourname {
@@ -224,4 +243,6 @@ const JsxNode = () => {
 .mydiv {
   color: red;
 }
+
+
 </style>
