@@ -13,13 +13,20 @@ https://vuejs.org/guide/extras/render-function
 - reactive examples: `forms.jsx` return a full vnode template and `bar.jsx` return a direct elements
 - go to RenderFN, uncomment each example on top
 
-Create a jsx `Component.vue` with composition API direct component? - add setup and lang jsx
+Create a jsxs `Component.vue` with composition API direct component? - add setup and lang jsx
 
 ```jsx
 <script setup lang="jsx">
+
+// works compoennts { h } without a plugin
+import { h } from 'vue'
+
 const Render = () => {
   return h('div', 'Render')
 }
+
+
+//⚠️ with babel-plugin-jsx
 
 const JsxNode = () => {
     return <div> text </div>;
@@ -30,12 +37,20 @@ function Footer(){
 }
 </script>
 <template>
+
   <Footer/>
 
 </template>
 ```
 
-- **jsx**
+### babel-plugin-jsx
+
+- needs install  `vitejs/plugin-vue-jsx`  https://github.com/vuejs/babel-plugin-jsx
+- setup `vite.config.js` import and add plugin
+- just checkout this project
+
+
+###  **jsx**
 
 ```jsx
 import List from './list'
@@ -43,5 +58,3 @@ import List from './list.jsx' //  is not a rule but can be a good practice
 
 // documentation uses.jsx https://vuejs.org/guide/extras/render-function.html#components
 ```
-
-

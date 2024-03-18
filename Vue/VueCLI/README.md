@@ -31,7 +31,7 @@ $ npm run server
 ## Vite
 
 ```js
-- Vite create Vue direct
+- Vite create Vue direct + Vue Router
 $ npm init vue@latest
 
 - Vite  Vanilla, Vue, React, Preact, Lit, Svelte, Solid, Qwik, Other
