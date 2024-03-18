@@ -7,8 +7,11 @@ https://vuejs.org/guide/extras/render-function
   - return () => h('div', 'My custom')
   - return () => [template, template2]
 
-- reactive examples: `forms.jsx` return a full vnode template and `bar.jsx` return a direct elements
+- in `setup script` tag you cannot return a direct template, you must put it in a const fn and call this component in `template`
 
+
+- reactive examples: `forms.jsx` return a full vnode template and `bar.jsx` return a direct elements
+- go to RenderFN, uncomment each example on top
 
 Create a jsx `Component.vue` with composition API direct component? - add setup and lang jsx
 

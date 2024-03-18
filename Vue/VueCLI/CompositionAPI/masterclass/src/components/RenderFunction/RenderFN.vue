@@ -1,14 +1,16 @@
-<script setup>
-//console.log(bar())
+<script setup  lang="jsx">
 
 //  👉 single vnode
-/* 
-export default {
+
+
+/* export default {
   setup(){
   return () => 'Hello world'
 }
+}  */
 
-} */
+const Templatehtml = () => <h1>Hello World</h1>
+
 
 //  👉 single vnode 2
 
@@ -145,7 +147,11 @@ import ComponentJSX from './ComponentJsx.vue'
 </script>
 
 <template>
-  <ComponentJSX />
+
+  <Templatehtml/>
+  <section v-show="true">
+    <ComponentJSX />
+  </section>
 </template>
 <style>
 .yourname {

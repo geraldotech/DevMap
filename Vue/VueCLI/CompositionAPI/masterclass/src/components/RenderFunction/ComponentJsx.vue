@@ -27,9 +27,8 @@ const JsxNode = () => {
   )
 }
 
-function Rendery() {
-  return <div>Render direct tags Hello</div>
-}
+const Rendery = () => <div>Render arrow direct tags Hello</div>
+
 
 const Renderx = () => {
   return h('h1', 'Render using h')
@@ -47,12 +46,12 @@ const Renderx = () => {
   </section>
 
   <section>
-    <p>RenderFN.vue/ComponentJSx.vue/List.jsx</p>
+    <p>RenderFN.vue/ComponentJSx.vue/List.jsx and /Formx.jsx</p>
     <List
       seunome="Geraldo"
       yourname="yourname" />
-
-    <Formx yourname="John Snow" />
+    <hr>
+    <Formx yourname="John Snow" password="itsReallyWorks" />
   </section>
   <hr />
 
