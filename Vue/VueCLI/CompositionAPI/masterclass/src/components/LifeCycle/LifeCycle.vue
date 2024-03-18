@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeMount, onMounted, onBeforeUnmount, onUnmounted, onUpdated, onBeforeUpdate, ref } from 'vue'
-import LifeCycleExample from './LifeCycleExample.vue'
+import LifeCycleExample from '../LifeCycle/LifeCycleExample.vue'
 
 /* 
 = created

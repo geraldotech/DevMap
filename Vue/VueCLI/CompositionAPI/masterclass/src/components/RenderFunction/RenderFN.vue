@@ -1,4 +1,4 @@
-<script setup lang="jsx">
+<script setup>
 //console.log(bar())
 
 //  👉 single vnode
@@ -141,80 +141,11 @@ export default {
 // 👉 no setup() and return a component in pure jsx and reactive example working!!
 // Formslot/List h syntax to get props and slots
 
-import Form from './form.jsx'
-import Formslot from './formSlots.jsx'
-import List from './list.jsx'
-import barEventFront from './barEventFront.jsx'
-import {ref} from 'vue'
-
-
-const dia = ref('Segunda')
-
-function Footer() {
-  return <h1>footer child</h1>
-}
-
-const changeDay = () => dia.value = 'Friday'
-
-const JsxNode = () => {
-  return (
-    <div>
-      <div> text </div>
-      <button onClick={changeDay}>click me to change day</button>
-      <p>{dia.value}</p>
-      <h1>Hello</h1>
-    </div>
-  )
-}
-
-function myapp() {
-  return <div>Hello</div>
-}
-//console.log(myapp().children)
+import ComponentJSX from './ComponentJsx.vue'
 </script>
 
 <template>
-  <h1>Render FN</h1>
-  <section>
-    <p>RenderFN.vue/List.jsx</p>
-    <List
-    seunome="Geraldo"
-    yourname="yourname" />
-  <Form yourname="John Snow" />
-  </section>
-  <hr />
- 
-  <section>
-    <p>Formslot.jsx</p>
-    <Formslot
-    message="slots example"
-    footer="my footer">
-    <template #default>
-      <p>Default slots</p>
-    </template>
-
-    <template #footer="{ exemploprops }">
-      <p>its my footer</p>
-      <p>{{ exemploprops }}</p>
-    </template>
-  </Formslot>
-  </section>
-  <hr />
-
- <section>
-  <Footer />
- </section>
-
-<section>
-  <JsxNode />
-</section>
-
-  <section>
-    <p>RenderFN.vue/barEventFront.jsx</p>
-    <h1>Bar Event RenderFN</h1>
-    <barEventFront />
-    <h1>Bar Event RenderFN</h1>
-  </section>
+  <ComponentJSX />
 </template>
 <style>
 .yourname {
@@ -243,6 +174,4 @@ function myapp() {
 .mydiv {
   color: red;
 }
-
-
 </style>

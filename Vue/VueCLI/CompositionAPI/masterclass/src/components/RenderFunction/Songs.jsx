@@ -1,8 +1,6 @@
-
-
 <script setup>
 
-export default{
+
 
 const title = ref('JSX inside VueJS')
     const clickMessage = ref('THAT does sound good?')
@@ -22,5 +20,5 @@ const title = ref('JSX inside VueJS')
       onClick
     }
 
-}
+
 </script>

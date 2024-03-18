@@ -2,12 +2,15 @@
 
 https://vuejs.org/guide/extras/render-function
 
-- return always return a () => ...
+- always return a `return () => ...`
   - return () => 'Hello world'
   - return () => h('div', 'My custom')
   - return () => [template, template2]
 
-Composition API direct component? - add setup and lang jsx
+- reactive examples: `forms.jsx` return a full vnode template and `bar.jsx` return a direct elements
+
+
+Create a jsx `Component.vue` with composition API direct component? - add setup and lang jsx
 
 ```jsx
 <script setup lang="jsx">
@@ -27,6 +30,9 @@ function Footer(){
   <Footer/>
 
 </template>
-
-
 ```
+
+// .jsx is not a rule but can be a good practice, documentation uses.jsx https://vuejs.org/guide/extras/render-function.html#components
+import List from './list'
+
+
