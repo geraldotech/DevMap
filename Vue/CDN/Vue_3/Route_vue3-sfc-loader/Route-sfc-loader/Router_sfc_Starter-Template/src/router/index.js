@@ -8,10 +8,10 @@ const NotFound = { template: "<h1 style='color:red'>Not Found</h1>" }
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/route1', component: About },
-  { path: '/route2', component: Port },
+  { path: '/about', component: About },
+  { path: '/port', component: Port },
   {
-    path: '/route3',
+    path: '/radio',
     component: () => loadModule('/src/views/radio.vue', options),
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
