@@ -1,2 +1,4 @@
-const links = ["containers","folder1","folder2"]
-export default links; 
+
+const links = ["aa","bb"]
+let currentDir = 'containers'
+export {links, currentDir}; 

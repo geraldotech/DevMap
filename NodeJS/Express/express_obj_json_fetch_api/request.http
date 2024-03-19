@@ -3,8 +3,8 @@ content-Type: application/json
 
 //register a new product!
 {
-    "name":"iPhone",
-    "price": 5000
+    "name":"Galaxy S22",
+    "price": 4000
 }
 ### fetch all
 
