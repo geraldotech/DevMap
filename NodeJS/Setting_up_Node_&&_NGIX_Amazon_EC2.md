@@ -7,24 +7,28 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 ```
 
-2 - 
+2 -
+
 ```bash
 . ~/.nvm/nvm.sh
 
 ```
 
-3 - 
+3 -
+
 ```bash
 nvm install node
 
 ```
 
 4 - check out node version
+
 ```bash
 node -v
 ```
 
 5 - check out npm (Node Package Manager)
+
 ```bash
 npm -v
 ```
@@ -33,7 +37,7 @@ versão v.034.0 não funciona no Amazon Linux, contudo no Ubuntu Server works [h
 
 # NGINX
 
->> Irá trabalhar como reverse proxy
+> > Irá trabalhar como reverse proxy
 
 - Install
 
@@ -42,7 +46,7 @@ sudo yum install nginx
 
 // case No Package is available
 
-sudo amazon-linux-extras install nginx1 
+sudo amazon-linux-extras install nginx1
 
 ```
 
@@ -73,7 +77,7 @@ sudo service nginx status
 
 SFTP, host, user, password: `<empty>`
 
-<img src="./assets/img00002.PNG" style="width:50%">
+<img src="./assets/img00002.PNG" loazing='lazy' style="width:50%">
 
 Add key.pem
 
@@ -81,7 +85,7 @@ Add key.pem
 
 done! just connect.
 
-Login via SSH directory => /var  sudo mkdir nodeapp 
+Login via SSH directory => /var sudo mkdir nodeapp
 
 <img src="./assets/img00004.PNG" style="width:50%">
 
@@ -91,47 +95,46 @@ set permission: `sudo chmod -R 777 nodeapp` e fazer o upload de todo o conteúdo
 
 Abrir portas 3000 e 5000 ir em:
 
-<img src="./assets/img00005.PNG" style="width:50%"> 
+<img src="./assets/img00005.PNG" style="width:50%">
 
 add
 
-<img src="./assets/img00006.PNG" style="width:50%"> 
+<img src="./assets/img00006.PNG" style="width:50%">
 
-run app  
+run app
 
-<img src="./assets/img00007.PNG" style="width:65%"> 
+<img src="./assets/img00007.PNG" style="width:65%">
 
-. 
-<img src="./assets/img00008.PNG" style="width:50%"> 
+.
+<img src="./assets/img00008.PNG" style="width:50%">
 
 PM2
 
-gerenciador de processos 
+gerenciador de processos
 
 `npm install pm2@latest -g`
 
 Checkout digite: `pm2`
+
 <div style="text-align:center">
 <img src="./assets/img00009.PNG" style="width:60%;"> 
 </div>
-
 
 How pm2: `cd /var/nodeapp`
 
 pm start: `pm2 start index.js`
 
-<img src="./assets/img00010.PNG" style="width:60%;"> 
+<img src="./assets/img00010.PNG" style="width:60%;">
 
-Display window currently process: 
- `pm2 status`
+Display window currently process:
+`pm2 status`
 
- Display real time process:
- `pm2 log` 
+Display real time process:
+`pm2 log`
 
- <img src="./assets/img00011.PNG" style="width:60%;"> 
+ <img src="./assets/img00011.PNG" style="width:60%;">
 
- Stop `pm2 stop index.js`
-
+Stop `pm2 stop index.js`
 
 # Nginx reverse
 
@@ -152,11 +155,55 @@ Display window currently process:
 
 ```
 
- <img src="./assets/img00012.PNG" style="width:60%;"> 
+ <img src="./assets/img00012.PNG" style="width:60%;">
 
- original
+original nginx
 
-  <img src="./assets/img00013.PNG" style="width:60%;"> 
+  <img src="./assets/img00013.PNG" style="width:60%;">
 
-  restart 
-  `sudo service nginx restart`
+restart
+`sudo service nginx restart`
+
+## VPS in General [Updated]
+
+- 1 - push to github
+- 2 - VPS install git and node
+  - `apt install git`
+  - `apt install npm`
+- 3 - clone git repo
+- 4 - install dependences: `node install`
+- 5 - run: `node app.js`
+- 6 - deixar sempre rodando pm2, gerenciador de processos para o runtime JavaScript Node.js: `npm install pm2 -g`
+  - inside project: `pm2 start app.js --name 'My project'`
+  - list all projects: `pm2 list`
+
+7 - you can access your project in: <IP>:yourport
+
+### Setup a domain name with a web server
+
+setup a domain name to your vps ipaddress
+
+- install nginx: `apt install nginx`
+- open config nginx: `vi /etc/nginx/sites-available/default`
+
+```js
+server {
+    server_name api.gpdev.tech www.api.gpdev.tech; # Adicionar o seu domínio, tanto sozinho quanto com www.
+    location / {
+        proxy_pass http://localhost:3001; # Supondo que sua API esteja rodando na porta 3001
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+}
+}
+```
+
+- if default in `/etc/nginx/sites-enabled/` exists: `mv default to default2`
+- create symbolic link `ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/`
+
+## certbot
+
+- depende muito da sua distro checkout => https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
+- restart nginx - https://phoenixnap.com/kb/nginx-start-stop-restart

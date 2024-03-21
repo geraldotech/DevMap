@@ -1,14 +1,33 @@
 const express = require('express')
 const { randomUUID } = require('crypto')
 const { response } = require('express')
+const cors = require('cors')
+
 const fs = require('fs')
 const path = require('path')
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
 
+
+const allowedOrigins = ['http://localhost:3001', 'http://example.com'];
 const port = 3001
+
 
 const app = express()
 app.use(express.json())
+app.use(cors({
+  origin: allowedOrigins, // Allow requests only from this origin
+  //methods: ['GET', 'POST'],      // Allow only specified methods
+  allowedHeaders: ['Content-Type'], // Allow only specified headers
+}));
+
+
+
+
+
+app.engine('html', require('ejs').renderFile)
+app.set('view engine', 'html')
+app.use('/public', express.static(path.join(__dirname, 'public')))
+app.set('views', path.join(__dirname, '/views'))
 
 let products = []
 //render html
@@ -36,7 +55,7 @@ app.post('/products', (req, res) => {
   return res.json(product)
 })
 
-app.get('/products', (req, res) => {
+app.get('/products',  (req, res) => {
   return res.json(products)
 })
 
@@ -46,14 +65,9 @@ app.get('/products/:id', (req, res) => {
   return res.json(product)
 })
 
-app.engine('html', require('ejs').renderFile)
-app.set('view engine', 'html')
-app.use('/public', express.static(path.join(__dirname, 'public')))
-app.set('views', path.join(__dirname, '/views'))
-
 app.get('/', (req, res) => {
   //res.send("home page!");
-  res.render('fet')
+  res.render('home')
 })
 
 app.put('/products/:id', (req, res) => {
