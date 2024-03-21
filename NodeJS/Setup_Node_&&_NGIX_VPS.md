@@ -170,7 +170,7 @@ restart
 - 2 - VPS install git and node
   - `apt install git`
   - `apt install npm`
-- 3 - clone git repo
+- 3 - clone git repo - eg /var/www/html/myproject
 - 4 - install dependences: `node install`
 - 5 - run: `node app.js`
 - 6 - deixar sempre rodando pm2, gerenciador de processos para o runtime JavaScript Node.js: `npm install pm2 -g`
@@ -185,6 +185,7 @@ setup a domain name to your vps ipaddress
 
 - install nginx: `apt install nginx`
 - open config nginx: `vi /etc/nginx/sites-available/default`
+- service is listening on specific port will be served by nginx, don't need specific folder
 
 ```js
 server {
