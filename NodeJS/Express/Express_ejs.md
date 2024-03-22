@@ -3,7 +3,7 @@
 >> npm install npm express body-parser ejs
 
 ### A base
-```
+```js
 const express = require('express');
 var bodyParser = require('body-parser')
 
@@ -27,7 +27,7 @@ app.listen(5000,()=>{
 })
 ```
 ### Adicionar alguma mensagem
-```
+```js
 app.get('/',(req,res)=>{
      res.send("home page!")
 })

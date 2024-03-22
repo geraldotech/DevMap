@@ -1,7 +1,0 @@
-POST https://api.gpdev.tech/products
-Content-Type: application/json
-
-{
-    "name": "Apple Watch 2",
-    "price": 1200
-}
