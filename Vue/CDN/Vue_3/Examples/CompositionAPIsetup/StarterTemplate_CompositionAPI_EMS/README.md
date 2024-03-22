@@ -1,3 +1,3 @@
 ref
-setup
+Composition API + Options API
 components.js
