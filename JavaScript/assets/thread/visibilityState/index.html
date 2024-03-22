@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: dark">
+<html
+  lang="en"
+  style="color-scheme: dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <style>
+      button:nth-child(1) {
+        border: 1px solid red;
+      }
+
+      button {
+        padding: 1rem;
+      }
+
       #msn {
         color: red;
         font-size: 2em;
@@ -15,9 +27,16 @@
     </style>
   </head>
   <body>
+    <button>removeWindowBlurEvent</button>
+
+    <button>remove event click from red button</button>
     <p>User deixou a página: <span id="out"></span></p>
+    <input
+      type="text"
+      placeholder="your name" />
     <div id="msn"></div>
     <script>
+      /* === visibilityState === */
       let saida = 0
       const out = document.querySelector('#out')
 
@@ -38,6 +57,41 @@
       }
 
       document.addEventListener('visibilitychange', verificar)
+
+      /* === focus === */
+
+      window.addEventListener('focus', function () {
+        // Tab became active
+        console.log('Tab became active')
+      })
+
+      /* === blur === */
+
+      window.addEventListener('blur', handlerBlurEvent)
+
+      function handlerBlurEvent() {
+        // Tab lost focus, became inactive
+        console.warn('Tab lost focus, became inactive')
+      }
+
+      /* === removeEventListener === */
+      const primaryButton = document.querySelectorAll('button')[0]
+      primaryButton.addEventListener('click', removeWindowBlurEvent)
+
+      function removeWindowBlurEvent() {
+        console.log(`window blur event removed`)
+        window.removeEventListener('blur', handlerBlurEvent)
+      }
+
+      // must be exact same callback function
+      // https://www.w3schools.com/jsref/met_element_removeeventlistener.asp
+
+      const secondaryButton = document.querySelectorAll('button')[1]
+
+      secondaryButton.addEventListener('click', () => {
+        primaryButton.removeEventListener('click', removeWindowBlurEvent)
+      })
+
     </script>
   </body>
 </html>
