@@ -25,7 +25,6 @@
       rel="stylesheet" />
 
     <!-- Prime Vue css and icons -->
-
     <link
       href="https://unpkg.com/primevue@2.7.0/resources/primevue.min.css"
       rel="stylesheet" />
@@ -418,35 +417,49 @@
         <p-button
           @click="openBasic"
           label="displayBasic"></p-button>
-        <p-dialog header="Header" 
-        :visible.sync="displayBasic" 
-        :containers-style="{width: '50vw'}" 
-        :modal="true">
+        <p-dialog
+          header="Header"
+          :visible.sync="displayBasic"
+          :containers-style="{width: '50vw'}"
+          :modal="true">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus facere earum eaque error, ipsam nostrum libero rerum ipsa nemo blanditiis ab, officia ad hic consequuntur ex
+            obcaecati similique illum molestiae?
+          </p>
 
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus facere earum eaque error, ipsam nostrum libero rerum ipsa nemo blanditiis ab, officia ad hic consequuntur ex obcaecati similique illum molestiae?</p>
-
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt placeat blanditiis, qui vero eum consequatur laborum exercitationem, ipsam facilis quibusdam suscipit omnis excepturi atque culpa dolorem tenetur praesentium repudiandae doloribus.</p>
-
-          
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt placeat blanditiis, qui vero eum consequatur laborum exercitationem, ipsam facilis quibusdam suscipit omnis excepturi
+            atque culpa dolorem tenetur praesentium repudiandae doloribus.
+          </p>
         </p-dialog>
       </section>
 
       <section>
         <h1>sidebar</h1>
 
+        <p-button
+          label="open Menu"
+          @click="visibleLeft = true"></p-button>
 
-          <p-button label="open Menu"  @click="visibleLeft = true"></p-button>
-
-
-        <p-sidebar :visible.sync="visibleLeft" position="right" @hide="hideSidebar" appear>
+        <p-sidebar
+          :visible.sync="visibleLeft"
+          position="right"
+          @hide="hideSidebar"
+          appear>
           content
           <template #header>
             p-sidebar-header
 
-            <button aria-label="close" type="button" class="p-sidebar-close p-sidebar-icon p-link"><span class="p-sidebar-close-icon pi pi-times"></span><span class="p-ink" @click="console.log(1)" ></span></button>
+            <button
+              aria-label="close"
+              type="button"
+              class="p-sidebar-close p-sidebar-icon p-link">
+              <span class="p-sidebar-close-icon pi pi-times"></span
+              ><span
+                class="p-ink"
+                @click="console.log(1)"></span>
+            </button>
           </template>
-
-         
         </p-sidebar>
       </section>
     </div>
