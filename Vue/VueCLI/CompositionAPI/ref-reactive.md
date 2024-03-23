@@ -5,11 +5,11 @@
 
 refs para tipos primitivos e para objs e trabalha sempre com `.value`
 
-reactive não trabalha com tipos primitivos, recomendado para objetos e Arrays
+reactive não trabalha com tipos primitivos, recomendado para objetos e Arrays it only works for object types (objects, arrays, and collection types such as Map and Set). It cannot hold primitive types such as string, number or boolean. READ DOCS
+
 ```jsx
 const todos = reactive('') //  ❌value cannot be made reactive: 
 console.log(todos)
-
 ```
 
 

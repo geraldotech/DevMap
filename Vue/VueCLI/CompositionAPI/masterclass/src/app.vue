@@ -1,16 +1,16 @@
 <script setup lang="jsx">
 import HelloWorld from './components/HelloWorld.vue'
-import Xcomputed from './components/computed.vue'
+import Xcomputed from './components/computed/computed.vue'
+import Xcomputed2 from './components/computed/computedsetup.vue'
+
 import Xwatch from './components/watch.vue'
 import XLifeCycle from './components/LifeCycle/LifeCycle.vue'
 import Bar from './components/RenderFunction/bar'
 import RenderFN from './components/RenderFunction/RenderFN.vue'
 import cssScopedModule from '@/components/cssScopedModule.vue'
 
-import PropsAlert from './components/Props_Slots/PropsAlerta.vue'
-import PropsAlertaComputed from './components/Props_Slots/PropsAlertaComputed.vue'
-import PropsAlertaEmit from './components/Props_Slots/PropsAlertaEmit.vue'
-import Slots from './components/Props_Slots/Slots.vue'
+import propsSlotsEmits from './components/Props_slots_emit/propsSlotsEmits.vue'
+
 
 import DefineModelParent from '@/components/defineModel/defineModelParent.vue'
 import DefineExposeX from '@/components/defineExpose.vue'
@@ -18,20 +18,10 @@ import DefineOptions from '@/components/defineOptions.vue'
 
 console.log(DefineOptions)
 
-/* === VUE == */
+/* === VUE === */
 import { ref, reactive, h, computed, onMounted } from 'vue'
 
-const showheader = ref(false)
-const showAlert = ref(true)
-const filmeList = { title: 'Movie', year: 2029 }
-const variant = 'danger'
-
 const instance = ref()
-
-const handleClose = (event) => {
-  console.log('close', event.target)
-  showAlert.value = !showAlert.value
-}
 
 onMounted(() => {
   console.log(instance.value.a)
@@ -41,91 +31,40 @@ onMounted(() => {
 <template>
   <h1>Have trust in the progress</h1>
   <section>
-    <p>computed</p>
+    <h1>computed</h1>
     <Xcomputed />
+
+    <Xcomputed2 />
   </section>
   <section>
-    <p>watch</p>
+    <h1>watch</h1>
     <Xwatch />
   </section>
   <section>
-    <p>lifecycle</p>
-    <XLifeCycle />
+    <h1>LifeCycle</h1>
+    <XLifeCycle if="true" />
   </section>
 
   <section>
-    <p>RenderFN.vue</p>
+    <h1>RenderFN.vue</h1>
     <RenderFN />
   </section>
 
   <section>
-    <p>App.vue/bar.jsx</p>
+    <h1>App.vue/bar.jsx</h1>
     <Bar />
   </section>
 
   <section>
-    <p>Slots.vue</p>
-
-    <Slots>
-      <template #title> Geraldo </template>
-      <template v-slot:description>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae accusamus, perspiciatis corporis repellendus ex vitae tempore, hic consequuntur nulla ipsam quasi veniam, nostrum nam ut! Sit
-          amet asperiores voluptatem harum.
-        </p>
-      </template>
-
-      <template #card> your card number </template>
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores a fuga ex ducimus deleniti nesciunt reiciendis consequuntur in. Aperiam mollitia error laboriosam numquam sed doloremque eos
-      rerum at quaerat delectus?
-    </Slots>
+    <h1>Props...</h1>
+    <propsSlotsEmits />
   </section>
 
   <section>
-    <p>cssScopedModule.vue</p>
+    <h1>cssScopedModule.vue</h1>
     <cssScopedModule />
   </section>
 
-  <section>
-    <p>Props...</p>
-
-    <PropsAlert variant="" />
-    <PropsAlert variant="success" />
-    <PropsAlert variant="danger" />
-    <h1>Props Computed</h1>
-    <PropsAlertaComputed />
-    <PropsAlertaComputed :variant="variant" /> -->
-
-    <PropsAlertaComputed
-      variant="success"
-      day="Saturday"
-      :filme="filmeList">
-      // pass a inline object props always warn Expected Object, got String
-      <h1>slots for content and props for behavior</h1>
-      <template #head>
-        <h1>Welcome</h1>
-      </template>
-    </PropsAlertaComputed>
-  </section>
-
-  <h2>
-    for script setup checkout...
-    <a
-      href="https://vuejs.org/guide/components/props.html#props"
-      target="_blank"
-      >props.html#props</a
-    >
-    -
-    <a
-      href="https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits"
-      target="_blank"
-      >define Props / defineEmits
-    </a>
-  </h2>
-  <PropsAlertaEmit
-    v-if="showAlert"
-    @close="handleClose" />
 
   <section>
     <h1>

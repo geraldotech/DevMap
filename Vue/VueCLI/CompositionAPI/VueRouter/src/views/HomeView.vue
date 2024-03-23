@@ -2,8 +2,6 @@
 import Vuex from '../components/Vuex/Vuex.vue'
 import Products from '../components/VueMixin/Products.vue';
 import { useStore } from 'vuex'
-import propexample from '../components/propexample.vue';
-
 
 
 const store = useStore()
@@ -50,7 +48,4 @@ function updateIsa() {
     <Products/>
   </section>
 
-  <section>
-    <propexample desconto="yes"/>
-  </section>
 </template>

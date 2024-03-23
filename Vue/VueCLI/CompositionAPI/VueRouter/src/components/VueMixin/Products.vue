@@ -5,8 +5,6 @@ import calcSum from '../../hooks/calcSum'
 import useCalcSum from '../../hooks/useCalcSum'
 
 export default {
-
-
   mixins: [calculateDiscount],
   created() {
     this.calculateDiscount(),
@@ -15,7 +13,7 @@ export default {
   },
   methods: {
     calculateDiscount() {
-      console.log(`replaced`)
+      console.log(`replaced o que pode ocorrer com multiple mixin`)
     },
   },
   /* === COMPOSITION API MIXIN ALTERNATIVE === */
@@ -25,8 +23,7 @@ export default {
     const x = ref(null)
     const y = ref(null)
 
-    const user = reactive({name: 'George', last: '...'})
-
+    const user = reactive({ name: 'George', last: '...' })
 
     // destructuring return of useCalc
     const { sum, calcSum } = useCalcSum()
@@ -36,14 +33,13 @@ export default {
       calcSum(x.value, y.value)
     }
 
-
     return {
       data,
       calculateSum,
       sum,
       x,
       y,
-      user
+      user,
     }
   },
 }
@@ -51,11 +47,14 @@ export default {
 <template>
   <h1>Produto</h1>
 
-  <input type="text" v-model="x">
-  <input type="text" v-model="y">
+  <input
+    type="text"
+    v-model="x" />
+  <input
+    type="text"
+    v-model="y" />
   <button @click="calculateSum">calculateSum</button>
   <p>{{ sum }}</p>
 
   <p>reactive {{ user }}</p>
- 
 </template>

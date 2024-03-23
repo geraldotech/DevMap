@@ -1,7 +1,6 @@
 <script setup lang="jsx">
 import { ref, reactive, h, computed, onMounted } from 'vue'
 
-const showheader = ref(false)
 const response = ref([])
 const getResponse = reactive([])
 

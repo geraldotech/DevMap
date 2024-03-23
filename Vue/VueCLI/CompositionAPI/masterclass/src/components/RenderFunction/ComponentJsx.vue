@@ -5,15 +5,11 @@ import List from './list'
 import barEventFront from './barEventFront.jsx'
 import { ref, h } from 'vue'
 
-
 /* ref */
 const dia = ref('Segunda')
 
-
 /* === functions === */
 const changeDay = () => (dia.value = 'Friday')
-
-
 
 /* === jsx examples === */
 const JsxNode = () => {
@@ -29,14 +25,13 @@ const JsxNode = () => {
 
 const Rendery = () => <div>Render arrow direct tags Hello</div>
 
-
 const Renderx = () => {
   return h('h1', 'Render using h')
 }
 //console.log(myapp())
 </script>
 <template>
-  <h1>ComponentJSX.vue</h1>
+  <h2>ComponentJSX.vue</h2>
 
   <section>
     <p>Render from conts FN Renderx(), Rendery(), JsxNode()</p>
@@ -50,8 +45,10 @@ const Renderx = () => {
     <List
       seunome="Geraldo"
       yourname="yourname" />
-    <hr>
-    <Formx yourname="John Snow" password="itsReallyWorks" />
+    <hr />
+    <Formx
+      yourname="John Snow"
+      password="itsReallyWorks" />
   </section>
   <hr />
 

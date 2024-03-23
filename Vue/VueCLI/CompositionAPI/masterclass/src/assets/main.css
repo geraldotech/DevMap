@@ -30,9 +30,10 @@ section {
 
 }
 
-section > p:first-child {
+section > h1:first-child, h1 > a {
   text-decoration: bold;
   font-size: 1.4rem;
   text-decoration: underline;
   color: coral;
 }
+

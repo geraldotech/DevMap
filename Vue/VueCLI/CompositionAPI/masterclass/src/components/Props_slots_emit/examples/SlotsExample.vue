@@ -20,8 +20,8 @@ onMounted(() => {
       <h1
         v-if="slots.title"
         class="title">
-        <slot name="title" /> <br>
-       <span>adicional text only display if slots.title</span>
+        <slot name="title" /> <br />
+        <span>adicional text only display if slots.title</span>
       </h1>
 
       <div
@@ -30,9 +30,7 @@ onMounted(() => {
         <slot name="description" />
       </div>
 
-      <h3>
-        <slot name=card></slot>
-      </h3>
+      <h3><slot name="card"></slot></h3>
 
       <div class="default">
         <p>

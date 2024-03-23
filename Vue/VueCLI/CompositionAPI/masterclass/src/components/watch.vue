@@ -14,6 +14,12 @@ const user = reactive({
   last: '',
 })
 
+const admin = ref({
+      name: 'admin',
+      last: 'master',
+    })
+
+
 /* FNs */
 const saveUserName = () => {
   console.log('save', name)
@@ -23,8 +29,22 @@ function changePage() {
   console.log(`pagination`)
 }
 
+const changeAdmin = () => admin.value.name = 'Geraldo'
+
 //Hooks
 // https://vuejs.org/guide/essentials/watchers.html
+
+// without deep true
+watch(() => admin.value.name, () => {
+  console.log(`admin has changed callback`)
+})
+
+// watch entire object
+watch(admin, () => {
+  console.log(`admin has changed`)
+}, {
+  deep: true // a ref only workis with deep, because is watching a entire object
+})
 
 watch(name, (newValue, oldValue) => {
   console.log(`alterando`)
@@ -87,11 +107,12 @@ watchEffect(async () => {
   <div>
     <input
       type="text"
-      v-model="name" />
+      v-model="name"  placeholder="watch a name ref"  />
     <p>{{ name }}</p>
   </div>
 
   <div>
+    <p>watch a pageCount</p>
     <select v-model="pageCount">
       <option value="5">5</option>
       <option value="10">105</option>
@@ -102,10 +123,15 @@ watchEffect(async () => {
   <div>
     <input
       type="text"
-      v-model="user.name" />
+      v-model="user.name"
+      placeholder="watch user.name" 
+      />
+      <br>
     <input
       type="text"
-      v-model="user.last" />
+      v-model="user.last"
+      placeholder="watch user.last" 
+      />
 
     <p>{{ user.name }} - {{ user.last }}</p>
   </div>
@@ -131,4 +157,11 @@ watchEffect(async () => {
     v-model="foo"
     placeholder="Foo" />
   <label for="foo">Foo</label>
+
+
+ <p>
+  Test deep: true
+  <button @click="changeAdmin">changeAdmin()</button>
+ </p>
+
 </template>

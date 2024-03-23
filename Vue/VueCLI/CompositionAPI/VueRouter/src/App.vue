@@ -1,6 +1,4 @@
 <script>
-const name = 'Filho'
-
 export default {
   name: 'app',
   data() {
@@ -12,8 +10,6 @@ export default {
 </script>
 
 <template>
-  <button @click="name = 'ok'">change name</button>
-  <h4>{{ name }}</h4>
   <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
 
   <nav class="nav">
