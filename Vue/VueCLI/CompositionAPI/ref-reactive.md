@@ -1,6 +1,8 @@
 
 # ref and reactive
 
+- https://vuejs.org/guide/essentials/reactivity-fundamentals.html#limitations-of-reactive
+
 refs para tipos primitivos e para objs e trabalha sempre com `.value`
 
 reactive não trabalha com tipos primitivos, recomendado para objetos e Arrays

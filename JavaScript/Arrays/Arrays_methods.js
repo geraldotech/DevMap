@@ -783,6 +783,40 @@ const cars2 = ['BMW','GOL','FIAT','FERRARI','MERCEDES','PAJERO'];
 cars2.splice(0,1,'new') // add 'new' to index 0 e remove index 1
 console.log(cars2);
 
+
+const api = [
+  { id: 1, name: 'Geraldo' },
+  { id: 2, name: 'Felipe' },
+  { id: 3, name: 'Bella' },
+  { id: 3, name: 'Bella' },
+]
+
+const quanto = api.filter((obj) => obj.id == 3)
+console.log(quanto.length) // 2
+
+const count = api.reduce((acc, obj) => {
+  if (obj.id === 3) {
+    acc++;
+  }
+  return acc;
+}, 0)
+
+console.log(count) // 2
+
+//⚠️ In JavaScript, when you pass a negative index to the splice() method, it starts counting from the end of the array. However, in your code, you're passing -1 as the first argument to splice(), which means you're telling it to start one element before the last element.
+
+// Here's the corrected version of your code:
+
+//api.splice(-1, 1)
+
+const ind = api.findIndex((obj) => obj.id == 1)
+
+if (ind !== -1) {
+  api.splice(ind, 1)
+}
+
+console.log(api) // return arr without obj ind 1
+
 /* [=============================================================================]
 🟢 19 -  #split - The split() method splits (divides) a string into two or more substrings depending on a splitter (or divider), split the string based on the space ('  ') character
 🔰 sempre retorna: An Array of strings, split at each point where the separator occurs in the given string.

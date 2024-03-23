@@ -1,19 +1,25 @@
-<script setup>
+<script>
+const name = 'Filho'
 
-import { useStore  } from 'vuex'
-
-const store = useStore()
-console.log(store.state.user)
-
+export default {
+  name: 'app',
+  data() {
+    return {
+      name: name,
+    }
+  },
+}
 </script>
 
 <template>
-  <!--   <HelloWorld msg="Vite + Vue" /> -->
+  <button @click="name = 'ok'">change name</button>
+  <h4>{{ name }}</h4>
+  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
 
   <nav class="nav">
     <RouterLink to="/">Home </RouterLink> | <RouterLink to="/about">About</RouterLink> | <RouterLink :to="{ name: 'services' }">Services</RouterLink> |
     <RouterLink to="/usuarios/10">Users</RouterLink>
-    <!-- set a manul router params for test
+    <!-- set a manual router params for test
      <RouterLink to="/usuarios/10">Users</RouterLink>
 
      query: http://localhost:5173/#/usuarios/?page=10
@@ -22,8 +28,6 @@ console.log(store.state.user)
   </nav>
 
   <RouterView />
-
-  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
 
   <!-- <p>{{ $route }}</p> -->
 </template>
@@ -42,6 +46,7 @@ console.log(store.state.user)
 
 section {
   border: 1px solid;
+  padding: 0.5rem;
   margin-top: 10px;
 }
 </style>
