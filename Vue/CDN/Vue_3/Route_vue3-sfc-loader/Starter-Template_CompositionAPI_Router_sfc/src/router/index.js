@@ -1,15 +1,16 @@
-const Home = { template: `<div class="home">Home page!</div>` }
-const About = {
-  template: `<div>route About similar a TabSelector <a href="https://codepen.io/geraldopcf/pen/WNJpPOG" target="_blank">codepen</a></div>`,
-}
-const Port = { template: '<div>route Port</div>' }
+const Home =   () => loadModule('/src/views/Home.vue', options) 
+const About = () => loadModule('../src/views/About.vue', options)
+const Testeold = () => loadModule('../src/views/testold.vue', options)
+const TesteNew = () => loadModule('../src/views/testnew.vue', options) 
+
 const NotFound = { template: "<h1 style='color:red'>Not Found</h1>" }
-//const teste = () => loadModule("/src/views/radio.vue", options);
+
 
 const routes = [
   { path: '/', component: Home },
   { path: '/about', component: About },
-  { path: '/port', component: Port },
+  { path: '/testsOld', name:'tetsold', component: Testeold },
+  { path: '/testsNew', name:'tetsnew', component: TesteNew },
   {
     path: '/radio',
     component: () => loadModule('/src/views/radio.vue', options),

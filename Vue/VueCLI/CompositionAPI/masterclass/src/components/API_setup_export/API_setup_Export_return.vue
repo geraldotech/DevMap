@@ -1,5 +1,7 @@
 <script>
+// API export default setup return, props and components
 import { ref, toRefs, onMounted } from 'vue'
+import Mysundaycom from '../API_setup_export/Sunday.vue'
 
 export default {
   props: {
@@ -7,6 +9,10 @@ export default {
     city: String,
     state: String,
   }, // more about props https://vuejs.org/api/composition-api-setup.html
+  components:{
+    Mysundaycom,
+
+  },  
   setup(props) {
     const name = ref('Geraldo')
     console.log(name.value)
@@ -39,4 +45,6 @@ export default {
 </script>
 <template>
   <h1 @click="clickHanlder">Hello {{ name }} from Composition setup export default {{ title }}</h1>
+
+  <Mysundaycom/>
 </template>

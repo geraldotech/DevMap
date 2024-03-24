@@ -1,12 +1,12 @@
-<script setup>
-
-
-
-const title = ref('JSX inside VueJS')
+// template nao está em uso!
+import { h, hef } from 'vue'
+export default {
+  setup() {
+    const title = ref('JSX inside VueJS')
     const clickMessage = ref('THAT does sound good?')
 
     function onClick() {
-      clickMessage.value = 'Sounds good!'
+      clickMessage.value = 'Sounds good!k'
       console.log(`click`)
     }
 
@@ -17,8 +17,7 @@ const title = ref('JSX inside VueJS')
     return {
       title,
       clickMessage,
-      onClick
+      onClick,
     }
-
-
-</script>
+  },
+}

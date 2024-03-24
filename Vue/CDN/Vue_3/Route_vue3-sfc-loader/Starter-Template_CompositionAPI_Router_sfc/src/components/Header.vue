@@ -1,23 +1,26 @@
 <template>
-  <div>
+  
     <header>
-      <h1>h1 Header</h1>
+      <NavBarVue/>
     </header>
-  </div>
+  
 </template>
 
-<script>
-module.exports = {
-  data: function () {
-    return {};
-  },
-};
+<script setup>
+import NavBarVue from "./NavBar.vue";
+
+
+
 </script>
 
 <style scoped>
 /*
 scoped only for this header
 */
+header{
+  background: #333;
+  padding: .3rem;
+}
 h1 {
   color: rgb(255, 17, 17);
 }

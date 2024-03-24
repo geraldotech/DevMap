@@ -6,6 +6,8 @@
 
 <script>
 const { ref } = Vue
+
+//import Moon from './jsx/moon.jsx'
 module.exports = {
   setup() {
     const name = ref('Geraldo')

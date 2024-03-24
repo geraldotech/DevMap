@@ -1,5 +1,6 @@
 import router from '../src/router/index.js'
 
+
 const app = Vue.createApp({
   data() {
     return {}

@@ -18,6 +18,8 @@ import DefineOptions from '@/components/defineOptions.vue'
 
 console.log(DefineOptions)
 
+import APISET from '@/components/API_setup_export/API_setup_Export_return.vue'
+
 /* === VUE === */
 import { ref, reactive, h, computed, onMounted } from 'vue'
 
@@ -29,6 +31,12 @@ onMounted(() => {
 </script>
 
 <template>
+
+<section>
+  <h1>API setup export, props, components</h1>
+  <APISET/>
+</section>
+
   <h1>Have trust in the progress</h1>
   <section>
     <h1>computed</h1>

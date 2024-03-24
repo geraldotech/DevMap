@@ -1,10 +1,10 @@
+//import { createApp,   onMounted } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+import { createApp, ref, h, resolveComponent } from './vue.esm-browser.min.js'
+
 import myComponent from './components/MyComponent.js'
 import Heading from './components/Heading.js'
 import Test from './components/test.js'
 import Counter from './components/Counter.js'
-
-//import { createApp,   onMounted } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-import { createApp, onMounted, ref } from './vue.esm-browser.min.js'
 
 export default createApp({
   components: {
@@ -14,8 +14,8 @@ export default createApp({
   },
   setup() {
     const message = ref('Hello')
-
-    return { message }
+  
+  return { message }
   },
 
   data() {
@@ -28,7 +28,7 @@ export default createApp({
   <p>{{message}}</p>
   <test abc="ABC"/>
   <Heading title="Welcome"/>
-  <Counter/>
+  <Counter/> 
 
   `,
 })
