@@ -1,7 +1,7 @@
 <script>
 // API export default setup return, props and components
 import { ref, toRefs, onMounted } from 'vue'
-import Mysundaycom from '../API_setup_export/Sunday.vue'
+import Mysundaycom from './Sunday.vue'
 
 export default {
   props: {
@@ -44,7 +44,7 @@ export default {
 }
 </script>
 <template>
-  <h1 @click="clickHanlder">Hello {{ name }} from Composition setup export default {{ title }}</h1>
+  <h1 @click="clickHanlder">Hello {{ name }} from Composition API setup export default {{ title }}</h1>
 
   <Mysundaycom/>
 </template>
