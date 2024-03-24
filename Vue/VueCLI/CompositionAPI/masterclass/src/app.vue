@@ -1,5 +1,4 @@
 <script setup lang="jsx">
-import HelloWorld from './components/HelloWorld.vue'
 import Xcomputed from './components/computed/computed.vue'
 import Xcomputed2 from './components/computed/computedsetup.vue'
 
@@ -18,7 +17,7 @@ import DefineOptions from '@/components/defineOptions.vue'
 
 console.log(DefineOptions)
 
-import APISET from '@/components/APIs/API_setup_Export_return.vue'
+import APISET from '@/components/APIs/API_export_default_setup_return.vue'
 
 /* === VUE === */
 import { ref, reactive, h, computed, onMounted } from 'vue'
