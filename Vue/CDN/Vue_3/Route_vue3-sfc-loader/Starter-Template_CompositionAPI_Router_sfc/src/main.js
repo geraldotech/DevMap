@@ -1,6 +1,5 @@
 import router from '../src/router/index.js'
 
-
 const app = Vue.createApp({
   data() {
     return {}
@@ -11,4 +10,6 @@ const app = Vue.createApp({
   },
   template: `<App/>`,
 })
-app.use(router).mount('#app')
+
+app.use(router)
+app.mount('#app')

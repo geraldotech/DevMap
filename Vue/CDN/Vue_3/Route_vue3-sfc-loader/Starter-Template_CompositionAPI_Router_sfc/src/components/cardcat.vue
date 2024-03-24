@@ -1,5 +1,9 @@
+<script setup>
+
+</script>
 <template>
   <div>
+
     <h1>Card Cat</h1>
     <figure>
       <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">

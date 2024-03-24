@@ -72,7 +72,6 @@ onMounted(() => {
     <cssScopedModule />
   </section>
 
-
   <section>
     <h1>
       <a
