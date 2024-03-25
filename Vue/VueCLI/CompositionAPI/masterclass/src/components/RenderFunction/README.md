@@ -56,5 +56,7 @@ function Footer(){
 import List from './list'
 import List from './list.jsx' //  is not a rule but can be a good practice
 
-// documentation uses.jsx https://vuejs.org/guide/extras/render-function.html#components
 ```
+
+- documentation uses.jsx https://vuejs.org/guide/extras/render-function.html#components
+- https://github.com/evanw/esbuild/issues/1793

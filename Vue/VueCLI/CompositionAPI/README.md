@@ -7,6 +7,7 @@ This Examples and docs is a new context how to do documentation and examples in 
 
 - ## [Composition API vs DataAPI](./API.md)
 - Collection of Essential Vue Composition Utilities => https://vueuse.org/functions.html
+-  enable JSX syntax => 
 
 ## Examples Guide
 
