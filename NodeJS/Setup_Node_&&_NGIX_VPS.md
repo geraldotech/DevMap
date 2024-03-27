@@ -166,6 +166,8 @@ restart
 
 ## VPS in General [Updated]
 
+Nginx as reverse intercept connection on specific ports and  redirect them to different destinations based on your configuration.
+
 - 1 - push to github
 - 2 - VPS install git and node
   - `apt install git`
@@ -174,10 +176,11 @@ restart
 - 4 - install dependences: `node install`
 - 5 - run: `node app.js`
 - 6 - deixar sempre rodando pm2, gerenciador de processos para o runtime JavaScript Node.js: `npm install pm2 -g`
+
   - inside project: `pm2 start app.js --name 'My project'`
   - list all projects: `pm2 list`
 
-7 - you can access your project in: <IP>:yourport
+- 7 - you can access your project in: <IP>:yourport
 
 ### Setup a domain name with a web server
 
@@ -203,6 +206,56 @@ server {
 
 - if default in `/etc/nginx/sites-enabled/` exists: `mv default to default2`
 - create symbolic link `ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/`
+
+<details>
+<summary>How setup a new site</summary>
+
+```js
+nano /etc/nginx/sites-available/crudnodesql.conf
+
+create e new conf
+server {
+    server_name 143.198.232.51/crudnodesql  ; # Adicionar o seu domínio, tanto sozinho quanto com www.
+    location / {
+        proxy_pass http://localhost:4000; # Supondo que sua API esteja rodando na porta 4000
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+}
+}
+```
+
+`ln -s /etc/nginx/sites-available/crudnodesql.conf /etc/nginx/sites-enabled/`
+
+Next, check Nginx for any syntax error with the following command:
+
+`nginx -t`
+
+restat nginx
+
+go to your sites folder mine is /var/www/html
+git clone
+
+cd ./-GIT-PROJECT
+
+npm install
+
+npm run dev
+
+
+Now access: yours routers:
+  http://143.198.232.51:4000/
+
+  http://143.198.232.51:4000/pessoas
+
+
+
+
+
+
+</details>
 
 ## certbot
 

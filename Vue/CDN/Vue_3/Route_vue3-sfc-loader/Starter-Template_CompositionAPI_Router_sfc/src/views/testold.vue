@@ -1,13 +1,6 @@
-    <template>
-      <div>
-        <h1>Testes Old</h1>
-        <MyComponentX />
-        <cardcat/>
-      </div>
-    </template>
 <script>
 // humm woking but waning on console
-import cardcat from '../components/cardcat.vue';
+//import Cardcat from '../components/cardcat.vue';
 module.exports = {
   data() {
     return {}
@@ -18,3 +11,10 @@ module.exports = {
 }
 </script>
 
+    <template>
+      <div>
+        <h1>Testes Old</h1>
+        <MyComponentX />
+       <!--  <Cardcat/> --> 
+      </div> 
+    </template>      

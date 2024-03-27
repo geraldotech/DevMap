@@ -326,6 +326,8 @@ $ nodemon .\index.js
 
 # Saindo do Zero em Node.JS
 
+- Extends example in Api Node, Postgress, Fastify  https://github.com/geraldotech/nodeZero
+
 - mkdir create a directory:
 - cd <directory>
 - Use `code .` to open this `<directory in VSCODE>`

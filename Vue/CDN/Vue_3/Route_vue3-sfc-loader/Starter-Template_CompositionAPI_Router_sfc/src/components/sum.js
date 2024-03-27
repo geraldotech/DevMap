@@ -1,3 +1,14 @@
-export default function somar(x, y){
-  return x + y
+/* 
+void same name from Vue reactive
+
+*/
+
+const person = {
+  name: 'Geraldo',
+  city: 'Maceio'
 }
+
+const sum = (y, x) => {
+  return y + x
+}
+

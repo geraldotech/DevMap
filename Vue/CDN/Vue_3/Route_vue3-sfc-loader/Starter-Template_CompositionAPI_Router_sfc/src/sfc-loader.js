@@ -2,6 +2,9 @@ const options = {
   moduleCache: {
     vue: Vue,
   },
+
+  
+
   async getFile(url) {
     const res = await fetch(url);
     if (!res.ok)

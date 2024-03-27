@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-  <div id="root"></div>
-<script src="https://unpkg.com/vue@3/dist/vue.runtime.global.prod.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader@0.9.5/dist/vue3-sfc-loader.js"></script>
 <script>
 
   /* <!-- */
@@ -90,13 +83,14 @@
     }
   }
 
-  const app = Vue.createApp(Vue.defineAsyncComponent(() => window['vue3-sfc-loader'].loadModule('/main.vue', options)))
+  const app = Vue.defineAsyncComponent(() => window['vue3-sfc-loader'].loadModule('/main.vue', options))
 
   console.log(app)
   
   document.querySelector('#root').innerHTML = app.mount(document.body);
 
 </script>
-
-</body>
-</html>
+<template>
+  
+<div id="root"></div>
+</template>

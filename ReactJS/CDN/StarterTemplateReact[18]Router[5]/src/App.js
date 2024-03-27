@@ -5,10 +5,10 @@ const Route = ReactRouterDOM.Route
 import Home from './src/components/Home.js'
 import About from './src/components/About.js'
 
+
+
 /* components */
-const Gmap = () => (
-  <h1 className="bg-blue-400 text-4xl mt-5">GmapDev from strings</h1>
-)
+const Gmap = () => <h1 className="bg-blue-400 text-4xl mt-5">GmapDev from strings</h1>
 class Form extends React.Component {
   render() {
     const age = () => {
@@ -42,14 +42,12 @@ function App() {
         <ReactRouterDOM.HashRouter>
           <ul className="flex justify-start gap-20 max-w-90 text-2xl text-white-500 p-2  m-auto bg-teal-400">
             <li className="hover:font-bold">
-              <Link to="/" >Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className="hover:font-bold">
-              {' '}
               <Link to="/about">About</Link>
             </li>
             <li className="hover:font-bold">
-              {' '}
               <Link to="/gmap">GMAP</Link>
             </li>
           </ul>
@@ -57,9 +55,16 @@ function App() {
       </nav>
 
       <ReactRouterDOM.HashRouter>
-        <Route path="/" exact  component={Home}></Route>
-        <Route path="/about" component={About}></Route>
-        <Route path="/gmap" component={Gmap}></Route>
+        <Route
+          path="/"
+          exact
+          component={Home}></Route>
+        <Route
+          path="/about"
+          component={About}></Route>
+        <Route
+          path="/gmap"
+          component={Gmap}></Route>
       </ReactRouterDOM.HashRouter>
 
       <Form />
