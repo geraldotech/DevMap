@@ -1,20 +1,51 @@
 <script>
 import { h, ref, resolveComponent, defineComponent, onMounted, getCurrentInstance, onBeforeMount, onBeforeUnmount } from 'vue'
 import Cardcat from './cardcat.vue'
-const MyTemplate = () => loadModule('./src/components/MyTemplate.js', options)
+import MyTemplatejx from './MyTemplate.jsx'
+const MyAsyncComponent = Vue.defineAsyncComponent(() => Promise.resolve(MyTemplate));
 
+//const MyTemplate = () => loadModule('./src/components/MyTemplate.js', options)
 
-MyTemplate().then((r) => {
-  console.log(r)
-})
+console.log(MyTemplatejx)
 
-// when import component and call
+console.log(MyAsyncComponent)
 //console.log(Cardcat.render()) get details
+const options = {
+  moduleCache: { vue: Vue },
+ // babel_ParserPlugin: ['@vue/babel-plugin-jsx', window['@vue/babel-plugin-jsx']],
+  /* getFile: () => `<template><h2>vue3-sfc-loader esm version</h2>
+        </template>`,  */
+  async getFile(url) {
+    const res = await fetch(url)
+    if (!res.ok) {
+      throw Object.assign(new Error(res.statusText + ' ' + url), { res })
+    }
+    return {
+      getContentData: (asBinary) => (asBinary ? res.arrayBuffer() : res.text()),
+    }
+  },
+  addStyle: () => {},
+  log: (...args) => console.log(...args),
+}
+
+function load(path) {
+  return window['vue3-sfc-loader'].loadModule(path, options)
+}
+
+
+
+
+
+
 
 export default {
   components: {
     Cardcat,
-    Fileis: () => load('./src/components/comjsx/cardMary.jsx'),
+    //call component and load a .js file
+    MyTemplate: Vue.defineAsyncComponent(() => loadModule('../src/components/MyTemplate.js', options)),
+    MyAsyncComponent,
+
+    //  Fileis: () => load('./src/components/comjsx/cardMary.jsx'),
     /* cardMary, */
 
     //    CardMaryx: () =>
@@ -32,19 +63,6 @@ export default {
       return (media.value = soma / 2)
     }
 
-    function loadScript() {
-      return new Promise((resolve, reject) => {
-        const plugin = document.createElement('script')
-        plugin.setAttribute('src', './src/components/sum.js', 'type')
-        plugin.setAttribute('type', 'module')
-        plugin.async = false
-        document.head.appendChild(plugin)
-        plugin.onload = resolve
-        plugin.onerror = reject
-        document.head.appendChild(plugin)
-      })
-    }
-    // Load script js
     async function smartLoadScript(path) {
       // select the script
       const script = document.querySelectorAll('script[data-status]')
@@ -70,13 +88,9 @@ export default {
       }
     }
 
-    onBeforeMount(() => {})
-
-    onBeforeUnmount(() => {})
-
     onMounted(() => {
-      const instance = getCurrentInstance()
-      console.log(instance.parent)
+      /*   const instance = getCurrentInstance()
+      console.log(instance.parent) */
 
       smartLoadScript('./src/components/sum.js').then(() => {
         console.log(sum(6, 4))
@@ -108,6 +122,13 @@ export default {
 
     <Cardcat />
 
+    <p class="test">
+  <!--     <MyTemplate /> -->
+    </p>
+
+    <p>
+      <MyAsyncComponent/>
+    </p>
 
   </div>
 </template>

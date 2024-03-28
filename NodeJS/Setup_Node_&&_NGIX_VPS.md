@@ -179,6 +179,8 @@ Nginx as reverse intercept connection on specific ports and  redirect them to di
 
   - inside project: `pm2 start app.js --name 'My project'`
   - list all projects: `pm2 list`
+  - restart by project process ID (PID) of the application: `pm2 restart <pid>`
+  - run a npm run dev app `pm2 start "npm run dev" --name crudsqlite`
 
 - 7 - you can access your project in: <IP>:yourport
 

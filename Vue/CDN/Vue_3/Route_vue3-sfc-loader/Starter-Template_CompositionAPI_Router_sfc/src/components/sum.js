@@ -12,3 +12,4 @@ const sum = (y, x) => {
   return y + x
 }
 
+console.log(`sum loaded`)

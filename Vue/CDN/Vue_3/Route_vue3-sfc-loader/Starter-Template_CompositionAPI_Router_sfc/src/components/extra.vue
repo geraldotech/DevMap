@@ -12,10 +12,8 @@ module.exports = {
   setup() {
     const name = ref('Geraldo')
 
-
     return {
       name,
-      
     }
   },
   data: function () {
@@ -28,6 +26,6 @@ module.exports = {
 </script>
 <style scoped>
 h4 {
-   color: coral;
+  color: coral;
 }
 </style>

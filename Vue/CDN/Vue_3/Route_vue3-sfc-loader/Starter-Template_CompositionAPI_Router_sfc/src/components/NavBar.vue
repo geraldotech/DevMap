@@ -1,5 +1,4 @@
 <template>
-  <div id="rotas">
     <nav>
       <ul>
         <router-link to="/">Home</router-link>
@@ -9,7 +8,6 @@
         <router-link to="/about">About</router-link>
       </ul>
     </nav>
-  </div>
 </template>
 <script>
 </script>
