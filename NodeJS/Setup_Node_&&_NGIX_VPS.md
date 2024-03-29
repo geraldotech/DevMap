@@ -184,6 +184,16 @@ Nginx as reverse intercept connection on specific ports and  redirect them to di
 
 - 7 - you can access your project in: <IP>:yourport
 
+### how to update project?
+
+```js
+pm2 stop <pid>
+rm -rf <folder>
+git clone  <project>
+npm install <folder>
+npm2 start <pid>
+```
+
 ### Setup a domain name with a web server
 
 setup a domain name to your vps ipaddress

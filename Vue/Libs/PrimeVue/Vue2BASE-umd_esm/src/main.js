@@ -51,7 +51,7 @@ const vm = new Vue({
     },
     hideSidebar(){
       console.log(`click`)
-      this.visibleLeft = false
+     // this.visibleLeft = false
     }
   },
   components: {

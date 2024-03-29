@@ -20,9 +20,16 @@
 
     <!-- Themes from 3.0 works but can bugs some itens, prefer apply manual dark-mode in css styles, themes names in https://www.primefaces.org/primevue-v2/#/setup -->
 
-    <link
+
+    <!-- avoid old themes like 2.1.0 has bugs -->
+    <!--  <link
       href="https://unpkg.com/primevue@2.1.0/resources/themes/arya-purple/theme.css"
-      rel="stylesheet" />
+      rel="stylesheet" /> -->
+
+    <!-- Themas mais novos segue a version 2.10.4 -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/primevue@2.10.4/resources/themes/arya-purple/theme.css" />
 
     <!-- Prime Vue css and icons -->
     <link
@@ -31,6 +38,7 @@
     <link
       href="https://unpkg.com/primeicons/primeicons.css"
       rel="stylesheet" />
+
     <!-- === PrimeVue Components == -->
 
     <script src="https://unpkg.com/primevue@2.2.3/components/calendar/calendar.umd.min.js"></script>
@@ -67,6 +75,14 @@
           >Documentation for Vue 2</a
         >
       </h4>
+
+      <section>
+        <h1>Themes</h1>
+        <p>mais novos seguir a version 2.10.4 fixed bugs sidebar like <a href="https://github.com/primefaces/primevue/issues/1541">this</a></p>
+        <p>
+          <a href="https://unpkg.com/browse/primevue@2.10.4/resources/themes/">https://unpkg.com/browse/primevue@2.10.4/resources/themes/</a>
+        </p>
+      </section>
 
       <section>
         <p>Agora escolha sua melhor para para viajar:</p>
@@ -213,6 +229,10 @@
         <h1>Button</h1>
 
         <p-button icon="pi pi-search"></p-button>
+        <a href="#">          
+        <p-button icon="pi pi-search"></p-button>
+        </a>
+        <p-button label="link" icon="pi pi-search p-button-link" href="https://stackoverflow.com/"></p-button>
         <p-button icon="pi pi-download"></p-button>
         <p-button
           icon="pi pi-user"
@@ -235,7 +255,7 @@
 
         <p-button label="Primary theme Download"></p-button>
         <p-button
-          label="Download"
+          label="Download secondary"
           class="p-button-secondary"></p-button>
         <p-button
           label="success"
@@ -247,8 +267,10 @@
           label="danger"
           class="p-button-danger"></p-button>
         <p-button
-          label="success"
+          label="button theme"
           class="p-button-text"></p-button>
+        
+
 
         <h1>with icons</h1>
         <p-button
@@ -419,8 +441,9 @@
           label="displayBasic"></p-button>
         <p-dialog
           header="Header"
+          maximizable
           :visible.sync="displayBasic"
-          :containers-style="{width: '50vw'}"
+          :containers-style="{width: '80vw'}"
           :modal="true">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus facere earum eaque error, ipsam nostrum libero rerum ipsa nemo blanditiis ab, officia ad hic consequuntur ex
@@ -431,6 +454,13 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt placeat blanditiis, qui vero eum consequatur laborum exercitationem, ipsam facilis quibusdam suscipit omnis excepturi
             atque culpa dolorem tenetur praesentium repudiandae doloribus.
           </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati mollitia iste tempora optio adipisci dolorem provident dolore at voluptatum, enim quos odit deleniti quo distinctio
+            veritatis dolor assumenda delectus illum doloremque id tempore similique ad et repellat. Illo iure error soluta porro nulla qui natus vero, nam aliquam molestiae laudantium minus labore
+            deserunt nobis culpa exercitationem minima fuga eaque quo. Inventore sint, error veniam perferendis assumenda natus possimus, delectus eaque enim obcaecati distinctio cum, sunt ut
+            recusandae! Architecto similique eligendi excepturi quaerat libero saepe sint voluptatum nisi, alias omnis sunt dicta obcaecati delectus, recusandae, quo odit. Doloribus eligendi tempora
+            ratione!
+          </p>
         </p-dialog>
       </section>
 
@@ -439,10 +469,12 @@
 
         <p-button
           label="open Menu"
-          @click="visibleLeft = true"></p-button>
+          @click="visibleLeft = true"
+          class="mr-2"></p-button>
 
         <p-sidebar
           :visible.sync="visibleLeft"
+          :baseZIndex="1000"
           position="right"
           @hide="hideSidebar"
           appear>
