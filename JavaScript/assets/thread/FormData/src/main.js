@@ -6,8 +6,9 @@ form.onsubmit = function (e) {
   //prevent if necessary,
   e.preventDefault();
 
-  //Creates a new FormData object.
+  // Creates a new FormData object.
   const fdata = new FormData(form);
+  console.log(`fdata`, fdata) // return empty
 
   //Getting data based on names and sum this values
 

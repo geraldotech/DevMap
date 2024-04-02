@@ -20,9 +20,18 @@
 <summary>Quick Tips</summary>
 
 ```js
-parseInt('1') + // 1
-  '1' // 1
+//👉 parseInt
+console.log(parseInt('1')) // 1
 
+//👉 +
+console.log(+'1') // 1
+
+//👉 Number
+let x = '60'
+let xconverted = Number(x)
+console.log(typeof xconverted)
+
+//👉 is NaN
 isNaN('ge') // true
 isNaN(5) // false
 
@@ -36,8 +45,14 @@ function isNumber(n) {
   return 'Not a number'
 }
 
-console.log(isNumber('213'))
-console.log(isNumber('whatever'))
+console.log(isNumber('213')) // 'Its a number'
+console.log(isNumber('whatever')) // 'Not a number'
+
+let repeatedString = 'hello '.repeat(3)
+console.log(repeatedString) // Output: 'hello hello hello '
+
+//👉  hipotenusa
+console.log(Math.hypot(3, 4))
 ```
 
 </details>
