@@ -7,7 +7,7 @@
 
 ## Ultis:
 
- - `npx` - forma de executar binario
+ - `npx` - vem instalado com o node é uma forma de executar binario das depedencias instaladas
 
 ## Start Node project server:
 
@@ -53,7 +53,7 @@ server.listen(3333)
 
 Disable ExperimentalWarning: `node --watch --no-warnings .\server.js`
 
-## Custom commando
+## Custom npm
 
 Open package.json > scripts and add:
 ` "dev": "node --watch --no-warnings server.js"`
@@ -76,24 +76,36 @@ Now just run: `npm run dev` e concluimos a criação do servidor http nativo sem
 
 ## Typescript
 
+> node é o único que não entende Typescript por padrão.
 
-- as dependencia de desenvolvimento:
-
+- **typescript**
   - `npm i typescript -D`
   - `-D` significa que se trata de uma dependencia a ser usada somente em ambiente de desenvolvimento, que quando estiver no ar em produção, essa dependencia vai ser inútil, considerando que o Node não entende Typescript, é preciso converter o code para Javascript no momento que for fazer deploy do app. Resumindo o TS não vai ser útil em production
 
-- types
-  - `npm i @types/node -D`  oferece habilidade para o TS endender que está dentro de um projeto Node e assim endender algumas coisas Global como a variável process.
-- `npm i tsx -D` - como o Node não entende ts, automatiza de ts para js e rodar, node é o unico que não entende Typescript por padrão.
+- **@types/node**
+  - `npm i @types/node -D` oferece habilidade para o TS endender que está dentro de um projeto Node e assim endender algumas coisas Global como a variável process.
+  - `npx tsc --init` - create `tsconfig.json` 
+  - Go to https://github.com/tsconfig/bases?tab=readme-ov-file choose Node version and copy configs to tsconfig.json or install it copy and paste in all `tsconfig.json` 
+  - Manual run!
+  - now just add a `"include": ["src"]` where is .ts files
+    - now convert .ts to .js with `npx tsc`
+    - now run with node this .js file
 
-- create a `src/server.ts`
-  - run: `npx tsx src/server.ts`
-  - short command add in <ins>package.json:</ins> `"dev": "tsx ./src/server.ts"`
+- tsx 
+  - `npm i tsx -D` - como o Node não entende ts, o tsx automatiza de ts para js e roda.
+  - if you don't have create a `src/server.ts`
+  - run: `npx tsx src/server.ts` remember `run binary - what binary - path to file
+  - run & watch: `npx tsx watch src/server.ts`
+
+- npm custom
+  - short command add in <ins>package.json:</ins> não precisa adicionar npx do inicio
+   `"dev": "tsx ./src/server.ts"`
   - watch mode add in **package.json**:` "dev": "tsx watch ./src/server.ts"`
 
-- single command install typescript and tsx: `npm i typescript @types/node tsx -D`
 
-- `npx tsc --init` - create `tsconfig.json` got o https://github.com/tsconfig/bases?tab=readme-ov-file choose Node version and copy configs to tsconfig.json or install it
+- single command install typescript, @types and tsx: `npm i typescript @types/node tsx -D`
+
+
 
 ## Install fastify microframework `npm i fastify`
 
