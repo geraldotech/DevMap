@@ -48,6 +48,7 @@ function isNumber(n) {
 console.log(isNumber('213')) // 'Its a number'
 console.log(isNumber('whatever')) // 'Not a number'
 
+//👉 repeat
 let repeatedString = 'hello '.repeat(3)
 console.log(repeatedString) // Output: 'hello hello hello '
 

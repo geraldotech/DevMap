@@ -4,16 +4,17 @@
 
 Instalar o `NodeJS` na sua máquina [https://nodejs.org/pt-br/download/](https://nodejs.org/pt-br/download/)
 
+# Saindo do Zero em Node.JS
+ 
+- Extends example in Api Node, Postgress, Fastify  https://github.com/geraldotech/nodeZero
+
+
 ```js
 checkout version node and node package manager
 $ node -v
 
 $ npm -v
 ```
-
-### create package.json do project:
-
-    $ npm init
 
 ### create sample server server v1:
 
@@ -52,7 +53,7 @@ server.listen(port, hostname, () => {
 })
 ```
 
-Now call in cmd: `node index.js`
+run: `node index.js`
 
 Open browser: `http://localhost:3000`
 
@@ -323,8 +324,4 @@ run live watch:
 ```js
 $ nodemon .\index.js
 ```
-
-# Saindo do Zero em Node.JS
- 
-- Extends example in Api Node, Postgress, Fastify  https://github.com/geraldotech/nodeZero
 

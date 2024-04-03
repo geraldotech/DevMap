@@ -4,10 +4,9 @@
 
 - [https://www.youtube.com/watch?v=W37Va1q9l-I](https://www.youtube.com/watch?v=W37Va1q9l-I)
 
-
 ## Ultis:
 
- - `npx` - vem instalado com o node é uma forma de executar binario das depedencias instaladas
+- `npx` - vem instalado com o node é uma forma de executar binario das depedencias instaladas
 
 ## Start Node project server:
 
@@ -29,7 +28,7 @@ const server = createServer(() => {
 server.listen(3333)
 ```
 
-open package.json e add `"type": "module",` -y é para não fazer perguntas
+open package.json e add `"type": "module"`
 
 - Now run: `node server.js`
   no browser não vai carregar nada, porém observer a mensagem do console no terminal
@@ -45,6 +44,38 @@ const server = createServer((resquest, response) => {
 })
 
 server.listen(3333)
+```
+
+Another minimalist way read html file
+
+```js
+import { createServer } from 'node:http'
+import { readFile } from 'node:fs'
+
+// Read the HTML file
+
+const home = readFile('index.html', 'utf-8', (err, data) => {
+  if (err) {
+    console.error('Error reading HTML file:', err)
+    return
+  }
+  startServer(data)
+})
+
+console.log(home)
+
+// Function to start the server
+function startServer(htmlContent) {
+  const server = createServer((req, res) => {
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'text/html')
+    res.end(htmlContent)
+  })
+
+  server.listen(5555, () => {
+    console.log('Server is running on port 5555')
+  })
+}
 ```
 
 ## watch a file:
@@ -71,55 +102,64 @@ Final package file:
 ....
 }
 ```
-Now just run: `npm run dev` e concluimos a criação do servidor http nativo sem framework
 
+Now just run: `npm run dev` e concluimos a criação do servidor http nativo sem framework
 
 ## Typescript
 
 > node é o único que não entende Typescript por padrão.
 
 - **typescript**
+
   - `npm i typescript -D`
   - `-D` significa que se trata de uma dependencia a ser usada somente em ambiente de desenvolvimento, que quando estiver no ar em produção, essa dependencia vai ser inútil, considerando que o Node não entende Typescript, é preciso converter o code para Javascript no momento que for fazer deploy do app. Resumindo o TS não vai ser útil em production
 
 - **@types/node**
+
   - `npm i @types/node -D` oferece habilidade para o TS endender que está dentro de um projeto Node e assim endender algumas coisas Global como a variável process.
-  - `npx tsc --init` - create `tsconfig.json` 
-  - Go to https://github.com/tsconfig/bases?tab=readme-ov-file choose Node version and copy configs to tsconfig.json or install it copy and paste in all `tsconfig.json` 
+  - `npx tsc --init` - create `tsconfig.json`
+  - Go to https://github.com/tsconfig/bases?tab=readme-ov-file choose Node version and copy configs to tsconfig.json or install it copy and paste in all `tsconfig.json`
   - Manual run!
-  - now just add a `"include": ["src"]` where is .ts files
+  - now just add a `"include": ["src"]` where is .ts files, but de modo geral tudo que é .ts vai ser convervito para .js.
     - now convert .ts to .js with `npx tsc`
     - now run with node this .js file
 
-- tsx 
+- tsx
+
   - `npm i tsx -D` - como o Node não entende ts, o tsx automatiza de ts para js e roda.
   - if you don't have create a `src/server.ts`
   - run: `npx tsx src/server.ts` remember `run binary - what binary - path to file
   - run & watch: `npx tsx watch src/server.ts`
 
 - npm custom
+
   - short command add in <ins>package.json:</ins> não precisa adicionar npx do inicio
-   `"dev": "tsx ./src/server.ts"`
+    `"dev": "tsx ./src/server.ts"`
   - watch mode add in **package.json**:` "dev": "tsx watch ./src/server.ts"`
 
-
 - single command install typescript, @types and tsx: `npm i typescript @types/node tsx -D`
-
-
 
 ## Install fastify microframework `npm i fastify`
 
 ### HTTPie install on Windows.
-### REST Client 
-create  a whatver.http or client.http to send methods, existem  diversas opções para testar uma API
+
+### REST Client
+
+create a whatver.http or client.http to send methods, existem diversas opções para testar uma API
 
 ### Prisma
+- Mais sobre [Prisma here](https://www.youtube.com/watch?v=uApCW1gcpdE)
 
-- install prima `npm i prisma -D` - Prisma + SQLite [https://youtu.be/W37Va1q9l-I?t=1464](https://youtu.be/W37Va1q9l-I?t=1464) - Mais sobre [Prisma here](https://www.youtube.com/watch?v=uApCW1gcpdE)
+- install prima `npm i prisma -D` 
+- `npx prisma init --datasource-provider SQLite`
+
+- Prisma + SQLite [https://youtu.be/W37Va1q9l-I?t=1464](https://youtu.be/W37Va1q9l-I?t=1464) 
+
 
   - create data `npx prima init --datasource-provider SQLite` usar o SQL e instead o padrão que seria o PostgreSQL
   - install prima VSCode extension
 
+- After set your schema.prisma
 - `npx prisma migrate dev` // ler o scheme e detectar automaticamente as alterações
 - `npx prima studio` - visualizar o `dev.db` vai abrir em `http://localhost:5555/`
 
@@ -139,37 +179,32 @@ Open HTTPie and `http://localhost:3333/memories`
 ```js
 import { fastify } from 'fastify'
 
-const server = fastify()
+const app = fastify()
 
-server.get('/', () => {
+app.get('/', () => {
   return 'Hello World'
 })
 
-server.get('/hello', () => {
+app.get('/hello', () => {
   return 'Hello gmapdev'
 })
 
-server.get('/node', () => {
-  return 'Hello gmapdev'
-})
 
 //works but is out of date: server.listen(3333)
 
 //new way:
-server.listen({
+app.listen({
   port: 3333,
 })
 ```
 
-
 - https://github.com/fastify/fastify-static/tree/master
 - https://www.npmjs.com/package/@fastify/static
-
-
 
 ### Cors
 
 - `npm i @fastify/cors`
+
 ### Static files
 
 <details>
@@ -272,9 +307,6 @@ server.listen({
 - create a Neon acc
 - `npm i dotenv -D`
 
-
-
-
 ## extentions
 
 `min Theme` theme
@@ -282,7 +314,7 @@ server.listen({
 `ESLint` - força a pradronização, busca por padrão no code eg: pontoVirgula
 
 
+## zod
+> library for validations
 
-
-
-
+- npm i zod

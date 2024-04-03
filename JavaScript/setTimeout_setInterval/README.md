@@ -78,9 +78,22 @@ conta();
 
 // clearInterval stop é necessário chamar a var da função
 const wel = setInterval(function () {
-  alert("bom dia");
-  clearInterval(wel);
-}, 2000);
+  alert("bom dia"); // Display an alert with "bom dia"
+  clearInterval(wel); // Clear the interval after displaying the alert
+}, 2000); // Execute every 2000 milliseconds (2 seconds)
+
+
+let cont = 0 // Counter to track the number of threads
+const counter = setInterval(() => {
+  cont++
+  console.log(new Date().toISOString(), cont)
+
+  if(cont === 4){
+    clearInterval(counter)
+  }
+}, 2000)
+
+
 ```
 
 ## ======= setInterval and use setTimeout to clearInterval after 10s =======
@@ -92,4 +105,5 @@ const wel = setInterval(function () {
     setTimeout(() => {
         clearInterval(intervalo)
     }, 10000)
+    
 ```
