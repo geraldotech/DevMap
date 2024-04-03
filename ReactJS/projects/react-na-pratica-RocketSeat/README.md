@@ -1,5 +1,10 @@
 # React + TypeScript + Vite
 
+
+## run
+- npm run dev
+- npm run server
+
 `npm i tailwindcss postcss autoprefixer -D`
 
 - Setup TailwindCSS
