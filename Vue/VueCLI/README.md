@@ -1,5 +1,15 @@
 <h1 align=center>VueJS</h1>
 
+
+# Extensions:
+
+Oficial - https://marketplace.visualstudio.com/items?itemName=Vue.volar
+
+snippets options:
+
+- https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets
+- https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets
+
 # Start Project
 
 You can use VueCLI or Vite
@@ -173,7 +183,6 @@ const onSumit = (e) => {
 
 [https://vuejs.org/guide/essentials/component-basics.html](https://vuejs.org/guide/essentials/component-basics.html)
 
-- instalar a extensão `Vetur` para sugestões, formatar code, identificar erros, dividir nosso layout em partes
 - deletar o conteudo de App.vue e deletar o HelloWord.vue
 
 `App.vue` criar:

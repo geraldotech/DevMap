@@ -1,6 +1,7 @@
-# Minicurso NodeJS
+## Minicurso NodeJS  Prima + Fastify + Typescript
 
-## Prima + Fastify + Typescript
+
+- Projeto relacionado a este documentation nlw unite- favor deixar junto com esse repo!!
 
 - [https://www.youtube.com/watch?v=W37Va1q9l-I](https://www.youtube.com/watch?v=W37Va1q9l-I)
 
@@ -139,8 +140,6 @@ Now just run: `npm run dev` e concluimos a criação do servidor http nativo sem
 
 - single command install typescript, @types and tsx: `npm i typescript @types/node tsx -D`
 
-## Install fastify microframework `npm i fastify`
-
 ### HTTPie install on Windows.
 
 ### REST Client
@@ -170,7 +169,24 @@ create a whatver.http or client.http to send methods, existem diversas opções 
 
 Open HTTPie and `http://localhost:3333/memories`
 
+
+# Manage environment variables
+
+- Node 20+ ? [checkout built-in command](https://github.com/privatenumber/tsx/discussions/470)
+
+```js
+npm install dotenv
+
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+// Your server code here
+
+```
+
 # Framework: fastify
+
+> microframework `npm i fastify`
 
 `npm install fastify`
 
@@ -201,11 +217,8 @@ app.listen({
 - https://github.com/fastify/fastify-static/tree/master
 - https://www.npmjs.com/package/@fastify/static
 
-### Cors
 
-- `npm i @fastify/cors`
-
-### Static files
+  - ## Static files
 
 <details>
 <summary>Get example</summary>
@@ -302,19 +315,35 @@ server.listen({
 
 </details>
 
+## fastify-type-provider-zod plugin
+
+https://github.com/turkerdev/fastify-type-provider-zod
+
+`npm install fastify-type-provider-zod`
+
+
+
+# Cors
+
+- `npm i @fastify/cors`
+
+
+# zod
+> library for validations, validação no request.body
+
+- npm i zod
+
+
+# postgres
+
 - `npm install postgres`
   - https://github.com/porsager/postgres
 - create a Neon acc
 - `npm i dotenv -D`
 
-## extentions
+
+# extentions
 
 `min Theme` theme
 `symbols` icones
 `ESLint` - força a pradronização, busca por padrão no code eg: pontoVirgula
-
-
-## zod
-> library for validations
-
-- npm i zod
