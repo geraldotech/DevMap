@@ -4,9 +4,10 @@
 
 Instalar o `NodeJS` na sua máquina [https://nodejs.org/pt-br/download/](https://nodejs.org/pt-br/download/)
 
-# Saindo do Zero em Node.JS
+# Get Started Links:
  
-- Extends example in Api Node, Postgress, Fastify  https://github.com/geraldotech/nodeZero
+- [minicurso Node](./projects/server-node-minicurso/README.md)
+- [Extends example in Api Node, Postgress, Fastify](https://github.com/geraldotech/nodeZero)
 
 
 ```js
@@ -15,6 +16,9 @@ $ node -v
 
 $ npm -v
 ```
+
+
+## below is legacy
 
 ### create sample server server v1:
 
