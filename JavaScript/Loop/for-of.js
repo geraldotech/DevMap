@@ -80,7 +80,7 @@ for (const busca of api) {
   }
 }
 
-//for of adicionando parameters entre []
+//👉 for of adicionando parameters entre []
 
 for (const [key, busca] of ["Geraldo", "Filho"]) {
   console.log(key); //primeiras letras
@@ -95,3 +95,11 @@ function para(el) {
 }
 //usando uma function
 para(["Geraldo", "Filho"]);
+
+// 👉 index? add .entries
+const arr = ['Alpha', 'Bravo', 'Charlie']
+
+for(const [index, value] of arr.entries()){
+  console.log(index, value)
+}
+

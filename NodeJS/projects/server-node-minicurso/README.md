@@ -173,14 +173,25 @@ Open HTTPie and `http://localhost:3333/memories`
 # Manage environment variables
 
 - Node 20+ ? [checkout built-in command](https://github.com/privatenumber/tsx/discussions/470)
+- https://www.npmjs.com/package/dotenv#-install
 
 ```js
 npm install dotenv
 
+Create a .env file in the root of your project directory. This file will contain your environment variables in the format KEY=VALUE
+
 import * as dotenv from 'dotenv';
 dotenv.config();
+console.log(process.env) // remove this after you've confirmed it is working
 
-// Your server code here
+
+//👉 other way
+import { config } from 'dotenv';
+config();
+const { NOME } = process.env
+
+console.log(process.env.NOME)
+console.log(NOME ===  'GERALDO')
 
 ```
 
