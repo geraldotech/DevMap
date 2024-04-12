@@ -5,6 +5,7 @@ While JavaScript is not strictly procedural like languages such as C or Pascal, 
 In JavaScript, you can define functions and execute them sequentially, which aligns with procedural programming principles. Here's an example of a simple procedural-style JavaScript code:
 
 - https://dev.to/jjablonskiit/functional-vs-object-oriented-vs-procedural-programming-2lc5
+- https://hashnode.com/post/procedural-oop-and-functional-programming-with-javascript-ckzzxcttl05ixl0nvac9i4tyu
 
 
 ## Procedural Style:
