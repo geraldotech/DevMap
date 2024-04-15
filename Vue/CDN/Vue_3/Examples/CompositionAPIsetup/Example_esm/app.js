@@ -1,6 +1,10 @@
-import { createApp, ref, reactive } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+import { version, createApp, ref, reactive } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+console.log(version)
+
 
 const app = createApp({
+  
   setup() {
     const message = ref('Hello Vue!')
     const person = reactive({

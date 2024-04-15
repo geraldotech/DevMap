@@ -14,6 +14,17 @@ Tudo é reativo
     - https://github.com/vuejs/core
 
 
+# How check versions
+
+```js
+// CDNs
+Global build => console.log(Vue.version)
+EMS => import {version} from 'link...' => console.log(version)
+
+
+```
+
+
 # Quick recap
 
 - Filter return a Array requires iterate:
