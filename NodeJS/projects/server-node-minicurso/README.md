@@ -140,13 +140,40 @@ Now just run: `npm run dev` e concluimos a criação do servidor http nativo sem
 
 - single command install typescript, @types and tsx: `npm i typescript @types/node tsx -D`
 
-### HTTPie install on Windows.
+## HTTPie install on Windows.
 
-### REST Client
+## REST Client
 
 create a whatver.http or client.http to send methods, existem diversas opções para testar uma API
 
-### Prisma
+
+## HTTP Methods
+
+- https://http.cat
+
+### different methods of sending data in web requests
+
+```js
+// Sending Body Object:  When sending data in the body of a request,
+// typically used in POST requests, you format the data as a JSON object.
+
+{
+id: 1
+}
+
+
+// Path Parameters
+send path params: url.com/api/:id
+
+// Query Parameters:
+send router query params: `url.com?id=1`
+They come after the `?` character in the URL and are separated by `&` if there are multiple parameters
+
+```
+
+
+## Prisma
+
 - Mais sobre [Prisma here](https://www.youtube.com/watch?v=uApCW1gcpdE)
 
 - install prima `npm i prisma -D` 
@@ -164,13 +191,13 @@ create a whatver.http or client.http to send methods, existem diversas opções 
 
 - Acessar os dados
   - `npm i @prisma/client` - não é dependencia de desenvolvimento e sim de produção
-  - **import { PrismaClient } from '@prisma/client'** em server.ts
+  - **import { PrismaClient } from '@prisma/client'** em `server.ts`
     `npx prisma migrate reset`
 
 Open HTTPie and `http://localhost:3333/memories`
 
 
-# Manage environment variables
+## ENV - Manage environment variables
 
 - Node 20+ ? [checkout built-in command](https://github.com/privatenumber/tsx/discussions/470)
 - https://www.npmjs.com/package/dotenv#-install
@@ -178,7 +205,7 @@ Open HTTPie and `http://localhost:3333/memories`
 ```js
 npm install dotenv
 
-Create a .env file in the root of your project directory. This file will contain your environment variables in the format KEY=VALUE
+Create a `.env` file in the root of your project directory. This file will contain your environment variables in the format KEY=VALUE
 
 import * as dotenv from 'dotenv';
 dotenv.config();
@@ -195,7 +222,7 @@ console.log(NOME ===  'GERALDO')
 
 ```
 
-# Framework: fastify
+## Framework: fastify
 
 > microframework `npm i fastify`
 
