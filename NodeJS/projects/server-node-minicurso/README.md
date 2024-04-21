@@ -5,11 +5,14 @@
 
 - [https://www.youtube.com/watch?v=W37Va1q9l-I](https://www.youtube.com/watch?v=W37Va1q9l-I)
 
-## Ultis:
 
 - `npx` - vem instalado com o node é uma forma de executar binario das depedencias instaladas
 
 ## Start Node project server:
+
+<details>
+<summary>open</summary>
+
 
 - mkdir create a directory:
 - cd <directory>
@@ -79,6 +82,8 @@ function startServer(htmlContent) {
 }
 ```
 
+</details> 
+
 ## watch a file:
 
 `node --watch .\server.js`
@@ -110,6 +115,10 @@ Now just run: `npm run dev` e concluimos a criação do servidor http nativo sem
 
 > node é o único que não entende Typescript por padrão.
 
+<details>
+<summary>open</summary>
+
+
 - **typescript**
 
   - `npm i typescript -D`
@@ -140,18 +149,14 @@ Now just run: `npm run dev` e concluimos a criação do servidor http nativo sem
 
 - single command install typescript, @types and tsx: `npm i typescript @types/node tsx -D`
 
-## HTTPie install on Windows.
-
-## REST Client
-
-create a whatver.http or client.http to send methods, existem diversas opções para testar uma API
+</details>
 
 
 ## HTTP Methods
 
 - https://http.cat
 
-### different methods of sending data in web requests
+### Different methods of sending data in web requests
 
 ```js
 // Sending Body Object:  When sending data in the body of a request,
@@ -360,7 +365,6 @@ https://github.com/turkerdev/fastify-type-provider-zod
 `npm install fastify-type-provider-zod`
 
 
-
 # Cors
 
 - `npm i @fastify/cors`
@@ -380,8 +384,15 @@ https://github.com/turkerdev/fastify-type-provider-zod
 - `npm i dotenv -D`
 
 
-# extentions
+# Utils 
+> extentions and apps:
 
 `min Theme` theme
 `symbols` icones
 `ESLint` - força a pradronização, busca por padrão no code eg: pontoVirgula
+
+## HTTPie install on Windows.
+
+## REST Client
+
+create a whatver.http or client.http to send methods, existem diversas opções para testar uma API
