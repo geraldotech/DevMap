@@ -268,41 +268,41 @@ p.addEventListener('click', function (e) {
 ```
 
 - Target custom Attr
-  <a id="target-custom-attr-data"></a>
+  <a id="target-custom-attr-data"></a>  
+  - [DOMStringMap o `dataset` ](./Learn-DOM-Manipulation/DOMStringMap/)
+  - [Use_data_attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 
-  [Data](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+  - using [data] and [itemtype]
 
-  - [data] and [itemtype]
+  ```js
+  //👉 Target "data";
+  ;<p id="bar" data="eu">
+    TypeScript
+  </p>
 
-```js
-//👉 Target "data";
-;<p id="bar" data="eu">
-  TypeScript
-</p>
+  //js
+  const p = document.querySelector('p')
 
-//js
-const p = document.querySelector('p')
+  console.log(p.getAttribute('data')) //eu
+  console.log(e.target.getAttribute('data')) //eu
+  console.log(e.target.attributes.data.value) //get value of Attr data
 
-console.log(p.getAttribute('data')) //eu
-console.log(e.target.getAttribute('data')) //eu
-console.log(e.target.attributes.data.value) //get value of Attr data
+  //👉 e.Target "itemtype";
+  ;<li class="menu" itemtype="tip">
+    Steak
+  </li>
+  console.log(e.target.attributes.itemtype.value) //tip
 
-//👉 e.Target "itemtype";
-;<li class="menu" itemtype="tip">
-  Steak
-</li>
-console.log(e.target.attributes.itemtype.value) //tip
-
-//👉 attributes
-<div>normal div</div>
-<div include='valor'>div attribute</div>
+  //👉 attributes
+  <div>normal div</div>
+  <div include='valor'>div attribute</div>
 
 
-const div = document.querySelectorAll('div')
-console.log(div[0].attributes.length) // 0
-console.log(div[1].attributes.include.value) // valor
+  const div = document.querySelectorAll('div')
+  console.log(div[0].attributes.length) // 0
+  console.log(div[1].attributes.include.value) // valor
 
-```
+  ```
 
 - Target vs currentTarget
   <a id="target-vs-currenttarget"></a>

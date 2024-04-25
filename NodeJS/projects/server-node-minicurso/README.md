@@ -159,6 +159,7 @@ Now just run: `npm run dev` e concluimos a criação do servidor http nativo sem
 ### Different methods of sending data in web requests
 
 ```js
+- request.body
 // Sending Body Object:  When sending data in the body of a request,
 // typically used in POST requests, you format the data as a JSON object.
 
@@ -167,12 +168,19 @@ id: 1
 }
 
 
+- request.params
 // Path Parameters
 send path params: url.com/api/:id
 
+- query.params
 // Query Parameters:
 send router query params: `url.com?id=1`
 They come after the `?` character in the URL and are separated by `&` if there are multiple parameters
+
+
+
+
+
 
 ```
 

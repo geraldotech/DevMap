@@ -68,19 +68,7 @@ script.src = "file.js";
 
 Bye.removeAttribute("classe");
 
-// data-test DOMStringMap
-console.log(Bye.dataset); // no DOM:  data-test o return: test: "content
-/*
-data-long-beach="california" return longBeach:'california'
-*/
 
-// Access the data
-console.log(Bye.dataset.test); //this is a test
-console.log(Bye.dataset.longBeach); //california
-
-//Setting data direct in JS
-
-Bye.dataset.novoName = "Costa"; //DOM will updated data-novo-name="Costa"
 
 //ClassList and remove
 Bye.classList.add("novaclasse");
