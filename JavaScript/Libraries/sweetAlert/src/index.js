@@ -88,3 +88,27 @@ function ToggleClassTest(){
     }
   });
 }
+
+
+function checkOk(){
+  
+  // Trigger SweetAlert dialog
+  Swal.fire({
+    title: 'SweetAlert!',
+    text: 'This is a SweetAlert dialog.',
+    icon: 'success',
+    confirmButtonText: 'OK'
+}).then((result) => {
+    // Check if the user clicked the "OK" button
+    if (result.isConfirmed) {
+        // Call your function here
+        myFunction();
+    }
+});
+
+// Define your function to be executed after confirmation
+function myFunction() {
+// Code to execute after the user clicks "OK"
+console.log('User clicked OK');
+}
+}

@@ -164,7 +164,10 @@ original nginx
 restart
 `sudo service nginx restart`
 
-## VPS in General [Updated]
+
+
+<details>
+<summary>VPS in General [Updated]</summary>
 
 Nginx as reverse intercept connection on specific ports and  redirect them to different destinations based on your configuration.
 
@@ -219,6 +222,9 @@ server {
 - if default in `/etc/nginx/sites-enabled/` exists: `mv default to default2`
 - create symbolic link `ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/`
 
+</details>
+
+
 <details>
 <summary>How setup a new site</summary>
 
@@ -227,7 +233,7 @@ nano /etc/nginx/sites-available/crudnodesql.conf
 
 create e new conf
 server {
-    server_name 143.198.232.51/crudnodesql  ; # Adicionar o seu domínio, tanto sozinho quanto com www.
+    server_name 143.198.232.51:4000  ; # Adicionar o seu domínio, tanto sozinho quanto com www.
     location / {
         proxy_pass http://localhost:4000; # Supondo que sua API esteja rodando na porta 4000
         proxy_http_version 1.1;
