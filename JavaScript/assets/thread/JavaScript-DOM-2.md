@@ -38,6 +38,9 @@
 - [Learn-DOM-Manipulation](./Learn-DOM-Manipulation/)
 - WebAPIs
   - Element: [nextElementSibling](#nextelementsibling)
+  - parentElement: [parentElement](#parentElement)
+  - eventtargetclosestclass: [eventtargetclosestclass](#eventtargetclosestclass)
+
 
 <hr>
 
