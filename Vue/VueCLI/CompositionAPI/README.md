@@ -5,12 +5,15 @@
 This Examples and docs is a new context how to do documentation and examples in same time
 [x] each component and folder is a semantic name of subject e.g: `computed.vue` `LifeCycle`
 
-- ## [Composition API vs DataAPI](./API.md)
-- Collection of Essential Vue Composition Utilities => https://vueuse.org/functions.html
--  enable JSX syntax => 
+## Guides
 
-## Examples Guide
+- ### [Composition API vs DataAPI](./API.md)
+- Collection of Essential Vue Composition Utilities => https://vueuse.org/functions.html
 
 - getCurrentInstance alternative for `this.$parent` in Vue 3 => [defineExpose.value](./masterclass/src/components/defineExpose.vue)
-- Render function  [props, slots] => [RenderFn docs](./masterclass/src/components/RenderFunction/README.md)
-- Props, Slots, ref, reactive  => [CompositionAPI/APIs/API_setup_Export_return.vue](https://github.com/geraldotech/DevMap/blob/main/Vue/VueCLI/CompositionAPI/APIs/API_setup_Export_return.vue) and [CompositionAPI/masterclass/src/components/Props_Slots](https://github.com/geraldotech/DevMap/tree/main/Vue/VueCLI/CompositionAPI/masterclass/src/components/Props_Slots)
+- Render function +  enable JSX syntax  [props, slots] => [RenderFn docs](./masterclass/src/components/RenderFunction/README.md)
+
+
+- [ref and reactive](./ref-reactive.md)
+- Props, Slots, ref, toRefs  => [CompositionAPI/APIs/API_setup_Export_return.vue](./masterclass/src/components/APIs/API_export_default_setup_return.vue)
+- Props Slots Emit (inclues props setup) => [Props Slots Emit](./masterclass/src/components/Props_slots_emit/)
