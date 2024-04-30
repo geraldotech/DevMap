@@ -8,13 +8,27 @@
   <form method="GET" action="" id="loginForm">
     <input type="text" name="user" value="geraldo" placeholder="name">
     <input type="text" name="pwd" value="123" placeholder="pwd">
-    <select name="selected" id="">
-      <option value=""></option>
-      <option value="1" name=''>One</option>
-      <option value="2" name=''>Two</option>
+    <select name="selected" id="selectCat">
+       <option value="Android" name="Android" selected>Android</option>
+  <option value="Music" name="Music">Music</option>
+  <option value="Downloads" name="Downloads">Downloads</option>
+  <option value="Uncategorized" name="Uncategorized">Uncategorized</option>
     </select>
     <button>Login</button>
-  </form><!--  -->
+  </form>
+
+  <hr>
+
+  <h1>FormsName with selected</h1>
+  <form name="Formsman" id="test001">
+    <input type="text" name="yourname">
+    <select name="escola" id="">
+      <option value=""></option>
+      <option value="1" name='one'>one</option>
+      <option value="2" name='two'>two</option>
+    </select>
+    <button>Send now</button>
+  </form>
   
   <script src="./formDataEvent.js"></script>
 </body>
