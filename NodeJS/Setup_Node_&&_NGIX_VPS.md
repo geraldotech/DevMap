@@ -164,30 +164,69 @@ original nginx
 restart
 `sudo service nginx restart`
 
-
-
 <details>
-<summary>VPS in General [Updated]</summary>
+<summary>VPS in General [Updated 2024]</summary>
 
-Nginx as reverse intercept connection on specific ports and  redirect them to different destinations based on your configuration.
+## Nginx 
+> as reverse intercept connection on specific ports and redirect them to different destinations based on your configuration.
+
+1 - install nginx: `apt install nginx`
+
+2 - open config nginx: `vi /etc/nginx/sites-available/default` or create your site conf `vim /etc/nginx/sites-enabled/appbr.conf`
+> if default in `/etc/nginx/sites-enabled/` exists: `mv default to default2`
+
+```js
+   server {
+        server_name apibr.gpdev.tech;
+         location / {
+       proxy_pass http://localhost:3001; #whatever port your app runs on
+
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+         }
+    }
+
+
+
+```
+
+3 - service is listening on specific port will be served by nginx, don't need specific folder
+
+- create symbolic link `ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/`
+
+4 - test nginx config `nginx -t`
+
+
+
+## Node 18
+
+-  Install Node 18 https://www.digitalocean.com/community/tutorials/install-uninstall-nodejs-ubuntu
+
+
+## Github
 
 - 1 - push to github
-- 2 - VPS install git and node
-  - `apt install git`
-  - `apt install npm`
+- 2 - VPS install git `apt install git`
 - 3 - clone git repo - eg /var/www/html/myproject
 - 4 - install dependences: `node install`
 - 5 - run: `node app.js`
-- 6 - deixar sempre rodando pm2, gerenciador de processos para o runtime JavaScript Node.js: `npm install pm2 -g`
+
+
+## pm2 
+
+gerenciador de processos para o runtime JavaScript Node.js: `npm install pm2 -g`
 
   - inside project: `pm2 start app.js --name 'My project'`
   - list all projects: `pm2 list`
   - restart by project process ID (PID) of the application: `pm2 restart <pid>`
   - run a npm run dev app `pm2 start "npm run dev" --name crudsqlite`
 
-- 7 - you can access your project in: <IP>:yourport
+  - you can access your project in: <IP>:yourport or your domain name
 
-### how to update project?
+### Updating project
 
 ```js
 pm2 stop <pid>
@@ -199,31 +238,7 @@ npm2 start <pid>
 
 ### Setup a domain name with a web server
 
-setup a domain name to your vps ipaddress
-
-- install nginx: `apt install nginx`
-- open config nginx: `vi /etc/nginx/sites-available/default`
-- service is listening on specific port will be served by nginx, don't need specific folder
-
-```js
-server {
-    server_name api.gpdev.tech www.api.gpdev.tech; # Adicionar o seu domínio, tanto sozinho quanto com www.
-    location / {
-        proxy_pass http://localhost:3001; # Supondo que sua API esteja rodando na porta 3001
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-}
-}
-```
-
-- if default in `/etc/nginx/sites-enabled/` exists: `mv default to default2`
-- create symbolic link `ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/`
-
 </details>
-
 
 <details>
 <summary>How setup a new site</summary>
@@ -262,16 +277,10 @@ npm install
 
 npm run dev
 
-
 Now access: yours routers:
-  http://143.198.232.51:4000/
+http://143.198.232.51:4000/
 
-  http://143.198.232.51:4000/pessoas
-
-
-
-
-
+http://143.198.232.51:4000/pessoas
 
 </details>
 
