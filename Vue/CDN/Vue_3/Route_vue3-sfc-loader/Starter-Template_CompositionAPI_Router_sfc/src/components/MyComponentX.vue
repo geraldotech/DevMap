@@ -1,40 +1,9 @@
 <script>
 import { h, ref, resolveComponent, defineComponent, onMounted, getCurrentInstance, onBeforeMount, onBeforeUnmount } from 'vue'
 import Cardcat from './cardcat.vue'
-import MyTemplatejx from './MyTemplate.jsx'
 const MyAsyncComponent = Vue.defineAsyncComponent(() => Promise.resolve(MyTemplate));
 
 //const MyTemplate = () => loadModule('./src/components/MyTemplate.js', options)
-
-console.log(MyTemplatejx)
-
-console.log(MyAsyncComponent)
-//console.log(Cardcat.render()) get details
-const options = {
-  moduleCache: { vue: Vue },
- // babel_ParserPlugin: ['@vue/babel-plugin-jsx', window['@vue/babel-plugin-jsx']],
-  /* getFile: () => `<template><h2>vue3-sfc-loader esm version</h2>
-        </template>`,  */
-  async getFile(url) {
-    const res = await fetch(url)
-    if (!res.ok) {
-      throw Object.assign(new Error(res.statusText + ' ' + url), { res })
-    }
-    return {
-      getContentData: (asBinary) => (asBinary ? res.arrayBuffer() : res.text()),
-    }
-  },
-  addStyle: () => {},
-  log: (...args) => console.log(...args),
-}
-
-function load(path) {
-  return window['vue3-sfc-loader'].loadModule(path, options)
-}
-
-
-
-
 
 
 
@@ -126,9 +95,9 @@ export default {
   <!--     <MyTemplate /> -->
     </p>
 
-    <p>
+  <!--   <p>
       <MyAsyncComponent/>
-    </p>
+    </p> -->
 
   </div>
 </template>

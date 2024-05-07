@@ -1,4 +1,4 @@
-import { version, createApp, ref, reactive } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+import { version, createApp, ref, reactive, onMounted  } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
 console.log(version)
 
@@ -15,6 +15,18 @@ const app = createApp({
     function handlerClick() {
       console.log(`hello`)
     }
+
+
+    onMounted(() => {
+      fetch('http://localhost:3333/posts', {
+        headers:{
+          psw: '9090',
+          Authorization: 'Bearer GERALDODEVGPDEV'
+        },
+      }).then(r => r.json()).then(data => {
+        console.log(data)
+      })
+    })
 
     return {
       message,
