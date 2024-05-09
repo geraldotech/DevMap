@@ -136,38 +136,12 @@ Display real time process:
 
 Stop `pm2 stop index.js`
 
-# Nginx reverse
-
-`sudo vim /etc/nginx/nginx.conf`
-
-```shell
-    server {
-         location / {
-                proxy_pass http://localhost:3000/; #whatever port your app runs on
-
-                proxy_http_version 1.1;
-                proxy_set_header Upgrade $http_upgrade;
-                proxy_set_header Connection 'upgrade';
-                proxy_set_header Host $host;
-                proxy_cache_bypass $http_upgrade;
-         }
-    }
-
-```
-
- <img src="./assets/img00012.PNG" style="width:60%;">
-
-original nginx
-
-  <img src="./assets/img00013.PNG" style="width:60%;">
-
-restart
-`sudo service nginx restart`
+# Nginx 
 
 <details>
-<summary>VPS in General [Updated 2024]</summary>
+<summary>Nginx  reverse VPS in General [Updated 2024]</summary>
 
-## Nginx 
+
 > as reverse intercept connection on specific ports and redirect them to different destinations based on your configuration.
 
 1 - install nginx: `apt install nginx`
@@ -241,7 +215,7 @@ npm2 start <pid>
 </details>
 
 <details>
-<summary>How setup a new site</summary>
+<summary>How setup a new site server-blocks-virtual-hosts</summary>
 
 ```js
 nano /etc/nginx/sites-available/crudnodesql.conf
@@ -288,3 +262,5 @@ http://143.198.232.51:4000/pessoas
 
 - depende muito da sua distro checkout => https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
 - restart nginx - https://phoenixnap.com/kb/nginx-start-stop-restart
+
+- ufw [firewall](https://linuxize.com/post/how-to-setup-a-firewall-with-ufw-on-ubuntu-18-04/#open-port-443-https)
