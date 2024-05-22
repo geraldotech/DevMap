@@ -88,7 +88,7 @@ E quando mudamos o flex-wrap para wrap, mantemos o padrão do flex-direction que
 <details>
 <summary> <a id="aligncontent">align-content</a></summary>
 <p>align-content: works with flex-wrap: wrap;
-sobrepoe o align-self <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_align-content">REF</a> basicamente diz o alinhamento que deve ser quando o wrap acontecer, open <a href="https://geraldotech.github.io/DevMap/CSS/pages/Flexbox/by_gmap/flex_contex.html#aligncontent">this example</a> diminua a janela e observe.
+sobrepoe o align-self <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_align-content">REF</a> basicamente diz o alinhamento que deve ser quando o wrap acontecer, open <a href="https://git.geraldox.com/CSS/pages/Flexbox/by_gmap/flexbox_contex.html#aligncontent#aligncontent">this example</a> diminua a janela e observe.
 
 </p>
 <ol>

@@ -146,6 +146,20 @@ Stop `pm2 stop index.js`
 
 1 - install nginx: `apt install nginx`
 
+
+# nginx purge
+
+```js
+
+sudo apt remove --purge nginx*
+sudo apt autoremove
+sudo apt update
+sudo apt install nginx
+systemclt restart nginx
+service nginx restart
+
+```
+
 2 - open config nginx: `vi /etc/nginx/sites-available/default` or create your site conf `vim /etc/nginx/sites-enabled/appbr.conf`
 > if default in `/etc/nginx/sites-enabled/` exists: `mv default to default2`
 
@@ -162,8 +176,6 @@ Stop `pm2 stop index.js`
                 proxy_cache_bypass $http_upgrade;
          }
     }
-
-
 
 ```
 
@@ -258,9 +270,51 @@ http://143.198.232.51:4000/pessoas
 
 </details>
 
+<details>
+<summary>Setting default website and ssl</summary>
+
+- vim /etc/nginx/sites-available/default
+
+> no defaut acima de  #Virtual Host configuration:
+
+```js
+   server {
+        server_name apibr.gpdev.tech www.apibr.gpdev.tech;
+         location / {
+       proxy_pass http://localhost:4444; #whatever port your app runs on
+
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+         }
+    }
+```
+
+- Não precisa de ln -s because default already exists in /etc/nginx/site-enabled/default
+- nginx -t
+
+- restart nginx
+
+
+
+</details>
+
 ## certbot
 
 - depende muito da sua distro checkout => https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
+
+> delete
+snap remove certbot
+ rm -rf /etc/letsencrypt/
+/snap/bin/certbot
+ rm -rf /usr/bin/certbot
+
+// search
+ dpkg -l *certbot*
+
 - restart nginx - https://phoenixnap.com/kb/nginx-start-stop-restart
 
-- ufw [firewall](https://linuxize.com/post/how-to-setup-a-firewall-with-ufw-on-ubuntu-18-04/#open-port-443-https)
+## ufw [firewall](https://linuxize.com/post/how-to-setup-a-firewall-with-ufw-on-ubuntu-18-04/#open-port-443-https)
+

@@ -18,7 +18,7 @@ const app = createApp({
 
 
     onMounted(() => {
-      fetch('http://apibr.gpdev.tech/posts', {
+      fetch('https://api.geraldox.com/posts', {
         headers:{
           psw: '9090',
           Authorization: 'Bearer GERALDODEVGPDEV'
