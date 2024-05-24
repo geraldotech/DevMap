@@ -2,7 +2,7 @@
 
 ### CDN
 
-` <script src="../src/snippet-x.js" defer></script>`
+`<script src="https://git.geraldox.com/JavaScript/Clipboard/copy-snippet_pre_webComponents-pre/src/snippet-x.js" defer></script>`
 
 ### Basic Usage:
 

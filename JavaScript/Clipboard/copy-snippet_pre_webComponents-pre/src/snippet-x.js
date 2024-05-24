@@ -115,7 +115,7 @@ class snipped extends HTMLElement {
   copySnipped() {
     /* pre custom colors starts */
     const ElementAttr = this.shadowRoot.querySelector('.clipboard pre')
-    const colorName = ElementAttr.getAttributeNames()
+    const colorName = ElementAttr?.getAttributeNames()
 
     /*  v1 index[1] because i[0] is name attr */
     /*   ElementAttr.style.color = colorName[1] ? colorName[1] : '' */
