@@ -14,6 +14,16 @@
         <option value="Moto"></option>
         <option value="Airplane"></option>
       </datalist>
+
+      <hr>
+
+      <label for="search2">Select a category or create one</label>
+      <input type="text" id="search2" list="search-options2">
+      <datalist id="search-options2">
+      </datalist>
+  
+      <button id="getlistcurrent">getlistcurrent</button>
+  
     </main>
     <script>
       const inputList = document.querySelector("input");
@@ -33,6 +43,51 @@
           alert(e.value);
         }
       }
+
+      /* ==================== */
+const select = document.querySelector('#search2')
+const getlistcurrent = document.querySelector("#getlistcurrent")
+const searchInput  = document.querySelector("#search2")
+
+getdata()
+
+async function getdata() {
+  const req = await fetch('https://api.geraldox.com/posts/categories')
+  console.log(req)
+
+  if(req.ok){
+  const data = await req.json()
+ showList(data)
+ showDatList(data)
+  }
+ }
+
+
+
+function showList(arr){
+  select.innerHTML = arr.map((val) => {
+  return `<option>${val.category}</option>`
+})
+}
+
+const datalist = document.querySelector("#search-options2")
+
+function showDatList(arr){
+  datalist.innerHTML = arr.map((val) => {
+  return `<option value="${val.category}">`
+}).join(' ')
+}
+
+
+/* searchInput.onchange = function(e) {
+    console.log(e.target.value)
+} */
+
+getlistcurrent.onclick = verifica;
+
+function verifica(e){
+    console.log('onclick', searchInput.value)
+}
     </script>
   </body>
 </html>
