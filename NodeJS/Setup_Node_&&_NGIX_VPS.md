@@ -315,6 +315,7 @@ snap remove certbot
  dpkg -l *certbot*
 
 - restart nginx - https://phoenixnap.com/kb/nginx-start-stop-restart
+- analyze ssl test - https://www.ssllabs.com/ssltest/analyze.html?d=api.geraldox.com&latest
 
 ## ufw [firewall](https://linuxize.com/post/how-to-setup-a-firewall-with-ufw-on-ubuntu-18-04/#open-port-443-https)
 
