@@ -1,0 +1,38 @@
+body {
+    font-size: 15pt;
+}
+
+input{
+  border:none;
+  border: 1px solid;
+  padding:8px 10px;
+}
+
+.info{
+  border: 1px solid;
+  anchor-name: --i-btn;
+}
+
+ [popover] {
+   anchor-default: --i-btn;
+   bottom: anchor(bottom);
+   left: anchor(left);
+   right: anchor(right);
+   translate: -0%;
+   margin: 0.25rem 0;
+   xxfont-size: 14px;
+ }
+ 
+ :xpopover-open {
+   xwidth: 50px;
+   xheight: 50px;
+   margin: 0;
+   font-size: 8px;
+ }
+ .red{
+   color:red;
+ }
+ 
+.green {
+   color: green
+ }

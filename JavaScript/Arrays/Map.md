@@ -40,9 +40,7 @@ cidade:"Palmeira",
 }];
 
 let x = pessoa.map((value) => {
-return {
-value, "Active":true,
-}
+return {value, "Active":true,}
 })
 
 // contador com #mapcontador
@@ -59,6 +57,18 @@ const num = n.map(function (int) {
   return +int.replace('a ', '') // ou  return Number(int.replace("a ",""));
 })
 console.log(num)
+
+// novo arr de obj with custom Keys
+const arr = [{createdAt: "2024-06-20",dataFim: "2024-07-31", dataInicio: "2024-06-19"}]
+
+const arrNovo = arr.map(({createdAt, dataFim}) => {
+  return {"Criado em": createdAt, "Data Final": dataFim}
+})
+
+console.log(arrNovo); // [ { 'Criado em': '2024-06-20', 'Data Final': '2024-07-31' } ]
+
+
+
 
 ```
 
