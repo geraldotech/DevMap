@@ -530,12 +530,33 @@ console.log(target.nextElementSibling) // <li>Anti Hero</li>
   <p>foo</p>
 </div>
 
-const btn = document.querySelectorAll('div') btn.forEach((val) =>
-val.addEventListener('click', function (e) { console.log(e.target.parentElement)
+
+<label for="">
+  <input type="checkbox" id="mycheck">
+</label>
+
+
+
+const btn = document.querySelectorAll('div') 
+
+btn.forEach((val) =>
+val.addEventListener('click', function (e) { 
+  
+console.log(e.target.parentElement)
 
 const btn = e.target.parentElement.querySelector('button') // <div> </div>
 console.log(btn.nextElementSibling) // <p>foo</p>
+
+console.warn(event.target.closest('div') // <div> </div>
+)
 }) )
+
+// closest and parentElement
+const mycheck = document.querySelector('#mycheck')
+mycheck.onchange = function(){
+  console.warn(event.target.closest('label')) // <label></label>
+  console.warn(event.target.parentElement) // <label></label>
+}
 ```
 - ##  event.target.closest('class')
 
