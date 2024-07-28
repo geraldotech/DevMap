@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox context</title>
     <style>
       :root {
         color-scheme: dark;
@@ -106,10 +107,20 @@
         font-size: 2rem;
         color: coral;
       }
+
+      figure:has(img){
+        max-width: 500px;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
-    <h1 class="title">Flex-direction</h1>
+    <h1 class="title">Flex direction</h1>
+
+    <figure>
+      <img src="./assets/flexcats.png" width="100%" alt="">
+    </figure>
+
     <h1>row</h1>
     <section class="container">
       <div>1</div>

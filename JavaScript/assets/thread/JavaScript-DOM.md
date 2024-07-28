@@ -39,7 +39,6 @@
 
 Permite executar `snippets of code` no navegador, muito usado para testar a saída de códigos, o mais usado é o .log porém existem outros.
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/console" target="_blank">Todos os tipos de consoles</a>
 
 e.g básico
 
@@ -51,6 +50,8 @@ console.log(person) //log
 console.dir(person) //disclosure direto ao ponto, melhor para leitura
 console.table(person) // beautiful way to render tables
 ```
+- <a href="https://developer.mozilla.org/en-US/docs/Web/API/console" target="_blank">Todos os tipos de consoles</a>
+- <a href="./assets/thread/Consoles">Consoles by GP</a> -  [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Consoles/index.html)
 
 ## window and document
 

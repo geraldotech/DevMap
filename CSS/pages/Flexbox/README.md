@@ -9,7 +9,7 @@
 - [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [origamid](https://origamid.com/projetos/flexbox-guia-completo/)
 - [https://flexbox.malven.co/](https://flexbox.malven.co/)
-- [Flexbox contex by gmap](./by_gmap/flexbox_contex.html) | [Live](https://geraldotech.github.io/DevMap/CSS/pages/Flexbox/by_gmap/flexbox_contex.html)
+- [Flexbox context by gmap](./by_gmap/flexbox_context.html) | [Live](https://geraldotech.github.io/DevMap/CSS/pages/Flexbox/by_gmap/flexbox_context.html)
 - [more check folder] »» `DevMap\CSS\pages\FlexBox`
 
 # Properties
