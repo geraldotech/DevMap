@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>queryParams</title>
+    <script
+      src="./src/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="./src/styles.css"
+      type="text/css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <a href="?page=1">page 1</a>
+
+    <p>
+      <a href="?page=1&size=10">?page=1&size=10</a>
+    </p>
+
+    <p>
+      <button onclick="setNewURLBrowser()">setNewURLBrowser</button>
+    </p>
+
+    <p>
+      <button onclick="updateQueryParam('key', 'valor')">updateQueryParam</button>
+    </p>
+    <p>
+      <button onclick="cleanQueryParams()">cleanQueryParams</button>
+    </p>
+
+
+  </body>
+</html>

@@ -50,9 +50,16 @@ console.log(wpp.search);
 
 // adiciona version=2 na URL original
 const url5 = new URL('https://example.com?foo=1&bar=2');
+
+
+// set parms when browser is loaded
 const params5 = new URLSearchParams(location.search);
-params5.set('version', 2.0);
+params5.set('version', 3.0);
 window.history.replaceState({}, '', `${location.pathname}?${params5}`);
+
+const paramsAtuais = new URLSearchParams(window.location.search)
+
+console.warn('query atual =>', paramsAtuais.get('version'))
 
 
 
