@@ -175,6 +175,30 @@ document.addEventListener("mousemove", function(event){
     if(event.clientX === 50) alert('50!');
     get("OutDataY").innerHTML = `Y: ${event.clientY}`;
 });
+
+
+// html
+<div id="instance1" data-code="x">A</div>
+<div id="instance2" data-code="y" data-test='1212'>B</div>
+
+// js
+
+
+// chave de ids
+const instacens = [1,2,3]
+instacens.forEach((id) => { 
+const div = document.querySelector(`#instance${id}`)
+// Check if the element exists
+if(div){
+div.addEventListener('click', function(){
+
+  if(event.target.dataset.test){
+  console.log(event.target.dataset.test)
+  }
+  //console.log(event.target.attributes.data.value)
+  })
+}
+})
 ```
 
 - ### addEventListener with event.target
