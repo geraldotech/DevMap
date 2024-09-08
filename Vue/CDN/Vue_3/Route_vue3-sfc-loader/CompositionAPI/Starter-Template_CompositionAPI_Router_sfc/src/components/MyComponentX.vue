@@ -5,8 +5,6 @@ const MyAsyncComponent = Vue.defineAsyncComponent(() => Promise.resolve(MyTempla
 
 //const MyTemplate = () => loadModule('./src/components/MyTemplate.js', options)
 
-
-
 export default {
   components: {
     Cardcat,

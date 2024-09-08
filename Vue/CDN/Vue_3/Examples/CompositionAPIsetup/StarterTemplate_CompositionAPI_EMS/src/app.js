@@ -14,23 +14,20 @@ export default createApp({
   },
   setup() {
     const message = ref('Hello')
-  
-  return { message }
+
+    return { message }
   },
 
-  data() {
+  /* data() {
     return {
-      gpx: 'GeraldoCostaX'
+      gpx: 'GeraldoCostaX',
     }
-  },
-  template: `
-  <h1>vuejs {{gpx}}</h1>
+  }, */
+  template:`
   <p>{{message}}</p>
   <test abc="ABC"/>
   <Heading title="Welcome"/>
-  <Counter/> 
-
-  `,
+  <Counter/>`,
 })
   .component('test', Test)
   .mount('#app')

@@ -1,4 +1,4 @@
 const myComponent = {
-  template: '<div>This is my component 22</div>'
+  template: '<div>MyComponent.js</div>',
 }
 export default myComponent
