@@ -1,7 +1,5 @@
-<h1 align="center">Flexbox
+<h1 align="center">Become a **Flexbox ninja** now!
 </h1>
-
-## Become a **Flexbox ninja** now!
 
 #### Best links:
 
@@ -10,6 +8,8 @@
 - [origamid](https://origamid.com/projetos/flexbox-guia-completo/)
 - [https://flexbox.malven.co/](https://flexbox.malven.co/)
 - [Flexbox context by gmap](./by_gmap/flexbox_context.html) | [Live](https://geraldotech.github.io/DevMap/CSS/pages/Flexbox/by_gmap/flexbox_context.html)
+- Games
+  - [flexboxadventure](https://codingfantasy.com/games/flexboxadventure/play)
 - [more check folder] »» `DevMap\CSS\pages\FlexBox`
 
 # Properties
