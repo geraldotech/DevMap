@@ -9,20 +9,27 @@ body:has(#toggle[type='checkbox']:checked) .mytoggle {
 }
 ```
 
-- nesting:
+- Nesting:
 
 ```css
-:has(#opt:checked){
+:has(#opt:checked) {
   .sec1 {
     color: red;
     font-family: Verdana;
   }
 }
 
+/* Nesting */
+body:has(#test[type='checkbox']:checked) {
+  background: rgb(170, 30, 30);
+  & .divroot {
+    border: 1px solid rgb(18, 7, 141);
+  }
+}
 
 /* radio button */
-
-.optx, .opty{
+.optx,
+.opty {
   display: none;
 }
 
@@ -33,11 +40,32 @@ body:has(#toggle[type='checkbox']:checked) .mytoggle {
 /* se for aninhar mais seletores fazer assim */
 :has(#opty:checked) {
   color: red;
-  h2{
+  h2 {
     color: red;
   }
   &.sec1 {
-   font-size: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Multiple Nesting */
+body:has(#test[type='checkbox']:checked) {
+  background: rgb(170, 30, 30);
+
+  .divroot {
+    border: 1px solid rgb(18, 7, 141);
+
+    section {
+      background-color: purple;
+    }
+  }
+  span {
+    font-size: 2rem;
+    display: none;
+  }
+  .foo {
+    display: flex;
+    justify-content: space-between;
   }
 }
 

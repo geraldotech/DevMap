@@ -1,0 +1,29 @@
+* {
+  color-scheme: dark;
+  --color: #1f242a;
+  --size: 4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* mobile first */
+div p {
+  color: red;
+  /* desktop */
+  @media (width <= 500px) {
+    color: royalblue;
+  }
+}
+
+/* desktop */
+h1 {
+  color: aquamarine;
+
+  /* mobile first */
+  @media (max-width: 500px) {
+    color: blue;
+  }
+  /* smart tv */
+  @media (min-width: 1500px) {
+    color: pink;
+  }
+}

@@ -137,14 +137,22 @@ body:has([type="checkbox"]) {
   --bkbody: red;
 }
 
+// checked html  + body
 html:has([type="checkbox"]:checked) body   {
   background: dodgerblue;
 }
+
+// body only
+body:has(input[type='checkbox']:checked){
+  background: rebeccapurple;
+} 
 ```
 
 - Scopo Global, se no `body` tem algum checkbox checked then...
 
 ```css
+
+// altera o valor da variável afetando todos os seletores que fazem uso.
 :root {
   --bkbody: rgb(33, 188, 199);
 }
@@ -159,7 +167,7 @@ label {
 
 - Global #id
 
-  > by gmap se no body tem esse #id com checkbox: checked então mude a var mesmo que os elements não esteja encapsulado no respectivo #id
+  > by gmap se no body tem esse #id com checkbox: checked então mude o valor da variável mesmo que os elements não estejam encapsulado no respectivo #id
 
 ```css
 /* NO SPACE BETWEEN ID AND [] */
