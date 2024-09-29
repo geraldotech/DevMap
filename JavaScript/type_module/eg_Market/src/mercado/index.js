@@ -8,20 +8,16 @@ console.log(limpeza)
 console.log(pessoa.responsavel.nome)
 
 const estoque = document.querySelector('#estoque')
-estoque.innerHTML += 
-`
+estoque.innerHTML += `
 <li>${bebidas}</li>
 <li>${limpeza}</li>
 `
 
-
-
 /* Custom import */
 const estoqueDados = document.getElementById('estoqueDados')
-for(let person in pessoa.responsavel){
+for (let person in pessoa.responsavel) {
   estoqueDados.innerHTML += `<li>${person} - ${pessoa.responsavel[person]}</li>`
 }
-
 
 /* NA DOM CADA OBJECT TEM UM ID */
 /* Named exports */
@@ -29,7 +25,6 @@ empresa.innerText = info.Empresa
 /* General import */
 cnpj.innerText = info.Cnpj
 since.innerText = info.Since
-
 
 /* NA DOM APENAS UMA UL que recebera os dados  */
 const company = document.querySelector('#Company')
@@ -40,7 +35,7 @@ for (let i in info) {
   company.append(li)
 }
 
-
-
 // /* LI com id */
-empresax.innerText = 'Empresa:' +  info.Empresa
+empresax.innerText = 'Empresa:' + info.Empresa
+
+
