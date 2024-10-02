@@ -6,7 +6,6 @@
   - [window](#window)
     - [onbeforeunload.html](./onbeforeunload.html)
   - [document](#document)
-    - [document.forms.md - preventDefault](forms.md)
 - [Script location - Boolean Attrs](#local-do-script)
 - [javascript:void(0)](#javascriptvoid0)
 - <a href="./Operadores-Atribuicao.md" target="_blank">Operadores Atribuicao</a>
