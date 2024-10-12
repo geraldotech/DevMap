@@ -1,7 +1,8 @@
-/*
-JavaScript uses three dots (...) for both the rest and spread operators. But these two operators are not the same.
-📍 (...) - three dots = rest operator
-*/
+### JavaScript uses three dots (...) for both the rest and spread operators. But these two operators are not the same.
+
+### 📍 (...) - three dots = rest operator
+
+```js
 
 //🟢Rest Parameters
 
@@ -125,7 +126,7 @@ console.log(obj1);
 console.log(clonedObj);
 
 //HTMLCollection(4) clone
-```js
+
 <p class="1" id="a">one</p>
 <p class="1" id="b">two</p>
 <p class="1" id="c">three</p>
@@ -142,15 +143,83 @@ function handler(e) {
   console.log(e.target.id);
 }
 
-```;
+```
 
-/*clonar objetos com nomes iguais visitar
-https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/
+// acessar as props do data diretamente sem usar index com spread
+```js
+const names = {"return": true, "data":[{"item":"12323", "description": " descricao goes here"}]}
+
+console.log(names.data[0].item) // before
+
+const [primeiro, ...rest] = names.data
+
+if(primeiro){
+  console.log(primeiro.item) // herdou tudo de data 
+
+}
+```
+
+```js
+const data ={"ok":true,"data":[{"id":"126","0":"126","data_string":"idArea:18:descricao:Fiscal:total_users:608; idArea:13:descricao:Caixa e Bancos:total_users:608; idArea:1:descricao:Compras:total_users:407; idArea:4:descricao:Financeiro:total_users:393; idArea:17:descricao:Estoque:total_users:315","1":"idArea:18:descricao:Fiscal:total_users:608; idArea:13:descricao:Caixa e Bancos:total_users:608; idArea:1:descricao:Compras:total_users:407; idArea:4:descricao:Financeiro:total_users:393; idArea:17:descricao:Estoque:total_users:315","execution_time":"00:00:10","2":"00:00:10","created_at":"12\/10\/2024 13:09:45","3":"12\/10\/2024 13:09:45"}]}
+
+
+/* 
+* converter a data from backend para um Array mantendo a estrutura originalmente esperada
 */
-/*see more 
-🔗 https://www.youtube.com/watch?v=j3bXlt3NOZA
-🔗 https://dev.to/sagar/three-dots---in-javascript-26ci
-🔗 https://javascript.info/destructuring-assignment
-🔗 nice https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/
-🔗 nice https://www.freecodecamp.org/news/an-introduction-to-spread-syntax-in-javascript-fba39595922c/
-*/
+
+if (!data.ok) {
+
+  console.log(`no data to show`)
+}
+
+if (data.ok) {
+  // Destructure to get the first object from the array
+  const [firstEntry, ...rest] = data.data
+
+  console.log(firstEntry)
+  console.log(firstEntry.data_string)
+
+  // se existir
+  if (firstEntry) {
+    console.log(firstEntry.data_string)
+
+    // Split the string into individual entries
+    const entries = firstEntry.data_string
+      .split(';')
+      .map((entry) => entry.trim())
+      .filter(Boolean)
+    console.log(entries)
+
+    // Convert each entry to an object
+    const unique_object = entries.map((entry) => {
+      const [_, idArea, __, descricao, ___, total_users] = entry.split(':')
+      return {
+        idArea: parseInt(idArea),
+        descricao,
+        total_users: parseInt(total_users),
+      }
+    })
+
+    console.log(unique_object)
+  } else {
+    console.log('No data available.')
+  }
+} else {
+  console.log(data.message)
+}
+
+// acessar as props do data diretamente sem usar index com spread
+
+```
+
+
+### see more
+
+    clonar objetos com nomes iguais visitar
+
+- 🔗 https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/
+- 🔗 https://www.youtube.com/watch?v=j3bXlt3NOZA
+- 🔗 https://dev.to/sagar/three-dots---in-javascript-26ci
+- 🔗 https://javascript.info/destructuring-assignment
+- 🔗 nice https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/
+- 🔗 nice https://www.freecodecamp.org/news/an-introduction-to-spread-syntax-in-javascript-fba39595922c/
