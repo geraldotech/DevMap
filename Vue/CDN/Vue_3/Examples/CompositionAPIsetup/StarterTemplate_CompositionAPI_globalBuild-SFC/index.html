@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <!-- Vue Global Build -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Vue SFC  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+
+    <!-- Vue SFC Loader -->
+    <script src="./src/sfc-loader.js"></script>
+    <style>
+      div {
+        margin-block: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <Mbutton btn="example A"></Mbutton>
+      <Zbutton btn="example B"></Zbutton>
+      <Buttonalpha btn="example C"></Buttonalpha>
+      <custombutton btn="example D"></custombutton>
+      <whatisthat btn="example E 2"></whatisthat>
+
+      <h2>using object app.component</h2>
+      <Buttoncharlie></Buttoncharlie>
+
+      <h1>Auto imports</h1>
+      <goingto></goingto>
+
+      <h1>Youtube</h1>
+      <componenta></componenta>
+
+      <h1>Auto import + direct inject</h1>
+      <Typescript></Typescript>
+    </div>
+
+    <script src="./src/main.js"></script>
+  </body>
+</html>

@@ -5,7 +5,7 @@ void same name from Vue reactive
 
 const person = {
   name: 'Geraldo',
-  city: 'Maceio'
+  city: 'Maceio',
 }
 
 const sum = (y, x) => {
