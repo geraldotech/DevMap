@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <select v-model="item">
+        <option v-for="key in offline" :key="key.name" :value="key.link">
+          {{key}}
+        </option>
+      </select>
+      <h2>{{item}}</h2>
+
+      <ul>
+        <li v-for="itens in API">{{itens.id}} {{itens.title}}</li>
+      </ul>
+    </div>
+  </body>
+</html>
