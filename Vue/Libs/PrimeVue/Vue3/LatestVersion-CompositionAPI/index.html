@@ -6,6 +6,12 @@
       name="viewport"
       content="width=device-width" />
 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Prime vue -->
+    <!-- entire PrimeVue library and then register the components locally. -->
+    <script src="https://unpkg.com/primevue/umd/primevue.min.js"></script>
+
     <!-- Prime themes -->
 
     <!-- mdc-dark-deeppurple
@@ -14,15 +20,10 @@
       rel="stylesheet"
       href="https://unpkg.com/primevue/resources/themes/mdc-dark-deeppurple/theme.css" />
  -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/primevue/resources/themes/luna-amber/theme.css" />
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Prime vue -->
-    <!-- entire PrimeVue library and then register the components locally. -->
-    <script src="https://unpkg.com/primevue/core/core.min.js"></script>
+    <script src="https://unpkg.com/@primevue/themes/umd/aura.min.js"></script>
 
     <!-- PrimeIcons -->
     <link
@@ -184,7 +185,7 @@
         optional-value="code"
         :options="brothers"></p-dropdown>
 
-      <p>{{selectedPerson}}</p>
+      <p>{{selectedPerson}} - {{selectedPerson && selectedPerson.name}}</p>
 
       <hr />
 
@@ -193,10 +194,17 @@
         id="username"
         v-model="value4"
         aria-describedby="username-help"
-        placeholder="Username" />
+        placeholder="Username"></p-inputtext>
       <small id="username-help">Enter your username to reset your password.</small>
     </div>
     <footer style="padding-top: 10rem"></footer>
+
+    <form action="">
+      <input
+        type="submit"
+        formaction="/action_page2.php"
+        value="Submit to another page" />
+    </form>
 
     <script src="./src/app.js"></script>
   </body>

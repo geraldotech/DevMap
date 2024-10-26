@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>New document</title>
+  </head>
+  <body>
+
+    <h1>works</h1>
+    <form action="http://youtube.com">
+      <input
+        type="text"
+        placeholder="your age" />
+      <input
+        type="submit"
+        value="Send now" />
+    </form>
+
+    <hr />
+
+    <h1>not work</h1>
+    <form action="http://google.com">
+      <input
+        type="text"
+        placeholder="your name" />
+    </form>
+    <input
+      type="submit"
+      value="Send" />
+
+    <h1>submit outside <code>form</code> using form id</h1>
+
+    <form
+      id="emailform"
+      action="http://geraldox.com">
+      <input
+        type="text"
+        placeholder="your email address" />
+    </form>
+    <button
+      form="emailform"
+      type="submit">
+      Send now
+    </button>
+  </body>
+</html>
