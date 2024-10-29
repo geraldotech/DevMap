@@ -2,18 +2,15 @@
 import { ref } from 'vue'
 
 export default {
+  props: ['foo'],
   setup() {
-    const foo = ref(0)
-
-    return {
-      foo,
-    }
+    return {}
   },
 }
 </script>
 
 <template>
   <div>
-    <h1 @click="foo++">About Page {{ foo }}</h1>
+    <h1>{{ foo }}</h1>
   </div>
 </template>

@@ -1,4 +1,22 @@
-## Vue 3 CDN
+# VueJS 3 via CDN
+
+Os melhores exemplos para usar o framework via CDN sem a necessidade do NodeJS, ou build.
+
+- Todos os exemplos agora estarão em
+- `Vue_3\Examples`:
+
+  - `CompositionAPI`
+  - `OptionsAPI`
+
+- Vue3 + VueRoter + VueLoader
+
+  - Ao usar **App.vue** como parent , o Vue já suporta o import direto do components `import xxx from xxx`, entretando para carregar o `App.vue` ainda precisamos do plugin VueLoader. exemplo em `StarterTemplate_CompositionAPI_Router_SFC_globalBuild`
+
+- Em projetos legados ou que não temos o VueRouter como rota padrão e consequentemente não temos um `App.vue`, você poderá facilitar o processo de importação de components com autoload ou autoimports exemplo em: `StarterTemplate_CompositionAPI_globalBuild-SFC_autoload`
+
+- Plugin `vue3-sfc-loader` é para carregar o SFC do Vue => Single File Component, exemplo? pastas contendo SFC.
+
+<hr>
 
 - **add in header**
 
@@ -273,7 +291,10 @@ depois fazer o form com v-model e um output
 
 ```html
 <form id="app">
-  <input type="text" v-model="input_name" placeholder="your name" />
+  <input
+    type="text"
+    v-model="input_name"
+    placeholder="your name" />
   <p>Meu nome é {{name}}</p>
   <p>Data bind: {{input_name}}</p>
 </form>

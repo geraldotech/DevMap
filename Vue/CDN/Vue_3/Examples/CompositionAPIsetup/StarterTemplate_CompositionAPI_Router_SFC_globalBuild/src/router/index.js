@@ -1,5 +1,6 @@
 const Home = () => loadModule('/src/views/Home.vue', options)
-const About = () => loadModule('../src/views/About.vue', options)
+const Props = () => loadModule('../src/views/Props.vue', options)
+const Slots = () => loadModule('../src/views/Slots.vue', options)
 
 const NotFound = { template: "<h1 style='color:red'>Not Found</h1>" }
 
@@ -16,7 +17,8 @@ const routes = [
   },
   { path: '/testsNew', name: 'tetsnew', component: () => load('../src/views/testnew.vue') },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
-  { path: '/about', component: About },
+  { path: '/Props', component: Props },
+  { path: '/Slots', component: Slots },
 ]
 
 const router = VueRouter.createRouter({

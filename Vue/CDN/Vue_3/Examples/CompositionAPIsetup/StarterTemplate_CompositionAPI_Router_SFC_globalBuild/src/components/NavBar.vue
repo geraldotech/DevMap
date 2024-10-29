@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link>
       <router-link to="/radio">Radio</router-link>
       <router-link :to="{ name: 'tetsnew' }">Tests New</router-link>
-      <router-link to="/about">About</router-link>
+      <router-link to="/Props">Props</router-link>
+      <router-link to="/Slots">Slots</router-link>
     </ul>
   </nav>
 </template>
