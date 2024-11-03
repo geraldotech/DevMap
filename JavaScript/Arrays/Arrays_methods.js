@@ -1177,14 +1177,14 @@ https://geraldodev.notion.site/Exercicios-1-2a427cfc7d5b4e989ac1da54a3f7e21a
 */
 const api = ["Geraldo", "CostAo", "Barrao", "Georgeo", "Aomeo","asoa","oplz"];
 
-// 1 - quero saber se todos terminam com a vogal "o":
+// a - quero saber se todos terminam com a vogal "o":
 const o = api.every(el => el.endsWith("o"));
 console.log(o); 
 
-// 2 - filter todos terminam com a vogal "o";
+// b - filter todos terminam com a vogal "o";
 console.log(api.filter(val => val.endsWith("o")));;
 
-// 3 - filter todos que começam com a letra G e B
+// c - filter todos que começam com a letra G e B
 console.log(api.filter(val => ["G","B"].some(sum => val.startsWith(sum))));
 
 //standalone
@@ -1194,7 +1194,7 @@ function comecaGB(val){
    })
  }
 
-// 4 - filtrar a letra maiuscula A e l
+// d - filtrar a letra maiuscula A e l
 console.log(api.filter(val => ["A","l"].some(b => val.includes(b))));
 
 // standalone
@@ -1204,30 +1204,30 @@ function incluidos(callbackdoFilter){
   })
 }
 
-// 5 - todos inclui "o"?
+// e - todos inclui "o"?
 console.log(api.every(el => el.includes("o")));
 
-// 6 - filter maior ou igual a 7
+// f - filter maior ou igual a 7
 console.log(api.filter(el => el.length >= 7));
 
-// 7 - filter quem inclui "m"
+// g - filter quem inclui "m"
 console.log(api.filter(val => ["m"].some(a => val.includes(a))));
 // 👉 single params poderia usar apenas includes!! 
 // 🎉 api.filter(el => el.includes("m"))
 
-// 8 - filter quem inclui "al"
+// h - filter quem inclui "al"
 console.log(api.filter(val => ["al"].some(e => val.includes(e))));
 //poderia usar apenas includes!
 
-// 9 - includes "Aomeo"?
+// i - includes "Aomeo"?
 console.log(api.includes("Aomeo"));
 
-// 10 - encontrar o primeiro com a letra "G"
+// j - encontrar o primeiro com a letra "G"
 console.log(api.find(val => val.startsWith("G")));
 //alternative
 console.log(api.find(el => el.includes("G")));
 
-// 11 - filtrar todos que terminam com "o", não incluir o primeiro item, neste caso o index[0]:
+// k - filtrar todos que terminam com "o", não incluir o primeiro item, neste caso o index[0]:
 console.log(api.filter(function(val, index){
     if(index > 0){
       return val.endsWith("o")
@@ -1267,13 +1267,13 @@ console.log(api.filter((val, ind) => val.endsWith("o") && ind != pegain));
 // mesmo resultado condicoes invertidas
 console.log(api.filter((val,index) => index != pegaInde && val.endsWith("o")))
 
-// 12 - Todos esses itens existe no array ? ["Geraldo", "CostAo"]
+// l - Todos esses itens existe no array ? ["Geraldo", "CostAo"]
 console.log(["Geraldo", "CostAo"].every(val => api.includes(val))); // true
 
-// 13 - Alguns desses itens tem no array ? ["Geraldo","CostAoo"]
+// m - Alguns desses itens tem no array ? ["Geraldo","CostAoo"]
 console.log(api.some(al => ["Geraldo","CostAoo"].includes(al)));
 
-// 14 - filter todos que termimam com a e z
+// n - filter todos que termimam com a e z
 console.warn("novo",api.filter(val => ["a","z"].some(al => val.endsWith(al))));
 //alternative function alone a ser chamada pelo filter
 function vogais(el){
@@ -1282,10 +1282,10 @@ function vogais(el){
 
  console.log(api.filter(vogais)); // ["asoa", "aplz"] 
 
-// 15 - filter a letra "A"
+// o - filter a letra "A"
 console.log(api.filter(val => val.includes("A")));
 
-// 16 - Get all names.length
+// p - Get all names.length
 
 // forEach
 api.forEach((el, ind)=> {
@@ -1316,10 +1316,10 @@ for(let i = 0; i< api.length; i++){
   console.log(api[i].length)
 }
 
-// 17 - find primeiro ele == 6
+// q - find primeiro ele == 6
 console.log(api.find(el => el.length == 6)); //CostAo
 
-// 18 - encontrar o element.length == 6 porém pulando o primeiro que foi encontrado
+// r - encontrar o element.length == 6 porém pulando o primeiro que foi encontrado
 
 // informe o index manualmente
 console.log(api.find((el, ind) => { // em vez de: "CostAo", pega: "Barrao"
@@ -1361,7 +1361,7 @@ const pula2 = api.find((val, ind, arr) => val.length == 6 && ind > arr.findIndex
 console.log(pula2); // Barrao
 
 
-//19 - Dado o Array abaixo remover os valores duplicados
+//s - Dado o Array abaixo remover os valores duplicados
 
 const arr = ['Z', 'B', 'Z', 'C', 'B',];
 console.log(arr.filter((val, ind) => {
@@ -1379,7 +1379,7 @@ console.log(arr.filter((val, ind, arrAtual) => {
 }));
 
 
-// 20 👉 Pegar multiple Index de um Array multiple ways to do it
+// t 👉 Pegar multiple Index de um Array multiple ways to do it
 //https://stackoverflow.com/questions/52154331/how-to-get-multiple-indexes-of-array-by-a-value-in-pure-javascript-value-exact
 
 //🔰criar um array vazio
@@ -1424,11 +1424,14 @@ const res = ["Ger", "Mi", "Goo"].reduce((acc, currElement, index) => {
 console.log(index4); // 0,3
 
 
-// 21 
+// u 
 const arr = n.split(" ")
 const surname = arr.find(val => val == `Swank`);
 console.log(surname);
 
+// u 1  - Filtrar os dados que inclui: 'r'
+const query = 'a'
+console.log(api.filter(item => item.includes(query.toLocaleLowerCase())))
 
 
 //visite for of / forEach para simples if statement
