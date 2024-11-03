@@ -1239,8 +1239,14 @@ console.log(api.filter((el, ind) => { if(ind > 0 ) return el.endsWith("o")}));
 
 // 🔰 alternative &&
 console.log(api.filter((val,index) => index > 0 && val.endsWith("o")))
-/*-*[=============================================================================]*-*/
-// 👉 SUPER DICA: alternative indicando o own value
+
+// 🔰
+/* 
+&& i está sendo usado para verificar se o índice (i) é um valor “truthy” — ou seja, qualquer valor diferente de 0, null, undefined, false, NaN, ou uma string vazia. Isso significa que o filtro não irá incluir o primeiro item do array (i = 0), mesmo que o item termine com 'o'.
+*/
+console.log(api.filter((v, i) => v.endsWith('o') && i))
+
+// 🔰 alternative indicando o own value
 console.log(api.filter(val => {
   if(val != "Geraldo") return val.endsWith("o");
 }));
@@ -1270,7 +1276,7 @@ console.log(api.filter((val,index) => index != pegaInde && val.endsWith("o")))
 // l - Todos esses itens existe no array ? ["Geraldo", "CostAo"]
 console.log(["Geraldo", "CostAo"].every(val => api.includes(val))); // true
 
-// m - Alguns desses itens tem no array ? ["Geraldo","CostAoo"]
+// m - qual desses itens ["Geraldo","CostAoo"] tem no array ? 
 console.log(api.some(al => ["Geraldo","CostAoo"].includes(al)));
 
 // n - filter todos que termimam com a e z
@@ -1280,7 +1286,7 @@ function vogais(el){
   return ["a","z"].some(val => el.endsWith(val))
  }
 
- console.log(api.filter(vogais)); // ["asoa", "aplz"] 
+console.log(api.filter(vogais)); // ["asoa", "aplz"] 
 
 // o - filter a letra "A"
 console.log(api.filter(val => val.includes("A")));
