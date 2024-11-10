@@ -49,6 +49,28 @@ console.log(geraldo['age'])
 
 const mykey = 'age'
 console.log(geraldo[mykey])
+
+
+const techContent = {
+  node: 'Node content',
+  js: 'JavaScript content',
+  html: 'HTML content',
+}
+
+let myvar = 'js'
+
+console.log(techContent[myvar])
+console.log(techContent['js'])
+console.log(techContent.js)
+
+
+const checkvalues = (value) => {
+  return techContent[value] || '404 not found'
+}
+
+console.log(checkvalues('js'))
+console.log(checkvalues('jsx'))
+
 ```
 
 ### change
