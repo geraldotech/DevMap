@@ -1,5 +1,12 @@
 # CSS
 
+
+- Fast styles use simplecss
+
+```css
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+```
+
 ### How get Started?
 
 - Exemplos: https://codepen.io/collection/MgozNK
