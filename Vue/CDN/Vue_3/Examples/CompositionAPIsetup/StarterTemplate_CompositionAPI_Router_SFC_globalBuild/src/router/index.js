@@ -1,6 +1,9 @@
 const Home = () => loadModule('/src/views/Home.vue', options)
 const Props = () => loadModule('../src/views/Props.vue', options)
 const Slots = () => loadModule('../src/views/Slots.vue', options)
+const watch = () => loadModule('../src/views/watch.vue', options)
+
+const extra = () => loadModule('../src/views/extra.vue', options)
 
 const NotFound = { template: "<h1 style='color:red'>Not Found</h1>" }
 
@@ -12,13 +15,15 @@ function load(path) {
 const routes = [
   { path: '/', component: Home },
   {
-    path: '/radio',
-    component: () => loadModule('/src/views/radio.vue', options),
+    path: '/computed',
+    component: () => loadModule('/src/views/computed.vue', options),
   },
   { path: '/testsNew', name: 'tetsnew', component: () => load('../src/views/testnew.vue') },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
   { path: '/Props', component: Props },
   { path: '/Slots', component: Slots },
+  { path: '/watch', component: watch },
+  { path: '/extra', component: extra },
 ]
 
 const router = VueRouter.createRouter({

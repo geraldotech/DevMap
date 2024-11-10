@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>my footer</p>
+    <p>contextualizando exemplos usando composition API por Geraldo Costa 2024</p>
   </footer>
 </template>
 
@@ -20,9 +20,9 @@ footer {
   background: gray;
   color: black;
   min-height: 30px;
-  position: absolute;
-  bottom: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
+  text-align: center;
 }
 footer p {
   color: rgb(255, 255, 255);

@@ -1,11 +1,13 @@
 <template>
   <nav>
     <ul>
-      <router-link to="/">Home</router-link>
-      <router-link to="/radio">Radio</router-link>
+      <router-link to="/">Home - emit</router-link>
+      <router-link to="/props">Props</router-link>
+      <router-link to="/slots">Slots</router-link>
+      <router-link to="/computed">Computed</router-link>
+      <router-link to="/watch">Watch</router-link>
+      <router-link to="/extra" title="exemplos de exports">Extra</router-link>
       <router-link :to="{ name: 'tetsnew' }">Tests New</router-link>
-      <router-link to="/Props">Props</router-link>
-      <router-link to="/Slots">Slots</router-link>
     </ul>
   </nav>
 </template>
@@ -14,7 +16,7 @@
 nav ul {
   display: flex;
   justify-content: space-between;
-  width: 432px;
+  max-width: 800px;
   text-transform: uppercase;
 }
 </style>

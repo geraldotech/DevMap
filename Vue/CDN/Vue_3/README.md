@@ -18,6 +18,24 @@ Os melhores exemplos para usar o framework via CDN sem a necessidade do NodeJS, 
 
 <hr>
 
+Tipos de exports nos components:
+
+```js
+<script setup></script> // verão mais recente 
+export default {} // para CompositionAPI e optionsAPI
+
+export.modules = {} //[mais antigo] para CompositionAPI e optionsAPI
+```
+
+
+
+
+
+
+
+
+<hr>
+
 - **add in header**
 
 ```js

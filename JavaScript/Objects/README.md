@@ -46,6 +46,9 @@ const geraldo = {
 ```js
 console.log(geraldo.age)
 console.log(geraldo['age'])
+
+const mykey = 'age'
+console.log(geraldo[mykey])
 ```
 
 ### change

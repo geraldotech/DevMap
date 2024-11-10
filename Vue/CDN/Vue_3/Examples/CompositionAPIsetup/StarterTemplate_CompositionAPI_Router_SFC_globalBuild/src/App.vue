@@ -31,4 +31,10 @@ ul li,
 p {
   color: dodgerblue;
 }
+
+button {
+  display: block;
+  margin-block: 10px;
+  padding: 0.4rem;
+}
 </style>

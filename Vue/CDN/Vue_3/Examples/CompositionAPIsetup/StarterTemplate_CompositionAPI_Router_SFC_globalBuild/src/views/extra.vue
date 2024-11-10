@@ -51,7 +51,8 @@ const name = ref('Geraldo')
 <template>
   <div>
     <h1>Extra.vue</h1>
-    <p>exemplos de exports</p>
+        <p>exemplos de exports</p>
+
     <h4>{{ name }}</h4>
     <h5>{{ gp }}</h5>
   </div>
@@ -59,7 +60,7 @@ const name = ref('Geraldo')
 
 <style scoped>
 h1 {
-  color: rgb(0, 177, 65);
+   color: rgb(0, 177, 65);
   text-align: center;
 }
 </style>
