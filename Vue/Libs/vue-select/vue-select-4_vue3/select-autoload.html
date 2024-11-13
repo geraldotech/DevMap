@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html
+  lang="
+en"
+  style="color-scheme: dar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!--    
+      <script src="https://unpkg.com/vue-select@latest"></script>
+-->
+
+    <!-- Vue Global Build -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Vue SFC  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+
+    <!-- Vue SFC Loader -->
+    <script src="./src/sfc-loader.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/vue-select@latest/dist/vue-select.css" />
+    <script src="https://unpkg.com/vue-select@beta"></script>
+  </head>
+  <body>
+    <div id="app">
+
+      <v-select
+        :options="options"
+        label="title">
+        <template #header>
+          <div style="opacity: 0.8">Top of the component, in the header slot!</div>
+        </template>
+        <template #no-options>
+          Nenhuma opção encontrada
+        </template>
+
+        <div slot="no-options">No Options Here!</div>
+
+      </v-select>
+      <h1>multiple</h1>
+      <v-select
+        multiple
+        v-model="selecionado"
+        :options="options"
+        :reduce="val => val.code"
+        label="title">
+        <template #no-options>
+          Nenhuma opção encontrada
+        </template>
+      </v-select>
+
+      <p>selecionado: {{selecionado}}</p>
+
+      <h2>autoload and automount by gmapdev</h2>
+     
+    </div>
+
+    <script src="./src/main2.js"></script>
+    <script>
+      // import components global
+      // autoload('Typescript')
+      const vueapp = document.querySelector('#app')
+      // Returns true if `app` is a Vue application instance
+      if (!!app._context) {
+        //  app.mount(vueapp)
+      }
+    </script>
+  </body>
+</html>
