@@ -41,7 +41,7 @@
   - [onload vs onreadystatechange vs domcontentloaded](#onload-vs-onreadystatechange-vs-domcontentloaded)
 
 - [Pointer Events](#pointerevents)
-  - [this](this.md)
+  - [this](./assets/thread/this.md)
   - [target custom attribute data](#target-custom-attr-data)
   - [target vs currenttarget](#target-vs-currenttarget)
   - [Contains (e.target)](#contains 'e.target')
