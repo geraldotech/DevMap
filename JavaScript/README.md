@@ -360,7 +360,7 @@ ampersand - &
 ```
 
 ### multiplevarletconst {#custom-id}
-
+### My Great Heading {#xxxxx-id}
 
 ```js
 //ES6
