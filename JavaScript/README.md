@@ -13,7 +13,7 @@
 - [O que é JS](#what-is-javascript)
 - [console.log](#consolelog)
 - [syntax](#syntax)
-- [multiplevar/let/const](#multiplevarletconst)
+- [multiplevar/let/const](#custom-id)
 - [Immutability](#Immutability)
 - [Operadores lógicos (Logical Operators)](#operadores)
 - [window-and-document](#window-and-document)
@@ -359,7 +359,8 @@ backtick - `
 ampersand - &
 ```
 
-### multiplevar/let/const
+### multiplevarletconst{#custom-id}
+
 
 ```js
 //ES6
