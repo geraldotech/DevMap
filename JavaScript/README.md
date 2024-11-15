@@ -5,10 +5,7 @@
 > Memorize is a bad ideia, instead focus on concepts
 
 # Threads
-
-## Starter
-
-### JavaScript? **From Scratch by _Geraldo Filho_**
+### Starter JavaScript? **From Scratch by _Geraldo Filho_**
 
 - [O que é JS](#what-is-javascript)
 - [console.log](#consolelog)
