@@ -3,8 +3,11 @@ const { createApp, ref, onMounted, h, resolveComponent, defineAsyncComponent } =
 const app = Vue.createApp({})
 
 autoload('Typescript')
-const body = document.querySelector("body")
-console.log(body)
-app.mount(body)
+const dvi = document.querySelector("div")
+console.log(`dvi`, dvi.innerHTML)
+
+
+console.log(dvi)
+app.mount(dvi)
 
 

@@ -1,42 +1,31 @@
-const { createApp, ref, onMounted, defineCustomElement } = Vue
-
-const buttonImporAC = Vue.defineAsyncComponent(() => loadModule('./src/components/Button.vue', options))
-
-// better
-const ButtonAlpha = imports('./src/components/Button.vue')
-const ButtonBravo = autoimports('Whatis')
-const Buttoncharlie = autoimports('Whatis')
+const { createApp, ref, onMounted, h, resolveComponent, defineAsyncComponent } = Vue
 
 const app = Vue.createApp({
   components: {
-    Mbutton: Vue.defineAsyncComponent(() => loadModule('./src/components/Button.vue', options)),
-    Zbutton: buttonImporAC,
-    Buttonalpha: ButtonAlpha,
-    custombutton: ButtonAlpha,
-    whatisthat: imports('./src/components/Whatis.vue'),
-    youtubecom: autoimports('Youtube'),
-    goingto: ButtonBravo,
-    nowyousee: 'ok',
+    Typescript: autoimports('Typescript'),
+    vSelect: window['vue-select'],
   },
   setup() {
-    const message = ref('Hello World!')
+    const options = ref([
+      { title: "Old Man's War", code: 'BRL' },
+      { title: 'The Lock Artist', code: 'BRA' },
+      { title: 'HTML5', code: 'USA' },
+      { title: 'Right Ho Jeeves', code: 'ITA' },
+      { title: 'The Code of the Wooster', code: 'PRO' },
+      { title: 'Thank You Jeeves', code: 'NB' },
+    ])
+    const selecionado = ref('')
 
+    onMounted(() => {})
     return {
-      message,
+      options,
+      selecionado,
     }
   },
 })
 
-/* app.component + autoimports */
-app.component('componenta', autoimports('Youtube'))
+console.log(app._component)
 
-/* custom using object */
-app.component('Buttoncharlie', {
-  template: `Hello`,
-})
-
-/* autoload + direct inject on app.vue */
-
-autoload('Typescript')
+autoload('zbutton')
 
 app.mount('#app')

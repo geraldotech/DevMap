@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html
-  lang="en"
-  style="color-scheme: dark">
+  lang="
+en"
+  style="color-scheme: dar">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
+    <!--    
+      <script src="https://unpkg.com/vue-select@latest"></script>
+-->
 
     <!-- Vue Global Build -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -16,33 +20,58 @@
 
     <!-- Vue SFC Loader -->
     <script src="./src/sfc-loader.js"></script>
-    <style>
-      div {
-        margin-block: 10px;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/vue-select@latest/dist/vue-select.css" />
+    <script src="https://unpkg.com/vue-select@beta"></script>
   </head>
   <body>
     <div id="app">
-      <Mbutton btn="example A"></Mbutton>
-      <Zbutton btn="example B"></Zbutton>
-      <Buttonalpha btn="example C"></Buttonalpha>
-      <custombutton btn="example D"></custombutton>
-      <whatisthat btn="example E 2"></whatisthat>
 
-      <h2>using object app.component</h2>
-      <Buttoncharlie></Buttoncharlie>
+      <v-select
+        :options="options"
+        label="title">
+        <template #header>
+          <div style="opacity: 0.8">Top of the component, in the header slot!</div>
+        </template>
+        <template #no-options>
+          Nenhuma opção encontrada
+        </template>
 
-      <h1>Auto imports</h1>
-      <goingto></goingto>
+        <div slot="no-options">No Options Here!</div>
 
-      <h1>Youtube</h1>
-      <componenta></componenta>
+      </v-select>
+      <h1>multiple</h1>
+      <v-select
+        multiple
+        v-model="selecionado"
+        :options="options"
+        :reduce="val => val.code"
+        label="title">
+        <template #no-options>
+          Nenhuma opção encontrada
+        </template>
+      </v-select>
 
-      <h1>Auto import + direct inject</h1>
-      <Typescript></Typescript>
+      <p>selecionado: {{selecionado}}</p>
+
+      <h2>autoload and automount by gmapdev</h2>
+
+
+
+      <zbutton btn="example A"></zbutton>
+     
     </div>
 
     <script src="./src/main.js"></script>
+    <script>
+      // import components global
+      // autoload('Typescript')
+      const vueapp = document.querySelector('#app')
+      // Returns true if `app` is a Vue application instance
+      if (!!app._context) {
+        //  app.mount(vueapp)
+      }
+    </script>
   </body>
 </html>

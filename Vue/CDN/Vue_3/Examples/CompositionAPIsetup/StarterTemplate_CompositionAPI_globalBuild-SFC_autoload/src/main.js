@@ -2,8 +2,10 @@ const { createApp, ref, onMounted, defineCustomElement } = Vue
 
 const buttonImporAC = Vue.defineAsyncComponent(() => loadModule('./src/components/Button.vue', options))
 
-// better
+// imports 1
 const ButtonAlpha = imports('./src/components/Button.vue')
+
+// autoimports 2
 const ButtonBravo = autoimports('Whatis')
 const Buttoncharlie = autoimports('Whatis')
 
@@ -35,8 +37,7 @@ app.component('Buttoncharlie', {
   template: `Hello`,
 })
 
-/* autoload + direct inject on app.vue */
-
+/* autoload  3 + direct inject on app.vue */
 autoload('Typescript')
 
 app.mount('#app')

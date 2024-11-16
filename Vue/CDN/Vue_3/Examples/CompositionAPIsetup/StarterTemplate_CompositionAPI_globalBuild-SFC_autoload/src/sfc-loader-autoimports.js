@@ -18,21 +18,24 @@ const options = {
   },
 }
 
-/* By Geraldo Costa */
+/*
+ * @Author: Geraldo Costa
+ * @since: Novembro 2023
+ */
 
 /* imports */
 const imports = (path) => {
   return Vue.defineAsyncComponent(() => loadModule(path, options))
 }
 
-/* auto import com path setado e extensão .vue */
-const autoimports = (componame) => {
-  return Vue.defineAsyncComponent(() => loadModule(`./src/components/${componame}.vue`, options))
+/* auto import com path + .vue */
+const autoimports = (componentName) => {
+  return Vue.defineAsyncComponent(() => loadModule(`./src/components/${componentName}.vue`, options))
 }
 
 /* autoload + direct inject on app.vue */
-const autoload = (namecompoennt) => {
-  app.component(namecompoennt, autoimports(namecompoennt))
+const autoload = (componentName) => {
+  app.component(componentName, autoimports(componentName))
 }
 
 const { loadModule } = window['vue3-sfc-loader']

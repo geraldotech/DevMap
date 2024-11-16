@@ -14,17 +14,16 @@ en"
     <!-- Vue SFC  -->
     <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
 
-    <!-- Vue SFC Loader -->
-    <script src="./src/sfc-loader.js"></script>
+    <!-- Vue SFC Loader + AutoImports -->
+    <script src="./src/sfc-loader-autoimports.js"></script>
   </head>
   <body>
-    
-      <h2>autoload by gmapdev</h2>
+    <div>
+      <h2>autoload + automount first `div`[beta test]</h2>
       <Typescript></Typescript>
-   
 
-{{ 5 +5 }}
-
-    <script src="./src/main3.js"></script>
+      <div>{{ 5 +5 }}</div>
+    </div>
   </body>
+  <script src="./src/main3.js"></script>
 </html>
