@@ -2,8 +2,8 @@ const Home = () => loadModule('/src/views/Home.vue', options)
 const Props = () => loadModule('../src/views/Props.vue', options)
 const Slots = () => loadModule('../src/views/Slots.vue', options)
 const watch = () => loadModule('../src/views/watch.vue', options)
-
 const extra = () => loadModule('../src/views/extra.vue', options)
+const myref = () => loadModule('../src/views/myref.vue', options)
 
 const NotFound = { template: "<h1 style='color:red'>Not Found</h1>" }
 
@@ -24,6 +24,7 @@ const routes = [
   { path: '/Slots', component: Slots },
   { path: '/watch', component: watch },
   { path: '/extra', component: extra },
+  { path: '/myref', component: myref },
 ]
 
 const router = VueRouter.createRouter({

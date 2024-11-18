@@ -7,6 +7,7 @@
       <router-link to="/computed">Computed</router-link>
       <router-link to="/watch">Watch</router-link>
       <router-link to="/extra" title="exemplos de exports">Extra</router-link>
+      <router-link to="/myref" title="exemplos de exports">myref</router-link>
       <router-link :to="{ name: 'tetsnew' }">Tests New</router-link>
     </ul>
   </nav>
