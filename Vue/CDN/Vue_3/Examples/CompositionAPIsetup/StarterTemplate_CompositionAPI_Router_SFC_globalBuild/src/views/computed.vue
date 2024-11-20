@@ -3,12 +3,9 @@ import { computed, ref, watch } from 'vue'
 
 const tech = ref('')
 
-
-
 const isNode = computed(() => tech.value === 'node')
 const isJava = computed(() => tech.value === 'javascript')
 const isHTML = computed(() => tech.value === 'html')
-
 
 // smartway
 const techContent = {
@@ -17,8 +14,7 @@ const techContent = {
   html: 'html',
 }
 
-const currentTechContent = computed(() => techContent[tech.value] || "Other content")
-
+const currentTechContent = computed(() => techContent[tech.value] || 'Other content')
 
 watch(tech, (newvalue, oldvalue) => {
   console.log(`is changing`)
@@ -27,12 +23,12 @@ watch(tech, (newvalue, oldvalue) => {
 </script>
 <template>
   <div>
-    <h2>currentTechContent: {{currentTechContent.includes('node')}}</h2>
+    <h2>currentTechContent: {{ currentTechContent.includes('node') }}</h2>
 
-  <p v-if="isNode">is nodeJS</p>
-  <p v-if="isJava">is isJava</p>
-  <p v-if="isHTML">is isHTML</p>
-<hr>
+    <p v-if="isNode">is nodeJS</p>
+    <p v-if="isJava">is isJava</p>
+    <p v-if="isHTML">is isHTML</p>
+    <hr />
 
     <input
       type="radio"

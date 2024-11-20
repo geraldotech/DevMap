@@ -6,8 +6,8 @@
       <router-link to="/slots">Slots</router-link>
       <router-link to="/computed">Computed</router-link>
       <router-link to="/watch">Watch</router-link>
-      <router-link to="/extra" title="exemplos de exports">Extra</router-link>
-      <router-link to="/myref" title="exemplos de exports">myref</router-link>
+      <router-link to="/extra" title="exemplos de exports">Exemplos exports</router-link>
+      <router-link to="/myref" title="Forms and res">Forms and refs</router-link>
       <router-link :to="{ name: 'tetsnew' }">Tests New</router-link>
     </ul>
   </nav>
@@ -17,7 +17,6 @@
 nav ul {
   display: flex;
   justify-content: space-between;
-  max-width: 800px;
   text-transform: uppercase;
 }
 </style>

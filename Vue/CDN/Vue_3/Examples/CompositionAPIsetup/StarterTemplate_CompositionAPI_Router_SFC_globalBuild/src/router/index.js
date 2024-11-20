@@ -18,13 +18,13 @@ const routes = [
     path: '/computed',
     component: () => loadModule('/src/views/computed.vue', options),
   },
-  { path: '/testsNew', name: 'tetsnew', component: () => load('../src/views/testnew.vue') },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
   { path: '/Props', component: Props },
   { path: '/Slots', component: Slots },
   { path: '/watch', component: watch },
-  { path: '/extra', component: extra },
   { path: '/myref', component: myref },
+  { path: '/extra', component: extra },
+  { path: '/testsNew', name: 'tetsnew', component: () => load('../src/views/testnew.vue') },
 ]
 
 const router = VueRouter.createRouter({

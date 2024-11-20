@@ -17,6 +17,7 @@ module.exports = {
 CSS scoped only fot this page!
  */
 footer {
+  margin-top: 20%;
   background: gray;
   color: black;
   min-height: 30px;

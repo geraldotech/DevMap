@@ -52,7 +52,6 @@ const name = ref('Geraldo')
   <div>
     <h1>Extra.vue</h1>
         <p>exemplos de exports</p>
-
     <h4>{{ name }}</h4>
     <h5>{{ gp }}</h5>
   </div>
