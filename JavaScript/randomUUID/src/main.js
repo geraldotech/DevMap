@@ -2,7 +2,7 @@ document.querySelector('h1').onclick = gerarId
 
 let arr = []
 
-function gerarId(){
+function gerarId() {
   let uuid = self.crypto.randomUUID()
   alert(uuid)
   arr.push(uuid)
@@ -15,5 +15,9 @@ function loadDados() {
   console.warn(dados)
 }
 
-
 console.log(crypto.randomUUID())
+
+/* alterantiva com new Date */
+const timestamp = new Date().toISOString()
+console.log(timestamp)
+// Saída: "2024-11-30T12:34:56.789Z"
