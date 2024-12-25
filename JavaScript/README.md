@@ -116,6 +116,8 @@ console.table(person) // beautiful way to render tables
 
 - <a href="https://developer.mozilla.org/en-US/docs/Web/API/console" target="_blank">Todos os tipos de consoles</a>
 - <a href="./Consoles">Consoles by GP</a> - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Consoles/index.html)
+- <a href="./Consoles">CSS no console.log</a> - [DevTO](https://dev.to/annlin/consolelog-with-css-style-1mmp) | [MDN](https://developer.mozilla.org/en-US/docs/Web/API/console)
+
 
 ## window and document
 
@@ -145,10 +147,9 @@ window;
 console.log(window.document) // #document
 console.log(window.window); //same input
 console.log("height",window.innerHeight, "Width",window.innerWidth);
-console.log(window) - display all objects in window
+console.log(window) - display all objects in window | digite `window` diretamente no console do browser
 console.log(fetch === window.fetch) // true
 window.onclick === onclick // true
-console.log(window); //same input ou digite `window` diretamente no console do browser
 window.localStorage;
 window.console.log same | console.log
 window.screen.height
