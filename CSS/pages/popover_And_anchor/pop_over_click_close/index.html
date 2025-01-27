@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <!--  <link
+      rel="stylesheet"
+      href="https://cdn.simplecss.org/simple.min.css" /> -->
+    <title>LocalHost</title>
+    <script
+      src="./src/main.js"
+      defer></script>
+    <link
+      rel="stylesheet"
+      href="./src/styles.css"
+      type="text/css" />
+
+    <link
+      rel="stylesheet"
+      href="./hint.css-2.7.0/hint.base.min.css" />
+  </head>
+  <body>
+    <section>
+      <p>
+        <button
+          type="button"
+          class="information"
+          popovertarget="info">
+          click me
+        </button>
+      </p>
+      <p>
+        <button type="button">click me</button>
+      </p>
+      <p>
+        <button type="button">click me</button>
+      </p>
+    </section>
+
+    <section
+      class="information2"
+      popovertarget="info2">
+      <p>lorem 1</p>
+      <p>lorem 2</p>
+    </section>
+
+
+    <span class="hint--bottom" aria-label="Thank you!">hover over me.</span>
+    <span class="hint--top" aria-label="Thank you!">hover over me.</span>
+
+    <a href="javascript:void(0)" class="status-icon hint--bottom-left hint--info" style="background: lightblue" aria-label="Info tooltip 👉🏼 hint--info">
+      <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+        <path fill="#ffffff" d="M12,2A7,7 0 0,1 19,9C19,11.38 17.81,13.47 16,14.74V17A1,1 0 0,1 15,18H9A1,1 0 0,1 8,17V14.74C6.19,13.47 5,11.38 5,9A7,7 0 0,1 12,2M9,21V20H15V21A1,1 0 0,1 14,22H10A1,1 0 0,1 9,21M12,4A5,5 0 0,0 7,9C7,11.05 8.23,12.81 10,13.58V16H14V13.58C15.77,12.81 17,11.05 17,9A5,5 0 0,0 12,4Z"></path>
+      </svg>
+    </a>
+
+
+    <!-- popover contents -->
+    <div>
+      <div
+        id="info"
+        class="custom-popover"
+        popover
+        anchor="btn">
+        <span class="close_pop"> clique nos links para mais detalhes </span>
+      </div>
+
+      <div
+        id="info2"
+        class="two custom-popover"
+        popover
+        anchor="btn2">
+        <span class="close_pop2"> close two</span>
+      </div>
+    </div>
+  </body>
+</html>

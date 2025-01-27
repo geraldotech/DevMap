@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+  color-scheme: dark;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  --bkbody: rgb(59, 60, 60);
+}
+
+body {
+  margin-top: 10rem;
+}
+
+.information {
+  anchor-name: --i-btn;
+}
+.information2 {
+  anchor-name: btn2;
+}
+
+[popover] {
+  position: absolute;
+  inset: unset; /* remove default styles */
+  bottom: anchor(--i-btn top);
+  left: anchor(--i-btn center);
+  translate: 10%;
+  margin: 0.25rem 0;
+}
+
+.two {
+  inset: unset; /* remove default styles */
+  bottom: anchor(btn2 top);
+  left: anchor(btn2 center);
+  translate: 10%;
+  margin: 0.25rem 0;
+}
+
+section {
+  margin: 2rem 0;
+  display: flex;
+  display: block;
+}
+code {
+  border: 1px solid;
+  color: darkblue;
+}
+p {
+  margin-block: 20px;
+}
+
+#info,
+#info2 {
+  background: purple;
+  border: 2px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+
+.close_pop{
+  cursor: pointer;
+}
+.close_pop::after {
+  content: 'x';
+  position: absolute;
+  color: red;
+  top: 0;
+  overflow: hidden;
+}
+
+
+#info2 {
+  top: 250px;
+  left: 50px;
+}
