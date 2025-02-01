@@ -41,7 +41,7 @@ console.log(tamanho);
 //📌 func check number
 function check(){
   let a = 10;
-   if(a.length > 8) {
+   if(a > 8) {
       console.log("maior que 8");
       return
    }
