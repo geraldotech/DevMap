@@ -24,6 +24,7 @@
 - [CSS Object Model](./CSSOM/README.md)
 - <a href="https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Addition_assignment.html" target="_blank">Addition assignment (+=)</a>
 - [useful-links](#useful-links)
+- [Tips - dicas](##tips)
 
 <hr>
 
@@ -1207,12 +1208,15 @@ console.log(test)
 console.log(test2)
 ```
 
-## Videos
+
+### Useful links:
+
+## Videos:
 
 - [Stop Trying To Memorize Code - Do This Instead](https://www.youtube.com/watch?v=vP2MNhC_Igw&list=PL_VP_qub8HfIva3X7o4FbRqoqg9K-s8z4&index=1)
 - [Learning Functional Programming with JavaScript](https://www.youtube.com/watch?v=e-5obm1G_FY)
 
-### Useful links:
+## Links:
 
 - [HTML Objects | dom_obj_document.asp](https://www.w3schools.com/jsref/dom_obj_document.asp)
 - [stackoverflow - windows vs document](https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript)
