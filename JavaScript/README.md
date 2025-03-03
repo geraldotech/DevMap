@@ -5,6 +5,7 @@
 > Memorize is a bad ideia, instead focus on concepts
 
 # Threads
+
 ### Starter JavaScript? **From Scratch by _Geraldo Filho_**
 
 - [O que é JS](#what-is-javascript)
@@ -30,6 +31,7 @@
 
 - [Input - Forms](./input/forms.md)
 - [DOM events](#dom---events)
+
   - [onclick](#onclick)
   - [onload](./assets/thread/onload_goTop.js)
   - [addEventListener](#addeventlistener)
@@ -65,6 +67,7 @@
     - 6 [Template Strings vs createElement](./assets/thread/TemplateStrings_vs_createEl.html) - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/TemplateStrings_vs_createEl.html)
 
     </details>
+
 - [Learn-DOM-Manipulation](./assets/thread/Learn-DOM-Manipulation/)
 - WebAPIs
   - Element: [nextElementSibling](#nextelementsibling)
@@ -77,7 +80,6 @@
 - [Menu All Pages by `gmap`](./assets/thread/Menu_All_pages.md)
 - [childNodes.html](./assets/thread/childNodes.html)
 - [List Directories](./assets/thread/List_directories)
-
 
 <hr>
 
@@ -117,7 +119,6 @@ console.table(person) // beautiful way to render tables
 - <a href="https://developer.mozilla.org/en-US/docs/Web/API/console" target="_blank">Todos os tipos de consoles</a>
 - <a href="./Consoles">Consoles by GP</a> - [Demo](https://geraldotech.github.io/DevMap/JavaScript/assets/thread/Consoles/index.html)
 - <a href="./Consoles">CSS no console.log</a> - [DevTO](https://dev.to/annlin/consolelog-with-css-style-1mmp) | [MDN](https://developer.mozilla.org/en-US/docs/Web/API/console)
-
 
 ## window and document
 
@@ -635,7 +636,6 @@ document.head.insertAdjacentHTML('beforeend', '<link rel=stylesheet href=/foo.cs
 |  ==   |    compara valor     |
 |  ===  | compara valor e tipo |
 
-
 <hr>
 
 ## DOM - Events
@@ -774,7 +774,7 @@ document.addEventListener("mousemove", function(event){
 
 // chave de ids
 const instacens = [1,2,3]
-instacens.forEach((id) => { 
+instacens.forEach((id) => {
 const div = document.querySelector(`#instance${id}`)
 // Check if the element exists
 if(div){
@@ -883,7 +883,8 @@ p.addEventListener('click', function (e) {
 ```
 
 - Target custom Attr
-  <a id="target-custom-attr-data"></a>  
+  <a id="target-custom-attr-data"></a>
+
   - [DOMStringMap o `dataset` ](./Learn-DOM-Manipulation/DOMStringMap/)
   - [Use_data_attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 
@@ -1149,11 +1150,11 @@ console.log(target.nextElementSibling) // <li>Anti Hero</li>
 
 
 
-const btn = document.querySelectorAll('div') 
+const btn = document.querySelectorAll('div')
 
 btn.forEach((val) =>
-val.addEventListener('click', function (e) { 
-  
+val.addEventListener('click', function (e) {
+
 console.log(e.target.parentElement)
 
 const btn = e.target.parentElement.querySelector('button') // <div> </div>
@@ -1170,12 +1171,41 @@ mycheck.onchange = function(){
   console.warn(event.target.parentElement) // <label></label>
 }
 ```
-- ##  event.target.closest('class')
+
+- ## event.target.closest('class')
 
 https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+
 - quizItem has example
 
+- ## Tips:
 
+```js
+/* ao invés de você digitar 1 milhão como 1000000, você digita como 1_000_000
+ * REF - https://web.facebook.com/groups/osadpa/posts/8502880786484040
+ */
+console.log(1_000_000)
+
+console.log(1000000 === 1_000_000) // true
+
+/* representar 1000 com 1E3  */
+let mil = 1000 // 1000
+let milv = 1e3 // 1000
+
+console.log(1e3 === 1000) // true
+
+/* 
+Operação	Descrição	Resultado
+10 << 1	Desloca à esquerda, multiplica por 2	20
+10 >> 1	Desloca à direita, divide por 2	5
+*/
+let test = 10 << 1 // *2
+let test2 = 10 >> 1 // /2
+
+console.log(test)
+
+console.log(test2)
+```
 
 ## Videos
 

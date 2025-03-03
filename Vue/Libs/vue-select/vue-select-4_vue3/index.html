@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html
-  lang="
-en"
+  lang="en"
   style="color-scheme: dar">
   <head>
     <meta charset="UTF-8" />
@@ -24,23 +23,33 @@ en"
       rel="stylesheet"
       href="https://unpkg.com/vue-select@latest/dist/vue-select.css" />
     <script src="https://unpkg.com/vue-select@beta"></script>
+    <style>
+      /* custom disabled options */
+      .vs__dropdown-option--disabled{
+        color: red;
+        opacity: 0.5;
+      }
+      .vs__dropdown-option--disabled::after{
+        content: ' (inativo)';
+      }
+    </style>
   </head>
   <body>
     <div id="app">
-
       <v-select
         :options="options"
+        v-model="selecao"
         label="title">
         <template #header>
           <div style="opacity: 0.8">Top of the component, in the header slot!</div>
         </template>
-        <template #no-options>
-          Nenhuma opção encontrada
-        </template>
+        <template #no-options> Nenhuma opção encontrada </template>
 
         <div slot="no-options">No Options Here!</div>
-
       </v-select>
+
+      <p>selecao: {{selecao}}</p>
+
       <h1>multiple</h1>
       <v-select
         multiple
@@ -48,19 +57,60 @@ en"
         :options="options"
         :reduce="val => val.code"
         label="title">
-        <template #no-options>
-          Nenhuma opção encontrada
-        </template>
+        <template #no-options> Nenhuma opção encontrada </template>
       </v-select>
 
       <p>selecionado: {{selecionado}}</p>
 
       <h2>autoload and automount by gmapdev</h2>
 
-
-
       <zbutton btn="example A"></zbutton>
-     
+
+      <h1>Ajax example</h1>
+      <p>inativando se incluir alguma coisa, melhor no-options select</p>
+      <!-- vue-select -->
+      <v-select
+        transition="vs__fade-leave-active"
+        :filterable="false"
+        placeholder="Escolher grupos"
+        :options="grupos"
+        @search="onSearch"
+        value="id"
+        :selectable="(option) => !option.slug.includes('stakeholders-organizacao')"
+        v-model="grupos_selected"
+        label="title">
+        <template #header>
+          <div
+            style="opacity: 0.8"
+            class="text-white">
+            Críterio para busca:
+          </div>
+        </template>
+        
+       <!--  <template #no-options>Nenhum resutlado encontrado!</template> -->
+
+
+       <!-- Improving the default no-options text  -->
+        <template v-slot:no-options="{ search, searching }">
+          <template v-if="searching">
+            No results found for <em>{{ search }}</em
+            >.
+          </template>
+          <em v-else style="opacity: 0.5">2 caracteres para iniciar a busca.</em>
+        </template>
+      </v-select>
+
+      <p>object selected: {{grupos_selected}}</p>
+
+      <!-- vue-select -->
+
+      <h1>Single/Multiple</h1>
+      <v-select
+        placeholder="Escolher grupos"
+        v-model="selected_country"
+        :options="['Canada','United States']">
+      </v-select>
+      <p>{{selected_country}}</p>
     </div>
 
     <script src="./src/main.js"></script>
