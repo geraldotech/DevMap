@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #e2e8f0;
+  height: 200vh;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: #4e70a3;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.tab:hover {
+  background: #f1f1f1;
+}
+
+.tab.active {
+  border-bottom: 2px solid #007bff;
+  font-weight: bold;
+  background: green;
+}
+
+.tab-content {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-top: -1px;
+}
+
+.tab-content.active {
+  display: block;
+}

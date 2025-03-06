@@ -7,6 +7,20 @@ const url = new URL('http://example.com/?nextRow=19') // Substitua pela sua URL
 const params = new URLSearchParams(url.search)
 const nextRow = params.get('nextRow')
 console.log(nextRow) // Isso imprimirá "19"
+
+
+/* 
+visitar uma url com search params like: http://127.0.0.1:5500/index.html?ranking=geral&type=vip
+*/
+
+const params = new URLSearchParams(window.location.search)
+const getparams = params.get('ranking')
+const getparams2 = params.get('type')
+
+console.log(params)
+console.log(getparams, getparams2) // geral and  vip
+
+
 ```
 
 ### Usando Expressão Regular
