@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="index.js" defer></script>
-</head>
-<body>
-  <span id="productId" data-id="02390293">02390293</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="index.js"
+      defer></script>
+  </head>
+  <body>
+    <span
+      id="productId"
+      data-id="02390293"
+      >02390293</span
+    >
 
-  <span
-  class="hi1 hi2"
-  id="bye"
-  title="Ola"
-  data-test="this is a test"
-  data-long-beach="california"
-  >Bye</span
->
-</body>
+    <span
+      class="hi1 hi2"
+      id="bye"
+      title="Ola"
+      data-test="this is a test"
+      data-long-beach="california"
+      >Bye</span
+    >
+
+    <h1>Get direct data attribute</h1>
+    <span data-cod="AL"> Alagoas </span>
+
+    <script>
+      /* para melhor leitura movido javascript aqui */
+      const productId = document.getElementById('productId').dataset.id
+      console.log(`productId`, productId)
+
+      //👉 data-test DOMStringMap
+
+      const Bye = document.querySelector('#bye')
+
+      console.log(Bye.dataset) // no DOM:  data-test o return: test: "content
+      /*
+data-long-beach="california" return longBeach:'california'
+*/
+
+      // Access the data
+      console.log(Bye.dataset.test) //this is a test
+      console.log(Bye.dataset.longBeach) //california
+
+      //Setting data direct in JS
+
+      Bye.dataset.novoName = 'Costa' //DOM will updated data-novo-name="Costa"
+
+      /* ===  Get direct data attribute === */
+      const grupo_cod = 'AL'
+
+      const span = document.querySelector(`span[data-cod='${grupo_cod}']`)
+
+      console.log(span)
+    </script>
+  </body>
 </html>
