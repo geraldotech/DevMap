@@ -8,10 +8,6 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      src="index.js"
-      defer></script>
   </head>
   <body>
     <span
@@ -31,6 +27,7 @@
 
     <h1>Get direct data attribute</h1>
     <span data-cod="AL"> Alagoas </span>
+    <span data-cod=""> São Paulo </span>
 
     <script>
       /* para melhor leitura movido javascript aqui */
@@ -42,9 +39,7 @@
       const Bye = document.querySelector('#bye')
 
       console.log(Bye.dataset) // no DOM:  data-test o return: test: "content
-      /*
-data-long-beach="california" return longBeach:'california'
-*/
+      /* data-long-beach="california" return longBeach:'california' */
 
       // Access the data
       console.log(Bye.dataset.test) //this is a test
@@ -60,6 +55,10 @@ data-long-beach="california" return longBeach:'california'
       const span = document.querySelector(`span[data-cod='${grupo_cod}']`)
 
       console.log(span)
+
+      /* === GET ALL SPANS WITH ATTRIBUTE (NO VALUE IS REQUIRED) */
+      const allspans2  = document.querySelectorAll("span[data-cod]")
+      console.log(allspans2)
     </script>
   </body>
 </html>
