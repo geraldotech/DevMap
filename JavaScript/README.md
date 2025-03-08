@@ -886,7 +886,7 @@ p.addEventListener('click', function (e) {
 - Target custom Attr
   <a id="target-custom-attr-data"></a>
 
-  - [DOMStringMap o `dataset` ](./Learn-DOM-Manipulation/DOMStringMap/)
+  - [DOMStringMap o `dataset` ](./assets/thread/Learn-DOM-Manipulation/DOMStringMap/)
   - [Use_data_attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 
   - using [data] and [itemtype]
