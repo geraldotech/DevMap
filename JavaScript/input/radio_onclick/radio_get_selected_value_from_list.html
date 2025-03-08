@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="noform">
+      <h1>Exemplo sem form id</h1>
+      <select
+        name=""
+        id="operadora">
+        <option value="t">TIM</option>
+        <option value="c">Claro</option>
+        <option value="v">Vivo</option>
+      </select>
+
+      <ul>
+        <li>
+          <input
+            type="radio"
+            name="concorda"
+            id="sim"
+            value="sim" />
+          <label for="sim">Sim</label>
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="concorda"
+            id="nao"
+            value="nao" />
+          <label for="nao">Não</label>
+        </li>
+      </ul>
+
+      <button onclick="request4()">Confirmar ação</button>
+    </div>
+
+    <script>
+      function request4() {
+        const operadora = document.getElementById('operadora').value
+        const concorda = document.querySelectorAll("#noform input[name='concorda']")
+
+        /* USANDO LOOP PARA ENCONTRAR O VALOR CHECKED */
+        let checkedradio
+        for (const opt of concorda) {
+          if (opt.checked) {
+            checkedradio = opt.value
+          }
+        }
+
+        /* OU MAIS SIMPLES */
+        const concordachecked = document.querySelector("#noform input[name='concorda']:checked")?.value
+
+        console.warn(concordachecked)
+
+        console.log(operadora, checkedradio)
+      }
+    </script>
+  </body>
+</html>
