@@ -229,4 +229,7 @@ links.forEach((el,event) => {
   el.setAttribute("class","li");
 });
 
+
+// first-child
+ document.querySelector('#yourtableid tbody tr:first-child')
 ```
