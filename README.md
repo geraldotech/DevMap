@@ -22,7 +22,7 @@
 
   - Seletores / Especificidade
     - style:inline
-    - id
+    - ID
     - class
     - tags
   - Width / Height
