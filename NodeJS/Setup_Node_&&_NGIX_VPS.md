@@ -147,21 +147,23 @@ Stop `pm2 stop index.js`
 1 - install nginx: `apt install nginx`
 
 
-# nginx purge
+# Nginx comandos:
 
 ```js
+apt update
+// purge
+apt remove --purge nginx*
+apt autoremove
 
-sudo apt remove --purge nginx*
-sudo apt autoremove
-sudo apt update
-sudo apt install nginx
+
+service nginx start
+apt install nginx
 systemclt restart nginx
 service nginx restart
-
 ```
 
 2 - open config nginx: `vi /etc/nginx/sites-available/default` or create your site conf `vim /etc/nginx/sites-enabled/appbr.conf`
-> if default in `/etc/nginx/sites-enabled/` exists: `mv default to default2`
+> if default in `/etc/nginx/sites-available/` exists: `mv default to default2`
 
 ```js
    server {
@@ -297,13 +299,13 @@ http://143.198.232.51:4000/pessoas
 
 - restart nginx
 
-
-
 </details>
 
-## certbot
+- Para liberar a porta 80 (Oracle) - `sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT` além de definir as regras no site.
 
-- depende muito da sua distro checkout => https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
+## Certbot (https)
+
+- A config depende muito da sua distro checkout => https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
 
 > delete
 snap remove certbot
