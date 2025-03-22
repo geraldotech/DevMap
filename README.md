@@ -33,6 +33,7 @@
     - Box-sizing
       - border-box
       - content-box
+        
   - Medidas
     - absolutas: px
     - relativas: rem, em, % de viewport, vw, vh
