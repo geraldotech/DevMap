@@ -6,7 +6,6 @@
 ```html
 <p>CTRL + Shift + J for JS</p>
 <p>CTRL + Shift + C for CSS</p>
-.
 ```
 
 # <span style="color: coral">Front - End ROADMAP - Rooting MAP</span>
