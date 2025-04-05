@@ -248,3 +248,44 @@ fetch(baseurl, {
     console.log(error)
   })
 ```
+
+### Best examples with: then/catch and async/await
+
+```js
+const url = 'https://api-restful-json.vercel.app'
+
+
+// then/catch - 	Código mais curto, melhor para funções simples e event handlers.
+fetch(`${url}/posts?id=${encodeURIComponent(1)}`)
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error(`Erro na requisição: ${res.status}`)
+    }
+    return res.json() // return as JSON
+  })
+  .then((data) => {
+    console.log(data) // ✅ Dados válidos
+  })
+  .catch((error) => {
+    console.error('Erro ao buscar', error)
+  })
+
+// async/await - Mais legível, especialmente quando há várias requisições encadeadas.
+try {
+  const response = await fetch(`${url}/posts?id=${encodeURIComponent(1)}`)
+
+  if (!response.ok) {
+    throw new Error(`Erro na requisição: ${response.status}`)
+  }
+
+  const data = await response.json()
+
+
+  if (!data) {
+    throw new Error(`Data not okay: ${data.message}`)
+  }
+    console.log(`data`, data)
+} catch (error) {
+  console.error('Erro ao buscar', error)
+}
+```
