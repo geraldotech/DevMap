@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme:">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link href="https://unpkg.com/vue3-easy-data-table/dist/style.css" rel="stylesheet">
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <script src="https://unpkg.com/vue3-easy-data-table"></script>
+
+
+  <script src="./src/app.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <h1>
+      <a href="https://hc200ok.github.io/">https://hc200ok.github.io/</a>
+    </h1>
+
+    {{message}}
+
+    {{foo}}
+
+
+
+    <easy-data-table
+    buttons-pagination
+    alternating
+    :headers="headers"
+    :items="items"
+    show-index
+    border-cell
+    @click-row="showRow"
+    />
+    <template #loading>
+      <img
+        src="https://i.pinimg.com/originals/94/fd/2b/94fd2bf50097ade743220761f41693d5.gif"
+        style="width: 100px; height: 80px;"
+      />
+    </template>
+    <template #item-name="{ name }">
+      <button @click="clickButton">{{ name }}</button>
+    </template>
+  </easy-data-table>
+
+
+
+  </div>
+  
+</body>
+</html>

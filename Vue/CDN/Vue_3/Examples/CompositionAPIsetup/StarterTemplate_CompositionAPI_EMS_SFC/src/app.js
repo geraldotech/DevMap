@@ -2,11 +2,11 @@ import * as Vue from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 import { loadModule } from 'https://cdn.jsdelivr.net/npm/vue3-sfc-loader@0.9.5/dist/vue3-sfc-loader.esm.js'
 import options from './sfc-loader.js'
 
-const autoimports = (componame) => {
-  return Vue.defineAsyncComponent(() => loadModule(`./src/components/${componame}.vue`, options))
+const autoimports = (componentName) => {
+  return Vue.defineAsyncComponent(() => loadModule(`./src/components/${componentName}.vue`, options))
 }
 
- window.Vue = Vue
+window.Vue = Vue
 
 Vue.createApp({
   components: {
@@ -14,4 +14,3 @@ Vue.createApp({
   },
   setup() {},
 }).mount('#app')
- 

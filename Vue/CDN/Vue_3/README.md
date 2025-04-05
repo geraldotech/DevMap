@@ -21,18 +21,22 @@ Os melhores exemplos para usar o framework via CDN sem a necessidade do NodeJS, 
 Tipos de exports nos components:
 
 ```js
-<script setup></script> // verão mais recente 
+<script setup></script> // verão mais recente
 export default {} // para CompositionAPI e optionsAPI
 
 export.modules = {} //[mais antigo] para CompositionAPI e optionsAPI
 ```
 
+- ciclo de importação
 
+```js
 
+- .js importa .js - module
+- .js imports .vue - (usando SFC Loader)
+  - .js => imports .vue => .vue imports .vue
+- .vue import .vue - native
 
-
-
-
+```
 
 <hr>
 
