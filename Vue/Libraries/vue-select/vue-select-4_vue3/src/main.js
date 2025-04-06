@@ -22,6 +22,9 @@ const app = Vue.createApp({
     const selected_country = ref(null)
     const selecao = ref(null)
 
+    const questions = ref([])
+    const questions_selected = ref([])
+
     function onSearch(search, loading) {
       if (search.length) {
         console.log(search)
@@ -31,11 +34,10 @@ const app = Vue.createApp({
     }
 
     function searchfetch(loading, search) {
-      fetch(`https://api-restful-json.vercel.app/entregasuporte/?title_like=${escape(search)}`)
+      fetch(`https://api-restful-json.vercel.app/entregasuporte/?title_like=${encodeURIComponent(search)}`)
         .then((res) => {
           if (!res.ok) {
-            console.error(res)
-            return
+            throw new Error('Erro na requisição', res)
           }
           res.json().then((response) => {
             console.log(response)
@@ -60,7 +62,38 @@ const app = Vue.createApp({
         })
     }
 
-    onMounted(() => {})
+    /* 
+    ➡️ - Como nao usarmos o  @search na input o loading() não está disponivel e seria inutil pq todos os resultados ja estão local.
+    ➡️ - porem quando temos a busca por ajax se atentar que @search envia os params: search e loading, e aqui nao é necessário pq a funcao é chamada no mounted
+    */
+    function searchfetchAll() {
+      fetch(`https://api-restful-json.vercel.app/entregasuporte`)
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Erro na requisição', res)
+          }
+          res.json().then((response) => {
+            console.log(response)
+
+            // make custom label
+            /*  grupos.value = response.map((v) => ({
+              id: v.id,
+              title: v.title,
+              custom: `${v.id} - ${v.title}`,
+            })) */
+            questions.value = response.map(({ id, title, slug, custom }) => {
+              return { id, title, slug, custom: `${id} - ${title}` }
+            })
+          })
+        })
+        .catch((error) => {
+          console.error('Erro ao buscar', error)
+        })
+    }
+
+    onMounted(() => {
+      searchfetchAll() // by default
+    })
     return {
       options,
       selecionado,
@@ -70,10 +103,14 @@ const app = Vue.createApp({
       searchfetch,
       selected_country,
       selecao,
+      questions,
+      questions_selected,
+      searchfetchAll,
     }
   },
 })
 
+// lista os components
 console.log(app._component)
 
 /* console.log(app._component.components.vSelect.props) */

@@ -14,6 +14,7 @@
     <!-- Vue SFC  -->
     <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
 
+
     <!-- Vue SFC Loader -->
     <script src="./src/sfc-loader-autoimports.js"></script>
     <style>
@@ -42,17 +43,7 @@
       <h1>Auto import + direct inject</h1>
       <Typescript></Typescript>
 
-      <h1>Tables</h1>
-      <Tablelite
-      
-      :is-loading="table.isLoading"
-      :columns="table.columns"
-      :rows="table.rows"
-      :total="table.totalRecordCount"
-      :sortable="table.sortable"
-      @do-search="doSearch"
-      @is-finished="tableLoadingFinish"
-      ></Tablelite>
+
     </div>
 
     <script src="./src/main.js"></script>

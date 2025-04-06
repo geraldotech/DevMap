@@ -19,46 +19,12 @@ const app = Vue.createApp({
     youtubecom: autoimports('Youtube'),
     goingto: ButtonBravo,
     nowyousee: 'ok',
-    TableLite: TableLite
-
   },
   setup() {
     const message = ref('Hello World!')
 
-    const table = reactive({
-      isLoading: false,
-      columns: [
-        {
-          label: "ID",
-          field: "id",
-          width: "3%",
-          sortable: true,
-          isKey: true,
-        },
-        {
-          label: "Name",
-          field: "name",
-          width: "10%",
-          sortable: true,
-        },
-        {
-          label: "Email",
-          field: "email",
-          width: "15%",
-          sortable: true,
-        },
-      ],
-      rows: [],
-      totalRecordCount: 0,
-      sortable: {
-        order: "id",
-        sort: "asc",
-      },
-    });
-
-
     return {
-      message, table
+      message,
     }
   },
 })
@@ -73,6 +39,5 @@ app.component('Buttoncharlie', {
 
 /* autoload  3 + direct inject on app.vue */
 autoload('Typescript')
-autoload('Tablelite')
 
 app.mount('#app')
