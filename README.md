@@ -61,3 +61,4 @@
 - [https://roadmap.sh/frontend](https://roadmap.sh/frontend)
 - [https://trilha.info/](https://trilha.info/)
 - [https://devdocs.io/](https://devdocs.io/)
+- [https://dev.to/ruizb/declarative-vs-imperative-4a7l#making-a-chocolate-cake/](declarative-vs-imperative)

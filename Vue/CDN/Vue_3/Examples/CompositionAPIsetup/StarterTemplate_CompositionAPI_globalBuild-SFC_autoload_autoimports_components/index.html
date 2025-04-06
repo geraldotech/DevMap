@@ -41,6 +41,18 @@
 
       <h1>Auto import + direct inject</h1>
       <Typescript></Typescript>
+
+      <h1>Tables</h1>
+      <Tablelite
+      
+      :is-loading="table.isLoading"
+      :columns="table.columns"
+      :rows="table.rows"
+      :total="table.totalRecordCount"
+      :sortable="table.sortable"
+      @do-search="doSearch"
+      @is-finished="tableLoadingFinish"
+      ></Tablelite>
     </div>
 
     <script src="./src/main.js"></script>
