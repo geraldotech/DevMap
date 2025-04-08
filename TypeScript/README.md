@@ -153,7 +153,9 @@ target - seta a versão do ECMAScript que o projeto deve utilizar. Como default,
 Defer deixa carregar primeiro HTML:
 
 ```js
-<script src="./assets/js/index.js" defer></script>
+<script
+  src="./assets/js/index.js"
+  defer></script>
 ```
 
 # Hosting
@@ -212,6 +214,48 @@ function teste() {
 }
 
 console.log(global) //2 -> acessa a que vazou do if
+
+/// n tem escopo de bloco, ele vaza
+var tipoVar = 'primeira declaracao'
+var con = 4
+if (con > 3) {
+  var tipoVar = 'segunda declaracao'
+}
+console.log(tipoVar)
+
+// permite redeclarar
+var nome = 'gera'
+var nome = 'geraldo'
+
+// reatibuir
+nome = 'novo'
+
+console.log(nome) // novo
+
+multiplicarValores()
+function multiplicarValores() {
+  var num1 = 10
+  var num2 = 3
+  var resultado = num1 * num2
+  console.log(resultado)
+  //A instrução acima imprimirá o resultado da operação matemática. Lembrando que
+  // as variáveis num1, num2 e resultado só existem dentro da própria função.
+}
+console.log('Conteúdo da variável resultado fora da função: ' + resultado)
+
+//A instrução acima não conseguirá acessar o conteúdo da variável resultado,
+// uma vez que ela só existe dentro do escopo da função onde foi declarada.
+// A saída da instrução acima será: "resultado is not defined"
+
+var texto = 'Texto atribuido à variável'
+
+imprimirTexto()
+
+function imprimirTexto() {
+  var texto = 'Novo texto atribuído à variável'
+}
+
+console.log(texto) // 'Texto atribuido à variável'
 ```
 
 # Let
