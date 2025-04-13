@@ -23,17 +23,24 @@ const options = {
  * @since: Novembro 2023
  */
 
-/* imports */
+/**  imports
+ * @params - path - path do component
+ * @usage - const ButtonAlpha = imports('./src/components/Button.vue')
+ */
 const imports = (path) => {
   return Vue.defineAsyncComponent(() => loadModule(path, options))
 }
 
-/* auto import com path + .vue */
+/** autoimports com path pre-defenido - './src/components/:name?.vue' - IDEAL PARA SETAR O LOCAL PADRÃO DOS COMPONENTS E A IMPORTACAO É FEITA DE FORMA AUTOMATICA
+ * @params - componentName - nome do component
+ */
 const autoimports = (componentName) => {
   return Vue.defineAsyncComponent(() => loadModule(`./src/components/${componentName}.vue`, options))
 }
 
-/* autoload + direct inject on app.vue */
+/**  autoload + direct inject on app.vue com a const app
+ * @params - componentName - nome do component
+ */
 const autoload = (componentName) => {
   app.component(componentName, autoimports(componentName))
 }

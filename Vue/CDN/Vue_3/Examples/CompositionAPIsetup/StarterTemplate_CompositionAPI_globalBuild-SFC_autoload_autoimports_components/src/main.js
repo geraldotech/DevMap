@@ -30,7 +30,7 @@ const app = Vue.createApp({
 })
 
 /* app.component + autoimports */
-app.component('componenta', autoimports('Youtube'))
+app.component('componenta', autoimports('xYoutube'))
 
 /* custom using object */
 app.component('Buttoncharlie', {

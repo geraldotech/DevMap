@@ -11,4 +11,4 @@ const app = Vue.createApp({
 /* === carregar components */
 autoload('Typescript')
 
-app.mount('#app')
+app.mount('#app') // or const rootDiv = document.querySelector('#root') app.mount(rootDiv)

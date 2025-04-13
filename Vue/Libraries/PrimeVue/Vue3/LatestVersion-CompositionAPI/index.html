@@ -23,12 +23,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script src="https://unpkg.com/@primevue/themes/umd/aura.min.js"></script>
+    <!-- Themes -->
+     <script src="https://unpkg.com/@primevue/themes/umd/aura.min.js"></script> 
+    <script src="https://unpkg.com/@primevue/themes@4.3.3/umd/lara.min.js"></script>
 
     <!-- PrimeIcons -->
-    <link
+    <!--     <link
       href="https://cdn.jsdelivr.net/npm/primeicons/primeicons.css"
       rel="stylesheet" />
+ -->
+    <!--  <link
+      href="https://cdn.jsdelivr.net/npm/primeicons@7.0.0/primeicons.min.css"
+      rel="stylesheet" /> -->
 
     <!-- Components -->
     <script src="https://unpkg.com/primevue/calendar/calendar.min.js"></script>
@@ -171,7 +177,6 @@
 
       <h1>Dropdown</h1>
 
-
       <!-- 
 
         node: optionLabel
@@ -203,6 +208,46 @@
         aria-describedby="username-help"
         placeholder="Username"></p-inputtext>
       <small id="username-help">Enter your username to reset your password.</small>
+
+      <h1>Datatables</h1>
+
+      <div class="card">
+        <p-datable
+          paginator
+          :rows="2"
+          showGridlines
+          :value="products"
+          tableStyle="min-width: 50rem">
+          <p-column
+            field="code"
+            header="Code">
+          </p-column>
+          <p-column
+            field="name"
+            header="Name"></p-column>
+          <p-column
+            field="category"
+            header="Category"></p-column>
+          <p-column
+            field="quantity"
+            header="Quantity"></p-column>
+          <p-column
+            
+            header="Quantity">
+            <template #body="{ data }">
+              <button>teste</button>
+          </template>
+          </p-column>
+            
+        </p-datable>
+
+        <!-- <p-datable   :value="products">
+        <p-column v-for="col of pro">
+
+        </p-column>
+
+      </p-datable> -->
+      </div>
     </div>
     <footer style="padding-top: 10rem"></footer>
 
