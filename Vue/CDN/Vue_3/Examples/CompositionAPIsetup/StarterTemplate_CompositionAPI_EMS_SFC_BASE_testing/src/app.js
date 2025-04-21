@@ -8,169 +8,46 @@ const autoimports = (componentName) => {
   return Vue.defineAsyncComponent(() => loadModule(`./src/components/${componentName}.vue`, options))
 }
 
-console.log(VueTableLite)
+// window.Vue = Vue
+// window.VueTableLite = VueTableLite
 
-window.Vue = Vue
-window.VueTableLite = VueTableLite
+const { ref, createApp, onMounted, watch, computed } = Vue
 
-const { createApp, reactive } = Vue
-
-const TableLite = autoimports('Tablelite')
+//const TableLite = autoimports('Tablelite')
 
 const app = createApp({
   components: {
     hello: autoimports('Header'),
-    Tablelite: TableLite,
   },
   setup() {
-    const table = reactive({
-      isLoading: false,
-      columns: [
-        {
-          label: 'ID',
-          field: 'id',
-          width: '3%',
-          sortable: true,
-          isKey: true,
-        },
-        {
-          label: 'Name',
-          field: 'name',
-          width: '10%',
-          sortable: true,
-        },
-        {
-          label: 'Email',
-          field: 'email',
-          width: '15%',
-          sortable: true,
-        },
-      ],
-      rows: [
-        {
-          id: 1,
-          name: 'jack',
-          email: 'example@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-        {
-          id: 2,
-          name: 'gerakdo',
-          email: 'maceio@example.com',
-        },
-      ],
-      totalRecordCount: 0,
-      sortable: {
-        order: 'id',
-        sort: 'asc',
-      },
-      messages: {
-        pagingInfo: 'Page {0} of {1}',
-        pageSizeChangeLabel: 'Size:',
-        gotoPageLabel: 'Ir para:',
-        noDataAvailable: 'Sem dados',
-      },
+    /* consts */
+    const h1 = ref('')
+    const counter = ref(0)
+
+
+    /* computed */
+    const multiplo = computed(() => {
+      return counter.value * 2
     })
 
-    const rowClicked = (row) => {
-      console.log(row)
-    }
+    /* life cycle hooks */
+    onMounted(() => {
+      console.log(h1)
+    })
 
-    /**
-     * Row checked event
-     */
-    const updateCheckedRows = (rowsKey) => {
-      console.log(rowsKey)
-    }
+    // trava o valor do contador em 0
+    // se o valor for menor que 0, o valor é 0
+    watch(counter, (newvale, old) => {
+      if (newvale == -1 && old == 0) {
+        counter.value = 0
+      }
+    })
 
+    /* return */
     return {
-      table,
-      rowClicked,
-      updateCheckedRows,
+      h1,
+      counter,
+      multiplo,
     }
   },
 })
