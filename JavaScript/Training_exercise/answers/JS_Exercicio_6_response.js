@@ -161,3 +161,23 @@ function verificar(input){
 console.log(verificar('pa')) // default
 console.log(verificar('opcao1')) // 1
 console.log(verificar('opcao2')) // 2
+
+
+
+const base = {
+  'free': 'read',
+  'premium': 'read write'
+}
+
+const current = 'freex'
+
+console.log(base[current] || 'nao encontrado') // zero
+
+// adicionar dentro de uma funcao para facil return
+const check = (val) => {
+  return base[val] || 'nao encontrado'
+}
+
+
+console.log(check('free'))
+console.log(check('freex'))
