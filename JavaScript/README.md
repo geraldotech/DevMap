@@ -302,6 +302,20 @@ function openInNewTab(url) {
   onclick="openInNewTab(`http://google.com`)">
   G
 </a>
+
+// return direto no
+  <a href="https://google.com" onclick="return confirm('Deseja realmente excluir este produto?');">TEST</a>
+
+
+
+// return com melhoria
+<a href="http://technotesbr.blogspot.com.br" id="mylink">TEST 2</a>
+
+
+ document.getElementById('mylink').onclick = function (e) {
+    //console.log(e.target.href)
+    return confirm(`Deseja visitar o site ${e.target.href} ?`)
+}
 ```
 
 <details>
@@ -1207,7 +1221,6 @@ console.log(test)
 
 console.log(test2)
 ```
-
 
 ### Useful links:
 
