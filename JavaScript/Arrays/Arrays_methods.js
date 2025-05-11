@@ -87,7 +87,7 @@ console.log(str[str.length -1]);
 
 var text = 'uololooo';
 
-//📌 ES6 - Destructing
+//📌 ES6 - Spread syntax
 [...text].forEach((c) => {
   console.log(c)
 });
@@ -98,9 +98,10 @@ for(const d of text){
 }
 
 //📌With ES5
-for (var x = 0, c=''; c = text.charAt(x); x++) { 
+for (var i = 0, c = text.charAt(i); i++) { 
   console.log(c); 
 }
+
 // https://stackoverflow.com/questions/1966476/how-can-i-process-each-letter-of-text-using-javascript
 
 /* [=============================================================================]
