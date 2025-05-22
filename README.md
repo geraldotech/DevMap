@@ -12,13 +12,13 @@
 
 ## How to start
 
-- ✔ HTML <a href="https://git.geraldox.com/HTML/" target="_blank">https://git.geraldox.com/HTML/</a>
+- ✔ HTML <a href="https://devmap.pages.dev/HTML" target="_blank">https://devmap.pages.dev/HTML</a>
 
   - tags
   - HTML sematic tags
   - How to structure the DOM properly
 
-- ✔ CSS <a href="https://geraldotech.github.io/DevMap/CSS/" target="_blank">https://geraldotech.github.io/DevMap/CSS/</a>
+- ✔ CSS <a href="https://devmap.pages.dev/CSS" target="_blank">https://devmap.pages.dev/CSS</a>
 
   - Seletores / Especificidade
     - style:inline
@@ -54,7 +54,7 @@
   - margin / padding
   - Media Queries
 
-- ✔ JavaScript <a href="https://github.com/geraldotech/DevMap/tree/main/JavaScript" target="_blank">JavaScript</a>
+- ✔ JavaScript <a href="https://devmap.pages.dev/JavaScript" target="_blank">JavaScript</a>
 
 ## Useful RoadMaps:
 
