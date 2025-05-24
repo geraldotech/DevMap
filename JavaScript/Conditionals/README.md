@@ -2,7 +2,7 @@
 
 - [if && AND](#-and)
 - [if if else](#if-if-else)
-- [Terary](#ternary)
+- [Ternary](#ternary)
 - [if else if](#if-else-if)
 - [if return](#if-return)
 
@@ -14,8 +14,21 @@
 let conditition = 'Geraldo'.length >= 7 && 'SIM'
 
 console.log(conditition) // SIM
-
 console.log(10 > 5 && 'Yes') // Yes
+
+
+// multiple conditions
+const server = {
+  ok: true,
+  message: 'sdweg',
+  data: {
+    name: 'My Server',
+    version: '1.0.0',
+    uptime: '24 hours',
+  },
+}
+const condicao = (server.ok && server.message.length && 10 > 2) && 'VC ESTA CERTO'
+console.log(condicao) // YES
 ```
 
 # if if-else
@@ -71,32 +84,31 @@ age(20);
 let ano = 2022;
 let num = ano > 2000 ? "not" : null;
 console.log(num); //not
+```
 
-
-//par impar
+# par impar
+```php
 
 <button onclick="bnt()">check out</button>
 <input id="num" />
 <br>
-<div id="res">
-
-</div>
+<div id="res"></div>
 
 
 function bnt() {
     var x = document.getElementById("num").value;
     const res = window.res; //não  é recomendado usar o window, apenas um exemplo de possibilidade
     x %2 == 0 ? res.textContent = ("par") : res.textContent = ("impar");
-    }
+}
 
 //one condition
 curre.checked ? arr.push(curre.id) : curre.checked;
 
-/*
-You only need to do this:  `return a === 0;`
-the result of this is actually a boolean.
-- https://www.linkedin.com/feed/update/urn:li:activity:7102330577072091136?utm_source=share&utm_medium=member_desktop
-*/
+
+// You only need to do this:  `return a === 0;`
+// the result of this is actually a boolean.
+// - https://www.linkedin.com/feed/update/urn:li:activity:7102330577072091136?utm_source=share&utm_medium=member_desktop
+
 
 //arrow function, tbm poderia ser function obvious
 const isEven = (value) => {
@@ -108,10 +120,7 @@ console.log(isEven(3)); //false
 //arrow function inline: by gmap
 const isEven = (v) => v % 2 === 0;
 
-
 console.log(isEven(2)); //true
-
-
 ```
 
 # if-return
@@ -134,7 +143,6 @@ function check(x) {
 }
 
 //if return
-
 function idade(a) {
   if (a === 30) {
     console.log('trinta')
@@ -157,7 +165,6 @@ if (5 > 1) {
 console.log('menor')
 
 // inline return
-
 function fetchPostFromPeriodo(period) {
   if (period === 'today') return console.log('today')
   if (period === 'week') return console.log('week')
@@ -169,7 +176,6 @@ fetchPostFromPeriodo('!today') // get all
 fetchPostFromPeriodo('today') // today
 
 // === VERSION if inline, thanks gp ====
-
 function fetchPostFromPeriodo(period) {
   return (period === 'today' && 'OK!') || 'an other day'
 }
