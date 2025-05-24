@@ -101,6 +101,14 @@ function bnt() {
     x %2 == 0 ? res.textContent = ("par") : res.textContent = ("impar");
 }
 
+function bntxx() {
+    var x = parseInt(document.getElementById("num").value, 10);
+    console.log(x);
+
+    var resultElement = document.getElementById("res");
+    x % 2 === 0 ? resultElement.textContent = "par" : resultElement.textContent = "impar";
+}
+
 //one condition
 curre.checked ? arr.push(curre.id) : curre.checked;
 
