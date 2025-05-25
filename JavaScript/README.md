@@ -1176,6 +1176,8 @@ const btn = e.target.parentElement.querySelector('button') // <div> </div>
 console.log(btn.nextElementSibling) // <p>foo</p>
 
 console.warn(event.target.closest('div') // <div> </div>
+
+console.log(val.querySelector('button'))
 )
 }) )
 
