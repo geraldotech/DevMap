@@ -2,10 +2,14 @@ const { createApp, ref, onMounted, h, resolveComponent, defineAsyncComponent } =
 
 const app = Vue.createApp({
   setup() {
+    const obj = ref({
+      name: 'Geraldo',
+      age: 30
+    })
     // Intercept when the component is mounted
     onMounted(() => {})
 
-    return {}
+    return {obj}
   },
 })
 /* === carregar components */
