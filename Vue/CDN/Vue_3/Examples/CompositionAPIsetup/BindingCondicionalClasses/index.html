@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <style>
+      html {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .green {
+        color: green;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .border {
+        border: 1px solid blueviolet;
+      }
+
+      .not {
+        background: gray;
+      }
+
+      .center {
+        text-align: center;
+      }
+      .left {
+        text-align: left;
+      }
+
+      .highlight {
+        color: greenyellow;
+      }
+    </style>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li>Objeto ({ chave: condicao }) → mais legível.</li>
+        <li>Array ([classeCondicional, variavel]) → bom para mesclar.</li>
+        <li>String/template → rápido, mas menos claro.</li>
+        <li>Computed/método → ideal para lógica mais complexa.</li>
+      </ul>
+
+      <p>{{state}}</p>
+
+      <input
+        type="checkbox"
+        @click="state.isActive = !state.isActive"
+        id="isActive" />
+      <label for="isActive">Toggle isActive</label>
+
+      <h1>String simples</h1>
+      <p :class="'border'">string simples</p>
+
+      <h1>Object com bolean</h1>
+      <p :class="{green: state.isActive}">direct</p>
+      <p :class="{'green': state.isActive, 'border' : state2.isActive}">multiple condicionals</p>
+      <p
+        class="center"
+        :class="{green: state.isActive, border: state.isActive}">
+        classe fixa com objects
+      </p>
+
+      <h1>Array</h1>
+      <p :class="[state.isActive ? 'green' : 'red']">Array example</p>
+
+      <h1>Array de Strings</h1>
+      <p :class="['border', 'red']">array de string</p>
+
+      <h1>Array com ternario - classe fixa a outra condicional</h1>
+      <p :class="['border', !state2 ? 'red' : 'not']">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, quaerat?</p>
+
+      <h1>Array com objectos (mix) + classe fixa</h1>
+      <button @click="state.align = !state.align">click me para alternar</button>
+      <p :class="['border', state.align ? 'center' : 'left', {'green' : state.isActive}]">array de objectos</p>
+
+      <h1>Object.values</h1>
+
+      <p :class="css.green">Isabella {{css}}</p>
+
+      <h1>Diretiva v-bind dinâmica</h1>
+      <p :class="{highlight: shouldHighlight }">shouldHighlight</p>
+    </div>
+
+    <script src="./src/app.js"></script>
+  </body>
+</html>
