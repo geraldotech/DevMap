@@ -146,6 +146,12 @@ html:has([type="checkbox"]:checked) body   {
 body:has(input[type='checkbox']:checked){
   background: rebeccapurple;
 } 
+
+// body + div id
+body:has([type="checkbox"]:checked) div#custom {
+  background: yellow;
+}
+
 ```
 
 - Scopo Global, se no `body` tem algum checkbox checked then...
