@@ -20,9 +20,7 @@ Objects are used to represent a “thing” in your code. That could be a person
 - [Object.Freeze](#objectfreeze)
   - [Object.isFrozen](#objectisFrozen)
   - [Object.is()](#objectis)
-- [Object.assign](#objectassign)
-- [Object.hasOwnProperty("prop") and 'in'](#objhasownpropertyprop)
-- [Object.hasOwn(obj, "prop")](#objecthasownobj-prop)
+- [objecthasown - hasownproperty ](#objecthasown-e-hasownproperty)
 - [For in and in](#for-in)
 
 ### add
