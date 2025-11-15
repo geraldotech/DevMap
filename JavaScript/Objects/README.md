@@ -50,7 +50,6 @@ console.log(geraldo['age'])
 const mykey = 'age'
 console.log(geraldo[mykey])
 
-
 const techContent = {
   node: 'Node content',
   js: 'JavaScript content',
@@ -63,14 +62,12 @@ console.log(techContent[myvar])
 console.log(techContent['js'])
 console.log(techContent.js)
 
-
 const checkvalues = (value) => {
   return techContent[value] || '404 not found'
 }
 
 console.log(checkvalues('js'))
 console.log(checkvalues('jsx'))
-
 ```
 
 ### change
@@ -299,51 +296,58 @@ const obj = Object.assign(o, o2, o3)
 console.log(obj)
 ```
 
-### obj.hasOwnProperty("prop")
+### Object.hasOwn e hasOwnProperty
+
+- Ambos verificam se a propriedade é própria do objeto, e não herdada do prototype.
+- Object.hasOwn() foi introduzido no ECMAScript 2022 para substituir o antigo hasOwnProperty
 
 ```js
-const geraldo = {
+
+const obj = { a: 1 }
+obj.b = // add diretamente ao objeto
+
+console.log(Object.hasOwn(obj, 'a')) // true
+console.log(Object.hasOwn(obj, 'b')) // true herdade
+console.log(obj.hasOwnProperty('a')) // true
+
+/* 
+Segurança
+hasOwnProperty pode ser sobrescrito no objeto, quebrando o código:
+*/
+const obj2 = {
+  hasOwnProperty: () => false,
+  a: 1,
+}
+
+console.log(obj2.hasOwnProperty('a')) // false
+
+// Object.hasOwn() nunca quebra, porque não depende do objeto:
+
+console.log(Object.hasOwn(obj2, 'a')) // true
+
+// Object.hasOwn() é a forma recomendada hoje.
+const myobj = {
   name: 'Geraldo Filho',
   age: 30,
   idade: 30,
   Developer: true,
 }
-geraldo.city = 'Maceio' // inherited
+myobj.city = 'Maceio' // inherited
 
-// Verificar props + inherited
-console.log(Object.hasOwnProperty(geraldo, 'city')) //  false
+console.log(Object.hasOwn(myobj, 'city')) // false
+console.log(Object.hasOwn(myobj, 'aged')) // true
 
-// Verificar prop no inherited
-console.log(geraldo.hasOwnProperty('city')) // true
-```
+/* exemplo de herdada */
 
-### Object.hasOwn(obj, "prop")
+const pai = { x: 10 }
+const filho = Object.create(pai)
 
-The method returns false if the property is inherited, or has not been declared at all
+console.log(Object.hasOwn(filho, 'x')) // false -> herdada do pai
+filho.y = 20
+console.log(Object.hasOwn(filho, 'y')) // true -> própria
 
-```js
-console.log(Object.hasOwn(geraldo, 'age')) // true
-console.log(Object.hasOwn(geraldo, 'cityx')) // false
-
-// #################
-const obj = {
-  name: 'boxxx',
-  age: 30,
-  city: 'Maceio',
-  stack: 'Front-End',
-}
-
-if (Object.hasOwn(obj, 'name')) {
-  // true
-  delete obj.name
-}
-console.log(obj)
-
-if (Object.hasOwn(obj, 'city')) {
-  obj.city = 'SP'
-}
-
-console.log(obj) // { age: 30, city: 'SP', stack: 'Front-End' }
+console.log(pai)
+console.log(filho)
 ```
 
 ### for in
