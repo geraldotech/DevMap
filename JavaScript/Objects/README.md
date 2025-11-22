@@ -300,11 +300,24 @@ console.log(obj)
 - Object.hasOwn() foi introduzido no ECMAScript 2022 para substituir o antigo hasOwnProperty
 
 ```js
+const elementMap = {
+  gusuarios: '#gusuarios',
+  ggrupos: '#ggrupos',
+}
+
+// quick if
+// old hasOwnProperty
+if (elementMap.hasOwnProperty('ggrupos')) {
+  console.log('ok 1')
+}
+// new hasOwn
+if (Object.hasOwn(elementMap, 'ggrupos')) {
+  console.log('ok 2')
+}
 
 const obj = { a: 1 }
 obj.b = // add diretamente ao objeto
-
-console.log(Object.hasOwn(obj, 'a')) // true
+  console.log(Object.hasOwn(obj, 'a')) // true
 console.log(Object.hasOwn(obj, 'b')) // true herdade
 console.log(obj.hasOwnProperty('a')) // true
 
@@ -318,7 +331,6 @@ const obj2 = {
 }
 
 console.log(obj2.hasOwnProperty('a')) // false
-
 // Object.hasOwn() nunca quebra, porque não depende do objeto:
 
 console.log(Object.hasOwn(obj2, 'a')) // true
@@ -346,6 +358,59 @@ console.log(Object.hasOwn(filho, 'y')) // true -> própria
 
 console.log(pai)
 console.log(filho)
+```
+
+html select example by gmapdev
+
+```js
+// html
+<select name="" id="">
+  <option value="1">--select--</option>
+  <option value="gusuarios">gusuarios</option>
+  <option value="ggrupos">ggrupos</option>
+</select>
+
+
+<div id="gusuarios" class="none">
+  <p>
+   gestor de usuarios
+  </p>
+</div>
+
+
+<div id="ggrupos" class="none">
+  <p>
+   gestor de grupos
+  </p>
+</div>
+
+// js
+const elementMap = {
+    gusuarios: '#gusuarios',
+    ggrupos: '#ggrupos'
+  }
+
+const select = document.querySelector('select')
+select.addEventListener("change", function(e){
+  // volta a adicionar o none em todos os itens by gmapdev
+    for(let i in elementMap){
+    document.querySelector(elementMap[i]).classList.add('none')
+  }
+
+  const value = e.target.value
+  const targetSelector = elementMap[value]
+  const targetElement = document.querySelector(targetSelector)
+// remove apenas o item a ser exibido
+  targetElement.classList.remove('none')
+})
+
+
+// css
+
+.none {
+display: none;
+}
+
 ```
 
 ### for in
