@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme:dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<html
+  lang="en"
+  style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-  <script src="./src/app.js" defer></script>
-</head>
-<body>
-  <div id="app">
+    <script
+      src="./src/app.js"
+      defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <input
+        type="checkbox"
+        v-model="isChecked" />
 
+      <p v-show="isChecked">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis assumenda maxime corporis est voluptas, ex animi explicabo accusantium, illo nam quaerat repellat dolore inventore
+        voluptate quasi quos minima tenetur.
+      </p>
 
-
-
-    <input type="checkbox" v-model="isChecked">
-
-    <p v-show="isChecked">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis assumenda maxime corporis est voluptas, ex animi explicabo accusantium, illo nam quaerat repellat dolore inventore voluptate quasi quos minima tenetur.</p>
-
-    {{isChecked}}
-
-    {{message}}
-
-    {{foo}} - {{bar}}
-  </div>
-  
-</body>
+      {{isChecked}} {{message}} {{foo}} - {{bar}}
+    </div>
+  </body>
 </html>
