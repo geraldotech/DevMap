@@ -4,10 +4,11 @@ const app = Vue.createApp({
   setup() {
     const bar = ref('my bar')
     const message = ref('Hello')
+    const isChecked = ref(true)
 
     return {
       message,
-      bar,
+      bar, isChecked
     }
   },
   data() {

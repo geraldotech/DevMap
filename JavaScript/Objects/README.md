@@ -360,6 +360,10 @@ console.log(pai)
 console.log(filho)
 ```
 
+### for in
+
+The in operator returns true
+
 html select example by gmapdev
 
 ```js
@@ -413,13 +417,13 @@ display: none;
 
 ```
 
-### for in
-
-The in operator returns true
-
 ### in
 
 ```js
+const geraldo = {
+  city: 'AL',
+}
+
 console.log('city' in geraldo) // true
 ```
 
