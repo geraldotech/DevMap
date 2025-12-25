@@ -1,9 +1,8 @@
-import * as Vue from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-
 const options = {
   moduleCache: {
     vue: Vue,
   },
+
   async getFile(url) {
     const res = await fetch(url)
     if (!res.ok) throw Object.assign(new Error(res.statusText + ' ' + url), { res })
@@ -20,4 +19,6 @@ const options = {
   },
 }
 
-export default options
+const { loadModule } = window['vue3-sfc-loader']
+
+//export { options, loadModule };
