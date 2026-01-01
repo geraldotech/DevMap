@@ -38,15 +38,38 @@ console.log(x.length);
 let tamanho = x.length;
 console.log(tamanho);
 
-//📌 func check number
-function check(){
-  let a = 10;
-   if(a > 8) {
-      console.log("maior que 8");
-      return
-   }
-   console.log("menor que 8");
+/** 📌 func check number
+ * @param n1 - numero 1
+ * @param n2 - numero 2
+ * @returns String
+ */
+function check(n1, n2) {
+  
+  // params foram definidos?
+  if (n1 === undefined || n2 === undefined) {
+    return `missing params n1 n2`
   }
+
+  // sao numeros?
+  if (!Number.isFinite(n1)|| !Number.isFinite(n2)) {
+    throw new Error('params must be valid numbers');
+  }
+
+  if (n1 === n2) {
+    return `primeiro numero ${n1} numero é igual ao  segundo ${n2}`
+  }
+
+  if (n1 > n2) {
+    return `primeiro numero ${n1} numero é maior que  segundo ${n2}`
+  }
+  return `segundo numero ${n2} é maior que o primeiro ${n1}`
+}
+
+console.log(check(10, 100))
+console.log(check(0, 4))
+console.log(check('', 350)) //  params must be valid numbers
+
+
 //👉 Ternary
     console.log(["12345678"].length > 8 ? 'maior que 8' : 'menor que 8');
 
