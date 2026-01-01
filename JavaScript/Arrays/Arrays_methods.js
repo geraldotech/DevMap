@@ -43,8 +43,7 @@ console.log(tamanho);
  * @param n2 - numero 2
  * @returns String
  */
-function check(n1, n2) {
-  
+function check(n1, n2) {  
   // params foram definidos?
   if (n1 === undefined || n2 === undefined) {
     return `missing params n1 n2`
