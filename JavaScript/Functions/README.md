@@ -54,6 +54,22 @@ function show() {
 console.log(window.eu) // undefined
 ```
 
+# IIFE
+
+> > Immediately Invoked Function Expression.
+
+```js
+// arrow
+;(() => {
+  console.log('ok 2')
+})()
+
+// normal
+;(function () {
+  console.log('inside')
+})()
+```
+
 [https://www.w3schools.com/js/js_function_definition.asp](https://www.w3schools.com/js/js_function_definition.asp)  
 [https://ilovecoding.org/lessons/self-invoking-anonymous-function](https://ilovecoding.org/lessons/self-invoking-anonymous-function-what-is-it-why-and-how-to-use-it)
 
