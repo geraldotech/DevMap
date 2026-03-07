@@ -22,15 +22,15 @@
       href="https://unpkg.com/vue-select@latest/dist/vue-select.css" />
     <script src="https://unpkg.com/vue-select@beta"></script>
     <style>
-      body{
+      body {
         font-family: Arial, Helvetica, sans-serif;
       }
       /* custom disabled options */
-      .vs__dropdown-option--disabled{
+      .vs__dropdown-option--disabled {
         color: red;
         opacity: 0.5;
       }
-      .vs__dropdown-option--disabled::after{
+      .vs__dropdown-option--disabled::after {
         content: ' (inativo)';
       }
 
@@ -45,10 +45,9 @@
   </head>
   <body>
     <div id="app">
-  
       <section>
-          <h1>Basic</h1>
-          <v-select
+        <h1>Basic</h1>
+        <v-select
           :options="options"
           v-model="selecao"
           label="title">
@@ -58,9 +57,58 @@
           <template #no-options> Nenhuma opção encontrada </template>
 
           <div slot="no-options">No Options Here!</div>
-          </v-select>
+        </v-select>
 
         <p>seleção: {{selecao}}</p>
+      </section>
+
+      <section>
+        <h1>custom options with template</h1>
+        <v-select
+          :options="options2"
+          v-model="selecao2"
+          label="title">
+          <template #header>
+            <div style="opacity: 0.8">Top of the component, in the header slot!</div>
+          </template>
+
+          <template #option="option">
+            <span class="cod_hcm">{{ option.code }}</span> - {{ option.title }}
+          </template>
+
+          <template #selected-option="option">
+            <span class="cod_hcm">{{ option.code }}</span> - {{ option.title }}
+          </template>
+          <template #no-options> Nenhuma opção encontrada </template>
+        </v-select>          
+
+          <div slot="no-options">No Options Here!</div>
+        </v-select>
+      </section>
+
+      <section>
+        <h1>custom options with map custom</h1>
+        <p>{{options3}}</p>
+        <v-select
+          :options="options3"
+          v-model="selecao3"
+          label="custom">
+          <template #header>
+            <div style="opacity: 0.8">Top of the component, in the header slot!</div>
+          </template>
+          
+          <template #option="option">
+            <span class="cod_hcm">{{ option.code }}</span> - {{ option.title }}
+          </template>
+
+          <template #selected-option="option">
+            <span class="cod_hcm">{{ option.code }}</span> - {{ option.title }}
+          </template>
+          <template #no-options> Nenhuma opção encontrada </template>
+        </v-select>          
+
+          <div slot="no-options">No Options Here!</div>
+        </v-select>
       </section>
 
       <section>
@@ -75,53 +123,53 @@
         </v-select>
 
         <p>selecionado: {{selecionado}}</p>
-      </section>      
+      </section>
 
       <section>
         <h2>Autoload and automount by gmapdev</h2>
-          <zbutton btn="example A"></zbutton>
+        <zbutton btn="example A"></zbutton>
 
-          <h1>Ajax example</h1>
-          <p>inativando se incluir alguma coisa, melhor no-options select</p>
-          <v-select
-            transition="vs__fade-leave-active"
-            :filterable="false"
-            placeholder="Escolher grupos"
-            :options="grupos"
-            @search="onSearch"
-            value="id"
-            :selectable="(option) => !option.slug.includes('stakeholders-organizacao')"
-            v-model="grupos_selected"
-            label="title">
-            <template #header>
-              <div
-                style="opacity: 0.8"
-                class="text-white">
-                Críterio para busca:
-              </div>
-            </template>        
+        <h1>Ajax example</h1>
+        <p>inativando se incluir alguma coisa, melhor no-options select</p>
+        <v-select
+          transition="vs__fade-leave-active"
+          :filterable="false"
+          placeholder="Escolher grupos"
+          :options="grupos"
+          @search="onSearch"
+          value="id"
+          :selectable="(option) => !option.slug.includes('stakeholders-organizacao')"
+          v-model="grupos_selected"
+          label="title">
+          <template #header>
+            <div
+              style="opacity: 0.8"
+              class="text-white">
+              Críterio para busca:
+            </div>
+          </template>
           <!--  <template #no-options>Nenhum resutlado encontrado!</template> -->
           <!-- Improving the default no-options text  -->
-            <template v-slot:no-options="{ search, searching }">
-              <template v-if="searching">
-                No results found for <em>{{ search }}</em
-                >.
-              </template>
-              <em v-else style="opacity: 0.5">2 caracteres para iniciar a busca.</em>
-            </template>
-          </v-select>
-          <p>object selected: {{grupos_selected}}</p>
+          <template v-slot:no-options="{ search, searching }">
+            <template v-if="searching"> No results found for <em>{{ search }}</em>. </template>
+            <em
+              v-else
+              style="opacity: 0.5"
+              >2 caracteres para iniciar a busca.</em
+            >
+          </template>
+        </v-select>
+        <p>object selected: {{grupos_selected}}</p>
       </section>
 
-      <section>       
+      <section>
         <h1>Ajax get all itens with filterable true (nao precisa nem declarar)</h1>
 
         <v-select
           placeholder="Escolher"
           v-model="questions_selected"
           :options="questions"
-          label="title"
-          >
+          label="title">
         </v-select>
         <p>{{questions_selected}}</p>
       </section>

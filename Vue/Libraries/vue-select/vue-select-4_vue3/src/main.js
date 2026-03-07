@@ -7,6 +7,16 @@ const app = Vue.createApp({
   },
 
   setup() {
+    const selecionado = ref('')
+    const grupos_selected = ref(null)
+    const grupos = ref([])
+    const selected_country = ref(null)
+    const selecao = ref(null)
+    const selecao2 = ref(null)
+    const selecao3 = ref(null)
+    const questions = ref([])
+    const questions_selected = ref([])
+
     const options = ref([
       { title: "Old Man's War", code: 'BRL' },
       { title: 'The Lock Artist', code: 'BRA' },
@@ -16,14 +26,28 @@ const app = Vue.createApp({
       { title: 'Thank You Jeeves', code: 'NB' },
     ])
 
-    const selecionado = ref('')
-    const grupos_selected = ref(null)
-    const grupos = ref([])
-    const selected_country = ref(null)
-    const selecao = ref(null)
+    const options2 = ref([
+      { title: "Old Man's War", code: 'BRL' },
+      { title: 'The Lock Artist', code: 'BRA' },
+      { title: 'HTML5', code: 'USA' },
+      { title: 'Right Ho Jeeves', code: 'ITA' },
+      { title: 'The Code of the Wooster', code: 'PRO' },
+      { title: 'Thank You Jeeves', code: 'NB' },
+    ])
 
-    const questions = ref([])
-    const questions_selected = ref([])
+    const options3 = ref([
+      { title: "Old Man's War", code: 'BRL' },
+      { title: 'The Lock Artist', code: 'BRA' },
+      { title: 'HTML5', code: 'USA' },
+      { title: 'Right Ho Jeeves', code: 'ITA' },
+      { title: 'The Code of the Wooster', code: 'PRO' },
+      { title: 'Thank You Jeeves', code: 'NB' },
+    ])
+
+    options3.value = options3.value.map((v) => ({
+      ...v,
+      custom: `${v.code} - ${v.title}`,
+    }))
 
     function onSearch(search, loading) {
       if (search.length) {
@@ -103,9 +127,13 @@ const app = Vue.createApp({
       searchfetch,
       selected_country,
       selecao,
+      selecao2,
       questions,
       questions_selected,
       searchfetchAll,
+      options2,
+      selecao3,
+      options3,
     }
   },
 })
